@@ -15,29 +15,29 @@ Phenotypes runs on [Fractal](http://fractal.build), a tool that hosts the guides
 Here's how to get Phenotypes up and running locally: 
 
 * Clone this repo and `cd` into it.
-* `npm install`
-* Start Fractal (see below)
+* Install stuff `npm install`
+* Build static assets `npm run build-all`
+* Start Fractal `npm start`
 * Open [http://localhost:3000](http://localhost:3000) in a browser
 
-### Starting Fractal
+While running, Fractal will watch your `components` and `guides` directories for changes. It will automatically reload itself and your browser as needed.
 
-Starting Fractal can happen one of two ways.
+## Development
 
-Option 1: globally install the Fractal CLI tool:
-
-```
-$ npm i -g @frctl/fractal  # only do this once
-$ fractal start --sync     # so handy
-```
-
-Option 2: just use the Fractal binary from `node_modules`:
+If you're working on components, you'll need to spin up a couple more processes in addition to running the Fractal server:
 
 ```
-$ ./node_modules/@frctl/fractal/bin/fractal start --sync
+$ npm run watch-js
+$ # TK: css
 ```
 
-Note: the `--sync` flag tells Fractal to watch your components and guides directories for changes. It will automatically reload itself and your browser as needed.
+The `watch-js` task has Webpack automatically rebuild the client-side React bundle whenever components are changed. Here's the basic sequence of events:
 
-## Contributing
+* You update a component
+* Fractal notices and fires an event on the server side
+* We write out a mapping file of all components
+* Webpack (via `watch-js`) detects that the component mapping file has changed and rebuilds the client-side rendering bundle
 
-TK (CSS and JS build/watch tools)
+## Using Phenotypes components in a project
+
+TK

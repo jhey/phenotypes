@@ -1,31 +1,30 @@
 'use strict';
 
-/*
-* Require the path module
-*/
+// Requirements
 const path = require('path');
+const generateComponentsMapping = require('./fractal_react/generate.js');
+const fractal = require('@frctl/fractal').create();
 
-/*
- * Require the Fractal module
- */
-const fractal = module.exports = require('@frctl/fractal').create();
-
-/*
- * Give your project a title.
- */
+// Title
 fractal.set('project.title', 'Phenotypes');
 
-/*
- * Tell Fractal where to look for components.
- */
+// Paths
 fractal.components.set('path', path.join(__dirname, 'components'));
-
-/*
- * Tell Fractal where to look for documentation pages.
- */
 fractal.docs.set('path', path.join(__dirname, 'guides'));
-
-/*
- * Tell the Fractal web preview plugin where to look for static assets.
- */
 fractal.web.set('static.path', path.join(__dirname, 'fractal_assets'));
+
+// React adapter for server-side rendering
+const reactAdapter = require('fractal-react-adapter')({
+  // renderMethod: 'renderToString',
+  renderMethod: 'renderToStaticMarkup',
+});
+fractal.components.engine(reactAdapter);
+fractal.components.set('ext', '.jsx');
+
+// Make components available to client-side React
+const generate = () => { generateComponentsMapping(fractal) };
+fractal.components.on('loaded', generate);
+fractal.components.on('updated', generate);
+
+// Export fractal app
+module.exports = fractal;
