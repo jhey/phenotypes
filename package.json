@@ -2,9 +2,9 @@
   "name": "phenotypes",
   "version": "1.0.0",
   "description": "Amino's design language and front-end component library",
-  "main": "index.js",
   "dependencies": {
-    "@frctl/fractal": "^1.1.4"
+    "@frctl/fractal": "^1.1.4",
+    "fractal-react-adapter": "^1.0.3"
   },
   "devDependencies": {},
   "scripts": {

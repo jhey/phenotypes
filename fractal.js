@@ -29,3 +29,13 @@ fractal.docs.set('path', path.join(__dirname, 'guides'));
  * Tell the Fractal web preview plugin where to look for static assets.
  */
 fractal.web.set('static.path', path.join(__dirname, 'fractal_assets'));
+
+
+// React adapter
+// -------------
+const reactAdapter = require('fractal-react-adapter')({
+  // renderMethod: 'renderToString',
+  renderMethod: 'renderToStaticMarkup',
+});
+fractal.components.engine(reactAdapter);
+fractal.components.set('ext', '.jsx');

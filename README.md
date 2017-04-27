@@ -41,3 +41,8 @@ Note: the `--sync` flag tells Fractal to watch your components and guides direct
 ## Contributing
 
 TK (CSS and JS build/watch tools)
+TK (Naming conventions)
+
+## Using Phenotypes components in a project
+
+TK
