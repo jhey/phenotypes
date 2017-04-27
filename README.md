@@ -14,20 +14,13 @@ Phenotypes runs on [Fractal](http://fractal.build), a tool that hosts the guides
 
 Here's how to get Phenotypes up and running locally: 
 
-* Install Fractal CLI (optional*) `npm i -g @frctl/fractal`
 * Clone this repo and `cd` into it.
 * Install stuff `npm install`
 * Build static assets `npm run build`
-* Start Fractal `fractal start --sync`
+* Start Fractal `npm start`
 * Open [http://localhost:3000](http://localhost:3000) in a browser
 
-If you don't want to install Fractal globally for the CLI (`fractal start`, etc.), you can just use the local binary: 
-
-```
-$ ./node_modules/@frctl/fractal/bin/fractal start --sync
-```
-
-In either case, the `--sync` flag tells Fractal to watch your components and guides directories for changes. It will automatically reload itself and your browser as needed.
+While running, Fractal will watch your `components` and `guides` directories for changes. It will automatically reload itself and your browser as needed.
 
 ## Development
 
