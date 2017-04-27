@@ -14,7 +14,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build-js": "webpack",
     "watch-js": "webpack --progress --colors --watch",
-    "build": "npm run build-js",
+    "build-all": "npm run build-js",
     "start": "fractal start --sync"
   },
   "repository": {
