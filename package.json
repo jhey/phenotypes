@@ -1,0 +1,21 @@
+{
+  "name": "phenotypes",
+  "version": "1.0.0",
+  "description": "Amino's design language and front-end component library",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/parelabs/phenotypes.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/parelabs/phenotypes/issues"
+  },
+  "homepage": "https://github.com/parelabs/phenotypes#readme"
+}
