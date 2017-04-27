@@ -38,10 +38,21 @@ $ ./node_modules/@frctl/fractal/bin/fractal start --sync
 
 Note: the `--sync` flag tells Fractal to watch your components and guides directories for changes. It will automatically reload itself and your browser as needed.
 
-## Contributing
+## Development
 
-TK (CSS and JS build/watch tools)
-TK (Naming conventions)
+If you're working on components, you'll need to spin up a couple more processes in addition to running the Fractal server:
+
+```
+$ npm run watch-js
+$ # TK: css
+```
+
+The `watch-js` task has Webpack automatically rebuild the client-side React bundle whenever components are changed. Here's the basic sequence of events:
+
+* You update a component
+* Fractal notices and fires an event on the server side
+* We write out a mapping file of all components
+* Webpack (via `watch-js`) detects that the component mapping file has changed and rebuilds the client-side rendering bundle
 
 ## Using Phenotypes components in a project
 

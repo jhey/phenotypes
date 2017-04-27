@@ -4,11 +4,16 @@
   "description": "Amino's design language and front-end component library",
   "dependencies": {
     "@frctl/fractal": "^1.1.4",
-    "fractal-react-adapter": "^1.0.3"
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "fractal-react-adapter": "^1.0.3",
+    "webpack": "^2.4.1"
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-js": "webpack",
+    "watch-js": "webpack --progress --colors --watch"
   },
   "repository": {
     "type": "git",
