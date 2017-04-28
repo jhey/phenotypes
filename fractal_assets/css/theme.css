@@ -21,7 +21,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .Header {
-	background-color: #232323;
+	background-color: #2F0047;
 	box-shadow: none;
 }
 
@@ -147,6 +147,15 @@ h1, h2, h3, h4, h5, h6 {
 
 .Tree-collectionLabel span::before {
     top: 0.35rem;
+}
+
+.Status-label {
+    font-size: 12px;
+    line-height: 24px;
+    font-weight: normal;
+    letter-spacing: 0;
+    text-transform: none;
+    padding: 0 1em;
 }
 
 /* -----------------------
