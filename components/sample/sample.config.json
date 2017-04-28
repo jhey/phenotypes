@@ -2,5 +2,13 @@
 	"context": {
 		"name": "friend"
 	},
+	"variants": [
+		{
+			"name": "Variant 1"
+		},
+		{
+			"name": "Variant 2"
+		}
+	],
 	"notes": "This is a sample React component that is rendered once on the server and then again on the client with behavior added (you should see the clock ticking up if everything is working)."
 }

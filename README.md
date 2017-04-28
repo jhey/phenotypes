@@ -28,15 +28,17 @@ If you're working on components, you'll need to spin up a couple more processes 
 
 ```
 $ npm run watch-js
-$ # TK: css
+$ npm run watch-css
 ```
 
-The `watch-js` task has Webpack automatically rebuild the client-side React bundle whenever components are changed. Here's the basic sequence of events:
+The `watch-js` script has Webpack automatically rebuild the client-side React bundle whenever components are changed. Here's the basic sequence of events:
 
 * You update a component
 * Fractal notices and fires an event on the server side
 * We write out a mapping file of all components
 * Webpack (via `watch-js`) detects that the component mapping file has changed and rebuilds the client-side rendering bundle
+
+The `watch-css` script recompiles `phenotypes.css` whenever a SASS file in the `/styles` directory tree changes. Note: phenotypes.css is version controlled so that it can be used in a project without requiring SASS. It's also symlinked into `/fractal_assets/css` so that it can be used in the Fractal preview.
 
 ## Using Phenotypes components in a project
 

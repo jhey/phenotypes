@@ -1,0 +1,96 @@
+/* --------------
+ * Fractal chrome
+ * -------------- */
+
+.Header {
+	background-color: #232323;
+	box-shadow: none;
+}
+
+.Frame-panel--sidebar {
+	background: #f9f9f9;
+	padding: 2rem 1rem 1rem;
+}
+
+[dir="ltr"] .Frame-panel--sidebar {
+    border-right: none;
+}
+
+[dir="ltr"] .Header-button {
+    border-right: none;
+}
+
+.Pen {
+	background: #f9f9f9;
+	padding: 0.5em 1em;
+}
+
+@media (min-width: 31.25em) {
+	.Preview {
+	    background-color: #f9f9f9;
+	    border: none;
+	}	
+}
+
+[dir="ltr"] .Preview-handle {
+    border-left: none;
+}
+
+.Preview-resizer {
+	border-radius: 3px;
+	box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.Pen-info {
+	border: none;
+}
+
+.Browser-panel,
+.Browser-panel .Code,
+.Browser-panel .Code pre {
+	background: transparent;
+}
+
+.Browser-controls {
+	box-shadow: inset 0 -1px 0 0 rgba(0,0,0,0.07);
+}
+
+.Frame-panel--main {
+	background: #f9f9f9;
+}
+
+.Document {
+	margin: 2em;
+	padding: 2.5rem 3rem 3rem;
+	max-width: 55em;
+	border-radius: 3px;
+	box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+	background: white;
+}
+
+.Prose {
+	max-width: 50em;
+}
+
+/* Don't use an "X" icon when the sidebar is open (keep the hamburger) */
+.Frame .Header-navToggleIcon--open {
+    display: none;
+}
+
+.Frame .Header-navToggleIcon--closed {
+    display: block;
+    opacity: 0.25;
+}
+
+.Frame.is-closed .Header-navToggleIcon--closed {
+    opacity: 1;
+}
+
+
+/* -----------------------
+ * Documentation rendering
+ * ----------------------- */
+
+ .Prose img {
+ 	max-width: 100%;
+ }

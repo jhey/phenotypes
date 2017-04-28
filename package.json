@@ -4,17 +4,21 @@
   "description": "Amino's design language and front-end component library",
   "dependencies": {
     "@frctl/fractal": "^1.1.4",
+    "@frctl/mandelbrot": "^1.1.0",
     "babel-core": "^6.24.1",
     "babel-loader": "^7.0.0",
     "fractal-react-adapter": "^1.0.3",
+    "node-sass": "^4.5.2",
     "webpack": "^2.4.1"
   },
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "node-sass styles/phenotypes.scss styles/phenotypes.css",
+    "watch-css": "npm run build-css && node-sass -w -r styles/ -o styles/",
     "build-js": "webpack",
     "watch-js": "webpack --progress --colors --watch",
-    "build-all": "npm run build-js",
+    "build-all": "npm run build-js && npm run build-css",
     "start": "fractal start --sync"
   },
   "repository": {
