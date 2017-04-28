@@ -26,5 +26,8 @@ const generate = () => { generateComponentsMapping(fractal) };
 fractal.components.on('loaded', generate);
 fractal.components.on('updated', generate);
 
+// Other config
+fractal.docs.set('label', 'Guides');
+
 // Export fractal app
 module.exports = fractal;

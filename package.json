@@ -4,6 +4,7 @@
   "description": "Amino's design language and front-end component library",
   "dependencies": {
     "@frctl/fractal": "^1.1.4",
+    "@frctl/mandelbrot": "^1.1.0",
     "babel-core": "^6.24.1",
     "babel-loader": "^7.0.0",
     "fractal-react-adapter": "^1.0.3",
