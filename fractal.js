@@ -26,6 +26,14 @@ const generate = () => { generateComponentsMapping(fractal) };
 fractal.components.on('loaded', generate);
 fractal.components.on('updated', generate);
 
+// Customize the base theme
+const mandelbrot = require('@frctl/mandelbrot');
+const customisedTheme = mandelbrot({
+  "nav": ["docs", "components"],
+  "styles": ['default', '/css/theme.css']
+});
+fractal.web.theme(customisedTheme);
+
 // Other config
 fractal.docs.set('label', 'Guides');
 
