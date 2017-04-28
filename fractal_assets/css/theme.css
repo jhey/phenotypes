@@ -60,6 +60,7 @@
 
 .Document {
 	margin: 2em;
+	padding: 2.5rem 3rem 3rem;
 	max-width: 55em;
 	border-radius: 3px;
 	box-shadow: 0 10px 30px rgba(0,0,0,0.15);
