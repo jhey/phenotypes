@@ -2,9 +2,32 @@
  * Fractal chrome
  * -------------- */
 
+html,
+.Tree-title,
+.Tree-item,
+.Document-title,
+.Prose,
+.Pen-title,
+.Status-label,
+.Browser-tab a,
+.Meta-key,
+.Meta-value {
+	font-family: "Sailec", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
+}
+
+html,
+h1, h2, h3, h4, h5, h6 {
+	color: rgba(0,0,0,0.86);
+}
+
 .Header {
 	background-color: #232323;
 	box-shadow: none;
+}
+
+.Header-button {
+	width: 4rem;
+	height: 4rem;
 }
 
 .Frame-panel--sidebar {
@@ -37,8 +60,9 @@
 }
 
 .Preview-resizer {
-	border-radius: 3px;
-	box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+	/*border-radius: 3px;*/
+	/*box-shadow: 0 10px 30px rgba(0,0,0,0.15);*/
+	border: 2px solid #eee;
 }
 
 .Pen-info {
@@ -56,15 +80,15 @@
 }
 
 .Frame-panel--main {
-	background: #f9f9f9;
+	/*background: #f9f9f9;*/
 }
 
 .Document {
 	margin: 2em;
-	padding: 2.5rem 3rem 3rem;
+	padding: 1.5rem 2rem 2rem;
 	max-width: 55em;
-	border-radius: 3px;
-	box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+	/*border-radius: 3px;*/
+	/*box-shadow: 0 10px 30px rgba(0,0,0,0.15);*/
 	background: white;
 }
 
@@ -86,6 +110,17 @@
     opacity: 1;
 }
 
+.Navigation-group + .Navigation-group {
+    margin-top: 2rem;
+}
+
+[dir="ltr"] .Tree-collectionLabel span {
+    padding-left: 1rem;
+}
+
+.Tree-collectionLabel span::before {
+    top: 0.35rem;
+}
 
 /* -----------------------
  * Documentation rendering

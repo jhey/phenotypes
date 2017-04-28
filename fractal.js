@@ -30,7 +30,7 @@ fractal.components.on('updated', generate);
 const mandelbrot = require('@frctl/mandelbrot');
 const customisedTheme = mandelbrot({
   "nav": ["docs", "components"],
-  "styles": ['default', '/css/theme.css']
+  "styles": ['default', '/fonts/Sailec_Basics.css', '/css/theme.css']
 });
 fractal.web.theme(customisedTheme);
 
