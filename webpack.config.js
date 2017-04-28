@@ -1,4 +1,5 @@
 const path = require('path');
+
 module.exports = {
   entry: ['./fractal_react/client.jsx'],
   output: {
@@ -6,13 +7,15 @@ module.exports = {
     filename: 'bundle.js'
   },
   module: {
-    loaders: [{
-      test: /\.jsx$/,
-      loader: 'babel-loader',
-      exclude: /node_modules/,
-      options: {
-        presets: ['es2015', 'react']
+    rules: [
+      {
+        test: /\.jsx$/,
+        loader: 'babel-loader',
+        exclude: /node_modules/,
+        options: {
+          presets: ['es2015', 'react']
+        }
       }
-    }]
+    ]
   }
 }
