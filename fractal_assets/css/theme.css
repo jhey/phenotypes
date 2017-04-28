@@ -20,6 +20,24 @@ h1, h2, h3, h4, h5, h6 {
 	color: rgba(0,0,0,0.86);
 }
 
+a, a:link, a:visited {
+	color: #16B8E0;
+}
+
+a:hover {
+	color: #008AB3;
+}
+
+a:active {
+	color: #005678;
+}
+
+.Pen-previewLink svg {
+	margin-left: 0.2em;
+    fill: currentColor;
+    opacity: 0.25;
+}
+
 .Header {
 	background-color: #2F0047;
 	box-shadow: none;
@@ -98,6 +116,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .Browser-tab.is-active a {
+	border-bottom-color: #16B8E0;
 	color: #232323;
 }
 
