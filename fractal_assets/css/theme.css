@@ -156,6 +156,12 @@ a:active {
     opacity: 1;
 }
 
+.Tree-title {
+	font-weight: bold;
+    letter-spacing: 0.143em;
+    color: rgba(0, 0, 0, 0.86);
+}
+
 .Navigation-group + .Navigation-group {
     margin-top: 2rem;
 }
