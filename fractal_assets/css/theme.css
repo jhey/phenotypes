@@ -2,9 +2,64 @@
  * Fractal chrome
  * -------------- */
 
+html,
+.Tree-title,
+.Tree-item,
+.Document-title,
+.Prose,
+.Pen-title,
+.Status-label,
+.Browser-tab a,
+.Meta-key,
+.Meta-value {
+	font-family: "Sailec", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
+}
+
+html,
+h1, h2, h3, h4, h5, h6 {
+	color: rgba(0,0,0,0.86);
+}
+
+a, a:link, a:visited {
+	color: #16B8E0;
+}
+
+a:hover {
+	color: #008AB3;
+}
+
+a:active {
+	color: #005678;
+}
+
+.Pen-previewLink svg {
+	margin-left: 0.2em;
+    fill: currentColor;
+    opacity: 0.25;
+}
+
 .Header {
-	background-color: #232323;
+	background-color: #2F0047;
 	box-shadow: none;
+}
+
+.Header::after {
+	content: "";
+	width: 27px;
+	height: 27px;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 20px;
+	background: url(../img/fractal/amino-logo-mark.png);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+}
+
+.Header-button {
+	width: 4rem;
+	height: 4rem;
 }
 
 .Frame-panel--sidebar {
@@ -25,6 +80,10 @@
 	padding: 0.5em 1em;
 }
 
+.Pen-title {
+	font-weight: normal;
+}
+
 @media (min-width: 31.25em) {
 	.Preview {
 	    background-color: #f9f9f9;
@@ -37,8 +96,9 @@
 }
 
 .Preview-resizer {
-	border-radius: 3px;
-	box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+	/*border-radius: 3px;*/
+	/*box-shadow: 0 10px 30px rgba(0,0,0,0.15);*/
+	border: 2px solid #eee;
 }
 
 .Pen-info {
@@ -55,17 +115,27 @@
 	box-shadow: inset 0 -1px 0 0 rgba(0,0,0,0.07);
 }
 
+.Browser-tab.is-active a {
+	border-bottom-color: #16B8E0;
+	color: #232323;
+}
+
 .Frame-panel--main {
-	background: #f9f9f9;
+	/*background: #f9f9f9;*/
 }
 
 .Document {
 	margin: 2em;
-	padding: 2.5rem 3rem 3rem;
+	padding: 1.5rem 2rem 2rem;
 	max-width: 55em;
-	border-radius: 3px;
-	box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+	/*border-radius: 3px;*/
+	/*box-shadow: 0 10px 30px rgba(0,0,0,0.15);*/
 	background: white;
+}
+
+.Document-header {
+	padding-bottom: 0;
+	border-bottom: none;
 }
 
 .Prose {
@@ -86,6 +156,32 @@
     opacity: 1;
 }
 
+.Tree-title {
+	font-weight: bold;
+    letter-spacing: 0.143em;
+    color: rgba(0, 0, 0, 0.86);
+}
+
+.Navigation-group + .Navigation-group {
+    margin-top: 2rem;
+}
+
+[dir="ltr"] .Tree-collectionLabel span {
+    padding-left: 1rem;
+}
+
+.Tree-collectionLabel span::before {
+    top: 0.35rem;
+}
+
+.Status-label {
+    font-size: 12px;
+    line-height: 24px;
+    font-weight: normal;
+    letter-spacing: 0;
+    text-transform: none;
+    padding: 0 1em;
+}
 
 /* -----------------------
  * Documentation rendering

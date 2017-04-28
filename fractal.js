@@ -30,12 +30,44 @@ fractal.components.on('updated', generate);
 const mandelbrot = require('@frctl/mandelbrot');
 const customisedTheme = mandelbrot({
   "nav": ["docs", "components"],
-  "styles": ['default', '/css/theme.css']
+  "styles": ['default', '/fonts/Sailec_Basics.css', '/css/theme.css'],
+  "panels": ["notes", "html", "view", "context", "resources", "info"]
 });
 fractal.web.theme(customisedTheme);
 
-// Other config
+// Nomenclature config
 fractal.docs.set('label', 'Guides');
+fractal.components.set('statuses', {
+    deprecated: {
+        label: "Deprecated",
+        description: "Going away someday.",
+        color: "#F04D5D"
+    },
+    draft: {
+        label: "Draft",
+        description: "Work in progress.",
+        color: "#FC8626"
+    },
+    stable: {
+        label: "Stable",
+        description: "Ready to go.",
+        color: "#2DCFA1"
+    }
+});
+fractal.docs.set('statuses', {
+    draft: {
+        label: 'Draft',
+        description: 'Work in progress.',
+        color: '#FC8626'
+    },
+    stable: {
+        label: 'Stable',
+        description: 'Ready for go.',
+        color: '#2DCFA1'
+    }
+});
+fractal.components.set('default.status', 'draft');
+fractal.docs.set('default.status', 'draft');
 
 // Export fractal app
 module.exports = fractal;
