@@ -140,7 +140,7 @@ font-family: "Sailec", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI",
 ## Appendix
 
 Download Sailec desktop font files here: <br>
-https://www.dropbox.com/sh/fs08wz9lehqwvxi/AAB3BB2Rl9mvLWD5-cAekvkua?dl=0.
+https://www.dropbox.com/sh/fs08wz9lehqwvxi/AAB3BB2Rl9mvLWD5-cAekvkua?dl=0
 
 Webfonts are here: <br>
 https://www.dropbox.com/sh/h6dra5lsprd4qhf/AACp78jCNVK9oy-0ZWFHFWHya?dl=0
