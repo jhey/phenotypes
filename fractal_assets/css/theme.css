@@ -138,9 +138,9 @@ a:active {
 }
 
 .Document {
-	margin: 2em;
+	margin: 53px auto;
 	padding: 1.5rem 2rem 2rem;
-	max-width: 55em;
+	max-width: 50em;
 	/*border-radius: 3px;*/
 	/*box-shadow: 0 10px 30px rgba(0,0,0,0.15);*/
 	background: white;
@@ -152,7 +152,7 @@ a:active {
 }
 
 .Prose {
-	max-width: 50em;
+	max-width: 100%;
 }
 
 /* Don't use an "X" icon when the sidebar is open (keep the hamburger) */
@@ -202,4 +202,50 @@ a:active {
 
  .Prose img {
  	max-width: 100%;
+ }
+
+ .Prose {
+ 	font-size: 16px;
+ 	line-height: 1.493;
+	color: rgba(0,0,0,0.86); 	
+ }
+
+ .Prose p,
+ .Prose ul,
+ .Prose ol {
+ 	margin: 24px 0 !important;
+ }
+
+.Prose table,
+.Prose blockquote,
+.Prose code,
+.Prose hr {
+	margin: 36px 0 !important;
+}
+
+ .Document-header {
+ 	margin-bottom: 0;
+ }
+
+ .Document-title, .Prose h1 {
+ 	margin: 0;
+ 	font-size: 53px;
+ 	line-height: 1.143;
+ 	letter-spacing: -0.6px;
+ 	color: inherit;
+ }
+
+ .Prose h2 {
+ 	margin: 0 0 24px 0 !important;
+ 	font-size: 36px;
+ 	line-height: 1.306;
+	color: inherit;
+ }
+
+ .Prose h3 {
+ 	margin: 0 0 24px 0 !important;
+ 	font-size: 24px;
+ 	line-height: 1.306;
+ 	color: inherit;
+ 	opacity: 1;
  }
