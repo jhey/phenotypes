@@ -3,6 +3,7 @@
  * -------------- */
 
 html,
+h1, h2, h3, h4, h5, h6,
 .Tree-title,
 .Tree-item,
 .Tree-collectionLabel,
@@ -12,7 +13,13 @@ html,
 .Status-label,
 .Browser-tab a,
 .Meta-key,
-.Meta-value {
+.Meta-value,
+.Error--render .Error--render .Error-title,
+.Error--render .Error--render .Error-message,
+.Prose h1,
+.Prose h2,
+.Prose h3,
+.Prose caption {
 	font-family: "Sailec", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
 }
 
