@@ -5,6 +5,7 @@
 html,
 .Tree-title,
 .Tree-item,
+.Tree-collectionLabel,
 .Document-title,
 .Prose,
 .Pen-title,
@@ -118,6 +119,11 @@ a:active {
 .Browser-tab.is-active a {
 	border-bottom-color: #16B8E0;
 	color: #232323;
+}
+
+.Meta-key {
+	letter-spacing: 0.143em;
+	line-height: 24px;
 }
 
 .Frame-panel--main {
