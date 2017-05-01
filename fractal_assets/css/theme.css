@@ -207,6 +207,12 @@ a:active {
     padding: 0 1em;
 }
 
+::-webkit-scrollbar {
+    height: 12px;
+    width: 12px;
+}
+
+
 /* -----------------------
  * Documentation rendering
  * ----------------------- */
@@ -227,10 +233,17 @@ a:active {
  	margin: 24px 0 !important;
  }
 
-.Prose table,
-.Prose blockquote,
+.Prose blockquote {
+	margin: 53px 0 !important;
+}
+
 .Prose code {
-	margin: 36px 0 !important;
+	background: #eee;
+}
+
+.Prose code pre {
+	margin: 36px 0;
+	background: #eee;
 }
 
 [dir="ltr"] .Prose blockquote {
@@ -238,7 +251,6 @@ a:active {
 	border-left-color: #eee;
 	opacity: 1;
 	color: #969696;
-	font-size: 18px;
 }
 
 .Prose hr {
@@ -293,4 +305,24 @@ a:active {
 	line-height: 1.306;
 	color: inherit;
 	opacity: 1;
+}
+
+.Prose table {
+	margin: 36px 0 53px 0 !important;
+}
+
+.Prose th {
+    background-color: transparent;
+    border-bottom: 2px solid #eee;
+}
+
+.Prose tr {
+	background-image: linear-gradient(to right, #dbdbdb 25%, #fff 0%);
+	background-position: bottom;
+	background-size: 4px 1px;
+	background-repeat: repeat-x;
+}
+
+.Prose tr:nth-child(even) {
+    background-color: transparent;
 }
