@@ -1,9 +1,9 @@
 ---
-title: Introduction
+title: Hello 👋
 status: draft
 ---
 
-Phenotypes is Amino's design system—a repository of principles and modules that we use to design and build our products. It's a central source of truth that facilitates clear communication and efficient workflows for designers and developers.
+Welcome to Phenotypes—Amino's design system. Phenotypes is a repository of principles and modules that we use to design and build our products. It's a central source of truth that facilitates clear communication and efficient workflows for designers and developers.
 
 Phenotypes treats the following topics as first-class concerns:
 
@@ -24,13 +24,7 @@ By it's nature, Phenotypes is and always will be a work in progress. Use it in g
 
 ## Principles
 
-TK
-
----
-
-## Accessibility
-
-TK
+TK (move the "first-class" concerns stuff here and rewrite to be more instructive)
 
 ---
 
@@ -54,7 +48,6 @@ The brand attributes are intended to align our collective thinking while allowin
 Amino logo assets are in this folder: [Dropbox / Everyone / Design / branding](https://www.dropbox.com/sh/mr8u8jp1ul187jo/AAAgtIq0OLq3_Bh8idT2w2osa?dl=0). 
 
 TK: Guidelines and downloads for each version of the logo.
-
 
 ---
 
