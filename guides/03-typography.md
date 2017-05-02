@@ -78,7 +78,7 @@ Don't use all caps for a heading, long sentence, or to convey emphasis in an par
 
 Most general purpose type is set in **various opacities of black or white**, although Amino brand colors can and should be used to create interest or emphasis. Keep in mind that in interactive products, bright blue colors should be reserved for links and other interactive elements. Green and red also tend to carry meaning (success and error, respectively), but can work if the context is clear.
 
-![Colors](/img/guides/colors.png)
+![Colors](/img/guides/typography-colors.png)
 
 These opacities of black match the brand gray palette when set against a white background, and vice versa for reversed type. For type, varying the opacity of black and white rather than using equivalent gray colors makes it possible to change an element's background color and preserve legibility and aesthetics (h/t [Material Design](https://material.io/guidelines/style/color.html#color-text-background-colors)). On the web, it's important to set text opacity using **rgba() and hsla()** and not opacity (more on that [here](http://stackoverflow.com/questions/13385492/css-opacity-vs-rgba-which-one-is-better)).
 
