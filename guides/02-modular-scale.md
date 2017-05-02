@@ -1,3 +1,7 @@
+---
+status: stable
+---
+
 > "A modular scale, like a musical scale, is a prearranged set of harmonious proportions." <br>—Robert Bringhurst
 
 A *modular scale* is a set of numbers that are proportionally related to each other. Basically, you pick a base number and a multiplier to create a sequence. Then you use that sequence as much as possible to make design decisions. If you need to choose a font size or decide how much whitespace to use in a layout, let the modular scale be your guide. [Learn more about modular scales](https://alistapart.com/article/more-meaningful-typography).

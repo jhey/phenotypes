@@ -1,5 +1,6 @@
 ---
 title: Introduction
+status: stable
 ---
 
 Phenotypes is Amino's design system—a repository of principles and modules that we use to design and build our products. It's a central source of truth that facilitates clear communication and efficient workflows for designers and developers.

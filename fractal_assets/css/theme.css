@@ -207,6 +207,10 @@ a:active {
     padding: 0 1em;
 }
 
+.Tree-entityLink .Status {
+	display: none;
+}
+
 ::-webkit-scrollbar {
     height: 12px;
     width: 12px;

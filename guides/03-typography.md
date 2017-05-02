@@ -1,3 +1,7 @@
+---
+status: stable
+---
+
 Amino's standard typeface is **Sailec**. It was designed by Nico Inosanto and published by Swiss type foundry Type Dynamic in 2014. Sailec is classified as [geometric sans serif](https://www.fontshop.com/content/short-intro-to-geometric-sans). It aims to be highly neutral, which gives it a lot of versatility and a timeless quality. Despite its neutrality, it has an approachable and contemporary personality. Sailec looks great in large headlines, reads comfortably in body copy, and maintains clear legibility even at the smallest sizes.
 
 ### Weights
