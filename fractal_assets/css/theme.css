@@ -271,6 +271,10 @@ a:active {
 	padding-left: 1em;
 }
 
+.Prose ol > li {
+	padding-left: 1em;
+}
+
 .Prose img {
 	display: block;
 	margin: 53px 0;
