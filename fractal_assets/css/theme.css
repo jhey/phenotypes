@@ -3,15 +3,23 @@
  * -------------- */
 
 html,
+h1, h2, h3, h4, h5, h6,
 .Tree-title,
 .Tree-item,
+.Tree-collectionLabel,
 .Document-title,
 .Prose,
 .Pen-title,
 .Status-label,
 .Browser-tab a,
 .Meta-key,
-.Meta-value {
+.Meta-value,
+.Error--render .Error--render .Error-title,
+.Error--render .Error--render .Error-message,
+.Prose h1,
+.Prose h2,
+.Prose h3,
+.Prose caption {
 	font-family: "Sailec", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
 }
 
@@ -43,14 +51,25 @@ a:active {
 	box-shadow: none;
 }
 
-.Header::after {
+.Header-title {
+	display: block;
+	padding: 0 64px 0 0;
+	margin: -3px auto 0 auto;
+	font-size: 18px;
+	line-height: 1.143;
+}
+
+.Header-title::before {
 	content: "";
-	width: 27px;
-	height: 27px;
-	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
-	right: 20px;
+	display: inline-block;
+	margin: 0 11px 0 0;
+	vertical-align: -5px;
+	width: 24px;
+	height: 24px;
+	/*position: absolute;*/
+	/*top: 50%;*/
+	/*transform: translateY(-50%);*/
+	/*right: 20px;*/
 	background: url(../img/fractal/amino-logo-mark.png);
 	background-size: 100%;
 	background-repeat: no-repeat;
@@ -63,12 +82,12 @@ a:active {
 }
 
 .Frame-panel--sidebar {
-	background: #f9f9f9;
+	background: #fff;
 	padding: 2rem 1rem 1rem;
 }
 
 [dir="ltr"] .Frame-panel--sidebar {
-    border-right: none;
+	border-right: 1px solid #eee;
 }
 
 [dir="ltr"] .Header-button {
@@ -120,14 +139,19 @@ a:active {
 	color: #232323;
 }
 
+.Meta-key {
+	letter-spacing: 0.143em;
+	line-height: 24px;
+}
+
 .Frame-panel--main {
 	/*background: #f9f9f9;*/
 }
 
 .Document {
-	margin: 2em;
+	margin: 53px auto;
 	padding: 1.5rem 2rem 2rem;
-	max-width: 55em;
+	max-width: 50em;
 	/*border-radius: 3px;*/
 	/*box-shadow: 0 10px 30px rgba(0,0,0,0.15);*/
 	background: white;
@@ -139,7 +163,7 @@ a:active {
 }
 
 .Prose {
-	max-width: 50em;
+	max-width: 100%;
 }
 
 /* Don't use an "X" icon when the sidebar is open (keep the hamburger) */
@@ -183,6 +207,16 @@ a:active {
     padding: 0 1em;
 }
 
+.Tree-entityLink .Status {
+	display: none;
+}
+
+::-webkit-scrollbar {
+    height: 12px;
+    width: 12px;
+}
+
+
 /* -----------------------
  * Documentation rendering
  * ----------------------- */
@@ -190,3 +224,121 @@ a:active {
  .Prose img {
  	max-width: 100%;
  }
+
+ .Prose {
+ 	font-size: 16px;
+ 	line-height: 1.493;
+	color: rgba(0,0,0,0.86); 	
+ }
+
+ .Prose p,
+ .Prose ul,
+ .Prose ol {
+ 	margin: 24px 0 !important;
+ }
+
+.Prose blockquote {
+	margin: 53px 0 !important;
+}
+
+.Prose code {
+	background: #eee;
+}
+
+.Prose code pre {
+	margin: 36px 0;
+	background: #eee;
+}
+
+[dir="ltr"] .Prose blockquote {
+	padding-left: 31px;
+	border-left-color: #eee;
+	opacity: 1;
+	color: #969696;
+}
+
+.Prose hr {
+	margin: 53px 0 !important;
+	border-top: 2px solid #eee;
+}
+
+[dir="ltr"] .Prose ul, [dir="ltr"] .Prose ol {
+    padding-left: 2em;
+}
+
+.Prose ul > li {
+	list-style-type: disc;
+	padding-left: 1em;
+}
+
+.Prose ol > li {
+	padding-left: 1em;
+}
+
+.Prose img {
+	display: block;
+	margin: 53px 0;
+}
+
+.Prose .caption {
+	margin-top: -31px !important;
+	margin-bottom: 53px !important;
+	font-size: 14px;
+	color: #777;
+	font-style: italic;
+}
+
+.Document-header {
+	margin-bottom: 0;
+}
+
+.Document-title, .Prose h1 {
+	margin: 0;
+	font-size: 53px;
+	line-height: 1.143;
+	letter-spacing: -0.6px;
+	color: inherit;
+}
+
+.Prose h2 {
+	margin: 53px 0 24px 0 !important;
+	font-size: 36px;
+	line-height: 1.306;
+	color: inherit;
+}
+
+.Prose h3 {
+	margin: 36px 0 24px 0 !important;
+	font-size: 24px;
+	line-height: 1.306;
+	color: inherit;
+	opacity: 1;
+}
+
+.Prose table {
+	margin: 36px 0 53px 0 !important;
+}
+
+.Prose th {
+    background-color: transparent;
+    border-bottom: 2px solid #eee;
+}
+
+.Prose tr {
+	background-image: linear-gradient(to right, #dbdbdb 25%, #fff 0%);
+	background-position: bottom;
+	background-size: 4px 1px;
+	background-repeat: repeat-x;
+}
+
+.Prose tr:nth-child(even) {
+    background-color: transparent;
+}
+
+.colorChip {
+	display: block;
+	width: 40px;
+	height: 20px;
+	border-radius: 10px;
+	background: #eee;
+}

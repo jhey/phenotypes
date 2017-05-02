@@ -10,5 +10,5 @@
 			"name": "Variant 2"
 		}
 	],
-	"notes": "This is a sample React component that is rendered once on the server and then again on the client with behavior added (you should see the clock ticking up if everything is working)."
+	"notes": "This is a sample React component that is rendered once on the server and then again on the client with behavior added (you should see the clock ticking up if everything is working). Phenotypes stylesheets are applied automatically."
 }
