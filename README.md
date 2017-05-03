@@ -15,11 +15,13 @@ Phenotypes runs on [Fractal](http://fractal.build), a tool that hosts the guides
 Here's how to get Phenotypes up and running locally: 
 
 * Clone this repo and `cd` into it.
-* `docker build -t phenotypes .`
-* `docker run -it -p 3000:3000 phenotypes`
+* `docker-compose build`
+* `docker-compose up`
 * Open [http://localhost:3000](http://localhost:3000) in a browser
 
 While running, Fractal will watch your `components` and `guides` directories for changes. It will automatically reload itself and your browser as needed.
+
+To stop the server, just hit `^C`.
 
 ## Development
 
