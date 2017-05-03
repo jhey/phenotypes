@@ -216,9 +216,8 @@ a:active {
     width: 12px;
 }
 
-::selection {
-    background-color: #7FEAFF;
-}
+::selection {background-color: #7FEAFF; }
+::moz-selection {background-color: #7FEAFF; }
 
 /* -----------------------
  * Documentation rendering
