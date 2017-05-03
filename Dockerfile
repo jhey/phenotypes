@@ -16,4 +16,4 @@ COPY . /usr/src/app
 
 EXPOSE 3000
 
-CMD [ "npm", "run", "start-and-watch" ]
+CMD [ "npm", "start"]
