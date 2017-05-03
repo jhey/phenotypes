@@ -19,7 +19,7 @@
     "build-js": "webpack",
     "watch-js": "webpack --progress --colors --watch",
     "build-all": "npm run build-js && npm run build-css",
-    "start": "fractal start --sync"
+    "start": "npm run build-all && fractal start --sync"
   },
   "repository": {
     "type": "git",

@@ -15,8 +15,7 @@ Phenotypes runs on [Fractal](http://fractal.build), a tool that hosts the guides
 Here's how to get Phenotypes up and running locally: 
 
 * Clone this repo and `cd` into it.
-* Install stuff `npm install`
-* Build static assets `npm run build-all`
+* Install stuff `yarn install`
 * Start Fractal `npm start`
 * Open [http://localhost:3000](http://localhost:3000) in a browser
 
