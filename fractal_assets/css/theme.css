@@ -216,6 +216,9 @@ a:active {
     width: 12px;
 }
 
+::selection {
+    background-color: #7FEAFF;
+}
 
 /* -----------------------
  * Documentation rendering
