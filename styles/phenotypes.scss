@@ -1,8 +1,28 @@
-@import 'partials/test';
+/*!
+ * Phenotypes - The Amino design system
+ * Copyright 2017 Amino Inc.
+ */
 
-$red: #f00;
-$blue: #00f;
+// SASS project organization and naming
+// conventions are based on Bootstrap 4
+// https://github.com/twbs/bootstrap/blob/v4-dev/scss/bootstrap.scss
 
-body {
-	color: $blue;
-}
+
+// Webfonts
+@import "fonts/sailec";
+
+// Core variables and mixins
+@import "variables";
+@import "mixins";
+
+// Bootstrap reboot
+// https://v4-alpha.getbootstrap.com/content/reboot/
+@import "lib/reboot";
+
+// Basic elements
+@import "type";
+
+// Components
+
+// Utilities
+@import "utilities";
