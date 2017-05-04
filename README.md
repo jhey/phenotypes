@@ -34,6 +34,12 @@ The `watch-css` script recompiles `phenotypes.css` whenever a SASS file in the `
 
 To stop the server, just hit `^C`.
 
+To run Phenotypes without all the syncing and watching (e.g. for deployment), just run it like so:
+
+```
+$ docker-compose -f docker-compose.yml -f docker-compose.prod.yml up
+```
+
 ## Using Phenotypes components in a project
 
 TK
