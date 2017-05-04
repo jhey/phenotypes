@@ -1,3 +1,9 @@
+// Based on Bootstrap 4 reboot as of May 4, 2017 (MIT license)
+// Doc: https://v4-alpha.getbootstrap.com/content/reboot/
+// Src: https://github.com/twbs/bootstrap/commits/v4-dev/scss/_reboot.scss
+
+// ---
+
 // scss-lint:disable QualifyingElement, DuplicateProperty, VendorPrefix
 
 // Reboot
@@ -187,7 +193,7 @@ a {
   background-color: transparent; // Remove the gray background on active links in IE 10.
   -webkit-text-decoration-skip: objects; // Remove gaps in links underline in iOS 8+ and Safari 8+.
 
-  @include hover {
+  &:hover {
     color: $link-hover-color;
     text-decoration: $link-hover-decoration;
   }
@@ -203,7 +209,8 @@ a:not([href]):not([tabindex]) {
   color: inherit;
   text-decoration: none;
 
-  @include hover-focus {
+  &:focus,
+  &:hover {
     color: inherit;
     text-decoration: none;
   }
