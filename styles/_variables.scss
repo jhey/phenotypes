@@ -81,14 +81,14 @@ $alpha-700: 0.70 !default;
 $alpha-800: 0.86 !default;
 
 // White/reverse alphas
-$alpha-reverse-100: 0.14 !default;
-$alpha-reverse-200: 0.30 !default;
-$alpha-reverse-300: 0.46 !default;
-$alpha-reverse-400: 0.59 !default;
-$alpha-reverse-500: 0.76 !default;
-$alpha-reverse-600: 0.86 !default;
-$alpha-reverse-700: 0.93 !default;
-$alpha-reverse-800: 0.98 !default;
+$reversed-alpha-100: 0.14 !default;
+$reversed-alpha-200: 0.30 !default;
+$reversed-alpha-300: 0.46 !default;
+$reversed-alpha-400: 0.59 !default;
+$reversed-alpha-500: 0.76 !default;
+$reversed-alpha-600: 0.86 !default;
+$reversed-alpha-700: 0.93 !default;
+$reversed-alpha-800: 0.98 !default;
 
 // Text colors
 $text-color-primary:   rgba($black, $alpha-800) !default;
@@ -96,12 +96,44 @@ $text-color-secondary: rgba($black, $alpha-600) !default;
 $text-color-hint:      rgba($black, $alpha-500) !default;
 
 // Reversed text colors
-$reversed-text-color-primary:   $white                           !default;
-$reversed-text-color-secondary: rgba($white, $alpha-reverse-500) !default;
-$reversed-text-color-hint:      rgba($white, $alpha-reverse-400) !default;
+$reversed-text-color-primary:   $white                            !default;
+$reversed-text-color-secondary: rgba($white, $reversed-alpha-500) !default;
+$reversed-text-color-hint:      rgba($white, $reversed-alpha-400) !default;
 
 
+//
+// Gradients
+//
 
+$orange-gradient-start: $orange-200 !default;
+$orange-gradient-stop:  $orange-300 !default;
+
+$red-gradient-start:    $red-200 !default;
+$red-gradient-stop:     $red-400 !default;
+
+$purple-gradient-start: #B25DBA !default;
+$purple-gradient-stop:  $purple-400 !default;
+
+$blue-gradient-start:   $blue-200 !default;
+$blue-gradient-stop:    $blue-400 !default;
+
+$green-gradient-start:  $green-200 !default;
+$green-gradient-stop:   $green-400 !default;
+
+$orange-red-gradient-start: $orange-200 !default;
+$orange-red-gradient-stop:  #E64253 !default;
+
+$red-purple-gradient-start: $red-200 !default;
+$red-purple-gradient-stop:  #892E9C !default;
+
+$blue-purple-gradient-start: $blue-200 !default;
+$blue-purple-gradient-stop:  #6E3094 !default;
+
+$green-blue-gradient-start: #1ADCAE !default;
+$green-blue-gradient-stop:  #0076AE !default;
+
+// Default angle
+$gradient-angle: to bottom left;
 
 
 //
