@@ -1,36 +1,76 @@
-// Variable override instructions
+// Variables are flagged as !default, which means that you can override them
+// by defining them before importing this file. For example, if you set up 
+// your project like the following, you can put your overrides in _config.scss:
+//
+// @import "config";
+// @import "phenotypes";
 
+// Variable naming inspired by Bootstrap 4.
+// https://github.com/twbs/bootstrap/blob/v4-dev/scss/_variables.scss
+// Variable format should follow the `$component-modifier-state-property` order.
 
+//
 // Colors
 //
-// Grayscale and brand colors for use across Bootstrap.
 
-// Start with assigning color names to specific hex values.
 $white:  #fff !default;
 $black:  #000 !default;
-$red:    #d9534f !default;
-$orange: #f0ad4e !default;
-$yellow: #ffd500 !default;
-$green:  #5cb85c !default;
-$blue:   #0275d8 !default;
-$teal:   #5bc0de !default;
-$pink:   #ff5b77 !default;
-$purple: #613d7c !default;
 
-// Create grayscale
-$gray-dark:                 #292b2c !default;
-$gray:                      #464a4c !default;
-$gray-light:                #636c72 !default;
-$gray-lighter:              #eceeef !default;
-$gray-lightest:             #f7f7f9 !default;
+$orange-100: #FFC67F !default;
+$orange-200: #FC8626 !default;
+$orange-300: #CD5000 !default;
+$orange-400: #992800 !default;
+$orange-500: #631000 !default;
 
-// Reassign color vars to semantic color scheme
-$brand-primary:             $blue !default;
-$brand-success:             $green !default;
-$brand-info:                $teal !default;
-$brand-warning:             $orange !default;
-$brand-danger:              $red !default;
-$brand-inverse:             $gray-dark !default;
+$red-100: #FF979A !default;
+$red-200: #F04D5D !default;
+$red-300: #BD2B43 !default;
+$red-400: #8C092C !default;
+$red-500: #4A001E !default;
+
+$purple-100: #E39AE3 !default;
+$purple-200: #B35DBA !default;
+$purple-300: #853B94 !default;
+$purple-400: #58166E !default;
+$purple-500: #2F0047 !default;
+
+$blue-100: #7FEAFF !default;
+$blue-200: #16B8E0 !default;
+$blue-300: #008AB3 !default;
+$blue-400: #005678 !default;
+$blue-500: #00253F !default;
+
+$green-100: #89F0CF !default;
+$green-200: #2DCFA1 !default;
+$green-300: #03AB8C !default;
+$green-400: #007868 !default;
+$green-500: #003F3E !default;
+
+$gray-100: #F9F9F9 !default;
+$gray-200: #EEEEEE !default;
+$gray-300: #DBDBDB !default;
+$gray-400: #C1C1C1 !default;
+$gray-500: #969696 !default;
+$gray-600: #777777 !default;
+$gray-700: #4D4D4D !default;
+$gray-800: #232323 !default;
+
+// Primary palette
+$orange: $orange-200 !default;
+$red:    $red-200    !default;
+$purple: $purple-300 !default;
+$blue:   $blue-200   !default;
+$green:  $green-200  !default;
+
+// Semantic color scheme
+$brand-primary: $purple   !default;
+$brand-success: $green    !default;
+$brand-info:    $blue     !default;
+$brand-warning: $orange   !default;
+$brand-danger:  $red      !default;
+$brand-inverse: $gray-800 !default;
+
+
 
 
 // Minimum variables needed for reboot
