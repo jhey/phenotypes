@@ -141,16 +141,18 @@ $gradient-angle: to bottom left;
 // Spacing
 // ------------------------------
 
-// TODO: MODULAR SCALE
-
-$spacer: 1rem !default;
+$spacer: $modular-scale-base-px !default;
 $spacers: (
   0: 0,
-  1: ($spacer * .25),
-  2: ($spacer * .5),
-  3: $spacer,
-  4: ($spacer * 1.5),
-  5: ($spacer * 3)
+  1: modular-scale-px(-8),
+  2: modular-scale-px(-6),
+  3: modular-scale-px(-3),
+  4: modular-scale-px(0),
+  5: modular-scale-px(3),
+  6: modular-scale-px(6),
+  7: modular-scale-px(9),
+  8: modular-scale-px(12),
+  9: modular-scale-px(15),
 ) !default;
 
 // This variable affects the `.h-*` and `.w-*` classes.
@@ -215,34 +217,39 @@ $border-radius: 3px !default;
 // Type
 // ------------------------------
 
+// TODO: variables for font size, line height, and letter spacing?
+
 $font-family-sans-serif: "Sailec", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
 $font-family-monospace:  Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 $font-family-base:       $font-family-sans-serif !default;
 
-$font-size-base: 16px !default; // TODO: MODULAR SCALE
+$font-size-base: $modular-scale-base-px !default;
 
 $font-weight-normal: normal !default;
 $font-weight-bold: bold !default;
-
 $font-weight-base: $font-weight-normal !default;
-$line-height-base: 1.493 !default; // TODO: MODULAR SCALE
 
-$font-size-h1: 53px !default; // TODO: MODULAR SCALE
-$font-size-h2: 36px !default;
-$font-size-h3: 24px !default;
-$font-size-h4: 21px !default;
-$font-size-h5: 18px !default;
-$font-size-h6: 16px !default;
+$line-height-1: modular-scale-ratio(1) !default;
+$line-height-2: modular-scale-ratio(2) !default;
+$line-height-3: modular-scale-ratio(3) !default;
+$line-height-base: $line-height-3 !default;
+
+$font-size-h1: modular-scale-px(9) !default;
+$font-size-h2: modular-scale-px(6) !default;
+$font-size-h3: modular-scale-px(3) !default;
+$font-size-h4: modular-scale-px(2) !default;
+$font-size-h5: modular-scale-px(1) !default;
+$font-size-h6: modular-scale-px(0) !default;
 
 $headings-margin-bottom: ($spacer / 2) !default;
 $headings-font-family:   inherit !default;
 $headings-font-weight:   $font-weight-bold !default;
 $headings-color:         inherit !default;
 
-$small-font-size: 87.5% !default; // TODO: MODULAR SCALE
+$small-font-size: modular-scale-ratio-percent(-1) !default;
 
 $blockquote-small-color:  $text-color-hint !default;
-$blockquote-font-size:    ($font-size-base * 1.306) !default; // TODO: MODULAR SCALE
+$blockquote-font-size:    modular-scale-px(2) !default; // TODO: font size variable
 $blockquote-border-color: $gray-200 !default;
 $blockquote-border-width: 4px !default;
 
@@ -256,7 +263,7 @@ $dt-font-weight: $font-weight-bold !default;
 $kbd-box-shadow:         inset 0 -2px 0 rgba($black,$alpha-400) !default;
 $nested-kbd-font-weight: $font-weight-bold !default;
 
-$list-inline-padding: 0.344em !default; // TODO: MODULAR SCALE
+$list-inline-padding: modular-scale-ratio-em(-8) !default;
 
 
 // ------------------------------

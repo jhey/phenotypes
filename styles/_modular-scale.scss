@@ -1,0 +1,33 @@
+@import "lib/pow";
+
+// Simple (single-stranded) modular scale calculations
+
+// Modular scale variables
+$modular-scale-proportion: (8/7) !default;
+$modular-scale-base:       16    !default;
+$modular-scale-base-px:    $modular-scale-base * 1px;
+
+// And functions
+@function modular-scale-ratio($step) {
+  @return pow($modular-scale-proportion, $step);
+}
+
+@function modular-scale($step) {
+  @return $modular-scale-base * modular-scale-ratio($step);
+}
+
+@function modular-scale-rounded($step) {
+  @return round(modular-scale($step));
+}
+
+@function modular-scale-px($step) {
+  @return modular-scale-rounded($step) * 1px;
+}
+
+@function modular-scale-ratio-percent($step) {
+  @return modular-scale-ratio($step) * 100%;
+}
+
+@function modular-scale-ratio-em($step) {
+  @return modular-scale-ratio($step) * 1em;
+}
