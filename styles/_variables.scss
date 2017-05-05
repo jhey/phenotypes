@@ -9,9 +9,10 @@
 // https://github.com/twbs/bootstrap/blob/v4-dev/scss/_variables.scss
 // Variable format should follow the `$component-modifier-state-property` order.
 
-//
+
+// ------------------------------
 // Colors
-//
+// ------------------------------
 
 $white:  #fff !default;
 $black:  #000 !default;
@@ -81,14 +82,14 @@ $alpha-700: 0.70 !default;
 $alpha-800: 0.86 !default;
 
 // White/reverse alphas
-$reversed-alpha-100: 0.14 !default;
-$reversed-alpha-200: 0.30 !default;
-$reversed-alpha-300: 0.46 !default;
-$reversed-alpha-400: 0.59 !default;
-$reversed-alpha-500: 0.76 !default;
-$reversed-alpha-600: 0.86 !default;
-$reversed-alpha-700: 0.93 !default;
-$reversed-alpha-800: 0.98 !default;
+$alpha-reversed-100: 0.14 !default;
+$alpha-reversed-200: 0.30 !default;
+$alpha-reversed-300: 0.46 !default;
+$alpha-reversed-400: 0.59 !default;
+$alpha-reversed-500: 0.76 !default;
+$alpha-reversed-600: 0.86 !default;
+$alpha-reversed-700: 0.93 !default;
+$alpha-reversed-800: 0.98 !default;
 
 // Text colors
 $text-color-primary:   rgba($black, $alpha-800) !default;
@@ -96,49 +97,51 @@ $text-color-secondary: rgba($black, $alpha-600) !default;
 $text-color-hint:      rgba($black, $alpha-500) !default;
 
 // Reversed text colors
-$reversed-text-color-primary:   $white                            !default;
-$reversed-text-color-secondary: rgba($white, $reversed-alpha-500) !default;
-$reversed-text-color-hint:      rgba($white, $reversed-alpha-400) !default;
+$text-color-reversed-primary:   $white                            !default;
+$text-color-reversed-secondary: rgba($white, $alpha-reversed-500) !default;
+$text-color-reversed-hint:      rgba($white, $alpha-reversed-400) !default;
 
 
-//
+// ------------------------------
 // Gradients
-//
+// ------------------------------
 
-$orange-gradient-start: $orange-200 !default;
-$orange-gradient-stop:  $orange-300 !default;
+$gradient-orange-start: $orange-200 !default;
+$gradient-orange-stop:  $orange-300 !default;
 
-$red-gradient-start:    $red-200 !default;
-$red-gradient-stop:     $red-400 !default;
+$gradient-red-start:    $red-200 !default;
+$gradient-red-stop:     $red-400 !default;
 
-$purple-gradient-start: #B25DBA !default;
-$purple-gradient-stop:  $purple-400 !default;
+$gradient-purple-start: #B25DBA !default;
+$gradient-purple-stop:  $purple-400 !default;
 
-$blue-gradient-start:   $blue-200 !default;
-$blue-gradient-stop:    $blue-400 !default;
+$gradient-blue-start:   $blue-200 !default;
+$gradient-blue-stop:    $blue-400 !default;
 
-$green-gradient-start:  $green-200 !default;
-$green-gradient-stop:   $green-400 !default;
+$gradient-green-start:  $green-200 !default;
+$gradient-green-stop:   $green-400 !default;
 
-$orange-red-gradient-start: $orange-200 !default;
-$orange-red-gradient-stop:  #E64253 !default;
+$gradient-orange-red-start: $orange-200 !default;
+$gradient-orange-red-stop:  #E64253 !default;
 
-$red-purple-gradient-start: $red-200 !default;
-$red-purple-gradient-stop:  #892E9C !default;
+$gradient-red-purple-start: $red-200 !default;
+$gradient-red-purple-stop:  #892E9C !default;
 
-$blue-purple-gradient-start: $blue-200 !default;
-$blue-purple-gradient-stop:  #6E3094 !default;
+$gradient-blue-purple-start: $blue-200 !default;
+$gradient-blue-purple-stop:  #6E3094 !default;
 
-$green-blue-gradient-start: #1ADCAE !default;
-$green-blue-gradient-stop:  #0076AE !default;
+$gradient-green-blue-start: #1ADCAE !default;
+$gradient-green-blue-stop:  #0076AE !default;
 
 // Default angle
 $gradient-angle: to bottom left;
 
 
-//
+// ------------------------------
 // Spacing
-//
+// ------------------------------
+
+// TODO: MODULAR SCALE
 
 $spacer: 1rem !default;
 $spacers: (
@@ -159,41 +162,114 @@ $sizes: (
 ) !default;
 
 
-//
+// ------------------------------
 // Body
-//
+// ------------------------------
 
 $body-bg:    $white              !default;
 $body-color: $text-color-primary !default;
 
 
-//
+// ------------------------------
 // Links
-//
+// ------------------------------
 
-$link-color:            $brand-primary !default;
-$link-decoration:       none !default;
-$link-hover-color:      darken($link-color, 15%) !default;
+$link-color:            $blue-200 !default;
+$link-decoration:       none      !default;
+$link-hover-color:      $blue-300 !default;
 $link-hover-decoration: underline !default;
 
 
+// ------------------------------
+// Responsive breakpoints
+// ------------------------------
+// https://medium.freecodecamp.com/the-100-correct-way-to-do-css-breakpoints-88d6a5ba1862
 
-// Minimum variables needed for reboot
+$grid-breakpoints: (
+  xs: 0,
+  sm: 600px,
+  md: 900px,
+  lg: 1200px,
+  xl: 1500px
+) !default;
 
-$font-family-base: "Sailec", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
-$font-size-base: 16px !default;
-$font-weight-base: normal !default;
-$line-height-base: 1.493 !default;
-$body-color: rgba(0,0,0,0.86) !default;
 
-$dt-font-weight: bold !default;
+// ------------------------------
+// Grid
+// ------------------------------
 
-$link-color: $brand-primary !default;
-$link-decoration: none !default;
-$link-hover-color: darken($link-color, 15%) !default;
-$link-hover-decoration: underline !default;
+// TODO: Grid columns and other variables (probably not using Bootstrap grid)
+
+
+// ------------------------------
+// Components
+// ------------------------------
+
+$border-width:  1px !default;
+$border-radius: 3px !default;
+
+// TODO: Lots more variables go here as components are built
+
+
+// ------------------------------
+// Type
+// ------------------------------
+
+$font-family-sans-serif: "Sailec", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
+$font-family-monospace:  Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-family-base:       $font-family-sans-serif !default;
+
+$font-size-base: 16px !default; // TODO: MODULAR SCALE
+
+$font-weight-normal: normal !default;
+$font-weight-bold: bold !default;
+
+$font-weight-base: $font-weight-normal !default;
+$line-height-base: 1.493 !default; // TODO: MODULAR SCALE
+
+$font-size-h1: 53px !default; // TODO: MODULAR SCALE
+$font-size-h2: 36px !default;
+$font-size-h3: 24px !default;
+$font-size-h4: 21px !default;
+$font-size-h5: 18px !default;
+$font-size-h6: 16px !default;
+
+$headings-margin-bottom: ($spacer / 2) !default;
+$headings-font-family:   inherit !default;
+$headings-font-weight:   $font-weight-bold !default;
+$headings-color:         inherit !default;
+
+$small-font-size: 87.5% !default; // TODO: MODULAR SCALE
+
+$blockquote-small-color:  $text-color-hint !default;
+$blockquote-font-size:    ($font-size-base * 1.306) !default; // TODO: MODULAR SCALE
+$blockquote-border-color: $gray-200 !default;
+$blockquote-border-width: 4px !default;
+
+$hr-border-color: $gray-200 !default;
+$hr-border-width: 2px !default;
+
+$mark-padding: .2em !default;
+
+$dt-font-weight: $font-weight-bold !default;
+
+$kbd-box-shadow:         inset 0 -2px 0 rgba($black,$alpha-400) !default;
+$nested-kbd-font-weight: $font-weight-bold !default;
+
+$list-inline-padding: 0.344em !default; // TODO: MODULAR SCALE
+
+
+// ------------------------------
+// Transitions
+// ------------------------------
+
+// TODO
+
+
+// ------------------------------
+// Other variables
+// ------------------------------
+// These are needed for Bootstrap reboot to work
 
 $table-cell-padding: .75rem !default;
 $text-muted: $text-color-secondary !default;
-
-$enable-hover-media-query:  false !default;
