@@ -62,7 +62,7 @@ $purple: $purple-300 !default;
 $blue:   $blue-200   !default;
 $green:  $green-200  !default;
 
-// Semantic color scheme
+// Semantic color scheme (a la Bootstrap)
 $brand-primary: $purple   !default;
 $brand-success: $green    !default;
 $brand-info:    $blue     !default;
@@ -70,6 +70,79 @@ $brand-warning: $orange   !default;
 $brand-danger:  $red      !default;
 $brand-inverse: $gray-800 !default;
 
+// Black/dark alphas
+$alpha-100: 0.02 !default;
+$alpha-200: 0.07 !default;
+$alpha-300: 0.14 !default;
+$alpha-400: 0.24 !default;
+$alpha-500: 0.41 !default;
+$alpha-600: 0.54 !default;
+$alpha-700: 0.70 !default;
+$alpha-800: 0.86 !default;
+
+// White/reverse alphas
+$alpha-reverse-100: 0.14 !default;
+$alpha-reverse-200: 0.30 !default;
+$alpha-reverse-300: 0.46 !default;
+$alpha-reverse-400: 0.59 !default;
+$alpha-reverse-500: 0.76 !default;
+$alpha-reverse-600: 0.86 !default;
+$alpha-reverse-700: 0.93 !default;
+$alpha-reverse-800: 0.98 !default;
+
+// Text colors
+$text-color-primary:   rgba($black, $alpha-800) !default;
+$text-color-secondary: rgba($black, $alpha-600) !default;
+$text-color-hint:      rgba($black, $alpha-500) !default;
+
+// Reversed text colors
+$reversed-text-color-primary:   $white                           !default;
+$reversed-text-color-secondary: rgba($white, $alpha-reverse-500) !default;
+$reversed-text-color-hint:      rgba($white, $alpha-reverse-400) !default;
+
+
+
+
+
+//
+// Spacing
+//
+
+$spacer: 1rem !default;
+$spacers: (
+  0: 0,
+  1: ($spacer * .25),
+  2: ($spacer * .5),
+  3: $spacer,
+  4: ($spacer * 1.5),
+  5: ($spacer * 3)
+) !default;
+
+// This variable affects the `.h-*` and `.w-*` classes.
+$sizes: (
+  25: 25%,
+  50: 50%,
+  75: 75%,
+  100: 100%
+) !default;
+
+
+//
+// Body
+//
+
+$body-bg:    $white              !default;
+$body-color: $text-color-primary !default;
+
+
+//
+// Links
+//
+
+$link-color:            $brand-primary !default;
+$link-decoration:       none !default;
+$link-hover-color:      darken($link-color, 15%) !default;
+$link-hover-decoration: underline !default;
 
 
 
@@ -80,7 +153,6 @@ $font-size-base: 16px !default;
 $font-weight-base: normal !default;
 $line-height-base: 1.493 !default;
 $body-color: rgba(0,0,0,0.86) !default;
-$body-bg: white !default;
 
 $dt-font-weight: bold !default;
 
@@ -90,6 +162,6 @@ $link-hover-color: darken($link-color, 15%) !default;
 $link-hover-decoration: underline !default;
 
 $table-cell-padding: .75rem !default;
-$text-muted: $gray-light !default;
+$text-muted: $text-color-secondary !default;
 
 $enable-hover-media-query:  false !default;

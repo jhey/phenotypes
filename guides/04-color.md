@@ -82,66 +82,84 @@ Green | Name | Hex | RGB | HSB | HSL
  <div class="colorChip" style="background: #007868;"></div> | green-400 | #007868 | 0, 120, 104 | 172, 100, 47 | 172, 100, 24
  <div class="colorChip" style="background: #003F3E;"></div> | green-500 | #003F3E | 0, 64, 63 | 179, 100, 25 | 179, 100, 13
 
+Orange gradient | Hex | RGB | HSB | HSL
+---|---|---|---|---
+<div class="colorChip" style="background: #FC8626;"></div> | #FC8626 | 252, 134, 38 | 27, 85, 99 | 27, 97, 57
+<div class="colorChip" style="background: #CD5000;"></div> | #CD5000 | 205, 80, 0 | 23, 100, 80 | 23, 100, 40
 
+Red gradient | Hex | RGB | HSB | HSL
+---|---|---|---|---
+<div class="colorChip" style="background: #F04D5D;"></div> | #F04D5D | 240, 77, 93 | 354, 68, 94 | 354, 84, 62
+<div class="colorChip" style="background: #8C092C;"></div> | #8C092C | 140, 9, 44 | 344, 94, 55 | 344, 88, 29
 
- Orange gradient | Hex | RGB | HSB | HSL
- ---|---|---|---|---
- <div class="colorChip" style="background: #FC8626;"></div> | #FC8626 | 252, 134, 38 | 27, 85, 99 | 27, 97, 57
- <div class="colorChip" style="background: #CD5000;"></div> | #CD5000 | 205, 80, 0 | 23, 100, 80 | 23, 100, 40
+Purple gradient | Hex | RGB | HSB | HSL
+---|---|---|---|---
+<div class="colorChip" style="background: #B25DBA;"></div> | #B25DBA | 178, 93, 186 | 295, 50, 73 | 295, 40, 55
+<div class="colorChip" style="background: #58166E;"></div> | #58166E | 88, 22, 110 | 285, 80, 43 | 285, 67, 26
 
- Red gradient | Hex | RGB | HSB | HSL
- ---|---|---|---|---
- <div class="colorChip" style="background: #F04D5D;"></div> | #F04D5D | 240, 77, 93 | 354, 68, 94 | 354, 84, 62
- <div class="colorChip" style="background: #8C092C;"></div> | #8C092C | 140, 9, 44 | 344, 94, 55 | 344, 88, 29
+Blue gradient | Hex | RGB | HSB | HSL
+---|---|---|---|---
+<div class="colorChip" style="background: #16B8E0;"></div> | #16B8E0 | 22, 184, 224 | 192, 90, 88 | 192, 82, 48
+<div class="colorChip" style="background: #005678;"></div> | #005678 | 0, 86, 120 | 197, 100, 47 | 197, 100, 24
 
- Purple gradient | Hex | RGB | HSB | HSL
- ---|---|---|---|---
- <div class="colorChip" style="background: #B25DBA;"></div> | #B25DBA | 178, 93, 186 | 295, 50, 73 | 295, 40, 55
- <div class="colorChip" style="background: #58166E;"></div> | #58166E | 88, 22, 110 | 285, 80, 43 | 285, 67, 26
+Green gradient | Hex | RGB | HSB | HSL
+---|---|---|---|---
+<div class="colorChip" style="background: #2DCFA1;"></div> | #2DCFA1 | 45, 207, 161 | 163, 78, 81 | 163, 64, 49
+<div class="colorChip" style="background: #007868;"></div> | #007868 | 0, 120, 104 | 172, 100, 47 | 172, 100, 24
 
- Blue gradient | Hex | RGB | HSB | HSL
- ---|---|---|---|---
- <div class="colorChip" style="background: #16B8E0;"></div> | #16B8E0 | 22, 184, 224 | 192, 90, 88 | 192, 82, 48
- <div class="colorChip" style="background: #005678;"></div> | #005678 | 0, 86, 120 | 197, 100, 47 | 197, 100, 24
+Orange/red | Hex | RGB | HSB | HSL
+---|---|---|---|---
+<div class="colorChip" style="background: #FC8626;"></div> | #FC8626 | 252, 134, 38 | 27, 85, 99 | 27, 97, 57
+<div class="colorChip" style="background: #E64253;"></div> | #E64253 | 230, 66, 83 | 354, 71, 90 | 354, 77, 58
 
- Green gradient | Hex | RGB | HSB | HSL
- ---|---|---|---|---
- <div class="colorChip" style="background: #2DCFA1;"></div> | #2DCFA1 | 45, 207, 161 | 163, 78, 81 | 163, 64, 49
- <div class="colorChip" style="background: #007868;"></div> | #007868 | 0, 120, 104 | 172, 100, 47 | 172, 100, 24
+Red/purple | Hex | RGB | HSB | HSL
+---|---|---|---|---
+<div class="colorChip" style="background: #F04D5D;"></div> | #F04D5D | 240, 77, 93 | 354, 68, 94 | 354, 84, 62
+<div class="colorChip" style="background: #892E9C;"></div> | #892E9C | 137, 46, 156 | 290, 71, 61 | 290, 54, 40
 
- Orange/red | Hex | RGB | HSB | HSL
- ---|---|---|---|---
- <div class="colorChip" style="background: #FC8626;"></div> | #FC8626 | 252, 134, 38 | 27, 85, 99 | 27, 97, 57
- <div class="colorChip" style="background: #E64253;"></div> | #E64253 | 230, 66, 83 | 354, 71, 90 | 354, 77, 58
+Blue/purple | Hex | RGB | HSB | HSL
+---|---|---|---|---
+<div class="colorChip" style="background: #16B8E0;"></div> | #16B8E0 | 22, 184, 224 | 192, 90, 88 | 192, 82, 48
+<div class="colorChip" style="background: #6E3094;"></div> | #6E3094 | 110, 48, 148 | 277, 68, 58 | 277, 51, 38
 
- Red/purple | Hex | RGB | HSB | HSL
- ---|---|---|---|---
- <div class="colorChip" style="background: #F04D5D;"></div> | #F04D5D | 240, 77, 93 | 354, 68, 94 | 354, 84, 62
- <div class="colorChip" style="background: #892E9C;"></div> | #892E9C | 137, 46, 156 | 290, 71, 61 | 290, 54, 40
+Green/blue | Hex | RGB | HSB | HSL
+---|---|---|---|---
+<div class="colorChip" style="background: #1ADCAE;"></div> | #1ADCAE | 26, 220, 174 | 166, 88, 86 | 166, 79, 48
+<div class="colorChip" style="background: #0076AE;"></div> | #0076AE | 0, 118, 174 | 199, 100, 68 | 199, 100, 34
 
- Blue/purple | Hex | RGB | HSB | HSL
- ---|---|---|---|---
- <div class="colorChip" style="background: #16B8E0;"></div> | #16B8E0 | 22, 184, 224 | 192, 90, 88 | 192, 82, 48
- <div class="colorChip" style="background: #6E3094;"></div> | #6E3094 | 110, 48, 148 | 277, 68, 58 | 277, 51, 38
+Gray | Name | Hex | RGB | HSB | HSL
+---|---|---|---|---|---|---|---
+<div class="colorChip" style="background: #FFFFFF;"></div> | white | #FFFFFF | 255, 255, 255 | 0, 0, 100 | 0, 0, 100
+<div class="colorChip" style="background: #F9F9F9;"></div> | gray-100 | #F9F9F9 | 249, 249, 249 | 0, 0, 98 | 0, 0, 98
+<div class="colorChip" style="background: #EEEEEE;"></div> | gray-200 | #EEEEEE | 238, 238, 238 | 0, 0, 93 | 0, 0, 93
+<div class="colorChip" style="background: #DBDBDB;"></div> | gray-300 | #DBDBDB | 219, 219, 219 | 0, 0, 86 | 0, 0, 86
+<div class="colorChip" style="background: #C1C1C1;"></div> | gray-400 | #C1C1C1 | 193, 193, 193 | 0, 0, 76 | 0, 0, 76
+<div class="colorChip" style="background: #969696;"></div> | gray-500 | #969696 | 150, 150, 150 | 0, 0, 59 | 0, 0, 59
+<div class="colorChip" style="background: #777777;"></div> | gray-600 | #777777 | 119, 119, 119 | 0, 0, 47 | 0, 0, 47
+<div class="colorChip" style="background: #4D4D4D;"></div> | gray-700 | #4D4D4D | 77, 77, 77 | 0, 0, 30 | 0, 0, 30
+<div class="colorChip" style="background: #232323;"></div> | gray-800 | #232323 | 36, 36, 36 | 0, 0, 14 | 0, 0, 14
+<div class="colorChip" style="background: #000000;"></div> | black | #000000 | 0, 0, 0 | 0, 0, 0 | 0, 0, 0
 
- Green/blue | Hex | RGB | HSB | HSL
- ---|---|---|---|---
- <div class="colorChip" style="background: #1ADCAE;"></div> | #1ADCAE | 26, 220, 174 | 166, 88, 86 | 166, 79, 48
- <div class="colorChip" style="background: #0076AE;"></div> | #0076AE | 0, 118, 174 | 199, 100, 68 | 199, 100, 34
+Black alpha | Name | Value
+---|---|---
+<div class="colorChip" style="background: #F9F9F9;"></div> | alpha-100 | 0.02
+<div class="colorChip" style="background: #EEEEEE;"></div> | alpha-200 | 0.07
+<div class="colorChip" style="background: #DBDBDB;"></div> | alpha-300 | 0.14
+<div class="colorChip" style="background: #C1C1C1;"></div> | alpha-400 | 0.24
+<div class="colorChip" style="background: #969696;"></div> | alpha-500 | 0.41
+<div class="colorChip" style="background: #777777;"></div> | alpha-600 | 0.54
+<div class="colorChip" style="background: #4D4D4D;"></div> | alpha-700 | 0.70
+<div class="colorChip" style="background: #232323;"></div> | alpha-800 | 0.86
 
-
- Gray | Name | Hex | RGB | HSB | HSL | Black alpha | White alpha
- ---|---|---|---|---|---|---|---
-  <div class="colorChip" style="background: #FFFFFF;"></div> | white | #FFFFFF | 255, 255, 255 | 0, 0, 100 | 0, 0, 100 | 0 | 1
-  <div class="colorChip" style="background: #F9F9F9;"></div> | gray-100 | #F9F9F9 | 249, 249, 249 | 0, 0, 98 | 0, 0, 98 | 0.02 | 0.98
-  <div class="colorChip" style="background: #EEEEEE;"></div> | gray-200 | #EEEEEE | 238, 238, 238 | 0, 0, 93 | 0, 0, 93 | 0.07 | 0.93
-  <div class="colorChip" style="background: #DBDBDB;"></div> | gray-300 | #DBDBDB | 219, 219, 219 | 0, 0, 86 | 0, 0, 86 | 0.14 | 0.86
-  <div class="colorChip" style="background: #C1C1C1;"></div> | gray-400 | #C1C1C1 | 193, 193, 193 | 0, 0, 76 | 0, 0, 76 | 0.24 | 0.76
-  <div class="colorChip" style="background: #969696;"></div> | gray-500 | #969696 | 150, 150, 150 | 0, 0, 59 | 0, 0, 59 | 0.41 | 0.59
-  <div class="colorChip" style="background: #777777;"></div> | gray-600 | #777777 | 119, 119, 119 | 0, 0, 47 | 0, 0, 47 | 0.54 | 0.46
-  <div class="colorChip" style="background: #4D4D4D;"></div> | gray-700 | #4D4D4D | 77, 77, 77 | 0, 0, 30 | 0, 0, 30 | 0.7 | 0.3
-  <div class="colorChip" style="background: #232323;"></div> | gray-800 | #232323 | 36, 36, 36 | 0, 0, 14 | 0, 0, 14 | 0.86 | 0.14
-  <div class="colorChip" style="background: #000000;"></div> | black | #000000 | 0, 0, 0 | 0, 0, 0 | 0, 0, 0 | 1 | 0
-
+White/reversed alpha | Name | Value
+---|---|---
+<div class="colorChip" style="background: #F9F9F9;"></div> | reversed-alpha-800 | 0.98
+<div class="colorChip" style="background: #EEEEEE;"></div> | reversed-alpha-700 | 0.93
+<div class="colorChip" style="background: #DBDBDB;"></div> | reversed-alpha-600 | 0.86
+<div class="colorChip" style="background: #C1C1C1;"></div> | reversed-alpha-500 | 0.76
+<div class="colorChip" style="background: #969696;"></div> | reversed-alpha-400 | 0.59
+<div class="colorChip" style="background: #777777;"></div> | reversed-alpha-300 | 0.46
+<div class="colorChip" style="background: #4D4D4D;"></div> | reversed-alpha-200 | 0.30
+<div class="colorChip" style="background: #232323;"></div> | reversed-alpha-100 | 0.14
 
 
