@@ -1,0 +1,14 @@
+// ------------------------------
+// Generic text styles
+// ------------------------------
+
+// Responsive utility classes like .text-[n]-[breakpoint] and
+// .h[n]-[breakpoint] are also available (see utilities/type).
+
+h1 { @include text-8($font-weight-bold); }
+h2 { @include text-7($font-weight-bold); }
+h3 { @include text-6($font-weight-bold); }
+h4 { @include text-5($font-weight-bold); }
+h5 { @include text-4($font-weight-bold); }
+h6 { @include text-3($font-weight-bold); }
+

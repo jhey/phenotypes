@@ -217,8 +217,6 @@ $border-radius: 3px !default;
 // Type
 // ------------------------------
 
-// TODO: variables for font size, line height, and letter spacing?
-
 $font-family-sans-serif: "Sailec", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
 $font-family-monospace:  Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 $font-family-base:       $font-family-sans-serif !default;
@@ -233,6 +231,15 @@ $line-height-1: modular-scale-ratio(1) !default;
 $line-height-2: modular-scale-ratio(2) !default;
 $line-height-3: modular-scale-ratio(3) !default;
 $line-height-base: $line-height-3 !default;
+
+$font-size-1: modular-scale-px(-2) !default; // 12px
+$font-size-2: modular-scale-px(-1) !default; // 14px
+$font-size-3: modular-scale-px(0)  !default; // 16px
+$font-size-4: modular-scale-px(1)  !default; // 18px
+$font-size-5: modular-scale-px(2)  !default; // 21px
+$font-size-6: modular-scale-px(3)  !default; // 24px
+$font-size-7: modular-scale-px(6)  !default; // 36px
+$font-size-8: modular-scale-px(9)  !default; // 53px
 
 
 // ------------------------------

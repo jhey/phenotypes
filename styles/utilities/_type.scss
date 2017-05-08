@@ -1,0 +1,32 @@
+//
+// Responsive utilities for text, heading, and uppercase classes
+//
+
+// Example: <div class="text-1 text-2-md"> would be 12px at xs and sm sizes,
+// and 14px at md, lg, and xl sizes.
+
+// Example: <h1 class="h3 h2-sm h1-md"> would be rendered as an h3 at xs size,
+// as an h2 at sm size, and as an h1 at md size and up.
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    .text-1#{$infix} { @include text-1(); }
+    .text-2#{$infix} { @include text-2(); }
+
+    .text-3#{$infix}, .h6#{$infix} { @include text-3(); }
+    .text-4#{$infix}, .h5#{$infix} { @include text-4(); }
+    .text-5#{$infix}, .h4#{$infix} { @include text-5(); }
+    .text-6#{$infix}, .h3#{$infix} { @include text-6(); }
+    .text-7#{$infix}, .h2#{$infix} { @include text-7(); }
+    .text-8#{$infix}, .h1#{$infix} { @include text-8(); }
+
+    .h1#{$infix},
+    .h2#{$infix},
+    .h3#{$infix},
+    .h4#{$infix},
+    .h5#{$infix},
+    .h6#{$infix} { font-weight: $font-weight-bold; }
+  }
+}
