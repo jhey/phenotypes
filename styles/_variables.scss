@@ -234,37 +234,6 @@ $line-height-2: modular-scale-ratio(2) !default;
 $line-height-3: modular-scale-ratio(3) !default;
 $line-height-base: $line-height-3 !default;
 
-$font-size-h1: modular-scale-px(9) !default;
-$font-size-h2: modular-scale-px(6) !default;
-$font-size-h3: modular-scale-px(3) !default;
-$font-size-h4: modular-scale-px(2) !default;
-$font-size-h5: modular-scale-px(1) !default;
-$font-size-h6: modular-scale-px(0) !default;
-
-$headings-margin-bottom: ($spacer / 2) !default;
-$headings-font-family:   inherit !default;
-$headings-font-weight:   $font-weight-bold !default;
-$headings-color:         inherit !default;
-
-$small-font-size: modular-scale-ratio-percent(-1) !default;
-
-$blockquote-small-color:  $text-color-hint !default;
-$blockquote-font-size:    modular-scale-px(2) !default; // TODO: font size variable
-$blockquote-border-color: $gray-200 !default;
-$blockquote-border-width: 4px !default;
-
-$hr-border-color: $gray-200 !default;
-$hr-border-width: 2px !default;
-
-$mark-padding: .2em !default;
-
-$dt-font-weight: $font-weight-bold !default;
-
-$kbd-box-shadow:         inset 0 -2px 0 rgba($black,$alpha-400) !default;
-$nested-kbd-font-weight: $font-weight-bold !default;
-
-$list-inline-padding: modular-scale-ratio-em(-8) !default;
-
 
 // ------------------------------
 // Transitions
@@ -280,3 +249,4 @@ $list-inline-padding: modular-scale-ratio-em(-8) !default;
 
 $table-cell-padding: .75rem !default;
 $text-muted: $text-color-secondary !default;
+$dt-font-weight: $font-weight-bold !default;
