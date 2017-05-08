@@ -16,3 +16,5 @@ Above, `value` is one of:
 * `inline-flex`
 
 The `breakpoint` suffix specifies the minimum screen size to apply the rule. For example, `.d-none.d-block-md` would hide the element at `xs` and `sm` sizes and show it at `md` and up. 
+
+See [responsive breakpoints](/docs/layout/#responsive-breakpoints) documentation.
