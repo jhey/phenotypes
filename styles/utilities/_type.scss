@@ -12,21 +12,23 @@
   @include media-breakpoint-up($breakpoint) {
     $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
 
-    .text-1#{$infix} { @include text-1(); }
-    .text-2#{$infix} { @include text-2(); }
+    .text-1#{$infix} { @include text-1($important: true); }
+    .text-2#{$infix} { @include text-2($important: true); }
 
-    .text-3#{$infix}, .h6#{$infix} { @include text-3(); }
-    .text-4#{$infix}, .h5#{$infix} { @include text-4(); }
-    .text-5#{$infix}, .h4#{$infix} { @include text-5(); }
-    .text-6#{$infix}, .h3#{$infix} { @include text-6(); }
-    .text-7#{$infix}, .h2#{$infix} { @include text-7(); }
-    .text-8#{$infix}, .h1#{$infix} { @include text-8(); }
+    .text-3#{$infix}, .h6#{$infix} { @include text-3($important: true); }
+    .text-4#{$infix}, .h5#{$infix} { @include text-4($important: true); }
+    .text-5#{$infix}, .h4#{$infix} { @include text-5($important: true); }
+    .text-6#{$infix}, .h3#{$infix} { @include text-6($important: true); }
+    .text-7#{$infix}, .h2#{$infix} { @include text-7($important: true); }
+    .text-8#{$infix}, .h1#{$infix} { @include text-8($important: true); }
 
     .h1#{$infix},
     .h2#{$infix},
     .h3#{$infix},
     .h4#{$infix},
     .h5#{$infix},
-    .h6#{$infix} { font-weight: $font-weight-bold; }
+    .h6#{$infix} { font-weight: $font-weight-bold !important; }
+
+    // TODO: Uppercase
   }
 }
