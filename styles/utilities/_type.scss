@@ -1,6 +1,6 @@
-//
-// Responsive utilities for text, heading, and uppercase classes
-//
+// ------------------------------
+// Responsive type utilities
+// ------------------------------
 
 // Example: <div class="text-1 text-2-md"> would be 12px at xs and sm sizes,
 // and 14px at md, lg, and xl sizes.
@@ -32,3 +32,16 @@
     // TODO: Uppercase
   }
 }
+
+
+// ------------------------------
+// Text color utilities
+// ------------------------------
+
+.text-color-primary   { color: $text-color-primary   !important; }
+.text-color-secondary { color: $text-color-secondary !important; }
+.text-color-hint      { color: $text-color-hint      !important; }
+
+.text-color-reversed-primary  { color: $text-color-reversed-primary    !important; }
+.text-color-reversed-secondary { color: $text-color-reversed-secondary !important; }
+.text-color-reversed-hint     { color: $text-color-reversed-hint       !important; }

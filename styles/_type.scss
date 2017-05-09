@@ -12,3 +12,14 @@ h4 { @include text-5($font-weight-bold); }
 h5 { @include text-4($font-weight-bold); }
 h6 { @include text-3($font-weight-bold); }
 
+
+// ------------------------------
+// Miscellaneous
+// ------------------------------
+
+hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: $hr-border-width solid $hr-border-color;
+}
