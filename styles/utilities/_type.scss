@@ -49,5 +49,15 @@
 .text-color-reversed-hint      { color: $text-color-reversed-hint      !important; }
 
 
+// ------------------------------
+// Text weight/style utilities
+// ------------------------------
+
+.text-weight-bold   { font-weight: $font-weight-bold   !important; }
+.text-weight-normal { font-weight: $font-weight-normal !important; }
+
+.text-style-italic { font-style: italic !important; }
+.text-style-normal { font-style: normal !important; }
+
+
 // TODO: Alignment
-// TODO: Weight and style

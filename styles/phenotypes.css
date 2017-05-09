@@ -830,3 +830,15 @@ hr {
 
 .text-color-reversed-hint {
   color: rgba(255, 255, 255, 0.59) !important; }
+
+.text-weight-bold {
+  font-weight: bold !important; }
+
+.text-weight-normal {
+  font-weight: normal !important; }
+
+.text-style-italic {
+  font-style: italic !important; }
+
+.text-style-normal {
+  font-style: normal !important; }
