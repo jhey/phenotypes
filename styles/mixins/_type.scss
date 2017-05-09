@@ -14,12 +14,12 @@
 // all_caps_letter_spacing = font_size * 0.143
 @function letter-spacing-uppercase($step) {
   $size: modular-scale-rounded($step);
-  @return ($modular-scale-ratio - 1) * $size * 1px;
+  @return ($modular-scale-proportion - 1) * $size * 1px;
 }
 
 
 // ------------------------------
-// Typography mixins
+// Text mixins
 // ------------------------------
 
 // Generic helper (not recommended for general use)
@@ -124,4 +124,39 @@
   );
 }
 
-// TODO: Uppercase
+
+// ------------------------------
+// Uppercase text mixins
+// ------------------------------
+
+// Generic helper (not recommended for general use)
+@mixin uppercase(
+  $step: -2,
+  $font-weight: $font-weight-bold,
+  $line-height: $line-height-3,
+  $important: false
+) {
+  text-transform: uppercase if($important, !important, null);
+  @include text(
+    $font-size: modular-scale-px($step),
+    $line-height: $line-height,
+    $letter-spacing: letter-spacing-uppercase($step),
+    $font-weight: $font-weight,
+    $important: $important
+  );
+}
+
+// 9px
+@mixin uppercase-1($font-weight: $font-weight-bold, $important: false) {
+  @include uppercase($step: -4, $font-weight: $font-weight, $important: $important);
+}
+
+// 11px
+@mixin uppercase-2($font-weight: $font-weight-bold, $important: false) {
+  @include uppercase($step: -3, $font-weight: $font-weight, $important: $important);
+}
+
+// 12px
+@mixin uppercase-3($font-weight: $font-weight-bold, $important: false) {
+  @include uppercase($step: -2, $font-weight: $font-weight, $important: $important);
+}

@@ -29,7 +29,9 @@
     .h5#{$infix},
     .h6#{$infix} { font-weight: $font-weight-bold !important; }
 
-    // TODO: Uppercase
+    .uppercase-1#{$infix} { @include uppercase-1($important: true); }
+    .uppercase-2#{$infix} { @include uppercase-2($important: true); }
+    .uppercase-3#{$infix} { @include uppercase-3($important: true); }
   }
 }
 
@@ -42,6 +44,10 @@
 .text-color-secondary { color: $text-color-secondary !important; }
 .text-color-hint      { color: $text-color-hint      !important; }
 
-.text-color-reversed-primary  { color: $text-color-reversed-primary    !important; }
+.text-color-reversed-primary   { color: $text-color-reversed-primary   !important; }
 .text-color-reversed-secondary { color: $text-color-reversed-secondary !important; }
-.text-color-reversed-hint     { color: $text-color-reversed-hint       !important; }
+.text-color-reversed-hint      { color: $text-color-reversed-hint      !important; }
+
+
+// TODO: Alignment
+// TODO: Weight and style

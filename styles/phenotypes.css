@@ -524,6 +524,27 @@ hr {
 .h6 {
   font-weight: bold !important; }
 
+.uppercase-1 {
+  text-transform: uppercase !important;
+  font-size: 9px !important;
+  line-height: 1.49271 !important;
+  letter-spacing: 1.28571px !important;
+  font-weight: bold !important; }
+
+.uppercase-2 {
+  text-transform: uppercase !important;
+  font-size: 11px !important;
+  line-height: 1.49271 !important;
+  letter-spacing: 1.57143px !important;
+  font-weight: bold !important; }
+
+.uppercase-3 {
+  text-transform: uppercase !important;
+  font-size: 12px !important;
+  line-height: 1.49271 !important;
+  letter-spacing: 1.71429px !important;
+  font-weight: bold !important; }
+
 @media (min-width: 600px) {
   .text-1-sm {
     font-size: 12px !important;
@@ -571,6 +592,24 @@ hr {
   .h4-sm,
   .h5-sm,
   .h6-sm {
+    font-weight: bold !important; }
+  .uppercase-1-sm {
+    text-transform: uppercase !important;
+    font-size: 9px !important;
+    line-height: 1.49271 !important;
+    letter-spacing: 1.28571px !important;
+    font-weight: bold !important; }
+  .uppercase-2-sm {
+    text-transform: uppercase !important;
+    font-size: 11px !important;
+    line-height: 1.49271 !important;
+    letter-spacing: 1.57143px !important;
+    font-weight: bold !important; }
+  .uppercase-3-sm {
+    text-transform: uppercase !important;
+    font-size: 12px !important;
+    line-height: 1.49271 !important;
+    letter-spacing: 1.71429px !important;
     font-weight: bold !important; } }
 
 @media (min-width: 900px) {
@@ -620,6 +659,24 @@ hr {
   .h4-md,
   .h5-md,
   .h6-md {
+    font-weight: bold !important; }
+  .uppercase-1-md {
+    text-transform: uppercase !important;
+    font-size: 9px !important;
+    line-height: 1.49271 !important;
+    letter-spacing: 1.28571px !important;
+    font-weight: bold !important; }
+  .uppercase-2-md {
+    text-transform: uppercase !important;
+    font-size: 11px !important;
+    line-height: 1.49271 !important;
+    letter-spacing: 1.57143px !important;
+    font-weight: bold !important; }
+  .uppercase-3-md {
+    text-transform: uppercase !important;
+    font-size: 12px !important;
+    line-height: 1.49271 !important;
+    letter-spacing: 1.71429px !important;
     font-weight: bold !important; } }
 
 @media (min-width: 1200px) {
@@ -669,6 +726,24 @@ hr {
   .h4-lg,
   .h5-lg,
   .h6-lg {
+    font-weight: bold !important; }
+  .uppercase-1-lg {
+    text-transform: uppercase !important;
+    font-size: 9px !important;
+    line-height: 1.49271 !important;
+    letter-spacing: 1.28571px !important;
+    font-weight: bold !important; }
+  .uppercase-2-lg {
+    text-transform: uppercase !important;
+    font-size: 11px !important;
+    line-height: 1.49271 !important;
+    letter-spacing: 1.57143px !important;
+    font-weight: bold !important; }
+  .uppercase-3-lg {
+    text-transform: uppercase !important;
+    font-size: 12px !important;
+    line-height: 1.49271 !important;
+    letter-spacing: 1.71429px !important;
     font-weight: bold !important; } }
 
 @media (min-width: 1500px) {
@@ -718,6 +793,24 @@ hr {
   .h4-xl,
   .h5-xl,
   .h6-xl {
+    font-weight: bold !important; }
+  .uppercase-1-xl {
+    text-transform: uppercase !important;
+    font-size: 9px !important;
+    line-height: 1.49271 !important;
+    letter-spacing: 1.28571px !important;
+    font-weight: bold !important; }
+  .uppercase-2-xl {
+    text-transform: uppercase !important;
+    font-size: 11px !important;
+    line-height: 1.49271 !important;
+    letter-spacing: 1.57143px !important;
+    font-weight: bold !important; }
+  .uppercase-3-xl {
+    text-transform: uppercase !important;
+    font-size: 12px !important;
+    line-height: 1.49271 !important;
+    letter-spacing: 1.71429px !important;
     font-weight: bold !important; } }
 
 .text-color-primary {
