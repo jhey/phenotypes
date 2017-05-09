@@ -43,6 +43,11 @@ fractal.components.set('statuses', {
         description: "Going away someday.",
         color: "#F04D5D"
     },
+    demo: {
+        label: "Demo only",
+        description: "Just showing off some stuff (not meant to be a real component).",
+        color: "#853B94"
+    },
     draft: {
         label: "Draft",
         description: "Work in progress.",
