@@ -109,6 +109,13 @@ function TextUtilities(props) {
       <hr />
       <p><code className="text-color-hint">.text-weight-bold.text-style-italic</code></p>
       <p className="text-style-italic text-weight-bold">Bold weight and italic style</p>
+
+
+      <hr style={{ margin: '3rem 0' }} />
+
+      <h4>Responsive demo</h4>
+      <p><code className="text-color-hint">.text-1.text-2-sm.text-3-md.text-4-lg.text-5-xl</code></p>
+      <p className="text-1 text-2-sm text-3-md text-4-lg text-5-xl">Resize to see me change</p>
     </div>
   );
 }
