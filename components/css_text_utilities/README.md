@@ -1,4 +1,4 @@
-Text utility classes allow you to quickly set an element's font size, weight, color, and case in accordance with design guidelines. See the demo above for examples.
+Text utility classes allow you to quickly set an element's font size, weight, color, and case in accordance with design guidelines. SASS variables and mixins are provided for most utilities as well. See the demo above for examples.
 
 Responsive versions are provided for text sizing, heading, uppercase utilities. The formats are:
 
