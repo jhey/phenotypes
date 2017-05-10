@@ -247,7 +247,8 @@ $font-size-8: modular-scale-px(9)  !default; // 53px
 // ------------------------------
 
 $hr-border-width: 1px;
-$hr-border-color: $gray-200;
+$hr-border-color: rgba($black, $alpha-200);
+$hr-reversed-border-color: rgba($white, $alpha-reversed-100);
 
 
 // ------------------------------

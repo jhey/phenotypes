@@ -3,7 +3,7 @@ import React from 'react';
 function TextUtilities(props) {
   return (
     <div>
-      <h4>General text and headings</h4>
+      <h4>Text and headings sizes</h4>
       <div className="d-flex-sm">
         <div style={{ marginRight: '3rem' }}>
           <p><code className="text-color-hint">.text-1</code></p>
@@ -62,8 +62,10 @@ function TextUtilities(props) {
       <h4>Uppercase</h4>
       <p><code className="text-color-hint">.uppercase-1</code></p>
       <p className="uppercase-1">Uppercase 9px</p>
+      <hr />
       <p><code className="text-color-hint">.uppercase-2</code></p>
       <p className="uppercase-2">Uppercase 11px</p>
+      <hr />
       <p><code className="text-color-hint">.uppercase-3</code></p>
       <p className="uppercase-3">Uppercase 12px</p>
 
@@ -74,20 +76,39 @@ function TextUtilities(props) {
         <div style={{ marginRight: '3rem', padding: '1rem' }}>
           <p><code className="text-color-hint">.text-color-primary</code></p>
           <p className="text-color-primary">◼︎ Primary color</p>
+          <hr />
           <p><code className="text-color-hint">.text-color-secondary</code></p>
           <p className="text-color-secondary">︎◼︎ Secondary color</p>
+          <hr />
           <p><code className="text-color-hint">.text-color-hint</code></p>
           <p className="text-color-hint">◼︎ Hint color</p>    
         </div>
         <div style={{ background: '#232323', padding: '1rem' }}>
           <p><code className="text-color-reversed-hint">.text-color-reversed-primary</code></p>
           <p className="text-color-reversed-primary">◼︎ Reversed primary color</p>
+          <hr className="hr-reversed" />
           <p><code className="text-color-reversed-hint">.text-color-reversed-secondary</code></p>
           <p className="text-color-reversed-secondary">◼︎ Reversed secondary color</p>
+          <hr className="hr-reversed" />
           <p><code className="text-color-reversed-hint">.text-color-reversed-hint</code></p>
           <p className="text-color-reversed-hint">◼︎ Reversed hint color</p>    
         </div>
       </div>
+
+      <hr style={{ margin: '3rem 0' }} />
+
+      <h4>Weight &amp; style</h4>
+      <p><code className="text-color-hint">.text-weight-normal, .text-style-normal</code></p>
+      <p className="text-weight-normal text-style-normal">Normal weight and style</p>
+      <hr />
+      <p><code className="text-color-hint">.text-weight-bold</code></p>
+      <p className="text-weight-bold">Bold weight</p>
+      <hr />
+      <p><code className="text-color-hint">.text-style-italic</code></p>
+      <p className="text-style-italic">Italic style</p>
+      <hr />
+      <p><code className="text-color-hint">.text-weight-bold.text-style-italic</code></p>
+      <p className="text-style-italic text-weight-bold">Bold weight and italic style</p>
     </div>
   );
 }
