@@ -142,18 +142,17 @@ $gradient-angle: to bottom left;
 // ------------------------------
 
 $spacer: $modular-scale-base-px !default;
-$spacers: (
-  0: 0,
-  1: modular-scale-px(-8),
-  2: modular-scale-px(-6),
-  3: modular-scale-px(-3),
-  4: modular-scale-px(0),
-  5: modular-scale-px(3),
-  6: modular-scale-px(6),
-  7: modular-scale-px(9),
-  8: modular-scale-px(12),
-  9: modular-scale-px(15),
-) !default;
+
+$spacer-0: 0                    !default; // 0
+$spacer-1: modular-scale-px(-8) !default; // 5px
+$spacer-2: modular-scale-px(-6) !default; // 7px
+$spacer-3: modular-scale-px(-3) !default; // 11px
+$spacer-4: modular-scale-px(0)  !default; // 16px
+$spacer-5: modular-scale-px(3)  !default; // 24px
+$spacer-6: modular-scale-px(6)  !default; // 36px
+$spacer-7: modular-scale-px(9)  !default; // 53px
+$spacer-8: modular-scale-px(12) !default; // 79px
+$spacer-9: modular-scale-px(15) !default; // 119px
 
 // This variable affects the `.h-*` and `.w-*` classes.
 $sizes: (
