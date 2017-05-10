@@ -18,7 +18,7 @@ function writeComponentsMapFile(app) {
   // e.g. button: require("../components/button/button.jsx"),
   components.forEach(function(item) {
     const componentPath = path.join('..', componentsDir, item.relViewPath);
-    buffer += `  ${item.handle}: require("${componentPath}"),\n`;
+    buffer += `  "${item.handle}": require("${componentPath}"),\n`;
   });
 
   buffer += '};\n';
