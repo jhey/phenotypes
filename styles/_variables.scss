@@ -4,10 +4,12 @@
 //
 // @import "config";
 // @import "phenotypes";
-
+//
 // Variable naming inspired by Bootstrap 4.
 // https://github.com/twbs/bootstrap/blob/v4-dev/scss/_variables.scss
 // Variable format should follow the `$component-modifier-state-property` order.
+//
+// scss-lint:disable LeadingZero
 
 
 // ------------------------------
@@ -17,43 +19,43 @@
 $white:  #fff !default;
 $black:  #000 !default;
 
-$orange-100: #FFC67F !default;
-$orange-200: #FC8626 !default;
-$orange-300: #CD5000 !default;
+$orange-100: #ffc67f !default;
+$orange-200: #fc8626 !default;
+$orange-300: #cd5000 !default;
 $orange-400: #992800 !default;
 $orange-500: #631000 !default;
 
-$red-100: #FF979A !default;
-$red-200: #F04D5D !default;
-$red-300: #BD2B43 !default;
-$red-400: #8C092C !default;
-$red-500: #4A001E !default;
+$red-100: #ff979a !default;
+$red-200: #f04d5d !default;
+$red-300: #bd2b43 !default;
+$red-400: #8c092c !default;
+$red-500: #4a001e !default;
 
-$purple-100: #E39AE3 !default;
-$purple-200: #B35DBA !default;
-$purple-300: #853B94 !default;
-$purple-400: #58166E !default;
-$purple-500: #2F0047 !default;
+$purple-100: #e39ae3 !default;
+$purple-200: #b35dba !default;
+$purple-300: #853b94 !default;
+$purple-400: #58166e !default;
+$purple-500: #2f0047 !default;
 
-$blue-100: #7FEAFF !default;
-$blue-200: #16B8E0 !default;
-$blue-300: #008AB3 !default;
+$blue-100: #7feaff !default;
+$blue-200: #16b8e0 !default;
+$blue-300: #008ab3 !default;
 $blue-400: #005678 !default;
-$blue-500: #00253F !default;
+$blue-500: #00253f !default;
 
-$green-100: #89F0CF !default;
-$green-200: #2DCFA1 !default;
-$green-300: #03AB8C !default;
+$green-100: #89f0cf !default;
+$green-200: #2dcfa1 !default;
+$green-300: #03ab8c !default;
 $green-400: #007868 !default;
-$green-500: #003F3E !default;
+$green-500: #003f3e !default;
 
-$gray-100: #F9F9F9 !default;
-$gray-200: #EEEEEE !default;
-$gray-300: #DBDBDB !default;
-$gray-400: #C1C1C1 !default;
+$gray-100: #f9f9f9 !default;
+$gray-200: #eee    !default;
+$gray-300: #dbdbdb !default;
+$gray-400: #c1c1c1 !default;
 $gray-500: #969696 !default;
-$gray-600: #777777 !default;
-$gray-700: #4D4D4D !default;
+$gray-600: #777    !default;
+$gray-700: #4d4d4d !default;
 $gray-800: #232323 !default;
 
 // Primary palette
@@ -112,7 +114,7 @@ $gradient-orange-stop:  $orange-300 !default;
 $gradient-red-start:    $red-200 !default;
 $gradient-red-stop:     $red-400 !default;
 
-$gradient-purple-start: #B25DBA !default;
+$gradient-purple-start: #b25dba !default;
 $gradient-purple-stop:  $purple-400 !default;
 
 $gradient-blue-start:   $blue-200 !default;
@@ -122,16 +124,16 @@ $gradient-green-start:  $green-200 !default;
 $gradient-green-stop:   $green-400 !default;
 
 $gradient-orange-red-start: $orange-200 !default;
-$gradient-orange-red-stop:  #E64253 !default;
+$gradient-orange-red-stop:  #e64253 !default;
 
 $gradient-red-purple-start: $red-200 !default;
-$gradient-red-purple-stop:  #892E9C !default;
+$gradient-red-purple-stop:  #892e9c !default;
 
 $gradient-blue-purple-start: $blue-200 !default;
-$gradient-blue-purple-stop:  #6E3094 !default;
+$gradient-blue-purple-stop:  #6e3094 !default;
 
-$gradient-green-blue-start: #1ADCAE !default;
-$gradient-green-blue-stop:  #0076AE !default;
+$gradient-green-blue-start: #1adcae !default;
+$gradient-green-blue-stop:  #0076ae !default;
 
 // Default angle
 $gradient-angle: to bottom left;

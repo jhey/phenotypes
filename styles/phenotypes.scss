@@ -1,3 +1,5 @@
+// scss-lint:disable Comment
+
 /*!
  * Phenotypes - The Amino design system
  * Copyright 2017 Amino Inc.
@@ -9,22 +11,22 @@
 
 
 // Webfonts
-@import "sailec";
+@import 'sailec';
 
 // Modular scale
-@import "modular-scale";
+@import 'modular-scale';
 
 // Core variables and mixins
-@import "variables";
-@import "mixins";
+@import 'variables';
+@import 'mixins';
 
 // Reboot/normalize
-@import "reboot";
+@import 'reboot';
 
 // Basic elements
-@import "type";
+@import 'type';
 
 // Components
 
 // Utilities
-@import "utilities";
+@import 'utilities';

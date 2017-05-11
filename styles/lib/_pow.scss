@@ -7,15 +7,14 @@
   $value: 1;
 
   @if round($exponent) != $exponent {
-    @warn "Invalid exponent. Only integer exponents are supported."
+    @warn 'Invalid exponent. Only integer exponents are supported.'
   }
 
   @if $exponent > 0 {
     @for $i from 1 through $exponent {
       $value: $value * $number;
     }
-  }
-  @else if $exponent < 0 {
+  } @else if $exponent < 0 {
     @for $i from 1 through -$exponent {
       $value: $value / $number;
     }

@@ -1,12 +1,15 @@
 // ------------------------------
 // Responsive type utilities
 // ------------------------------
-
+//
 // Example: <div class="text-1 text-2-md"> would be 12px at xs and sm sizes,
 // and 14px at md, lg, and xl sizes.
-
+//
 // Example: <h1 class="h3 h2-sm h1-md"> would be rendered as an h3 at xs size,
 // as an h2 at sm size, and as an h1 at md size and up.
+//
+// scss-lint:disable ImportantRule
+// scss-lint:disable SpaceBeforeBrace
 
 @each $breakpoint in map-keys($grid-breakpoints) {
   @include media-breakpoint-up($breakpoint) {

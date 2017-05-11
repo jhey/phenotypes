@@ -1,9 +1,9 @@
-@import "lib/pow";
+@import 'lib/pow';
 
 // Simple (single-stranded) modular scale calculations
 
 // Modular scale variables
-$modular-scale-proportion: (8/7) !default;
+$modular-scale-proportion: (8 / 7) !default;
 $modular-scale-base:       16    !default;
 $modular-scale-base-px:    $modular-scale-base * 1px;
 

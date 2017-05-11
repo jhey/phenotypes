@@ -1,11 +1,12 @@
-//
 // Utilities for common `display` values
 // Based on Bootstrap 4
 // https://github.com/twbs/bootstrap/blob/v4-dev/scss/utilities/_display.scss
 //
-
+//
 // Example: <div class="d-none d-block-md"> would be hidden at xs and sm sizes,
 // and then made visible again (display: block) at md, lg, and xl sizes.
+//
+// scss-lint:disable ImportantRule, SpaceBeforeBrace
 
 @each $breakpoint in map-keys($grid-breakpoints) {
   @include media-breakpoint-up($breakpoint) {
