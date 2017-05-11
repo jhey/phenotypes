@@ -156,6 +156,19 @@ $spacer-7: modular-scale-px(9)  !default; // 53px
 $spacer-8: modular-scale-px(12) !default; // 79px
 $spacer-9: modular-scale-px(15) !default; // 119px
 
+$spacers: (
+  $spacer-0,
+  $spacer-1,
+  $spacer-2,
+  $spacer-3,
+  $spacer-4,
+  $spacer-5,
+  $spacer-6,
+  $spacer-7,
+  $spacer-8,
+  $spacer-9,
+);
+
 // This variable affects the `.h-*` and `.w-*` classes.
 $sizes: (
   25: 25%,
