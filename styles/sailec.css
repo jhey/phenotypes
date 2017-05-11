@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /**
  * @license
  * MyFonts Webfont Build ID 3386717, 2017-05-09T18:37:44-0400
@@ -27,20 +28,32 @@
  * 
  * © 2017 MyFonts Inc
 */
-
-
 /* @import must be at top of file, otherwise CSS will not work */
-@import url("//hello.myfonts.net/count/33ad5d");
+/* @import url("//hello.myfonts.net/count/33ad5d"); */
+@font-face {
+  font-family: 'Sailec';
+  font-weight: bold;
+  font-style: normal;
+  src: url("webfonts/33AD5D_0_0.eot");
+  src: url("webfonts/33AD5D_0_0.eot?#iefix") format("embedded-opentype"), url("webfonts/33AD5D_0_0.woff2") format("woff2"), url("webfonts/33AD5D_0_0.woff") format("woff"), url("webfonts/33AD5D_0_0.ttf") format("truetype"); }
 
-  
-@font-face {font-family: 'Sailec';font-weight: bold;font-style: normal;src: url('webfonts/33AD5D_0_0.eot');src: url('webfonts/33AD5D_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/33AD5D_0_0.woff2') format('woff2'),url('webfonts/33AD5D_0_0.woff') format('woff'),url('webfonts/33AD5D_0_0.ttf') format('truetype');}
- 
-  
-@font-face {font-family: 'Sailec';font-weight: bold;font-style: italic;src: url('webfonts/33AD5D_1_0.eot');src: url('webfonts/33AD5D_1_0.eot?#iefix') format('embedded-opentype'),url('webfonts/33AD5D_1_0.woff2') format('woff2'),url('webfonts/33AD5D_1_0.woff') format('woff'),url('webfonts/33AD5D_1_0.ttf') format('truetype');}
- 
-  
-@font-face {font-family: 'Sailec';font-weight: normal;font-style: normal;src: url('webfonts/33AD5D_2_0.eot');src: url('webfonts/33AD5D_2_0.eot?#iefix') format('embedded-opentype'),url('webfonts/33AD5D_2_0.woff2') format('woff2'),url('webfonts/33AD5D_2_0.woff') format('woff'),url('webfonts/33AD5D_2_0.ttf') format('truetype');}
- 
-  
-@font-face {font-family: 'Sailec';font-weight: normal;font-style: italic;src: url('webfonts/33AD5D_3_0.eot');src: url('webfonts/33AD5D_3_0.eot?#iefix') format('embedded-opentype'),url('webfonts/33AD5D_3_0.woff2') format('woff2'),url('webfonts/33AD5D_3_0.woff') format('woff'),url('webfonts/33AD5D_3_0.ttf') format('truetype');}
- 
+@font-face {
+  font-family: 'Sailec';
+  font-weight: bold;
+  font-style: italic;
+  src: url("webfonts/33AD5D_1_0.eot");
+  src: url("webfonts/33AD5D_1_0.eot?#iefix") format("embedded-opentype"), url("webfonts/33AD5D_1_0.woff2") format("woff2"), url("webfonts/33AD5D_1_0.woff") format("woff"), url("webfonts/33AD5D_1_0.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Sailec';
+  font-weight: normal;
+  font-style: normal;
+  src: url("webfonts/33AD5D_2_0.eot");
+  src: url("webfonts/33AD5D_2_0.eot?#iefix") format("embedded-opentype"), url("webfonts/33AD5D_2_0.woff2") format("woff2"), url("webfonts/33AD5D_2_0.woff") format("woff"), url("webfonts/33AD5D_2_0.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Sailec';
+  font-weight: normal;
+  font-style: italic;
+  src: url("webfonts/33AD5D_3_0.eot");
+  src: url("webfonts/33AD5D_3_0.eot?#iefix") format("embedded-opentype"), url("webfonts/33AD5D_3_0.woff2") format("woff2"), url("webfonts/33AD5D_3_0.woff") format("woff"), url("webfonts/33AD5D_3_0.ttf") format("truetype"); }
