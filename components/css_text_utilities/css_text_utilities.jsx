@@ -5,7 +5,7 @@ function TextUtilities(props) {
     <div>
       <h4>Text and heading sizes</h4>
       <div className="d-flex-sm">
-        <div style={{ marginRight: '3rem' }}>
+        <div className="mr7-sm">
           <p><code className="text-color-hint">.text-1<br/>@include text-1</code></p>
           <p className="text-1">Regular 12px</p>
           <hr />
@@ -57,7 +57,7 @@ function TextUtilities(props) {
         </div>
       </div>
 
-      <hr style={{ margin: '3rem 0' }} />
+      <hr className="my7" />
 
       <h4>Uppercase</h4>
       <p><code className="text-color-hint">.uppercase-1<br/>@include uppercase-1</code></p>
@@ -69,11 +69,11 @@ function TextUtilities(props) {
       <p><code className="text-color-hint">.uppercase-3<br/>@include uppercase-3</code></p>
       <p className="uppercase-3">Uppercase 12px</p>
 
-      <hr style={{ margin: '3rem 0' }} />
+      <hr className="my7" />
 
       <h4>Colors</h4>
       <div className="d-flex-sm">
-        <div style={{ marginRight: '3rem', padding: '1rem' }}>
+        <div className="mr7-sm p5">
           <p><code className="text-color-hint">.text-color-primary<br/>$text-color-primary</code></p>
           <p className="text-color-primary">◼︎ Primary color</p>
           <hr />
@@ -83,7 +83,7 @@ function TextUtilities(props) {
           <p><code className="text-color-hint">.text-color-hint<br/>$text-color-hint</code></p>
           <p className="text-color-hint">◼︎ Hint color</p>    
         </div>
-        <div style={{ background: '#232323', padding: '1rem' }}>
+        <div className="p5" style={{ background: '#232323' }}>
           <p><code className="text-color-reversed-hint">.text-color-reversed-primary<br/>$text-color-reversed-primary</code></p>
           <p className="text-color-reversed-primary">◼︎ Reversed primary color</p>
           <hr className="hr-reversed" />
@@ -95,7 +95,7 @@ function TextUtilities(props) {
         </div>
       </div>
 
-      <hr style={{ margin: '3rem 0' }} />
+      <hr className="my7" />
 
       <h4>Weight &amp; style</h4>
       <p><code className="text-color-hint">.text-weight-normal, .text-style-normal<br/>$font-weight-normal</code></p>
@@ -111,7 +111,7 @@ function TextUtilities(props) {
       <p className="text-style-italic text-weight-bold">Bold weight and italic style</p>
 
 
-      <hr style={{ margin: '3rem 0' }} />
+      <hr className="my7" />
 
       <h4>Responsive demo</h4>
       <p><code className="text-color-hint">.text-1.text-2-sm.text-3-md.text-4-lg.text-5-xl</code></p>
