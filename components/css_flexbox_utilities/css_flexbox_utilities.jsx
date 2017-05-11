@@ -1,5 +1,9 @@
 import React from 'react';
 
+const boxStyle1 = { background: '#eee' };
+const boxStyle2 = { background: '#dbdbdb' };
+
+
 function Label(props) {
   var className = props.className || 'text-color-hint';
   return (
@@ -14,17 +18,21 @@ function Separator(props) {
 }
 
 function Demo(props) {
-	const boxStyle = { background: '#eee' };
-
 	const extraClassNames = props.extraClassNames || '';
 	const allClassNames = props.classNames + ' ' + extraClassNames;
 
 	return (
 		<div>
 			<Label>{ props.classNames.split(' ').map(className => '.' + className + ' ') }</Label>
-			<div className={allClassNames} style={boxStyle}>{props.children}</div>
+			<div className={allClassNames} style={boxStyle1}>{props.children}</div>
 		</div>
 	);
+}
+
+function InnerBox(props) {
+	const text = props.children || 'Flex item';
+
+	return <div className="p3 m1" style={boxStyle2}>{text}</div>;
 }
 
 function FlexboxUtilities(props) {
@@ -36,9 +44,17 @@ function FlexboxUtilities(props) {
     	<Separator />
     	<Demo classNames="d-inline-flex" extraClassNames="p3">I'm an inline flexbox container!</Demo>
 
-    	<h3 className="mt7">Direction</h3>
-    	<Demo classNames="d-flex flex-column flex-row-sm" extraClassNames="p3">
-    	hi
+    	<h3 className="mt7">Direction utilities (responsive)</h3>
+    	<Demo classNames="d-flex flex-column flex-row-sm" extraClassNames="p2">
+	    	<InnerBox>Flex item 1</InnerBox>
+	    	<InnerBox>Flex item 2</InnerBox>
+	    	<InnerBox>Flex item 3</InnerBox>
+    	</Demo>
+    	<Separator />
+    	<Demo classNames="d-flex flex-column-reverse flex-row-reverse-sm" extraClassNames="p2">
+	    	<InnerBox>Flex item 1</InnerBox>
+	    	<InnerBox>Flex item 2</InnerBox>
+	    	<InnerBox>Flex item 3</InnerBox>
     	</Demo>
 
     </div>
