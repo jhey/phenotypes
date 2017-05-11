@@ -13,18 +13,21 @@ function Label(props) {
 
 function Separator(props) {
 	return (
-		<hr className="my6" />
+		<hr className="my5" />
 	);
 }
 
 function Demo(props) {
 	const extraClassNames = props.extraClassNames || '';
 	const allClassNames = props.classNames + ' ' + extraClassNames;
+	const style = Object.assign({}, boxStyle1, {
+		height: props.height || ''
+	});
 
 	return (
 		<div>
 			<Label>{ props.classNames.split(' ').map(className => '.' + className + ' ') }</Label>
-			<div className={allClassNames} style={boxStyle1}>{props.children}</div>
+			<div className={allClassNames} style={style}>{props.children}</div>
 		</div>
 	);
 }
@@ -55,6 +58,48 @@ function FlexboxUtilities(props) {
 	    	<InnerBox>Flex item 1</InnerBox>
 	    	<InnerBox>Flex item 2</InnerBox>
 	    	<InnerBox>Flex item 3</InnerBox>
+    	</Demo>
+
+    	<h3 className="mt7">Justify utilities (responsive)</h3>
+    	<Demo classNames="d-flex justify-content-start" extraClassNames="p2">
+	    	<InnerBox/><InnerBox/><InnerBox/>
+    	</Demo>
+    	<Separator />
+    	<Demo classNames="d-flex justify-content-end" extraClassNames="p2">
+	    	<InnerBox/><InnerBox/><InnerBox/>
+    	</Demo>
+    	<Separator />
+    	<Demo classNames="d-flex justify-content-center" extraClassNames="p2">
+	    	<InnerBox/><InnerBox/><InnerBox/>
+    	</Demo>
+    	<Separator />
+    	<Demo classNames="d-flex justify-content-between" extraClassNames="p2">
+	    	<InnerBox/><InnerBox/><InnerBox/>
+    	</Demo>
+    	<Separator />
+    	<Demo classNames="d-flex justify-content-around" extraClassNames="p2">
+	    	<InnerBox/><InnerBox/><InnerBox/>
+    	</Demo>
+
+    	<h3 className="mt7">Align utilities (responsive)</h3>
+    	<Demo classNames="d-flex align-items-start" height="119px">
+	    	<InnerBox/><InnerBox/><InnerBox/>
+    	</Demo>
+    	<Separator />
+    	<Demo classNames="d-flex align-items-end" height="119px">
+	    	<InnerBox/><InnerBox/><InnerBox/>
+    	</Demo>
+    	<Separator />
+    	<Demo classNames="d-flex align-items-center" height="119px">
+	    	<InnerBox/><InnerBox/><InnerBox/>
+    	</Demo>
+    	<Separator />
+    	<Demo classNames="d-flex align-items-baseline" height="119px">
+	    	<InnerBox/><InnerBox/><InnerBox/>
+    	</Demo>
+    	<Separator />
+    	<Demo classNames="d-flex align-items-stretch" height="119px">
+	    	<InnerBox/><InnerBox/><InnerBox/>
     	</Demo>
 
     </div>

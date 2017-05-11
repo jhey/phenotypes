@@ -48,6 +48,6 @@ Note: this feature is enabled by default and adds 1,835 lines of CSS (approx 42k
 
 Related:
 
-* [Modular Scale](/docs/modular-scale/)
-* [Spacing](/docs/spacing/)
+* [Bootstrap Flexbox](https://v4-alpha.getbootstrap.com/utilities/flexbox/)
+* [A Complete Guide to Flexbox on CSS-Tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 * [Responsive breakpoints](/docs/layout/#responsive-breakpoints)
