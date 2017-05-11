@@ -8,17 +8,19 @@
 //
 // scss-lint:disable ImportantRule, SpaceBeforeBrace
 
-@each $breakpoint in map-keys($grid-breakpoints) {
-  @include media-breakpoint-up($breakpoint) {
-    $suffix: breakpoint-suffix($breakpoint, $grid-breakpoints);
+@if $enable-display-utilities {
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+      $suffix: breakpoint-suffix($breakpoint, $grid-breakpoints);
 
-    .d-none#{$suffix}         { display: none !important; }
-    .d-inline#{$suffix}       { display: inline !important; }
-    .d-inline-block#{$suffix} { display: inline-block !important; }
-    .d-block#{$suffix}        { display: block !important; }
-    .d-table#{$suffix}        { display: table !important; }
-    .d-table-cell#{$suffix}   { display: table-cell !important; }
-    .d-flex#{$suffix}         { display: flex !important; }
-    .d-inline-flex#{$suffix}  { display: inline-flex !important; }
+      .d-none#{$suffix}         { display: none !important; }
+      .d-inline#{$suffix}       { display: inline !important; }
+      .d-inline-block#{$suffix} { display: inline-block !important; }
+      .d-block#{$suffix}        { display: block !important; }
+      .d-table#{$suffix}        { display: table !important; }
+      .d-table-cell#{$suffix}   { display: table-cell !important; }
+      .d-flex#{$suffix}         { display: flex !important; }
+      .d-inline-flex#{$suffix}  { display: inline-flex !important; }
+    }
   }
 }

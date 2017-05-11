@@ -38,7 +38,11 @@ Examples:
 * `.mb4.mb5-md` adds 16px `margin-bottom` for `xs` up, and 24px for `md` up
 * `.py1` adds 5px `padding-top` and `padding-bottom`
 
-### Related
+### Etc.
+
+Note: this feature is enabled by default and adds 1,835 lines of CSS (approx 42kb) to the compiled CSS. You can toggle it off by setting `$enable-spacing-utilities: false` before importing Phenotypes.
+
+Related:
 
 * [Modular Scale](/docs/modular-scale/)
 * [Spacing](/docs/spacing/)

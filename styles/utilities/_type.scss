@@ -11,30 +11,32 @@
 // scss-lint:disable ImportantRule
 // scss-lint:disable SpaceBeforeBrace
 
-@each $breakpoint in map-keys($grid-breakpoints) {
-  @include media-breakpoint-up($breakpoint) {
-    $suffix: breakpoint-suffix($breakpoint, $grid-breakpoints);
+@if $enable-type-utilities {
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+      $suffix: breakpoint-suffix($breakpoint, $grid-breakpoints);
 
-    .text-1#{$suffix} { @include text-1($important: true); }
-    .text-2#{$suffix} { @include text-2($important: true); }
+      .text-1#{$suffix} { @include text-1($important: true); }
+      .text-2#{$suffix} { @include text-2($important: true); }
 
-    .text-3#{$suffix}, .h6#{$suffix} { @include text-3($important: true); }
-    .text-4#{$suffix}, .h5#{$suffix} { @include text-4($important: true); }
-    .text-5#{$suffix}, .h4#{$suffix} { @include text-5($important: true); }
-    .text-6#{$suffix}, .h3#{$suffix} { @include text-6($important: true); }
-    .text-7#{$suffix}, .h2#{$suffix} { @include text-7($important: true); }
-    .text-8#{$suffix}, .h1#{$suffix} { @include text-8($important: true); }
+      .text-3#{$suffix}, .h6#{$suffix} { @include text-3($important: true); }
+      .text-4#{$suffix}, .h5#{$suffix} { @include text-4($important: true); }
+      .text-5#{$suffix}, .h4#{$suffix} { @include text-5($important: true); }
+      .text-6#{$suffix}, .h3#{$suffix} { @include text-6($important: true); }
+      .text-7#{$suffix}, .h2#{$suffix} { @include text-7($important: true); }
+      .text-8#{$suffix}, .h1#{$suffix} { @include text-8($important: true); }
 
-    .h1#{$suffix},
-    .h2#{$suffix},
-    .h3#{$suffix},
-    .h4#{$suffix},
-    .h5#{$suffix},
-    .h6#{$suffix} { font-weight: $font-weight-bold !important; }
+      .h1#{$suffix},
+      .h2#{$suffix},
+      .h3#{$suffix},
+      .h4#{$suffix},
+      .h5#{$suffix},
+      .h6#{$suffix} { font-weight: $font-weight-bold !important; }
 
-    .uppercase-1#{$suffix} { @include uppercase-1($important: true); }
-    .uppercase-2#{$suffix} { @include uppercase-2($important: true); }
-    .uppercase-3#{$suffix} { @include uppercase-3($important: true); }
+      .uppercase-1#{$suffix} { @include uppercase-1($important: true); }
+      .uppercase-2#{$suffix} { @include uppercase-2($important: true); }
+      .uppercase-3#{$suffix} { @include uppercase-3($important: true); }
+    }
   }
 }
 

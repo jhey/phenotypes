@@ -8,7 +8,9 @@ Responsive versions are provided for text sizing, heading, uppercase utilities. 
 .uppercase-[value]-[breakpoint]
 ```
 
-Above, `value` is a number (as shown in the demo), and the `breakpoint` suffix specifies the minimum screen size to apply the rule. For example, `.text-2.text-3-md` would render as 14px at `xs` and `sm` sizes and 16px at `md` and up. 
+Above, `value` is a number (as shown in the demo), and the `breakpoint` suffix specifies the minimum screen size to apply the rule. For example, `.text-2.text-3-md` would render as 14px at `xs` and `sm` sizes and 16px at `md` and up.
+
+Note: this feature is enabled by default and adds 344 lines of CSS (approx 10kb) to the compiled CSS. You can toggle it off by setting `$enable-type-utilities: false` before importing Phenotypes.
 
 Related:
 
