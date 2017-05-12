@@ -19,4 +19,9 @@ The `breakpoint` suffix specifies the minimum screen size to apply the rule. For
 
 Note: this feature is enabled by default and adds 95 lines of CSS (approx 2kb) to the compiled CSS. You can toggle it off by setting `$enable-display-utilities: false` before importing Phenotypes.
 
-See [responsive breakpoints](/docs/layout/#responsive-breakpoints) documentation.
+Adapted from Bootstrap 4.
+
+Related:
+
+* [Bootstrap display utilities](https://v4-alpha.getbootstrap.com/utilities/display-property/)
+* [Responsive breakpoints](/docs/layout/#responsive-breakpoints)

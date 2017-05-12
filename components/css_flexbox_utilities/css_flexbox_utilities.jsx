@@ -59,7 +59,7 @@ function FlexboxUtilities(props) {
     	<Separator />
     	<Demo classNames="d-inline-flex" extraClassNames="p3">I'm an inline flexbox container!</Demo>
 
-    	<h3 className="mt7">Direction utilities (responsive)</h3>
+    	<h3 className="mt7">Direction utilities</h3>
     	<Demo classNames="d-flex flex-column flex-row-sm" extraClassNames="p2">
 	    	<InnerBox>Flex item 1</InnerBox>
 	    	<InnerBox>Flex item 2</InnerBox>
@@ -72,7 +72,7 @@ function FlexboxUtilities(props) {
 	    	<InnerBox>Flex item 3</InnerBox>
     	</Demo>
 
-    	<h3 className="mt7">Justify utilities (responsive)</h3>
+    	<h3 className="mt7">Justify utilities</h3>
     	<Demo classNames="d-flex justify-content-start" extraClassNames="p2">
 	    	<InnerBox/><InnerBox/><InnerBox/>
     	</Demo>
@@ -93,7 +93,7 @@ function FlexboxUtilities(props) {
 	    	<InnerBox/><InnerBox/><InnerBox/>
     	</Demo>
 
-    	<h3 className="mt7">Align utilities (responsive)</h3>
+    	<h3 className="mt7">Align utilities</h3>
     	<Demo classNames="d-flex align-items-start" height="119px">
 	    	<InnerBox/><InnerBox/><InnerBox/>
     	</Demo>
@@ -114,7 +114,7 @@ function FlexboxUtilities(props) {
 	    	<InnerBox/><InnerBox/><InnerBox/>
     	</Demo>
 
-    	<h3 className="mt7">Align self utilities (responsive)</h3>
+    	<h3 className="mt7">Align self utilities</h3>
     	<Demo classNames="d-flex">
 	    	<InnerBox height="119px"/>
 	    	<InnerBox highlight="true" className="align-self-start"><code>.align-self-start</code></InnerBox>
@@ -170,7 +170,7 @@ function FlexboxUtilities(props) {
 	    	<InnerBox highlight="true" className="mt-auto"><code>.mt-auto</code></InnerBox>
     	</Demo>
 
-    	<h3 className="mt7">Wrapping utilities (responsive)</h3>
+    	<h3 className="mt7">Wrapping utilities</h3>
     	<Demo classNames="d-flex flex-nowrap" width="500px">
 	    	<InnerBox>Flex item 1</InnerBox>
 	    	<InnerBox>Flex item 2</InnerBox>
@@ -195,14 +195,14 @@ function FlexboxUtilities(props) {
 	    	<InnerBox>Flex item 5</InnerBox>
     	</Demo>
 
-    	<h3 className="mt7">Order utilities (responsive)</h3>
+    	<h3 className="mt7">Order utilities</h3>
     	<Demo classNames="d-flex" extraClassNames="p2">
 	    	<InnerBox highlight="true" className="order-last">Flex item 1 (<code>.order-last</code>)</InnerBox>
 	    	<InnerBox>Flex item 2</InnerBox>
 	    	<InnerBox highlight="true" className="order-first">Flex item 3 (<code>.order-first</code>)</InnerBox>
     	</Demo>
 
-    	<h3 className="mt7">Align content utilities (responsive)</h3>
+    	<h3 className="mt7">Align content utilities</h3>
     	<Demo classNames="d-flex flex-wrap align-content-start" width="500px" height="200px">
 	    	<InnerBox/><InnerBox/><InnerBox/><InnerBox/><InnerBox/>
     	</Demo>

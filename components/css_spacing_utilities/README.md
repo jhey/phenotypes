@@ -42,8 +42,11 @@ Examples:
 
 Note: this feature is enabled by default and adds 1,835 lines of CSS (approx 42kb) to the compiled CSS. You can toggle it off by setting `$enable-spacing-utilities: false` before importing Phenotypes.
 
+Adapted from Bootstrap 4.
+
 Related:
 
 * [Modular Scale](/docs/modular-scale/)
 * [Spacing](/docs/spacing/)
 * [Responsive breakpoints](/docs/layout/#responsive-breakpoints)
+* [Bootstrap 4 spacing utilities](https://v4-alpha.getbootstrap.com/utilities/spacing/)
