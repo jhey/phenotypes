@@ -36,10 +36,17 @@ function Demo(props) {
 function InnerBox(props) {
 	const text = props.children || 'Flex item';
 	const classNames = 'p3 m1 ' + (props.className || '');
-	const style = Object.assign({}, boxStyle2, {
+	const highlightStyles = {
+		background: '#4d4d4d',
+		color: '#fff'
+	};
+	var style = Object.assign({}, boxStyle2, {
 		height: props.height || '',
 		width: props.width || ''
 	});
+	if(props.highlight) {
+		style = Object.assign(style, highlightStyles);
+	}
 	return <div className={classNames} style={style}>{text}</div>;
 }
 
@@ -110,37 +117,37 @@ function FlexboxUtilities(props) {
     	<h3 className="mt7">Align self utilities (responsive)</h3>
     	<Demo classNames="d-flex">
 	    	<InnerBox height="119px"/>
-	    	<InnerBox className="align-self-start"><code>.align-self-start</code></InnerBox>
+	    	<InnerBox highlight="true" className="align-self-start"><code>.align-self-start</code></InnerBox>
 	    	<InnerBox height="119px"/>
     	</Demo>
     	<Separator />
     	<Demo classNames="d-flex">
 	    	<InnerBox height="119px"/>
-	    	<InnerBox className="align-self-end"><code>.align-self-end</code></InnerBox>
+	    	<InnerBox highlight="true" className="align-self-end"><code>.align-self-end</code></InnerBox>
 	    	<InnerBox height="119px"/>
     	</Demo>
     	<Separator />
     	<Demo classNames="d-flex">
 	    	<InnerBox height="119px"/>
-	    	<InnerBox className="align-self-center"><code>.align-self-center</code></InnerBox>
+	    	<InnerBox highlight="true" className="align-self-center"><code>.align-self-center</code></InnerBox>
 	    	<InnerBox height="119px"/>
     	</Demo>
     	<Separator />
     	<Demo classNames="d-flex">
 	    	<InnerBox height="119px"/>
-	    	<InnerBox className="align-self-baseline"><code>.align-self-baseline</code></InnerBox>
+	    	<InnerBox highlight="true" className="align-self-baseline"><code>.align-self-baseline</code></InnerBox>
 	    	<InnerBox height="119px"/>
     	</Demo>
     	<Separator />
     	<Demo classNames="d-flex">
 	    	<InnerBox height="119px"/>
-	    	<InnerBox className="align-self-stretch"><code>.align-self-stretch</code></InnerBox>
+	    	<InnerBox highlight="true" className="align-self-stretch"><code>.align-self-stretch</code></InnerBox>
 	    	<InnerBox height="119px"/>
     	</Demo>
 
     	<h3 className="mt7">Combining utilities with auto margins</h3>
     	<Demo classNames="d-flex justify-content-end" extraClassNames="p2">
-	    	<InnerBox className="mr-auto"><code>.mr-auto</code></InnerBox>
+	    	<InnerBox highlight="true" className="mr-auto"><code>.mr-auto</code></InnerBox>
 	    	<InnerBox/>
 	    	<InnerBox/>
     	</Demo>
@@ -148,11 +155,11 @@ function FlexboxUtilities(props) {
     	<Demo classNames="d-flex justify-content-start" extraClassNames="p2">
 	    	<InnerBox/>
 	    	<InnerBox/>
-	    	<InnerBox className="ml-auto"><code>.ml-auto</code></InnerBox>
+	    	<InnerBox highlight="true" className="ml-auto"><code>.ml-auto</code></InnerBox>
     	</Demo>
     	<Separator />
     	<Demo classNames="d-flex flex-column align-items-start" height="200px">
-	    	<InnerBox className="mb-auto"><code>.mb-auto</code></InnerBox>
+	    	<InnerBox highlight="true" className="mb-auto"><code>.mb-auto</code></InnerBox>
 	    	<InnerBox/>
 	    	<InnerBox/>
     	</Demo>
@@ -160,7 +167,7 @@ function FlexboxUtilities(props) {
     	<Demo classNames="d-flex flex-column align-items-end" height="200px">
 	    	<InnerBox/>
 	    	<InnerBox/>
-	    	<InnerBox className="mt-auto"><code>.mt-auto</code></InnerBox>
+	    	<InnerBox highlight="true" className="mt-auto"><code>.mt-auto</code></InnerBox>
     	</Demo>
 
     	<h3 className="mt7">Wrapping utilities (responsive)</h3>
@@ -190,9 +197,9 @@ function FlexboxUtilities(props) {
 
     	<h3 className="mt7">Order utilities (responsive)</h3>
     	<Demo classNames="d-flex" extraClassNames="p2">
-	    	<InnerBox className="order-last">Flex item 1 (<code>.order-last</code>)</InnerBox>
+	    	<InnerBox highlight="true" className="order-last">Flex item 1 (<code>.order-last</code>)</InnerBox>
 	    	<InnerBox>Flex item 2</InnerBox>
-	    	<InnerBox className="order-first">Flex item 3 (<code>.order-first</code>)</InnerBox>
+	    	<InnerBox highlight="true" className="order-first">Flex item 3 (<code>.order-first</code>)</InnerBox>
     	</Demo>
 
     	<h3 className="mt7">Align content utilities (responsive)</h3>
