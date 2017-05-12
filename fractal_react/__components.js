@@ -6,5 +6,4 @@ module.exports = {
   "css-spacing-utilities": require("../components/css_spacing_utilities/css_spacing_utilities.jsx"),
   "css-text-utilities": require("../components/css_text_utilities/css_text_utilities.jsx"),
   "preview": require("../components/_preview.jsx"),
-  "sample": require("../components/sample/sample.jsx"),
 };
