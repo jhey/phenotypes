@@ -155,6 +155,13 @@ function FlexboxUtilities(props) {
 	    	<InnerBox>Flex item 4</InnerBox>
 	    	<InnerBox>Flex item 5</InnerBox>
     	</Demo>
+
+    	<h3 className="mt7">Order utilities (responsive)</h3>
+    	<Demo classNames="d-flex" extraClassNames="p2">
+	    	<InnerBox className="order-last">Flex item 1 (<code>.order-last</code>)</InnerBox>
+	    	<InnerBox>Flex item 2</InnerBox>
+	    	<InnerBox className="order-first">Flex item 3 (<code>.order-first</code>)</InnerBox>
+    	</Demo>
     </div>
   );
 }
