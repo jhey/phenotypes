@@ -162,6 +162,31 @@ function FlexboxUtilities(props) {
 	    	<InnerBox>Flex item 2</InnerBox>
 	    	<InnerBox className="order-first">Flex item 3 (<code>.order-first</code>)</InnerBox>
     	</Demo>
+
+    	<h3 className="mt7">Align content utilities (responsive)</h3>
+    	<Demo classNames="d-flex flex-wrap align-content-start" width="500px" height="200px">
+	    	<InnerBox/><InnerBox/><InnerBox/><InnerBox/><InnerBox/>
+    	</Demo>
+    	<Separator />
+    	<Demo classNames="d-flex flex-wrap align-content-end" width="500px" height="200px">
+	    	<InnerBox/><InnerBox/><InnerBox/><InnerBox/><InnerBox/>
+    	</Demo>
+    	<Separator />
+    	<Demo classNames="d-flex flex-wrap align-content-center" width="500px" height="200px">
+	    	<InnerBox/><InnerBox/><InnerBox/><InnerBox/><InnerBox/>
+    	</Demo>
+    	<Separator />
+    	<Demo classNames="d-flex flex-wrap align-content-between" width="500px" height="200px">
+	    	<InnerBox/><InnerBox/><InnerBox/><InnerBox/><InnerBox/>
+    	</Demo>
+    	<Separator />
+    	<Demo classNames="d-flex flex-wrap align-content-around" width="500px" height="200px">
+	    	<InnerBox/><InnerBox/><InnerBox/><InnerBox/><InnerBox/>
+    	</Demo>
+    	<Separator />
+    	<Demo classNames="d-flex flex-wrap align-content-stretch" width="500px" height="200px">
+	    	<InnerBox/><InnerBox/><InnerBox/><InnerBox/><InnerBox/>
+    	</Demo>
     </div>
   );
 }
