@@ -21,7 +21,8 @@ function Demo(props) {
 	const extraClassNames = props.extraClassNames || '';
 	const allClassNames = props.classNames + ' ' + extraClassNames;
 	const style = Object.assign({}, boxStyle1, {
-		height: props.height || ''
+		height: props.height || '',
+		width: props.width || ''
 	});
 
 	return (
@@ -130,6 +131,30 @@ function FlexboxUtilities(props) {
 	    	<InnerBox className="mt-auto"><code>.mt-auto</code></InnerBox>
     	</Demo>
 
+    	<h3 className="mt7">Wrapping utilities (responsive)</h3>
+    	<Demo classNames="d-flex flex-nowrap" width="500px">
+	    	<InnerBox>Flex item 1</InnerBox>
+	    	<InnerBox>Flex item 2</InnerBox>
+	    	<InnerBox>Flex item 3</InnerBox>
+	    	<InnerBox>Flex item 4</InnerBox>
+	    	<InnerBox>Flex item 5</InnerBox>
+    	</Demo>
+    	<Separator />
+    	<Demo classNames="d-flex flex-wrap" width="500px">
+	    	<InnerBox>Flex item 1</InnerBox>
+	    	<InnerBox>Flex item 2</InnerBox>
+	    	<InnerBox>Flex item 3</InnerBox>
+	    	<InnerBox>Flex item 4</InnerBox>
+	    	<InnerBox>Flex item 5</InnerBox>
+    	</Demo>
+    	<Separator />
+    	<Demo classNames="d-flex flex-wrap-reverse" width="500px">
+	    	<InnerBox>Flex item 1</InnerBox>
+	    	<InnerBox>Flex item 2</InnerBox>
+	    	<InnerBox>Flex item 3</InnerBox>
+	    	<InnerBox>Flex item 4</InnerBox>
+	    	<InnerBox>Flex item 5</InnerBox>
+    	</Demo>
     </div>
   );
 }
