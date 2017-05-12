@@ -36,7 +36,11 @@ function Demo(props) {
 function InnerBox(props) {
 	const text = props.children || 'Flex item';
 	const classNames = 'p3 m1 ' + (props.className || '');
-	return <div className={classNames} style={boxStyle2}>{text}</div>;
+	const style = Object.assign({}, boxStyle2, {
+		height: props.height || '',
+		width: props.width || ''
+	});
+	return <div className={classNames} style={style}>{text}</div>;
 }
 
 function FlexboxUtilities(props) {
@@ -104,7 +108,35 @@ function FlexboxUtilities(props) {
     	</Demo>
 
     	<h3 className="mt7">Align self utilities (responsive)</h3>
-    	TK
+    	<Demo classNames="d-flex">
+	    	<InnerBox height="119px"/>
+	    	<InnerBox className="align-self-start"><code>.align-self-start</code></InnerBox>
+	    	<InnerBox height="119px"/>
+    	</Demo>
+    	<Separator />
+    	<Demo classNames="d-flex">
+	    	<InnerBox height="119px"/>
+	    	<InnerBox className="align-self-end"><code>.align-self-end</code></InnerBox>
+	    	<InnerBox height="119px"/>
+    	</Demo>
+    	<Separator />
+    	<Demo classNames="d-flex">
+	    	<InnerBox height="119px"/>
+	    	<InnerBox className="align-self-center"><code>.align-self-center</code></InnerBox>
+	    	<InnerBox height="119px"/>
+    	</Demo>
+    	<Separator />
+    	<Demo classNames="d-flex">
+	    	<InnerBox height="119px"/>
+	    	<InnerBox className="align-self-baseline"><code>.align-self-baseline</code></InnerBox>
+	    	<InnerBox height="119px"/>
+    	</Demo>
+    	<Separator />
+    	<Demo classNames="d-flex">
+	    	<InnerBox height="119px"/>
+	    	<InnerBox className="align-self-stretch"><code>.align-self-stretch</code></InnerBox>
+	    	<InnerBox height="119px"/>
+    	</Demo>
 
     	<h3 className="mt7">Combining utilities with auto margins</h3>
     	<Demo classNames="d-flex justify-content-end" extraClassNames="p2">
