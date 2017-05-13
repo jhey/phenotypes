@@ -30,7 +30,7 @@ fractal.components.on('updated', generate);
 const mandelbrot = require('@frctl/mandelbrot');
 const customisedTheme = mandelbrot({
   "nav": ["docs", "components"],
-  "styles": ['default', '/fonts/Sailec_Basics.css', '/css/theme.css'],
+  "styles": ['default', '/css/Sailec_Basics.css', '/css/theme.css'],
   "panels": ["notes", "html", "view", "context", "resources", "info"]
 });
 fractal.web.theme(customisedTheme);
@@ -42,6 +42,11 @@ fractal.components.set('statuses', {
         label: "Deprecated",
         description: "Going away someday.",
         color: "#F04D5D"
+    },
+    demo: {
+        label: "Demo only",
+        description: "Just showing off some stuff (not meant to be a real component).",
+        color: "#853B94"
     },
     draft: {
         label: "Draft",

@@ -21,7 +21,7 @@
     "build-all": "npm run build-js && npm run build-css",
     "watch-all": "npm run watch-css & npm run watch-js",
     "start-prod": "npm run build-all & fractal start",
-    "start": "npm run build-all & npm run watch-all & fractal start --sync"
+    "start": "npm run watch-all & fractal start --sync"
   },
   "repository": {
     "type": "git",

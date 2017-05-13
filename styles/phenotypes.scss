@@ -1,8 +1,37 @@
-@import 'partials/test';
+/* scss-lint:disable all */ // <-- This is for phenotypes.css
+// scss-lint:enable all
+// scss-lint:disable Comment
 
-$red: #f00;
-$blue: #00f;
+/*!
+ * Phenotypes - The Amino design system
+ * Copyright 2017 Amino Inc.
+ */
 
-body {
-	color: $blue;
-}
+// SASS project organization and naming
+// conventions are based on Bootstrap 4
+// https://github.com/twbs/bootstrap/blob/v4-dev/scss/bootstrap.scss
+
+
+// Webfonts
+@import 'sailec';
+
+// Feature toggles
+@import 'features';
+
+// Modular scale
+@import 'modular-scale';
+
+// Core variables and mixins
+@import 'variables';
+@import 'mixins';
+
+// Reboot/normalize
+@import 'reboot';
+
+// Basic elements
+@import 'type';
+
+// Components
+
+// Utilities
+@import 'utilities';

@@ -27,3 +27,20 @@ Here are some ways to use the modular scale to decide on spacing and sizing:
 ### Yeah, but what if...
 
 Phenotypes aims to balance simplicity and flexibility, but no spacing system can provide all the answers. If you need larger spacing or sizing values, just jump up the modular scale three steps at a time (177, 264, etc). If you need an intermediate value not provided, try to pick another number from the scale and **make a note of it** for your collaborators. If you absolutely need a multiple of 10 or some other number outside of the modular scale, that's okay too. You'll just have to answer to Nick. 🔔
+
+---
+
+## Appendix
+
+| Sass variable | Space |
+| -------- | ----- |
+| `$spacer-0` | 0 |
+| `$spacer-1` | 5px |
+| `$spacer-2` | 7px |
+| `$spacer-3` | 11px |
+| `$spacer-4` | 16px |
+| `$spacer-5` | 24px |
+| `$spacer-6` | 36px |
+| `$spacer-7` | 53px |
+| `$spacer-8` | 79px |
+| `$spacer-9` | 119px |

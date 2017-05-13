@@ -1,3 +1,5 @@
+/* scss-lint:disable all */
+
 /* --------------
  * Fractal chrome
  * -------------- */
@@ -327,7 +329,7 @@ a:active {
 }
 
 .Prose tr {
-	background-image: linear-gradient(to right, #dbdbdb 25%, #fff 0%);
+	background-image: linear-gradient(to right, #dbdbdb 25%, transparent 0%);
 	background-position: bottom;
 	background-size: 4px 1px;
 	background-repeat: repeat-x;
