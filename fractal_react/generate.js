@@ -25,7 +25,7 @@ function writeComponentsMapFile(app) {
 
   fs.writeFile(file, buffer, (err) => {
     if (err) throw err;
-    console.log('Component handles and paths successfully written to ' + relFile);
+    console.log('Component handles and paths successfully written to ' + relFile + '\n\n');
   });
 }
 

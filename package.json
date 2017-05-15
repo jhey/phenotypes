@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "description": "Amino's design language and front-end component library",
   "dependencies": {
+  },
+  "devDependencies": {
     "@frctl/fractal": "^1.1.4",
     "@frctl/mandelbrot": "^1.1.0",
     "babel-core": "^6.24.1",
@@ -11,17 +13,16 @@
     "node-sass": "^4.5.2",
     "webpack": "^2.4.1"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build-css": "node-sass styles/phenotypes.scss styles/phenotypes.css",
     "watch-css": "npm run build-css && node-sass -w -r styles/ -o styles/",
     "build-js": "webpack",
-    "watch-js": "webpack --progress --colors --watch",
+    "watch-js": "webpack --colors --watch",
     "build-all": "npm run build-js && npm run build-css",
     "watch-all": "npm run watch-css & npm run watch-js",
     "start-prod": "npm run build-all & fractal start",
-    "start": "npm run watch-all & fractal start --sync"
+    "start": "fractal start --sync & npm run watch-all"
   },
   "repository": {
     "type": "git",

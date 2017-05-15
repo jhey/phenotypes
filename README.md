@@ -12,7 +12,7 @@ Phenotypes runs on [Fractal](http://fractal.build), a tool that hosts the guides
 
 ## Getting started
 
-Here's how to get Phenotypes up and running locally: 
+Here's how to get Phenotypes up and running locally:
 
 * Clone this repo and `cd` into it.
 * `docker-compose build`
@@ -40,6 +40,76 @@ To run Phenotypes without all the syncing and watching (e.g. for deployment), ju
 $ docker-compose -f docker-compose.yml -f docker-compose.prod.yml up
 ```
 
-## Using Phenotypes components in a project
+## Developing components
 
-TK
+Each React component should go in a subdirectory of `components`. For example, a generic button component would be `components/button/button.jsx`.
+
+In addition to the .jsx file, a component's directory can contain additional files that define how it will function in the Fractal viewer. Most importantly, each component should have a config file and a README.
+
+Take a look at an existing component or the [Fractal components](http://fractal.build/guide/components) documentation for more details.
+
+## Developing styles
+
+The SASS file organization scheme is loosely based on Bootstrap 4. The entry point file is phenotypes.scss, which goes on to import all the things:
+
+1. Webfonts
+2. Feature toggles
+3. Modular scale
+4. Variables and mixins
+5. Reboot
+6. Typography
+7. Components
+8. Utilities
+
+Webfonts are imported first, because they're pulled in as a raw .css import. The webfont file has a CSS `@import` directive at the top, which must come first in the compiled stylesheet.
+
+The next import is `_features.scss`, which contains a number of toggles for optional Phenotypes responsive utility modules, like flexbox, display, spacing, and text utilities. These utilities, which are all enabled by default, can create a LOT of compiled CSS, so they can be worth turning off if your project doesn't need them. To turn off a utility, override the corresponding variable before importing Phenotypes:
+
+```
+// _config.scss
+$enable-spacing-utilities: false;
+
+// main.scss
+@import "config";
+@import "phenotypes";
+```
+
+Modular scale helpers come next, since these variables and functions need to be defined for the subsequent files to function properly.
+
+Variables that are used throughout Phenotypes are organized in `_variables.scss`. All variables are flagged as `!default`, which means they can be overridden similarly to the feature toggles:
+
+```
+// _config.scss
+$grid-breakpoints: (
+  xs: 0,
+  md: 900px
+);
+
+// main.scss
+@import "config";
+@import "phenotypes";
+```
+
+The `_mixins.scss` file contains imports for functions and mixins that are used by other modules and components. Actual implementations should go in `styles/mixins`. E.g. `styles/mixins/_type.scss` contains both functions and mixins that help with typography.
+
+Phenotypes uses a slightly modified version of Bootstrap 4's reboot. [Read more about that.](https://v4-alpha.getbootstrap.com/content/reboot/)
+
+The main `_type.scss` file contains styles for basic typographic and HTML elements. These styles should be lightweight and flexible so that they are easily overridden by more specific module and component styles. Note that there are also `mixins/_type.scss` and `utilities/_type.scss` for typography mixins and utilities, respectively.
+
+Component styles are imported next. Each component should get its own stylesheet. TODO: more documentation once we have component styles.
+
+Finally, utilities are imported. Similarly to mixins, each utility gets its own file in `styles/utilities`. E.g. `styles/utilities/_spacing.scss` contains spacing utilities. The utility files are aggregated together into `_utilities.scss`, which is imported into the main `phenotypes.scss` file.
+
+The compiled CSS is provided as `styles/phenotypes.css`. Using the SASS stylesheet is preferred, as you'll get access to all the variables and mixins. But for a simple project, it might make more sense to just use the pre-baked CSS.
+
+## Using Phenotypes components and styles in a project
+
+The following command will install the latest Phenotypes `master` branch into `node_modules/phenotypes`:
+
+```
+$ npm install git+ssh://git@github.com:parelabs/phenotypes.git --save --production
+```
+
+The `--production` flag indicates that you just want the Phenotypes codebase and no decencies (like Fractal). React components will be in `node_modules/phenotypes/components` and SCSS/css will be in `node_modules/phenotypes/styles`. You'll be responsible for setting up node_sass, webpack, or whatever else will be utilizing these resources in your project.
+
+Like most git URLs, you can append a `#branch-name`, tag, or commit to the end of it to install a specific version of Phenotypes.
