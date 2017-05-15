@@ -1,0 +1,23 @@
+// Features are flagged as !default, which means that you can override them
+// by defining them before importing this file. For example, if you set up
+// your project like the following, you can put your overrides in _config.scss:
+//
+// @import "config";
+// @import "phenotypes";
+
+
+// ------------------------------
+// Utility features
+// ------------------------------
+
+// Display utilities: 95 lines of CSS (approx 2kb)
+$enable-display-utilities: true !default;
+
+// Flexbox utilities: 359 lines of CSS (approx 10kb)
+$enable-flex-utilities: true !default;
+
+// Spacing utilities: 1835 lines of CSS (approx 42kb)
+$enable-spacing-utilities: true !default;
+
+// Typography utilities: 344 lines of CSS (approx 10kb)
+$enable-type-utilities: true !default;

@@ -1,0 +1,68 @@
+// ------------------------------
+// Responsive type utilities
+// ------------------------------
+//
+// Example: <div class="text-1 text-2-md"> would be 12px at xs and sm sizes,
+// and 14px at md, lg, and xl sizes.
+//
+// Example: <h1 class="h3 h2-sm h1-md"> would be rendered as an h3 at xs size,
+// as an h2 at sm size, and as an h1 at md size and up.
+//
+// scss-lint:disable ImportantRule
+// scss-lint:disable SpaceBeforeBrace
+
+@if $enable-type-utilities {
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+      $suffix: breakpoint-suffix($breakpoint, $grid-breakpoints);
+
+      .text-1#{$suffix} { @include text-1($important: true); }
+      .text-2#{$suffix} { @include text-2($important: true); }
+
+      .text-3#{$suffix}, .h6#{$suffix} { @include text-3($important: true); }
+      .text-4#{$suffix}, .h5#{$suffix} { @include text-4($important: true); }
+      .text-5#{$suffix}, .h4#{$suffix} { @include text-5($important: true); }
+      .text-6#{$suffix}, .h3#{$suffix} { @include text-6($important: true); }
+      .text-7#{$suffix}, .h2#{$suffix} { @include text-7($important: true); }
+      .text-8#{$suffix}, .h1#{$suffix} { @include text-8($important: true); }
+
+      .h1#{$suffix},
+      .h2#{$suffix},
+      .h3#{$suffix},
+      .h4#{$suffix},
+      .h5#{$suffix},
+      .h6#{$suffix} { font-weight: $font-weight-bold !important; }
+
+      .uppercase-1#{$suffix} { @include uppercase-1($important: true); }
+      .uppercase-2#{$suffix} { @include uppercase-2($important: true); }
+      .uppercase-3#{$suffix} { @include uppercase-3($important: true); }
+    }
+  }
+}
+
+
+// ------------------------------
+// Text color utilities
+// ------------------------------
+
+.text-color-primary   { color: $text-color-primary   !important; }
+.text-color-secondary { color: $text-color-secondary !important; }
+.text-color-hint      { color: $text-color-hint      !important; }
+
+.text-color-reversed-primary   { color: $text-color-reversed-primary   !important; }
+.text-color-reversed-secondary { color: $text-color-reversed-secondary !important; }
+.text-color-reversed-hint      { color: $text-color-reversed-hint      !important; }
+
+
+// ------------------------------
+// Text weight/style utilities
+// ------------------------------
+
+.text-weight-bold   { font-weight: $font-weight-bold   !important; }
+.text-weight-normal { font-weight: $font-weight-normal !important; }
+
+.text-style-italic { font-style: italic !important; }
+.text-style-normal { font-style: normal !important; }
+
+
+// TODO: Alignment

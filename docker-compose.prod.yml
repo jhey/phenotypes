@@ -1,0 +1,4 @@
+version: "3.0"
+services:
+  phenotypes:
+    command: npm run start-prod

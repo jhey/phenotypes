@@ -1,0 +1,165 @@
+// scss-lint:disable ImportantRule
+// scss-lint:disable LeadingZero
+
+// ------------------------------
+// Typography functions
+// ------------------------------
+
+// Letter spacing
+// letter_spacing = -0.6 * [floor(font_size * 0.02)^2]
+@function letter-spacing($step) {
+  $size: modular-scale-rounded($step);
+  $size-adjusted: floor($size * 0.02);
+  @return -0.6 * ($size-adjusted * $size-adjusted) * 1px;
+}
+
+// Uppercase letter spacing
+// all_caps_letter_spacing = font_size * 0.143
+@function letter-spacing-uppercase($step) {
+  $size: modular-scale-rounded($step);
+  @return ($modular-scale-proportion - 1) * $size * 1px;
+}
+
+
+// ------------------------------
+// Text mixins
+// ------------------------------
+
+// Generic helper (not recommended for general use)
+@mixin text(
+  $font-size: $font-size-3,
+  $line-height: $line-height-3,
+  $letter-spacing: letter-spacing(0),
+  $font-weight: $font-weight-normal,
+  $important: false
+) {
+  font-size: $font-size           if($important, !important, null);
+  line-height: $line-height       if($important, !important, null);
+  letter-spacing: $letter-spacing if($important, !important, null);
+  font-weight: $font-weight       if($important, !important, null);
+}
+
+// 12px
+@mixin text-1($font-weight: $font-weight-normal, $important: false) {
+  @include text(
+  	$font-size: $font-size-1,
+  	$line-height: $line-height-3,
+  	$letter-spacing: letter-spacing(-2),
+  	$font-weight: $font-weight,
+    $important: $important
+  );
+}
+
+// 14px
+@mixin text-2($font-weight: $font-weight-normal, $important: false) {
+  @include text(
+  	$font-size: $font-size-2,
+  	$line-height: $line-height-3,
+  	$letter-spacing: letter-spacing(-1),
+  	$font-weight: $font-weight,
+    $important: $important
+  );
+}
+
+// 16px
+@mixin text-3($font-weight: $font-weight-normal, $important: false) {
+  @include text(
+  	$font-size: $font-size-3,
+  	$line-height: $line-height-3,
+  	$letter-spacing: letter-spacing(0),
+  	$font-weight: $font-weight,
+    $important: $important
+  );
+}
+
+// 18px
+@mixin text-4($font-weight: $font-weight-normal, $important: false) {
+  @include text(
+  	$font-size: $font-size-4,
+  	$line-height: $line-height-3,
+  	$letter-spacing: letter-spacing(1),
+  	$font-weight: $font-weight,
+    $important: $important
+  );
+}
+
+// 21px
+@mixin text-5($font-weight: $font-weight-normal, $important: false) {
+  @include text(
+  	$font-size: $font-size-5,
+  	$line-height: $line-height-3,
+  	$letter-spacing: letter-spacing(2),
+  	$font-weight: $font-weight,
+    $important: $important
+  );
+}
+
+// 24px
+@mixin text-6($font-weight: $font-weight-normal, $important: false) {
+  @include text(
+  	$font-size: $font-size-6,
+  	$line-height: $line-height-2,
+  	$letter-spacing: letter-spacing(3),
+  	$font-weight: $font-weight,
+    $important: $important
+  );
+}
+
+// 36px
+@mixin text-7($font-weight: $font-weight-normal, $important: false) {
+  @include text(
+  	$font-size: $font-size-7,
+  	$line-height: $line-height-2,
+  	$letter-spacing: letter-spacing(6),
+  	$font-weight: $font-weight,
+    $important: $important
+  );
+}
+
+// 53px
+@mixin text-8($font-weight: $font-weight-normal, $important: false) {
+  @include text(
+  	$font-size: $font-size-8,
+  	$line-height: $line-height-1,
+  	$letter-spacing: letter-spacing(9),
+  	$font-weight: $font-weight,
+    $important: $important
+  );
+}
+
+
+// ------------------------------
+// Uppercase text mixins
+// ------------------------------
+
+// Generic helper (not recommended for general use)
+@mixin uppercase(
+  $step: -2,
+  $font-weight: $font-weight-bold,
+  $line-height: $line-height-3,
+  $important: false
+) {
+  text-transform: uppercase if($important, !important, null);
+  @include text(
+    $font-size: modular-scale-px($step),
+    $line-height: $line-height,
+    $letter-spacing: letter-spacing-uppercase($step),
+    $font-weight: $font-weight,
+    $important: $important
+  );
+}
+
+// 9px
+@mixin uppercase-1($font-weight: $font-weight-bold, $important: false) {
+  @include uppercase($step: -4, $font-weight: $font-weight, $important: $important);
+}
+
+// 11px
+@mixin uppercase-2($font-weight: $font-weight-bold, $important: false) {
+  @include uppercase($step: -3, $font-weight: $font-weight, $important: $important);
+}
+
+// 12px
+@mixin uppercase-3($font-weight: $font-weight-bold, $important: false) {
+  @include uppercase($step: -2, $font-weight: $font-weight, $important: $important);
+}

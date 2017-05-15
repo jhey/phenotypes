@@ -1,0 +1,81 @@
+// ------------------------------
+// Responsive spacing utilities
+// ------------------------------
+//
+// Based on Bootstrap 4
+// https://github.com/twbs/bootstrap/blob/v4-dev/scss/utilities/_spacing.scss
+//
+// Class names follow this format:
+//
+// [direction][sides][size]-[breakpoint]
+//
+// - Direction is (m, p) for margin/padding
+// - Sides (optional) is one of:
+//    * (t, b, l, r) for top/bottom/left/right
+//    * (x, y) for horizontal/vertical
+//    * omitted for all sides
+// - Size is a number from 0 to 9 (see the $spacer-N variables for sizes)
+// - Breakpoint is an optional responsive breakpoint (sm, md, lg, xl)
+// - Margin auto values are supported and follow the same syntax (e.g. .mx-auto-md)
+//
+// Examples:
+//
+//   .mb4.mb5-md - adds spacer-4 margin to bottom for xs up, and spacer-5 margin for md up
+//   .py1 - adds a spacer-1 padding to top and bottom
+//
+// scss-lint:disable ImportantRule
+// scss-lint:disable SpaceBeforeBrace
+// scss-lint:disable SpaceAfterPropertyColon
+
+@if $enable-spacing-utilities {
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+      $suffix: breakpoint-suffix($breakpoint, $grid-breakpoints);
+
+      @each $prop, $abbrev in (margin: m, padding: p) {
+        @for $i from 1 through length($spacers) {
+          $size: $i - 1;
+          $length: nth($spacers, $i);
+
+          // m0-sm
+          .#{$abbrev}#{$size}#{$suffix}  { #{$prop}:        $length !important; }
+
+          // mt-sm
+          .#{$abbrev}t#{$size}#{$suffix} { #{$prop}-top:    $length !important; }
+          .#{$abbrev}r#{$size}#{$suffix} { #{$prop}-right:  $length !important; }
+          .#{$abbrev}b#{$size}#{$suffix} { #{$prop}-bottom: $length !important; }
+          .#{$abbrev}l#{$size}#{$suffix} { #{$prop}-left:   $length !important; }
+
+          // mx-sm
+          .#{$abbrev}x#{$size}#{$suffix} {
+            #{$prop}-right: $length !important;
+            #{$prop}-left:  $length !important;
+          }
+
+          // my-sm
+          .#{$abbrev}y#{$size}#{$suffix} {
+            #{$prop}-top:    $length !important;
+            #{$prop}-bottom: $length !important;
+          }
+        }
+      }
+
+      // Margin auto utils
+      .m-auto#{$suffix}  { margin:        auto !important; }
+      .mt-auto#{$suffix} { margin-top:    auto !important; }
+      .mr-auto#{$suffix} { margin-right:  auto !important; }
+      .mb-auto#{$suffix} { margin-bottom: auto !important; }
+      .ml-auto#{$suffix} { margin-left:   auto !important; }
+
+      .mx-auto#{$suffix} {
+        margin-left:  auto !important;
+        margin-right: auto !important;
+      }
+
+      .my-auto#{$suffix} {
+        margin-bottom: auto !important;
+        margin-top:    auto !important;
+      }
+    }
+  }
+}

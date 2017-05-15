@@ -1,0 +1,56 @@
+// ------------------------------
+// Responsive flexbox utilities
+// ------------------------------
+//
+// Based on Bootstrap 4
+// https://github.com/twbs/bootstrap/blob/v4-dev/scss/utilities/_flex.scss
+//
+// scss-lint:disable ImportantRule
+// scss-lint:disable SpaceBeforeBrace
+
+@if $enable-flex-utilities {
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+      $suffix: breakpoint-suffix($breakpoint, $grid-breakpoints);
+
+      .order-first#{$suffix} { order: -1; }
+      .order-last#{$suffix}  { order: 1; }
+      .order-0#{$suffix}     { order: 0; }
+
+      .flex-row#{$suffix}            { flex-direction: row !important; }
+      .flex-column#{$suffix}         { flex-direction: column !important; }
+      .flex-row-reverse#{$suffix}    { flex-direction: row-reverse !important; }
+      .flex-column-reverse#{$suffix} { flex-direction: column-reverse !important; }
+
+      .flex-wrap#{$suffix}         { flex-wrap: wrap !important; }
+      .flex-nowrap#{$suffix}       { flex-wrap: nowrap !important; }
+      .flex-wrap-reverse#{$suffix} { flex-wrap: wrap-reverse !important; }
+
+      .justify-content-start#{$suffix}   { justify-content: flex-start !important; }
+      .justify-content-end#{$suffix}     { justify-content: flex-end !important; }
+      .justify-content-center#{$suffix}  { justify-content: center !important; }
+      .justify-content-between#{$suffix} { justify-content: space-between !important; }
+      .justify-content-around#{$suffix}  { justify-content: space-around !important; }
+
+      .align-items-start#{$suffix}    { align-items: flex-start !important; }
+      .align-items-end#{$suffix}      { align-items: flex-end !important; }
+      .align-items-center#{$suffix}   { align-items: center !important; }
+      .align-items-baseline#{$suffix} { align-items: baseline !important; }
+      .align-items-stretch#{$suffix}  { align-items: stretch !important; }
+
+      .align-content-start#{$suffix}   { align-content: flex-start !important; }
+      .align-content-end#{$suffix}     { align-content: flex-end !important; }
+      .align-content-center#{$suffix}  { align-content: center !important; }
+      .align-content-between#{$suffix} { align-content: space-between !important; }
+      .align-content-around#{$suffix}  { align-content: space-around !important; }
+      .align-content-stretch#{$suffix} { align-content: stretch !important; }
+
+      .align-self-auto#{$suffix}     { align-self: auto !important; }
+      .align-self-start#{$suffix}    { align-self: flex-start !important; }
+      .align-self-end#{$suffix}      { align-self: flex-end !important; }
+      .align-self-center#{$suffix}   { align-self: center !important; }
+      .align-self-baseline#{$suffix} { align-self: baseline !important; }
+      .align-self-stretch#{$suffix}  { align-self: stretch !important; }
+    }
+  }
+}
