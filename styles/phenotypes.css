@@ -333,37 +333,37 @@ template {
 
 h1 {
   font-size: 53px;
-  line-height: 1.14286;
+  line-height: 61px;
   letter-spacing: -0.6px;
   font-weight: bold; }
 
 h2 {
   font-size: 36px;
-  line-height: 1.30612;
+  line-height: 47px;
   letter-spacing: 0px;
   font-weight: bold; }
 
 h3 {
   font-size: 24px;
-  line-height: 1.30612;
+  line-height: 31px;
   letter-spacing: 0px;
   font-weight: bold; }
 
 h4 {
   font-size: 21px;
-  line-height: 1.49271;
+  line-height: 31px;
   letter-spacing: 0px;
   font-weight: bold; }
 
 h5 {
   font-size: 18px;
-  line-height: 1.49271;
+  line-height: 27px;
   letter-spacing: 0px;
   font-weight: bold; }
 
 h6 {
   font-size: 16px;
-  line-height: 1.49271;
+  line-height: 24px;
   letter-spacing: 0px;
   font-weight: bold; }
 
@@ -2669,49 +2669,49 @@ hr {
 
 .text-1 {
   font-size: 12px !important;
-  line-height: 1.49271 !important;
+  line-height: 18px !important;
   letter-spacing: 0px !important;
   font-weight: normal !important; }
 
 .text-2 {
   font-size: 14px !important;
-  line-height: 1.49271 !important;
+  line-height: 21px !important;
   letter-spacing: 0px !important;
   font-weight: normal !important; }
 
 .text-3, .h6 {
   font-size: 16px !important;
-  line-height: 1.49271 !important;
+  line-height: 24px !important;
   letter-spacing: 0px !important;
   font-weight: normal !important; }
 
 .text-4, .h5 {
   font-size: 18px !important;
-  line-height: 1.49271 !important;
+  line-height: 27px !important;
   letter-spacing: 0px !important;
   font-weight: normal !important; }
 
 .text-5, .h4 {
   font-size: 21px !important;
-  line-height: 1.49271 !important;
+  line-height: 31px !important;
   letter-spacing: 0px !important;
   font-weight: normal !important; }
 
 .text-6, .h3 {
   font-size: 24px !important;
-  line-height: 1.30612 !important;
+  line-height: 31px !important;
   letter-spacing: 0px !important;
   font-weight: normal !important; }
 
 .text-7, .h2 {
   font-size: 36px !important;
-  line-height: 1.30612 !important;
+  line-height: 47px !important;
   letter-spacing: 0px !important;
   font-weight: normal !important; }
 
 .text-8, .h1 {
   font-size: 53px !important;
-  line-height: 1.14286 !important;
+  line-height: 61px !important;
   letter-spacing: -0.6px !important;
   font-weight: normal !important; }
 
@@ -2726,63 +2726,63 @@ hr {
 .uppercase-1 {
   text-transform: uppercase !important;
   font-size: 9px !important;
-  line-height: 1.49271 !important;
+  line-height: 13px !important;
   letter-spacing: 1.28571px !important;
   font-weight: bold !important; }
 
 .uppercase-2 {
   text-transform: uppercase !important;
   font-size: 11px !important;
-  line-height: 1.49271 !important;
+  line-height: 16px !important;
   letter-spacing: 1.57143px !important;
   font-weight: bold !important; }
 
 .uppercase-3 {
   text-transform: uppercase !important;
   font-size: 12px !important;
-  line-height: 1.49271 !important;
+  line-height: 18px !important;
   letter-spacing: 1.71429px !important;
   font-weight: bold !important; }
 
 @media (min-width: 600px) {
   .text-1-sm {
     font-size: 12px !important;
-    line-height: 1.49271 !important;
+    line-height: 18px !important;
     letter-spacing: 0px !important;
     font-weight: normal !important; }
   .text-2-sm {
     font-size: 14px !important;
-    line-height: 1.49271 !important;
+    line-height: 21px !important;
     letter-spacing: 0px !important;
     font-weight: normal !important; }
   .text-3-sm, .h6-sm {
     font-size: 16px !important;
-    line-height: 1.49271 !important;
+    line-height: 24px !important;
     letter-spacing: 0px !important;
     font-weight: normal !important; }
   .text-4-sm, .h5-sm {
     font-size: 18px !important;
-    line-height: 1.49271 !important;
+    line-height: 27px !important;
     letter-spacing: 0px !important;
     font-weight: normal !important; }
   .text-5-sm, .h4-sm {
     font-size: 21px !important;
-    line-height: 1.49271 !important;
+    line-height: 31px !important;
     letter-spacing: 0px !important;
     font-weight: normal !important; }
   .text-6-sm, .h3-sm {
     font-size: 24px !important;
-    line-height: 1.30612 !important;
+    line-height: 31px !important;
     letter-spacing: 0px !important;
     font-weight: normal !important; }
   .text-7-sm, .h2-sm {
     font-size: 36px !important;
-    line-height: 1.30612 !important;
+    line-height: 47px !important;
     letter-spacing: 0px !important;
     font-weight: normal !important; }
   .text-8-sm, .h1-sm {
     font-size: 53px !important;
-    line-height: 1.14286 !important;
+    line-height: 61px !important;
     letter-spacing: -0.6px !important;
     font-weight: normal !important; }
   .h1-sm,
@@ -2795,61 +2795,61 @@ hr {
   .uppercase-1-sm {
     text-transform: uppercase !important;
     font-size: 9px !important;
-    line-height: 1.49271 !important;
+    line-height: 13px !important;
     letter-spacing: 1.28571px !important;
     font-weight: bold !important; }
   .uppercase-2-sm {
     text-transform: uppercase !important;
     font-size: 11px !important;
-    line-height: 1.49271 !important;
+    line-height: 16px !important;
     letter-spacing: 1.57143px !important;
     font-weight: bold !important; }
   .uppercase-3-sm {
     text-transform: uppercase !important;
     font-size: 12px !important;
-    line-height: 1.49271 !important;
+    line-height: 18px !important;
     letter-spacing: 1.71429px !important;
     font-weight: bold !important; } }
 
 @media (min-width: 900px) {
   .text-1-md {
     font-size: 12px !important;
-    line-height: 1.49271 !important;
+    line-height: 18px !important;
     letter-spacing: 0px !important;
     font-weight: normal !important; }
   .text-2-md {
     font-size: 14px !important;
-    line-height: 1.49271 !important;
+    line-height: 21px !important;
     letter-spacing: 0px !important;
     font-weight: normal !important; }
   .text-3-md, .h6-md {
     font-size: 16px !important;
-    line-height: 1.49271 !important;
+    line-height: 24px !important;
     letter-spacing: 0px !important;
     font-weight: normal !important; }
   .text-4-md, .h5-md {
     font-size: 18px !important;
-    line-height: 1.49271 !important;
+    line-height: 27px !important;
     letter-spacing: 0px !important;
     font-weight: normal !important; }
   .text-5-md, .h4-md {
     font-size: 21px !important;
-    line-height: 1.49271 !important;
+    line-height: 31px !important;
     letter-spacing: 0px !important;
     font-weight: normal !important; }
   .text-6-md, .h3-md {
     font-size: 24px !important;
-    line-height: 1.30612 !important;
+    line-height: 31px !important;
     letter-spacing: 0px !important;
     font-weight: normal !important; }
   .text-7-md, .h2-md {
     font-size: 36px !important;
-    line-height: 1.30612 !important;
+    line-height: 47px !important;
     letter-spacing: 0px !important;
     font-weight: normal !important; }
   .text-8-md, .h1-md {
     font-size: 53px !important;
-    line-height: 1.14286 !important;
+    line-height: 61px !important;
     letter-spacing: -0.6px !important;
     font-weight: normal !important; }
   .h1-md,
@@ -2862,61 +2862,61 @@ hr {
   .uppercase-1-md {
     text-transform: uppercase !important;
     font-size: 9px !important;
-    line-height: 1.49271 !important;
+    line-height: 13px !important;
     letter-spacing: 1.28571px !important;
     font-weight: bold !important; }
   .uppercase-2-md {
     text-transform: uppercase !important;
     font-size: 11px !important;
-    line-height: 1.49271 !important;
+    line-height: 16px !important;
     letter-spacing: 1.57143px !important;
     font-weight: bold !important; }
   .uppercase-3-md {
     text-transform: uppercase !important;
     font-size: 12px !important;
-    line-height: 1.49271 !important;
+    line-height: 18px !important;
     letter-spacing: 1.71429px !important;
     font-weight: bold !important; } }
 
 @media (min-width: 1200px) {
   .text-1-lg {
     font-size: 12px !important;
-    line-height: 1.49271 !important;
+    line-height: 18px !important;
     letter-spacing: 0px !important;
     font-weight: normal !important; }
   .text-2-lg {
     font-size: 14px !important;
-    line-height: 1.49271 !important;
+    line-height: 21px !important;
     letter-spacing: 0px !important;
     font-weight: normal !important; }
   .text-3-lg, .h6-lg {
     font-size: 16px !important;
-    line-height: 1.49271 !important;
+    line-height: 24px !important;
     letter-spacing: 0px !important;
     font-weight: normal !important; }
   .text-4-lg, .h5-lg {
     font-size: 18px !important;
-    line-height: 1.49271 !important;
+    line-height: 27px !important;
     letter-spacing: 0px !important;
     font-weight: normal !important; }
   .text-5-lg, .h4-lg {
     font-size: 21px !important;
-    line-height: 1.49271 !important;
+    line-height: 31px !important;
     letter-spacing: 0px !important;
     font-weight: normal !important; }
   .text-6-lg, .h3-lg {
     font-size: 24px !important;
-    line-height: 1.30612 !important;
+    line-height: 31px !important;
     letter-spacing: 0px !important;
     font-weight: normal !important; }
   .text-7-lg, .h2-lg {
     font-size: 36px !important;
-    line-height: 1.30612 !important;
+    line-height: 47px !important;
     letter-spacing: 0px !important;
     font-weight: normal !important; }
   .text-8-lg, .h1-lg {
     font-size: 53px !important;
-    line-height: 1.14286 !important;
+    line-height: 61px !important;
     letter-spacing: -0.6px !important;
     font-weight: normal !important; }
   .h1-lg,
@@ -2929,61 +2929,61 @@ hr {
   .uppercase-1-lg {
     text-transform: uppercase !important;
     font-size: 9px !important;
-    line-height: 1.49271 !important;
+    line-height: 13px !important;
     letter-spacing: 1.28571px !important;
     font-weight: bold !important; }
   .uppercase-2-lg {
     text-transform: uppercase !important;
     font-size: 11px !important;
-    line-height: 1.49271 !important;
+    line-height: 16px !important;
     letter-spacing: 1.57143px !important;
     font-weight: bold !important; }
   .uppercase-3-lg {
     text-transform: uppercase !important;
     font-size: 12px !important;
-    line-height: 1.49271 !important;
+    line-height: 18px !important;
     letter-spacing: 1.71429px !important;
     font-weight: bold !important; } }
 
 @media (min-width: 1500px) {
   .text-1-xl {
     font-size: 12px !important;
-    line-height: 1.49271 !important;
+    line-height: 18px !important;
     letter-spacing: 0px !important;
     font-weight: normal !important; }
   .text-2-xl {
     font-size: 14px !important;
-    line-height: 1.49271 !important;
+    line-height: 21px !important;
     letter-spacing: 0px !important;
     font-weight: normal !important; }
   .text-3-xl, .h6-xl {
     font-size: 16px !important;
-    line-height: 1.49271 !important;
+    line-height: 24px !important;
     letter-spacing: 0px !important;
     font-weight: normal !important; }
   .text-4-xl, .h5-xl {
     font-size: 18px !important;
-    line-height: 1.49271 !important;
+    line-height: 27px !important;
     letter-spacing: 0px !important;
     font-weight: normal !important; }
   .text-5-xl, .h4-xl {
     font-size: 21px !important;
-    line-height: 1.49271 !important;
+    line-height: 31px !important;
     letter-spacing: 0px !important;
     font-weight: normal !important; }
   .text-6-xl, .h3-xl {
     font-size: 24px !important;
-    line-height: 1.30612 !important;
+    line-height: 31px !important;
     letter-spacing: 0px !important;
     font-weight: normal !important; }
   .text-7-xl, .h2-xl {
     font-size: 36px !important;
-    line-height: 1.30612 !important;
+    line-height: 47px !important;
     letter-spacing: 0px !important;
     font-weight: normal !important; }
   .text-8-xl, .h1-xl {
     font-size: 53px !important;
-    line-height: 1.14286 !important;
+    line-height: 61px !important;
     letter-spacing: -0.6px !important;
     font-weight: normal !important; }
   .h1-xl,
@@ -2996,19 +2996,19 @@ hr {
   .uppercase-1-xl {
     text-transform: uppercase !important;
     font-size: 9px !important;
-    line-height: 1.49271 !important;
+    line-height: 13px !important;
     letter-spacing: 1.28571px !important;
     font-weight: bold !important; }
   .uppercase-2-xl {
     text-transform: uppercase !important;
     font-size: 11px !important;
-    line-height: 1.49271 !important;
+    line-height: 16px !important;
     letter-spacing: 1.57143px !important;
     font-weight: bold !important; }
   .uppercase-3-xl {
     text-transform: uppercase !important;
     font-size: 12px !important;
-    line-height: 1.49271 !important;
+    line-height: 18px !important;
     letter-spacing: 1.71429px !important;
     font-weight: bold !important; } }
 

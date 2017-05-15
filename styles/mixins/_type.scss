@@ -20,6 +20,10 @@
   @return ($modular-scale-proportion - 1) * $size * 1px;
 }
 
+// Line height ratio to rounded pixels
+@function line-height-px($font-size, $line-height-ratio) {
+  @return round($font-size * $line-height-ratio);
+}
 
 // ------------------------------
 // Text mixins
@@ -28,11 +32,13 @@
 // Generic helper (not recommended for general use)
 @mixin text(
   $font-size: $font-size-3,
-  $line-height: $line-height-3,
+  $line-height-ratio: $line-height-ratio-3,
   $letter-spacing: letter-spacing(0),
   $font-weight: $font-weight-normal,
   $important: false
 ) {
+  $line-height: line-height-px($font-size, $line-height-ratio);
+
   font-size: $font-size           if($important, !important, null);
   line-height: $line-height       if($important, !important, null);
   letter-spacing: $letter-spacing if($important, !important, null);
@@ -43,7 +49,7 @@
 @mixin text-1($font-weight: $font-weight-normal, $important: false) {
   @include text(
   	$font-size: $font-size-1,
-  	$line-height: $line-height-3,
+  	$line-height-ratio: $line-height-ratio-3,
   	$letter-spacing: letter-spacing(-2),
   	$font-weight: $font-weight,
     $important: $important
@@ -54,7 +60,7 @@
 @mixin text-2($font-weight: $font-weight-normal, $important: false) {
   @include text(
   	$font-size: $font-size-2,
-  	$line-height: $line-height-3,
+  	$line-height-ratio: $line-height-ratio-3,
   	$letter-spacing: letter-spacing(-1),
   	$font-weight: $font-weight,
     $important: $important
@@ -65,7 +71,7 @@
 @mixin text-3($font-weight: $font-weight-normal, $important: false) {
   @include text(
   	$font-size: $font-size-3,
-  	$line-height: $line-height-3,
+  	$line-height-ratio: $line-height-ratio-3,
   	$letter-spacing: letter-spacing(0),
   	$font-weight: $font-weight,
     $important: $important
@@ -76,7 +82,7 @@
 @mixin text-4($font-weight: $font-weight-normal, $important: false) {
   @include text(
   	$font-size: $font-size-4,
-  	$line-height: $line-height-3,
+  	$line-height-ratio: $line-height-ratio-3,
   	$letter-spacing: letter-spacing(1),
   	$font-weight: $font-weight,
     $important: $important
@@ -87,7 +93,7 @@
 @mixin text-5($font-weight: $font-weight-normal, $important: false) {
   @include text(
   	$font-size: $font-size-5,
-  	$line-height: $line-height-3,
+  	$line-height-ratio: $line-height-ratio-3,
   	$letter-spacing: letter-spacing(2),
   	$font-weight: $font-weight,
     $important: $important
@@ -98,7 +104,7 @@
 @mixin text-6($font-weight: $font-weight-normal, $important: false) {
   @include text(
   	$font-size: $font-size-6,
-  	$line-height: $line-height-2,
+  	$line-height-ratio: $line-height-ratio-2,
   	$letter-spacing: letter-spacing(3),
   	$font-weight: $font-weight,
     $important: $important
@@ -109,7 +115,7 @@
 @mixin text-7($font-weight: $font-weight-normal, $important: false) {
   @include text(
   	$font-size: $font-size-7,
-  	$line-height: $line-height-2,
+  	$line-height-ratio: $line-height-ratio-2,
   	$letter-spacing: letter-spacing(6),
   	$font-weight: $font-weight,
     $important: $important
@@ -120,7 +126,7 @@
 @mixin text-8($font-weight: $font-weight-normal, $important: false) {
   @include text(
   	$font-size: $font-size-8,
-  	$line-height: $line-height-1,
+  	$line-height-ratio: $line-height-ratio-1,
   	$letter-spacing: letter-spacing(9),
   	$font-weight: $font-weight,
     $important: $important
@@ -136,13 +142,13 @@
 @mixin uppercase(
   $step: -2,
   $font-weight: $font-weight-bold,
-  $line-height: $line-height-3,
+  $line-height-ratio: $line-height-ratio-3,
   $important: false
 ) {
   text-transform: uppercase if($important, !important, null);
   @include text(
     $font-size: modular-scale-px($step),
-    $line-height: $line-height,
+    $line-height-ratio: $line-height-ratio,
     $letter-spacing: letter-spacing-uppercase($step),
     $font-weight: $font-weight,
     $important: $important
