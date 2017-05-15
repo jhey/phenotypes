@@ -42,4 +42,12 @@ $ docker-compose -f docker-compose.yml -f docker-compose.prod.yml up
 
 ## Using Phenotypes components in a project
 
-TK
+The following command will install the latest Phenotypes `master` branch into `node_modules/phenotypes`:
+
+```
+$ npm install git+ssh://git@github.com:parelabs/phenotypes.git --save --production
+```
+
+The `--production` flag indicates that you just want Phenotypes React components (`node_modules/phenotypes/components`) and SCSS/css (`node_modules/styles`), and you'll be responsible for setting up node_sass, webpack, or whatever else will be utilizing these resources in your project.
+
+Like most git URLs, you can append a `#branch-name`, tag, or commit to the end of it to install a specific version of Phenotypes.
