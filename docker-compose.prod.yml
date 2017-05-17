@@ -1,4 +1,4 @@
 version: "3.0"
 services:
-  phenotypes:
+  fractal:
     command: npm run start-prod

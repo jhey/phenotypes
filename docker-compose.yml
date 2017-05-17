@@ -1,8 +1,7 @@
 version: "3.0"
 services:
-  phenotypes:
+  fractal:
     build: .
-    image: phenotypes
     ports:
       - '3000:3000'
     volumes:
