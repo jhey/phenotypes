@@ -9,3 +9,6 @@ run:
 
 clean:
 	docker-compose ${COMPOSE_ARGS} down
+
+shell:
+	docker-compose ${COMPOSE_ARGS} run --rm fractal bash
