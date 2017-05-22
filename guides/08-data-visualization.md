@@ -19,7 +19,7 @@ To get started, [check out this repo on GitHub](https://github.com/parelabs/amin
 ## Guiding principles
 
 1. **Balance clarity to the layperson with technical precision.** Healthcare is scary. Data is scary. We want to make both less scary. Sometimes, the most technically precise explanation (delivered with the best of intentions) is more likely to be misinterpreted by a layperson than a simpler, less technically precise explanation. Our audience is almost entirely laypeople.<br><br>
-2. **Be transparency, truthful, and trustworthy.** The information we present in charts must be clearly decipherable and contain elements that engender trust (e.g. axes start at zero wherever possible). They should also not contain any analytical “black boxes” (e.g. internally derived metrics like CareMatch ranking). This is admittedly tough to enforce when the lines are blurred between product and analysis (e.g. cost product).<br><br>
+2. **Be transparent, truthful, and trustworthy.** The information we present in charts must be clearly decipherable and contain elements that engender trust (e.g. axes start at zero wherever possible). They should also not contain any analytical “black boxes” (e.g. internally derived metrics like CareMatch ranking). This is admittedly tough to enforce when the lines are blurred between product and analysis (e.g. cost product).<br><br>
 3. **Maximize visual accessibility, especially for mobile screens.** More than 60% of our blog traffic comes from mobile. In practice, optimizing for mobile means thin margins, bold fonts, and lots of contrast. We also use a color scheme that is discernible to people with common types of colorblindness.
 
 
