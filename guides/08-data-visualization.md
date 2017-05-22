@@ -121,7 +121,7 @@ Which axis you put your categorical variables on is an aesthetic choice. In this
 
 ### Time-series data
 
-Line charts aren't the only way to show how data changes over time. In this example, a heat map was employed to show where women received a specific type of ultrasound over the course of 308,000 pregnancies. Bands in gray represent weeks where only 100-200 patients were observed as receiving an ultrasound, while the darkest purple bands represent 10,000+ patient observations.
+Line charts aren't the only way to show how data changes over time. In this example, a heat map was employed to show when women received a specific type of ultrasound over the course of 308,000 pregnancies. Bands in gray represent weeks where only 100-200 patients were observed as receiving an ultrasound, while the darkest purple bands represent 10,000+ patient observations.
 
 ![Data viz example 3](/img/guides/data-viz-example-3.png)
 
