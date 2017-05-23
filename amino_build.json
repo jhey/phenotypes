@@ -1,0 +1,15 @@
+{
+    "app": "phenotypes",
+    "build": {
+        "components": ["phenotypes"],
+        "services": ["fractal"]
+    },
+    "deploy": {
+        "preview": {
+            "cluster": "services-preview",
+            "region": "us-west-1",
+            "service": "phenotypes"
+        }
+    }
+}
+
