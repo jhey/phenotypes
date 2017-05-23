@@ -14,9 +14,10 @@ Phenotypes runs on [Fractal](http://fractal.build), a tool that hosts the guides
 
 Here's how to get Phenotypes up and running locally:
 
+* Have [Docker](https://www.docker.com) installed and working
 * Clone this repo and `cd` into it.
-* `docker-compose build`
-* `docker-compose up`
+* `make build`
+* `make dev`
 * Open [http://localhost:3000](http://localhost:3000) in a browser
 
 While running, Fractal will watch your `components` and `guides` directories for changes. It will automatically reload itself and your browser as needed.
@@ -32,12 +33,12 @@ The `watch-js` script has Webpack automatically rebuild the client-side React bu
 
 The `watch-css` script recompiles `phenotypes.css` whenever a SASS file in the `/styles` directory tree changes. Note: phenotypes.css is version controlled so that it can be used in a project without requiring SASS. It's also symlinked into `/fractal_assets/css` so that it can be used in the Fractal preview.
 
-To stop the server, just hit `^C`.
+To stop the server, just hit `^C`. If something weird is going on, try `make clean && make dev`.
 
 To run Phenotypes without all the syncing and watching (e.g. for deployment), just run it like so:
 
 ```
-$ docker-compose -f docker-compose.yml -f docker-compose.prod.yml up
+$ make run
 ```
 
 ## Developing components

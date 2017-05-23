@@ -242,10 +242,10 @@ $font-weight-normal: normal !default;
 $font-weight-bold: bold !default;
 $font-weight-base: $font-weight-normal !default;
 
-$line-height-1: modular-scale-ratio(1) !default;
-$line-height-2: modular-scale-ratio(2) !default;
-$line-height-3: modular-scale-ratio(3) !default;
-$line-height-base: $line-height-3 !default;
+$line-height-ratio-1: modular-scale-ratio(1) !default; // 1.143
+$line-height-ratio-2: modular-scale-ratio(2) !default; // 1.306
+$line-height-ratio-3: modular-scale-ratio(3) !default; // 1.493
+$line-height-base:    $line-height-ratio-3   !default;
 
 $font-size-1: modular-scale-px(-2) !default; // 12px
 $font-size-2: modular-scale-px(-1) !default; // 14px
