@@ -1,5 +1,5 @@
 {
-  "name": "phenotypes",
+  "name": "@aminohealth/phenotypes",
   "version": "1.0.2",
   "description": "Amino's design language and front-end component library",
   "dependencies": {
@@ -35,5 +35,6 @@
   "bugs": {
     "url": "https://github.com/aminohealth/phenotypes/issues"
   },
-  "homepage": "https://github.com/aminohealth/phenotypes#readme"
+  "homepage": "https://github.com/aminohealth/phenotypes#readme",
+  "main": "fractal.js"
 }
