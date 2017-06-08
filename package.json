@@ -1,6 +1,6 @@
 {
   "name": "phenotypes",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Amino's design language and front-end component library",
   "dependencies": {
     "node-sass": "^4.5.3",
@@ -28,12 +28,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/parelabs/phenotypes.git"
+    "url": "git+https://github.com/aminohealth/phenotypes.git"
   },
-  "author": "",
+  "author": "Amino, Inc.",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/parelabs/phenotypes/issues"
+    "url": "https://github.com/aminohealth/phenotypes/issues"
   },
-  "homepage": "https://github.com/parelabs/phenotypes#readme"
+  "homepage": "https://github.com/aminohealth/phenotypes#readme"
 }

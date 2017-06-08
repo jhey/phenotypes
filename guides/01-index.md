@@ -55,4 +55,4 @@ TK: Guidelines and downloads for each version of the logo.
 
 * [Phenotypes Sketch template and Craft Library](https://www.dropbox.com/sh/5ax1ihpnkezixu1/AAAAkGffs9vjeuf16yU_m8nva?dl=0)
 * [Assets](https://www.dropbox.com/sh/y7868ecf5jwbc0s/AABHlbgbeB0ICIF9ptmtxRs1a?dl=0) (icons, fonts, colors palettes)
-* [GitHub repo](https://github.com/parelabs/phenotypes)
+* [GitHub repo](https://github.com/aminohealth/phenotypes)
