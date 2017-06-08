@@ -53,7 +53,6 @@ TK: Guidelines and downloads for each version of the logo.
 
 ## Quick start
 
-* [Phenotypes Sketch template](https://www.dropbox.com/s/9w9n9krdfx8s6h8/Phenotypes%201.0.sketch?dl=0)
-* [Phenotypes "Library" for InVision's Craft plugin for Sketch](https://www.dropbox.com/sh/537n62tpz8s4w72/AAAvIYUc_o81jtgTe3AgH4_pa?dl=0)
+* [Phenotypes Sketch template and Craft Library](https://www.dropbox.com/sh/5ax1ihpnkezixu1/AAAAkGffs9vjeuf16yU_m8nva?dl=0)
 * [Assets](https://www.dropbox.com/sh/y7868ecf5jwbc0s/AABHlbgbeB0ICIF9ptmtxRs1a?dl=0) (icons, fonts, colors palettes)
 * [GitHub repo](https://github.com/parelabs/phenotypes)

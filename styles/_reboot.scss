@@ -1,3 +1,6 @@
+// Reboot can be feature toggled off!
+@if $enable-reboot {
+
 // Based on Bootstrap 4 reboot as of May 4, 2017 (MIT license)
 // Doc: https://v4-alpha.getbootstrap.com/content/reboot/
 // Src: https://github.com/twbs/bootstrap/commits/v4-dev/scss/_reboot.scss
@@ -12,6 +15,7 @@
 // scss-lint:disable SpaceAfterComma
 // scss-lint:disable ImportantRule
 // scss-lint:disable SingleLinePerSelector
+
 
 // Reboot
 //
@@ -489,3 +493,5 @@ template {
 [hidden] {
   display: none !important;
 }
+
+} // @if $enable-reboot
