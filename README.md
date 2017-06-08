@@ -105,12 +105,10 @@ The compiled CSS is provided as `styles/phenotypes.css`. Using the SASS styleshe
 
 ## Using Phenotypes components and styles in a project
 
-The following command will install the latest Phenotypes `master` branch into `node_modules/phenotypes`:
+The following command will install Phenotypes into `node_modules/@aminohealth/phenotypes`:
 
 ```
-$ npm install git+ssh://git@github.com:parelabs/phenotypes.git --save --production
+$ npm install @aminohealth/phenotypes --save --production
 ```
 
-The `--production` flag indicates that you just want the Phenotypes codebase and no decencies (like Fractal). React components will be in `node_modules/phenotypes/components` and SCSS/css will be in `node_modules/phenotypes/styles`. You'll be responsible for setting up node_sass, webpack, or whatever else will be utilizing these resources in your project.
-
-Like most git URLs, you can append a `#branch-name`, tag, or commit to the end of it to install a specific version of Phenotypes.
+The `--production` flag indicates that you just want the Phenotypes codebase and no development dependencies (like Fractal). React components will be in `node_modules/@aminohealth/phenotypes/components` and SCSS/css will be in `node_modules/@aminohealth/phenotypes/styles`. You'll be responsible for setting up node_sass, webpack, or whatever else will be utilizing these resources in your project.
