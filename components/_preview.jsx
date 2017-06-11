@@ -9,7 +9,11 @@ const ROOT_ELEMENT_ID_PREFIX = 'root-';
 class Variant extends React.Component {
   render() {
     return (
-      <div id={this.props.rootElementId} dangerouslySetInnerHTML={this.renderInner()} />
+      <div
+        id={this.props.rootElementId}
+        dangerouslySetInnerHTML={this.renderInner()}
+        style={{marginBottom: 20}}
+      />
     );
   }
 
