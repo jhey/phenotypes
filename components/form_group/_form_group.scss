@@ -1,0 +1,56 @@
+// scss-lint:disable SelectorFormat
+
+%FormGroup--small {
+  .FormGroup__label,
+  .FormGroup__error,
+  .FormGroup__hint {
+    font-size: $font-size-1;
+  }
+
+  .form-control {
+    @extend %form-control-small;
+  }
+}
+
+%FormGroup--large {
+  .FormGroup__label,
+  .FormGroup__error {
+    font-size: $font-size-4;
+  }
+
+  .FormGroup__hint {
+    font-size: $font-size-2;
+  }
+
+  .form-control {
+    @extend %form-control-large;
+  }
+}
+
+.FormGroup__error {
+  color: $red;
+  font-size: $font-size-2;
+}
+
+.FormGroup__label {
+  font-size: $font-size-2;
+  font-weight: $font-weight-bold;
+}
+
+.FormGroup__hint {
+  font-size: $font-size-1;
+}
+
+.FormGroup--has-error {
+  .form-control {
+    border-color: $red;
+  }
+}
+
+.FormGroup--small {
+  @extend %FormGroup--small;
+}
+
+.FormGroup--large {
+  @extend %FormGroup--large;
+}

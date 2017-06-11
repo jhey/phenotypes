@@ -376,6 +376,44 @@ hr {
 .hr-reversed {
   border-color: rgba(255, 255, 255, 0.14); }
 
+.form-control {
+  border: 2px solid #dbdbdb;
+  border-radius: 3px;
+  font-size: 16px;
+  width: 100%; }
+
+.form-control::placeholder {
+  color: rgba(0, 0, 0, 0.41); }
+
+.form-control-small, .FormGroup--small .form-control {
+  font-size: 14px; }
+
+.form-control-large, .FormGroup--large .form-control {
+  font-size: 21px; }
+
+.FormGroup--small .FormGroup__label, .FormGroup--small .FormGroup__error, .FormGroup--small .FormGroup__hint {
+  font-size: 12px; }
+
+.FormGroup--large .FormGroup__label, .FormGroup--large .FormGroup__error {
+  font-size: 18px; }
+
+.FormGroup--large .FormGroup__hint {
+  font-size: 14px; }
+
+.FormGroup__error {
+  color: #f04d5d;
+  font-size: 14px; }
+
+.FormGroup__label {
+  font-size: 14px;
+  font-weight: bold; }
+
+.FormGroup__hint {
+  font-size: 12px; }
+
+.FormGroup--has-error .form-control {
+  border-color: #f04d5d; }
+
 .d-none {
   display: none !important; }
 
