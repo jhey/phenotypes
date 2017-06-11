@@ -28,5 +28,12 @@ module.exports = {
       placeholder: 'Can’t touch this.',
       disabled: true,
     },
+  }, {
+    name: 'password',
+    label: 'Password',
+    context: {
+      placeholder: 'Password goes here.',
+      type: 'password',
+    },
   }],
 };

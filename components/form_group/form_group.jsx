@@ -13,6 +13,8 @@ function getControlProp(props) {
 
 function FormGroup(props) {
   const { label, error, hint, size } = props;
+  const control = getControlProp(props);
+
   return (
     <div
       className={classes('FormGroup', {
@@ -22,7 +24,7 @@ function FormGroup(props) {
       })}
     >
       { !!label && <div className="FormGroup__label">{label}</div> }
-      { getControlProp(props) }
+      { control }
       { !!error && <div className="FormGroup__error">{error}</div> }
       { !!hint && <div className="FormGroup__hint">{hint}</div> }
     </div>
