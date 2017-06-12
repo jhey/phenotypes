@@ -3,17 +3,8 @@ const classes = require('classnames');
 
 const FormControl = require('../form_control/form_control.jsx');
 
-function getControlProp(props) {
-  let control = props.control;
-  if (!control && props.__preview) {
-    control = <FormControl placeholder="Placeholder text" />;
-  }
-  return control;
-}
-
 function FormGroup(props) {
-  const { label, error, hint, size } = props;
-  const control = getControlProp(props);
+  const { id, label, error, hint, size, ...control } = props;
 
   return (
     <div
@@ -23,8 +14,8 @@ function FormGroup(props) {
         'FormGroup--has-error': !!error,
       })}
     >
-      { !!label && <div className="FormGroup__label">{label}</div> }
-      { control }
+      { !!label && <label htmlFor={id} className="FormGroup__label">{label}</label> }
+      <FormControl id={id} {...control} />
       { !!error && <div className="FormGroup__error">{error}</div> }
       { !!hint && <div className="FormGroup__hint">{hint}</div> }
     </div>

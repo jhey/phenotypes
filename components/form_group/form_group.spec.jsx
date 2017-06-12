@@ -12,7 +12,6 @@ describe('FormGroup', function () {
     const input = wrapper.find('input');
 
     expect(input).to.have.length(1);
-    expect(input.props().type).to.equal('text');
     expect(input.hasClass('form-control')).to.be.true;
   });
 

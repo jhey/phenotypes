@@ -28,17 +28,31 @@ function FormControl(props) {
 
   return (
     <Control
+      autoComplete={props.autoComplete}
+      autoFocus={props.autoFocus}
       className={classes('form-control', {
         'form-control-small': size === 'small',
         'form-control-large': size === 'large',
       })}
-      value={props.value}
+      form={props.from}
       disabled={props.disabled}
-      autoFocus={props.autoFocus}
-      placeholder={props.placeholder}
+      id={props.id}
       onBlur={props.onBlur}
       onChange={props.onChange}
+      onCopy={props.onCopy}
+      onCut={props.onCut}
       onFocus={props.onFocus}
+      onInput={props.onInput}
+      onKeyDown={props.onKeyDown}
+      onKeyUp={props.onKeyUp}
+      onPaste={props.onPaste}
+      pattern={props.pattern}
+      placeholder={props.placeholder}
+      readOnly={props.readOnly}
+      required={props.required}
+      size={props.size}
+      maxLength={props.maxLength}
+      value={props.value}
     />
   );
 }

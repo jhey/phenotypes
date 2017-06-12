@@ -8,8 +8,8 @@ const sinon = require('sinon');
 const FormControl = require('./form_control');
 
 describe('FormControl', function () {
-  it('should render text input element', function () {
-    const wrapper = shallow(<FormControl />);
+  it('should render text input element as default input type', function () {
+    const wrapper = mount(<FormControl />);
     const input = wrapper.find('input');
 
     expect(input).to.have.length(1);
