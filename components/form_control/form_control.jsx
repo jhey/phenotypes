@@ -12,10 +12,17 @@ function PasswordControl(props) {
   return <input type="password" {...props} />;
 }
 
+function EmailControl(props) {
+  return <input type="email" {...props} />;
+}
+
 function getControlByType(type) {
   switch (type) {
     case 'password':
       return PasswordControl;
+
+    case 'email':
+      return EmailControl;
 
     case 'text':
       return TextControl;

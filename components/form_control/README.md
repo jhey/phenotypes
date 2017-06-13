@@ -5,7 +5,7 @@ Form control component for text-based inputs
 | name | type | default | description |
 | ---- | ---- | ------- | ----------- |
 | `phSize*` | one of: `null`, `'small'`, `'large'` | `null` | Size variant for component, [see here](/docs/component-conventions/#phSize/) for more detail about `phSize*`.
-| `type` | one of: `'text'`, `'password'` | `'text'` | `type` attribute for input element.
+| `type` | one of: `'text'`, `'password'`, `'email'` | `'text'` | `type` attribute for input element.
 
 Supported HTML attributes:
 ```javascript
