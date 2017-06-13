@@ -4,6 +4,7 @@ module.exports = {
   status: 'draft',
   collated: true,
   context: {
+    __preview: true,
     label: 'Form group',
     hint: 'Helper text',
     placeholder: 'Placeholder text',

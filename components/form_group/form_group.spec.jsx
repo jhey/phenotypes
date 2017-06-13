@@ -7,13 +7,6 @@ const { expect } = require('chai');
 const FormGroup = require('./form_group');
 
 describe('FormGroup', function () {
-  it('should render form control element', function () {
-    const wrapper = mount(<FormGroup />);
-    const input = wrapper.find('input');
-
-    expect(input).to.have.length(1);
-    expect(input.hasClass('form-control')).to.be.true;
-  });
 
   it('should apply correct class for size', function () {
     const defaultSize = shallow(<FormGroup />);
