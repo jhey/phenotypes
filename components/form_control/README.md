@@ -1,0 +1,42 @@
+Form control component for text-based inputs
+
+### Props
+
+| name | type | default | description |
+| ---- | ---- | ------- | ----------- |
+| `phSize*` | one of: `null`, `'small'`, `'large'` | `null` | Size variant for component, [see here](/docs/component-conventions/#phSize/) for more detail about `phSize*`.
+| `type` | one of: `'text'`, `'password'` | `'text'` | `type` attribute for input element.
+
+Supported HTML attributes:
+```javascript
+aria-*
+autoComplete
+autoFocus
+className
+form
+disabled
+id
+name
+onBlur
+onChange
+pattern
+placeholder
+readOnly
+required
+size
+maxLength
+value
+```
+
+Supported event handlers:
+```javascript
+onBlur
+onChange
+onCopy
+onCut
+onFocus
+onInput
+onKeyDown
+onKeyUp
+onPaste
+```
