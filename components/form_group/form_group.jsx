@@ -2,8 +2,10 @@
 const React = require('react');
 const classes = require('classnames');
 
+const responsiveClass = require('../_utilities/responsive_class.js');
+const size = require('../_utilities/size.js');
+
 const FormControl = require('../form_control/form_control.jsx');
-const responsiveClass = require('../responsive_class.js');
 
 class FormGroup extends React.Component {
 
@@ -46,8 +48,8 @@ class FormGroup extends React.Component {
         className={classes(
           this.props.className,
           'FormGroup',
-          responsiveClass('FormGroup--small', this.props, size => size === 'small'),
-          responsiveClass('FormGroup--large', this.props, size => size === 'large'),
+          responsiveClass('FormGroup--small', this.props, size.isSmall),
+          responsiveClass('FormGroup--large', this.props, size.isLarge),
           { 'FormGroup--has-error': !!error },
         )}
       >

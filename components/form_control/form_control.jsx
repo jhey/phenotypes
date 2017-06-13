@@ -1,7 +1,8 @@
 const React = require('react');
 const classes = require('classnames');
 
-const responsiveClass = require('../responsive_class.js');
+const responsiveClass = require('../_utilities/responsive_class.js');
+const size = require('../_utilities/size.js');
 
 function TextControl(props) {
   return <input type="text" role="textbox" {...props} />;
@@ -43,8 +44,8 @@ function FormControl(props) {
       className={classes(
         props.className,
         'form-control',
-        responsiveClass('form-control-small', props, size => size === 'small'),
-        responsiveClass('form-control-large', props, size => size === 'large'),
+        responsiveClass('form-control-small', props, size.isSmall),
+        responsiveClass('form-control-large', props, size.isLarge),
       )}
       form={props.from}
       disabled={props.disabled}
