@@ -20,7 +20,7 @@ module.exports = {
     label: 'Small',
     context: {
       controlId: 'small',
-      size: 'small',
+      phSize: 'small',
       label: 'Small form group',
     },
   }, {
@@ -28,7 +28,7 @@ module.exports = {
     label: 'Large',
     context: {
       controlId: 'large',
-      size: 'large',
+      phSize: 'large',
       label: 'Large form group',
     },
   }, {
@@ -38,6 +38,14 @@ module.exports = {
       controlId: 'error',
       label: 'Error state',
       error: 'Error message',
+    },
+  }, {
+    name: 'responsive',
+    label: 'Responsive',
+    context: {
+      controlId: 'responsive',
+      phSizeMd: 'large',
+      label: 'Responsive form group',
     },
   }],
 };

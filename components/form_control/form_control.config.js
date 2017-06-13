@@ -13,13 +13,13 @@ module.exports = {
     name: 'small',
     label: 'Small',
     context: {
-      size: 'small',
+      phSize: 'small',
     },
   }, {
     name: 'large',
     label: 'Large',
     context: {
-      size: 'large',
+      phSize: 'large',
     },
   }, {
     name: 'disabled',
@@ -34,6 +34,14 @@ module.exports = {
     context: {
       placeholder: 'Password goes here.',
       type: 'password',
+    },
+  },
+  {
+    name: 'responsive',
+    label: 'Responsive',
+    context: {
+      placeholder: 'Resize me!',
+      phSizeMd: 'large',
     },
   }],
 };

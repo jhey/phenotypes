@@ -1,6 +1,8 @@
 const React = require('react');
 const classes = require('classnames');
 
+const responsiveClass = require('../responsive_class.js');
+
 function TextControl(props) {
   return <input type="text" role="textbox" {...props} />;
 }
@@ -32,17 +34,18 @@ function ariaProps(props) {
 }
 
 function FormControl(props) {
-  const { type, size } = props;
-  const Control = getControlByType(type);
+  const Control = getControlByType(props.type);
 
   return (
     <Control
       autoComplete={props.autoComplete}
       autoFocus={props.autoFocus}
-      className={classes('form-control', {
-        'form-control-small': size === 'small',
-        'form-control-large': size === 'large',
-      })}
+      className={classes(
+        props.className,
+        'form-control',
+        responsiveClass('form-control-small', props, size => size === 'small'),
+        responsiveClass('form-control-large', props, size => size === 'large'),
+      )}
       form={props.from}
       disabled={props.disabled}
       id={props.id}

@@ -1,3 +1,8 @@
+@mixin form-control-sizer($size) {
+  @if $size == 'small' { font-size: $font-size-2; }
+  @if $size == 'large' { font-size: $font-size-5; }
+}
+
 .form-control {
   border: 2px solid $gray-300;
   border-radius: $border-radius;
@@ -9,18 +14,20 @@
   }
 }
 
-%form-control-small {
-  font-size: $font-size-2;
-}
-
-%form-control-large {
-  font-size: $font-size-5;
-}
-
 .form-control-small {
-  @extend %form-control-small;
+  @include form-control-sizer($size: 'small');
 }
 
 .form-control-large {
-  @extend %form-control-large;
+  @include form-control-sizer($size: 'large');
+}
+
+@if $enable-type-utilities {
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+      $suffix: breakpoint-suffix($breakpoint, $grid-breakpoints);
+      .form-control-small#{$suffix} { @include form-control-sizer($size: 'small'); }
+      .form-control-large#{$suffix} { @include form-control-sizer($size: 'large'); }
+    }
+  }
 }

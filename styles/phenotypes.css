@@ -381,20 +381,41 @@ hr {
   .form-control::placeholder {
     color: rgba(0, 0, 0, 0.41); }
 
-.form-control-small, .FormGroup--small .form-control {
+.form-control-small {
   font-size: 14px; }
 
-.form-control-large, .FormGroup--large .form-control {
+.form-control-large {
   font-size: 21px; }
 
-.FormGroup--small .FormGroup__label, .FormGroup--small .FormGroup__error, .FormGroup--small .FormGroup__hint {
-  font-size: 12px; }
-
-.FormGroup--large .FormGroup__label, .FormGroup--large .FormGroup__error {
-  font-size: 18px; }
-
-.FormGroup--large .FormGroup__hint {
+.form-control-small {
   font-size: 14px; }
+
+.form-control-large {
+  font-size: 21px; }
+
+@media (min-width: 600px) {
+  .form-control-small-sm {
+    font-size: 14px; }
+  .form-control-large-sm {
+    font-size: 21px; } }
+
+@media (min-width: 900px) {
+  .form-control-small-md {
+    font-size: 14px; }
+  .form-control-large-md {
+    font-size: 21px; } }
+
+@media (min-width: 1200px) {
+  .form-control-small-lg {
+    font-size: 14px; }
+  .form-control-large-lg {
+    font-size: 21px; } }
+
+@media (min-width: 1500px) {
+  .form-control-small-xl {
+    font-size: 14px; }
+  .form-control-large-xl {
+    font-size: 21px; } }
 
 .FormGroup__error {
   color: #f04d5d;
@@ -409,6 +430,102 @@ hr {
 
 .FormGroup--has-error .form-control {
   border-color: #f04d5d; }
+
+.FormGroup--small .FormGroup__label,
+.FormGroup--small .FormGroup__error,
+.FormGroup--small .FormGroup__hint {
+  font-size: 12px; }
+
+.FormGroup--small .form-control {
+  font-size: 14px; }
+
+.FormGroup--large .FormGroup__label,
+.FormGroup--large .FormGroup__error {
+  font-size: 18px; }
+
+.FormGroup--large .FormGroup__hint {
+  font-size: 14px; }
+
+.FormGroup--large .form-control {
+  font-size: 21px; }
+
+.FormGroup--small .FormGroup__label,
+.FormGroup--small .FormGroup__error,
+.FormGroup--small .FormGroup__hint {
+  font-size: 12px; }
+
+.FormGroup--small .form-control {
+  font-size: 14px; }
+
+.FormGroup--large .FormGroup__label,
+.FormGroup--large .FormGroup__error {
+  font-size: 18px; }
+
+.FormGroup--large .FormGroup__hint {
+  font-size: 14px; }
+
+.FormGroup--large .form-control {
+  font-size: 21px; }
+
+@media (min-width: 600px) {
+  .FormGroup--small-sm .FormGroup__label,
+  .FormGroup--small-sm .FormGroup__error,
+  .FormGroup--small-sm .FormGroup__hint {
+    font-size: 12px; }
+  .FormGroup--small-sm .form-control {
+    font-size: 14px; }
+  .FormGroup--large-sm .FormGroup__label,
+  .FormGroup--large-sm .FormGroup__error {
+    font-size: 18px; }
+  .FormGroup--large-sm .FormGroup__hint {
+    font-size: 14px; }
+  .FormGroup--large-sm .form-control {
+    font-size: 21px; } }
+
+@media (min-width: 900px) {
+  .FormGroup--small-md .FormGroup__label,
+  .FormGroup--small-md .FormGroup__error,
+  .FormGroup--small-md .FormGroup__hint {
+    font-size: 12px; }
+  .FormGroup--small-md .form-control {
+    font-size: 14px; }
+  .FormGroup--large-md .FormGroup__label,
+  .FormGroup--large-md .FormGroup__error {
+    font-size: 18px; }
+  .FormGroup--large-md .FormGroup__hint {
+    font-size: 14px; }
+  .FormGroup--large-md .form-control {
+    font-size: 21px; } }
+
+@media (min-width: 1200px) {
+  .FormGroup--small-lg .FormGroup__label,
+  .FormGroup--small-lg .FormGroup__error,
+  .FormGroup--small-lg .FormGroup__hint {
+    font-size: 12px; }
+  .FormGroup--small-lg .form-control {
+    font-size: 14px; }
+  .FormGroup--large-lg .FormGroup__label,
+  .FormGroup--large-lg .FormGroup__error {
+    font-size: 18px; }
+  .FormGroup--large-lg .FormGroup__hint {
+    font-size: 14px; }
+  .FormGroup--large-lg .form-control {
+    font-size: 21px; } }
+
+@media (min-width: 1500px) {
+  .FormGroup--small-xl .FormGroup__label,
+  .FormGroup--small-xl .FormGroup__error,
+  .FormGroup--small-xl .FormGroup__hint {
+    font-size: 12px; }
+  .FormGroup--small-xl .form-control {
+    font-size: 14px; }
+  .FormGroup--large-xl .FormGroup__label,
+  .FormGroup--large-xl .FormGroup__error {
+    font-size: 18px; }
+  .FormGroup--large-xl .FormGroup__hint {
+    font-size: 14px; }
+  .FormGroup--large-xl .form-control {
+    font-size: 21px; } }
 
 .d-none {
   display: none !important; }
