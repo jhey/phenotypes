@@ -12,8 +12,8 @@ class FormGroup extends React.Component {
     if (this.props.__preview) {
       return (
         <FormControl
+          id={this.props.controlId}
           placeholder="Placeholder text"
-          aria-label={this.props.label}
         />
       );
     }
@@ -21,7 +21,7 @@ class FormGroup extends React.Component {
   }
 
   render() {
-    const { label, error, hint, size } = this.props;
+    const { label, error, hint, controlId, size } = this.props;
 
     return (
       <div
@@ -31,10 +31,8 @@ class FormGroup extends React.Component {
           'FormGroup--has-error': !!error,
         })}
       >
-        <label>
-          { !!label && <div className="FormGroup__label">{label}</div> }
-          { this.renderChildren() }
-        </label>
+        { !!label && <label htmlFor={controlId} className="FormGroup__label">{label}</label> }
+        { this.renderChildren() }
         { !!error && <div className="FormGroup__error">{error}</div> }
         { !!hint && <div className="FormGroup__hint">{hint}</div> }
       </div>
