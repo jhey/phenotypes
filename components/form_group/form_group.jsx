@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/label-has-for */
 const React = require('react');
 const classes = require('classnames');
 
