@@ -22,6 +22,15 @@ function getControlByType(type) {
   }
 }
 
+function ariaProps(props) {
+  return Object.keys(props).reduce((ariaAttrs, key) => {
+    if (key.match('^aria-')) {
+      return Object.assign(ariaAttrs, { [key]: props[key] });
+    }
+    return ariaAttrs;
+  }, {});
+}
+
 function FormControl(props) {
   const { type, size } = props;
   const Control = getControlByType(type);
@@ -37,6 +46,7 @@ function FormControl(props) {
       form={props.from}
       disabled={props.disabled}
       id={props.id}
+      name={props.name}
       onBlur={props.onBlur}
       onChange={props.onChange}
       onCopy={props.onCopy}
@@ -53,6 +63,7 @@ function FormControl(props) {
       size={props.size}
       maxLength={props.maxLength}
       value={props.value}
+      {...ariaProps(props)}
     />
   );
 }
