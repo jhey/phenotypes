@@ -17,8 +17,6 @@ form
 disabled
 id
 name
-onBlur
-onChange
 pattern
 placeholder
 readOnly

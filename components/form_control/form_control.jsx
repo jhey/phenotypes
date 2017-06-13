@@ -54,7 +54,7 @@ function FormControl(props) {
         responsiveClass('form-control-small', props, size.isSmall),
         responsiveClass('form-control-large', props, size.isLarge),
       )}
-      form={props.from}
+      form={props.form}
       disabled={props.disabled}
       id={props.id}
       name={props.name}
