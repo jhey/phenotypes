@@ -40,8 +40,6 @@ class FormGroup extends React.Component {
   }
 
   render() {
-    const { label, error, hint } = this.props;
-
     return (
       <div
         className={classes(
@@ -49,13 +47,13 @@ class FormGroup extends React.Component {
           'FormGroup',
           responsiveClass('FormGroup--small', this.props, size.isSmall),
           responsiveClass('FormGroup--large', this.props, size.isLarge),
-          { 'FormGroup--has-error': !!error },
+          { 'FormGroup--has-error': !!this.props.error },
         )}
       >
-        { !!label && <label htmlFor={this.props.controlId} className="FormGroup__label">{label}</label> }
+        { this.renderLabel() }
         { this.renderChildren() }
-        { !!error && <div className="FormGroup__error">{error}</div> }
-        { !!hint && <div className="FormGroup__hint">{hint}</div> }
+        { this.renderError() }
+        { this.renderHint() }
       </div>
     );
   }
