@@ -51,7 +51,7 @@ Take a look at an existing component or the [Fractal components](http://fractal.
 
 ### Testing
 
-Unit tests for a componet should go in a component's directory. In the example above, tests for a generic button component would be `components/button/button.spec.js`. Tests are run with [Mocha](https://mochajs.org/) using the [Chai](http://chaijs.com/) assertion library and Airbnb's [Enzyme](https://github.com/airbnb/enzyme) as a React testing utility. Because Enzyme's `mount` API requires a DOM, test commands first load a document into the global scope using [JSDOM](https://github.com/tmpvar/jsdom).
+Unit tests for a component should go in a component's directory. In the example above, tests for a generic button component would be `components/button/button.spec.js`. Tests are run with [Mocha](https://mochajs.org/) using the [Chai](http://chaijs.com/) assertion library and Airbnb's [Enzyme](https://github.com/airbnb/enzyme) as a React testing utility. Because Enzyme's `mount` API requires a DOM, test commands first load a document into the global scope using [JSDOM](https://github.com/tmpvar/jsdom).
 
 To run all the tests:
 ```
