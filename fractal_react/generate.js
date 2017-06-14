@@ -17,6 +17,9 @@ function writeComponentsMapFile(app) {
   // Map every component handle to its require path relative to *here*
   // e.g. button: require("../components/button/button.jsx"),
   components.forEach(function(item) {
+    if (!item.relViewPath) {
+      return;
+    }
     const componentPath = path.join('..', componentsDir, item.relViewPath);
     buffer += `  "${item.handle}": require("${componentPath}"),\n`;
   });
