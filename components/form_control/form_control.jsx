@@ -50,9 +50,9 @@ function FormControl(props) {
       autoFocus={props.autoFocus}
       className={classes(
         props.className,
-        'form-control',
-        responsiveClass('form-control-small', props, size.isSmall),
-        responsiveClass('form-control-large', props, size.isLarge),
+        'FormControl',
+        responsiveClass('FormControl--small', props, size.isSmall),
+        responsiveClass('FormControl--large', props, size.isLarge),
       )}
       form={props.form}
       disabled={props.disabled}

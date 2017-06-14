@@ -19,7 +19,7 @@
     }
   }
 
-  .form-control {
+  .FormControl {
     @include form-control-sizer($size: $size);
   }
 }
@@ -39,7 +39,7 @@
 }
 
 .FormGroup--has-error {
-  .form-control {
+  .FormControl {
     border-color: $red;
   }
 }
