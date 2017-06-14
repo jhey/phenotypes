@@ -51,6 +51,7 @@ function FormControl(props) {
       className={classes(
         props.className,
         'FormControl',
+        'FormGroup__control',
         responsiveClass('FormControl--small', props, size.isSmall),
         responsiveClass('FormControl--large', props, size.isLarge),
       )}

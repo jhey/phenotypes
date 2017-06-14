@@ -391,6 +391,9 @@ hr {
 .FormControl--large {
   font-size: 21px; }
 
+.FormControl--has-error {
+  border-color: #f04d5d; }
+
 .FormControl--small {
   font-size: 14px; }
 
@@ -432,7 +435,7 @@ hr {
 .FormGroup__hint {
   font-size: 12px; }
 
-.FormGroup--has-error .FormControl {
+.FormGroup--has-error .FormGroup__control {
   border-color: #f04d5d; }
 
 .FormGroup--small .FormGroup__label,
@@ -440,7 +443,7 @@ hr {
 .FormGroup--small .FormGroup__hint {
   font-size: 12px; }
 
-.FormGroup--small .FormControl {
+.FormGroup--small .FormGroup__control {
   font-size: 14px; }
 
 .FormGroup--large .FormGroup__label,
@@ -450,7 +453,7 @@ hr {
 .FormGroup--large .FormGroup__hint {
   font-size: 14px; }
 
-.FormGroup--large .FormControl {
+.FormGroup--large .FormGroup__control {
   font-size: 21px; }
 
 .FormGroup--small .FormGroup__label,
@@ -458,7 +461,7 @@ hr {
 .FormGroup--small .FormGroup__hint {
   font-size: 12px; }
 
-.FormGroup--small .FormControl {
+.FormGroup--small .FormGroup__control {
   font-size: 14px; }
 
 .FormGroup--large .FormGroup__label,
@@ -468,7 +471,7 @@ hr {
 .FormGroup--large .FormGroup__hint {
   font-size: 14px; }
 
-.FormGroup--large .FormControl {
+.FormGroup--large .FormGroup__control {
   font-size: 21px; }
 
 @media (min-width: 600px) {
@@ -476,14 +479,14 @@ hr {
   .FormGroup--small-sm .FormGroup__error,
   .FormGroup--small-sm .FormGroup__hint {
     font-size: 12px; }
-  .FormGroup--small-sm .FormControl {
+  .FormGroup--small-sm .FormGroup__control {
     font-size: 14px; }
   .FormGroup--large-sm .FormGroup__label,
   .FormGroup--large-sm .FormGroup__error {
     font-size: 18px; }
   .FormGroup--large-sm .FormGroup__hint {
     font-size: 14px; }
-  .FormGroup--large-sm .FormControl {
+  .FormGroup--large-sm .FormGroup__control {
     font-size: 21px; } }
 
 @media (min-width: 900px) {
@@ -491,14 +494,14 @@ hr {
   .FormGroup--small-md .FormGroup__error,
   .FormGroup--small-md .FormGroup__hint {
     font-size: 12px; }
-  .FormGroup--small-md .FormControl {
+  .FormGroup--small-md .FormGroup__control {
     font-size: 14px; }
   .FormGroup--large-md .FormGroup__label,
   .FormGroup--large-md .FormGroup__error {
     font-size: 18px; }
   .FormGroup--large-md .FormGroup__hint {
     font-size: 14px; }
-  .FormGroup--large-md .FormControl {
+  .FormGroup--large-md .FormGroup__control {
     font-size: 21px; } }
 
 @media (min-width: 1200px) {
@@ -506,14 +509,14 @@ hr {
   .FormGroup--small-lg .FormGroup__error,
   .FormGroup--small-lg .FormGroup__hint {
     font-size: 12px; }
-  .FormGroup--small-lg .FormControl {
+  .FormGroup--small-lg .FormGroup__control {
     font-size: 14px; }
   .FormGroup--large-lg .FormGroup__label,
   .FormGroup--large-lg .FormGroup__error {
     font-size: 18px; }
   .FormGroup--large-lg .FormGroup__hint {
     font-size: 14px; }
-  .FormGroup--large-lg .FormControl {
+  .FormGroup--large-lg .FormGroup__control {
     font-size: 21px; } }
 
 @media (min-width: 1500px) {
@@ -521,14 +524,14 @@ hr {
   .FormGroup--small-xl .FormGroup__error,
   .FormGroup--small-xl .FormGroup__hint {
     font-size: 12px; }
-  .FormGroup--small-xl .FormControl {
+  .FormGroup--small-xl .FormGroup__control {
     font-size: 14px; }
   .FormGroup--large-xl .FormGroup__label,
   .FormGroup--large-xl .FormGroup__error {
     font-size: 18px; }
   .FormGroup--large-xl .FormGroup__hint {
     font-size: 14px; }
-  .FormGroup--large-xl .FormControl {
+  .FormGroup--large-xl .FormGroup__control {
     font-size: 21px; } }
 
 .d-none {
