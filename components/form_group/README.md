@@ -29,10 +29,10 @@ Javascript:
 ```
 Rendered markup:
 ```html
-<div class="FormControl">
-    <label for="dob" class="FormControl__label">Birthday</label>
+<div class="FormGroup">
+    <label for="dob" class="FormGroup__label">Birthday</label>
     <input type="text" id="dob"/>
-    <div class="FormControl__hint">When were you born?</div>
+    <div class="FormGroup__hint">When were you born?</div>
 </div>
 ```
 
@@ -47,8 +47,8 @@ Javascript:
 ```
 Rendered markup:
 ```html
-<div class="FormControl">
-    <label class="FormControl__label">Subscribe</label>
+<div class="FormGroup">
+    <label class="FormGroup__label">Subscribe</label>
     <label for="subscribe-true">Send me updates</label>
     <input type="checkbox" value="yes" id="subscribe-true"/>
 </div>
@@ -67,8 +67,8 @@ Javascript:
 ```
 Rendered markup:
 ```html
-<div class="FormControl">
-    <label class="FormControl__label">When are you available?</label>
+<div class="FormGroup">
+    <label class="FormGroup__label">When are you available?</label>
     <input type="text" aria-label="Start time"/>
     <input type="text" aria-label="End time"/>
 </div>
