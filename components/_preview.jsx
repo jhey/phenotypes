@@ -12,7 +12,7 @@ class Variant extends React.Component {
       <div
         id={this.props.rootElementId}
         dangerouslySetInnerHTML={this.renderInner()}
-        style={{marginBottom: 20}}
+        className="mb5"
       />
     );
   }
