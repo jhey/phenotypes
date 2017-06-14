@@ -391,8 +391,8 @@ hr {
 .FormControl--large {
   font-size: 21px; }
 
-.FormControl--has-error {
-  border-color: #f04d5d; }
+.FormControl--is-disabled {
+  background: #eee; }
 
 .FormControl--small {
   font-size: 14px; }

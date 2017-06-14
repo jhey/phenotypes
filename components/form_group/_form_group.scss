@@ -40,7 +40,7 @@
 
 .FormGroup--has-error {
   .FormGroup__control {
-    @include form-control-error-state();
+    @include form-control-error-state;
   }
 }
 

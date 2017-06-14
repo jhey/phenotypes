@@ -54,6 +54,7 @@ function FormControl(props) {
         'FormGroup__control',
         responsiveClass('FormControl--small', props, size.isSmall),
         responsiveClass('FormControl--large', props, size.isLarge),
+        { 'FormControl--is-disabled': props.disabled }
       )}
       form={props.form}
       disabled={props.disabled}

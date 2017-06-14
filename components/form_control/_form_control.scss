@@ -8,6 +8,10 @@
   border-color: $red;
 }
 
+@mixin form-control-disabled-state() {
+  background: $gray-200;
+}
+
 .FormControl {
   border: 2px solid $gray-300;
   border-radius: $border-radius;
@@ -27,8 +31,8 @@
   @include form-control-sizer($size: 'large');
 }
 
-.FormControl--has-error {
-  @include form-control-error-state();
+.FormControl--is-disabled {
+  @include form-control-disabled-state;
 }
 
 @if $enable-type-utilities {
