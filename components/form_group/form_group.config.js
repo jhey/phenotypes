@@ -7,7 +7,6 @@ module.exports = {
     __preview: true,
     label: 'Form group',
     hint: 'Helper text',
-    placeholder: 'Placeholder text',
   },
   variants: [{
     name: 'default',
