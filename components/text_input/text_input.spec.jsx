@@ -1,7 +1,7 @@
 /* eslint-env mocha */
 /* eslint-disable prefer-arrow-callback, no-unused-expressions */
 const React = require('react');
-const { shallow, mount } = require('enzyme');
+const { shallow } = require('enzyme');
 const { expect } = require('chai');
 const sinon = require('sinon');
 
@@ -9,7 +9,7 @@ const TextInput = require('./text_input');
 
 describe('TextInput', function () {
   it('should render text input element as default input type', function () {
-    const wrapper = mount(<TextInput />);
+    const wrapper = shallow(<TextInput />);
     const input = wrapper.find('input');
 
     expect(input).to.have.length(1);
@@ -18,7 +18,7 @@ describe('TextInput', function () {
   });
 
   it('should pass HTML attributes to input element and apply disabled class', function () {
-    const wrapper = mount(
+    const wrapper = shallow(
       <TextInput
         aria-label="label"
         autoComplete="autoComplete"
@@ -58,7 +58,7 @@ describe('TextInput', function () {
 
   it('should call onBlur', function () {
     const callMe = sinon.spy();
-    const wrapper = mount(<TextInput onBlur={callMe} />);
+    const wrapper = shallow(<TextInput onBlur={callMe} />);
 
     wrapper.find('input').simulate('blur');
     expect(callMe.calledOnce).to.be.true;
@@ -66,7 +66,7 @@ describe('TextInput', function () {
 
   it('should call onChange', function () {
     const callMe = sinon.spy();
-    const wrapper = mount(<TextInput onChange={callMe} />);
+    const wrapper = shallow(<TextInput onChange={callMe} />);
 
     wrapper.find('input').simulate('change');
     expect(callMe.calledOnce).to.be.true;
@@ -74,7 +74,7 @@ describe('TextInput', function () {
 
   it('should call onCopy', function () {
     const callMe = sinon.spy();
-    const wrapper = mount(<TextInput onCopy={callMe} />);
+    const wrapper = shallow(<TextInput onCopy={callMe} />);
 
     wrapper.find('input').simulate('copy');
     expect(callMe.calledOnce).to.be.true;
@@ -82,7 +82,7 @@ describe('TextInput', function () {
 
   it('should call onCut', function () {
     const callMe = sinon.spy();
-    const wrapper = mount(<TextInput onCut={callMe} />);
+    const wrapper = shallow(<TextInput onCut={callMe} />);
 
     wrapper.find('input').simulate('cut');
     expect(callMe.calledOnce).to.be.true;
@@ -90,7 +90,7 @@ describe('TextInput', function () {
 
   it('should call onFocus', function () {
     const callMe = sinon.spy();
-    const wrapper = mount(<TextInput onFocus={callMe} />);
+    const wrapper = shallow(<TextInput onFocus={callMe} />);
 
     wrapper.find('input').simulate('focus');
     expect(callMe.calledOnce).to.be.true;
@@ -98,7 +98,7 @@ describe('TextInput', function () {
 
   it('should call onInput', function () {
     const callMe = sinon.spy();
-    const wrapper = mount(<TextInput onInput={callMe} />);
+    const wrapper = shallow(<TextInput onInput={callMe} />);
 
     wrapper.find('input').simulate('input');
     expect(callMe.calledOnce).to.be.true;
@@ -106,7 +106,7 @@ describe('TextInput', function () {
 
   it('should call onKeyDown', function () {
     const callMe = sinon.spy();
-    const wrapper = mount(<TextInput onKeyDown={callMe} />);
+    const wrapper = shallow(<TextInput onKeyDown={callMe} />);
 
     wrapper.find('input').simulate('keydown');
     expect(callMe.calledOnce).to.be.true;
@@ -114,7 +114,7 @@ describe('TextInput', function () {
 
   it('should call onKeyUp', function () {
     const callMe = sinon.spy();
-    const wrapper = mount(<TextInput onKeyUp={callMe} />);
+    const wrapper = shallow(<TextInput onKeyUp={callMe} />);
 
     wrapper.find('input').simulate('keyup');
     expect(callMe.calledOnce).to.be.true;
@@ -122,7 +122,7 @@ describe('TextInput', function () {
 
   it('should call onPaste', function () {
     const callMe = sinon.spy();
-    const wrapper = mount(<TextInput onPaste={callMe} />);
+    const wrapper = shallow(<TextInput onPaste={callMe} />);
 
     wrapper.find('input').simulate('paste');
     expect(callMe.calledOnce).to.be.true;
