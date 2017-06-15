@@ -1,8 +1,19 @@
 // scss-lint:disable SelectorFormat
-@mixin form-group-sizer($size) {
+@mixin form-group-sizer($size: 'default') {
   @if $size == 'small' {
     .FormGroup__label,
     .FormGroup__error,
+    .FormGroup__hint {
+      font-size: $font-size-1;
+    }
+  }
+
+  @if $size == 'default' {
+    .FormGroup__label,
+    .FormGroup__error {
+      font-size: $font-size-2;
+    }
+
     .FormGroup__hint {
       font-size: $font-size-1;
     }
@@ -19,43 +30,28 @@
     }
   }
 
-  .FormGroup__control {
-    @include text-input-sizer($size: $size);
-  }
+  .FormGroup__control { @include text-input-sizer($size: $size); }
 }
 
-.FormGroup__error {
-  color: $red;
-  font-size: $font-size-2;
-}
+.FormGroup__error { color: $red; }
 
-.FormGroup__label {
-  font-size: $font-size-2;
-  font-weight: $font-weight-bold;
-}
-
-.FormGroup__hint {
-  font-size: $font-size-1;
-}
+.FormGroup__label { font-weight: $font-weight-bold; }
 
 .FormGroup--has-error {
-  .FormGroup__control {
-    @include text-input-error-state;
-  }
+  .FormGroup__control { @include text-input-error-state; }
 }
 
-.FormGroup--small {
-  @include form-group-sizer($size: 'small')
-}
+@include form-group-sizer;
 
-.FormGroup--large {
-  @include form-group-sizer($size: 'large')
-}
+.FormGroup--small { @include form-group-sizer($size: 'small'); }
+
+.FormGroup--large { @include form-group-sizer($size: 'large'); }
 
 @if $enable-type-utilities {
   @each $breakpoint in map-keys($grid-breakpoints) {
     @include media-breakpoint-up($breakpoint) {
       $suffix: breakpoint-suffix($breakpoint, $grid-breakpoints);
+      .FormGroup--default#{$suffix} { @include form-group-sizer; }
       .FormGroup--small#{$suffix} { @include form-group-sizer($size: 'small'); }
       .FormGroup--large#{$suffix} { @include form-group-sizer($size: 'large'); }
     }

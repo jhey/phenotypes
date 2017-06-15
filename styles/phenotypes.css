@@ -377,9 +377,9 @@ hr {
   border-color: rgba(255, 255, 255, 0.14); }
 
 .TextInput {
+  font-size: 16px;
   border: 2px solid #dbdbdb;
   border-radius: 3px;
-  font-size: 16px;
   width: 100%; }
 
 .TextInput::placeholder {
@@ -394,6 +394,9 @@ hr {
 .TextInput--is-disabled {
   background: #eee; }
 
+.TextInput--default {
+  font-size: 16px; }
+
 .TextInput--small {
   font-size: 14px; }
 
@@ -401,42 +404,55 @@ hr {
   font-size: 21px; }
 
 @media (min-width: 600px) {
+  .TextInput--default-sm {
+    font-size: 16px; }
   .TextInput--small-sm {
     font-size: 14px; }
   .TextInput--large-sm {
     font-size: 21px; } }
 
 @media (min-width: 900px) {
+  .TextInput--default-md {
+    font-size: 16px; }
   .TextInput--small-md {
     font-size: 14px; }
   .TextInput--large-md {
     font-size: 21px; } }
 
 @media (min-width: 1200px) {
+  .TextInput--default-lg {
+    font-size: 16px; }
   .TextInput--small-lg {
     font-size: 14px; }
   .TextInput--large-lg {
     font-size: 21px; } }
 
 @media (min-width: 1500px) {
+  .TextInput--default-xl {
+    font-size: 16px; }
   .TextInput--small-xl {
     font-size: 14px; }
   .TextInput--large-xl {
     font-size: 21px; } }
 
 .FormGroup__error {
-  color: #f04d5d;
-  font-size: 14px; }
+  color: #f04d5d; }
 
 .FormGroup__label {
-  font-size: 14px;
   font-weight: bold; }
+
+.FormGroup--has-error .FormGroup__control {
+  border-color: #f04d5d; }
+
+.FormGroup__label,
+.FormGroup__error {
+  font-size: 14px; }
 
 .FormGroup__hint {
   font-size: 12px; }
 
-.FormGroup--has-error .FormGroup__control {
-  border-color: #f04d5d; }
+.FormGroup__control {
+  font-size: 16px; }
 
 .FormGroup--small .FormGroup__label,
 .FormGroup--small .FormGroup__error,
@@ -455,6 +471,16 @@ hr {
 
 .FormGroup--large .FormGroup__control {
   font-size: 21px; }
+
+.FormGroup--default .FormGroup__label,
+.FormGroup--default .FormGroup__error {
+  font-size: 14px; }
+
+.FormGroup--default .FormGroup__hint {
+  font-size: 12px; }
+
+.FormGroup--default .FormGroup__control {
+  font-size: 16px; }
 
 .FormGroup--small .FormGroup__label,
 .FormGroup--small .FormGroup__error,
@@ -475,6 +501,13 @@ hr {
   font-size: 21px; }
 
 @media (min-width: 600px) {
+  .FormGroup--default-sm .FormGroup__label,
+  .FormGroup--default-sm .FormGroup__error {
+    font-size: 14px; }
+  .FormGroup--default-sm .FormGroup__hint {
+    font-size: 12px; }
+  .FormGroup--default-sm .FormGroup__control {
+    font-size: 16px; }
   .FormGroup--small-sm .FormGroup__label,
   .FormGroup--small-sm .FormGroup__error,
   .FormGroup--small-sm .FormGroup__hint {
@@ -490,6 +523,13 @@ hr {
     font-size: 21px; } }
 
 @media (min-width: 900px) {
+  .FormGroup--default-md .FormGroup__label,
+  .FormGroup--default-md .FormGroup__error {
+    font-size: 14px; }
+  .FormGroup--default-md .FormGroup__hint {
+    font-size: 12px; }
+  .FormGroup--default-md .FormGroup__control {
+    font-size: 16px; }
   .FormGroup--small-md .FormGroup__label,
   .FormGroup--small-md .FormGroup__error,
   .FormGroup--small-md .FormGroup__hint {
@@ -505,6 +545,13 @@ hr {
     font-size: 21px; } }
 
 @media (min-width: 1200px) {
+  .FormGroup--default-lg .FormGroup__label,
+  .FormGroup--default-lg .FormGroup__error {
+    font-size: 14px; }
+  .FormGroup--default-lg .FormGroup__hint {
+    font-size: 12px; }
+  .FormGroup--default-lg .FormGroup__control {
+    font-size: 16px; }
   .FormGroup--small-lg .FormGroup__label,
   .FormGroup--small-lg .FormGroup__error,
   .FormGroup--small-lg .FormGroup__hint {
@@ -520,6 +567,13 @@ hr {
     font-size: 21px; } }
 
 @media (min-width: 1500px) {
+  .FormGroup--default-xl .FormGroup__label,
+  .FormGroup--default-xl .FormGroup__error {
+    font-size: 14px; }
+  .FormGroup--default-xl .FormGroup__hint {
+    font-size: 12px; }
+  .FormGroup--default-xl .FormGroup__control {
+    font-size: 16px; }
   .FormGroup--small-xl .FormGroup__label,
   .FormGroup--small-xl .FormGroup__error,
   .FormGroup--small-xl .FormGroup__hint {
