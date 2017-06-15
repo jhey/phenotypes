@@ -29,6 +29,13 @@ module.exports = {
       disabled: true,
     },
   }, {
+    name: 'error',
+    label: 'Error',
+    context: {
+      className: 'TextInput--has-error',
+      placeholder: 'Something went horribly wrong.',
+    },
+  }, {
     name: 'password',
     label: 'Password',
     context: {

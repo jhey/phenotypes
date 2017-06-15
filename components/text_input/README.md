@@ -62,3 +62,4 @@ onPaste
 | `TextInput--small` | false | true | |
 | `TextInput--large` | false | true | |
 | `TextInput--is-disabled` | false | false | If the component has a truthy `disabled` prop, this modifier is applied automatically. |
+| `TextInput--has-error` | false | false | |
