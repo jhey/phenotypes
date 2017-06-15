@@ -15,31 +15,9 @@ describe('TextInput', function () {
     expect(input).to.have.length(1);
     const inputProps = input.props();
     expect(inputProps.type).to.equal('text');
-    expect(inputProps.role).to.equal('textbox');
   });
 
-  it('should render text input element', function () {
-    const wrapper = mount(<TextInput type="text" />);
-    const input = wrapper.find('input');
-
-    const inputProps = input.props();
-    expect(inputProps.type).to.equal('text');
-    expect(inputProps.role).to.equal('textbox');
-  });
-
-  it('should render email input element', function () {
-    const wrapper = mount(<TextInput type="email" />);
-    const input = wrapper.find('input');
-    expect(input.props().type).to.equal('email');
-  });
-
-  it('should render password input element', function () {
-    const wrapper = mount(<TextInput type="password" />);
-    const input = wrapper.find('input');
-    expect(input.props().type).to.equal('password');
-  });
-
-  it('should pass HTML attributes to input element', function () {
+  it('should pass HTML attributes to input element and apply disabled class', function () {
     const wrapper = mount(
       <TextInput
         aria-label="label"
@@ -64,7 +42,7 @@ describe('TextInput', function () {
     expect(inputProps['aria-label']).to.equal('label');
     expect(inputProps.autoComplete).to.equal('autoComplete');
     expect(inputProps.autoFocus).to.equal('autoFocus');
-    expect(inputProps.className).to.equal('className form-control');
+    expect(inputProps.className).to.equal('className TextInput TextInput--is-disabled');
     expect(inputProps.form).to.equal('form');
     expect(inputProps.disabled).to.equal('disabled');
     expect(inputProps.id).to.equal('id');
@@ -76,28 +54,6 @@ describe('TextInput', function () {
     expect(inputProps.size).to.equal('size');
     expect(inputProps.maxLength).to.equal('maxLength');
     expect(inputProps.value).to.equal('value');
-  });
-
-  it('should apply correct class for size', function () {
-    const defaultSize = shallow(<TextInput />);
-    const small = shallow(<TextInput phSize="small" />);
-    const large = shallow(<TextInput phSize="large" />);
-    const responsive = shallow(<TextInput phSizeMd="large" />);
-
-    expect(defaultSize.hasClass('form-control')).to.be.true;
-    expect(defaultSize.hasClass('form-control-small')).to.be.false;
-    expect(defaultSize.hasClass('form-control-large')).to.be.false;
-
-    expect(small.hasClass('form-control')).to.be.true;
-    expect(small.hasClass('form-control-small')).to.be.true;
-    expect(small.hasClass('form-control-large')).to.be.false;
-
-    expect(large.hasClass('form-control')).to.be.true;
-    expect(large.hasClass('form-control-small')).to.be.false;
-    expect(large.hasClass('form-control-large')).to.be.true;
-
-    expect(responsive.hasClass('form-control')).to.be.true;
-    expect(responsive.hasClass('form-control-large-md')).to.be.true;
   });
 
   it('should call onBlur', function () {

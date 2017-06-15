@@ -7,28 +7,6 @@ const { expect } = require('chai');
 const FormGroup = require('./form_group');
 
 describe('FormGroup', function () {
-  it('should apply correct class for size', function () {
-    const defaultSize = shallow(<FormGroup />);
-    const small = shallow(<FormGroup phSize="small" />);
-    const large = shallow(<FormGroup phSize="large" />);
-    const responsive = shallow(<FormGroup phSizeMd="large" />);
-
-    expect(defaultSize.hasClass('FormGroup')).to.be.true;
-    expect(defaultSize.hasClass('FormGroup--small')).to.be.false;
-    expect(defaultSize.hasClass('FormGroup--large')).to.be.false;
-
-    expect(small.hasClass('FormGroup')).to.be.true;
-    expect(small.hasClass('FormGroup--small')).to.be.true;
-    expect(small.hasClass('FormGroup--large')).to.be.false;
-
-    expect(large.hasClass('FormGroup')).to.be.true;
-    expect(large.hasClass('FormGroup--small')).to.be.false;
-    expect(large.hasClass('FormGroup--large')).to.be.true;
-
-    expect(responsive.hasClass('FormGroup')).to.be.true;
-    expect(responsive.hasClass('FormGroup--large-md')).to.be.true;
-  });
-
   it('should apply error class', function () {
     const withError = shallow(<FormGroup error="error" />);
     expect(withError.hasClass('FormGroup--has-error')).to.be.true;
