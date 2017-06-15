@@ -36,13 +36,11 @@
   @include text-input-disabled-state;
 }
 
-@if $enable-type-utilities {
-  @each $breakpoint in map-keys($grid-breakpoints) {
-    @include media-breakpoint-up($breakpoint) {
-      $suffix: breakpoint-suffix($breakpoint, $grid-breakpoints);
-      .TextInput--default#{$suffix} { @include text-input-sizer; }
-      .TextInput--small#{$suffix} { @include text-input-sizer($size: 'small'); }
-      .TextInput--large#{$suffix} { @include text-input-sizer($size: 'large'); }
-    }
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $suffix: breakpoint-suffix($breakpoint, $grid-breakpoints);
+    .TextInput--default#{$suffix} { @include text-input-sizer; }
+    .TextInput--small#{$suffix} { @include text-input-sizer($size: 'small'); }
+    .TextInput--large#{$suffix} { @include text-input-sizer($size: 'large'); }
   }
 }
