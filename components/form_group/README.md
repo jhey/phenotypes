@@ -1,5 +1,3 @@
-Form group component
-
 ### Props
 
 | name | type | default | description |
