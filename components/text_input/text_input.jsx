@@ -1,32 +1,30 @@
 const React = require('react');
 const classes = require('classnames');
 
-function TextControl(props) {
-  return <input type="text" role="textbox" {...props} />;
-}
 
-function PasswordControl(props) {
-  return <input type="password" {...props} />;
-}
+const INPUT_TYPES = {
+  color: 'color',
+  date: 'date',
+  datetime: 'datetime',
+  'datetime-local': 'datetime-local',
+  email: 'email',
+  month: 'month',
+  number: 'number',
+  password: 'password',
+  search: 'search',
+  tel: 'tel',
+  text: 'text',
+  time: 'time',
+  url: 'url',
+  week: 'week',
+};
 
-function EmailControl(props) {
-  return <input type="email" {...props} />;
-}
-
-function getControlByType(type) {
-  switch (type) {
-    case 'password':
-      return PasswordControl;
-
-    case 'email':
-      return EmailControl;
-
-    case 'text':
-      return TextControl;
-
-    default:
-      throw new Error(`Unknown input type: ${type}`);
+function validateType(type) {
+  if (INPUT_TYPES[type]) {
+    return type;
   }
+
+  throw new Error(`Unknown input type: ${type}`);
 }
 
 function ariaProps(props) {
@@ -39,10 +37,8 @@ function ariaProps(props) {
 }
 
 function TextInput(props) {
-  const Control = getControlByType(props.type);
-
   return (
-    <Control
+    <input
       autoComplete={props.autoComplete}
       autoFocus={props.autoFocus}
       className={classes(props.className, 'TextInput', {
@@ -63,6 +59,7 @@ function TextInput(props) {
       onPaste={props.onPaste}
       pattern={props.pattern}
       placeholder={props.placeholder}
+      type={validateType(props.type)}
       readOnly={props.readOnly}
       required={props.required}
       size={props.size}
