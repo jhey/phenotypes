@@ -24,23 +24,23 @@
 }
 
 .TextInput--small {
-  @include form-control-sizer($size: 'small');
+  @include text-input-sizer($size: 'small');
 }
 
 .TextInput--large {
-  @include form-control-sizer($size: 'large');
+  @include text-input-sizer($size: 'large');
 }
 
 .TextInput--is-disabled {
-  @include form-control-disabled-state;
+  @include text-input-disabled-state;
 }
 
 @if $enable-type-utilities {
   @each $breakpoint in map-keys($grid-breakpoints) {
     @include media-breakpoint-up($breakpoint) {
       $suffix: breakpoint-suffix($breakpoint, $grid-breakpoints);
-      .TextInput--small#{$suffix} { @include form-control-sizer($size: 'small'); }
-      .TextInput--large#{$suffix} { @include form-control-sizer($size: 'large'); }
+      .TextInput--small#{$suffix} { @include text-input-sizer($size: 'small'); }
+      .TextInput--large#{$suffix} { @include text-input-sizer($size: 'large'); }
     }
   }
 }

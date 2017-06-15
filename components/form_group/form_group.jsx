@@ -1,9 +1,6 @@
 const React = require('react');
 const classes = require('classnames');
 
-const responsiveClass = require('../_utilities/responsive_class.js');
-const size = require('../_utilities/size.js');
-
 const TextInput = require('../text_input/text_input.jsx');
 
 class FormGroup extends React.Component {
@@ -11,7 +8,13 @@ class FormGroup extends React.Component {
   renderChildren() {
     // Preview environment won't have a child prop, so we have to supply a default one here:
     if (this.props.__preview) {
-      return <TextInput id={this.props.controlId} placeholder="Placeholder text" />;
+      return (
+        <TextInput
+          id={this.props.controlId}
+          className="FormGroup__control"
+          placeholder="Placeholder text"
+        />
+      );
     }
     return this.props.children;
   }
@@ -45,9 +48,7 @@ class FormGroup extends React.Component {
         className={classes(
           this.props.className,
           'FormGroup',
-          responsiveClass('FormGroup--small', this.props, size.isSmall),
-          responsiveClass('FormGroup--large', this.props, size.isLarge),
-          { 'FormGroup--has-error': !!this.props.error },
+          { 'FormGroup--has-error': !!this.props.error }
         )}
       >
         { this.renderLabel() }

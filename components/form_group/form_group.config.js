@@ -18,16 +18,16 @@ module.exports = {
     name: 'small',
     label: 'Small',
     context: {
+      className: 'FormGroup--small',
       controlId: 'small',
-      phSize: 'small',
       label: 'Small form group',
     },
   }, {
     name: 'large',
     label: 'Large',
     context: {
+      className: 'FormGroup--large',
       controlId: 'large',
-      phSize: 'large',
       label: 'Large form group',
     },
   }, {
@@ -42,8 +42,8 @@ module.exports = {
     name: 'responsive',
     label: 'Responsive',
     context: {
+      className: 'FormGroup--small FormGroup--large-md',
       controlId: 'responsive',
-      phSizeMd: 'large',
       label: 'Responsive form group',
     },
   }],

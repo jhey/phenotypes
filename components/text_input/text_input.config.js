@@ -13,13 +13,13 @@ module.exports = {
     name: 'small',
     label: 'Small',
     context: {
-      phSize: 'small',
+      className: 'TextInput--small',
     },
   }, {
     name: 'large',
     label: 'Large',
     context: {
-      phSize: 'large',
+      className: 'TextInput--large',
     },
   }, {
     name: 'disabled',
@@ -41,7 +41,7 @@ module.exports = {
     label: 'Responsive',
     context: {
       placeholder: 'Resize me!',
-      phSizeMd: 'large',
+      className: 'TextInput--small TextInput--large-md',
     },
   }],
 };
