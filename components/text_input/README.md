@@ -2,26 +2,43 @@
 
 | name | type | default | description |
 | ---- | ---- | ------- | ----------- |
-| `phSize*` | one of: `'small'`, `'large'` | | Size variant for component, [see here](/docs/component-conventions/#phSize/) for more detail about `phSize*`.
-| `type` | one of: `'text'`, `'password'`, `'email'` | `'text'` | `type` attribute for input element.
+| `className` | string | | Class name for the `input` element. This should include any BEM modifier classes you wish to use.
 
-Supported HTML attributes:
+Other supported HTML attributes:
 ```javascript
 aria-*
 autoComplete
 autoFocus
-className
 form
 disabled
 id
 name
 pattern
 placeholder
+type
 readOnly
 required
 size
 maxLength
 value
+```
+
+The `type` prop must be one of the the allowed input types:
+```javascript
+color
+date
+datetime
+datetime-local
+email
+month
+number
+password
+search
+tel
+text
+time
+url
+week
 ```
 
 Supported event handlers:
@@ -36,3 +53,12 @@ onKeyDown
 onKeyUp
 onPaste
 ```
+
+### Modifiers
+
+| class | default | responsive | notes |
+| ----- | ------- | ---------- | ----- |
+| `TextInput--default` | true | true | |
+| `TextInput--small` | false | true | |
+| `TextInput--large` | false | true | |
+| `TextInput--is-disabled` | false | false | If the component has a truthy `disabled` prop, this modifier is applied automatically. |
