@@ -1,20 +1,22 @@
 // scss-lint:disable SelectorFormat
+
+// Restrict selection with `&.TextInput` so we can use these mixins to style `FormGroup__control` elements
+// that may or may not be text inputs
 @mixin text-input-sizer($size: 'default') {
-  @if $size == 'small' { font-size: $font-size-2; }
-  @if $size == 'default' { font-size: $font-size-3; }
-  @if $size == 'large' { font-size: $font-size-5; }
+  &.TextInput {
+    @if $size == 'small' { font-size: $font-size-2; }
+    @if $size == 'default' { font-size: $font-size-3; }
+    @if $size == 'large' { font-size: $font-size-5; }
+  }
 }
 
 @mixin text-input-error-state() {
-  border-color: $red;
-}
-
-@mixin text-input-disabled-state() {
-  background: $gray-200;
+  &.TextInput {
+    border-color: $red;
+  }
 }
 
 .TextInput {
-  @include text-input-sizer;
   border: 2px solid $gray-300;
   border-radius: $border-radius;
   width: 100%;
@@ -24,17 +26,23 @@
   }
 }
 
-.TextInput--small {
-  @include text-input-sizer($size: 'small');
-}
-
-.TextInput--large {
-  @include text-input-sizer($size: 'large');
-}
-
 .TextInput--is-disabled {
-  @include text-input-disabled-state;
+  background: $gray-200;
 }
+
+.TextInput--has-error {
+  @include text-input-error-state;
+}
+
+//
+// Sizers
+//
+
+@include text-input-sizer;
+
+.TextInput--small { @include text-input-sizer($size: 'small'); }
+
+.TextInput--large { @include text-input-sizer($size: 'large'); }
 
 @each $breakpoint in map-keys($grid-breakpoints) {
   @include media-breakpoint-up($breakpoint) {

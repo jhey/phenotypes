@@ -377,7 +377,6 @@ hr {
   border-color: rgba(255, 255, 255, 0.14); }
 
 .TextInput {
-  font-size: 16px;
   border: 2px solid #dbdbdb;
   border-radius: 3px;
   width: 100%; }
@@ -385,54 +384,60 @@ hr {
 .TextInput::placeholder {
   color: rgba(0, 0, 0, 0.41); }
 
-.TextInput--small {
-  font-size: 14px; }
-
-.TextInput--large {
-  font-size: 21px; }
-
 .TextInput--is-disabled {
   background: #eee; }
 
-.TextInput--default {
+.TextInput--has-error.TextInput {
+  border-color: #f04d5d; }
+
+.TextInput {
   font-size: 16px; }
 
-.TextInput--small {
+.TextInput--small.TextInput {
   font-size: 14px; }
 
-.TextInput--large {
+.TextInput--large.TextInput {
+  font-size: 21px; }
+
+.TextInput--default.TextInput {
+  font-size: 16px; }
+
+.TextInput--small.TextInput {
+  font-size: 14px; }
+
+.TextInput--large.TextInput {
   font-size: 21px; }
 
 @media (min-width: 600px) {
-  .TextInput--default-sm {
+  .TextInput--default-sm.TextInput {
     font-size: 16px; }
-  .TextInput--small-sm {
+  .TextInput--small-sm.TextInput {
     font-size: 14px; }
-  .TextInput--large-sm {
+  .TextInput--large-sm.TextInput {
     font-size: 21px; } }
 
 @media (min-width: 900px) {
-  .TextInput--default-md {
+  .TextInput--default-md.TextInput {
     font-size: 16px; }
-  .TextInput--small-md {
+  .TextInput--small-md.TextInput {
     font-size: 14px; }
-  .TextInput--large-md {
+  .TextInput--large-md.TextInput {
     font-size: 21px; } }
 
 @media (min-width: 1200px) {
-  .TextInput--default-lg {
+  .TextInput--default-lg.TextInput {
     font-size: 16px; }
-  .TextInput--small-lg {
+  .TextInput--small-lg.TextInput {
     font-size: 14px; }
-  .TextInput--large-lg {
+  .TextInput--large-lg.TextInput {
     font-size: 21px; } }
 
 @media (min-width: 1500px) {
-  .TextInput--default-xl {
+  .TextInput--default-xl.TextInput {
     font-size: 16px; }
-  .TextInput--small-xl {
+  .TextInput--small-xl.TextInput {
     font-size: 14px; }
-  .TextInput--large-xl {
+  .TextInput--large-xl.TextInput {
     font-size: 21px; } }
 
 .FormGroup__error {
@@ -441,7 +446,7 @@ hr {
 .FormGroup__label {
   font-weight: bold; }
 
-.FormGroup--has-error .FormGroup__control {
+.FormGroup--has-error .FormGroup__control.TextInput {
   border-color: #f04d5d; }
 
 .FormGroup__label,
@@ -451,7 +456,7 @@ hr {
 .FormGroup__hint {
   font-size: 12px; }
 
-.FormGroup__control {
+.FormGroup__control.TextInput {
   font-size: 16px; }
 
 .FormGroup--small .FormGroup__label,
@@ -459,7 +464,7 @@ hr {
 .FormGroup--small .FormGroup__hint {
   font-size: 12px; }
 
-.FormGroup--small .FormGroup__control {
+.FormGroup--small .FormGroup__control.TextInput {
   font-size: 14px; }
 
 .FormGroup--large .FormGroup__label,
@@ -469,7 +474,7 @@ hr {
 .FormGroup--large .FormGroup__hint {
   font-size: 14px; }
 
-.FormGroup--large .FormGroup__control {
+.FormGroup--large .FormGroup__control.TextInput {
   font-size: 21px; }
 
 .FormGroup--default .FormGroup__label,
@@ -479,7 +484,7 @@ hr {
 .FormGroup--default .FormGroup__hint {
   font-size: 12px; }
 
-.FormGroup--default .FormGroup__control {
+.FormGroup--default .FormGroup__control.TextInput {
   font-size: 16px; }
 
 .FormGroup--small .FormGroup__label,
@@ -487,7 +492,7 @@ hr {
 .FormGroup--small .FormGroup__hint {
   font-size: 12px; }
 
-.FormGroup--small .FormGroup__control {
+.FormGroup--small .FormGroup__control.TextInput {
   font-size: 14px; }
 
 .FormGroup--large .FormGroup__label,
@@ -497,7 +502,7 @@ hr {
 .FormGroup--large .FormGroup__hint {
   font-size: 14px; }
 
-.FormGroup--large .FormGroup__control {
+.FormGroup--large .FormGroup__control.TextInput {
   font-size: 21px; }
 
 @media (min-width: 600px) {
@@ -506,20 +511,20 @@ hr {
     font-size: 14px; }
   .FormGroup--default-sm .FormGroup__hint {
     font-size: 12px; }
-  .FormGroup--default-sm .FormGroup__control {
+  .FormGroup--default-sm .FormGroup__control.TextInput {
     font-size: 16px; }
   .FormGroup--small-sm .FormGroup__label,
   .FormGroup--small-sm .FormGroup__error,
   .FormGroup--small-sm .FormGroup__hint {
     font-size: 12px; }
-  .FormGroup--small-sm .FormGroup__control {
+  .FormGroup--small-sm .FormGroup__control.TextInput {
     font-size: 14px; }
   .FormGroup--large-sm .FormGroup__label,
   .FormGroup--large-sm .FormGroup__error {
     font-size: 18px; }
   .FormGroup--large-sm .FormGroup__hint {
     font-size: 14px; }
-  .FormGroup--large-sm .FormGroup__control {
+  .FormGroup--large-sm .FormGroup__control.TextInput {
     font-size: 21px; } }
 
 @media (min-width: 900px) {
@@ -528,20 +533,20 @@ hr {
     font-size: 14px; }
   .FormGroup--default-md .FormGroup__hint {
     font-size: 12px; }
-  .FormGroup--default-md .FormGroup__control {
+  .FormGroup--default-md .FormGroup__control.TextInput {
     font-size: 16px; }
   .FormGroup--small-md .FormGroup__label,
   .FormGroup--small-md .FormGroup__error,
   .FormGroup--small-md .FormGroup__hint {
     font-size: 12px; }
-  .FormGroup--small-md .FormGroup__control {
+  .FormGroup--small-md .FormGroup__control.TextInput {
     font-size: 14px; }
   .FormGroup--large-md .FormGroup__label,
   .FormGroup--large-md .FormGroup__error {
     font-size: 18px; }
   .FormGroup--large-md .FormGroup__hint {
     font-size: 14px; }
-  .FormGroup--large-md .FormGroup__control {
+  .FormGroup--large-md .FormGroup__control.TextInput {
     font-size: 21px; } }
 
 @media (min-width: 1200px) {
@@ -550,20 +555,20 @@ hr {
     font-size: 14px; }
   .FormGroup--default-lg .FormGroup__hint {
     font-size: 12px; }
-  .FormGroup--default-lg .FormGroup__control {
+  .FormGroup--default-lg .FormGroup__control.TextInput {
     font-size: 16px; }
   .FormGroup--small-lg .FormGroup__label,
   .FormGroup--small-lg .FormGroup__error,
   .FormGroup--small-lg .FormGroup__hint {
     font-size: 12px; }
-  .FormGroup--small-lg .FormGroup__control {
+  .FormGroup--small-lg .FormGroup__control.TextInput {
     font-size: 14px; }
   .FormGroup--large-lg .FormGroup__label,
   .FormGroup--large-lg .FormGroup__error {
     font-size: 18px; }
   .FormGroup--large-lg .FormGroup__hint {
     font-size: 14px; }
-  .FormGroup--large-lg .FormGroup__control {
+  .FormGroup--large-lg .FormGroup__control.TextInput {
     font-size: 21px; } }
 
 @media (min-width: 1500px) {
@@ -572,20 +577,20 @@ hr {
     font-size: 14px; }
   .FormGroup--default-xl .FormGroup__hint {
     font-size: 12px; }
-  .FormGroup--default-xl .FormGroup__control {
+  .FormGroup--default-xl .FormGroup__control.TextInput {
     font-size: 16px; }
   .FormGroup--small-xl .FormGroup__label,
   .FormGroup--small-xl .FormGroup__error,
   .FormGroup--small-xl .FormGroup__hint {
     font-size: 12px; }
-  .FormGroup--small-xl .FormGroup__control {
+  .FormGroup--small-xl .FormGroup__control.TextInput {
     font-size: 14px; }
   .FormGroup--large-xl .FormGroup__label,
   .FormGroup--large-xl .FormGroup__error {
     font-size: 18px; }
   .FormGroup--large-xl .FormGroup__hint {
     font-size: 14px; }
-  .FormGroup--large-xl .FormGroup__control {
+  .FormGroup--large-xl .FormGroup__control.TextInput {
     font-size: 21px; } }
 
 .d-none {
