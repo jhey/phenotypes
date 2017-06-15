@@ -1,6 +1,6 @@
 module.exports = {
-  name: 'form control',
-  label: 'Form Control',
+  name: 'text input',
+  label: 'Text Input',
   status: 'draft',
   collated: true,
   context: {
