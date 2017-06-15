@@ -167,18 +167,21 @@ a {
   text-decoration: none;
   background-color: transparent;
   -webkit-text-decoration-skip: objects; }
-  a:hover {
-    color: #008ab3;
-    text-decoration: underline; }
+
+a:hover {
+  color: #008ab3;
+  text-decoration: underline; }
 
 a:not([href]):not([tabindex]) {
   color: inherit;
   text-decoration: none; }
-  a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover {
-    color: inherit;
-    text-decoration: none; }
-  a:not([href]):not([tabindex]):focus {
-    outline: 0; }
+
+a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover {
+  color: inherit;
+  text-decoration: none; }
+
+a:not([href]):not([tabindex]):focus {
+  outline: 0; }
 
 pre,
 code,
@@ -373,51 +376,52 @@ hr {
 .hr-reversed {
   border-color: rgba(255, 255, 255, 0.14); }
 
-.FormControl {
+.TextInput {
   border: 2px solid #dbdbdb;
   border-radius: 3px;
   font-size: 16px;
   width: 100%; }
-  .FormControl::placeholder {
-    color: rgba(0, 0, 0, 0.41); }
 
-.FormControl--small {
+.TextInput::placeholder {
+  color: rgba(0, 0, 0, 0.41); }
+
+.TextInput--small {
   font-size: 14px; }
 
-.FormControl--large {
+.TextInput--large {
   font-size: 21px; }
 
-.FormControl--is-disabled {
+.TextInput--is-disabled {
   background: #eee; }
 
-.FormControl--small {
+.TextInput--small {
   font-size: 14px; }
 
-.FormControl--large {
+.TextInput--large {
   font-size: 21px; }
 
 @media (min-width: 600px) {
-  .FormControl--small-sm {
+  .TextInput--small-sm {
     font-size: 14px; }
-  .FormControl--large-sm {
+  .TextInput--large-sm {
     font-size: 21px; } }
 
 @media (min-width: 900px) {
-  .FormControl--small-md {
+  .TextInput--small-md {
     font-size: 14px; }
-  .FormControl--large-md {
+  .TextInput--large-md {
     font-size: 21px; } }
 
 @media (min-width: 1200px) {
-  .FormControl--small-lg {
+  .TextInput--small-lg {
     font-size: 14px; }
-  .FormControl--large-lg {
+  .TextInput--large-lg {
     font-size: 21px; } }
 
 @media (min-width: 1500px) {
-  .FormControl--small-xl {
+  .TextInput--small-xl {
     font-size: 14px; }
-  .FormControl--large-xl {
+  .TextInput--large-xl {
     font-size: 21px; } }
 
 .FormGroup__error {

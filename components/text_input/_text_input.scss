@@ -1,18 +1,18 @@
 // scss-lint:disable SelectorFormat
-@mixin form-control-sizer($size) {
+@mixin text-input-sizer($size) {
   @if $size == 'small' { font-size: $font-size-2; }
   @if $size == 'large' { font-size: $font-size-5; }
 }
 
-@mixin form-control-error-state() {
+@mixin text-input-error-state() {
   border-color: $red;
 }
 
-@mixin form-control-disabled-state() {
+@mixin text-input-disabled-state() {
   background: $gray-200;
 }
 
-.FormControl {
+.TextInput {
   border: 2px solid $gray-300;
   border-radius: $border-radius;
   font-size: $font-size-3;
@@ -23,15 +23,15 @@
   }
 }
 
-.FormControl--small {
+.TextInput--small {
   @include form-control-sizer($size: 'small');
 }
 
-.FormControl--large {
+.TextInput--large {
   @include form-control-sizer($size: 'large');
 }
 
-.FormControl--is-disabled {
+.TextInput--is-disabled {
   @include form-control-disabled-state;
 }
 
@@ -39,8 +39,8 @@
   @each $breakpoint in map-keys($grid-breakpoints) {
     @include media-breakpoint-up($breakpoint) {
       $suffix: breakpoint-suffix($breakpoint, $grid-breakpoints);
-      .FormControl--small#{$suffix} { @include form-control-sizer($size: 'small'); }
-      .FormControl--large#{$suffix} { @include form-control-sizer($size: 'large'); }
+      .TextInput--small#{$suffix} { @include form-control-sizer($size: 'small'); }
+      .TextInput--large#{$suffix} { @include form-control-sizer($size: 'large'); }
     }
   }
 }

@@ -1,5 +1,3 @@
-Form control component for text-based inputs
-
 ### Props
 
 | name | type | default | description |

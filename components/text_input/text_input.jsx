@@ -41,7 +41,7 @@ function ariaProps(props) {
   }, {});
 }
 
-function FormControl(props) {
+function TextInput(props) {
   const Control = getControlByType(props.type);
 
   return (
@@ -50,11 +50,11 @@ function FormControl(props) {
       autoFocus={props.autoFocus}
       className={classes(
         props.className,
-        'FormControl',
+        'TextInput',
         'FormGroup__control',
-        responsiveClass('FormControl--small', props, size.isSmall),
-        responsiveClass('FormControl--large', props, size.isLarge),
-        { 'FormControl--is-disabled': props.disabled }
+        responsiveClass('TextInput--small', props, size.isSmall),
+        responsiveClass('TextInput--large', props, size.isLarge),
+        { 'TextInput--is-disabled': props.disabled }
       )}
       form={props.form}
       disabled={props.disabled}
@@ -81,8 +81,8 @@ function FormControl(props) {
   );
 }
 
-FormControl.defaultProps = {
+TextInput.defaultProps = {
   type: 'text',
 };
 
-module.exports = FormControl;
+module.exports = TextInput;

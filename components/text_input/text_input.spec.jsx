@@ -5,11 +5,11 @@ const { shallow, mount } = require('enzyme');
 const { expect } = require('chai');
 const sinon = require('sinon');
 
-const FormControl = require('./form_control');
+const TextInput = require('./text_input');
 
-describe('FormControl', function () {
+describe('TextInput', function () {
   it('should render text input element as default input type', function () {
-    const wrapper = mount(<FormControl />);
+    const wrapper = mount(<TextInput />);
     const input = wrapper.find('input');
 
     expect(input).to.have.length(1);
@@ -19,7 +19,7 @@ describe('FormControl', function () {
   });
 
   it('should render text input element', function () {
-    const wrapper = mount(<FormControl type="text" />);
+    const wrapper = mount(<TextInput type="text" />);
     const input = wrapper.find('input');
 
     const inputProps = input.props();
@@ -28,20 +28,20 @@ describe('FormControl', function () {
   });
 
   it('should render email input element', function () {
-    const wrapper = mount(<FormControl type="email" />);
+    const wrapper = mount(<TextInput type="email" />);
     const input = wrapper.find('input');
     expect(input.props().type).to.equal('email');
   });
 
   it('should render password input element', function () {
-    const wrapper = mount(<FormControl type="password" />);
+    const wrapper = mount(<TextInput type="password" />);
     const input = wrapper.find('input');
     expect(input.props().type).to.equal('password');
   });
 
   it('should pass HTML attributes to input element', function () {
     const wrapper = mount(
-      <FormControl
+      <TextInput
         aria-label="label"
         autoComplete="autoComplete"
         autoFocus="autoFocus"
@@ -79,10 +79,10 @@ describe('FormControl', function () {
   });
 
   it('should apply correct class for size', function () {
-    const defaultSize = shallow(<FormControl />);
-    const small = shallow(<FormControl phSize="small" />);
-    const large = shallow(<FormControl phSize="large" />);
-    const responsive = shallow(<FormControl phSizeMd="large" />);
+    const defaultSize = shallow(<TextInput />);
+    const small = shallow(<TextInput phSize="small" />);
+    const large = shallow(<TextInput phSize="large" />);
+    const responsive = shallow(<TextInput phSizeMd="large" />);
 
     expect(defaultSize.hasClass('form-control')).to.be.true;
     expect(defaultSize.hasClass('form-control-small')).to.be.false;
@@ -102,7 +102,7 @@ describe('FormControl', function () {
 
   it('should call onBlur', function () {
     const callMe = sinon.spy();
-    const wrapper = mount(<FormControl onBlur={callMe} />);
+    const wrapper = mount(<TextInput onBlur={callMe} />);
 
     wrapper.find('input').simulate('blur');
     expect(callMe.calledOnce).to.be.true;
@@ -110,7 +110,7 @@ describe('FormControl', function () {
 
   it('should call onChange', function () {
     const callMe = sinon.spy();
-    const wrapper = mount(<FormControl onChange={callMe} />);
+    const wrapper = mount(<TextInput onChange={callMe} />);
 
     wrapper.find('input').simulate('change');
     expect(callMe.calledOnce).to.be.true;
@@ -118,7 +118,7 @@ describe('FormControl', function () {
 
   it('should call onCopy', function () {
     const callMe = sinon.spy();
-    const wrapper = mount(<FormControl onCopy={callMe} />);
+    const wrapper = mount(<TextInput onCopy={callMe} />);
 
     wrapper.find('input').simulate('copy');
     expect(callMe.calledOnce).to.be.true;
@@ -126,7 +126,7 @@ describe('FormControl', function () {
 
   it('should call onCut', function () {
     const callMe = sinon.spy();
-    const wrapper = mount(<FormControl onCut={callMe} />);
+    const wrapper = mount(<TextInput onCut={callMe} />);
 
     wrapper.find('input').simulate('cut');
     expect(callMe.calledOnce).to.be.true;
@@ -134,7 +134,7 @@ describe('FormControl', function () {
 
   it('should call onFocus', function () {
     const callMe = sinon.spy();
-    const wrapper = mount(<FormControl onFocus={callMe} />);
+    const wrapper = mount(<TextInput onFocus={callMe} />);
 
     wrapper.find('input').simulate('focus');
     expect(callMe.calledOnce).to.be.true;
@@ -142,7 +142,7 @@ describe('FormControl', function () {
 
   it('should call onInput', function () {
     const callMe = sinon.spy();
-    const wrapper = mount(<FormControl onInput={callMe} />);
+    const wrapper = mount(<TextInput onInput={callMe} />);
 
     wrapper.find('input').simulate('input');
     expect(callMe.calledOnce).to.be.true;
@@ -150,7 +150,7 @@ describe('FormControl', function () {
 
   it('should call onKeyDown', function () {
     const callMe = sinon.spy();
-    const wrapper = mount(<FormControl onKeyDown={callMe} />);
+    const wrapper = mount(<TextInput onKeyDown={callMe} />);
 
     wrapper.find('input').simulate('keydown');
     expect(callMe.calledOnce).to.be.true;
@@ -158,7 +158,7 @@ describe('FormControl', function () {
 
   it('should call onKeyUp', function () {
     const callMe = sinon.spy();
-    const wrapper = mount(<FormControl onKeyUp={callMe} />);
+    const wrapper = mount(<TextInput onKeyUp={callMe} />);
 
     wrapper.find('input').simulate('keyup');
     expect(callMe.calledOnce).to.be.true;
@@ -166,7 +166,7 @@ describe('FormControl', function () {
 
   it('should call onPaste', function () {
     const callMe = sinon.spy();
-    const wrapper = mount(<FormControl onPaste={callMe} />);
+    const wrapper = mount(<TextInput onPaste={callMe} />);
 
     wrapper.find('input').simulate('paste');
     expect(callMe.calledOnce).to.be.true;

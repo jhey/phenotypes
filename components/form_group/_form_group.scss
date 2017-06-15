@@ -20,7 +20,7 @@
   }
 
   .FormGroup__control {
-    @include form-control-sizer($size: $size);
+    @include text-input-sizer($size: $size);
   }
 }
 
@@ -40,7 +40,7 @@
 
 .FormGroup--has-error {
   .FormGroup__control {
-    @include form-control-error-state;
+    @include text-input-error-state;
   }
 }
 
