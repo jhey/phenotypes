@@ -41,7 +41,7 @@ module.exports = {
     label: 'Responsive',
     context: {
       placeholder: 'Resize me!',
-      className: 'TextInput--small TextInput--large-md',
+      className: 'TextInput--small TextInput--default-md TextInput--large-lg',
     },
   }],
 };

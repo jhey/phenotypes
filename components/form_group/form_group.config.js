@@ -42,7 +42,7 @@ module.exports = {
     name: 'responsive',
     label: 'Responsive',
     context: {
-      className: 'FormGroup--small FormGroup--large-md',
+      className: 'FormGroup--small FormGroup--default-md FormGroup--large-lg',
       controlId: 'responsive',
       label: 'Responsive form group',
     },
