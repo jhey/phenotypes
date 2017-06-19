@@ -28,9 +28,9 @@ Passing the form group both a `label` and a `controlId` will render a `<label>` 
 Javascript:
 ```html
 <FormGroup
-  controlId='dob'
-  label='Birthday'
-  hint='When were you born?'
+  controlId="dob"
+  label="Birthday"
+  hint="When were you born?"
 >
   <input className="FormGroup__control" type="text" id="dob"/>
 </FormGroup>
@@ -48,7 +48,7 @@ If the child input has its own label, the `controlId` prop should be omitted.
 
 Javascript:
 ```html
-<FormGroup label='Subscribe'>
+<FormGroup label="Subscribe">
   <label for="subscribe-true">Send me updates</label>
   <input className="FormGroup__control" type="checkbox" value="yes" id="subscribe-true"/>
 </FormGroup>
@@ -68,7 +68,7 @@ If the form group has multiple inputs, the `controlId` prop can be omitted. In t
 
 Javascript:
 ```html
-<FormGroup label='When are you available?'>
+<FormGroup label="When are you available?">
   <input className="FormGroup__control" type="text" aria-label="Start time"/>
   <input className="FormGroup__control" type="text" aria-label="End time"/>
 </FormGroup>
