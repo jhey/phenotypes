@@ -57,11 +57,13 @@
 
 .FormGroup--large { @include form-group-sizer($size: 'large'); }
 
-@each $breakpoint in map-keys($grid-breakpoints) {
-  @include media-breakpoint-up($breakpoint) {
-    $suffix: breakpoint-suffix($breakpoint, $grid-breakpoints);
-    .FormGroup--small#{$suffix} { @include form-group-sizer($size: 'small'); }
-    .FormGroup--medium#{$suffix} { @include form-group-sizer; }
-    .FormGroup--large#{$suffix} { @include form-group-sizer($size: 'large'); }
+@if $enable-form-utilities {
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+      $suffix: breakpoint-suffix($breakpoint, $grid-breakpoints);
+      .FormGroup--small#{$suffix} { @include form-group-sizer($size: 'small'); }
+      .FormGroup--medium#{$suffix} { @include form-group-sizer; }
+      .FormGroup--large#{$suffix} { @include form-group-sizer($size: 'large'); }
+    }
   }
 }
