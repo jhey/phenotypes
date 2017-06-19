@@ -2,26 +2,8 @@
 
 | name | type | default | description |
 | ---- | ---- | ------- | ----------- |
-| `className` | string | | Class name for the `input` element. This should include any BEM modifier classes you wish to use.
-
-Other supported HTML attributes:
-```javascript
-aria-*
-autoComplete
-autoFocus
-form
-disabled
-id
-name
-pattern
-placeholder
-type
-readOnly
-required
-size
-maxLength
-value
-```
+| `className` | string | | Class name for the `input` element. This should include any BEM modifier classes you wish to use. |
+| `type` | valid HTML `type` for text-based `input` element | 'text' | |
 
 The `type` prop must be one of the the allowed input types:
 ```javascript
@@ -41,18 +23,7 @@ url
 week
 ```
 
-Supported event handlers:
-```javascript
-onBlur
-onChange
-onCopy
-onCut
-onFocus
-onInput
-onKeyDown
-onKeyUp
-onPaste
-```
+Valid HTML attributes and event handlers for the input element may be safely passed as additional props. Passing a prop that is not a legal DOM attribute will cause React to trigger an [unknown prop warning](https://facebook.github.io/react/warnings/unknown-prop.html).
 
 ### Modifiers
 
