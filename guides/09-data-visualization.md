@@ -80,9 +80,9 @@ This process may seem disjointed, but it allows us to create charts in a consist
 
 **Dimensions:** Default chart dimensions are 1080 by 1080 pixels. These dimensions were chosen as a sort of compromise between the [wildly inconsistent image sizes used across social media platforms](https://makeawebsitehub.com/social-media-image-sizes-cheat-sheet/). Depending on the content being presented, height can be altered to suit, but width must be fixed.
 
-**Header:** With few exceptions, title and subtitle must not exceed 3 lines. Either the title is one line and the subtitle is two lines, or vice versa. Title is black and 40pt, subtitle is 54% transparent black and 37pt.
+**Header:** With few exceptions, title and subtitle must not exceed 3 lines. Either the title is one line and the subtitle is two lines, or vice versa. This is to keep things neat and concise. Title is black and 40pt, subtitle is 54% transparent black and 37pt.
 
-**Legends and callouts:** Text is black 25pt.
+**Legends and callouts:** Text is black 25pt, which is the minimum readable size.
 
 **Chart area:** The chart background color is `#EEEEEE` to provide contrast against white backgrounds used on our blog, social media, and most other sites.
 
