@@ -2,10 +2,10 @@
 
 // Restrict selection with `&.TextInput` so we can use these mixins to style `FormGroup__control` elements
 // that may or may not be text inputs
-@mixin text-input-sizer($size: 'default') {
+@mixin text-input-sizer($size: 'medium') {
   &.TextInput {
     @if $size == 'small' { font-size: $font-size-2; }
-    @if $size == 'default' { font-size: $font-size-3; }
+    @if $size == 'medium' { font-size: $font-size-3; }
     @if $size == 'large' { font-size: $font-size-5; }
   }
 }
@@ -47,7 +47,7 @@
 @each $breakpoint in map-keys($grid-breakpoints) {
   @include media-breakpoint-up($breakpoint) {
     $suffix: breakpoint-suffix($breakpoint, $grid-breakpoints);
-    .TextInput--default#{$suffix} { @include text-input-sizer; }
+    .TextInput--medium#{$suffix} { @include text-input-sizer; }
     .TextInput--small#{$suffix} { @include text-input-sizer($size: 'small'); }
     .TextInput--large#{$suffix} { @include text-input-sizer($size: 'large'); }
   }

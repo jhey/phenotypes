@@ -1,5 +1,5 @@
 // scss-lint:disable SelectorFormat
-@mixin form-group-sizer($size: 'default') {
+@mixin form-group-sizer($size: 'medium') {
   @if $size == 'small' {
     .FormGroup__label,
     .FormGroup__error,
@@ -8,7 +8,7 @@
     }
   }
 
-  @if $size == 'default' {
+  @if $size == 'medium' {
     .FormGroup__label,
     .FormGroup__error {
       font-size: $font-size-2;
@@ -60,8 +60,8 @@
 @each $breakpoint in map-keys($grid-breakpoints) {
   @include media-breakpoint-up($breakpoint) {
     $suffix: breakpoint-suffix($breakpoint, $grid-breakpoints);
-    .FormGroup--default#{$suffix} { @include form-group-sizer; }
     .FormGroup--small#{$suffix} { @include form-group-sizer($size: 'small'); }
+    .FormGroup--medium#{$suffix} { @include form-group-sizer; }
     .FormGroup--large#{$suffix} { @include form-group-sizer($size: 'large'); }
   }
 }

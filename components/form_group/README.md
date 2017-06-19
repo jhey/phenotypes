@@ -12,8 +12,8 @@
 
 | class | default | responsive | notes |
 | ----- | ------- | ---------- | ----- |
-| `FormGroup--default` | true | true | |
 | `FormGroup--small` | false | true | |
+| `FormGroup--medium` | true | true | |
 | `FormGroup--large` | false | true | |
 | `FormGroup--has-error` | false | false | If the component has a truthy `error` prop, this modifier is applied automatically. |
 

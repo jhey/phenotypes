@@ -8,7 +8,7 @@ module.exports = {
   },
   variants: [{
     name: 'default',
-    label: 'Default',
+    label: 'Medium',
   }, {
     name: 'small',
     label: 'Small',
@@ -48,7 +48,7 @@ module.exports = {
     label: 'Responsive',
     context: {
       placeholder: 'Resize me!',
-      className: 'TextInput--small TextInput--default-md TextInput--large-lg',
+      className: 'TextInput--small TextInput--medium-md TextInput--large-lg',
     },
   }],
 };

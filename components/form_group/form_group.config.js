@@ -10,7 +10,7 @@ module.exports = {
   },
   variants: [{
     name: 'default',
-    label: 'Default',
+    label: 'Medium',
     context: {
       controlId: 'default',
     },
@@ -42,7 +42,7 @@ module.exports = {
     name: 'responsive',
     label: 'Responsive',
     context: {
-      className: 'FormGroup--small FormGroup--default-md FormGroup--large-lg',
+      className: 'FormGroup--small FormGroup--medium-md FormGroup--large-lg',
       controlId: 'responsive',
       label: 'Responsive form group',
     },

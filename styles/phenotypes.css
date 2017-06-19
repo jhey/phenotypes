@@ -395,7 +395,7 @@ hr {
 .TextInput--large.TextInput {
   font-size: 21px; }
 
-.TextInput--default.TextInput {
+.TextInput--medium.TextInput {
   font-size: 16px; }
 
 .TextInput--small.TextInput {
@@ -405,7 +405,7 @@ hr {
   font-size: 21px; }
 
 @media (min-width: 600px) {
-  .TextInput--default-sm.TextInput {
+  .TextInput--medium-sm.TextInput {
     font-size: 16px; }
   .TextInput--small-sm.TextInput {
     font-size: 14px; }
@@ -413,7 +413,7 @@ hr {
     font-size: 21px; } }
 
 @media (min-width: 900px) {
-  .TextInput--default-md.TextInput {
+  .TextInput--medium-md.TextInput {
     font-size: 16px; }
   .TextInput--small-md.TextInput {
     font-size: 14px; }
@@ -421,7 +421,7 @@ hr {
     font-size: 21px; } }
 
 @media (min-width: 1200px) {
-  .TextInput--default-lg.TextInput {
+  .TextInput--medium-lg.TextInput {
     font-size: 16px; }
   .TextInput--small-lg.TextInput {
     font-size: 14px; }
@@ -429,7 +429,7 @@ hr {
     font-size: 21px; } }
 
 @media (min-width: 1500px) {
-  .TextInput--default-xl.TextInput {
+  .TextInput--medium-xl.TextInput {
     font-size: 16px; }
   .TextInput--small-xl.TextInput {
     font-size: 14px; }
@@ -473,16 +473,6 @@ hr {
 .FormGroup--large .FormGroup__control.TextInput {
   font-size: 21px; }
 
-.FormGroup--default .FormGroup__label,
-.FormGroup--default .FormGroup__error {
-  font-size: 14px; }
-
-.FormGroup--default .FormGroup__hint {
-  font-size: 12px; }
-
-.FormGroup--default .FormGroup__control.TextInput {
-  font-size: 16px; }
-
 .FormGroup--small .FormGroup__label,
 .FormGroup--small .FormGroup__error,
 .FormGroup--small .FormGroup__hint {
@@ -490,6 +480,16 @@ hr {
 
 .FormGroup--small .FormGroup__control.TextInput {
   font-size: 14px; }
+
+.FormGroup--medium .FormGroup__label,
+.FormGroup--medium .FormGroup__error {
+  font-size: 14px; }
+
+.FormGroup--medium .FormGroup__hint {
+  font-size: 12px; }
+
+.FormGroup--medium .FormGroup__control.TextInput {
+  font-size: 16px; }
 
 .FormGroup--large .FormGroup__label,
 .FormGroup--large .FormGroup__error {
@@ -502,19 +502,19 @@ hr {
   font-size: 21px; }
 
 @media (min-width: 600px) {
-  .FormGroup--default-sm .FormGroup__label,
-  .FormGroup--default-sm .FormGroup__error {
-    font-size: 14px; }
-  .FormGroup--default-sm .FormGroup__hint {
-    font-size: 12px; }
-  .FormGroup--default-sm .FormGroup__control.TextInput {
-    font-size: 16px; }
   .FormGroup--small-sm .FormGroup__label,
   .FormGroup--small-sm .FormGroup__error,
   .FormGroup--small-sm .FormGroup__hint {
     font-size: 12px; }
   .FormGroup--small-sm .FormGroup__control.TextInput {
     font-size: 14px; }
+  .FormGroup--medium-sm .FormGroup__label,
+  .FormGroup--medium-sm .FormGroup__error {
+    font-size: 14px; }
+  .FormGroup--medium-sm .FormGroup__hint {
+    font-size: 12px; }
+  .FormGroup--medium-sm .FormGroup__control.TextInput {
+    font-size: 16px; }
   .FormGroup--large-sm .FormGroup__label,
   .FormGroup--large-sm .FormGroup__error {
     font-size: 18px; }
@@ -524,19 +524,19 @@ hr {
     font-size: 21px; } }
 
 @media (min-width: 900px) {
-  .FormGroup--default-md .FormGroup__label,
-  .FormGroup--default-md .FormGroup__error {
-    font-size: 14px; }
-  .FormGroup--default-md .FormGroup__hint {
-    font-size: 12px; }
-  .FormGroup--default-md .FormGroup__control.TextInput {
-    font-size: 16px; }
   .FormGroup--small-md .FormGroup__label,
   .FormGroup--small-md .FormGroup__error,
   .FormGroup--small-md .FormGroup__hint {
     font-size: 12px; }
   .FormGroup--small-md .FormGroup__control.TextInput {
     font-size: 14px; }
+  .FormGroup--medium-md .FormGroup__label,
+  .FormGroup--medium-md .FormGroup__error {
+    font-size: 14px; }
+  .FormGroup--medium-md .FormGroup__hint {
+    font-size: 12px; }
+  .FormGroup--medium-md .FormGroup__control.TextInput {
+    font-size: 16px; }
   .FormGroup--large-md .FormGroup__label,
   .FormGroup--large-md .FormGroup__error {
     font-size: 18px; }
@@ -546,19 +546,19 @@ hr {
     font-size: 21px; } }
 
 @media (min-width: 1200px) {
-  .FormGroup--default-lg .FormGroup__label,
-  .FormGroup--default-lg .FormGroup__error {
-    font-size: 14px; }
-  .FormGroup--default-lg .FormGroup__hint {
-    font-size: 12px; }
-  .FormGroup--default-lg .FormGroup__control.TextInput {
-    font-size: 16px; }
   .FormGroup--small-lg .FormGroup__label,
   .FormGroup--small-lg .FormGroup__error,
   .FormGroup--small-lg .FormGroup__hint {
     font-size: 12px; }
   .FormGroup--small-lg .FormGroup__control.TextInput {
     font-size: 14px; }
+  .FormGroup--medium-lg .FormGroup__label,
+  .FormGroup--medium-lg .FormGroup__error {
+    font-size: 14px; }
+  .FormGroup--medium-lg .FormGroup__hint {
+    font-size: 12px; }
+  .FormGroup--medium-lg .FormGroup__control.TextInput {
+    font-size: 16px; }
   .FormGroup--large-lg .FormGroup__label,
   .FormGroup--large-lg .FormGroup__error {
     font-size: 18px; }
@@ -568,19 +568,19 @@ hr {
     font-size: 21px; } }
 
 @media (min-width: 1500px) {
-  .FormGroup--default-xl .FormGroup__label,
-  .FormGroup--default-xl .FormGroup__error {
-    font-size: 14px; }
-  .FormGroup--default-xl .FormGroup__hint {
-    font-size: 12px; }
-  .FormGroup--default-xl .FormGroup__control.TextInput {
-    font-size: 16px; }
   .FormGroup--small-xl .FormGroup__label,
   .FormGroup--small-xl .FormGroup__error,
   .FormGroup--small-xl .FormGroup__hint {
     font-size: 12px; }
   .FormGroup--small-xl .FormGroup__control.TextInput {
     font-size: 14px; }
+  .FormGroup--medium-xl .FormGroup__label,
+  .FormGroup--medium-xl .FormGroup__error {
+    font-size: 14px; }
+  .FormGroup--medium-xl .FormGroup__hint {
+    font-size: 12px; }
+  .FormGroup--medium-xl .FormGroup__control.TextInput {
+    font-size: 16px; }
   .FormGroup--large-xl .FormGroup__label,
   .FormGroup--large-xl .FormGroup__error {
     font-size: 18px; }
