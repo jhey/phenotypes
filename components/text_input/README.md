@@ -23,7 +23,9 @@ url
 week
 ```
 
-Valid HTML attributes and event handlers for the input element may be safely passed as additional props. Passing a prop that is not a legal DOM attribute will cause React to trigger an [unknown prop warning](https://facebook.github.io/react/warnings/unknown-prop.html).
+Valid HTML attributes* and event handlers for the input element may be safely passed as additional props. Passing a prop that is not a legal DOM attribute will cause React to trigger an [unknown prop warning](https://facebook.github.io/react/warnings/unknown-prop.html).
+
+**Note that there are [several attributes that work differently between React and HTML](https://facebook.github.io/react/docs/dom-elements.html). In these cases, attributes should be passed the React-y way.*
 
 ### Modifiers
 
