@@ -51,10 +51,12 @@
       .FormGroup--medium#{$suffix} .TextInput {
         @include text-input-sizer;
       }
+
       .TextInput--small#{$suffix},
       .FormGroup--small#{$suffix} .TextInput {
         @include text-input-sizer($size: 'small');
       }
+
       .TextInput--large#{$suffix},
       .FormGroup--large#{$suffix} .TextInput {
         @include text-input-sizer($size: 'large');
