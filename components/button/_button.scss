@@ -24,6 +24,10 @@
   background: transparent;
 }
 
+.Button--is-disabled {
+  pointer-events: none;
+}
+
 @include button-sizer;
 
 .Button--small {
