@@ -6,6 +6,7 @@
 }
 
 .Button {
+  @include button-sizer;
   background: $gray-200;
   font-weight: $font-weight-bold;
 }
@@ -25,8 +26,6 @@
 .Button--is-disabled {
   pointer-events: none;
 }
-
-@include button-sizer;
 
 .Button--small {
   @include button-sizer($size: 'small');

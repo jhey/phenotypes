@@ -167,21 +167,18 @@ a {
   text-decoration: none;
   background-color: transparent;
   -webkit-text-decoration-skip: objects; }
-
-a:hover {
-  color: #008ab3;
-  text-decoration: underline; }
+  a:hover {
+    color: #008ab3;
+    text-decoration: underline; }
 
 a:not([href]):not([tabindex]) {
   color: inherit;
   text-decoration: none; }
-
-a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover {
-  color: inherit;
-  text-decoration: none; }
-
-a:not([href]):not([tabindex]):focus {
-  outline: 0; }
+  a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover {
+    color: inherit;
+    text-decoration: none; }
+  a:not([href]):not([tabindex]):focus {
+    outline: 0; }
 
 pre,
 code,
@@ -377,6 +374,7 @@ hr {
   border-color: rgba(255, 255, 255, 0.14); }
 
 .Button {
+  font-size: 16px;
   background: #eee;
   font-weight: bold; }
 
@@ -392,54 +390,51 @@ hr {
 .Button--is-disabled {
   pointer-events: none; }
 
-.Button {
-  font-size: 16px; }
-
-.Button--small.Button {
+.Button--small {
   font-size: 14px; }
 
-.Button--large.Button {
+.Button--large {
   font-size: 18px; }
 
-.Button--medium.Button {
+.Button--medium {
   font-size: 16px; }
 
-.Button--small.Button {
+.Button--small {
   font-size: 14px; }
 
-.Button--large.Button {
+.Button--large {
   font-size: 18px; }
 
 @media (min-width: 600px) {
-  .Button--medium-sm.Button {
+  .Button--medium-sm {
     font-size: 16px; }
-  .Button--small-sm.Button {
+  .Button--small-sm {
     font-size: 14px; }
-  .Button--large-sm.Button {
+  .Button--large-sm {
     font-size: 18px; } }
 
 @media (min-width: 900px) {
-  .Button--medium-md.Button {
+  .Button--medium-md {
     font-size: 16px; }
-  .Button--small-md.Button {
+  .Button--small-md {
     font-size: 14px; }
-  .Button--large-md.Button {
+  .Button--large-md {
     font-size: 18px; } }
 
 @media (min-width: 1200px) {
-  .Button--medium-lg.Button {
+  .Button--medium-lg {
     font-size: 16px; }
-  .Button--small-lg.Button {
+  .Button--small-lg {
     font-size: 14px; }
-  .Button--large-lg.Button {
+  .Button--large-lg {
     font-size: 18px; } }
 
 @media (min-width: 1500px) {
-  .Button--medium-xl.Button {
+  .Button--medium-xl {
     font-size: 16px; }
-  .Button--small-xl.Button {
+  .Button--small-xl {
     font-size: 14px; }
-  .Button--large-xl.Button {
+  .Button--large-xl {
     font-size: 18px; } }
 
 .TextInput {
@@ -447,9 +442,8 @@ hr {
   border: 2px solid #dbdbdb;
   border-radius: 3px;
   width: 100%; }
-
-.TextInput::placeholder {
-  color: rgba(0, 0, 0, 0.41); }
+  .TextInput::placeholder {
+    color: rgba(0, 0, 0, 0.41); }
 
 .TextInput--is-disabled {
   background: #eee; }
