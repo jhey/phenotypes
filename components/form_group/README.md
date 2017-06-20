@@ -19,8 +19,6 @@
 
 ### Usage
 
-Child input components should always use the `FormGroup__control` class so they can be styled with the other group elements.
-
 #### With a single control input
 
 Passing the form group both a `label` and a `controlId` will render a `<label>` element with the `controlId` as its `for` attribute. This pattern should be used for form groups with a visible label and a single text-based input.
@@ -32,14 +30,14 @@ Javascript:
   label="Birthday"
   hint="When were you born?"
 >
-  <input className="FormGroup__control" type="text" id="dob"/>
+  <input type="text" id="dob"/>
 </FormGroup>
 ```
 Rendered markup:
 ```html
 <div class="FormGroup">
     <label for="dob" class="FormGroup__label">Birthday</label>
-    <input class="FormGroup__control" type="text" id="dob"/>
+    <input type="text" id="dob"/>
     <div class="FormGroup__hint">When were you born?</div>
 </div>
 ```
@@ -50,7 +48,7 @@ Javascript:
 ```html
 <FormGroup label="Subscribe">
   <label for="subscribe-true">Send me updates</label>
-  <input className="FormGroup__control" type="checkbox" value="yes" id="subscribe-true"/>
+  <input type="checkbox" value="yes" id="subscribe-true"/>
 </FormGroup>
 ```
 Rendered markup:
@@ -58,7 +56,7 @@ Rendered markup:
 <div class="FormGroup">
     <label class="FormGroup__label">Subscribe</label>
     <label for="subscribe-true">Send me updates</label>
-    <input class="FormGroup__control" type="checkbox" value="yes" id="subscribe-true"/>
+    <input type="checkbox" value="yes" id="subscribe-true"/>
 </div>
 ```
 
@@ -69,15 +67,15 @@ If the form group has multiple inputs, the `controlId` prop can be omitted. In t
 Javascript:
 ```html
 <FormGroup label="When are you available?">
-  <input className="FormGroup__control" type="text" aria-label="Start time"/>
-  <input className="FormGroup__control" type="text" aria-label="End time"/>
+  <input type="text" aria-label="Start time"/>
+  <input type="text" aria-label="End time"/>
 </FormGroup>
 ```
 Rendered markup:
 ```html
 <div class="FormGroup">
     <label class="FormGroup__label">When are you available?</label>
-    <input class="FormGroup__control" type="text" aria-label="Start time"/>
-    <input class="FormGroup__control" type="text" aria-label="End time"/>
+    <input type="text" aria-label="Start time"/>
+    <input type="text" aria-label="End time"/>
 </div>
 ```

@@ -8,13 +8,7 @@ class FormGroup extends React.Component {
   renderChildren() {
     // Preview environment won't have a child prop, so we have to supply a default one here:
     if (this.props.__preview) {
-      return (
-        <TextInput
-          id={this.props.controlId}
-          className="FormGroup__control"
-          placeholder="Placeholder text"
-        />
-      );
+      return <TextInput id={this.props.controlId} placeholder="Placeholder text" />;
     }
     return this.props.children;
   }

@@ -387,7 +387,8 @@ hr {
 .TextInput--is-disabled {
   background: #eee; }
 
-.TextInput--has-error.TextInput {
+.TextInput--has-error,
+.FormGroup--has-error .TextInput {
   border-color: #f04d5d; }
 
 .TextInput--small {
@@ -457,9 +458,6 @@ hr {
 
 .FormGroup__label {
   font-weight: bold; }
-
-.FormGroup--has-error .FormGroup__control.TextInput {
-  border-color: #f04d5d; }
 
 .FormGroup__label,
 .FormGroup__error {

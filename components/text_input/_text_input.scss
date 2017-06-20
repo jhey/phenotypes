@@ -6,14 +6,6 @@
   @if $size == 'large' { font-size: $font-size-5; }
 }
 
-// Restrict selection with `&.TextInput` so we can use these mixins to style `FormGroup__control` elements
-// that may or may not be text inputs
-@mixin text-input-error-state() {
-  &.TextInput {
-    border-color: $red;
-  }
-}
-
 .TextInput {
   @include text-input-sizer;
   border: 2px solid $gray-300;
@@ -29,8 +21,9 @@
   background: $gray-200;
 }
 
-.TextInput--has-error {
-  @include text-input-error-state;
+.TextInput--has-error,
+.FormGroup--has-error .TextInput {
+  border-color: $red;
 }
 
 //

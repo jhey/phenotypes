@@ -35,13 +35,6 @@
 
 .FormGroup__label { font-weight: $font-weight-bold; }
 
-.FormGroup--has-error {
-  .FormGroup__control {
-    @include text-input-error-state;
-    // @include other error states for future control types
-  }
-}
-
 //
 // Sizers
 //
