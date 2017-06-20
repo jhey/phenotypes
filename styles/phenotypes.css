@@ -401,7 +401,7 @@ hr {
 .Button--large.Button {
   font-size: 18px; }
 
-.Button--default.Button {
+.Button--medium.Button {
   font-size: 16px; }
 
 .Button--small.Button {
@@ -411,7 +411,7 @@ hr {
   font-size: 18px; }
 
 @media (min-width: 600px) {
-  .Button--default-sm.Button {
+  .Button--medium-sm.Button {
     font-size: 16px; }
   .Button--small-sm.Button {
     font-size: 14px; }
@@ -419,7 +419,7 @@ hr {
     font-size: 18px; } }
 
 @media (min-width: 900px) {
-  .Button--default-md.Button {
+  .Button--medium-md.Button {
     font-size: 16px; }
   .Button--small-md.Button {
     font-size: 14px; }
@@ -427,7 +427,7 @@ hr {
     font-size: 18px; } }
 
 @media (min-width: 1200px) {
-  .Button--default-lg.Button {
+  .Button--medium-lg.Button {
     font-size: 16px; }
   .Button--small-lg.Button {
     font-size: 14px; }
@@ -435,7 +435,7 @@ hr {
     font-size: 18px; } }
 
 @media (min-width: 1500px) {
-  .Button--default-xl.Button {
+  .Button--medium-xl.Button {
     font-size: 16px; }
   .Button--small-xl.Button {
     font-size: 14px; }

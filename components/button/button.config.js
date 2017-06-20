@@ -83,7 +83,7 @@ module.exports = {
     name: 'responsive',
     label: 'Responsive',
     context: {
-      className: 'Button--small Button--default-md Button--large-lg',
+      className: 'Button--small Button--medium-md Button--large-lg',
       children: 'Resize me!',
     },
   }],
