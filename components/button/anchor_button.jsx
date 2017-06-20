@@ -22,13 +22,13 @@ class AnchorButton extends React.Component {
   }
 
   render() {
-    const { children, disabled, ...htmlProps } = this.props;
+    const { children, disabled, tabIndex, ...htmlProps } = this.props;
     return (
       <a
         {...htmlProps}
         onClick={this.handleAnchorClick}
         role="button"
-        tabIndex={disabled && -1}
+        tabIndex={disabled ? -1 : tabIndex}
       >
         {children}
       </a>
