@@ -38,11 +38,13 @@
   @include button-sizer($size: 'large');
 }
 
-@each $breakpoint in map-keys($grid-breakpoints) {
-  @include media-breakpoint-up($breakpoint) {
-    $suffix: breakpoint-suffix($breakpoint, $grid-breakpoints);
-    .Button--medium#{$suffix} { @include button-sizer; }
-    .Button--small#{$suffix} { @include button-sizer($size: 'small'); }
-    .Button--large#{$suffix} { @include button-sizer($size: 'large'); }
+@if $enable-form-utilities {
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+      $suffix: breakpoint-suffix($breakpoint, $grid-breakpoints);
+      .Button--medium#{$suffix} { @include button-sizer; }
+      .Button--small#{$suffix} { @include button-sizer($size: 'small'); }
+      .Button--large#{$suffix} { @include button-sizer($size: 'large'); }
+    }
   }
 }
