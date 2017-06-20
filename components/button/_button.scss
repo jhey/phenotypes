@@ -1,10 +1,8 @@
 // scss-lint:disable SelectorFormat
 @mixin button-sizer($size: 'medium') {
-  &.Button {
-    @if $size == 'small' { font-size: $font-size-2; }
-    @if $size == 'medium' { font-size: $font-size-3; }
-    @if $size == 'large' { font-size: $font-size-4; }
-  }
+  @if $size == 'small' { font-size: $font-size-2; }
+  @if $size == 'medium' { font-size: $font-size-3; }
+  @if $size == 'large' { font-size: $font-size-4; }
 }
 
 .Button {
