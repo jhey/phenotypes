@@ -167,21 +167,18 @@ a {
   text-decoration: none;
   background-color: transparent;
   -webkit-text-decoration-skip: objects; }
-
-a:hover {
-  color: #008ab3;
-  text-decoration: underline; }
+  a:hover {
+    color: #008ab3;
+    text-decoration: underline; }
 
 a:not([href]):not([tabindex]) {
   color: inherit;
   text-decoration: none; }
-
-a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover {
-  color: inherit;
-  text-decoration: none; }
-
-a:not([href]):not([tabindex]):focus {
-  outline: 0; }
+  a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover {
+    color: inherit;
+    text-decoration: none; }
+  a:not([href]):not([tabindex]):focus {
+    outline: 0; }
 
 pre,
 code,
@@ -375,6 +372,191 @@ hr {
 
 .hr-reversed {
   border-color: rgba(255, 255, 255, 0.14); }
+
+.TextInput {
+  font-size: 16px;
+  border: 2px solid #dbdbdb;
+  border-radius: 3px;
+  width: 100%; }
+  .TextInput::placeholder {
+    color: rgba(0, 0, 0, 0.41); }
+
+.TextInput--is-disabled {
+  background: #eee; }
+
+.TextInput--has-error,
+.FormGroup--has-error .TextInput {
+  border-color: #f04d5d; }
+
+.TextInput--small {
+  font-size: 14px; }
+
+.TextInput--large {
+  font-size: 21px; }
+
+.TextInput--medium,
+.FormGroup--medium .TextInput {
+  font-size: 16px; }
+
+.TextInput--small,
+.FormGroup--small .TextInput {
+  font-size: 14px; }
+
+.TextInput--large,
+.FormGroup--large .TextInput {
+  font-size: 21px; }
+
+@media (min-width: 600px) {
+  .TextInput--medium-sm,
+  .FormGroup--medium-sm .TextInput {
+    font-size: 16px; }
+  .TextInput--small-sm,
+  .FormGroup--small-sm .TextInput {
+    font-size: 14px; }
+  .TextInput--large-sm,
+  .FormGroup--large-sm .TextInput {
+    font-size: 21px; } }
+
+@media (min-width: 900px) {
+  .TextInput--medium-md,
+  .FormGroup--medium-md .TextInput {
+    font-size: 16px; }
+  .TextInput--small-md,
+  .FormGroup--small-md .TextInput {
+    font-size: 14px; }
+  .TextInput--large-md,
+  .FormGroup--large-md .TextInput {
+    font-size: 21px; } }
+
+@media (min-width: 1200px) {
+  .TextInput--medium-lg,
+  .FormGroup--medium-lg .TextInput {
+    font-size: 16px; }
+  .TextInput--small-lg,
+  .FormGroup--small-lg .TextInput {
+    font-size: 14px; }
+  .TextInput--large-lg,
+  .FormGroup--large-lg .TextInput {
+    font-size: 21px; } }
+
+@media (min-width: 1500px) {
+  .TextInput--medium-xl,
+  .FormGroup--medium-xl .TextInput {
+    font-size: 16px; }
+  .TextInput--small-xl,
+  .FormGroup--small-xl .TextInput {
+    font-size: 14px; }
+  .TextInput--large-xl,
+  .FormGroup--large-xl .TextInput {
+    font-size: 21px; } }
+
+.FormGroup__error {
+  color: #f04d5d; }
+
+.FormGroup__label {
+  font-weight: bold; }
+
+.FormGroup__label,
+.FormGroup__error {
+  font-size: 14px; }
+
+.FormGroup__hint {
+  font-size: 12px; }
+
+.FormGroup--small .FormGroup__label,
+.FormGroup--small .FormGroup__error,
+.FormGroup--small .FormGroup__hint {
+  font-size: 12px; }
+
+.FormGroup--large .FormGroup__label,
+.FormGroup--large .FormGroup__error {
+  font-size: 18px; }
+
+.FormGroup--large .FormGroup__hint {
+  font-size: 14px; }
+
+.FormGroup--small .FormGroup__label,
+.FormGroup--small .FormGroup__error,
+.FormGroup--small .FormGroup__hint {
+  font-size: 12px; }
+
+.FormGroup--medium .FormGroup__label,
+.FormGroup--medium .FormGroup__error {
+  font-size: 14px; }
+
+.FormGroup--medium .FormGroup__hint {
+  font-size: 12px; }
+
+.FormGroup--large .FormGroup__label,
+.FormGroup--large .FormGroup__error {
+  font-size: 18px; }
+
+.FormGroup--large .FormGroup__hint {
+  font-size: 14px; }
+
+@media (min-width: 600px) {
+  .FormGroup--small-sm .FormGroup__label,
+  .FormGroup--small-sm .FormGroup__error,
+  .FormGroup--small-sm .FormGroup__hint {
+    font-size: 12px; }
+  .FormGroup--medium-sm .FormGroup__label,
+  .FormGroup--medium-sm .FormGroup__error {
+    font-size: 14px; }
+  .FormGroup--medium-sm .FormGroup__hint {
+    font-size: 12px; }
+  .FormGroup--large-sm .FormGroup__label,
+  .FormGroup--large-sm .FormGroup__error {
+    font-size: 18px; }
+  .FormGroup--large-sm .FormGroup__hint {
+    font-size: 14px; } }
+
+@media (min-width: 900px) {
+  .FormGroup--small-md .FormGroup__label,
+  .FormGroup--small-md .FormGroup__error,
+  .FormGroup--small-md .FormGroup__hint {
+    font-size: 12px; }
+  .FormGroup--medium-md .FormGroup__label,
+  .FormGroup--medium-md .FormGroup__error {
+    font-size: 14px; }
+  .FormGroup--medium-md .FormGroup__hint {
+    font-size: 12px; }
+  .FormGroup--large-md .FormGroup__label,
+  .FormGroup--large-md .FormGroup__error {
+    font-size: 18px; }
+  .FormGroup--large-md .FormGroup__hint {
+    font-size: 14px; } }
+
+@media (min-width: 1200px) {
+  .FormGroup--small-lg .FormGroup__label,
+  .FormGroup--small-lg .FormGroup__error,
+  .FormGroup--small-lg .FormGroup__hint {
+    font-size: 12px; }
+  .FormGroup--medium-lg .FormGroup__label,
+  .FormGroup--medium-lg .FormGroup__error {
+    font-size: 14px; }
+  .FormGroup--medium-lg .FormGroup__hint {
+    font-size: 12px; }
+  .FormGroup--large-lg .FormGroup__label,
+  .FormGroup--large-lg .FormGroup__error {
+    font-size: 18px; }
+  .FormGroup--large-lg .FormGroup__hint {
+    font-size: 14px; } }
+
+@media (min-width: 1500px) {
+  .FormGroup--small-xl .FormGroup__label,
+  .FormGroup--small-xl .FormGroup__error,
+  .FormGroup--small-xl .FormGroup__hint {
+    font-size: 12px; }
+  .FormGroup--medium-xl .FormGroup__label,
+  .FormGroup--medium-xl .FormGroup__error {
+    font-size: 14px; }
+  .FormGroup--medium-xl .FormGroup__hint {
+    font-size: 12px; }
+  .FormGroup--large-xl .FormGroup__label,
+  .FormGroup--large-xl .FormGroup__error {
+    font-size: 18px; }
+  .FormGroup--large-xl .FormGroup__hint {
+    font-size: 14px; } }
 
 .d-none {
   display: none !important; }

@@ -1,0 +1,59 @@
+// scss-lint:disable SelectorFormat
+
+@mixin text-input-sizer($size: 'medium') {
+  @if $size == 'small' { font-size: $font-size-2; }
+  @if $size == 'medium' { font-size: $font-size-3; }
+  @if $size == 'large' { font-size: $font-size-5; }
+}
+
+.TextInput {
+  @include text-input-sizer;
+  border: 2px solid $gray-300;
+  border-radius: $border-radius;
+  width: 100%;
+
+  &::placeholder {
+    color: $text-color-hint;
+  }
+}
+
+.TextInput--is-disabled {
+  background: $gray-200;
+}
+
+.TextInput--has-error,
+.FormGroup--has-error .TextInput {
+  border-color: $red;
+}
+
+//
+// Sizers
+//
+
+.TextInput--small { @include text-input-sizer($size: 'small'); }
+
+.TextInput--large { @include text-input-sizer($size: 'large'); }
+
+@if $enable-form-utilities {
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+      $suffix: breakpoint-suffix($breakpoint, $grid-breakpoints);
+      // Sacrificing some BEM purity and styling .TextInput nested inside
+      // .FormGroup here to avoid having tons of duplicate styles
+      .TextInput--medium#{$suffix},
+      .FormGroup--medium#{$suffix} .TextInput {
+        @include text-input-sizer;
+      }
+
+      .TextInput--small#{$suffix},
+      .FormGroup--small#{$suffix} .TextInput {
+        @include text-input-sizer($size: 'small');
+      }
+
+      .TextInput--large#{$suffix},
+      .FormGroup--large#{$suffix} .TextInput {
+        @include text-input-sizer($size: 'large');
+      }
+    }
+  }
+}
