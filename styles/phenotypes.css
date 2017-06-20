@@ -167,18 +167,21 @@ a {
   text-decoration: none;
   background-color: transparent;
   -webkit-text-decoration-skip: objects; }
-  a:hover {
-    color: #008ab3;
-    text-decoration: underline; }
+
+a:hover {
+  color: #008ab3;
+  text-decoration: underline; }
 
 a:not([href]):not([tabindex]) {
   color: inherit;
   text-decoration: none; }
-  a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover {
-    color: inherit;
-    text-decoration: none; }
-  a:not([href]):not([tabindex]):focus {
-    outline: 0; }
+
+a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover {
+  color: inherit;
+  text-decoration: none; }
+
+a:not([href]):not([tabindex]):focus {
+  outline: 0; }
 
 pre,
 code,
@@ -373,14 +376,80 @@ hr {
 .hr-reversed {
   border-color: rgba(255, 255, 255, 0.14); }
 
-<<<<<<< 80bc98c3de53617c6cddf1b861c9420c53e4b081
+.Button {
+  background: #eee;
+  font-weight: bold; }
+
+.Button--danger {
+  background: #f04d5d; }
+
+.Button--primary {
+  background: #16b8e0; }
+
+.Button--link {
+  background: transparent; }
+
+.Button--is-disabled {
+  pointer-events: none; }
+
+.Button {
+  font-size: 16px; }
+
+.Button--small.Button {
+  font-size: 14px; }
+
+.Button--large.Button {
+  font-size: 18px; }
+
+.Button--default.Button {
+  font-size: 16px; }
+
+.Button--small.Button {
+  font-size: 14px; }
+
+.Button--large.Button {
+  font-size: 18px; }
+
+@media (min-width: 600px) {
+  .Button--default-sm.Button {
+    font-size: 16px; }
+  .Button--small-sm.Button {
+    font-size: 14px; }
+  .Button--large-sm.Button {
+    font-size: 18px; } }
+
+@media (min-width: 900px) {
+  .Button--default-md.Button {
+    font-size: 16px; }
+  .Button--small-md.Button {
+    font-size: 14px; }
+  .Button--large-md.Button {
+    font-size: 18px; } }
+
+@media (min-width: 1200px) {
+  .Button--default-lg.Button {
+    font-size: 16px; }
+  .Button--small-lg.Button {
+    font-size: 14px; }
+  .Button--large-lg.Button {
+    font-size: 18px; } }
+
+@media (min-width: 1500px) {
+  .Button--default-xl.Button {
+    font-size: 16px; }
+  .Button--small-xl.Button {
+    font-size: 14px; }
+  .Button--large-xl.Button {
+    font-size: 18px; } }
+
 .TextInput {
   font-size: 16px;
   border: 2px solid #dbdbdb;
   border-radius: 3px;
   width: 100%; }
-  .TextInput::placeholder {
-    color: rgba(0, 0, 0, 0.41); }
+
+.TextInput::placeholder {
+  color: rgba(0, 0, 0, 0.41); }
 
 .TextInput--is-disabled {
   background: #eee; }
@@ -558,70 +627,6 @@ hr {
     font-size: 18px; }
   .FormGroup--large-xl .FormGroup__hint {
     font-size: 14px; } }
-=======
-.Button {
-  background: #eee;
-  font-weight: bold; }
-
-.Button--danger {
-  background: #f04d5d; }
-
-.Button--primary {
-  background: #16b8e0; }
-
-.Button--link {
-  background: transparent; }
-
-.Button {
-  font-size: 16px; }
-
-.Button--small.Button {
-  font-size: 14px; }
-
-.Button--large.Button {
-  font-size: 18px; }
-
-.Button--default.Button {
-  font-size: 16px; }
-
-.Button--small.Button {
-  font-size: 14px; }
-
-.Button--large.Button {
-  font-size: 18px; }
-
-@media (min-width: 600px) {
-  .Button--default-sm.Button {
-    font-size: 16px; }
-  .Button--small-sm.Button {
-    font-size: 14px; }
-  .Button--large-sm.Button {
-    font-size: 18px; } }
-
-@media (min-width: 900px) {
-  .Button--default-md.Button {
-    font-size: 16px; }
-  .Button--small-md.Button {
-    font-size: 14px; }
-  .Button--large-md.Button {
-    font-size: 18px; } }
-
-@media (min-width: 1200px) {
-  .Button--default-lg.Button {
-    font-size: 16px; }
-  .Button--small-lg.Button {
-    font-size: 14px; }
-  .Button--large-lg.Button {
-    font-size: 18px; } }
-
-@media (min-width: 1500px) {
-  .Button--default-xl.Button {
-    font-size: 16px; }
-  .Button--small-xl.Button {
-    font-size: 14px; }
-  .Button--large-xl.Button {
-    font-size: 18px; } }
->>>>>>> Initial implementation
 
 .d-none {
   display: none !important; }
