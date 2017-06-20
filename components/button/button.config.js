@@ -4,11 +4,17 @@ module.exports = {
   status: 'draft',
   collated: true,
   context: {
-    children: 'Button'
+    children: 'Button',
   },
   variants: [{
     name: 'default',
     label: 'Default',
+  }, {
+    name: 'disabled',
+    label: 'Default: disabled',
+    context: {
+      disabled: true,
+    },
   }, {
     name: 'anchor',
     label: 'Using anchor tag',
@@ -16,29 +22,11 @@ module.exports = {
       href: '#',
     },
   }, {
-    name: 'disabled',
-    label: 'Disabled',
+    name: 'anchor-disabled',
+    label: 'Using anchor tag: disabled',
     context: {
+      href: '#',
       disabled: true,
-    },
-  }, {
-    name: 'small',
-    label: 'Small',
-    context: {
-      className: 'Button--small',
-    },
-  }, {
-    name: 'large',
-    label: 'Large',
-    context: {
-      className: 'Button--large',
-    },
-  }, {
-    name: 'responsive',
-    label: 'Responsive',
-    context: {
-      className: 'Button--small Button--default-md Button--large-lg',
-      children: 'Resize me!'
     },
   }, {
     name: 'primary',
@@ -78,6 +66,25 @@ module.exports = {
     context: {
       className: 'Button--link',
       disabled: true,
+    },
+  }, {
+    name: 'small',
+    label: 'Small',
+    context: {
+      className: 'Button--small',
+    },
+  }, {
+    name: 'large',
+    label: 'Large',
+    context: {
+      className: 'Button--large',
+    },
+  }, {
+    name: 'responsive',
+    label: 'Responsive',
+    context: {
+      className: 'Button--small Button--default-md Button--large-lg',
+      children: 'Resize me!',
     },
   }],
 };
