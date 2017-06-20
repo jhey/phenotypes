@@ -39,6 +39,6 @@ Javascript:
 ```
 Rendered markup:
 ```html
-<button aria-disabled="false" class="Button" type="button">Click me!</button>
-<a href="#" aria-disabled="false" class="Button" role="button">No, click me!</a>
+<button class="Button" type="button">Click me!</button>
+<a href="#" class="Button" role="button">No, click me!</a>
 ```
