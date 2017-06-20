@@ -19,7 +19,7 @@
 
 ### Usage
 
-Child input components should always use the `FormGroup__control` class so they can be sized/styled with the other group elements.
+Child input components should always use the `FormGroup__control` class so they can be styled with the other group elements.
 
 #### With a single control input
 

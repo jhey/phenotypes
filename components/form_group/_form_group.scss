@@ -29,11 +29,6 @@
       font-size: $font-size-2;
     }
   }
-
-  .FormGroup__control {
-    @include text-input-sizer($size: $size);
-    // @include other sizers for future control types
-  }
 }
 
 .FormGroup__error { color: $red; }

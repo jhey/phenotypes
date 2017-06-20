@@ -1,5 +1,4 @@
 @charset "UTF-8";
-/* scss-lint:disable all */
 /*!
  * Phenotypes - The Amino design system
  * Copyright 2017 Amino Inc.
@@ -167,18 +166,21 @@ a {
   text-decoration: none;
   background-color: transparent;
   -webkit-text-decoration-skip: objects; }
-  a:hover {
-    color: #008ab3;
-    text-decoration: underline; }
+
+a:hover {
+  color: #008ab3;
+  text-decoration: underline; }
 
 a:not([href]):not([tabindex]) {
   color: inherit;
   text-decoration: none; }
-  a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover {
-    color: inherit;
-    text-decoration: none; }
-  a:not([href]):not([tabindex]):focus {
-    outline: 0; }
+
+a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover {
+  color: inherit;
+  text-decoration: none; }
+
+a:not([href]):not([tabindex]):focus {
+  outline: 0; }
 
 pre,
 code,
@@ -374,11 +376,13 @@ hr {
   border-color: rgba(255, 255, 255, 0.14); }
 
 .TextInput {
+  font-size: 16px;
   border: 2px solid #dbdbdb;
   border-radius: 3px;
   width: 100%; }
-  .TextInput::placeholder {
-    color: rgba(0, 0, 0, 0.41); }
+
+.TextInput::placeholder {
+  color: rgba(0, 0, 0, 0.41); }
 
 .TextInput--is-disabled {
   background: #eee; }
@@ -386,54 +390,66 @@ hr {
 .TextInput--has-error.TextInput {
   border-color: #f04d5d; }
 
-.TextInput {
-  font-size: 16px; }
-
-.TextInput--small.TextInput {
+.TextInput--small {
   font-size: 14px; }
 
-.TextInput--large.TextInput {
+.TextInput--large {
   font-size: 21px; }
 
-.TextInput--medium.TextInput {
+.TextInput--medium,
+.FormGroup--medium .TextInput {
   font-size: 16px; }
 
-.TextInput--small.TextInput {
+.TextInput--small,
+.FormGroup--small .TextInput {
   font-size: 14px; }
 
-.TextInput--large.TextInput {
+.TextInput--large,
+.FormGroup--large .TextInput {
   font-size: 21px; }
 
 @media (min-width: 600px) {
-  .TextInput--medium-sm.TextInput {
+  .TextInput--medium-sm,
+  .FormGroup--medium-sm .TextInput {
     font-size: 16px; }
-  .TextInput--small-sm.TextInput {
+  .TextInput--small-sm,
+  .FormGroup--small-sm .TextInput {
     font-size: 14px; }
-  .TextInput--large-sm.TextInput {
+  .TextInput--large-sm,
+  .FormGroup--large-sm .TextInput {
     font-size: 21px; } }
 
 @media (min-width: 900px) {
-  .TextInput--medium-md.TextInput {
+  .TextInput--medium-md,
+  .FormGroup--medium-md .TextInput {
     font-size: 16px; }
-  .TextInput--small-md.TextInput {
+  .TextInput--small-md,
+  .FormGroup--small-md .TextInput {
     font-size: 14px; }
-  .TextInput--large-md.TextInput {
+  .TextInput--large-md,
+  .FormGroup--large-md .TextInput {
     font-size: 21px; } }
 
 @media (min-width: 1200px) {
-  .TextInput--medium-lg.TextInput {
+  .TextInput--medium-lg,
+  .FormGroup--medium-lg .TextInput {
     font-size: 16px; }
-  .TextInput--small-lg.TextInput {
+  .TextInput--small-lg,
+  .FormGroup--small-lg .TextInput {
     font-size: 14px; }
-  .TextInput--large-lg.TextInput {
+  .TextInput--large-lg,
+  .FormGroup--large-lg .TextInput {
     font-size: 21px; } }
 
 @media (min-width: 1500px) {
-  .TextInput--medium-xl.TextInput {
+  .TextInput--medium-xl,
+  .FormGroup--medium-xl .TextInput {
     font-size: 16px; }
-  .TextInput--small-xl.TextInput {
+  .TextInput--small-xl,
+  .FormGroup--small-xl .TextInput {
     font-size: 14px; }
-  .TextInput--large-xl.TextInput {
+  .TextInput--large-xl,
+  .FormGroup--large-xl .TextInput {
     font-size: 21px; } }
 
 .FormGroup__error {
@@ -452,16 +468,10 @@ hr {
 .FormGroup__hint {
   font-size: 12px; }
 
-.FormGroup__control.TextInput {
-  font-size: 16px; }
-
 .FormGroup--small .FormGroup__label,
 .FormGroup--small .FormGroup__error,
 .FormGroup--small .FormGroup__hint {
   font-size: 12px; }
-
-.FormGroup--small .FormGroup__control.TextInput {
-  font-size: 14px; }
 
 .FormGroup--large .FormGroup__label,
 .FormGroup--large .FormGroup__error {
@@ -470,16 +480,10 @@ hr {
 .FormGroup--large .FormGroup__hint {
   font-size: 14px; }
 
-.FormGroup--large .FormGroup__control.TextInput {
-  font-size: 21px; }
-
 .FormGroup--small .FormGroup__label,
 .FormGroup--small .FormGroup__error,
 .FormGroup--small .FormGroup__hint {
   font-size: 12px; }
-
-.FormGroup--small .FormGroup__control.TextInput {
-  font-size: 14px; }
 
 .FormGroup--medium .FormGroup__label,
 .FormGroup--medium .FormGroup__error {
@@ -488,9 +492,6 @@ hr {
 .FormGroup--medium .FormGroup__hint {
   font-size: 12px; }
 
-.FormGroup--medium .FormGroup__control.TextInput {
-  font-size: 16px; }
-
 .FormGroup--large .FormGroup__label,
 .FormGroup--large .FormGroup__error {
   font-size: 18px; }
@@ -498,96 +499,69 @@ hr {
 .FormGroup--large .FormGroup__hint {
   font-size: 14px; }
 
-.FormGroup--large .FormGroup__control.TextInput {
-  font-size: 21px; }
-
 @media (min-width: 600px) {
   .FormGroup--small-sm .FormGroup__label,
   .FormGroup--small-sm .FormGroup__error,
   .FormGroup--small-sm .FormGroup__hint {
     font-size: 12px; }
-  .FormGroup--small-sm .FormGroup__control.TextInput {
-    font-size: 14px; }
   .FormGroup--medium-sm .FormGroup__label,
   .FormGroup--medium-sm .FormGroup__error {
     font-size: 14px; }
   .FormGroup--medium-sm .FormGroup__hint {
     font-size: 12px; }
-  .FormGroup--medium-sm .FormGroup__control.TextInput {
-    font-size: 16px; }
   .FormGroup--large-sm .FormGroup__label,
   .FormGroup--large-sm .FormGroup__error {
     font-size: 18px; }
   .FormGroup--large-sm .FormGroup__hint {
-    font-size: 14px; }
-  .FormGroup--large-sm .FormGroup__control.TextInput {
-    font-size: 21px; } }
+    font-size: 14px; } }
 
 @media (min-width: 900px) {
   .FormGroup--small-md .FormGroup__label,
   .FormGroup--small-md .FormGroup__error,
   .FormGroup--small-md .FormGroup__hint {
     font-size: 12px; }
-  .FormGroup--small-md .FormGroup__control.TextInput {
-    font-size: 14px; }
   .FormGroup--medium-md .FormGroup__label,
   .FormGroup--medium-md .FormGroup__error {
     font-size: 14px; }
   .FormGroup--medium-md .FormGroup__hint {
     font-size: 12px; }
-  .FormGroup--medium-md .FormGroup__control.TextInput {
-    font-size: 16px; }
   .FormGroup--large-md .FormGroup__label,
   .FormGroup--large-md .FormGroup__error {
     font-size: 18px; }
   .FormGroup--large-md .FormGroup__hint {
-    font-size: 14px; }
-  .FormGroup--large-md .FormGroup__control.TextInput {
-    font-size: 21px; } }
+    font-size: 14px; } }
 
 @media (min-width: 1200px) {
   .FormGroup--small-lg .FormGroup__label,
   .FormGroup--small-lg .FormGroup__error,
   .FormGroup--small-lg .FormGroup__hint {
     font-size: 12px; }
-  .FormGroup--small-lg .FormGroup__control.TextInput {
-    font-size: 14px; }
   .FormGroup--medium-lg .FormGroup__label,
   .FormGroup--medium-lg .FormGroup__error {
     font-size: 14px; }
   .FormGroup--medium-lg .FormGroup__hint {
     font-size: 12px; }
-  .FormGroup--medium-lg .FormGroup__control.TextInput {
-    font-size: 16px; }
   .FormGroup--large-lg .FormGroup__label,
   .FormGroup--large-lg .FormGroup__error {
     font-size: 18px; }
   .FormGroup--large-lg .FormGroup__hint {
-    font-size: 14px; }
-  .FormGroup--large-lg .FormGroup__control.TextInput {
-    font-size: 21px; } }
+    font-size: 14px; } }
 
 @media (min-width: 1500px) {
   .FormGroup--small-xl .FormGroup__label,
   .FormGroup--small-xl .FormGroup__error,
   .FormGroup--small-xl .FormGroup__hint {
     font-size: 12px; }
-  .FormGroup--small-xl .FormGroup__control.TextInput {
-    font-size: 14px; }
   .FormGroup--medium-xl .FormGroup__label,
   .FormGroup--medium-xl .FormGroup__error {
     font-size: 14px; }
   .FormGroup--medium-xl .FormGroup__hint {
     font-size: 12px; }
-  .FormGroup--medium-xl .FormGroup__control.TextInput {
-    font-size: 16px; }
   .FormGroup--large-xl .FormGroup__label,
   .FormGroup--large-xl .FormGroup__error {
     font-size: 18px; }
   .FormGroup--large-xl .FormGroup__hint {
-    font-size: 14px; }
-  .FormGroup--large-xl .FormGroup__control.TextInput {
-    font-size: 21px; } }
+    font-size: 14px; } }
 
 .d-none {
   display: none !important; }
