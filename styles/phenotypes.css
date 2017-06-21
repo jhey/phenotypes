@@ -373,6 +373,70 @@ hr {
 .hr-reversed {
   border-color: rgba(255, 255, 255, 0.14); }
 
+.Button {
+  font-size: 16px;
+  background: #eee;
+  font-weight: bold; }
+
+.Button--danger {
+  background: #f04d5d; }
+
+.Button--primary {
+  background: #16b8e0; }
+
+.Button--link {
+  background: transparent; }
+
+.Button--is-disabled {
+  pointer-events: none; }
+
+.Button--small {
+  font-size: 14px; }
+
+.Button--large {
+  font-size: 18px; }
+
+.Button--medium {
+  font-size: 16px; }
+
+.Button--small {
+  font-size: 14px; }
+
+.Button--large {
+  font-size: 18px; }
+
+@media (min-width: 600px) {
+  .Button--medium-sm {
+    font-size: 16px; }
+  .Button--small-sm {
+    font-size: 14px; }
+  .Button--large-sm {
+    font-size: 18px; } }
+
+@media (min-width: 900px) {
+  .Button--medium-md {
+    font-size: 16px; }
+  .Button--small-md {
+    font-size: 14px; }
+  .Button--large-md {
+    font-size: 18px; } }
+
+@media (min-width: 1200px) {
+  .Button--medium-lg {
+    font-size: 16px; }
+  .Button--small-lg {
+    font-size: 14px; }
+  .Button--large-lg {
+    font-size: 18px; } }
+
+@media (min-width: 1500px) {
+  .Button--medium-xl {
+    font-size: 16px; }
+  .Button--small-xl {
+    font-size: 14px; }
+  .Button--large-xl {
+    font-size: 18px; } }
+
 .TextInput {
   font-size: 16px;
   border: 2px solid #dbdbdb;

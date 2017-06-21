@@ -1,0 +1,47 @@
+// scss-lint:disable SelectorFormat
+@mixin button-sizer($size: 'medium') {
+  @if $size == 'small' { font-size: $font-size-2; }
+  @if $size == 'medium' { font-size: $font-size-3; }
+  @if $size == 'large' { font-size: $font-size-4; }
+}
+
+.Button {
+  @include button-sizer;
+  background: $gray-200;
+  font-weight: $font-weight-bold;
+}
+
+.Button--danger {
+  background: $red;
+}
+
+.Button--primary {
+  background: $blue;
+}
+
+.Button--link {
+  background: transparent;
+}
+
+.Button--is-disabled {
+  pointer-events: none;
+}
+
+.Button--small {
+  @include button-sizer($size: 'small');
+}
+
+.Button--large {
+  @include button-sizer($size: 'large');
+}
+
+@if $enable-form-utilities {
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+      $suffix: breakpoint-suffix($breakpoint, $grid-breakpoints);
+      .Button--medium#{$suffix} { @include button-sizer; }
+      .Button--small#{$suffix} { @include button-sizer($size: 'small'); }
+      .Button--large#{$suffix} { @include button-sizer($size: 'large'); }
+    }
+  }
+}
