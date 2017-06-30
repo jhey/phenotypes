@@ -224,7 +224,7 @@ $container-max-widths: (
 ) !default;
 
 $grid-columns:               12 !default;
-$grid-gutter-width-base:     $modular-scale-base-px !default;
+$grid-gutter-width-base:     $spacer-5 !default;
 $grid-gutter-widths: (
   xs: $grid-gutter-width-base,
   sm: $grid-gutter-width-base,
