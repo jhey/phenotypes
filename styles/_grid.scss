@@ -1,8 +1,14 @@
 // Grid based on bootstrap4 grid
 //
+// Based on:
 // https://github.com/twbs/bootstrap/blob/v4.0.0-alpha.6/scss/_grid.scss
 
+// Based on:
+// https://github.com/twbs/bootstrap/blob/v4.0.0-alpha.6/scss/mixins/_grid-framework.scss
 @import 'grid/grid-framework';
+
+// Based on:
+// https://github.com/twbs/bootstrap/blob/v4.0.0-alpha.6/scss/mixins/_grid.scss
 @import 'grid/grid';
 
 
@@ -19,12 +25,11 @@
 
 // Fluid container
 //
-// Utilizes the mixin meant for fixed width containers, but with 100% width for
-// fluid, full width layouts.
+// Utilizes the mixin meant for fixed width containers, but without any defined
+// width for fluid, full width layouts.
 
 @if $enable-grid-classes {
   .container-fluid {
-    width: 100%;
     @include make-container();
   }
 }
