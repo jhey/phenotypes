@@ -1,18 +1,39 @@
 import React from 'react';
 
-function GridExamples(props) {
+function GridExamples() {
   return (
-    <div>
-      <h1>Grid</h1>
+    <div className="grid-examples">
       <div className="container">
-        <div className="row">
-          <div className="col-2">col-2</div>
-          <div className="col-8">col-8</div>
-          <div className="col-2">col-2</div>
-        </div>
+        <p>
+          Responsive! Add multiple classes with responsive suffixes to
+          change column widths depending on breakpoint.
+        </p>
 
         <div className="row">
-          <div className="col-6 offset-3">col-6 offset-3</div>
+          <div className="col-4 col-2-md">.col-4.col-2-md</div>
+          <div className="col-4 col-8-md">.col-4.col-8-md</div>
+          <div className="col-4 col-2-md">.col-4.col-2-md</div>
+        </div>
+
+        <hr />
+
+        <p>Offsets!</p>
+
+        <div className="row">
+          <div className="col-6 offset-3">.col-6.offset-3</div>
+        </div>
+
+        <hr />
+
+        <p>
+          Customize gutters to your deepest desires by adding <code>.no-gutters</code>
+          to your <code>.row</code> class, and then using spacing helpers on the <code>.col-*</code> classes.
+        </p>
+
+        <div className="row no-gutters">
+          <div className="col-4 px6">.col-4.px6</div>
+          <div className="col-4 px6">.col-4.px6</div>
+          <div className="col-4 px6">.col-4.px6</div>
         </div>
       </div>
     </div>
