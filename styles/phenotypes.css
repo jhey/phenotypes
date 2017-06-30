@@ -3292,25 +3292,6 @@ hr {
 .text-style-normal {
   font-style: normal !important; }
 
-/* noreintegrate
-@at-root {
-  @-ms-viewport { width: device-width; }
-}
-
-html {
-  box-sizing: border-box;
-  -ms-overflow-style: scrollbar;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
-
-@import "functions";
-@import "variables";
-*/
 .container {
   margin-right: auto;
   margin-left: auto;
