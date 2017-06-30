@@ -14,7 +14,7 @@
   }
 
   @each $breakpoint in map-keys($breakpoints) {
-    $infix: breakpoint-infix($breakpoint, $breakpoints);
+    $infix: breakpoint-suffix($breakpoint, $breakpoints);  // noreintegrate
 
     // Allow columns to stretch full width below their breakpoints
     @for $i from 1 through $columns {
