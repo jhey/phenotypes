@@ -1,14 +1,58 @@
-// scss-lint:disable SelectorFormat
+// scss-lint:disable SelectorFormat ElsePlacement
 @mixin button-sizer($size: 'medium') {
-  @if $size == 'small' { font-size: $font-size-2; }
-  @if $size == 'medium' { font-size: $font-size-3; }
-  @if $size == 'large' { font-size: $font-size-4; }
+  @if $size == 'small' {
+    font-size: $font-size-2;
+  }
+
+  @else if $size == 'medium' {
+    font-size: $font-size-3;
+    line-height: $line-height-base;
+    padding: modular-scale-px(-3) modular-scale-px(3) modular-scale-px(-2);
+  }
+
+  @else if $size == 'large' {
+    font-size: $font-size-4;
+  }
+}
+
+%button-disabled {
+  color: $text-color-primary;
+  opacity: $alpha-600;
+  pointer-events: none;
 }
 
 .Button {
   @include button-sizer;
-  background: $gray-200;
-  font-weight: $font-weight-bold;
+  background: rgba($black, $alpha-200);
+  border: 0;
+  border-radius: $border-radius;
+  color: $text-color-primary;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: $font-weight-normal;
+  text-align: center;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+
+  &:hover,
+  &.hover,
+  &:focus,
+  &.focus {
+    background: rgba($black, $alpha-200 + .05);
+    color: $text-color-primary;
+    text-decoration: none;
+  }
+
+  &:disabled,
+  &.disabled {
+    @extend %button-disabled;
+  }
+
+  &:active,
+  &.active {
+    background: rgba($black, $alpha-200 + .11);
+  }
 }
 
 .Button--danger {
@@ -24,7 +68,7 @@
 }
 
 .Button--is-disabled {
-  pointer-events: none;
+  @extend %button-disabled;
 }
 
 .Button--small {

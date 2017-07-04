@@ -376,10 +376,34 @@ hr {
 .hr-reversed {
   border-color: rgba(255, 255, 255, 0.14); }
 
+.Button:disabled, .Button.disabled, .Button--is-disabled {
+  color: rgba(0, 0, 0, 0.86);
+  opacity: 0.54;
+  pointer-events: none; }
+
 .Button {
   font-size: 16px;
-  background: #eee;
-  font-weight: bold; }
+  line-height: 1.49271;
+  padding: 11px 24px 12px;
+  background: rgba(0, 0, 0, 0.07);
+  border: 0;
+  border-radius: 3px;
+  color: rgba(0, 0, 0, 0.86);
+  cursor: pointer;
+  display: inline-block;
+  font-weight: normal;
+  text-align: center;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap; }
+
+.Button:hover, .Button.hover, .Button:focus, .Button.focus {
+  background: rgba(0, 0, 0, 0.12);
+  color: rgba(0, 0, 0, 0.86);
+  text-decoration: none; }
+
+.Button:active, .Button.active {
+  background: rgba(0, 0, 0, 0.18); }
 
 .Button--danger {
   background: #f04d5d; }
@@ -390,9 +414,6 @@ hr {
 .Button--link {
   background: transparent; }
 
-.Button--is-disabled {
-  pointer-events: none; }
-
 .Button--small {
   font-size: 14px; }
 
@@ -400,7 +421,9 @@ hr {
   font-size: 18px; }
 
 .Button--medium {
-  font-size: 16px; }
+  font-size: 16px;
+  line-height: 1.49271;
+  padding: 11px 24px 12px; }
 
 .Button--small {
   font-size: 14px; }
@@ -410,7 +433,9 @@ hr {
 
 @media (min-width: 600px) {
   .Button--medium-sm {
-    font-size: 16px; }
+    font-size: 16px;
+    line-height: 1.49271;
+    padding: 11px 24px 12px; }
   .Button--small-sm {
     font-size: 14px; }
   .Button--large-sm {
@@ -418,7 +443,9 @@ hr {
 
 @media (min-width: 900px) {
   .Button--medium-md {
-    font-size: 16px; }
+    font-size: 16px;
+    line-height: 1.49271;
+    padding: 11px 24px 12px; }
   .Button--small-md {
     font-size: 14px; }
   .Button--large-md {
@@ -426,7 +453,9 @@ hr {
 
 @media (min-width: 1200px) {
   .Button--medium-lg {
-    font-size: 16px; }
+    font-size: 16px;
+    line-height: 1.49271;
+    padding: 11px 24px 12px; }
   .Button--small-lg {
     font-size: 14px; }
   .Button--large-lg {
@@ -434,7 +463,9 @@ hr {
 
 @media (min-width: 1500px) {
   .Button--medium-xl {
-    font-size: 16px; }
+    font-size: 16px;
+    line-height: 1.49271;
+    padding: 11px 24px 12px; }
   .Button--small-xl {
     font-size: 14px; }
   .Button--large-xl {
