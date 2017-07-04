@@ -2,21 +2,21 @@
 @mixin button-sizer($size: 'medium') {
   @if $size == 'small' {
     font-size: $font-size-2;
+    padding: modular-scale-px(-6) modular-scale-px(1) modular-scale-px(-5);
   }
 
   @else if $size == 'medium' {
     font-size: $font-size-3;
-    line-height: $line-height-base;
     padding: modular-scale-px(-3) modular-scale-px(3) modular-scale-px(-2);
   }
 
   @else if $size == 'large' {
     font-size: $font-size-4;
+    padding: modular-scale-px(0) modular-scale-px(5) modular-scale-px(1);
   }
 }
 
 %button-disabled {
-  color: $text-color-primary;
   opacity: $alpha-600;
   pointer-events: none;
 }
@@ -30,6 +30,7 @@
   cursor: pointer;
   display: inline-block;
   font-weight: $font-weight-normal;
+  line-height: $line-height-base;
   text-align: center;
   user-select: none;
   vertical-align: middle;
@@ -57,14 +58,58 @@
 
 .Button--danger {
   background: $red;
+  color: $white;
+
+  &:hover,
+  &.hover,
+  &:focus,
+  &.focus {
+    background: darken($red, 5);
+    color: $white;
+  }
+
+  &:active,
+  &.active {
+    background: darken($red, 11);
+  }
 }
 
 .Button--primary {
   background: $blue;
+  color: $white;
+  font-weight: $font-weight-bold;
+
+  &:hover,
+  &.hover,
+  &:focus,
+  &.focus {
+    background: darken($blue, 5);
+    color: $white;
+  }
+
+  &:active,
+  &.active {
+    background: darken($blue, 11);
+  }
 }
 
 .Button--link {
   background: transparent;
+  color: $blue;
+
+  &:hover,
+  &.hover,
+  &:focus,
+  &.focus {
+    background: rgba($black, .05);
+    color: $blue-300;
+  }
+
+  &:active,
+  &.active {
+    background: rgba($black, .11);
+    color: $blue-400;
+  }
 }
 
 .Button--is-disabled {

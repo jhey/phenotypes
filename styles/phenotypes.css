@@ -377,13 +377,11 @@ hr {
   border-color: rgba(255, 255, 255, 0.14); }
 
 .Button:disabled, .Button.disabled, .Button--is-disabled {
-  color: rgba(0, 0, 0, 0.86);
   opacity: 0.54;
   pointer-events: none; }
 
 .Button {
   font-size: 16px;
-  line-height: 1.49271;
   padding: 11px 24px 12px;
   background: rgba(0, 0, 0, 0.07);
   border: 0;
@@ -392,6 +390,7 @@ hr {
   cursor: pointer;
   display: inline-block;
   font-weight: normal;
+  line-height: 1.49271;
   text-align: center;
   user-select: none;
   vertical-align: middle;
@@ -406,70 +405,103 @@ hr {
   background: rgba(0, 0, 0, 0.18); }
 
 .Button--danger {
-  background: #f04d5d; }
+  background: #f04d5d;
+  color: #fff; }
+
+.Button--danger:hover, .Button--danger.hover, .Button--danger:focus, .Button--danger.focus {
+  background: #ee3548;
+  color: #fff; }
+
+.Button--danger:active, .Button--danger.active {
+  background: #ec192e; }
 
 .Button--primary {
-  background: #16b8e0; }
+  background: #16b8e0;
+  color: #fff;
+  font-weight: bold; }
+
+.Button--primary:hover, .Button--primary.hover, .Button--primary:focus, .Button--primary.focus {
+  background: #14a5c9;
+  color: #fff; }
+
+.Button--primary:active, .Button--primary.active {
+  background: #118ead; }
 
 .Button--link {
-  background: transparent; }
+  background: transparent;
+  color: #16b8e0; }
+
+.Button--link:hover, .Button--link.hover, .Button--link:focus, .Button--link.focus {
+  background: rgba(0, 0, 0, 0.05);
+  color: #008ab3; }
+
+.Button--link:active, .Button--link.active {
+  background: rgba(0, 0, 0, 0.11);
+  color: #005678; }
 
 .Button--small {
-  font-size: 14px; }
+  font-size: 14px;
+  padding: 7px 18px 8px; }
 
 .Button--large {
-  font-size: 18px; }
+  font-size: 18px;
+  padding: 16px 31px 18px; }
 
 .Button--medium {
   font-size: 16px;
-  line-height: 1.49271;
   padding: 11px 24px 12px; }
 
 .Button--small {
-  font-size: 14px; }
+  font-size: 14px;
+  padding: 7px 18px 8px; }
 
 .Button--large {
-  font-size: 18px; }
+  font-size: 18px;
+  padding: 16px 31px 18px; }
 
 @media (min-width: 600px) {
   .Button--medium-sm {
     font-size: 16px;
-    line-height: 1.49271;
     padding: 11px 24px 12px; }
   .Button--small-sm {
-    font-size: 14px; }
+    font-size: 14px;
+    padding: 7px 18px 8px; }
   .Button--large-sm {
-    font-size: 18px; } }
+    font-size: 18px;
+    padding: 16px 31px 18px; } }
 
 @media (min-width: 900px) {
   .Button--medium-md {
     font-size: 16px;
-    line-height: 1.49271;
     padding: 11px 24px 12px; }
   .Button--small-md {
-    font-size: 14px; }
+    font-size: 14px;
+    padding: 7px 18px 8px; }
   .Button--large-md {
-    font-size: 18px; } }
+    font-size: 18px;
+    padding: 16px 31px 18px; } }
 
 @media (min-width: 1200px) {
   .Button--medium-lg {
     font-size: 16px;
-    line-height: 1.49271;
     padding: 11px 24px 12px; }
   .Button--small-lg {
-    font-size: 14px; }
+    font-size: 14px;
+    padding: 7px 18px 8px; }
   .Button--large-lg {
-    font-size: 18px; } }
+    font-size: 18px;
+    padding: 16px 31px 18px; } }
 
 @media (min-width: 1500px) {
   .Button--medium-xl {
     font-size: 16px;
-    line-height: 1.49271;
     padding: 11px 24px 12px; }
   .Button--small-xl {
-    font-size: 14px; }
+    font-size: 14px;
+    padding: 7px 18px 8px; }
   .Button--large-xl {
-    font-size: 18px; } }
+    font-size: 18px;
+    padding: 16px 31px 18px; } }
 
 .container {
   margin-right: auto;
