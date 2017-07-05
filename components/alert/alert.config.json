@@ -1,4 +1,5 @@
 {
   "name": "alert",
-  "label": "Alert"
+  "label": "Alert",
+  "status": "demo"
 }

@@ -376,6 +376,22 @@ hr {
 .hr-reversed {
   border-color: rgba(255, 255, 255, 0.14); }
 
+.Alert {
+  border-radius: 3px;
+  padding: 16px; }
+
+.Alert--success {
+  background-color: #03ab8c;
+  color: #fff; }
+
+.Alert--info {
+  background-color: #853b94;
+  color: #fff; }
+
+.Alert--danger {
+  background-color: #f04d5d;
+  color: #fff; }
+
 .Button {
   font-size: 16px;
   background: #eee;

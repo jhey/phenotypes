@@ -1,5 +1,21 @@
 // scss-lint:disable SelectorFormat
 
 .Alert {
+  border-radius: $border-radius;
+  padding: $spacer;
+}
 
+.Alert--success {
+  background-color: $green-300;
+  color: $white;
+}
+
+.Alert--info {
+  background-color: $purple-300;
+  color: $white;
+}
+
+.Alert--danger {
+  background-color: $red-200;
+  color: $white;
 }
