@@ -1,7 +1,6 @@
 /* NOTE: This file is auto-generated while Fractal is running! */
 
 module.exports = {
-  "alert": require("../components/alert/alert.jsx"),
   "button": require("../components/button/button.jsx"),
   "css-display-utilities": require("../components/css_display_utilities/css_display_utilities.jsx"),
   "css-flexbox-utilities": require("../components/css_flexbox_utilities/css_flexbox_utilities.jsx"),
@@ -9,6 +8,7 @@ module.exports = {
   "css-text-utilities": require("../components/css_text_utilities/css_text_utilities.jsx"),
   "form-group": require("../components/form_group/form_group.jsx"),
   "grid": require("../components/grid/grid.jsx"),
+  "message": require("../components/message/message.jsx"),
   "preview": require("../components/_preview.jsx"),
   "text-input": require("../components/text_input/text_input.jsx"),
 };

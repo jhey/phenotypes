@@ -1,25 +1,25 @@
 const React = require('react');
 
-function AlertExamples() {
+function MessageExamples() {
   return (
     <div>
-      <div className="Alert Alert--success">
+      <div className="Message Message--success">
         You did good.
       </div>
 
       <br />
 
-      <div className="Alert Alert--info">
+      <div className="Message Message--info">
         I’m not very alarming but I get your attention.
       </div>
 
       <br />
 
-      <div className="Alert Alert--danger">
+      <div className="Message Message--danger">
         ...we’ve got a problem.
       </div>
     </div>
   );
 }
 
-module.exports = AlertExamples;
+module.exports = MessageExamples;
