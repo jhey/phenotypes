@@ -16,11 +16,6 @@
   }
 }
 
-%button-disabled {
-  opacity: $alpha-600;
-  pointer-events: none;
-}
-
 .Button {
   @include button-sizer;
   background: rgba($black, $alpha-200);
@@ -38,9 +33,9 @@
   white-space: nowrap;
 
   &:hover,
-  &.hover,
   &:focus,
-  &.focus {
+  &.Button--is-hovered,
+  &.Button--is-focused {
     @include depth(4);
     background: rgba($black, $alpha-200 + .05);
     color: $text-color-primary;
@@ -50,12 +45,13 @@
   }
 
   &:disabled,
-  &.disabled {
-    @extend %button-disabled;
+  &.Button--is-disabled {
+    opacity: $alpha-600;
+    pointer-events: none;
   }
 
   &:active,
-  &.active {
+  &.Button--is-active {
     @include depth(0);
     background: rgba($black, $alpha-200 + .11);
     transform: translateY(0) scaleX(1) scaleY(1);
@@ -73,15 +69,15 @@
   color: $white;
 
   &:hover,
-  &.hover,
   &:focus,
-  &.focus {
+  &.Button--is-hovered,
+  &.Button--is-focused {
     background: darken($red, 5);
     color: $white;
   }
 
   &:active,
-  &.active {
+  &.Button--is-active {
     background: darken($red, 11);
   }
 }
@@ -93,16 +89,16 @@
   font-weight: $font-weight-bold;
 
   &:hover,
-  &.hover,
   &:focus,
-  &.focus {
+  &.Button--is-hovered,
+  &.Button--is-focused {
     @include depth(7);
     background: darken($blue, 5);
     color: $white;
   }
 
   &:active,
-  &.active {
+  &.Button--is-active {
     background: darken($blue, 11);
   }
 }
@@ -112,22 +108,18 @@
   color: $blue;
 
   &:hover,
-  &.hover,
   &:focus,
-  &.focus {
+  &.Button--is-hovered,
+  &.Button--is-focused {
     background: rgba($black, .05);
     color: $blue-300;
   }
 
   &:active,
-  &.active {
+  &.Button--is-active {
     background: rgba($black, .11);
     color: $blue-400;
   }
-}
-
-.Button--is-disabled {
-  @extend %button-disabled;
 }
 
 .Button--small {
