@@ -1,6 +1,7 @@
 /* NOTE: This file is auto-generated while Fractal is running! */
 
 module.exports = {
+  "alert": require("../components/alert/alert.jsx"),
   "button": require("../components/button/button.jsx"),
   "css-display-utilities": require("../components/css_display_utilities/css_display_utilities.jsx"),
   "css-flexbox-utilities": require("../components/css_flexbox_utilities/css_flexbox_utilities.jsx"),
