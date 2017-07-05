@@ -2,17 +2,17 @@
 @mixin button-sizer($size: 'medium') {
   @if $size == 'small' {
     font-size: $font-size-2;
-    padding: modular-scale-px(-6) modular-scale-px(1) modular-scale-px(-5);
+    padding: modular-scale-px(-6) modular-scale-px(-1) modular-scale-px(-5);
   }
 
   @else if $size == 'medium' {
     font-size: $font-size-3;
-    padding: modular-scale-px(-3) modular-scale-px(3) modular-scale-px(-2);
+    padding: modular-scale-px(-3) modular-scale-px(2) modular-scale-px(-2);
   }
 
   @else if $size == 'large' {
     font-size: $font-size-4;
-    padding: modular-scale-px(0) modular-scale-px(5) modular-scale-px(1);
+    padding: modular-scale-px(0) modular-scale-px(4) modular-scale-px(1);
   }
 }
 
@@ -32,6 +32,7 @@
   font-weight: $font-weight-normal;
   line-height: $line-height-base;
   text-align: center;
+  transition: all .2s;
   user-select: none;
   vertical-align: middle;
   white-space: nowrap;
@@ -40,9 +41,12 @@
   &.hover,
   &:focus,
   &.focus {
+    @include depth(4);
     background: rgba($black, $alpha-200 + .05);
     color: $text-color-primary;
     text-decoration: none;
+    transform: translateY(-2.25px) scaleX(1.015) scaleY(1.015);
+    transition-duration: .07s;
   }
 
   &:disabled,
@@ -52,7 +56,15 @@
 
   &:active,
   &.active {
+    @include depth(0);
     background: rgba($black, $alpha-200 + .11);
+    transform: translateY(0) scaleX(1) scaleY(1);
+    transition-duration: 0s;
+  }
+
+  // Allow focus indicator when tabbing but hide it if clicking
+  &:active:focus {
+    outline: 0;
   }
 }
 
@@ -75,8 +87,8 @@
 }
 
 .Button--primary {
+  @include depth(4);
   background: $blue;
-  box-shadow: depth(4);
   color: $white;
   font-weight: $font-weight-bold;
 
@@ -84,6 +96,7 @@
   &.hover,
   &:focus,
   &.focus {
+    @include depth(7);
     background: darken($blue, 5);
     color: $white;
   }

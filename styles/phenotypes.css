@@ -382,7 +382,7 @@ hr {
 
 .Button {
   font-size: 16px;
-  padding: 11px 24px 12px;
+  padding: 11px 21px 12px;
   background: rgba(0, 0, 0, 0.07);
   border: 0;
   border-radius: 3px;
@@ -392,17 +392,27 @@ hr {
   font-weight: normal;
   line-height: 1.49271;
   text-align: center;
+  transition: all .2s;
   user-select: none;
   vertical-align: middle;
   white-space: nowrap; }
 
 .Button:hover, .Button.hover, .Button:focus, .Button.focus {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.14), 0 1px 1px rgba(0, 0, 0, 0.07), 0 0 6px rgba(0, 0, 0, 0.07);
   background: rgba(0, 0, 0, 0.12);
   color: rgba(0, 0, 0, 0.86);
-  text-decoration: none; }
+  text-decoration: none;
+  transform: translateY(-2.25px) scaleX(1.015) scaleY(1.015);
+  transition-duration: .07s; }
 
 .Button:active, .Button.active {
-  background: rgba(0, 0, 0, 0.18); }
+  box-shadow: none;
+  background: rgba(0, 0, 0, 0.18);
+  transform: translateY(0) scaleX(1) scaleY(1);
+  transition-duration: 0s; }
+
+.Button:active:focus {
+  outline: 0; }
 
 .Button--danger {
   background: #f04d5d;
@@ -416,12 +426,13 @@ hr {
   background: #ec192e; }
 
 .Button--primary {
-  background: #16b8e0;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.14), 0 1px 1px rgba(0, 0, 0, 0.07), 0 0 6px rgba(0, 0, 0, 0.07);
+  background: #16b8e0;
   color: #fff;
   font-weight: bold; }
 
 .Button--primary:hover, .Button--primary.hover, .Button--primary:focus, .Button--primary.focus {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.14), 0 1px 2px rgba(0, 0, 0, 0.07), 0 0 10px rgba(0, 0, 0, 0.07);
   background: #14a5c9;
   color: #fff; }
 
@@ -442,67 +453,67 @@ hr {
 
 .Button--small {
   font-size: 14px;
-  padding: 7px 18px 8px; }
+  padding: 7px 14px 8px; }
 
 .Button--large {
   font-size: 18px;
-  padding: 16px 31px 18px; }
+  padding: 16px 27px 18px; }
 
 .Button--medium {
   font-size: 16px;
-  padding: 11px 24px 12px; }
+  padding: 11px 21px 12px; }
 
 .Button--small {
   font-size: 14px;
-  padding: 7px 18px 8px; }
+  padding: 7px 14px 8px; }
 
 .Button--large {
   font-size: 18px;
-  padding: 16px 31px 18px; }
+  padding: 16px 27px 18px; }
 
 @media (min-width: 600px) {
   .Button--medium-sm {
     font-size: 16px;
-    padding: 11px 24px 12px; }
+    padding: 11px 21px 12px; }
   .Button--small-sm {
     font-size: 14px;
-    padding: 7px 18px 8px; }
+    padding: 7px 14px 8px; }
   .Button--large-sm {
     font-size: 18px;
-    padding: 16px 31px 18px; } }
+    padding: 16px 27px 18px; } }
 
 @media (min-width: 900px) {
   .Button--medium-md {
     font-size: 16px;
-    padding: 11px 24px 12px; }
+    padding: 11px 21px 12px; }
   .Button--small-md {
     font-size: 14px;
-    padding: 7px 18px 8px; }
+    padding: 7px 14px 8px; }
   .Button--large-md {
     font-size: 18px;
-    padding: 16px 31px 18px; } }
+    padding: 16px 27px 18px; } }
 
 @media (min-width: 1200px) {
   .Button--medium-lg {
     font-size: 16px;
-    padding: 11px 24px 12px; }
+    padding: 11px 21px 12px; }
   .Button--small-lg {
     font-size: 14px;
-    padding: 7px 18px 8px; }
+    padding: 7px 14px 8px; }
   .Button--large-lg {
     font-size: 18px;
-    padding: 16px 31px 18px; } }
+    padding: 16px 27px 18px; } }
 
 @media (min-width: 1500px) {
   .Button--medium-xl {
     font-size: 16px;
-    padding: 11px 24px 12px; }
+    padding: 11px 21px 12px; }
   .Button--small-xl {
     font-size: 14px;
-    padding: 7px 18px 8px; }
+    padding: 7px 14px 8px; }
   .Button--large-xl {
     font-size: 18px;
-    padding: 16px 31px 18px; } }
+    padding: 16px 27px 18px; } }
 
 .container {
   margin-right: auto;
