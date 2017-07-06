@@ -1360,7 +1360,7 @@ hr {
   padding: 5px 9px 6px; }
 
 .TextInput--large {
-  font-size: 21px;
+  font-size: 18px;
   padding: 14px 19px 16px; }
 
 .TextInput--medium,
@@ -1375,7 +1375,7 @@ hr {
 
 .TextInput--large,
 .FormGroup--large .TextInput {
-  font-size: 21px;
+  font-size: 18px;
   padding: 14px 19px 16px; }
 
 @media (min-width: 600px) {
@@ -1389,7 +1389,7 @@ hr {
     padding: 5px 9px 6px; }
   .TextInput--large-sm,
   .FormGroup--large-sm .TextInput {
-    font-size: 21px;
+    font-size: 18px;
     padding: 14px 19px 16px; } }
 
 @media (min-width: 900px) {
@@ -1403,7 +1403,7 @@ hr {
     padding: 5px 9px 6px; }
   .TextInput--large-md,
   .FormGroup--large-md .TextInput {
-    font-size: 21px;
+    font-size: 18px;
     padding: 14px 19px 16px; } }
 
 @media (min-width: 1200px) {
@@ -1417,7 +1417,7 @@ hr {
     padding: 5px 9px 6px; }
   .TextInput--large-lg,
   .FormGroup--large-lg .TextInput {
-    font-size: 21px;
+    font-size: 18px;
     padding: 14px 19px 16px; } }
 
 @media (min-width: 1500px) {
@@ -1431,7 +1431,7 @@ hr {
     padding: 5px 9px 6px; }
   .TextInput--large-xl,
   .FormGroup--large-xl .TextInput {
-    font-size: 21px;
+    font-size: 18px;
     padding: 14px 19px 16px; } }
 
 .FormGroup__error {

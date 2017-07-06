@@ -16,7 +16,7 @@
   }
 
   @else if $size == 'large' {
-    font-size: $font-size-5;
+    font-size: $font-size-4;
     padding: _text-input-pad(0) _text-input-pad(2) _text-input-pad(1);
   }
 }
