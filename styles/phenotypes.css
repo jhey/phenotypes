@@ -1226,6 +1226,22 @@ hr {
   .offset-11-xl {
     margin-left: 91.66667%; } }
 
+.Message {
+  border-radius: 3px;
+  padding: 16px; }
+
+.Message--success {
+  background-color: #03ab8c;
+  color: #fff; }
+
+.Message--info {
+  background-color: #853b94;
+  color: #fff; }
+
+.Message--danger {
+  background-color: #f04d5d;
+  color: #fff; }
+
 .TextInput {
   font-size: 16px;
   border: 2px solid #dbdbdb;

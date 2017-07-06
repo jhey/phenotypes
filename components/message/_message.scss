@@ -1,0 +1,21 @@
+// scss-lint:disable SelectorFormat
+
+.Message {
+  border-radius: $border-radius;
+  padding: $spacer;
+}
+
+.Message--success {
+  background-color: $brand-success;
+  color: $white;
+}
+
+.Message--info {
+  background-color: $brand-primary;
+  color: $white;
+}
+
+.Message--danger {
+  background-color: $brand-danger;
+  color: $white;
+}
