@@ -1355,6 +1355,11 @@ hr {
 .FormGroup--has-error .TextInput {
   border-color: #f04d5d; }
 
+.TextInput--has-error.TextInput:focus, .TextInput--has-error.TextInput--is-focused,
+.FormGroup--has-error .TextInput.TextInput:focus,
+.FormGroup--has-error .TextInput.TextInput--is-focused {
+  box-shadow: 0 0 11px rgba(255, 151, 154, 0.54); }
+
 .TextInput--small {
   font-size: 14px;
   padding: 5px 9px 6px; }

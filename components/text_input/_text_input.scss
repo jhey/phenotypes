@@ -54,6 +54,11 @@
 .TextInput--has-error,
 .FormGroup--has-error .TextInput {
   border-color: $red;
+
+  &.TextInput:focus,
+  &.TextInput--is-focused {
+    box-shadow: 0 0 11px rgba($red-100, $alpha-600);
+  }
 }
 
 //
