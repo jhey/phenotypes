@@ -6,16 +6,16 @@
 }
 
 .Message--success {
-  background-color: $green-300;
+  background-color: $brand-success;
   color: $white;
 }
 
 .Message--info {
-  background-color: $purple-300;
+  background-color: $brand-primary;
   color: $white;
 }
 
 .Message--danger {
-  background-color: $red-200;
+  background-color: $brand-danger;
   color: $white;
 }
