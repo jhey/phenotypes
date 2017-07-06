@@ -18,7 +18,7 @@
 // Feature toggles
 @import 'features';
 
-// Modular scale
+// Modular scale and depth helpers
 @import 'modular-scale';
 
 // Core variables and mixins
@@ -32,6 +32,7 @@
 @import 'type';
 
 // Components
+@import 'components';
 
 // Utilities
 @import 'utilities';

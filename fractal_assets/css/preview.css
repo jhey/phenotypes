@@ -1,3 +1,15 @@
 #phenotypes__fractalPreview {
 	padding: 40px;
 }
+
+/*
+ * CSS for styling demos and examples in fractal
+ */
+
+.grid-example-content {
+  color: #fff;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: #2dcfa1;
+  border: 1px solid #007868;
+}

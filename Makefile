@@ -16,3 +16,6 @@ clean:
 
 shell:
 	docker-compose ${COMPOSE_ARGS} run --rm fractal bash
+
+test:
+	docker-compose ${COMPOSE_ARGS} run --rm --entrypoint='npm run' fractal test

@@ -78,11 +78,11 @@ This process may seem disjointed, but it allows us to create charts in a consist
 
 ### Layout guidelines
 
-**Dimensions:** Charts are almost always 1080 x 1080 pixels. Only the height is allowed to change to accommodate for long lists. These dimensions were chosen as a sort of compromise between the [wildly inconsistent image sizes used across social media platforms](https://makeawebsitehub.com/social-media-image-sizes-cheat-sheet/).
+**Dimensions:** Default chart dimensions are 1080 by 1080 pixels. These dimensions were chosen as a sort of compromise between the [wildly inconsistent image sizes used across social media platforms](https://makeawebsitehub.com/social-media-image-sizes-cheat-sheet/). Depending on the content being presented, height can be altered to suit, but width must be fixed.
 
-**Header:** Combined, the title and subtitle must not exceed 3 lines. Either the title is one line and the subtitle is two lines, or vice versa. Title is black and 40pt, subtitle is 54% transparent black and 37pt.
+**Header:** With few exceptions, title and subtitle must not exceed 3 lines. Either the title is one line and the subtitle is two lines, or vice versa. This is to keep things neat and concise. Title is black and 40pt, subtitle is 54% transparent black and 37pt.
 
-**Legends and callouts:** Text is black 25pt.
+**Legends and callouts:** Text is black 25pt, which is the minimum readable size.
 
 **Chart area:** The chart background color is `#EEEEEE` to provide contrast against white backgrounds used on our blog, social media, and most other sites.
 
@@ -121,19 +121,34 @@ Which axis you put your categorical variables on is an aesthetic choice. In this
 
 ### Time-series data
 
-Line charts aren't the only way to show how data changes over time. In this example, a heat map was employed to show when women received a specific type of ultrasound over the course of 308,000 pregnancies. Bands in gray represent weeks where only 100-200 patients were observed as receiving an ultrasound, while the darkest purple bands represent 10,000+ patient observations.
+Line charts are most commonly used to display time-series data. Generally speaking, lines should be used for rate functions, and bars should be used for discrete values.
+
+![Data viz example 6](/img/guides/data-viz-example-6.png)
+<p class="caption">Source: [What data from 205 million private health insurance claims reveals about America’s opioid crisis](https://amino.com/blog/opioid-epidemic-data-opioid-use-disorder/)</p>
+
+The top chart shows deaths per 100,000 residents as a line (rate function) while the bottom chart shows patients as bars (discrete values). This is also an example of a combination chart: one title and two subtitles, tied together with narrative callouts.
+
+However, line and bar charts aren't the only way to show how data changes over time. In the example below, a heat map was employed to show when women received a specific type of ultrasound over the course of 308,000 pregnancies. Bands in gray represent weeks where only 100-200 patients were observed as receiving an ultrasound, while the darkest purple bands represent 10,000+ patient observations.
 
 ![Data viz example 3](/img/guides/data-viz-example-3.png)
+<p class="caption">Source: [What to expect when you’re expecting pregnancy ultrasounds](https://amino.com/blog/pregnancy-ultrasound-cost-how-many-ultrasounds-during-pregnancy/)</p>
 
 ### Geographical data
 
-The hexagonal tile map is used when trying to compare states by a scalar variable, like cost, population, or age.
+The hexagonal tile map is used when trying to compare states by a scalar variable (like cost, population, or age) and the precise geographical location of each state is not important.
 
 ![Data viz example 5](/img/guides/data-viz-example-5.png)
 <p class="caption">Source: [Here’s how much women could pay for preventive care under the AHCA](https://amino.com/blog/heres-how-much-women-could-pay-for-preventive-care-under-the-ahca/)</p>
+
+Regular maps are used to display county-level data or similar.
+
+![Data viz example 7](/img/guides/data-viz-example-7.png)
+<p class="caption">Source: [What data from 205 million private health insurance claims reveals about America’s opioid crisis](https://amino.com/blog/opioid-epidemic-data-opioid-use-disorder/)</p>
+
 
 ### Relationships
 
 A [chord diagram](https://en.wikipedia.org/wiki/Chord_diagram) is a useful way to visualize relationships in a matrix of data. In this example, the referring doctor is connected to the rendering doctor by a line representing the volume of referrals made that year—the thicker the line, the more referrals.
 
 ![Data viz example 4](/img/guides/data-viz-example-4.png)
+<p class="caption">Source: [Data on 211 million referrals shows how doctors really work together](https://amino.com/blog/data-on-211-million-referrals-shows-how-doctors-really-work-together/)</p>

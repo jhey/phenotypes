@@ -49,6 +49,17 @@ In addition to the .jsx file, a component's directory can contain additional fil
 
 Take a look at an existing component or the [Fractal components](http://fractal.build/guide/components) documentation for more details.
 
+### Testing
+
+Unit tests for a component should go in a component's directory. In the example above, tests for a generic button component would be `components/button/button.spec.js`. Tests are run with [Mocha](https://mochajs.org/) using the [Chai](http://chaijs.com/) assertion library and Airbnb's [Enzyme](https://github.com/airbnb/enzyme) as a React testing utility. Because Enzyme's `mount` API requires a DOM, test commands first load a document into the global scope using [JSDOM](https://github.com/tmpvar/jsdom).
+
+To run all the tests:
+```
+$ make test
+```
+
+To run tests matching a regex pattern, first run `make shell` to create a shell inside the container then `npm run test --grep '<pattern>'`. The pattern should match text for the `describe` or `it` blocks for the suite or tests you want to run.
+
 ## Developing styles
 
 The SASS file organization scheme is loosely based on Bootstrap 4. The entry point file is phenotypes.scss, which goes on to import all the things:

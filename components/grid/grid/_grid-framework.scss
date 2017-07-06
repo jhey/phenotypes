@@ -1,0 +1,68 @@
+// scss-lint:disable PropertySortOrder, SpaceAfterPropertyColon, DeclarationOrder, EmptyLineBetweenBlocks, StringQuotes
+
+// Framework grid generation
+//
+// Used only by Bootstrap to generate the correct number of grid classes given
+// any value of `$grid-columns`.
+
+@mixin make-grid-columns($columns: $grid-columns, $gutters: $grid-gutter-widths, $breakpoints: $grid-breakpoints) {
+  // Common properties for all breakpoints
+  %grid-column {
+    position: relative;
+    width: 100%;
+    min-height: 1px; // Prevent columns from collapsing when empty
+
+    @include make-gutters($gutters);
+  }
+
+  @each $breakpoint in map-keys($breakpoints) {
+    // [AMINO] modified from infix to suffix
+    $suffix: breakpoint-suffix($breakpoint, $breakpoints);
+
+    // Allow columns to stretch full width below their breakpoints
+    @for $i from 1 through $columns {
+      .col-#{$i}#{$suffix} {
+        @extend %grid-column;
+      }
+    }
+    .col#{$suffix} {
+      @extend %grid-column;
+    }
+
+    @include media-breakpoint-up($breakpoint, $breakpoints) {
+      // Provide basic `.col-{bp}` classes for equal-width flexbox columns
+      .col#{$suffix} {
+        flex-basis: 0;
+        flex-grow: 1;
+        max-width: 100%;
+      }
+      .col#{$suffix}-auto {
+        flex: 0 0 auto;
+        width: auto;
+      }
+
+      @for $i from 1 through $columns {
+        .col-#{$i}#{$suffix} {
+          @include make-col($i, $columns);
+        }
+      }
+
+      @each $modifier in (pull, push) {
+        @for $i from 0 through $columns {
+          .#{$modifier}-#{$i}#{$suffix} {
+            @include make-col-modifier($modifier, $i, $columns)
+          }
+        }
+      }
+
+      // `$columns - 1` because offsetting by the width of an entire row isn't possible
+      @for $i from 0 through ($columns - 1) {
+        @if not ($suffix == "" and $i == 0) { // Avoid emitting useless .offset-xs-0
+          .offset-#{$i}#{$suffix} {
+            @include make-col-modifier(offset, $i, $columns)
+          }
+        }
+      }
+    }
+  }
+}

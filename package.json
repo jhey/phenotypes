@@ -1,8 +1,9 @@
 {
   "name": "@aminohealth/phenotypes",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "Amino's design language and front-end component library",
   "dependencies": {
+    "classnames": "^2.2.5",
     "node-sass": "^4.5.3",
     "react": "15.4.2",
     "react-dom": "15.4.2"
@@ -12,11 +13,18 @@
     "@frctl/mandelbrot": "^1.1.0",
     "babel-core": "^6.24.1",
     "babel-loader": "^7.0.0",
+    "babel-preset-airbnb": "^2.2.3",
+    "chai": "^4.0.2",
+    "enzyme": "^2.8.2",
     "fractal-react-adapter": "^1.0.3",
+    "jsdom": "^11.0.0",
+    "mocha": "^3.4.2",
+    "react-addons-test-utils": "15.4.2",
+    "sinon": "^2.3.2",
     "webpack": "^2.4.1"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha --compilers js:babel-register --require tests/test_setup.js --recursive components/**/*.spec.jsx",
     "build-css": "node-sass styles/phenotypes.scss styles/phenotypes.css",
     "watch-css": "npm run build-css && node-sass -w -r styles/ -o styles/",
     "build-js": "webpack",

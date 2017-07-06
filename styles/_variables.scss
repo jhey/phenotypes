@@ -63,7 +63,7 @@ $orange: $orange-200 !default;
 $red:    $red-200    !default;
 $purple: $purple-300 !default;
 $blue:   $blue-200   !default;
-$green:  $green-200  !default;
+$green:  $green-300  !default;
 
 // Semantic color scheme (a la Bootstrap)
 $brand-primary: $purple   !default;
@@ -215,8 +215,23 @@ $grid-breakpoints: (
 // Grid
 // ------------------------------
 
-// TODO: Grid columns and other variables (probably not using Bootstrap grid)
+$container-max-widths: (
+  xs: 451px,
+  sm: 673px,
+  md: 879px,
+  lg: 1148px,
+  xl: 1148px
+) !default;
 
+$grid-columns:               12 !default;
+$grid-gutter-width-base:     $spacer-5 !default;
+$grid-gutter-widths: (
+  xs: $grid-gutter-width-base,
+  sm: $grid-gutter-width-base,
+  md: $grid-gutter-width-base,
+  lg: $grid-gutter-width-base,
+  xl: $grid-gutter-width-base
+) !default;
 
 // ------------------------------
 // Components

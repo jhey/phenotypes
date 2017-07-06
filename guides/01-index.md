@@ -5,26 +5,24 @@ status: draft
 
 Welcome to Phenotypes—Amino's design system. Phenotypes is a repository of principles and modules that we use to design and build our products. It's a central source of truth that facilitates clear communication and efficient workflows for designers and developers.
 
-Phenotypes treats the following topics as first-class concerns:
-
-* Alignment with Amino's brand attributes
-* Aesthetics and principles of good design (e.g. consistency)
-* Usability and accessibility
-* Technology considerations like devices and web browsers
-* Longevity and maintainability
-* Balancing philosophical purity with implementation pragmatism
-
 The design system is built from the foundation up, starting with abstract principles—like brand attributes and modular scale—and applying them consistently to everything from our color palette to complex interactive components. 
 
 Phenotypes often draws inspiration from and even borrows ideas and syntax from ambitious projects like [Google's Material Design](https://material.io/guidelines/) and [Bootstrap](https://v4-alpha.getbootstrap.com/getting-started/introduction/). Many talented people have put an incredible amount of effort into these and other projects. Whenever we borrow, we make a note of it for attribution and further reading.
 
-By it's nature, Phenotypes is and always will be a work in progress. Use it in good health!
+By its nature, Phenotypes is and always will be a work in progress. Use it in good health!
 
 ---
 
 ## Principles
 
-TK (move the "first-class" concerns stuff here and rewrite to be more instructive)
+Phenotypes treats the following topics as first-class concerns:
+
+* Alignment with Amino's brand attributes (see below)
+* Aesthetics and principles of good design (e.g. consistency)
+* Usability and accessibility
+* Technology considerations like devices and web browsers
+* Longevity and maintainability
+* Balancing philosophical purity with implementation pragmatism
 
 ---
 

@@ -5,24 +5,6 @@
 // Based on Bootstrap 4
 // https://github.com/twbs/bootstrap/blob/v4-dev/scss/utilities/_spacing.scss
 //
-// Class names follow this format:
-//
-// [direction][sides][size]-[breakpoint]
-//
-// - Direction is (m, p) for margin/padding
-// - Sides (optional) is one of:
-//    * (t, b, l, r) for top/bottom/left/right
-//    * (x, y) for horizontal/vertical
-//    * omitted for all sides
-// - Size is a number from 0 to 9 (see the $spacer-N variables for sizes)
-// - Breakpoint is an optional responsive breakpoint (sm, md, lg, xl)
-// - Margin auto values are supported and follow the same syntax (e.g. .mx-auto-md)
-//
-// Examples:
-//
-//   .mb4.mb5-md - adds spacer-4 margin to bottom for xs up, and spacer-5 margin for md up
-//   .py1 - adds a spacer-1 padding to top and bottom
-//
 // scss-lint:disable ImportantRule
 // scss-lint:disable SpaceBeforeBrace
 // scss-lint:disable SpaceAfterPropertyColon
@@ -37,22 +19,30 @@
           $size: $i - 1;
           $length: nth($spacers, $i);
 
-          // m0-sm
+          // e.g. m3-sm
           .#{$abbrev}#{$size}#{$suffix}  { #{$prop}:        $length !important; }
 
-          // mt-sm
+          // e.g. mt3-sm
           .#{$abbrev}t#{$size}#{$suffix} { #{$prop}-top:    $length !important; }
           .#{$abbrev}r#{$size}#{$suffix} { #{$prop}-right:  $length !important; }
           .#{$abbrev}b#{$size}#{$suffix} { #{$prop}-bottom: $length !important; }
           .#{$abbrev}l#{$size}#{$suffix} { #{$prop}-left:   $length !important; }
 
-          // mx-sm
+          // e.g. mx3-sm
           .#{$abbrev}x#{$size}#{$suffix} {
             #{$prop}-right: $length !important;
             #{$prop}-left:  $length !important;
           }
 
-          // my-sm
+          @if $abbrev == 'm' {  // negation only applicable for margin
+            // e.g. mxn3-sm
+            .#{$abbrev}xn#{$size}#{$suffix} {
+              #{$prop}-right: -$length !important;
+              #{$prop}-left:  -$length !important;
+            }
+          }
+
+          // e.g. my3-sm
           .#{$abbrev}y#{$size}#{$suffix} {
             #{$prop}-top:    $length !important;
             #{$prop}-bottom: $length !important;
