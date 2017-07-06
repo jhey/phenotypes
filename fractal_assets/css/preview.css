@@ -6,9 +6,7 @@
  * CSS for styling demos and examples in fractal
  */
 
-.grid-examples .col,
-.grid-examples [class^=col-]
-{
+.grid-example-content {
   color: #fff;
   padding-top: 1rem;
   padding-bottom: 1rem;

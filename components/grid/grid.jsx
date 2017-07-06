@@ -2,7 +2,7 @@ import React from 'react';
 
 function GridExamples() {
   return (
-    <div className="grid-examples">
+    <div>
       <div className="container">
         <p>
           <strong>Responsive:</strong> add multiple classes with responsive suffixes to
@@ -10,11 +10,21 @@ function GridExamples() {
         </p>
 
         <div className="row">
-          <div className="col-4 col-2-md">.col-4.col-2-md</div>
-          <div className="col-4 col-8-md">
-            Resize me! I'm wider when the screen is wider.<br />.col-4.col-8-md
+          <div className="col-4 col-2-md">
+            <div className="grid-example-content">
+              .col-4.col-2-md
+            </div>
           </div>
-          <div className="col-4 col-2-md">.col-4.col-2-md</div>
+          <div className="col-4 col-8-md">
+            <div className="grid-example-content">
+              Resize me! I’m wider when the screen is wider.<br />.col-4.col-8-md
+            </div>
+          </div>
+          <div className="col-4 col-2-md">
+            <div className="grid-example-content">
+              .col-4.col-2-md
+            </div>
+          </div>
         </div>
 
         <hr />
@@ -22,7 +32,9 @@ function GridExamples() {
         <p><strong>Offsets</strong></p>
 
         <div className="row">
-          <div className="col-6 offset-3">.col-6.offset-3</div>
+          <div className="col-6 offset-3">
+            <div className="grid-example-content">.col-6.offset-3</div>
+          </div>
         </div>
 
         <hr />
@@ -30,13 +42,28 @@ function GridExamples() {
         <p>
           <strong>Custom gutter spacing</strong>:
           customize gutter widths by adding <code>.no-gutters</code> to
-          your <code>.row</code> class, and then using spacing helpers on the <code>.col-*</code> classes.
+          your <code>.row</code> class, and then using <code>.px*</code> padding helpers on the <code>.col-*</code> classes.
+        </p>
+        <p>
+          You’ll also need to add a corresponding negative <code>.mxn*</code> margin class on the <code>.row</code> to get rid of the extra padding on the sides.
         </p>
 
-        <div className="row no-gutters">
-          <div className="col-4 px6">.col-4.px6</div>
-          <div className="col-4 px6">.col-4.px6</div>
-          <div className="col-4 px6">.col-4.px6</div>
+        <div className="row no-gutters mxn1">
+          <div className="col-4 px1">
+            <div className="grid-example-content">
+              .col-4.px1
+            </div>
+          </div>
+          <div className="col-4 px1">
+            <div className="grid-example-content">
+              .col-4.px1
+            </div>
+          </div>
+          <div className="col-4 px1">
+            <div className="grid-example-content">
+              .col-4.px1
+            </div>
+          </div>
         </div>
       </div>
     </div>
