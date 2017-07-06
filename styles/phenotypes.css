@@ -444,7 +444,9 @@ hr {
   margin-right: auto;
   margin-left: auto;
   padding-right: 12px;
-  padding-left: 12px; }
+  padding-left: 12px;
+  width: 451px;
+  max-width: 100%; }
 
 @media (min-width: 600px) {
   .container {
@@ -468,22 +470,22 @@ hr {
 
 @media (min-width: 600px) {
   .container {
-    width: 540px;
+    width: 673px;
     max-width: 100%; } }
 
 @media (min-width: 900px) {
   .container {
-    width: 720px;
+    width: 879px;
     max-width: 100%; } }
 
 @media (min-width: 1200px) {
   .container {
-    width: 960px;
+    width: 1148px;
     max-width: 100%; } }
 
 @media (min-width: 1500px) {
   .container {
-    width: 1140px;
+    width: 1148px;
     max-width: 100%; } }
 
 .container-fluid {
