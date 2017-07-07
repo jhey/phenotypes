@@ -39,10 +39,28 @@ module.exports = {
       error: 'Error message',
     },
   }, {
+    name: 'error small',
+    label: 'Error (small)',
+    context: {
+      className: 'FormGroup--small',
+      controlId: 'error1',
+      label: 'Error state (small)',
+      error: 'Error message',
+    },
+  }, {
+    name: 'error large',
+    label: 'Error (large)',
+    context: {
+      className: 'FormGroup--large',
+      controlId: 'error2',
+      label: 'Error state (large)',
+      error: 'Error message',
+    },
+  }, {
     name: 'responsive',
     label: 'Responsive',
     context: {
-      className: 'FormGroup--small FormGroup--medium-md FormGroup--large-lg',
+      className: 'FormGroup--small FormGroup--medium-sm FormGroup--large-md',
       controlId: 'responsive',
       label: 'Responsive form group',
     },
