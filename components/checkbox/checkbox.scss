@@ -1,0 +1,19 @@
+// scss-lint:disable SelectorFormat
+
+@mixin checkbox-sizer($size: 'medium') {
+  @if $size == 'small' { font-size: $font-size-2; }
+  @if $size == 'medium' { font-size: $font-size-3; }
+  @if $size == 'large' { font-size: $font-size-5; }
+}
+
+
+
+@if $enable-form-utilities {
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+      $suffix: breakpoint-suffix($breakpoint, $grid-breakpoints);
+
+
+    }
+  }
+}
