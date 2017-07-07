@@ -1621,21 +1621,10 @@ hr {
   color: rgba(0, 0, 0, 0.86);
   line-height: 1.49271;
   width: 100%; }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 .TextInput::placeholder {
   color: rgba(0, 0, 0, 0.41);
   opacity: 1; }
-=======
-  .TextInput::placeholder {
-    color: rgba(0, 0, 0, 0.41); }
->>>>>>> Checkbox component stub.
-=======
-
-.TextInput::placeholder {
-  color: rgba(0, 0, 0, 0.41); }
->>>>>>> Functional stub based on Bootstrap.
 
 .TextInput:focus,
 .TextInput--is-focused {
