@@ -134,19 +134,8 @@
   }
 }
 
-// Sizes
-// -----
-
-.Button--small {
-  @include button-sizer($size: 'small');
-}
-
-.Button--large {
-  @include button-sizer($size: 'large');
-}
-
-// Responsive utilities
-// --------------------
+// Sizers and responsive utilities
+// -------------------------------
 
 @if $enable-form-utilities {
   @each $breakpoint in map-keys($grid-breakpoints) {
@@ -157,4 +146,7 @@
       .Button--large#{$suffix} { @include button-sizer($size: 'large'); }
     }
   }
+} @else {
+  .Button--small { @include button-sizer($size: 'small'); }
+  .Button--large { @include button-sizer($size: 'large'); }
 }

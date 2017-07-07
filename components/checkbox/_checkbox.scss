@@ -123,14 +123,6 @@
   user-select: none;
 }
 
-.Checkbox--small {
-  @include checkbox-sizer('small');
-}
-
-.Checkbox--large {
-  @include checkbox-sizer('large');
-}
-
 @if $enable-form-utilities {
   @each $breakpoint in map-keys($grid-breakpoints) {
     @include media-breakpoint-up($breakpoint) {
@@ -141,4 +133,7 @@
       .Checkbox--large#{$suffix} { @include checkbox-sizer('large'); }
     }
   }
+} @else {
+  .Checkbox--small { @include checkbox-sizer('small'); }
+  .Checkbox--large { @include checkbox-sizer('large'); }
 }
