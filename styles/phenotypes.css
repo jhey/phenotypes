@@ -543,8 +543,8 @@ hr {
   z-index: -1; }
 
 .Checkbox__input:focus ~ .Checkbox__indicator {
-  border-color: #c1c1c1;
-  box-shadow: 0 0 0 2px rgba(22, 184, 224, 0.24); }
+  border-color: #7feaff;
+  box-shadow: 0 0 11px rgba(127, 234, 255, 0.41); }
 
 .Checkbox__input:active ~ .Checkbox__indicator {
   background-color: #f9f9f9;
@@ -554,6 +554,10 @@ hr {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 9'%3E%3Cpolygon fill='%23fff' fill-opacity='1' points='3.5 5.45 1.5 3.45 0 4.95 3.5 8.45 10 1.95 8.5 .45'/%3E%3C/svg%3E%0A");
   background-color: #232323;
   border-color: #232323; }
+
+.Checkbox__input:checked:focus ~ .Checkbox__indicator {
+  border-color: #232323;
+  box-shadow: 0 0 0 2px rgba(22, 184, 224, 0.24); }
 
 .Checkbox__input:checked:active ~ .Checkbox__indicator {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 9'%3E%3Cpolygon fill='%23fff' fill-opacity='0.54' points='3.5 5.45 1.5 3.45 0 4.95 3.5 8.45 10 1.95 8.5 .45'/%3E%3C/svg%3E%0A");
