@@ -7,10 +7,23 @@ module.exports = {
     label: 'Checkbox label'
   },
   variants: [{
+    name: 'checked',
+    context: {
+      label: 'Checked',
+      checked: true
+    }
+  }, {
     name: 'disabled',
     context: {
-      label: 'Disabled checkbox',
+      label: 'Disabled',
       disabled: true
+    }
+  }, {
+    name: 'disabled and checked',
+    context: {
+      label: 'Disabled and checked',
+      disabled: true,
+      checked: true
     }
   }]
 };

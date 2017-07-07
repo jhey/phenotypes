@@ -2,7 +2,8 @@
 
 @import '../../styles/lib/str-replace';
 
-// Based on https://github.com/twbs/bootstrap/blob/v4-dev/scss/_custom-forms.scss
+// Checkbox based on Bootstrap's "custom control"
+// https://github.com/twbs/bootstrap/blob/v4-dev/scss/_custom-forms.scss
 
 @mixin checkbox-sizer($size: 'medium') {
   @if $size == 'small' { font-size: $font-size-2; }
@@ -23,6 +24,10 @@
   @else if $size == 'large' { font-size: $font-size-5; }
 }
 
+@mixin checkbox-icon($fill: $white, $fill-opacity: 1) {
+  background-image: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 9'%3E%3Cpolygon fill='#{$fill}' fill-opacity='#{$fill-opacity}' points='3.5 5.45 1.5 3.45 0 4.95 3.5 8.45 10 1.95 8.5 .45'/%3E%3C/svg%3E%0A"), '#', '%23');
+}
+
 .Checkbox {
   @include checkbox-sizer;
   display: inline-flex;
@@ -35,15 +40,9 @@
   position: absolute;
   z-index: -1;
 
-  &:checked ~ .Checkbox__indicator {
-    background-color: $gray-800;
-    background-image: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 9'%3E%3Cpolygon fill='#{$white}' points='3.5 5.45 1.5 3.45 0 4.95 3.5 8.45 10 1.95 8.5 .45'/%3E%3C/svg%3E%0A"), '#', '%23');
-    border-color: $gray-800;
-  }
-
   &:focus ~ .Checkbox__indicator {
-    border-color: $blue-100;
-    box-shadow: 0 0 11px rgba($blue-100, $alpha-500);
+    border-color: $gray-400;
+    box-shadow: 0 0 0 2px rgba($blue-200, $alpha-400);
   }
 
   &:active ~ .Checkbox__indicator {
@@ -51,15 +50,32 @@
     border-color: $gray-400;
   }
 
-  &:disabled {
-    ~ .Checkbox__indicator {
-      background-color: $gray-200;
-      border-color: $gray-200;
-    }
+  &:checked ~ .Checkbox__indicator {
+    @include checkbox-icon;
+    background-color: $gray-800;
+    border-color: $gray-800;
+  }
 
-    ~ .Checkbox__label {
-      color: $text-color-secondary;
-    }
+  &:checked:active ~ .Checkbox__indicator {
+    @include checkbox-icon($fill-opacity: $alpha-600);
+    background-color: $gray-800;
+    border-color: $gray-800;
+  }
+
+  &:disabled ~ .Checkbox__indicator,
+  &:disabled:active ~ .Checkbox__indicator,
+  &:disabled:checked:active {
+    background-color: $gray-200;
+    border-color: $gray-200;
+  }
+
+  &:disabled:checked ~ .Checkbox__indicator,
+  &:disabled:checked:active ~ .Checkbox__indicator {
+    @include checkbox-icon($fill: $gray-400);
+  }
+
+  &:disabled ~ .Checkbox__label {
+    color: $text-color-secondary;
   }
 }
 
@@ -71,10 +87,6 @@
   display: inline-block;
   pointer-events: none;
   user-select: none;
-  // background-repeat: no-repeat;
-  // background-position: center center;
-  // background-size: $custom-control-indicator-bg-size;
-  // @include box-shadow($custom-control-indicator-box-shadow);
 }
 
 @if $enable-form-utilities {

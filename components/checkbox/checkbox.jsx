@@ -2,7 +2,7 @@ const React = require('react');
 const classes = require('classnames');
 
 function Checkbox(props) {
-  const { className, ...htmlProps } = props;
+  const { className, label, ...htmlProps } = props;
   return (
     <label className={classes(
       className, 
