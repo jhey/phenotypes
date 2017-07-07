@@ -4,6 +4,13 @@ module.exports = {
   status: 'draft',
   collated: true,
   context: {
-    label: 'Checkbox label',
-  }
+    label: 'Checkbox label'
+  },
+  variants: [{
+    name: 'disabled',
+    context: {
+      label: 'Disabled checkbox',
+      disabled: true
+    }
+  }]
 };

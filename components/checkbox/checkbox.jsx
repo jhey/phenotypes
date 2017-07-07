@@ -4,13 +4,15 @@ const classes = require('classnames');
 function Checkbox(props) {
   const { className, ...htmlProps } = props;
   return (
-    <input
-      className={classes(className, 'Checkbox', {
-        'Checkbox--is-disabled': htmlProps.disabled,
-      })}
-      type='checkbox'
-      {...htmlProps}
-    />
+    <label className={classes(
+      className, 
+      'Checkbox', 
+      { 'Checkbox--is-disabled': htmlProps.disabled }
+    )}>
+      <input type="checkbox" className="Checkbox__input" { ...htmlProps } />
+      <span className="Checkbox__indicator"></span>
+      <span className="Checkbox__label">{ props.label }</span>
+    </label>
   );
 }
 
