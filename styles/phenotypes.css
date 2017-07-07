@@ -525,7 +525,8 @@ hr {
   line-height: 21px;
   letter-spacing: 0px;
   font-weight: normal;
-  display: inline-flex;
+  padding-left: 23px;
+  display: inline-block;
   margin: 0;
   position: relative; }
 
@@ -533,8 +534,7 @@ hr {
   background-position: 1px 2px;
   background-size: 10px 9px;
   height: 16px;
-  margin-right: 7px;
-  margin-top: 1px;
+  top: 1px;
   width: 16px; }
 
 .Checkbox__input {
@@ -581,74 +581,79 @@ hr {
   background-repeat: no-repeat;
   border: 2px solid #dbdbdb;
   border-radius: 3px;
-  display: inline-block;
+  left: 0;
   pointer-events: none;
+  position: absolute;
   user-select: none; }
 
 .Checkbox--small {
   font-size: 12px;
   line-height: 18px;
   letter-spacing: 0px;
-  font-weight: normal; }
+  font-weight: normal;
+  padding-left: 21px; }
 
 .Checkbox--small .Checkbox__indicator {
   background-position: 1px 1px;
   background-size: 8px 8px;
   height: 14px;
+  top: 1px;
   width: 14px; }
 
 .Checkbox--large {
   font-size: 18px;
   line-height: 27px;
   letter-spacing: 0px;
-  font-weight: normal; }
+  font-weight: normal;
+  padding-left: 32px; }
 
 .Checkbox--large .Checkbox__indicator {
   background-position: 2px 3px;
   background-size: 14px 11px;
   height: 21px;
-  margin-right: 11px;
-  margin-top: 2px;
+  top: 2px;
   width: 21px; }
 
 .Checkbox--medium {
   font-size: 14px;
   line-height: 21px;
   letter-spacing: 0px;
-  font-weight: normal; }
+  font-weight: normal;
+  padding-left: 23px; }
 
 .Checkbox--medium .Checkbox__indicator {
   background-position: 1px 2px;
   background-size: 10px 9px;
   height: 16px;
-  margin-right: 7px;
-  margin-top: 1px;
+  top: 1px;
   width: 16px; }
 
 .Checkbox--small {
   font-size: 12px;
   line-height: 18px;
   letter-spacing: 0px;
-  font-weight: normal; }
+  font-weight: normal;
+  padding-left: 21px; }
 
 .Checkbox--small .Checkbox__indicator {
   background-position: 1px 1px;
   background-size: 8px 8px;
   height: 14px;
+  top: 1px;
   width: 14px; }
 
 .Checkbox--large {
   font-size: 18px;
   line-height: 27px;
   letter-spacing: 0px;
-  font-weight: normal; }
+  font-weight: normal;
+  padding-left: 32px; }
 
 .Checkbox--large .Checkbox__indicator {
   background-position: 2px 3px;
   background-size: 14px 11px;
   height: 21px;
-  margin-right: 11px;
-  margin-top: 2px;
+  top: 2px;
   width: 21px; }
 
 @media (min-width: 600px) {
@@ -656,35 +661,37 @@ hr {
     font-size: 14px;
     line-height: 21px;
     letter-spacing: 0px;
-    font-weight: normal; }
+    font-weight: normal;
+    padding-left: 23px; }
   .Checkbox--medium-sm .Checkbox__indicator {
     background-position: 1px 2px;
     background-size: 10px 9px;
     height: 16px;
-    margin-right: 7px;
-    margin-top: 1px;
+    top: 1px;
     width: 16px; }
   .Checkbox--small-sm {
     font-size: 12px;
     line-height: 18px;
     letter-spacing: 0px;
-    font-weight: normal; }
+    font-weight: normal;
+    padding-left: 21px; }
   .Checkbox--small-sm .Checkbox__indicator {
     background-position: 1px 1px;
     background-size: 8px 8px;
     height: 14px;
+    top: 1px;
     width: 14px; }
   .Checkbox--large-sm {
     font-size: 18px;
     line-height: 27px;
     letter-spacing: 0px;
-    font-weight: normal; }
+    font-weight: normal;
+    padding-left: 32px; }
   .Checkbox--large-sm .Checkbox__indicator {
     background-position: 2px 3px;
     background-size: 14px 11px;
     height: 21px;
-    margin-right: 11px;
-    margin-top: 2px;
+    top: 2px;
     width: 21px; } }
 
 @media (min-width: 900px) {
@@ -692,35 +699,37 @@ hr {
     font-size: 14px;
     line-height: 21px;
     letter-spacing: 0px;
-    font-weight: normal; }
+    font-weight: normal;
+    padding-left: 23px; }
   .Checkbox--medium-md .Checkbox__indicator {
     background-position: 1px 2px;
     background-size: 10px 9px;
     height: 16px;
-    margin-right: 7px;
-    margin-top: 1px;
+    top: 1px;
     width: 16px; }
   .Checkbox--small-md {
     font-size: 12px;
     line-height: 18px;
     letter-spacing: 0px;
-    font-weight: normal; }
+    font-weight: normal;
+    padding-left: 21px; }
   .Checkbox--small-md .Checkbox__indicator {
     background-position: 1px 1px;
     background-size: 8px 8px;
     height: 14px;
+    top: 1px;
     width: 14px; }
   .Checkbox--large-md {
     font-size: 18px;
     line-height: 27px;
     letter-spacing: 0px;
-    font-weight: normal; }
+    font-weight: normal;
+    padding-left: 32px; }
   .Checkbox--large-md .Checkbox__indicator {
     background-position: 2px 3px;
     background-size: 14px 11px;
     height: 21px;
-    margin-right: 11px;
-    margin-top: 2px;
+    top: 2px;
     width: 21px; } }
 
 @media (min-width: 1200px) {
@@ -728,35 +737,37 @@ hr {
     font-size: 14px;
     line-height: 21px;
     letter-spacing: 0px;
-    font-weight: normal; }
+    font-weight: normal;
+    padding-left: 23px; }
   .Checkbox--medium-lg .Checkbox__indicator {
     background-position: 1px 2px;
     background-size: 10px 9px;
     height: 16px;
-    margin-right: 7px;
-    margin-top: 1px;
+    top: 1px;
     width: 16px; }
   .Checkbox--small-lg {
     font-size: 12px;
     line-height: 18px;
     letter-spacing: 0px;
-    font-weight: normal; }
+    font-weight: normal;
+    padding-left: 21px; }
   .Checkbox--small-lg .Checkbox__indicator {
     background-position: 1px 1px;
     background-size: 8px 8px;
     height: 14px;
+    top: 1px;
     width: 14px; }
   .Checkbox--large-lg {
     font-size: 18px;
     line-height: 27px;
     letter-spacing: 0px;
-    font-weight: normal; }
+    font-weight: normal;
+    padding-left: 32px; }
   .Checkbox--large-lg .Checkbox__indicator {
     background-position: 2px 3px;
     background-size: 14px 11px;
     height: 21px;
-    margin-right: 11px;
-    margin-top: 2px;
+    top: 2px;
     width: 21px; } }
 
 @media (min-width: 1500px) {
@@ -764,35 +775,37 @@ hr {
     font-size: 14px;
     line-height: 21px;
     letter-spacing: 0px;
-    font-weight: normal; }
+    font-weight: normal;
+    padding-left: 23px; }
   .Checkbox--medium-xl .Checkbox__indicator {
     background-position: 1px 2px;
     background-size: 10px 9px;
     height: 16px;
-    margin-right: 7px;
-    margin-top: 1px;
+    top: 1px;
     width: 16px; }
   .Checkbox--small-xl {
     font-size: 12px;
     line-height: 18px;
     letter-spacing: 0px;
-    font-weight: normal; }
+    font-weight: normal;
+    padding-left: 21px; }
   .Checkbox--small-xl .Checkbox__indicator {
     background-position: 1px 1px;
     background-size: 8px 8px;
     height: 14px;
+    top: 1px;
     width: 14px; }
   .Checkbox--large-xl {
     font-size: 18px;
     line-height: 27px;
     letter-spacing: 0px;
-    font-weight: normal; }
+    font-weight: normal;
+    padding-left: 32px; }
   .Checkbox--large-xl .Checkbox__indicator {
     background-position: 2px 3px;
     background-size: 14px 11px;
     height: 21px;
-    margin-right: 11px;
-    margin-top: 2px;
+    top: 2px;
     width: 21px; } }
 
 .container {
