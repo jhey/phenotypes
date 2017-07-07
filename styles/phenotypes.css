@@ -521,8 +521,21 @@ hr {
     padding: 16px 27px 18px; } }
 
 .Checkbox {
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: 0px;
+  font-weight: normal;
   display: inline-flex;
+  margin: 0;
   position: relative; }
+
+.Checkbox .Checkbox__indicator {
+  background-position: 1px 2px;
+  background-size: 10px 9px;
+  height: 16px;
+  margin-right: 7px;
+  margin-top: 1px;
+  width: 16px; }
 
 .Checkbox__input {
   opacity: 0;
@@ -530,28 +543,33 @@ hr {
   z-index: -1; }
 
 .Checkbox__input:checked ~ .Checkbox__indicator {
-  background: #f04d5d; }
+  background-color: #232323;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 9'%3E%3Cpolygon fill='%23fff' points='3.5 5.45 1.5 3.45 0 4.95 3.5 8.45 10 1.95 8.5 .45'/%3E%3C/svg%3E%0A");
+  border-color: #232323; }
 
 .Checkbox__input:focus ~ .Checkbox__indicator {
-  background: #16b8e0; }
+  border-color: #7feaff;
+  box-shadow: 0 0 11px rgba(127, 234, 255, 0.41); }
 
 .Checkbox__input:active ~ .Checkbox__indicator {
-  background: #03ab8c; }
+  background-color: #f9f9f9;
+  border-color: #c1c1c1; }
 
 .Checkbox__input:disabled ~ .Checkbox__indicator {
-  background: #853b94; }
+  background-color: #eee;
+  border-color: #eee; }
 
 .Checkbox__input:disabled ~ .Checkbox__label {
   color: rgba(0, 0, 0, 0.54); }
 
 .Checkbox__indicator {
-  pointer-events: none;
-  user-select: none;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  border: 2px solid #dbdbdb;
+  border-radius: 3px;
   display: inline-block;
-  width: 16px;
-  height: 16px;
-  background: #dbdbdb;
-  margin-right: 7px; }
+  pointer-events: none;
+  user-select: none; }
 
 .container {
   margin-right: auto;
