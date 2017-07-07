@@ -53,5 +53,33 @@ module.exports = {
       checked: true,
       className: 'Checkbox--small'
     }
+  }, {
+    name: 'large',
+    context: {
+      label: 'Large',
+      className: 'Checkbox--large'
+    }
+  }, {
+    name: 'large checked',
+    context: {
+      label: 'Large checked',
+      checked: true,
+      className: 'Checkbox--large'
+    }
+  }, {
+    name: 'large disabled',
+    context: {
+      label: 'Large disabled',
+      disabled: true,
+      className: 'Checkbox--large'
+    }
+  }, {
+    name: 'large disabled checked',
+    context: {
+      label: 'Large disabled checked',
+      disabled: true,
+      checked: true,
+      className: 'Checkbox--large'
+    }
   }]
 };

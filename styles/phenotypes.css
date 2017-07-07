@@ -593,6 +593,20 @@ hr {
   height: 14px;
   width: 14px; }
 
+.Checkbox--large {
+  font-size: 18px;
+  line-height: 27px;
+  letter-spacing: 0px;
+  font-weight: normal; }
+
+.Checkbox--large .Checkbox__indicator {
+  background-position: 2px 3px;
+  background-size: 14px 11px;
+  height: 21px;
+  margin-right: 11px;
+  margin-top: 2px;
+  width: 21px; }
+
 .container {
   margin-right: auto;
   margin-left: auto;
