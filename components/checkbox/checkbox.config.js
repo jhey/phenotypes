@@ -19,11 +19,39 @@ module.exports = {
       disabled: true
     }
   }, {
-    name: 'disabled and checked',
+    name: 'disabled checked',
     context: {
-      label: 'Disabled and checked',
+      label: 'Disabled checked',
       disabled: true,
       checked: true
+    }
+  }, {
+    name: 'small',
+    context: {
+      label: 'Small',
+      className: 'Checkbox--small'
+    }
+  }, {
+    name: 'small checked',
+    context: {
+      label: 'Small checked',
+      checked: true,
+      className: 'Checkbox--small'
+    }
+  }, {
+    name: 'small disabled',
+    context: {
+      label: 'Small disabled',
+      disabled: true,
+      className: 'Checkbox--small'
+    }
+  }, {
+    name: 'small disabled checked',
+    context: {
+      label: 'Small disabled checked',
+      disabled: true,
+      checked: true,
+      className: 'Checkbox--small'
     }
   }]
 };

@@ -581,6 +581,18 @@ hr {
   pointer-events: none;
   user-select: none; }
 
+.Checkbox--small {
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 0px;
+  font-weight: normal; }
+
+.Checkbox--small .Checkbox__indicator {
+  background-position: 1px 1px;
+  background-size: 8px 8px;
+  height: 14px;
+  width: 14px; }
+
 .container {
   margin-right: auto;
   margin-left: auto;
