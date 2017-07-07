@@ -81,5 +81,11 @@ module.exports = {
       checked: true,
       className: 'Checkbox--large'
     }
+  }, {
+    name: 'responsive',
+    context: {
+      label: 'Resize me!',
+      className: 'Checkbox--small Checkbox--medium-sm Checkbox--large-md'
+    }
   }]
 };

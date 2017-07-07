@@ -127,7 +127,9 @@
     @include media-breakpoint-up($breakpoint) {
       $suffix: breakpoint-suffix($breakpoint, $grid-breakpoints);
 
-
+      .Checkbox--medium#{$suffix} { @include checkbox-sizer; }
+      .Checkbox--small#{$suffix} { @include checkbox-sizer('small'); }
+      .Checkbox--large#{$suffix} { @include checkbox-sizer('large'); }
     }
   }
 }
