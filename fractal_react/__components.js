@@ -2,6 +2,7 @@
 
 module.exports = {
   "button": require("../components/button/button.jsx"),
+  "checkbox": require("../components/checkbox/checkbox.jsx"),
   "css-display-utilities": require("../components/css_display_utilities/css_display_utilities.jsx"),
   "css-flexbox-utilities": require("../components/css_flexbox_utilities/css_flexbox_utilities.jsx"),
   "css-spacing-utilities": require("../components/css_spacing_utilities/css_spacing_utilities.jsx"),
