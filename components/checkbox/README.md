@@ -1,6 +1,6 @@
 The `Checkbox` component bundles an `<input type="checkbox">` element with a text label. It also hides the native checkbox control and provides a custom control that appears more consistent across platforms.
 
-The implementation, which is based on [Bootstrap 4](https://v4-alpha.getbootstrap.com/components/forms/#checkboxes), uses an extra element and CSS to acheive the custom look, preserving accessibility.
+The implementation, which is based on [Bootstrap 4](https://v4-alpha.getbootstrap.com/components/forms/#checkboxes), uses an extra element and CSS to achieve the custom look, preserving accessibility.
 
 The component provides responsive utility classes (see Modifiers below) that can be used to scale the custom checkbox control and the text label together.
 

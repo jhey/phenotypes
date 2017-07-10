@@ -78,16 +78,16 @@
 
       .TextInput--small#{$suffix},
       .FormGroup--small#{$suffix} .TextInput {
-        @include text-input-sizer($size: 'small');
+        @include text-input-sizer('small');
       }
 
       .TextInput--large#{$suffix},
       .FormGroup--large#{$suffix} .TextInput {
-        @include text-input-sizer($size: 'large');
+        @include text-input-sizer('large');
       }
     }
   }
 } @else {
-  .TextInput--small { @include text-input-sizer($size: 'small'); }
-  .TextInput--large { @include text-input-sizer($size: 'large'); }
+  .TextInput--small { @include text-input-sizer('small'); }
+  .TextInput--large { @include text-input-sizer('large'); }
 }
