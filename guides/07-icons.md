@@ -6,7 +6,7 @@ Phenotypes uses the attractive and comprehensive **[Nucleo](https://nucleoapp.co
 
 ![Icons](/img/guides/icons.png)
 
-When scaling icons, scale up from the **closest smaller size**. E.g. if you need a 36px icon, scale up from 32px; don't scale down from 48px, as there might be details in the larger icon that don't look good when shrunk. 16px icons can often be scaled down to 14px or even smaller (just make sure it's not turning to mush).
+Be careful when scaling icons. If you need an icon at an intermediate size, experiment with scaling up or down from the closest provided sizes. When scaling down, look out for details getting lost or visual crowding. When scaling up, make sure lines aren't getting too thick and the icon isn't becoming cartoony.
 
 ### Styles
 
@@ -18,7 +18,7 @@ Nucleo provides a **Mac app and a web app** for icon management. When using thes
 
 The Mac app is super handy for searching and quickly dragging and dropping an icon into Sketch, Photoshop, or pretty much any other software. When you drag an icon out of the Mac app, it automatically creates an SVG with a unique and recognizable name, which should become the layer name in the design software when you drop the icon. Come implementation time, that name should make it very easy for your developer friends to identify the corresponding icon files.
 
-The web app facilities icon curation workflows, including organizing sets of icons into projects and then exporting those projects as SVG or PNG sprites. You can also quickly grab any icon as PNG or SVG (either as an .svg file or copy-and-paste-able XML) through the web app.
+The web app facilitates icon curation workflows, including organizing sets of icons into projects and then exporting those projects as SVG or PNG sprites. You can also quickly grab any icon as PNG or SVG (either as an .svg file or copy-and-paste-able XML) through the web app.
 
 ### Colors
 
@@ -28,13 +28,11 @@ For outline and glyph style icons, the Nucleo apps allow you to set an accent co
 
 ## Appendix
 
-The latest Nucleo source files and Mac app can be downloaded at https://nucleoapp.com/source-files/. We also keep an archive of the source files in Dropbox (https://www.dropbox.com/s/nf8hfb3o4dkah7i/Nucleo%20Icons.zip?dl=0), though they might not be up to date (new icons are added regularly). Source files include the following formats:
-
-* Web fonts (.eot, .ttf, .svg, .woff)
-* Adobe Illustrator (.ai)
-* Sketch (.sketch)
-* Photoshop shapes (.csh)
-* Individual SVG (.svg) icons
-* Individual PDF (.pdf) icons
-
 Amino has a lifetime team license for Nucleo icons and the apps. Just ask for an available license key or team login credentials (both are in 1Password).
+
+If you're logged in to the Nucleo website, you can download the following resources:
+
+* [Mac app](https://nucleoapp.com/download/mac/latest)
+* [Complete SVG icons set](https://nucleoapp.com/source-files/)
+
+We also keep an archive of the [SVG icons in Dropbox](https://www.dropbox.com/s/nf8hfb3o4dkah7i/Nucleo%20Icons.zip?dl=0), though they might not be up to date (new icons are added regularly).
