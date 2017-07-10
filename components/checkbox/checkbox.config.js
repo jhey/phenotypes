@@ -10,7 +10,7 @@ module.exports = {
     name: 'checked',
     context: {
       label: 'Checked',
-      checked: true
+      defaultChecked: true
     }
   }, {
     name: 'disabled',
@@ -23,7 +23,7 @@ module.exports = {
     context: {
       label: 'Disabled checked',
       disabled: true,
-      checked: true
+      defaultChecked: true
     }
   }, {
     name: 'small',
@@ -35,7 +35,7 @@ module.exports = {
     name: 'small checked',
     context: {
       label: 'Small checked',
-      checked: true,
+      defaultChecked: true,
       className: 'Checkbox--small'
     }
   }, {
@@ -50,7 +50,7 @@ module.exports = {
     context: {
       label: 'Small disabled checked',
       disabled: true,
-      checked: true,
+      defaultChecked: true,
       className: 'Checkbox--small'
     }
   }, {
@@ -63,7 +63,7 @@ module.exports = {
     name: 'large checked',
     context: {
       label: 'Large checked',
-      checked: true,
+      defaultChecked: true,
       className: 'Checkbox--large'
     }
   }, {
@@ -78,7 +78,7 @@ module.exports = {
     context: {
       label: 'Large disabled checked',
       disabled: true,
-      checked: true,
+      defaultChecked: true,
       className: 'Checkbox--large'
     }
   }, {
