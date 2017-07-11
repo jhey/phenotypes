@@ -38,6 +38,7 @@ class Tab extends React.Component {
 
 Tab.defaultProps = {
   href: '#',
+  active: false,
 };
 
 module.exports = Tab;
