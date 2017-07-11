@@ -14,14 +14,14 @@ module.exports = {
     label: 'Small',
     context: {
       className: 'TextInput--small',
-      placeholder: '.TextInput--small'
+      placeholder: '.TextInput--small',
     },
   }, {
     name: 'large',
     label: 'Large',
     context: {
       className: 'TextInput--large',
-      placeholder: '.TextInput--large'
+      placeholder: '.TextInput--large',
     },
   }, {
     name: 'disabled',
