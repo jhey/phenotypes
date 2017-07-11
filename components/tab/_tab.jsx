@@ -6,11 +6,6 @@ class TabExample extends React.Component {
   constructor(props, context) {
     super(props, context);
     this.state = { activeTab: 0 };
-    this.activateTab = this.activateTab.bind(this);
-  }
-
-  activateTab(tabIndex) {
-    this.setState({ activeTab: tabIndex });
   }
 
   render() {
@@ -22,7 +17,7 @@ class TabExample extends React.Component {
             <Tab
               key={index}
               active={this.state.activeTab === index}
-              onClick={() => !(tab.props && tab.props.href) && this.activateTab(index)}
+              onClick={() => !(tab.props && tab.props.href) && this.setState({ activeTab: index })}
               {...tab.props}
             >
               {tab.name}
