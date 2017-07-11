@@ -5,33 +5,34 @@ class TabExample extends React.Component {
 
   constructor(props, context) {
     super(props, context);
-    this.state = { activeTab: 1 };
+    this.state = { activeTab: 0 };
     this.activateTab = this.activateTab.bind(this);
   }
 
-  activateTab(tabId) {
-    this.setState({ activeTab: tabId });
+  activateTab(tabIndex) {
+    this.setState({ activeTab: tabIndex });
   }
 
   render() {
     return (
       <div>
-        <div className="h5">
-          <Tab active={this.state.activeTab === 1} onClick={() => { this.activateTab(1) }}>
-            Tab one
-          </Tab>
-          <Tab active={this.state.activeTab === 2} onClick={() => { this.activateTab(2) }}>
-            Tab two
-          </Tab>
-          <Tab active={this.state.activeTab === 3} onClick={() => { this.activateTab(3) }} className="text-weight-normal">
-            Tab with custom style
-          </Tab>
-          <Tab href="https://amino.com">External link ↗️</Tab>
+        <p>{this.props.description}</p>
+        <div className={this.props.className}>
+          {this.props.tabs.map((tab, index) =>
+            <Tab
+              key={index}
+              active={this.state.activeTab === index}
+              onClick={() => !(tab.props && tab.props.href) && this.activateTab(index)}
+              {...tab.props}
+            >
+              {tab.name}
+            </Tab>
+          )}
         </div>
+        <hr />
       </div>
     );
   }
-
 }
 
 module.exports = TabExample;
