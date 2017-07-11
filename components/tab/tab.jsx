@@ -17,14 +17,19 @@ class Tab extends React.Component {
   }
 
   render() {
-    const { active, className, tabId, children, onClick, ...htmlProps } = this.props;
+    const { active, className, onClick, href, children, ...htmlProps } = this.props;
 
     return active ? (
       <span className={classes('Tab', 'Tab--is-active', className)} {...htmlProps}>
         {children}
       </span>
     ) : (
-      <a className={classes('Tab', className)} onClick={this.handleClick} {...htmlProps}>
+      <a
+        className={classes('Tab', className)}
+        href={href}
+        onClick={this.handleClick}
+        {...htmlProps}
+      >
         {children}
       </a>
     );
