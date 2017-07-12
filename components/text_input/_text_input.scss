@@ -1,38 +1,69 @@
-// scss-lint:disable SelectorFormat
+// scss-lint:disable SelectorFormat ElsePlacement
+
+@function _text-input-pad($step: 0) {
+  @return modular-scale-px($step) - $border-width;
+}
 
 @mixin text-input-sizer($size: 'medium') {
-  @if $size == 'small' { font-size: $font-size-2; }
-  @if $size == 'medium' { font-size: $font-size-3; }
-  @if $size == 'large' { font-size: $font-size-5; }
+  @if $size == 'small' {
+    font-size: $font-size-2;
+    padding: _text-input-pad(-6) _text-input-pad(-3) _text-input-pad(-5);
+  }
+
+  @else if $size == 'medium' {
+    font-size: $font-size-3;
+    padding: _text-input-pad(-3) _text-input-pad(0) _text-input-pad(-2);
+  }
+
+  @else if $size == 'large' {
+    font-size: $font-size-4;
+    padding: _text-input-pad(0) _text-input-pad(2) _text-input-pad(1);
+  }
 }
 
 .TextInput {
   @include text-input-sizer;
-  border: 2px solid $gray-300;
+  border: $border-width solid $gray-300;
   border-radius: $border-radius;
+  color: $text-color-primary;
+  line-height: $line-height-base;
   width: 100%;
 
   &::placeholder {
     color: $text-color-hint;
+    // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526.
+    opacity: 1;
   }
 }
 
+.TextInput:focus,
+.TextInput--is-focused {
+  border-color: $blue-100;
+  box-shadow: 0 0 11px rgba($blue-100, $alpha-500);
+  outline: 0;
+}
+
+.TextInput:disabled,
+.TextInput[readonly],
 .TextInput--is-disabled {
   background: $gray-200;
+  border-color: $gray-200;
+  color: $text-color-hint;
 }
 
 .TextInput--has-error,
 .FormGroup--has-error .TextInput {
   border-color: $red;
+
+  &.TextInput:focus,
+  &.TextInput--is-focused {
+    box-shadow: 0 0 11px rgba($red-100, $alpha-600);
+  }
 }
 
 //
 // Sizers
 //
-
-.TextInput--small { @include text-input-sizer($size: 'small'); }
-
-.TextInput--large { @include text-input-sizer($size: 'large'); }
 
 @if $enable-form-utilities {
   @each $breakpoint in map-keys($grid-breakpoints) {
@@ -47,13 +78,16 @@
 
       .TextInput--small#{$suffix},
       .FormGroup--small#{$suffix} .TextInput {
-        @include text-input-sizer($size: 'small');
+        @include text-input-sizer('small');
       }
 
       .TextInput--large#{$suffix},
       .FormGroup--large#{$suffix} .TextInput {
-        @include text-input-sizer($size: 'large');
+        @include text-input-sizer('large');
       }
     }
   }
+} @else {
+  .TextInput--small { @include text-input-sizer('small'); }
+  .TextInput--large { @include text-input-sizer('large'); }
 }

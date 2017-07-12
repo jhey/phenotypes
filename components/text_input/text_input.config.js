@@ -14,12 +14,14 @@ module.exports = {
     label: 'Small',
     context: {
       className: 'TextInput--small',
+      placeholder: '.TextInput--small',
     },
   }, {
     name: 'large',
     label: 'Large',
     context: {
       className: 'TextInput--large',
+      placeholder: '.TextInput--large',
     },
   }, {
     name: 'disabled',
@@ -33,7 +35,7 @@ module.exports = {
     label: 'Error',
     context: {
       className: 'TextInput--has-error',
-      placeholder: 'Something went horribly wrong.',
+      defaultValue: 'Something went horribly wrong.',
     },
   }, {
     name: 'password',
@@ -48,7 +50,7 @@ module.exports = {
     label: 'Responsive',
     context: {
       placeholder: 'Resize me!',
-      className: 'TextInput--small TextInput--medium-md TextInput--large-lg',
+      className: 'TextInput--small TextInput--medium-sm TextInput--large-md',
     },
   }],
 };

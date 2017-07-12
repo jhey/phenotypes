@@ -1,39 +1,54 @@
-// scss-lint:disable SelectorFormat
+// scss-lint:disable SelectorFormat ElsePlacement
 @mixin form-group-sizer($size: 'medium') {
   @if $size == 'small' {
-    .FormGroup__label,
-    .FormGroup__error,
-    .FormGroup__hint {
-      font-size: $font-size-1;
+    .FormGroup__label {
+      @include text-1($font-weight-bold);
+      margin-bottom: $spacer-1;
+    }
+
+    .FormGroup__error {
+      @include text-1;
     }
   }
 
-  @if $size == 'medium' {
-    .FormGroup__label,
+  @else if $size == 'medium' {
+    .FormGroup__label {
+      @include text-2($font-weight-bold);
+      margin-bottom: $spacer-2;
+    }
+
     .FormGroup__error {
-      font-size: $font-size-2;
+      @include text-2;
+      color: $brand-danger;
+      margin-top: $spacer-2;
+
+      &::before {
+        content: '✘ '; // TODO: replace with SVG icon
+        display: inline;
+      }
     }
 
     .FormGroup__hint {
-      font-size: $font-size-1;
+      @include text-1;
+      color: $text-color-secondary;
+      margin-top: $spacer-2;
     }
   }
 
-  @if $size == 'large' {
-    .FormGroup__label,
+  @else if $size == 'large' {
+    .FormGroup__label {
+      @include text-4($font-weight-bold);
+    }
+
     .FormGroup__error {
-      font-size: $font-size-4;
+      @include text-3;
     }
 
     .FormGroup__hint {
-      font-size: $font-size-2;
+      @include text-2;
     }
   }
 }
-
-.FormGroup__error { color: $red; }
-
-.FormGroup__label { font-weight: $font-weight-bold; }
 
 //
 // Sizers
@@ -41,17 +56,16 @@
 
 @include form-group-sizer;
 
-.FormGroup--small { @include form-group-sizer($size: 'small'); }
-
-.FormGroup--large { @include form-group-sizer($size: 'large'); }
-
 @if $enable-form-utilities {
   @each $breakpoint in map-keys($grid-breakpoints) {
     @include media-breakpoint-up($breakpoint) {
       $suffix: breakpoint-suffix($breakpoint, $grid-breakpoints);
-      .FormGroup--small#{$suffix} { @include form-group-sizer($size: 'small'); }
+      .FormGroup--small#{$suffix} { @include form-group-sizer('small'); }
       .FormGroup--medium#{$suffix} { @include form-group-sizer; }
-      .FormGroup--large#{$suffix} { @include form-group-sizer($size: 'large'); }
+      .FormGroup--large#{$suffix} { @include form-group-sizer('large'); }
     }
   }
+} @else {
+  .FormGroup--small { @include form-group-sizer('small'); }
+  .FormGroup--large { @include form-group-sizer('large'); }
 }

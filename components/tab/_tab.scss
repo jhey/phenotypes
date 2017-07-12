@@ -1,0 +1,11 @@
+.Tab {
+  display: inline-block;
+
+  &:not(:last-child) {
+    margin-right: 1em / $modular-scale-proportion;
+  }
+}
+
+.Tab--is-active {
+  border-bottom: 2px solid $black;
+}
