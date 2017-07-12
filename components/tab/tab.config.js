@@ -4,8 +4,8 @@ module.exports = {
   status: 'demo',
   collated: true,
   context: {
-    description: `Tab components inherit their font style from its ancestors. In this example, the
-parent has the .h5 class.`,
+    description: `Tab components inherit their font style from their ancestors. In this example,
+the parent has the .h5 class.`,
     className: 'h5',
     tabs: [{
       name: 'First tab',
