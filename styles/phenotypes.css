@@ -1577,6 +1577,15 @@ hr {
   background-color: #f04d5d;
   color: #fff; }
 
+.Tab {
+  display: inline-block; }
+
+.Tab:not(:last-child) {
+  margin-right: 0.875em; }
+
+.Tab--is-active {
+  border-bottom: 2px solid #000; }
+
 .TextInput {
   font-size: 16px;
   padding: 9px 14px 10px;

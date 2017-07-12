@@ -11,5 +11,6 @@ module.exports = {
   "grid": require("../components/grid/grid.jsx"),
   "message": require("../components/message/message.jsx"),
   "preview": require("../components/_preview.jsx"),
+  "tab": require("../components/tab/_tab.jsx"),
   "text-input": require("../components/text_input/text_input.jsx"),
 };
