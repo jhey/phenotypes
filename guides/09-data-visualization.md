@@ -3,9 +3,7 @@ title: Data Visualization
 status: draft
 ---
 
-Unless otherwise specified, this guide to data visualization standards and practices is specifically meant for data storytelling purposes. While we do visualize a ton of information in the product and in our day-to-day work, data storytelling has unique constraints. Having said that, if you want to make your analytics dashboard or board presentation look nicer, you're more than welcome to borrow these concepts—just keep in mind they don't always translate well to different media!
-
-To get started, [check out this repo on GitHub](https://github.com/parelabs/amino-ggplot-theme).
+This guide to data visualization standards and practices is specifically meant for Amino's data stories. While we do visualize a ton of information in our products and day-to-day work, data storytelling has unique constraints. Having said that, if you want to make your analytics dashboard or presentation look nicer, you're more than welcome to borrow these concepts. Just keep in mind they don't always translate well to different media!
 
 ### Contents
 
@@ -18,32 +16,27 @@ To get started, [check out this repo on GitHub](https://github.com/parelabs/amin
 
 ## Guiding principles
 
-1. **Balance clarity to the layperson with technical precision.** Healthcare is scary. Data is scary. We want to make both less scary. Sometimes, the most technically precise explanation (delivered with the best of intentions) is more likely to be misinterpreted by a layperson than a simpler, less technically precise explanation. Our audience is almost entirely laypeople.<br><br>
-2. **Be transparent, truthful, and trustworthy.** The information we present in charts must be clearly decipherable and contain elements that engender trust (e.g. axes start at zero wherever possible). They should also not contain any analytical “black boxes” (e.g. internally derived metrics like CareMatch ranking). This is admittedly tough to enforce when the lines are blurred between product and analysis (e.g. cost product).<br><br>
-3. **Maximize visual accessibility, especially for mobile screens.** More than 60% of our blog traffic comes from mobile. In practice, optimizing for mobile means thin margins, bold fonts, and lots of contrast. We also use a color scheme that is discernible to people with common types of colorblindness.
+1. **Balance clarity to the layperson with technical precision.** Healthcare is scary. Data is scary. We want to make both less scary. Sometimes, the most technically precise explanation (delivered with the best of intentions) is more likely to be misinterpreted by a layperson than a simpler, less technically precise explanation. Amino's audience is almost entirely laypeople.<br><br>
+2. **Be transparent, truthful, and trustworthy.** The information we present in charts must be clearly decipherable and contain elements that engender trust (e.g. axes start at zero wherever possible). They should also not contain any analytical “black boxes” (e.g. internally derived metrics or proprietary language).<br><br>
+3. **Maximize visual accessibility, especially for mobile screens.** More than 60% of Amino's blog traffic comes from mobile. In practice, optimizing for mobile means thin margins, bold fonts, and lots of contrast. We also use a color scheme that is discernible to people with common types of colorblindness.
 
 
 ---
 
 ## Colors
 
-Color palettes for data visualization need to be bold, distinct, perceptually accurate, and distinguishable to people with [common forms of color blindness](https://nei.nih.gov/health/color_blindness/facts_about). Thankfully, our Amino brand colors check all of these boxes.
+Color palettes for data visualization need to be bold, distinct, perceptually accurate, and distinguishable to people with [common forms of color blindness](https://nei.nih.gov/health/color_blindness/facts_about). Thankfully, our Amino brand colors check most of these boxes.
 
-![Color factors](/img/guides/color-factors.png)
 
 ### Factors/Categorical
 
-**A few notes on factors:** Two factors are commonly used to distinguish patient gender. For the sake of consistency, blue designates male and orange designates female. Adding more than five factor colors to a chart is **strongly** discouraged.
+![Color factors](/img/guides/color-factors.png)
+
+**A few notes on factors:** Two factors are commonly used to distinguish patient gender in our data stories. For the sake of consistency, blue designates male and orange designates female. Adding more than five factor colors to a chart is **strongly** discouraged.
 
 ### Continuous/Scalar
 
-These ramps are examples of the chart legends. Color values for each step of the ramps are provided in the table below.
-
-![Continuous scales](/img/guides/continuous-scales.png)
-
-The diverging scale is most commonly used and is best for creating a distinction between low and high values, where blue is typically low and orange is typically high. The ramps are useful for emphasizing just the low values or just the high values. Context is key for selecting the appropriate color ramp—generally speaking, start with purple.
-
-In some cases, coloring via quantiles creates an easier to understand continuous scale.
+Context is key for selecting the appropriate color ramp. Generally speaking, we start with purple. The diverging scale is used to make a distinction between low and high values, where blue is typically low and orange is typically high. In some cases, coloring via quantiles creates an easier to understand continuous scale.
 
 | |	Diverging | | Blue | | Orange | | Red | | Purple |
 |---|---|---|---|---|---|---|---|---|---|
@@ -67,28 +60,25 @@ In some cases, coloring via quantiles creates an easier to understand continuous
 
 To get started, you will need:
 
-1. R
-2. [Sketch](https://www.sketchapp.com/)
-3. [Sailec font]({{ path '/docs/typography' }})
-4. Amino `ggplot2` theme
+1. `R`
+2. [Sketch](https://www.sketchapp.com/), or something similar
+3. A custom `ggplot2` theme. Amino's theme can be found in [this private repo.](https://github.com/parelabs/amino-ggplot-theme). Check out [this guide](http://minimaxir.com/2015/02/ggplot-tutorial/) to learn how to make your own custom themes.
 
-Generate the chart area in R via `ggplot2`, export as a PNG via `ggsave`, and drop the resulting file into Sketch.
+Generate the chart area in R via `ggplot2`, export as a PNG via `ggsave`, and drop the resulting file into Sketch. Several Sketch templates are provided in the private repo above.
 
-This process may seem disjointed, but it allows us to create charts in a consistent and easily reproducible manner—playing to the strengths of each platform. If an analysis needs to be updated or tweaked, the chart can easily be refreshed by re-running the code in R. Meanwhile, titles, labels, legends, footers, and other stylistic elements can be handled in Sketch.
+This process may seem disjointed, but it allows us to create charts in a consistent and easily reproducible manner—playing to the strengths of each platform. If an analysis needs to be updated or tweaked, the chart can easily be refreshed by simply re-running the code in `R`. Meanwhile, titles, labels, legends, footers, and other stylistic elements can be handled in Sketch.
 
-### Layout guidelines
+### Layout & aesthetic guidelines for Amino's charts
 
 **Dimensions:** Default chart dimensions are 1080 by 1080 pixels. These dimensions were chosen as a sort of compromise between the [wildly inconsistent image sizes used across social media platforms](https://makeawebsitehub.com/social-media-image-sizes-cheat-sheet/). Depending on the content being presented, height can be altered to suit, but width must be fixed.
 
-**Header:** With few exceptions, title and subtitle must not exceed 3 lines. Either the title is one line and the subtitle is two lines, or vice versa. This is to keep things neat and concise. Title is black and 40pt, subtitle is 54% transparent black and 37pt.
+**Header:** With few exceptions, title and subtitle must not exceed 3 lines. Either the title is one line and the subtitle is two lines, or vice versa. This is to keep the language neat and concise. Title is black and 40pt, subtitle is 54% transparent black and 37pt.
 
 **Legends and callouts:** Text is black 25pt, which is the minimum readable size.
 
 **Chart area:** The chart background color is `#EEEEEE` to provide contrast against white backgrounds used on our blog, social media, and most other sites.
 
 **Footer:** The footer contains data source information, tagline, logo, and copyright. Text is 54% transparent black and 16pt. Data source information plus tagline must not exceed 2 lines. These can be combined as a single paragraph to accommodate. Footer background is `#DBDBDB`.
-
-### Aesthetic guidelines
 
 To create clear, understandable, and visually accessible charts, its best to think in layers. In order from bottom to top:
 
@@ -148,7 +138,7 @@ Regular maps are used to display county-level data or similar.
 
 ### Relationships
 
-A [chord diagram](https://en.wikipedia.org/wiki/Chord_diagram) is a useful way to visualize relationships in a matrix of data. In this example, the referring doctor is connected to the rendering doctor by a line representing the volume of referrals made that year—the thicker the line, the more referrals.
+A [chord diagram](https://en.wikipedia.org/wiki/Chord_diagram) is a useful way to visualize relationships in a matrix of data. In this example, the referring doctor is connected to the rendering doctor by a line representing the volume of referrals made that year—the thicker the line, the more referrals. This particular visualization was generated in [Gephi](https://gephi.org/) and imported into Sketch as an SVG.
 
 ![Data viz example 4](/img/guides/data-viz-example-4.png)
 <p class="caption">Source: [Data on 211 million referrals shows how doctors really work together](https://amino.com/blog/data-on-211-million-referrals-shows-how-doctors-really-work-together/)</p>
