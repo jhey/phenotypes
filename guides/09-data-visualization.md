@@ -74,9 +74,9 @@ This process may seem disjointed, but it allows us to create charts in a consist
 
 **Header:** With few exceptions, title and subtitle must not exceed 3 lines. Either the title is one line and the subtitle is two lines, or vice versa. This is to keep the language neat and concise. Title is black and 40pt, subtitle is 54% transparent black and 37pt.
 
-**Legends and callouts:** Text is black 25pt, which is the minimum readable size.
+**Legends and callouts:** Text is black 25pt, which is the minimum readable size on mobile.
 
-**Chart area:** The chart background color is `#EEEEEE` to provide contrast against white backgrounds used on our blog, social media, and most other sites.
+**Chart area:** The chart background color is `#EEEEEE` to provide contrast against white backgrounds used on Amino's blog, social media, and most other sites.
 
 **Footer:** The footer contains data source information, tagline, logo, and copyright. Text is 54% transparent black and 16pt. Data source information plus tagline must not exceed 2 lines. These can be combined as a single paragraph to accommodate. Footer background is `#DBDBDB`.
 
@@ -130,7 +130,7 @@ The hexagonal tile map is used when trying to compare states by a scalar variabl
 ![Data viz example 5](/img/guides/data-viz-example-5.png)
 <p class="caption">Source: [Here’s how much women could pay for preventive care under the AHCA](https://amino.com/blog/heres-how-much-women-could-pay-for-preventive-care-under-the-ahca/)</p>
 
-Regular maps are used to display county-level data or similar.
+Regular maps are used to display county-level data or similar levels of detail.
 
 ![Data viz example 7](/img/guides/data-viz-example-7.png)
 <p class="caption">Source: [What data from 205 million private health insurance claims reveals about America’s opioid crisis](https://amino.com/blog/opioid-epidemic-data-opioid-use-disorder/)</p>
