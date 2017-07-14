@@ -1587,8 +1587,8 @@ hr {
   border-bottom: 2px solid #000; }
 
 .TextInput {
-  font-size: 16px;
   padding: 10px 14px 9px;
+  font-size: 16px;
   -webkit-appearance: none;
   border: 2px solid #dbdbdb;
   border-radius: 3px;
@@ -1611,7 +1611,8 @@ hr {
 .TextInput--is-disabled {
   background: #eee;
   border-color: #eee;
-  color: rgba(0, 0, 0, 0.41); }
+  color: rgba(0, 0, 0, 0.41);
+  opacity: 1; }
 
 .TextInput--has-error,
 .FormGroup--has-error .TextInput {
@@ -1624,74 +1625,74 @@ hr {
 
 .TextInput--medium,
 .FormGroup--medium .TextInput {
-  font-size: 16px;
-  padding: 10px 14px 9px; }
+  padding: 10px 14px 9px;
+  font-size: 16px; }
 
 .TextInput--small,
 .FormGroup--small .TextInput {
-  font-size: 14px;
-  padding: 6px 9px 5px; }
+  padding: 6px 9px 5px;
+  font-size: 14px; }
 
 .TextInput--large,
 .FormGroup--large .TextInput {
-  font-size: 18px;
-  padding: 15px 19px 15px; }
+  padding: 15px 19px 15px;
+  font-size: 18px; }
 
 @media (min-width: 600px) {
   .TextInput--medium-sm,
   .FormGroup--medium-sm .TextInput {
-    font-size: 16px;
-    padding: 10px 14px 9px; }
+    padding: 10px 14px 9px;
+    font-size: 16px; }
   .TextInput--small-sm,
   .FormGroup--small-sm .TextInput {
-    font-size: 14px;
-    padding: 6px 9px 5px; }
+    padding: 6px 9px 5px;
+    font-size: 14px; }
   .TextInput--large-sm,
   .FormGroup--large-sm .TextInput {
-    font-size: 18px;
-    padding: 15px 19px 15px; } }
+    padding: 15px 19px 15px;
+    font-size: 18px; } }
 
 @media (min-width: 900px) {
   .TextInput--medium-md,
   .FormGroup--medium-md .TextInput {
-    font-size: 16px;
-    padding: 10px 14px 9px; }
+    padding: 10px 14px 9px;
+    font-size: 16px; }
   .TextInput--small-md,
   .FormGroup--small-md .TextInput {
-    font-size: 14px;
-    padding: 6px 9px 5px; }
+    padding: 6px 9px 5px;
+    font-size: 14px; }
   .TextInput--large-md,
   .FormGroup--large-md .TextInput {
-    font-size: 18px;
-    padding: 15px 19px 15px; } }
+    padding: 15px 19px 15px;
+    font-size: 18px; } }
 
 @media (min-width: 1200px) {
   .TextInput--medium-lg,
   .FormGroup--medium-lg .TextInput {
-    font-size: 16px;
-    padding: 10px 14px 9px; }
+    padding: 10px 14px 9px;
+    font-size: 16px; }
   .TextInput--small-lg,
   .FormGroup--small-lg .TextInput {
-    font-size: 14px;
-    padding: 6px 9px 5px; }
+    padding: 6px 9px 5px;
+    font-size: 14px; }
   .TextInput--large-lg,
   .FormGroup--large-lg .TextInput {
-    font-size: 18px;
-    padding: 15px 19px 15px; } }
+    padding: 15px 19px 15px;
+    font-size: 18px; } }
 
 @media (min-width: 1500px) {
   .TextInput--medium-xl,
   .FormGroup--medium-xl .TextInput {
-    font-size: 16px;
-    padding: 10px 14px 9px; }
+    padding: 10px 14px 9px;
+    font-size: 16px; }
   .TextInput--small-xl,
   .FormGroup--small-xl .TextInput {
-    font-size: 14px;
-    padding: 6px 9px 5px; }
+    padding: 6px 9px 5px;
+    font-size: 14px; }
   .TextInput--large-xl,
   .FormGroup--large-xl .TextInput {
-    font-size: 18px;
-    padding: 15px 19px 15px; } }
+    padding: 15px 19px 15px;
+    font-size: 18px; } }
 
 .FormGroup__label {
   font-size: 14px;

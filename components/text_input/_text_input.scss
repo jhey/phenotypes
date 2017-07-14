@@ -3,9 +3,9 @@
 @mixin _text-input-padding($t-step: 0, $x-step: 0, $b-step: 0) {
   // Reduce all padding values by 2px to account for border width
   // Fudge top padding by +1px and bottom by -1px for better text alignment
-  $top: modular-scale-px($t) - $border-width + 1px;
-  $bottom: modular-scale-px($b) - $border-width - 1px;
-  $horizontal: modular-scale-px($b) - $border-width;
+  $top: modular-scale-px($t-step) - $border-width + 1px;
+  $bottom: modular-scale-px($b-step) - $border-width - 1px;
+  $horizontal: modular-scale-px($x-step) - $border-width;
   padding: $top $horizontal $bottom;
 }
 
@@ -55,6 +55,7 @@
   background: $gray-200;
   border-color: $gray-200;
   color: $text-color-hint;
+  opacity: 1; // some browsers (e.g. iOS Safari) reduce opacity
 }
 
 .TextInput--has-error,
