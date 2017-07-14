@@ -1589,6 +1589,7 @@ hr {
 .TextInput {
   font-size: 16px;
   padding: 9px 14px 10px;
+  -webkit-appearance: none;
   border: 2px solid #dbdbdb;
   border-radius: 3px;
   color: rgba(0, 0, 0, 0.86);
