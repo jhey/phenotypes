@@ -442,6 +442,7 @@ hr {
   color: #fff; }
 
 .Button--primary:active, .Button--primary.Button--is-active {
+  box-shadow: none;
   background: #118ead; }
 
 .Button--link {

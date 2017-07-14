@@ -108,6 +108,7 @@
 
   &:active,
   &.Button--is-active {
+    @include depth(0);
     background: darken($blue, 11);
   }
 }
