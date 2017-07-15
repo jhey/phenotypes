@@ -389,9 +389,12 @@ hr {
   line-height: 1.49271;
   text-align: center;
   transition: all .2s;
-  user-select: none;
   vertical-align: middle;
-  white-space: nowrap; }
+  white-space: nowrap;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none; }
 
 .Button:hover,
 .Button:focus,
