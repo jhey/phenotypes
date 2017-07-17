@@ -79,15 +79,14 @@
 // -------------
 
 .Button--danger {
+  @include reversed-text;
   background: $red;
-  color: $white;
 
   &:hover,
   &:focus,
   &.Button--is-hovered,
   &.Button--is-focused {
     background: darken($red, 5);
-    color: $white;
   }
 
   &:active,
@@ -101,9 +100,8 @@
 
 .Button--primary {
   @include depth(4);
+  @include reversed-text($font-weight: $font-weight-bold);
   background: $blue;
-  color: $white;
-  font-weight: $font-weight-bold;
 
   &:hover,
   &:focus,
@@ -111,7 +109,6 @@
   &.Button--is-focused {
     @include depth(7);
     background: darken($blue, 5);
-    color: $white;
   }
 
   &:active,

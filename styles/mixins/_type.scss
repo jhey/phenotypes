@@ -25,6 +25,21 @@
   @return round($font-size * $line-height-ratio);
 }
 
+// Reversed text (white on dark)
+@mixin reversed-text(
+  $color: $white,
+  $font-weight: $font-weight-normal
+) {
+  color: $color;
+  font-weight: $font-weight;
+
+  // Bold reversed text looks very fat with default antialiasing
+  if $font-weight == $font-weight-bold {
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+
 // ------------------------------
 // Text mixins
 // ------------------------------

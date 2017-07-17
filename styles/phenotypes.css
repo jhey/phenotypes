@@ -437,6 +437,7 @@ hr {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.14), 0 1px 1px rgba(0, 0, 0, 0.07), 0 0 6px rgba(0, 0, 0, 0.07);
   background: #16b8e0;
   color: #fff;
+  -webkit-font-smoothing: antialiased;
   font-weight: bold; }
 
 .Button--primary:hover, .Button--primary:focus, .Button--primary.Button--is-hovered, .Button--primary.Button--is-focused {
