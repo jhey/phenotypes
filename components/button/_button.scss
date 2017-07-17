@@ -87,6 +87,7 @@
   &.Button--is-hovered,
   &.Button--is-focused {
     background: darken($red, 5);
+    color: $white;
   }
 
   &:active,
@@ -109,6 +110,7 @@
   &.Button--is-focused {
     @include depth(7);
     background: darken($blue, 5);
+    color: $white;
   }
 
   &:active,
