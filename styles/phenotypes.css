@@ -388,7 +388,7 @@ hr {
   font-weight: normal;
   line-height: 1.49271;
   text-align: center;
-  transition: all .2s;
+  transition: all .2s ease-out;
   vertical-align: middle;
   white-space: nowrap;
   -moz-user-select: none;
@@ -405,7 +405,7 @@ hr {
   color: rgba(0, 0, 0, 0.86);
   text-decoration: none;
   transform: translateY(-2.25px) scaleX(1.015) scaleY(1.015);
-  transition-duration: .07s; }
+  transition-duration: .08s; }
 
 .Button:disabled,
 .Button--is-disabled {
