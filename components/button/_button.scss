@@ -1,4 +1,5 @@
 // scss-lint:disable SelectorFormat ElsePlacement
+
 @mixin button-sizer($size: 'medium') {
   @if $size == 'small' {
     font-size: $font-size-2;
@@ -20,6 +21,7 @@
 // ------------
 
 .Button {
+  // scss-lint:disable PropertySortOrder
   @include button-sizer;
   background: rgba($black, $alpha-200);
   border: 0;
@@ -34,6 +36,7 @@
   vertical-align: middle;
   white-space: nowrap;
 
+  // scss-lint:disable VendorPrefix
   // TODO: Add Autoprefixer
   -moz-user-select: none;
   -ms-user-select: none;
@@ -137,6 +140,48 @@
   &.Button--is-active {
     background: rgba($black, .11);
     color: $blue-400;
+  }
+}
+
+// Touch devices
+// -------------
+// Touch devices apply the hover state when a button is tapped,
+// so we use that in place of the active state. Since there's no
+// hovering on a touch device, we remove the hover transitions too.
+
+// Note: remember to include an ontouchstart listener on the document
+// This: document.addEventListener("touchstart", function() {},false);
+// Or this: <body ontouchstart="">
+
+@media (pointer: coarse), (any-pointer: coarse) {
+  .Button:hover,
+  .Button--is-hovered {
+    @include depth(0);
+    background: rgba($black, $alpha-200 + .11);
+    transform: translateY(1px) scaleX(.985) scaleY(.985);
+  }
+
+  .Button--danger {
+    &:hover,
+    &.Button--is-hovered {
+      background: darken($red, 11);
+    }
+  }
+
+  .Button--primary {
+    &:hover,
+    &.Button--is-hovered {
+      @include depth(0);
+      background: darken($blue, 11);
+    }
+  }
+
+  .Button--link {
+    &:hover,
+    &.Button--is-hovered {
+      background: rgba($black, .11);
+      color: $blue-400;
+    }
   }
 }
 

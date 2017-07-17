@@ -460,6 +460,21 @@ hr {
   background: rgba(0, 0, 0, 0.11);
   color: #005678; }
 
+@media (pointer: coarse), (any-pointer: coarse) {
+  .Button:hover,
+  .Button--is-hovered {
+    box-shadow: none;
+    background: rgba(0, 0, 0, 0.18);
+    transform: translateY(1px) scaleX(0.985) scaleY(0.985); }
+  .Button--danger:hover, .Button--danger.Button--is-hovered {
+    background: #ec192e; }
+  .Button--primary:hover, .Button--primary.Button--is-hovered {
+    box-shadow: none;
+    background: #118ead; }
+  .Button--link:hover, .Button--link.Button--is-hovered {
+    background: rgba(0, 0, 0, 0.11);
+    color: #005678; } }
+
 .Button--medium {
   font-size: 16px;
   padding: 11px 21px 12px; }
