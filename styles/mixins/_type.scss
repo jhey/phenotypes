@@ -34,7 +34,7 @@
   font-weight: $font-weight;
 
   // Bold reversed text looks very fat with default antialiasing
-  if $font-weight == $font-weight-bold {
+  @if $font-weight == $font-weight-bold {
     -webkit-font-smoothing: antialiased;
   }
 }
