@@ -2,6 +2,10 @@
 
 module.exports = {
   "button": require("../library/button/button.jsx"),
+  "display": require("../library/00-utilities/display/display.jsx"),
+  "flexbox": require("../library/00-utilities/flexbox/flexbox.jsx"),
+  "spacing": require("../library/00-utilities/spacing/spacing.jsx"),
+  "typography": require("../library/00-utilities/typography/typography.jsx"),
   "checkbox": require("../library/checkbox/checkbox.jsx"),
   "form-group": require("../library/form_group/form_group.jsx"),
   "grid": require("../library/grid/grid.jsx"),
