@@ -1,28 +1,34 @@
 // scss-lint:disable SelectorFormat ElsePlacement
 
-@function _text-input-pad($step: 0) {
-  @return modular-scale-px($step) - $border-width;
+@mixin _text-input-padding($t-step: 0, $x-step: 0, $b-step: 0) {
+  // Reduce all padding values by 2px to account for border width
+  // Fudge top padding by +1px and bottom by -1px for better text alignment
+  $top: modular-scale-px($t-step) - $border-width + 1px;
+  $bottom: modular-scale-px($b-step) - $border-width - 1px;
+  $horizontal: modular-scale-px($x-step) - $border-width;
+  padding: $top $horizontal $bottom;
 }
 
 @mixin text-input-sizer($size: 'medium') {
   @if $size == 'small' {
+    @include _text-input-padding(-6, -3, -5);
     font-size: $font-size-2;
-    padding: _text-input-pad(-6) _text-input-pad(-3) _text-input-pad(-5);
   }
 
   @else if $size == 'medium' {
+    @include _text-input-padding(-3, 0, -2);
     font-size: $font-size-3;
-    padding: _text-input-pad(-3) _text-input-pad(0) _text-input-pad(-2);
   }
 
   @else if $size == 'large' {
+    @include _text-input-padding(0, 2, 1);
     font-size: $font-size-4;
-    padding: _text-input-pad(0) _text-input-pad(2) _text-input-pad(1);
   }
 }
 
 .TextInput {
   @include text-input-sizer;
+  -webkit-appearance: none;
   border: $border-width solid $gray-300;
   border-radius: $border-radius;
   color: $text-color-primary;
@@ -49,6 +55,7 @@
   background: $gray-200;
   border-color: $gray-200;
   color: $text-color-hint;
+  opacity: 1; // some browsers (e.g. iOS Safari) reduce opacity
 }
 
 .TextInput--has-error,

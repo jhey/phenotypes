@@ -1,3 +1,6 @@
+For buttons to behave properly on touch devices, make sure you include a touch event handler to the DOM (`document.addEventListener("touchstart", function() {},false);` or `<body ontouchstart="">`). This signals to the browser that there are touch-related CSS styles that need to be applied.
+
+
 ### Props
 
 If a button has an `href` prop, the component renders an achor tag with `role=button`. Otherwise, the button is rendered as a true `button` HTML element.

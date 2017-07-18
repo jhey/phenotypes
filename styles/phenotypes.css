@@ -388,10 +388,13 @@ hr {
   font-weight: normal;
   line-height: 1.49271;
   text-align: center;
-  transition: all .2s;
-  user-select: none;
+  transition: all .2s ease-out;
   vertical-align: middle;
-  white-space: nowrap; }
+  white-space: nowrap;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none; }
 
 .Button:hover,
 .Button:focus,
@@ -402,7 +405,7 @@ hr {
   color: rgba(0, 0, 0, 0.86);
   text-decoration: none;
   transform: translateY(-2.25px) scaleX(1.015) scaleY(1.015);
-  transition-duration: .07s; }
+  transition-duration: .08s; }
 
 .Button:disabled,
 .Button--is-disabled {
@@ -420,8 +423,9 @@ hr {
   outline: 0; }
 
 .Button--danger {
-  background: #f04d5d;
-  color: #fff; }
+  color: #fff;
+  font-weight: normal;
+  background: #f04d5d; }
 
 .Button--danger:hover, .Button--danger:focus, .Button--danger.Button--is-hovered, .Button--danger.Button--is-focused {
   background: #ee3548;
@@ -432,9 +436,10 @@ hr {
 
 .Button--primary {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.14), 0 1px 1px rgba(0, 0, 0, 0.07), 0 0 6px rgba(0, 0, 0, 0.07);
-  background: #16b8e0;
   color: #fff;
-  font-weight: bold; }
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  background: #16b8e0; }
 
 .Button--primary:hover, .Button--primary:focus, .Button--primary.Button--is-hovered, .Button--primary.Button--is-focused {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.14), 0 1px 2px rgba(0, 0, 0, 0.07), 0 0 10px rgba(0, 0, 0, 0.07);
@@ -442,6 +447,7 @@ hr {
   color: #fff; }
 
 .Button--primary:active, .Button--primary.Button--is-active {
+  box-shadow: none;
   background: #118ead; }
 
 .Button--link {
@@ -455,6 +461,21 @@ hr {
 .Button--link:active, .Button--link.Button--is-active {
   background: rgba(0, 0, 0, 0.11);
   color: #005678; }
+
+@media (pointer: coarse), (any-pointer: coarse) {
+  .Button:hover,
+  .Button--is-hovered {
+    box-shadow: none;
+    background: rgba(0, 0, 0, 0.18);
+    transform: translateY(1px) scaleX(0.985) scaleY(0.985); }
+  .Button--danger:hover, .Button--danger.Button--is-hovered {
+    background: #ec192e; }
+  .Button--primary:hover, .Button--primary.Button--is-hovered {
+    box-shadow: none;
+    background: #118ead; }
+  .Button--link:hover, .Button--link.Button--is-hovered {
+    background: rgba(0, 0, 0, 0.11);
+    color: #005678; } }
 
 .Button--medium {
   font-size: 16px;
@@ -1587,8 +1608,9 @@ hr {
   border-bottom: 2px solid #000; }
 
 .TextInput {
+  padding: 10px 14px 9px;
   font-size: 16px;
-  padding: 9px 14px 10px;
+  -webkit-appearance: none;
   border: 2px solid #dbdbdb;
   border-radius: 3px;
   color: rgba(0, 0, 0, 0.86);
@@ -1610,7 +1632,8 @@ hr {
 .TextInput--is-disabled {
   background: #eee;
   border-color: #eee;
-  color: rgba(0, 0, 0, 0.41); }
+  color: rgba(0, 0, 0, 0.41);
+  opacity: 1; }
 
 .TextInput--has-error,
 .FormGroup--has-error .TextInput {
@@ -1623,74 +1646,74 @@ hr {
 
 .TextInput--medium,
 .FormGroup--medium .TextInput {
-  font-size: 16px;
-  padding: 9px 14px 10px; }
+  padding: 10px 14px 9px;
+  font-size: 16px; }
 
 .TextInput--small,
 .FormGroup--small .TextInput {
-  font-size: 14px;
-  padding: 5px 9px 6px; }
+  padding: 6px 9px 5px;
+  font-size: 14px; }
 
 .TextInput--large,
 .FormGroup--large .TextInput {
-  font-size: 18px;
-  padding: 14px 19px 16px; }
+  padding: 15px 19px 15px;
+  font-size: 18px; }
 
 @media (min-width: 600px) {
   .TextInput--medium-sm,
   .FormGroup--medium-sm .TextInput {
-    font-size: 16px;
-    padding: 9px 14px 10px; }
+    padding: 10px 14px 9px;
+    font-size: 16px; }
   .TextInput--small-sm,
   .FormGroup--small-sm .TextInput {
-    font-size: 14px;
-    padding: 5px 9px 6px; }
+    padding: 6px 9px 5px;
+    font-size: 14px; }
   .TextInput--large-sm,
   .FormGroup--large-sm .TextInput {
-    font-size: 18px;
-    padding: 14px 19px 16px; } }
+    padding: 15px 19px 15px;
+    font-size: 18px; } }
 
 @media (min-width: 900px) {
   .TextInput--medium-md,
   .FormGroup--medium-md .TextInput {
-    font-size: 16px;
-    padding: 9px 14px 10px; }
+    padding: 10px 14px 9px;
+    font-size: 16px; }
   .TextInput--small-md,
   .FormGroup--small-md .TextInput {
-    font-size: 14px;
-    padding: 5px 9px 6px; }
+    padding: 6px 9px 5px;
+    font-size: 14px; }
   .TextInput--large-md,
   .FormGroup--large-md .TextInput {
-    font-size: 18px;
-    padding: 14px 19px 16px; } }
+    padding: 15px 19px 15px;
+    font-size: 18px; } }
 
 @media (min-width: 1200px) {
   .TextInput--medium-lg,
   .FormGroup--medium-lg .TextInput {
-    font-size: 16px;
-    padding: 9px 14px 10px; }
+    padding: 10px 14px 9px;
+    font-size: 16px; }
   .TextInput--small-lg,
   .FormGroup--small-lg .TextInput {
-    font-size: 14px;
-    padding: 5px 9px 6px; }
+    padding: 6px 9px 5px;
+    font-size: 14px; }
   .TextInput--large-lg,
   .FormGroup--large-lg .TextInput {
-    font-size: 18px;
-    padding: 14px 19px 16px; } }
+    padding: 15px 19px 15px;
+    font-size: 18px; } }
 
 @media (min-width: 1500px) {
   .TextInput--medium-xl,
   .FormGroup--medium-xl .TextInput {
-    font-size: 16px;
-    padding: 9px 14px 10px; }
+    padding: 10px 14px 9px;
+    font-size: 16px; }
   .TextInput--small-xl,
   .FormGroup--small-xl .TextInput {
-    font-size: 14px;
-    padding: 5px 9px 6px; }
+    padding: 6px 9px 5px;
+    font-size: 14px; }
   .TextInput--large-xl,
   .FormGroup--large-xl .TextInput {
-    font-size: 18px;
-    padding: 14px 19px 16px; } }
+    padding: 15px 19px 15px;
+    font-size: 18px; } }
 
 .FormGroup__label {
   font-size: 14px;
