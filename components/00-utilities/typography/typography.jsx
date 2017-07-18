@@ -7,7 +7,7 @@ function Label(props) {
   );
 }
 
-function TextUtilities() {
+function TypographyUtilities() {
   return (
     <div>
       <h4>Text and heading sizes</h4>
@@ -132,4 +132,4 @@ function TextUtilities() {
   );
 }
 
-module.exports = TextUtilities;
+module.exports = TypographyUtilities;
