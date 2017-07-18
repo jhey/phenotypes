@@ -38,6 +38,7 @@ fractal.web.theme(customisedTheme);
 
 // Nomenclature config
 fractal.docs.set('label', 'Guides');
+fractal.components.set('label', 'Library');
 fractal.components.set('statuses', {
     deprecated: {
         label: "Deprecated",
