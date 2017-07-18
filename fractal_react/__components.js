@@ -1,12 +1,12 @@
 /* NOTE: This file is auto-generated while Fractal is running! */
 
 module.exports = {
-  "button": require("../components/button/button.jsx"),
-  "checkbox": require("../components/checkbox/checkbox.jsx"),
-  "form-group": require("../components/form_group/form_group.jsx"),
-  "grid": require("../components/grid/grid.jsx"),
-  "message": require("../components/message/message.jsx"),
-  "preview": require("../components/_preview.jsx"),
-  "tab": require("../components/tab/_tab.jsx"),
-  "text-input": require("../components/text_input/text_input.jsx"),
+  "button": require("../library/button/button.jsx"),
+  "checkbox": require("../library/checkbox/checkbox.jsx"),
+  "form-group": require("../library/form_group/form_group.jsx"),
+  "grid": require("../library/grid/grid.jsx"),
+  "message": require("../library/message/message.jsx"),
+  "preview": require("../library/_preview.jsx"),
+  "tab": require("../library/tab/_tab.jsx"),
+  "text-input": require("../library/text_input/text_input.jsx"),
 };

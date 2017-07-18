@@ -9,7 +9,7 @@ const fractal = require('@frctl/fractal').create();
 fractal.set('project.title', 'Phenotypes');
 
 // Paths
-fractal.components.set('path', path.join(__dirname, 'components'));
+fractal.components.set('path', path.join(__dirname, 'library'));
 fractal.docs.set('path', path.join(__dirname, 'guides'));
 fractal.web.set('static.path', path.join(__dirname, 'fractal_assets'));
 
