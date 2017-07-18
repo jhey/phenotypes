@@ -17,8 +17,12 @@ function writeComponentsMapFile(app) {
   // Map every component handle to its require path relative to *here*
   // e.g. button: require("../components/button/button.jsx"),
   components.forEach(function(item) {
-    const componentPath = path.join('..', componentsDir, item.relViewPath);
-    buffer += `  "${item.handle}": require("${componentPath}"),\n`;
+    // items that don't have a relViewPath are just collection directories (such as
+    // components/utilities), and don't have their own components to include
+    if (item.relViewPath) {
+      const componentPath = path.join('..', componentsDir, item.relViewPath);
+      buffer += `  "${item.handle}": require("${componentPath}"),\n`;
+    }
   });
 
   buffer += '};\n';
