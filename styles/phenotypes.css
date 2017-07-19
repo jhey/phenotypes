@@ -1342,6 +1342,9 @@ hr {
 .flex-wrap-reverse {
   flex-wrap: wrap-reverse !important; }
 
+.flex-none {
+  flex: none !important; }
+
 .justify-content-start {
   justify-content: flex-start !important; }
 
@@ -1429,6 +1432,8 @@ hr {
     flex-wrap: nowrap !important; }
   .flex-wrap-reverse-sm {
     flex-wrap: wrap-reverse !important; }
+  .flex-none-sm {
+    flex: none !important; }
   .justify-content-start-sm {
     justify-content: flex-start !important; }
   .justify-content-end-sm {
@@ -1495,6 +1500,8 @@ hr {
     flex-wrap: nowrap !important; }
   .flex-wrap-reverse-md {
     flex-wrap: wrap-reverse !important; }
+  .flex-none-md {
+    flex: none !important; }
   .justify-content-start-md {
     justify-content: flex-start !important; }
   .justify-content-end-md {
@@ -1561,6 +1568,8 @@ hr {
     flex-wrap: nowrap !important; }
   .flex-wrap-reverse-lg {
     flex-wrap: wrap-reverse !important; }
+  .flex-none-lg {
+    flex: none !important; }
   .justify-content-start-lg {
     justify-content: flex-start !important; }
   .justify-content-end-lg {
@@ -1627,6 +1636,8 @@ hr {
     flex-wrap: nowrap !important; }
   .flex-wrap-reverse-xl {
     flex-wrap: wrap-reverse !important; }
+  .flex-none-xl {
+    flex: none !important; }
   .justify-content-start-xl {
     justify-content: flex-start !important; }
   .justify-content-end-xl {
