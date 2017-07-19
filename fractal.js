@@ -9,7 +9,7 @@ const fractal = require('@frctl/fractal').create();
 fractal.set('project.title', 'Phenotypes');
 
 // Paths
-fractal.components.set('path', path.join(__dirname, 'components'));
+fractal.components.set('path', path.join(__dirname, 'library'));
 fractal.docs.set('path', path.join(__dirname, 'guides'));
 fractal.web.set('static.path', path.join(__dirname, 'fractal_assets'));
 
@@ -38,6 +38,7 @@ fractal.web.theme(customisedTheme);
 
 // Nomenclature config
 fractal.docs.set('label', 'Guides');
+fractal.components.set('label', 'Library');
 fractal.components.set('statuses', {
     deprecated: {
         label: "Deprecated",
