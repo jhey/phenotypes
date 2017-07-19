@@ -1,0 +1,33 @@
+// ------------------------------
+// Responsive sizing utilities
+// ------------------------------
+//
+// Width & height classes that use the same modular scale as the spacing classes.
+//
+// [width|height][size][-breakpoint]
+// e.g.: .width5-sm
+//
+// 100% width/height classes are also provided:
+//
+// [width|height]-full[-breakpoint]
+// e.g.: .width-full-sm
+
+// scss-lint:disable ImportantRule
+
+@if $enable-sizing-utilities {
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+      $bp: breakpoint-suffix($breakpoint, $grid-breakpoints);
+
+      @each $dimension in (width, height) {
+        @for $i from 1 through length($spacers) {
+          $size: $i - 1;
+          $length: nth($spacers, $i);
+          .#{$dimension}#{$size}#{$bp} { #{$dimension}: $length !important; }
+        }
+
+        .#{$dimension}-full#{$bp} { #{$dimension}: 100% !important; }
+      }
+    }
+  }
+}
