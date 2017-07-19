@@ -1,4 +1,4 @@
-Spacing utilities and SASS variables allow you to quickly set an element's margin or padding to defined values that align with the Phenotypes modular scale. 
+Spacing utilities and SASS variables allow you to quickly set an element's margin or padding to defined values that align with the Phenotypes modular scale.
 
 ### Responsive classes
 
