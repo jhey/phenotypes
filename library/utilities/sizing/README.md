@@ -1,8 +1,8 @@
 Sizing utility classes are available for setting a fixed width or height on an element. The sizing
 utilities share the same modular scale as the [spacing utilities](/components/detail/spacing).
 
-*Note: for widths, [the grid](/components/detail/grid) is preferred. Don't use fixed width sizers
-unless truly necessary.*
+*Note: for fixed widths, [the grid](/components/detail/grid) is preferred. Don't use fixed width
+sizers unless truly necessary.*
 
 ### Classes
 
