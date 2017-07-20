@@ -242,6 +242,24 @@ function FlexboxUtilities() {
       <Demo classNames="d-flex flex-wrap align-content-stretch" width="500px" height="200px">
         <InnerBox /><InnerBox /><InnerBox /><InnerBox /><InnerBox />
       </Demo>
+
+      <h3 className="mt7">Grow and shrink</h3>
+      <Demo classNames="d-inline-flex">
+        <InnerBox>
+          In this example, this box has so much text in it that it would cause the other box
+          to break lines on the dash. But that box cannot shrink b/c it has the
+          <code>.flex-none</code> class.
+        </InnerBox>
+        <InnerBox className="flex-none">
+          <code>.flex-none</code>
+        </InnerBox>
+      </Demo>
+      <Separator />
+      <Demo classNames="d-flex">
+        <InnerBox className="flex-1"><code>.flex-1</code></InnerBox>
+        <InnerBox />
+        <InnerBox className="flex-1"><code>.flex-1</code></InnerBox>
+      </Demo>
     </div>
   );
 }
