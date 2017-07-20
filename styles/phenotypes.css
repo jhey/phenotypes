@@ -1319,6 +1319,9 @@ hr {
 .flex-none {
   flex: none !important; }
 
+.flex-1 {
+  flex: 1 !important; }
+
 .justify-content-start {
   justify-content: flex-start !important; }
 
@@ -1408,6 +1411,8 @@ hr {
     flex-wrap: wrap-reverse !important; }
   .flex-none-sm {
     flex: none !important; }
+  .flex-1-sm {
+    flex: 1 !important; }
   .justify-content-start-sm {
     justify-content: flex-start !important; }
   .justify-content-end-sm {
@@ -1476,6 +1481,8 @@ hr {
     flex-wrap: wrap-reverse !important; }
   .flex-none-md {
     flex: none !important; }
+  .flex-1-md {
+    flex: 1 !important; }
   .justify-content-start-md {
     justify-content: flex-start !important; }
   .justify-content-end-md {
@@ -1544,6 +1551,8 @@ hr {
     flex-wrap: wrap-reverse !important; }
   .flex-none-lg {
     flex: none !important; }
+  .flex-1-lg {
+    flex: 1 !important; }
   .justify-content-start-lg {
     justify-content: flex-start !important; }
   .justify-content-end-lg {
@@ -1612,6 +1621,8 @@ hr {
     flex-wrap: wrap-reverse !important; }
   .flex-none-xl {
     flex: none !important; }
+  .flex-1-xl {
+    flex: 1 !important; }
   .justify-content-start-xl {
     justify-content: flex-start !important; }
   .justify-content-end-xl {
