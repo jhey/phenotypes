@@ -1,0 +1,71 @@
+// scss-lint:disable SelectorFormat ElsePlacement
+@mixin form-group-sizer($size: 'medium') {
+  @if $size == 'small' {
+    .FormGroup__label {
+      @include text-1($font-weight-bold);
+      margin-bottom: $spacer-1;
+    }
+
+    .FormGroup__error {
+      @include text-1;
+    }
+  }
+
+  @else if $size == 'medium' {
+    .FormGroup__label {
+      @include text-2($font-weight-bold);
+      margin-bottom: $spacer-2;
+    }
+
+    .FormGroup__error {
+      @include text-2;
+      color: $brand-danger;
+      margin-top: $spacer-2;
+
+      &::before {
+        content: '✘ '; // TODO: replace with SVG icon
+        display: inline;
+      }
+    }
+
+    .FormGroup__hint {
+      @include text-1;
+      color: $text-color-secondary;
+      margin-top: $spacer-2;
+    }
+  }
+
+  @else if $size == 'large' {
+    .FormGroup__label {
+      @include text-4($font-weight-bold);
+    }
+
+    .FormGroup__error {
+      @include text-3;
+    }
+
+    .FormGroup__hint {
+      @include text-2;
+    }
+  }
+}
+
+//
+// Sizers
+//
+
+@include form-group-sizer;
+
+@if $enable-responsive-form-components {
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+      $suffix: breakpoint-suffix($breakpoint, $grid-breakpoints);
+      .FormGroup--small#{$suffix} { @include form-group-sizer('small'); }
+      .FormGroup--medium#{$suffix} { @include form-group-sizer; }
+      .FormGroup--large#{$suffix} { @include form-group-sizer('large'); }
+    }
+  }
+} @else {
+  .FormGroup--small { @include form-group-sizer('small'); }
+  .FormGroup--large { @include form-group-sizer('large'); }
+}

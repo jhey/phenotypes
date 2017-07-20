@@ -11,21 +11,33 @@ function writeComponentsMapFile(app) {
   const relFile = path.join(thisDir, COMPONENTS_MAPPING_FILENAME);
   const file = path.join(__dirname, COMPONENTS_MAPPING_FILENAME);
 
-  var buffer = '/* NOTE: This file is auto-generated while Fractal is running! */\n\n';
+  let buffer = '/* NOTE: This file is auto-generated while Fractal is running! */\n\n';
   buffer += 'module.exports = {\n';
 
-  // Map every component handle to its require path relative to *here*
-  // e.g. button: require("../components/button/button.jsx"),
-  components.forEach(function(item) {
-    const componentPath = path.join('..', componentsDir, item.relViewPath);
-    buffer += `  "${item.handle}": require("${componentPath}"),\n`;
-  });
+  function addComponentToBundle(component) {
+    // Map every component handle to its require path relative to *here*
+    // e.g. button: require("../libary/components/button/button.jsx"),
+    const componentPath = path.join('..', componentsDir, component.relViewPath);
+    buffer += `  "${component.handle}": require("${componentPath}"),\n`;
+  }
+
+  function addCollectionToBundle(collection) {
+    collection.forEach((item) => {
+      if (item.isCollection) {
+        addCollectionToBundle(item);
+      } else {
+        addComponentToBundle(item);
+      }
+    });
+  }
+
+  addCollectionToBundle(components);
 
   buffer += '};\n';
 
   fs.writeFile(file, buffer, (err) => {
     if (err) throw err;
-    console.log('Component handles and paths successfully written to ' + relFile + '\n\n');
+    console.log(`Component handles and paths successfully written to ${relFile} + '\n\n`);
   });
 }
 

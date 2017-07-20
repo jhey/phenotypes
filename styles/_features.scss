@@ -23,14 +23,21 @@ $enable-display-utilities: true !default;
 // Flexbox utilities: 359 lines of CSS (approx 10kb)
 $enable-flex-utilities: true !default;
 
+// Sizing utilities: 248 lines of CSS
+$enable-sizing-utilities: true !default;
+
 // Spacing utilities: 1835 lines of CSS (approx 42kb)
 $enable-spacing-utilities: true !default;
 
 // Typography utilities: 344 lines of CSS (approx 10kb)
 $enable-type-utilities: true !default;
 
-// Form utilities: (?) lines of CSS
-$enable-form-utilities: true !default;
-
 // Grid classes:
 $enable-grid-classes: true !default;
+
+// ------------------------------
+// Components
+// ------------------------------
+
+// Responsive form components: (?) lines of CSS
+$enable-responsive-form-components: true !default;

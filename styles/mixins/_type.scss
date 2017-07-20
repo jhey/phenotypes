@@ -25,6 +25,21 @@
   @return round($font-size * $line-height-ratio);
 }
 
+// Reversed text (white on dark)
+@mixin reversed-text(
+  $color: $white,
+  $font-weight: $font-weight-normal
+) {
+  color: $color;
+  font-weight: $font-weight;
+
+  // Bold reversed text looks very fat with default antialiasing
+  @if $font-weight == $font-weight-bold {
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+
 // ------------------------------
 // Text mixins
 // ------------------------------
@@ -48,10 +63,10 @@
 // 12px
 @mixin text-1($font-weight: $font-weight-normal, $important: false) {
   @include text(
-  	$font-size: $font-size-1,
-  	$line-height-ratio: $line-height-ratio-3,
-  	$letter-spacing: letter-spacing(-2),
-  	$font-weight: $font-weight,
+    $font-size: $font-size-1,
+    $line-height-ratio: $line-height-ratio-3,
+    $letter-spacing: letter-spacing(-2),
+    $font-weight: $font-weight,
     $important: $important
   );
 }
@@ -59,10 +74,10 @@
 // 14px
 @mixin text-2($font-weight: $font-weight-normal, $important: false) {
   @include text(
-  	$font-size: $font-size-2,
-  	$line-height-ratio: $line-height-ratio-3,
-  	$letter-spacing: letter-spacing(-1),
-  	$font-weight: $font-weight,
+    $font-size: $font-size-2,
+    $line-height-ratio: $line-height-ratio-3,
+    $letter-spacing: letter-spacing(-1),
+    $font-weight: $font-weight,
     $important: $important
   );
 }
@@ -70,10 +85,10 @@
 // 16px
 @mixin text-3($font-weight: $font-weight-normal, $important: false) {
   @include text(
-  	$font-size: $font-size-3,
-  	$line-height-ratio: $line-height-ratio-3,
-  	$letter-spacing: letter-spacing(0),
-  	$font-weight: $font-weight,
+    $font-size: $font-size-3,
+    $line-height-ratio: $line-height-ratio-3,
+    $letter-spacing: letter-spacing(0),
+    $font-weight: $font-weight,
     $important: $important
   );
 }
@@ -81,10 +96,10 @@
 // 18px
 @mixin text-4($font-weight: $font-weight-normal, $important: false) {
   @include text(
-  	$font-size: $font-size-4,
-  	$line-height-ratio: $line-height-ratio-3,
-  	$letter-spacing: letter-spacing(1),
-  	$font-weight: $font-weight,
+    $font-size: $font-size-4,
+    $line-height-ratio: $line-height-ratio-3,
+    $letter-spacing: letter-spacing(1),
+    $font-weight: $font-weight,
     $important: $important
   );
 }
@@ -92,10 +107,10 @@
 // 21px
 @mixin text-5($font-weight: $font-weight-normal, $important: false) {
   @include text(
-  	$font-size: $font-size-5,
-  	$line-height-ratio: $line-height-ratio-3,
-  	$letter-spacing: letter-spacing(2),
-  	$font-weight: $font-weight,
+    $font-size: $font-size-5,
+    $line-height-ratio: $line-height-ratio-3,
+    $letter-spacing: letter-spacing(2),
+    $font-weight: $font-weight,
     $important: $important
   );
 }
@@ -103,10 +118,10 @@
 // 24px
 @mixin text-6($font-weight: $font-weight-normal, $important: false) {
   @include text(
-  	$font-size: $font-size-6,
-  	$line-height-ratio: $line-height-ratio-2,
-  	$letter-spacing: letter-spacing(3),
-  	$font-weight: $font-weight,
+    $font-size: $font-size-6,
+    $line-height-ratio: $line-height-ratio-2,
+    $letter-spacing: letter-spacing(3),
+    $font-weight: $font-weight,
     $important: $important
   );
 }
@@ -114,10 +129,10 @@
 // 36px
 @mixin text-7($font-weight: $font-weight-normal, $important: false) {
   @include text(
-  	$font-size: $font-size-7,
-  	$line-height-ratio: $line-height-ratio-2,
-  	$letter-spacing: letter-spacing(6),
-  	$font-weight: $font-weight,
+    $font-size: $font-size-7,
+    $line-height-ratio: $line-height-ratio-2,
+    $letter-spacing: letter-spacing(6),
+    $font-weight: $font-weight,
     $important: $important
   );
 }
@@ -125,10 +140,10 @@
 // 53px
 @mixin text-8($font-weight: $font-weight-normal, $important: false) {
   @include text(
-  	$font-size: $font-size-8,
-  	$line-height-ratio: $line-height-ratio-1,
-  	$letter-spacing: letter-spacing(9),
-  	$font-weight: $font-weight,
+    $font-size: $font-size-8,
+    $line-height-ratio: $line-height-ratio-1,
+    $letter-spacing: letter-spacing(9),
+    $font-weight: $font-weight,
     $important: $important
   );
 }

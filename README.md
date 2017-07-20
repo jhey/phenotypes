@@ -114,6 +114,27 @@ Finally, utilities are imported. Similarly to mixins, each utility gets its own 
 
 The compiled CSS is provided as `styles/phenotypes.css`. Using the SASS stylesheet is preferred, as you'll get access to all the variables and mixins. But for a simple project, it might make more sense to just use the pre-baked CSS.
 
+## Publishing a release to npm
+
+First, some npm stuff:
+
+* If you don't have an npm account, create one and use `npm login` to login on the command line
+* Get your npm username added to the @aminohealth organization
+
+Then create the release:
+
+* Create a new branch
+* Use `npm version [patch|minor|major]` to create a commit and tag that bumps the package version. Use [semver](http://semver.org/) to decide whether the update is patch/minor/major.
+* Create a PR and get that branch merged
+* In github, create a PR to merge dev into master, and get that merged
+
+Then publish the release:
+
+* In the updated master branch, run `npm publish`
+* Push the new git tag created by `npm version` with `git push --tags`
+* In github, create a new release and describe the changes
+
+
 ## Using Phenotypes components and styles in a project
 
 The following command will install Phenotypes into `node_modules/@aminohealth/phenotypes`:

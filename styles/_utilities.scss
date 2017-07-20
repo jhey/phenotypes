@@ -1,4 +1,6 @@
-@import 'utilities/display';
-@import 'utilities/flex';
-@import 'utilities/spacing';
-@import 'utilities/type';
+@import 'library/utilities/display/display';
+@import 'library/utilities/flexbox/flexbox';
+@import 'library/utilities/grid/grid';
+@import 'library/utilities/sizing/sizing';
+@import 'library/utilities/spacing/spacing';
+@import 'library/utilities/typography/typography';

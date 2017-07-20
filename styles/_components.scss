@@ -1,9 +1,8 @@
-@import '../components/button/button';
-@import '../components/checkbox/checkbox';
-@import '../components/grid/grid';
-@import '../components/message/message';
-@import '../components/tab/tab';
+@import 'library/components/button/button';
+@import 'library/components/checkbox/checkbox';
+@import 'library/components/message/message';
+@import 'library/components/tab/tab';
 
 // Note: order matters for form utilities!
-@import '../components/text_input/text_input';
-@import '../components/form_group/form_group';
+@import 'library/components/text_input/text_input';
+@import 'library/components/form_group/form_group';
