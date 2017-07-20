@@ -11,6 +11,7 @@ module.exports = {
   "display": require("../library/utilities/display/display.jsx"),
   "flexbox": require("../library/utilities/flexbox/flexbox.jsx"),
   "grid": require("../library/utilities/grid/grid.jsx"),
+  "sizing": require("../library/utilities/sizing/sizing.jsx"),
   "spacing": require("../library/utilities/spacing/spacing.jsx"),
   "typography": require("../library/utilities/typography/typography.jsx"),
 };

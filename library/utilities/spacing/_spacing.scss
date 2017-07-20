@@ -35,10 +35,18 @@
           }
 
           @if $abbrev == 'm' {  // negation only applicable for margin
-            // e.g. mxn3-sm
-            .#{$abbrev}xn#{$size}#{$suffix} {
-              #{$prop}-right: -$length !important;
-              #{$prop}-left:  -$length !important;
+            @if $size != 0 { // don't need -0px margins
+              // e.g. mt3-sm
+              .#{$abbrev}tn#{$size}#{$suffix} { #{$prop}-top:    -$length !important; }
+              .#{$abbrev}rn#{$size}#{$suffix} { #{$prop}-right:  -$length !important; }
+              .#{$abbrev}bn#{$size}#{$suffix} { #{$prop}-bottom: -$length !important; }
+              .#{$abbrev}ln#{$size}#{$suffix} { #{$prop}-left:   -$length !important; }
+
+              // e.g. mxn3-sm
+              .#{$abbrev}xn#{$size}#{$suffix} {
+                #{$prop}-right: -$length !important;
+                #{$prop}-left:  -$length !important;
+              }
             }
           }
 

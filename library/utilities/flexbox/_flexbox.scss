@@ -26,6 +26,9 @@
       .flex-nowrap#{$suffix}       { flex-wrap: nowrap !important; }
       .flex-wrap-reverse#{$suffix} { flex-wrap: wrap-reverse !important; }
 
+      .flex-none#{$suffix} { flex: none !important; }
+      .flex-1#{$suffix}    { flex: 1 !important; }
+
       .justify-content-start#{$suffix}   { justify-content: flex-start !important; }
       .justify-content-end#{$suffix}     { justify-content: flex-end !important; }
       .justify-content-center#{$suffix}  { justify-content: center !important; }

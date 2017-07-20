@@ -120,8 +120,13 @@ function TypographyUtilities() {
       <Label>.text-style-italic</Label>
       <p className="text-style-italic">Italic style</p>
       <hr />
-      <Label>.text-weight-bold.text-style-italic</Label>
-      <p className="text-style-italic text-weight-bold">Bold weight and italic style</p>
+      <Label>.text-underline</Label>
+      <p className="text-underline">Underline</p>
+      <hr />
+      <Label>.text-weight-bold.text-style-italic.text-underline</Label>
+      <p className="text-style-italic text-weight-bold text-underline">
+        Bold, italic, and underline
+      </p>
 
       <hr className="my7" />
 

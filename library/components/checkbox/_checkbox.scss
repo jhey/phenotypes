@@ -123,7 +123,7 @@
   user-select: none;
 }
 
-@if $enable-form-utilities {
+@if $enable-responsive-form-components {
   @each $breakpoint in map-keys($grid-breakpoints) {
     @include media-breakpoint-up($breakpoint) {
       $suffix: breakpoint-suffix($breakpoint, $grid-breakpoints);
