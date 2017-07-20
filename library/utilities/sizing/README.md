@@ -1,25 +1,23 @@
-Sizing utility classes are available for setting a fixed width or height on an element. The sizing
+Sizing utility classes are available for setting a width or height on an element. The sizing
 utilities share the same modular scale as the [spacing utilities](/components/detail/spacing).
 
-Note: if you don't need fixed widths, [the grid system](/components/detail/grid) is available for
-more detailed percentage-based widthery.
+Note: for percentage width layouts, see the [the grid system](/components/detail/grid).
 
 ### Classes
 
 ```
-.[property][size][-breakpoint]
+.width-[size][-breakpoint]
+.height-[size][-breakpoint]
 ```
 
-* `property` is `width` or `height`
-* `size` is a modular scale number from 0 to 9, or "-full" for 100%.
+* `size` is a modular scale number from 0 to 9, or "full" for 100%.
 * `breakpoint` is an optional responsive breakpoint (`sm`, `md`, `lg`, `xl`)
 
 Examples:
 
-* `.width5`
+* `.width-5`
 * `.width-full`
-* `.height3-sm`
-* `.width3.width-full-xl`
+* `.height-3.height-full-xl`
 
 Related:
 

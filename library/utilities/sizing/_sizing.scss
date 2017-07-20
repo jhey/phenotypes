@@ -4,8 +4,8 @@
 //
 // Width & height classes that use the same modular scale as the spacing classes.
 //
-// [width|height][size][-breakpoint]
-// e.g.: .width5-sm
+// [width|height]-[size][-breakpoint]
+// e.g.: .width-5-sm
 //
 // 100% width/height classes are also provided:
 //
@@ -23,7 +23,7 @@
         @for $i from 1 through length($spacers) {
           $size: $i - 1;
           $length: nth($spacers, $i);
-          .#{$dimension}#{$size}#{$bp} { #{$dimension}: $length !important; }
+          .#{$dimension}-#{$size}#{$bp} { #{$dimension}: $length !important; }
         }
 
         .#{$dimension}-full#{$bp} { #{$dimension}: 100% !important; }

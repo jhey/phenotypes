@@ -6,10 +6,10 @@ function Example({ size }) {
     <div>
       <p>
         <code className="text-color-hint">
-          .width{size}.height{size}
+          .width-{size}.height-{size}
         </code>
       </p>
-      <div className={classes(`width${size}`, `height${size}`, 'sizing-example')} />
+      <div className={classes(`width-${size}`, `height-${size}`, 'sizing-example')} />
       <hr />
     </div>
   );
@@ -28,7 +28,7 @@ function SizingExamples() {
       <Example size={7} />
       <Example size={8} />
       <Example size={9} />
-      <Example size="-full" />
+      <Example size="full" />
     </div>
   );
 }
