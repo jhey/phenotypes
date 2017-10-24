@@ -24,6 +24,5 @@ Passing a prop that is not a legal DOM attribute will cause React to trigger an 
 | `Checkbox--small[-breakpoint]` | false | true | Responsive breakpoint token optional |
 | `Checkbox--medium[-breakpoint]` | true | true | Responsive breakpoint token optional |
 | `Checkbox--large[-breakpoint]` | false | true | Responsive breakpoint token optional |
-| `Checkbox--is-disabled` | false | false | If the component has a truthy `disabled` prop, this modifier is applied automatically. |
 
 For the responsive classes, append a responsive breakpoint token to apply the associated sizing styles at that breakpoint and up. For example, `.Checkbox--small .Checkbox--medium-sm .Checkbox--large-md` will give you a small size checkbox on `xs` screens, medium on `sm` screens, and large on `md` screens and up.
