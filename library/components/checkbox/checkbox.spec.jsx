@@ -17,7 +17,7 @@ describe('Checkbox', function () {
     expect(inputProps.type).to.equal('checkbox');
   });
 
-  it('should pass HTML attributes to input element and apply disabled class', function () {
+  it('should pass HTML attributes to input element', function () {
     const wrapper = shallow(
       <Checkbox
         className="className"
@@ -30,7 +30,6 @@ describe('Checkbox', function () {
     );
 
     const wrapperProps = wrapper.find('label').props();
-    expect(wrapperProps.className).to.equal('className Checkbox Checkbox--is-disabled');
 
     const inputProps = wrapper.find('input').props();
     expect(inputProps.className).to.equal('Checkbox__input');
