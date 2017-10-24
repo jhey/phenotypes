@@ -148,6 +148,32 @@
   );
 }
 
+@mixin text-size($text-size) {
+  @if $text-size == 1 {
+    @include text-1;
+  }
+  @else if $text-size == 2 {
+    @include text-2;
+  }
+  @else if $text-size == 3 {
+    @include text-3;
+  }
+  @else if $text-size == 4 {
+    @include text-4;
+  }
+  @else if $text-size == 5 {
+    @include text-5;
+  }
+  @else if $text-size == 6 {
+    @include text-6;
+  }
+  @else if $text-size == 7 {
+    @include text-7;
+  }
+  @else if $text-size == 8 {
+    @include text-8;
+  }
+}
 
 // ------------------------------
 // Uppercase text mixins
