@@ -1,8 +1,6 @@
 const React = require('react');
 const classes = require('classnames');
 
-// TODO: add uncheckable option
-
 function Radio(props) {
   const { className, children, ...htmlProps } = props;
   return (
