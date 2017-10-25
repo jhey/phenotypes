@@ -37,10 +37,6 @@
   }
 }
 
-@mixin checkbox-icon($fill: $white, $fill-opacity: 1) {
-  background-image: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 9'%3E%3Cpolygon fill='#{$fill}' fill-opacity='#{$fill-opacity}' points='3.5 5.45 1.5 3.45 0 4.95 3.5 8.45 10 1.95 8.5 .45'/%3E%3C/svg%3E%0A"), '#', '%23');
-}
-
 .Radio {
   @include radio-sizer;
   display: inline-block;
