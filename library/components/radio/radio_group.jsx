@@ -14,7 +14,7 @@ class RadioGroup extends React.Component {
   }
 
   handleChange(valueOfRadioClicked) {
-    const clearing = !!this.props.clearable && valueOfRadioClicked === this.state.value;
+    const clearing = this.props.clearable && valueOfRadioClicked === this.state.value;
     const newValue = clearing ? null : valueOfRadioClicked;
 
     if (newValue !== this.state.value) {
