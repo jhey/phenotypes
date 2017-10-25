@@ -6,10 +6,11 @@ const Button = require('../button/button.jsx');
 function RadioButtonsExamples() {
   return (
     <div>
-      <h3>Radio states &amp; modifiers</h3>
+      <h3>Radios</h3>
       <StylingExamples />
+      <ComplexLabelExample />
 
-      <hr />
+      <hr /><br />
 
       <h3>Radio Groups</h3>
 
@@ -23,6 +24,7 @@ function RadioButtonsExamples() {
 function StylingExamples() {
   return (
     <div>
+      <h6>States &amp; modifiers</h6>
       <div>
         <Radio className="mr4">Unchecked</Radio>
         <Radio defaultChecked>Checked</Radio>
@@ -39,25 +41,30 @@ function StylingExamples() {
   );
 }
 
+function ComplexLabelExample() {
+  return (
+    <div className="mt5">
+      <h6>Sophisticated labels</h6>
+      <p>
+        You can use html in the label if it needs to be more than just a string. Clicking anywhere
+        in the label will check the radio.
+      </p>
+      <Radio>
+        I have some footer text
+        <p className="text-1 text-color-secondary">click me</p>
+      </Radio>
+    </div>
+  );
+}
+
+
 function BasicGroupExample() {
   return (
     <div>
       <p>
-        The <code>RadioGroup</code> component makes it easy to have a single field which has
-        multiple radio buttons. It has a <code>render</code> prop, which takes a function that
-        renders all the radio buttons. This gives you full control over the markup:
+        The <code>RadioGroup</code> component makes it easy to have a single field with a selected
+        value, using multiple radio buttons.
       </p>
-      <ul>
-        <li>
-          The props of each radio are fully customizable. For example, you can set individual
-          radios as disabled, set the <code>name</code> prop (or not), and you can have custom
-          event handlers on each radio.
-        </li>
-        <li>
-          The <code>RadioGroup</code> component does not choose the container; you can use a
-          <code>&lt;form&gt;</code>, or any other element.
-        </li>
-      </ul>
       <RadioGroup value="two" render={({ value, onChange }) => (
         <div className="mt5">
           <Radio
