@@ -13,7 +13,6 @@ function RadioButtonsExamples() {
       <hr /><br />
 
       <h3>Radio Groups</h3>
-
       <BasicGroupExample />
       <ClearableGroupExample />
       <DisabledGroupExample />
