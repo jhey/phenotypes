@@ -821,14 +821,14 @@ hr {
   position: relative; }
 
 .Radio .Radio__indicator {
-  width: 16px;
   height: 16px;
-  top: 1px; }
+  top: 1px;
+  width: 16px; }
 
-.Radio .Radio__indicator:after {
-  width: 6px;
+.Radio .Radio__indicator::after {
   height: 6px;
-  transform: translateX(-50%) translateY(-50%); }
+  transform: translateX(-50%) translateY(-50%);
+  width: 6px; }
 
 .Radio__input {
   opacity: 0;
@@ -848,7 +848,7 @@ hr {
   border-color: #232323;
   color: #fff; }
 
-.Radio__input:checked ~ .Radio__indicator:after {
+.Radio__input:checked ~ .Radio__indicator::after {
   display: block; }
 
 .Radio__input:checked:focus ~ .Radio__indicator {
@@ -859,7 +859,7 @@ hr {
   background-color: #232323;
   border-color: #232323; }
 
-.Radio__input:checked:active:not(:disabled) ~ .Radio__indicator:after {
+.Radio__input:checked:active:not(:disabled) ~ .Radio__indicator::after {
   opacity: 0.54; }
 
 .Radio__input:disabled ~ .Radio__indicator,
@@ -867,8 +867,8 @@ hr {
   background-color: #eee;
   border-color: #eee; }
 
-.Radio__input:disabled:checked ~ .Radio__indicator:after,
-.Radio__input:disabled:checked:active ~ .Radio__indicator:after {
+.Radio__input:disabled:checked ~ .Radio__indicator::after,
+.Radio__input:disabled:checked:active ~ .Radio__indicator::after {
   background-color: #c1c1c1; }
 
 .Radio__input:disabled ~ .Radio__label {
@@ -883,14 +883,14 @@ hr {
   position: absolute;
   user-select: none; }
 
-.Radio__indicator:after {
-  content: "";
-  display: none;
-  position: absolute;
-  top: 50%;
-  left: 50%;
+.Radio__indicator::after {
+  background-color: #fff;
   border-radius: 50%;
-  background-color: #fff; }
+  content: '';
+  display: none;
+  left: 50%;
+  position: absolute;
+  top: 50%; }
 
 .Radio--medium {
   font-size: 14px;
@@ -900,14 +900,14 @@ hr {
   padding-left: 23px; }
 
 .Radio--medium .Radio__indicator {
-  width: 16px;
   height: 16px;
-  top: 1px; }
+  top: 1px;
+  width: 16px; }
 
-.Radio--medium .Radio__indicator:after {
-  width: 6px;
+.Radio--medium .Radio__indicator::after {
   height: 6px;
-  transform: translateX(-50%) translateY(-50%); }
+  transform: translateX(-50%) translateY(-50%);
+  width: 6px; }
 
 .Radio--small {
   font-size: 12px;
@@ -917,14 +917,14 @@ hr {
   padding-left: 21px; }
 
 .Radio--small .Radio__indicator {
-  width: 14px;
   height: 14px;
-  top: 1px; }
+  top: 1px;
+  width: 14px; }
 
-.Radio--small .Radio__indicator:after {
-  width: 5px;
+.Radio--small .Radio__indicator::after {
   height: 5px;
-  transform: translateX(-50%) translateY(-50%); }
+  transform: translateX(-50%) translateY(-50%);
+  width: 5px; }
 
 .Radio--large {
   font-size: 18px;
@@ -934,14 +934,14 @@ hr {
   padding-left: 32px; }
 
 .Radio--large .Radio__indicator {
-  width: 21px;
   height: 21px;
-  top: 2px; }
+  top: 2px;
+  width: 21px; }
 
-.Radio--large .Radio__indicator:after {
-  width: 8px;
+.Radio--large .Radio__indicator::after {
   height: 8px;
-  transform: translateX(-55%) translateY(-55%); }
+  transform: translateX(-55%) translateY(-55%);
+  width: 8px; }
 
 @media (min-width: 600px) {
   .Radio--medium-sm {
@@ -951,13 +951,13 @@ hr {
     font-weight: normal;
     padding-left: 23px; }
   .Radio--medium-sm .Radio__indicator {
-    width: 16px;
     height: 16px;
-    top: 1px; }
-  .Radio--medium-sm .Radio__indicator:after {
-    width: 6px;
+    top: 1px;
+    width: 16px; }
+  .Radio--medium-sm .Radio__indicator::after {
     height: 6px;
-    transform: translateX(-50%) translateY(-50%); }
+    transform: translateX(-50%) translateY(-50%);
+    width: 6px; }
   .Radio--small-sm {
     font-size: 12px;
     line-height: 18px;
@@ -965,13 +965,13 @@ hr {
     font-weight: normal;
     padding-left: 21px; }
   .Radio--small-sm .Radio__indicator {
-    width: 14px;
     height: 14px;
-    top: 1px; }
-  .Radio--small-sm .Radio__indicator:after {
-    width: 5px;
+    top: 1px;
+    width: 14px; }
+  .Radio--small-sm .Radio__indicator::after {
     height: 5px;
-    transform: translateX(-50%) translateY(-50%); }
+    transform: translateX(-50%) translateY(-50%);
+    width: 5px; }
   .Radio--large-sm {
     font-size: 18px;
     line-height: 27px;
@@ -979,13 +979,13 @@ hr {
     font-weight: normal;
     padding-left: 32px; }
   .Radio--large-sm .Radio__indicator {
-    width: 21px;
     height: 21px;
-    top: 2px; }
-  .Radio--large-sm .Radio__indicator:after {
-    width: 8px;
+    top: 2px;
+    width: 21px; }
+  .Radio--large-sm .Radio__indicator::after {
     height: 8px;
-    transform: translateX(-55%) translateY(-55%); } }
+    transform: translateX(-55%) translateY(-55%);
+    width: 8px; } }
 
 @media (min-width: 900px) {
   .Radio--medium-md {
@@ -995,13 +995,13 @@ hr {
     font-weight: normal;
     padding-left: 23px; }
   .Radio--medium-md .Radio__indicator {
-    width: 16px;
     height: 16px;
-    top: 1px; }
-  .Radio--medium-md .Radio__indicator:after {
-    width: 6px;
+    top: 1px;
+    width: 16px; }
+  .Radio--medium-md .Radio__indicator::after {
     height: 6px;
-    transform: translateX(-50%) translateY(-50%); }
+    transform: translateX(-50%) translateY(-50%);
+    width: 6px; }
   .Radio--small-md {
     font-size: 12px;
     line-height: 18px;
@@ -1009,13 +1009,13 @@ hr {
     font-weight: normal;
     padding-left: 21px; }
   .Radio--small-md .Radio__indicator {
-    width: 14px;
     height: 14px;
-    top: 1px; }
-  .Radio--small-md .Radio__indicator:after {
-    width: 5px;
+    top: 1px;
+    width: 14px; }
+  .Radio--small-md .Radio__indicator::after {
     height: 5px;
-    transform: translateX(-50%) translateY(-50%); }
+    transform: translateX(-50%) translateY(-50%);
+    width: 5px; }
   .Radio--large-md {
     font-size: 18px;
     line-height: 27px;
@@ -1023,13 +1023,13 @@ hr {
     font-weight: normal;
     padding-left: 32px; }
   .Radio--large-md .Radio__indicator {
-    width: 21px;
     height: 21px;
-    top: 2px; }
-  .Radio--large-md .Radio__indicator:after {
-    width: 8px;
+    top: 2px;
+    width: 21px; }
+  .Radio--large-md .Radio__indicator::after {
     height: 8px;
-    transform: translateX(-55%) translateY(-55%); } }
+    transform: translateX(-55%) translateY(-55%);
+    width: 8px; } }
 
 @media (min-width: 1200px) {
   .Radio--medium-lg {
@@ -1039,13 +1039,13 @@ hr {
     font-weight: normal;
     padding-left: 23px; }
   .Radio--medium-lg .Radio__indicator {
-    width: 16px;
     height: 16px;
-    top: 1px; }
-  .Radio--medium-lg .Radio__indicator:after {
-    width: 6px;
+    top: 1px;
+    width: 16px; }
+  .Radio--medium-lg .Radio__indicator::after {
     height: 6px;
-    transform: translateX(-50%) translateY(-50%); }
+    transform: translateX(-50%) translateY(-50%);
+    width: 6px; }
   .Radio--small-lg {
     font-size: 12px;
     line-height: 18px;
@@ -1053,13 +1053,13 @@ hr {
     font-weight: normal;
     padding-left: 21px; }
   .Radio--small-lg .Radio__indicator {
-    width: 14px;
     height: 14px;
-    top: 1px; }
-  .Radio--small-lg .Radio__indicator:after {
-    width: 5px;
+    top: 1px;
+    width: 14px; }
+  .Radio--small-lg .Radio__indicator::after {
     height: 5px;
-    transform: translateX(-50%) translateY(-50%); }
+    transform: translateX(-50%) translateY(-50%);
+    width: 5px; }
   .Radio--large-lg {
     font-size: 18px;
     line-height: 27px;
@@ -1067,13 +1067,13 @@ hr {
     font-weight: normal;
     padding-left: 32px; }
   .Radio--large-lg .Radio__indicator {
-    width: 21px;
     height: 21px;
-    top: 2px; }
-  .Radio--large-lg .Radio__indicator:after {
-    width: 8px;
+    top: 2px;
+    width: 21px; }
+  .Radio--large-lg .Radio__indicator::after {
     height: 8px;
-    transform: translateX(-55%) translateY(-55%); } }
+    transform: translateX(-55%) translateY(-55%);
+    width: 8px; } }
 
 @media (min-width: 1500px) {
   .Radio--medium-xl {
@@ -1083,13 +1083,13 @@ hr {
     font-weight: normal;
     padding-left: 23px; }
   .Radio--medium-xl .Radio__indicator {
-    width: 16px;
     height: 16px;
-    top: 1px; }
-  .Radio--medium-xl .Radio__indicator:after {
-    width: 6px;
+    top: 1px;
+    width: 16px; }
+  .Radio--medium-xl .Radio__indicator::after {
     height: 6px;
-    transform: translateX(-50%) translateY(-50%); }
+    transform: translateX(-50%) translateY(-50%);
+    width: 6px; }
   .Radio--small-xl {
     font-size: 12px;
     line-height: 18px;
@@ -1097,13 +1097,13 @@ hr {
     font-weight: normal;
     padding-left: 21px; }
   .Radio--small-xl .Radio__indicator {
-    width: 14px;
     height: 14px;
-    top: 1px; }
-  .Radio--small-xl .Radio__indicator:after {
-    width: 5px;
+    top: 1px;
+    width: 14px; }
+  .Radio--small-xl .Radio__indicator::after {
     height: 5px;
-    transform: translateX(-50%) translateY(-50%); }
+    transform: translateX(-50%) translateY(-50%);
+    width: 5px; }
   .Radio--large-xl {
     font-size: 18px;
     line-height: 27px;
@@ -1111,13 +1111,13 @@ hr {
     font-weight: normal;
     padding-left: 32px; }
   .Radio--large-xl .Radio__indicator {
-    width: 21px;
     height: 21px;
-    top: 2px; }
-  .Radio--large-xl .Radio__indicator:after {
-    width: 8px;
+    top: 2px;
+    width: 21px; }
+  .Radio--large-xl .Radio__indicator::after {
     height: 8px;
-    transform: translateX(-55%) translateY(-55%); } }
+    transform: translateX(-55%) translateY(-55%);
+    width: 8px; } }
 
 .Tab {
   display: inline-block; }
