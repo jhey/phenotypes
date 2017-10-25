@@ -19,5 +19,6 @@
     "react/prop-types": "off",
     "semi": ["error", "always", { "omitLastInOneLineBlock": true}],
     "vars-on-top": "off",
+    "jsx-a11y/label-has-for": "off",
   }
 }

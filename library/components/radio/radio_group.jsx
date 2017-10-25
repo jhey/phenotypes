@@ -1,14 +1,11 @@
 const React = require('react');
-const classes = require('classnames');
-const Radio = require('./radio.jsx');
 
 class RadioGroup extends React.Component {
-
   constructor(props, context) {
     super(props, context);
     this.state = {
       value: props.value,
-      disabled: props.disabled
+      disabled: props.disabled,
     };
   }
 
@@ -39,6 +36,6 @@ RadioGroup.defaultProps = {
   value: null,
   disabled: false,
   clearable: false,
-}
+};
 
 module.exports = RadioGroup;
