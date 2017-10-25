@@ -26,25 +26,8 @@ class RadioGroup extends React.Component {
     }
   }
 
-  renderChildren(name, disabled, handleChange) {
-    return React.Children.map(this.props.children, child => (
-      child.type !== Radio
-        ? child
-        : React.cloneElement(child, {
-          name: this.props.name,
-          checked: child.props.value === this.state.value,
-          disabled: this.state.disabled || child.props.disabled,
-          onChange: () => {
-            child.props.onChange && child.props.onChange();
-            this.handleChange(child.props.value);
-          }
-        })
-    ));
-  }
-
   render() {
     return this.props.render({
-      name: this.props.name,
       value: this.state.value,
       disabled: this.state.disabled,
       onChange: this.handleChange.bind(this),
@@ -55,7 +38,7 @@ class RadioGroup extends React.Component {
 RadioGroup.defaultProps = {
   value: null,
   disabled: false,
-  clearable: false
+  clearable: false,
 }
 
 module.exports = RadioGroup;
