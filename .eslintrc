@@ -13,12 +13,12 @@
     "func-names": "off",
     "import/no-extraneous-dependencies": "off",
     "import/no-unresolved": "off",
+    "jsx-a11y/label-has-for": "off",
     "max-len": ["error", { "code": 120 }],
     "no-unused-expressions": ["error", { "allowShortCircuit": true, "allowTernary": true }],
     "no-underscore-dangle": ["error", { "allow": ["__preview"] }],
     "react/prop-types": "off",
     "semi": ["error", "always", { "omitLastInOneLineBlock": true}],
     "vars-on-top": "off",
-    "jsx-a11y/label-has-for": "off",
   }
 }
