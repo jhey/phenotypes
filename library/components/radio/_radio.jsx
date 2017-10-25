@@ -8,7 +8,7 @@ function RadioButtonsExamples() {
     <div>
       <h3>Radios</h3>
       <StylingExamples />
-      <ComplexLabelExample />
+      <SophisticatedLabelExample />
 
       <hr /><br />
 
@@ -25,22 +25,22 @@ function StylingExamples() {
     <div>
       <h6>States &amp; modifiers</h6>
       <div>
-        <Radio className="mr4">Unchecked</Radio>
+        <Radio className="mr4" name="styling">Unchecked</Radio>
         <Radio defaultChecked>Checked</Radio>
       </div>
       <div>
-        <Radio className="mr4" disabled>Disabled</Radio>
+        <Radio className="mr4" disabled name="styling">Disabled</Radio>
         <Radio disabled defaultChecked>Disabled and checked</Radio>
       </div>
-      <Radio className="d-block mt5 Radio--small" defaultChecked><code>Radio--small</code></Radio>
-      <Radio className="d-block mt1 Radio--medium" defaultChecked><code>Radio--medium</code> (default)</Radio>
-      <Radio className="d-block mt1 Radio--large" defaultChecked><code>Radio--large</code></Radio>
-      <Radio className="d-block mt1 Radio--small Radio--medium-sm Radio--large-md" defaultChecked>Responsive</Radio>
+      <Radio className="d-block mt5 Radio--small" defaultChecked name="styling"><code>Radio--small</code></Radio>
+      <Radio className="d-block mt1 Radio--medium" defaultChecked name="styling"><code>Radio--medium</code> (default)</Radio>
+      <Radio className="d-block mt1 Radio--large" defaultChecked name="styling"><code>Radio--large</code></Radio>
+      <Radio className="d-block mt1 Radio--small Radio--medium-sm Radio--large-md" defaultChecked name="styling">Responsive</Radio>
     </div>
   );
 }
 
-function ComplexLabelExample() {
+function SophisticatedLabelExample() {
   return (
     <div className="mt5">
       <h6>Sophisticated labels</h6>
@@ -48,7 +48,7 @@ function ComplexLabelExample() {
         You can use html in the label if it needs to be more than just a string. Clicking anywhere
         in the label will check the radio.
       </p>
-      <Radio>
+      <Radio name="sophistication">
         I have some footer text
         <p className="text-1 text-color-secondary">click me</p>
       </Radio>
@@ -69,6 +69,7 @@ function BasicGroupExample() {
         render={({ value, onChange }) => (
           <div className="mt5">
             <Radio
+              name="basic"
               className="mr4"
               value="one"
               checked={value === 'one'}
@@ -76,6 +77,7 @@ function BasicGroupExample() {
             > One
             </Radio>
             <Radio
+              name="basic"
               className="mr4"
               value="two"
               checked={value === 'two'}
@@ -83,6 +85,7 @@ function BasicGroupExample() {
             > Two
             </Radio>
             <Radio
+              name="basic"
               value="three"
               checked={value === 'three'}
               onChange={() => { onChange('three') }}
@@ -109,6 +112,7 @@ function ClearableGroupExample() {
         render={({ value, onChange }) => (
           <div className="mt5">
             <Radio
+              name="clearable"
               className="mr4"
               value="a"
               checked={value === 'a'}
@@ -116,6 +120,7 @@ function ClearableGroupExample() {
             > Uncheck me!
             </Radio>
             <Radio
+              name="clearable"
               value="b"
               checked={value === 'b'}
               onChange={() => { onChange('b') }}
@@ -152,6 +157,7 @@ class DisabledGroupExample extends React.Component {
           render={({ value, disabled, onChange }) => (
             <div className="mt5">
               <Radio
+                name="disabled"
                 className="mr4"
                 value="a"
                 checked={value === 'a'}
@@ -160,6 +166,7 @@ class DisabledGroupExample extends React.Component {
               > A
               </Radio>
               <Radio
+                name="disabled"
                 className="mr4"
                 value="b"
                 checked={value === 'b'}
@@ -168,6 +175,7 @@ class DisabledGroupExample extends React.Component {
               > B
               </Radio>
               <Radio
+                name="disabled"
                 value="c"
                 checked={value === 'c'}
                 disabled
