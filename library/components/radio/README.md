@@ -47,7 +47,7 @@ Here's an example that shows how to use the callback and its arguments.
       value="foo"
       checked={value === 'foo'}
       disabled={disabled}
-      onChange={() => { onChange('foo'); }}> Foo
+      onChange={() => { onChange('foo') }}> Foo
     </Radio>
 
     <Radio
@@ -55,7 +55,7 @@ Here's an example that shows how to use the callback and its arguments.
       value="bar"
       checked={value === 'bar'}
       disabled
-      onChange={() => { onChange('bar'); }}> I'm always disabled
+      onChange={() => { onChange('bar') }}> I'm always disabled
     </Radio>
   </form>
 )} />
