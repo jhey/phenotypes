@@ -85,7 +85,7 @@
     box-shadow: 0 0 0 2px rgba($blue-200, $alpha-400);
   }
 
-  &:checked:active ~ .Radio__indicator {
+  &:checked:active:not(:disabled) ~ .Radio__indicator {
     background-color: $gray-800;
     border-color: $gray-800;
 
