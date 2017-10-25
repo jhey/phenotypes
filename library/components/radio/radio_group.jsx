@@ -7,6 +7,7 @@ class RadioGroup extends React.Component {
       value: props.value,
       disabled: props.disabled,
     };
+    this.handleChange = this.handleChange.bind(this);
   }
 
   componentWillReceiveProps(nextProps) {
@@ -27,7 +28,7 @@ class RadioGroup extends React.Component {
     return this.props.render({
       value: this.state.value,
       disabled: this.state.disabled,
-      onChange: this.handleChange.bind(this),
+      onChange: this.handleChange,
     });
   }
 }
