@@ -6,6 +6,7 @@ module.exports = {
   "form-group": require("../library/components/form_group/form_group.jsx"),
   "message": require("../library/components/message/message.jsx"),
   "radio": require("../library/components/radio/_radio.jsx"),
+  "switch": require("../library/components/switch/_switch.jsx"),
   "tab": require("../library/components/tab/_tab.jsx"),
   "text-input": require("../library/components/text_input/text_input.jsx"),
   "preview": require("../library/_preview.jsx"),

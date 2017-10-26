@@ -1,0 +1,72 @@
+// scss-lint:disable SelectorFormat ElsePlacement StringQuotes
+
+@import '../../../styles/lib/map-deep-get';
+
+@mixin switch-sizer($size: 'medium') {
+  $sizes: (
+    'medium': (
+      'width': 41px,
+      'height': 24px,
+      'toggler-radius': 20px
+    )
+  );
+
+  $width: map-deep-get($sizes, $size, 'width');
+  $height: map-deep-get($sizes, $size, 'height');
+  $toggler-radius: map-deep-get($sizes, $size, 'toggler-radius');
+  $toggler-margin: ($height - $toggler-radius) / 2;
+
+  .Switch__indicator {
+    border-radius: ($height / 2);
+    height: $height;
+    width: $width;
+
+    &::after {
+      height: $toggler-radius;
+      right: $width - $toggler-margin - $toggler-radius;
+      top: $toggler-margin;
+      width: $toggler-radius;
+    }
+  }
+
+  .Switch__input:checked ~ .Switch__indicator {
+    &::after {
+      right: $toggler-margin;
+    }
+  }
+}
+
+.Switch {
+  @include switch-sizer;
+  // Cancel the default margin for label tags
+  margin: 0;
+  position: relative;
+}
+
+.Switch__indicator {
+  background-color: $gray-300;
+  transition: background-color .2s linear;
+
+  &::after {
+    background: $white;
+    border-radius: 50%;
+    box-shadow: 0 5px 10px 0 rgba($black, $alpha-300), 0 1px 2px 0 rgba($black, $alpha-200), 0 0 10px 0 rgba($black, $alpha-200);
+    content: " ";
+    position: absolute;
+    transition: right .2s ease-in-out;
+  }
+}
+
+.Switch__input {
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
+
+  &:checked ~ .Switch__indicator {
+    background-color: $green-200;
+  }
+
+  &:disabled ~ .Switch__indicator {
+    opacity: $alpha-600;
+  }
+}
