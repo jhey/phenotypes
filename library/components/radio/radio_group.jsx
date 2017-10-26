@@ -18,9 +18,7 @@ function RadioGroup(groupProps) {
           if (groupProps.onChange) {
             if (!checked || groupProps.clearable) {
               const newValue = checked ? null : radioProps.value;
-              if (newValue !== groupProps.value) {
-                groupProps.onChange(newValue);
-              }
+              groupProps.onChange(newValue);
             }
           }
         }}
