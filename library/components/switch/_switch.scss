@@ -1,19 +1,9 @@
 // scss-lint:disable SelectorFormat ElsePlacement StringQuotes
 
-@import '../../../styles/lib/map-deep-get';
-
-@mixin switch-sizer($size: 'medium') {
-  $sizes: (
-    'medium': (
-      'width': 41px,
-      'height': 24px,
-      'toggler-radius': 20px
-    )
-  );
-
-  $width: map-deep-get($sizes, $size, 'width');
-  $height: map-deep-get($sizes, $size, 'height');
-  $toggler-radius: map-deep-get($sizes, $size, 'toggler-radius');
+@mixin switch-sizer() {
+  $width: 41px;
+  $height: 24px;
+  $toggler-radius: 20px;
   $toggler-margin: ($height - $toggler-radius) / 2;
 
   .Switch__indicator {
