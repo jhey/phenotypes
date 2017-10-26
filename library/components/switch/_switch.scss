@@ -48,9 +48,9 @@
   transition: background-color .35s ease-out;
 
   &::after {
+    @include depth(7);
     background: $white;
     border-radius: 50%;
-    box-shadow: 0 5px 10px 0 rgba($black, $alpha-300), 0 1px 2px 0 rgba($black, $alpha-200), 0 0 10px 0 rgba($black, $alpha-200);
     content: " ";
     position: absolute;
     transition: right .15s ease-out;
