@@ -1,8 +1,14 @@
 const React = require('react');
 const Radio = require('./radio.jsx');
 
-function RadioGroup(groupProps) {
-  const ManagedRadio = (radioProps) => {
+class RadioGroup extends React.Component {
+  constructor(props, context) {
+    super(props, context);
+    this.renderManagedRadio = this.renderManagedRadio.bind(this);
+  }
+
+  renderManagedRadio(radioProps) {
+    const groupProps = this.props;
     const checked = radioProps.value === groupProps.value;
     return (
       <Radio
@@ -24,9 +30,11 @@ function RadioGroup(groupProps) {
         }}
       />
     );
-  };
+  }
 
-  return groupProps.render(ManagedRadio);
+  render() {
+    return this.props.render(this.renderManagedRadio);
+  }
 }
 
 RadioGroup.defaultProps = {
