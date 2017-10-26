@@ -3,20 +3,18 @@
   // medium
   $indicator-width: modular-scale-px(0);
   $indicator-top: 1px;
-  $dot-width: 6px;
-  $dot-nudge: -50%;
+  $dot-width: modular-scale-px(-7);
   $spacing: $spacer-2;
   $text-size: 2;
 
   @if $size == 'small' {
     $indicator-width: modular-scale-px(-1);
-    $dot-width: 5px;
+    $dot-width: modular-scale-px(-8);
     $text-size: 1;
   } @else if $size == 'large' {
     $indicator-width: modular-scale-px(2);
     $indicator-top: 2px;
-    $dot-width: 8px;
-    $dot-nudge: -55%;
+    $dot-width: modular-scale-px(-5);
     $spacing: $spacer-3;
     $text-size: 4;
   }
@@ -31,7 +29,6 @@
 
     &::after {
       height: $dot-width;
-      transform: translateX($dot-nudge) translateY($dot-nudge);
       width: $dot-width;
     }
   }
@@ -120,6 +117,7 @@
     left: 50%;
     position: absolute;
     top: 50%;
+    transform: translateX(-50%) translateY(-50%);
   }
 }
 
