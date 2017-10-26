@@ -815,7 +815,7 @@ hr {
   line-height: 21px;
   letter-spacing: 0px;
   font-weight: normal;
-  padding-left: 23px;
+  padding-left: 21px;
   display: inline-block;
   margin: 0;
   position: relative; }
@@ -827,6 +827,8 @@ hr {
 
 .Radio .Radio__indicator::after {
   height: 6px;
+  left: 3px;
+  top: 3px;
   width: 6px; }
 
 .Radio__input {
@@ -887,17 +889,32 @@ hr {
   border-radius: 50%;
   content: '';
   display: none;
-  left: 50%;
-  position: absolute;
-  top: 50%;
-  transform: translateX(-50%) translateY(-50%); }
+  position: absolute; }
+
+.Radio--small {
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 0px;
+  font-weight: normal;
+  padding-left: 19px; }
+
+.Radio--small .Radio__indicator {
+  height: 14px;
+  top: 1px;
+  width: 14px; }
+
+.Radio--small .Radio__indicator::after {
+  height: 6px;
+  left: 2px;
+  top: 2px;
+  width: 6px; }
 
 .Radio--medium {
   font-size: 14px;
   line-height: 21px;
   letter-spacing: 0px;
   font-weight: normal;
-  padding-left: 23px; }
+  padding-left: 21px; }
 
 .Radio--medium .Radio__indicator {
   height: 16px;
@@ -906,30 +923,16 @@ hr {
 
 .Radio--medium .Radio__indicator::after {
   height: 6px;
+  left: 3px;
+  top: 3px;
   width: 6px; }
-
-.Radio--small {
-  font-size: 12px;
-  line-height: 18px;
-  letter-spacing: 0px;
-  font-weight: normal;
-  padding-left: 21px; }
-
-.Radio--small .Radio__indicator {
-  height: 14px;
-  top: 1px;
-  width: 14px; }
-
-.Radio--small .Radio__indicator::after {
-  height: 5px;
-  width: 5px; }
 
 .Radio--large {
   font-size: 18px;
   line-height: 27px;
   letter-spacing: 0px;
   font-weight: normal;
-  padding-left: 32px; }
+  padding-left: 28px; }
 
 .Radio--large .Radio__indicator {
   height: 21px;
@@ -937,172 +940,198 @@ hr {
   width: 21px; }
 
 .Radio--large .Radio__indicator::after {
-  height: 8px;
-  width: 8px; }
+  height: 7px;
+  left: 5px;
+  top: 5px;
+  width: 7px; }
 
 @media (min-width: 600px) {
+  .Radio--small-sm {
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0px;
+    font-weight: normal;
+    padding-left: 19px; }
+  .Radio--small-sm .Radio__indicator {
+    height: 14px;
+    top: 1px;
+    width: 14px; }
+  .Radio--small-sm .Radio__indicator::after {
+    height: 6px;
+    left: 2px;
+    top: 2px;
+    width: 6px; }
   .Radio--medium-sm {
     font-size: 14px;
     line-height: 21px;
     letter-spacing: 0px;
     font-weight: normal;
-    padding-left: 23px; }
+    padding-left: 21px; }
   .Radio--medium-sm .Radio__indicator {
     height: 16px;
     top: 1px;
     width: 16px; }
   .Radio--medium-sm .Radio__indicator::after {
     height: 6px;
+    left: 3px;
+    top: 3px;
     width: 6px; }
-  .Radio--small-sm {
-    font-size: 12px;
-    line-height: 18px;
-    letter-spacing: 0px;
-    font-weight: normal;
-    padding-left: 21px; }
-  .Radio--small-sm .Radio__indicator {
-    height: 14px;
-    top: 1px;
-    width: 14px; }
-  .Radio--small-sm .Radio__indicator::after {
-    height: 5px;
-    width: 5px; }
   .Radio--large-sm {
     font-size: 18px;
     line-height: 27px;
     letter-spacing: 0px;
     font-weight: normal;
-    padding-left: 32px; }
+    padding-left: 28px; }
   .Radio--large-sm .Radio__indicator {
     height: 21px;
     top: 2px;
     width: 21px; }
   .Radio--large-sm .Radio__indicator::after {
-    height: 8px;
-    width: 8px; } }
+    height: 7px;
+    left: 5px;
+    top: 5px;
+    width: 7px; } }
 
 @media (min-width: 900px) {
+  .Radio--small-md {
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0px;
+    font-weight: normal;
+    padding-left: 19px; }
+  .Radio--small-md .Radio__indicator {
+    height: 14px;
+    top: 1px;
+    width: 14px; }
+  .Radio--small-md .Radio__indicator::after {
+    height: 6px;
+    left: 2px;
+    top: 2px;
+    width: 6px; }
   .Radio--medium-md {
     font-size: 14px;
     line-height: 21px;
     letter-spacing: 0px;
     font-weight: normal;
-    padding-left: 23px; }
+    padding-left: 21px; }
   .Radio--medium-md .Radio__indicator {
     height: 16px;
     top: 1px;
     width: 16px; }
   .Radio--medium-md .Radio__indicator::after {
     height: 6px;
+    left: 3px;
+    top: 3px;
     width: 6px; }
-  .Radio--small-md {
-    font-size: 12px;
-    line-height: 18px;
-    letter-spacing: 0px;
-    font-weight: normal;
-    padding-left: 21px; }
-  .Radio--small-md .Radio__indicator {
-    height: 14px;
-    top: 1px;
-    width: 14px; }
-  .Radio--small-md .Radio__indicator::after {
-    height: 5px;
-    width: 5px; }
   .Radio--large-md {
     font-size: 18px;
     line-height: 27px;
     letter-spacing: 0px;
     font-weight: normal;
-    padding-left: 32px; }
+    padding-left: 28px; }
   .Radio--large-md .Radio__indicator {
     height: 21px;
     top: 2px;
     width: 21px; }
   .Radio--large-md .Radio__indicator::after {
-    height: 8px;
-    width: 8px; } }
+    height: 7px;
+    left: 5px;
+    top: 5px;
+    width: 7px; } }
 
 @media (min-width: 1200px) {
+  .Radio--small-lg {
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0px;
+    font-weight: normal;
+    padding-left: 19px; }
+  .Radio--small-lg .Radio__indicator {
+    height: 14px;
+    top: 1px;
+    width: 14px; }
+  .Radio--small-lg .Radio__indicator::after {
+    height: 6px;
+    left: 2px;
+    top: 2px;
+    width: 6px; }
   .Radio--medium-lg {
     font-size: 14px;
     line-height: 21px;
     letter-spacing: 0px;
     font-weight: normal;
-    padding-left: 23px; }
+    padding-left: 21px; }
   .Radio--medium-lg .Radio__indicator {
     height: 16px;
     top: 1px;
     width: 16px; }
   .Radio--medium-lg .Radio__indicator::after {
     height: 6px;
+    left: 3px;
+    top: 3px;
     width: 6px; }
-  .Radio--small-lg {
-    font-size: 12px;
-    line-height: 18px;
-    letter-spacing: 0px;
-    font-weight: normal;
-    padding-left: 21px; }
-  .Radio--small-lg .Radio__indicator {
-    height: 14px;
-    top: 1px;
-    width: 14px; }
-  .Radio--small-lg .Radio__indicator::after {
-    height: 5px;
-    width: 5px; }
   .Radio--large-lg {
     font-size: 18px;
     line-height: 27px;
     letter-spacing: 0px;
     font-weight: normal;
-    padding-left: 32px; }
+    padding-left: 28px; }
   .Radio--large-lg .Radio__indicator {
     height: 21px;
     top: 2px;
     width: 21px; }
   .Radio--large-lg .Radio__indicator::after {
-    height: 8px;
-    width: 8px; } }
+    height: 7px;
+    left: 5px;
+    top: 5px;
+    width: 7px; } }
 
 @media (min-width: 1500px) {
+  .Radio--small-xl {
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0px;
+    font-weight: normal;
+    padding-left: 19px; }
+  .Radio--small-xl .Radio__indicator {
+    height: 14px;
+    top: 1px;
+    width: 14px; }
+  .Radio--small-xl .Radio__indicator::after {
+    height: 6px;
+    left: 2px;
+    top: 2px;
+    width: 6px; }
   .Radio--medium-xl {
     font-size: 14px;
     line-height: 21px;
     letter-spacing: 0px;
     font-weight: normal;
-    padding-left: 23px; }
+    padding-left: 21px; }
   .Radio--medium-xl .Radio__indicator {
     height: 16px;
     top: 1px;
     width: 16px; }
   .Radio--medium-xl .Radio__indicator::after {
     height: 6px;
+    left: 3px;
+    top: 3px;
     width: 6px; }
-  .Radio--small-xl {
-    font-size: 12px;
-    line-height: 18px;
-    letter-spacing: 0px;
-    font-weight: normal;
-    padding-left: 21px; }
-  .Radio--small-xl .Radio__indicator {
-    height: 14px;
-    top: 1px;
-    width: 14px; }
-  .Radio--small-xl .Radio__indicator::after {
-    height: 5px;
-    width: 5px; }
   .Radio--large-xl {
     font-size: 18px;
     line-height: 27px;
     letter-spacing: 0px;
     font-weight: normal;
-    padding-left: 32px; }
+    padding-left: 28px; }
   .Radio--large-xl .Radio__indicator {
     height: 21px;
     top: 2px;
     width: 21px; }
   .Radio--large-xl .Radio__indicator::after {
-    height: 8px;
-    width: 8px; } }
+    height: 7px;
+    left: 5px;
+    top: 5px;
+    width: 7px; } }
 
 .Tab {
   display: inline-block; }
