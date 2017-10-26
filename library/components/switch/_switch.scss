@@ -45,7 +45,7 @@
 
 .Switch__indicator {
   background-color: $gray-300;
-  transition: background-color .2s linear;
+  transition: background-color .35s ease-out;
 
   &::after {
     background: $white;
@@ -53,7 +53,7 @@
     box-shadow: 0 5px 10px 0 rgba($black, $alpha-300), 0 1px 2px 0 rgba($black, $alpha-200), 0 0 10px 0 rgba($black, $alpha-200);
     content: " ";
     position: absolute;
-    transition: right .2s ease-in-out;
+    transition: right .15s ease-out;
   }
 }
 
