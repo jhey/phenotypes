@@ -27,36 +27,22 @@ The `RadioGroup` component bundles multiple `Radio` into a single field with one
 
 | name | type | default | description |
 | ---- | ---- | ------- | ----------- |
-| `value` | string | null | The current selected value of the field |
+| `name` | string | | The `name` to use on the radio buttons |
+| `value` | string | null | The current selected value of the group |
+| `render` | callback | | Called when rendering the group. Should return the full markup up of the group. See below for details. |
+| `onChange` | callback | | A callback that will be called with the current value every time it changes |
 | `disabled` | boolean | false | Set to true if all of the radio buttons should be disabled |
 | `clearable` | false | Set to true if the user should be able to uncheck a checked radio |
-| `onChange` | callback | | A callback that will be called with the current value every time it changes |
-| `render` | callback | | Called when rendering the group. Should return the full markup up of the group. See below for details. |
 
 #### `render` prop
 
-The `render` callback should return the full markup of the group, *including* the container element. Using a callback gives you full control over the markup, so you can choose any kind of container, have super nested markup within the group, and have total control of the props used on each `Radio`. However, this means you need to handle checking the right radio button, disabling things, etc.
-
-Here's an example that shows how to use the callback and its arguments.
+The `render` callback should return the full markup of the group, *including* the container element. Using a callback gives you full control over the markup. The callback’s argument is a managed `Radio` component that will automatically behave nicely in the group (e.g. will be checked when its value is selected, will be disabled when the group is disabled, and will automatically update the group's value when the user checks it).
 
 ```
-<RadioGroup clearable render={({ value, disabled, onChange }) => (
+<RadioGroup value="foo" clearable render={Radio => (
   <form>
-    <Radio
-      className="d-block Radio--large"
-      value="foo"
-      checked={value === 'foo'}
-      disabled={disabled}
-      onChange={() => { onChange('foo') }}> Foo
-    </Radio>
-
-    <Radio
-      className="Radio--large"
-      value="bar"
-      checked={value === 'bar'}
-      disabled
-      onChange={() => { onChange('bar') }}> I'm always disabled
-    </Radio>
+    <Radio className="d-block Radio--large" value="foo">Foo</Radio>
+    <Radio className="d-block Radio--large" value="bar">Bar</Radio>
   </form>
 )} />
 ```

@@ -1,36 +1,34 @@
 const React = require('react');
+const Radio = require('./radio.jsx');
 
-class RadioGroup extends React.Component {
-  constructor(props, context) {
-    super(props, context);
-    this.state = {
-      value: props.value,
-      disabled: props.disabled,
-    };
-    this.handleChange = this.handleChange.bind(this);
-  }
+function RadioGroup(groupProps) {
+  const ManagedRadio = (radioProps) => {
+    const checked = radioProps.value === groupProps.value;
+    return (
+      <Radio
+        {...radioProps}
+        name={groupProps.name}
+        checked={checked}
+        disabled={groupProps.disabled || radioProps.disabled}
+        onChange={() => {
+          // Call the radio's own onChange if it has one.
+          radioProps.onChange && radioProps.onChange();
 
-  componentWillReceiveProps(nextProps) {
-    this.setState({ disabled: nextProps.disabled });
-  }
+          // The group's onChange callback is only called when the value actually changes.
+          if (groupProps.onChange) {
+            if (!checked || groupProps.clearable) {
+              const newValue = checked ? null : radioProps.value;
+              if (newValue !== groupProps.value) {
+                groupProps.onChange(newValue);
+              }
+            }
+          }
+        }}
+      />
+    );
+  };
 
-  handleChange(valueOfRadioClicked) {
-    const clearing = this.props.clearable && valueOfRadioClicked === this.state.value;
-    const newValue = clearing ? null : valueOfRadioClicked;
-
-    if (newValue !== this.state.value) {
-      this.setState({ value: newValue });
-      this.props.onChange && this.props.onChange(newValue);
-    }
-  }
-
-  render() {
-    return this.props.render({
-      value: this.state.value,
-      disabled: this.state.disabled,
-      onChange: this.handleChange,
-    });
-  }
+  return groupProps.render(ManagedRadio);
 }
 
 RadioGroup.defaultProps = {
