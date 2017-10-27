@@ -1103,10 +1103,7 @@ hr {
     .Switch .Switch__indicator::after {
       height: 20px;
       right: 19px;
-      top: 2px;
       width: 20px; }
-  .Switch .Switch__input:checked ~ .Switch__indicator::after {
-    right: 2px; }
 
 .Switch__indicator {
   background-color: #dbdbdb;
@@ -1118,6 +1115,7 @@ hr {
     border-radius: 50%;
     content: " ";
     position: absolute;
+    top: 2px;
     transition: right .15s ease-out; }
 
 .Switch__input {
@@ -1126,6 +1124,8 @@ hr {
   z-index: -1; }
   .Switch__input:checked ~ .Switch__indicator {
     background-color: #2dcfa1; }
+    .Switch__input:checked ~ .Switch__indicator::after {
+      right: 2px; }
   .Switch__input:disabled ~ .Switch__indicator {
     cursor: auto;
     opacity: 0.54; }
