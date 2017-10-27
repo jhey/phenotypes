@@ -1,4 +1,4 @@
-const React = require('react');
+import React from 'react';
 
 const boxStyle1 = { background: '#eee' };
 const boxStyle2 = { background: '#dbdbdb' };

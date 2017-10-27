@@ -1,5 +1,5 @@
-const React = require('react');
-const Radio = require('./radio.jsx');
+import React from 'react';
+import Radio from './radio.jsx';
 
 function ManagedRadio(radioProps) {
   const groupProps = this.props;

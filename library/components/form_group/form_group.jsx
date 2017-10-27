@@ -1,7 +1,7 @@
-const React = require('react');
-const classes = require('classnames');
+import React from 'react';
+import classes from 'classnames';
 
-const TextInput = require('../text_input/text_input.jsx');
+import TextInput from '../text_input/text_input.jsx';
 
 class FormGroup extends React.Component {
   renderChildren() {

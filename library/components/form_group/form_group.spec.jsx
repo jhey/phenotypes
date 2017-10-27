@@ -1,10 +1,10 @@
 /* eslint-env mocha */
 /* eslint-disable prefer-arrow-callback, no-unused-expressions */
-const React = require('react');
-const { mount, shallow } = require('enzyme');
-const { expect } = require('chai');
+import React from 'react';
+import { mount, shallow } from 'enzyme';
+import { expect } from 'chai';
 
-const FormGroup = require('./form_group');
+import FormGroup from './form_group';
 
 describe('FormGroup', function () {
   it('should apply error class', function () {

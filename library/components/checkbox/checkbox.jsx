@@ -1,5 +1,5 @@
-const React = require('react');
-const classes = require('classnames');
+import React from 'react';
+import classes from 'classnames';
 
 function Checkbox(props) {
   const { className, label, ...htmlProps } = props;

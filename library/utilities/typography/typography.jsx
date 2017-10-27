@@ -1,4 +1,4 @@
-const React = require('react');
+import React from 'react';
 
 function Label(props) {
   const className = props.className || 'text-color-hint';

@@ -1,5 +1,5 @@
 /* eslint-disable react/no-multi-comp */
-const React = require('react');
+import React from 'react';
 
 const ROOT_ELEMENT_ID_PREFIX = 'root-';
 

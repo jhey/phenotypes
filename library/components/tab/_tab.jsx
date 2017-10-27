@@ -1,5 +1,5 @@
-const React = require('react');
-const Tab = require('./tab.jsx');
+import React from 'react';
+import Tab from './tab.jsx';
 
 class TabExample extends React.Component {
   constructor(props, context) {
