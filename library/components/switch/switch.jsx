@@ -12,8 +12,4 @@ function Switch(props) {
   );
 }
 
-Switch.defaultProps = {
-  isOn: false,
-};
-
 module.exports = Switch;
