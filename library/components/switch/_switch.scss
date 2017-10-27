@@ -1,10 +1,9 @@
 // scss-lint:disable SelectorFormat ElsePlacement StringQuotes
 
 @mixin switch-sizer() {
-  $width: 41px;
-  $height: 24px;
-  $toggler-radius: 20px;
-  $toggler-margin: ($height - $toggler-radius) / 2;
+  $width: modular-scale-px(7);
+  $height: modular-scale-px(3);
+  $toggler-radius: $height - ($border-width * 2);
 
   .Switch__indicator {
     border-radius: ($height / 2);
@@ -13,15 +12,8 @@
 
     &::after {
       height: $toggler-radius;
-      right: $width - $toggler-margin - $toggler-radius;
-      top: $toggler-margin;
+      right: $width - $border-width - $toggler-radius;
       width: $toggler-radius;
-    }
-  }
-
-  .Switch__input:checked ~ .Switch__indicator {
-    &::after {
-      right: $toggler-margin;
     }
   }
 }
@@ -44,6 +36,7 @@
     border-radius: 50%;
     content: " ";
     position: absolute;
+    top: $border-width;
     transition: right .15s ease-out;
   }
 }
@@ -55,6 +48,10 @@
 
   &:checked ~ .Switch__indicator {
     background-color: $green-200;
+
+    &::after {
+      right: $border-width;
+    }
   }
 
   &:disabled ~ .Switch__indicator {
