@@ -1,4 +1,4 @@
-import React from 'react';
+const React = require('react');
 
 function GridExamples() {
   return (
@@ -42,10 +42,12 @@ function GridExamples() {
         <p>
           <strong>Custom gutter spacing</strong>:
           customize gutter widths by adding <code>.no-gutters</code> to
-          your <code>.row</code> class, and then using <code>.px*</code> padding helpers on the <code>.col-*</code> classes.
+          your <code>.row</code> class, and then using <code>.px*</code> padding helpers on the
+          <code>.col-*</code> classes.
         </p>
         <p>
-          You’ll also need to add a corresponding negative <code>.mxn*</code> margin class on the <code>.row</code> to get rid of the extra padding on the sides.
+          You’ll also need to add a corresponding negative <code>.mxn*</code> margin class on the
+          <code>.row</code> to get rid of the extra padding on the sides.
         </p>
 
         <div className="row no-gutters mxn1">

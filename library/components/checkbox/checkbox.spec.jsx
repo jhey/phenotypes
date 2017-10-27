@@ -29,8 +29,6 @@ describe('Checkbox', function () {
       />
     );
 
-    const wrapperProps = wrapper.find('label').props();
-
     const inputProps = wrapper.find('input').props();
     expect(inputProps.className).to.equal('Checkbox__input');
     expect(inputProps.disabled).to.equal('disabled');

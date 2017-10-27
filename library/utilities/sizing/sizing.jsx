@@ -1,5 +1,5 @@
-import React from 'react';
-import classes from 'classnames';
+const React = require('react');
+const classes = require('classnames');
 
 function Example({ size }) {
   return (

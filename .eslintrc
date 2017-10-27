@@ -10,6 +10,7 @@
   "rules": {
     "curly": ["error"],
     "comma-dangle": ["error", "always-multiline"],
+    "function-paren-newline": ["error", "consistent"],
     "func-names": "off",
     "import/no-extraneous-dependencies": "off",
     "import/no-unresolved": "off",
@@ -17,6 +18,7 @@
     "max-len": ["error", { "code": 120 }],
     "no-unused-expressions": ["error", { "allowShortCircuit": true, "allowTernary": true }],
     "no-underscore-dangle": ["error", { "allow": ["__preview"] }],
+    "object-curly-newline": "off",
     "react/prop-types": "off",
     "semi": ["error", "always", { "omitLastInOneLineBlock": true}],
     "vars-on-top": "off",

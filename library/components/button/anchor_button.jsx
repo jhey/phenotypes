@@ -1,7 +1,6 @@
 const React = require('react');
 
 class AnchorButton extends React.Component {
-
   constructor(props, context) {
     super(props, context);
     this.handleAnchorClick = this.handleAnchorClick.bind(this);
@@ -23,6 +22,8 @@ class AnchorButton extends React.Component {
 
   render() {
     const { children, disabled, tabIndex, ...htmlProps } = this.props;
+
+    /* eslint-disable jsx-a11y/click-events-have-key-events */
     return (
       <a
         {...htmlProps}
