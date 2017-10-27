@@ -8,14 +8,10 @@ const Switch = require('./switch');
 
 describe('Switch', function () {
   it('should render an "on" state', function () {
-    expect(shallow(<Switch isOn />).find('input').prop('checked')).to.be.true;
+    expect(shallow(<Switch checked />).find('input').prop('checked')).to.be.true;
   });
 
   it('should render an "off" state', function () {
-    expect(shallow(<Switch isOn={false} />).find('input').prop('checked')).to.be.false;
-  });
-
-  it('should default to an "off" state', function () {
-    expect(shallow(<Switch />).find('input').prop('checked')).to.be.false;
+    expect(shallow(<Switch checked={false} />).find('input').prop('checked')).to.be.false;
   });
 });
