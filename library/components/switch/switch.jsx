@@ -41,9 +41,9 @@ class Switch extends React.Component {
 
     return (
       <label
-        className={classes(className, 'Switch',
-          { 'Switch--is-focused': this.state.focused && !this.state.clicked }
-        )}
+        className={classes(className, 'Switch', {
+          'Switch--is-focused': this.state.focused && !this.state.clicked,
+        })}
       >
         <input
           {...inputProps}
@@ -51,7 +51,6 @@ class Switch extends React.Component {
           type="checkbox"
           onBlur={this.handleBlur}
           onFocus={this.handleFocus}
-
         />
         <div className="Switch__indicator" onMouseDown={this.handleMouseDown}>
           <div className="Switch__toggler" />

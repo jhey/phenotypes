@@ -11,7 +11,7 @@ class SwitchExample extends React.Component {
 
   render() {
     const { label, ...props } = this.props;
-    const checked = this.state.checked;
+    const { checked } = this.state;
 
     return (
       <div>
