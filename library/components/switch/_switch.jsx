@@ -5,13 +5,13 @@ class SwitchExample extends React.Component {
   constructor(props, context) {
     super(props, context);
     this.state = {
-      isOn: !!props.isOn,
+      checked: !!props.checked,
     };
   }
 
   render() {
     const { label, ...props } = this.props;
-    const isOn = this.state.isOn;
+    const checked = this.state.checked;
 
     return (
       <div>
@@ -19,8 +19,8 @@ class SwitchExample extends React.Component {
         <div className="d-flex align-items-center">
           <Switch
             {...props}
-            isOn={isOn}
-            onChange={() => this.setState({ isOn: !isOn })}
+            checked={checked}
+            onChange={() => this.setState({ checked: !checked })}
           />
           {!props.disabled && (
             <span className="ml5">

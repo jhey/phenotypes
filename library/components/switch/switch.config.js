@@ -5,21 +5,21 @@ module.exports = {
   collated: true,
   context: {
     label: 'Switch',
-    isOn: false,
+    checked: false,
     disabled: false,
   },
   variants: [{
     name: 'disabled off',
     context: {
       label: 'Disabled switch (off)',
-      isOn: false,
+      checked: false,
       disabled: true,
     },
   }, {
     name: 'disabled on',
     context: {
       label: 'Disabled switch (on)',
-      isOn: true,
+      checked: true,
       disabled: true,
     },
   }],
