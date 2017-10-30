@@ -60,15 +60,6 @@
   transition-duration: .08s;
 }
 
-.Button--is-disabled {
-  cursor: not-allowed;
-
-  .Button__control {
-    opacity: $alpha-600;
-    pointer-events: none;
-  }
-}
-
 .Button__control:active,
 .Button--is-active .Button__control,
 .Button--is-active .Button__control:focus {
@@ -78,10 +69,20 @@
   transition-duration: 0s;
 }
 
-
 // Allow focus indicator when tabbing but hide it if clicking
-.Button__control:active:focus {
+.Button__control:active:focus,
+.Button--is-active .Button__control:focus, {
   outline: 0;
+}
+
+.Button__control:disabled,
+.Button--is-disabled .Button__control {
+  opacity: $alpha-600;
+  pointer-events: none;
+}
+
+.Button--is-disabled {
+  cursor: not-allowed;
 }
 
 // Danger button

@@ -54,13 +54,18 @@ class AnchorButton extends React.Component {
     const { children, className, disabled, tabIndex, ...htmlProps } = this.props;
 
     return (
-      <div className={classes(className, { 'Button--is-active': this.state.spacePressed })}>
+      <div
+        className={classes(className, {
+          'Button--is-active': this.state.spacePressed,
+        })}
+      >
         <a
           {...htmlProps}
           className="Button__control"
           onClick={this.handleAnchorClick}
           onKeyDown={this.handleKeyDown}
           onKeyUp={this.handleKeyUp}
+          ref={(element) => { this.element = element }}
           role="button"
           tabIndex={disabled ? -1 : tabIndex}
         >

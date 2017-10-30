@@ -26,7 +26,6 @@ Valid HTML attributes and additional event handlers for the `button` or `a` elem
 | `Button--small` | false | true | |
 | `Button--medium` | true | true | |
 | `Button--large` | false | true | |
-| `Button--is-disabled` | false | false | If the component has a truthy `disabled` prop, this modifier is applied automatically. |
 | `Button--primary` | false | false | |
 | `Button--danger` | false | false | |
 | `Button--link` | false | false | |
