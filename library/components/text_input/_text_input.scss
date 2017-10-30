@@ -55,6 +55,7 @@
   background: $gray-200;
   border-color: $gray-200;
   color: $text-color-hint;
+  cursor: not-allowed;
   opacity: 1; // some browsers (e.g. iOS Safari) reduce opacity
 }
 
