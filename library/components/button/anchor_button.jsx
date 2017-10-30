@@ -23,7 +23,6 @@ class AnchorButton extends React.Component {
   render() {
     const { children, disabled, tabIndex, ...htmlProps } = this.props;
 
-    /* eslint-disable jsx-a11y/click-events-have-key-events */
     return (
       <a
         {...htmlProps}
