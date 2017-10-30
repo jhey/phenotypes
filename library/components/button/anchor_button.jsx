@@ -35,22 +35,18 @@ class AnchorButton extends React.Component {
 
   handleKeyDown(event) {
     if (isSpacebarEvent(event)) {
-      if (!this.props.disabled) {
-        event.preventDefault();
-        this.setState({ spacePressed: true });
-      }
+      event.preventDefault();
+      this.setState({ spacePressed: true });
     }
   }
 
   handleKeyUp(event) {
     if (isSpacebarEvent(event)) {
-      if (!this.props.disabled) {
-        event.preventDefault();
-        this.setState({ spacePressed: false });
-        // Follow the link & call onClick prop by simulating a click on the anchor, so that
-        // props like `target` are obeyed.
-        this.element.click();
-      }
+      event.preventDefault();
+      this.setState({ spacePressed: false });
+      // Follow the link & call onClick prop by simulating a click on the anchor, so that
+      // props like `target` are obeyed.
+      this.element.click();
     }
   }
 
