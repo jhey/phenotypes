@@ -36,7 +36,9 @@ class AnchorButton extends React.Component {
   handleKeyDown(event) {
     if (isSpacebarEvent(event)) {
       event.preventDefault();
-      this.setState({ spacePressed: true });
+      if (!this.state.spacePressed) {
+        this.setState({ spacePressed: true });
+      }
     }
   }
 
