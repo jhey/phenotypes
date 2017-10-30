@@ -50,8 +50,7 @@
 }
 
 .TextInput:disabled,
-.TextInput[readonly],
-.TextInput--is-disabled {
+.TextInput[readonly] {
   background: $gray-200;
   border-color: $gray-200;
   color: $text-color-hint;

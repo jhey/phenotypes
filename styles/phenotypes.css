@@ -1183,8 +1183,7 @@ hr {
   outline: 0; }
 
 .TextInput:disabled,
-.TextInput[readonly],
-.TextInput--is-disabled {
+.TextInput[readonly] {
   background: #eee;
   border-color: #eee;
   color: rgba(0, 0, 0, 0.41);
