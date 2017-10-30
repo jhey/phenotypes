@@ -397,9 +397,7 @@ hr {
   user-select: none; }
 
 .Button:hover,
-.Button:focus,
-.Button--is-hovered,
-.Button--is-focused {
+.Button:focus {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.14), 0 1px 1px rgba(0, 0, 0, 0.07), 0 0 6px rgba(0, 0, 0, 0.07);
   background: rgba(0, 0, 0, 0.12);
   color: rgba(0, 0, 0, 0.86);
@@ -413,7 +411,8 @@ hr {
   pointer-events: none; }
 
 .Button:active,
-.Button--is-active {
+.Button--is-active,
+.Button--is-active:focus {
   box-shadow: none;
   background: rgba(0, 0, 0, 0.18);
   transform: translateY(0) scaleX(1) scaleY(1);
@@ -427,7 +426,7 @@ hr {
   font-weight: normal;
   background: #f04d5d; }
 
-.Button--danger:hover, .Button--danger:focus, .Button--danger.Button--is-hovered, .Button--danger.Button--is-focused {
+.Button--danger:hover, .Button--danger:focus {
   background: #ee3548;
   color: #fff; }
 
@@ -441,7 +440,7 @@ hr {
   -webkit-font-smoothing: antialiased;
   background: #16b8e0; }
 
-.Button--primary:hover, .Button--primary:focus, .Button--primary.Button--is-hovered, .Button--primary.Button--is-focused {
+.Button--primary:hover, .Button--primary:focus {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.14), 0 1px 2px rgba(0, 0, 0, 0.07), 0 0 10px rgba(0, 0, 0, 0.07);
   background: #14a5c9;
   color: #fff; }
@@ -454,7 +453,7 @@ hr {
   background: transparent;
   color: #16b8e0; }
 
-.Button--link:hover, .Button--link:focus, .Button--link.Button--is-hovered, .Button--link.Button--is-focused {
+.Button--link:hover, .Button--link:focus {
   background: rgba(0, 0, 0, 0.05);
   color: #008ab3; }
 
@@ -463,17 +462,16 @@ hr {
   color: #005678; }
 
 @media (pointer: coarse), (any-pointer: coarse) {
-  .Button:hover,
-  .Button--is-hovered {
+  .Button:hover {
     box-shadow: none;
     background: rgba(0, 0, 0, 0.18);
     transform: translateY(1px) scaleX(0.985) scaleY(0.985); }
-  .Button--danger:hover, .Button--danger.Button--is-hovered {
+  .Button--danger:hover {
     background: #ec192e; }
-  .Button--primary:hover, .Button--primary.Button--is-hovered {
+  .Button--primary:hover {
     box-shadow: none;
     background: #118ead; }
-  .Button--link:hover, .Button--link.Button--is-hovered {
+  .Button--link:hover {
     background: rgba(0, 0, 0, 0.11);
     color: #005678; } }
 
