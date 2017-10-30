@@ -1,5 +1,5 @@
 module.exports = {
-  name: 'radio',
-  label: 'Radio',
+  name: 'slider',
+  label: 'Slider',
   context: {},
 };
