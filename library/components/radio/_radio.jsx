@@ -1,8 +1,7 @@
 /* eslint-disable react/no-multi-comp */
-
-const React = require('react');
-const RadioGroup = require('./radio_group.jsx');
-const Button = require('../button/button.jsx');
+import React from 'react';
+import RadioGroup from './radio_group.jsx';
+import Button from '../button/button.jsx';
 
 function RadioButtonsExamples() {
   return (

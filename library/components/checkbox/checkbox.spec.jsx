@@ -1,11 +1,11 @@
 /* eslint-env mocha */
 /* eslint-disable prefer-arrow-callback, no-unused-expressions */
-const React = require('react');
-const { shallow } = require('enzyme');
-const { expect } = require('chai');
-const sinon = require('sinon');
+import React from 'react';
+import { shallow } from 'enzyme';
+import { expect } from 'chai';
+import sinon from 'sinon';
 
-const Checkbox = require('./checkbox');
+import Checkbox from './checkbox';
 
 describe('Checkbox', function () {
   it('should render input element', function () {
@@ -28,8 +28,6 @@ describe('Checkbox', function () {
         checked="checked"
       />
     );
-
-    const wrapperProps = wrapper.find('label').props();
 
     const inputProps = wrapper.find('input').props();
     expect(inputProps.className).to.equal('Checkbox__input');

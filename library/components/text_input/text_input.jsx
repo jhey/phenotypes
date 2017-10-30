@@ -1,5 +1,5 @@
-const React = require('react');
-const classes = require('classnames');
+import React from 'react';
+import classes from 'classnames';
 
 const INPUT_TYPES = {
   color: 'color',

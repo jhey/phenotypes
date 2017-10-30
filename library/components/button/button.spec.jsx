@@ -1,11 +1,11 @@
 /* eslint-env mocha */
 /* eslint-disable prefer-arrow-callback, no-unused-expressions */
-const React = require('react');
-const { mount } = require('enzyme');
-const { expect } = require('chai');
-const sinon = require('sinon');
+import React from 'react';
+import { mount } from 'enzyme';
+import { expect } from 'chai';
+import sinon from 'sinon';
 
-const Button = require('./button');
+import Button from './button';
 
 // Mocks a synthetic event object so we can test click handling:
 function mockSyntheticEvent() {

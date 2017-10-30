@@ -1,7 +1,6 @@
-const React = require('react');
+import React from 'react';
 
 class AnchorButton extends React.Component {
-
   constructor(props, context) {
     super(props, context);
     this.handleAnchorClick = this.handleAnchorClick.bind(this);
@@ -23,6 +22,7 @@ class AnchorButton extends React.Component {
 
   render() {
     const { children, disabled, tabIndex, ...htmlProps } = this.props;
+
     return (
       <a
         {...htmlProps}
