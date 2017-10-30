@@ -14,14 +14,17 @@ function validateType(type) {
 }
 
 function TrueButton(props) {
-  const { children, type, ...htmlProps } = props;
+  const { children, className, type, ...htmlProps } = props;
   return (
-    <button
-      {...htmlProps}
-      type={validateType(type)}
-    >
-      {children}
-    </button>
+    <div className={className}>
+      <button
+        {...htmlProps}
+        className="Button__control"
+        type={validateType(type)}
+      >
+        {children}
+      </button>
+    </div>
   );
 }
 

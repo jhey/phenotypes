@@ -1,19 +1,21 @@
 // scss-lint:disable SelectorFormat ElsePlacement
 
 @mixin button-sizer($size: 'medium') {
-  @if $size == 'small' {
-    font-size: $font-size-2;
-    padding: modular-scale-px(-6) modular-scale-px(-1) modular-scale-px(-5);
-  }
+  .Button__control {
+    @if $size == 'small' {
+      font-size: $font-size-2;
+      padding: modular-scale-px(-6) modular-scale-px(-1) modular-scale-px(-5);
+    }
 
-  @else if $size == 'medium' {
-    font-size: $font-size-3;
-    padding: modular-scale-px(-3) modular-scale-px(2) modular-scale-px(-2);
-  }
+    @else if $size == 'medium' {
+      font-size: $font-size-3;
+      padding: modular-scale-px(-3) modular-scale-px(2) modular-scale-px(-2);
+    }
 
-  @else if $size == 'large' {
-    font-size: $font-size-4;
-    padding: modular-scale-px(0) modular-scale-px(4) modular-scale-px(1);
+    @else if $size == 'large' {
+      font-size: $font-size-4;
+      padding: modular-scale-px(0) modular-scale-px(4) modular-scale-px(1);
+    }
   }
 }
 
@@ -21,8 +23,12 @@
 // ------------
 
 .Button {
-  // scss-lint:disable PropertySortOrder
   @include button-sizer;
+  display: inline-block;
+}
+
+.Button__control {
+  // scss-lint:disable PropertySortOrder
   background: rgba($black, $alpha-200);
   border: 0;
   border-radius: $border-radius;
@@ -44,8 +50,8 @@
   user-select: none;
 }
 
-.Button:hover,
-.Button:focus {
+.Button__control:hover,
+.Button__control:focus {
   @include depth(4);
   background: rgba($black, $alpha-200 + .05);
   color: $text-color-primary;
@@ -54,30 +60,34 @@
   transition-duration: .08s;
 }
 
-.Button:disabled,
 .Button--is-disabled {
-  opacity: $alpha-600;
-  pointer-events: none;
+  cursor: not-allowed;
+
+  .Button__control {
+    opacity: $alpha-600;
+    pointer-events: none;
+  }
 }
 
-.Button:active,
-.Button--is-active,
-.Button--is-active:focus {
+.Button__control:active,
+.Button--is-active .Button__control,
+.Button--is-active .Button__control:focus {
   @include depth(0);
   background: rgba($black, $alpha-200 + .11);
   transform: translateY(0) scaleX(1) scaleY(1);
   transition-duration: 0s;
 }
 
+
 // Allow focus indicator when tabbing but hide it if clicking
-.Button:active:focus {
+.Button__control:active:focus {
   outline: 0;
 }
 
 // Danger button
 // -------------
 
-.Button--danger {
+.Button--danger .Button__control {
   @include reversed-text;
   background: $red;
 
@@ -87,8 +97,7 @@
     color: $white;
   }
 
-  &:active,
-  &.Button--is-active {
+  &:active {
     background: darken($red, 11);
   }
 }
@@ -96,7 +105,7 @@
 // Primary button
 // --------------
 
-.Button--primary {
+.Button--primary .Button__control {
   @include depth(4);
   @include reversed-text($font-weight: $font-weight-bold);
   background: $blue;
@@ -108,8 +117,7 @@
     color: $white;
   }
 
-  &:active,
-  &.Button--is-active {
+  &:active {
     @include depth(0);
     background: darken($blue, 11);
   }
@@ -118,7 +126,7 @@
 // Link style button
 // -----------------
 
-.Button--link {
+.Button--link .Button__control {
   background: transparent;
   color: $blue;
 
@@ -128,8 +136,7 @@
     color: $blue-300;
   }
 
-  &:active,
-  &.Button--is-active {
+  &:active {
     background: rgba($black, .11);
     color: $blue-400;
   }
@@ -146,22 +153,21 @@
 // Or this: <body ontouchstart="">
 
 @media (pointer: coarse), (any-pointer: coarse) {
-  .Button:hover {
+  .Button__control:hover {
     @include depth(0);
     background: rgba($black, $alpha-200 + .11);
     transform: translateY(1px) scaleX(.985) scaleY(.985);
   }
 
-  .Button--danger:hover {
+  .Button--danger .Button__control:hover {
     background: darken($red, 11);
   }
 
-  .Button--primary:hover {
-    @include depth(0);
+  .Button--primary .Button__control:hover {
     background: darken($blue, 11);
   }
 
-  .Button--link:hover {
+  .Button--link .Button__control:hover {
     background: rgba($black, .11);
     color: $blue-400;
   }
