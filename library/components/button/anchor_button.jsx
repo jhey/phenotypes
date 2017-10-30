@@ -1,9 +1,17 @@
 import React from 'react';
+import classes from 'classnames';
+
+function isSpacebarEvent(event) {
+  return (event.charCode || event.keyCode) === 32;
+}
 
 class AnchorButton extends React.Component {
   constructor(props, context) {
     super(props, context);
+    this.state = { spacePressed: false };
     this.handleAnchorClick = this.handleAnchorClick.bind(this);
+    this.handleKeyDown = this.handleKeyDown.bind(this);
+    this.handleKeyUp = this.handleKeyUp.bind(this);
   }
 
   handleAnchorClick(event) {
@@ -20,13 +28,44 @@ class AnchorButton extends React.Component {
     }
   }
 
+  // Spacebar support: (enter presses are already handled by handleAnchorClick)
+  // - when pressed, active style is applied
+  // - when released, active style is removed & then button behaves as if it were clicked (link is
+  //   followed and onClick is called)
+
+  handleKeyDown(event) {
+    if (isSpacebarEvent(event)) {
+      if (!this.props.disabled) {
+        event.preventDefault();
+        this.setState({ spacePressed: true });
+      }
+    }
+  }
+
+  handleKeyUp(event) {
+    if (isSpacebarEvent(event)) {
+      const { disabled, href, onClick } = this.props;
+      if (!disabled) {
+        event.preventDefault();
+        if (href && href !== '#') {
+          window.location.href = href;
+        }
+        onClick && onClick(event);
+        this.setState({ spacePressed: false });
+      }
+    }
+  }
+
   render() {
-    const { children, disabled, tabIndex, ...htmlProps } = this.props;
+    const { className, children, disabled, tabIndex, ...htmlProps } = this.props;
 
     return (
       <a
         {...htmlProps}
+        className={classes(className, { 'Button--is-active': this.state.spacePressed })}
         onClick={this.handleAnchorClick}
+        onKeyDown={this.handleKeyDown}
+        onKeyUp={this.handleKeyUp}
         role="button"
         tabIndex={disabled ? -1 : tabIndex}
       >

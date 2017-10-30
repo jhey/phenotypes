@@ -10,6 +10,7 @@ function Button(props) {
   return (
     <Component
       {...props}
+      onClick={() => { console.log('clicked') }}
       aria-disabled={props.disabled}
       className={classes(props.className, 'Button', {
         'Button--is-disabled': props.disabled,

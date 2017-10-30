@@ -63,7 +63,8 @@
 }
 
 .Button:active,
-.Button--is-active {
+.Button--is-active,
+.Button--is-active:focus {
   @include depth(0);
   background: rgba($black, $alpha-200 + .11);
   transform: translateY(0) scaleX(1) scaleY(1);

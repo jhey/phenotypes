@@ -413,7 +413,8 @@ hr {
   pointer-events: none; }
 
 .Button:active,
-.Button--is-active {
+.Button--is-active,
+.Button--is-active:focus {
   box-shadow: none;
   background: rgba(0, 0, 0, 0.18);
   transform: translateY(0) scaleX(1) scaleY(1);
