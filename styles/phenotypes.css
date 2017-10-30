@@ -5797,3 +5797,6 @@ hr {
 
 .text-underline {
   text-decoration: underline !important; }
+
+.cursor-not-allowed {
+  cursor: not-allowed !important; }

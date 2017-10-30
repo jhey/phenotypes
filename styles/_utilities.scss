@@ -4,3 +4,8 @@
 @import '../library/utilities/sizing/sizing';
 @import '../library/utilities/spacing/spacing';
 @import '../library/utilities/typography/typography';
+
+// scss-lint:disable ImportantRule
+.cursor-not-allowed {
+  cursor: not-allowed !important;
+}
