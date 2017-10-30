@@ -30,9 +30,7 @@ function TextInput(props) {
   const { className, type, ...htmlProps } = props;
   return (
     <input
-      className={classes(className, 'TextInput', {
-        'TextInput--is-disabled': htmlProps.disabled,
-      })}
+      className={classes(className, 'TextInput')}
       type={validateType(type)}
       {...htmlProps}
     />

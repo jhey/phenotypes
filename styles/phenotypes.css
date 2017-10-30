@@ -377,8 +377,13 @@ hr {
   border-color: rgba(255, 255, 255, 0.14); }
 
 .Button {
+  display: inline-block; }
+
+.Button .Button__control {
   font-size: 16px;
-  padding: 11px 21px 12px;
+  padding: 11px 21px 12px; }
+
+.Button__control {
   background: rgba(0, 0, 0, 0.07);
   border: 0;
   border-radius: 3px;
@@ -396,8 +401,8 @@ hr {
   -webkit-user-select: none;
   user-select: none; }
 
-.Button:hover,
-.Button:focus {
+.Button__control:hover,
+.Button__control:focus {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.14), 0 1px 1px rgba(0, 0, 0, 0.07), 0 0 6px rgba(0, 0, 0, 0.07);
   background: rgba(0, 0, 0, 0.12);
   color: rgba(0, 0, 0, 0.86);
@@ -405,129 +410,135 @@ hr {
   transform: translateY(-2.25px) scaleX(1.015) scaleY(1.015);
   transition-duration: .08s; }
 
-.Button:disabled,
-.Button--is-disabled {
-  opacity: 0.54;
-  pointer-events: none; }
-
-.Button:active,
-.Button--is-active,
-.Button--is-active:focus {
+.Button__control:active,
+.Button--is-active .Button__control,
+.Button--is-active .Button__control:focus {
   box-shadow: none;
   background: rgba(0, 0, 0, 0.18);
   transform: translateY(0) scaleX(1) scaleY(1);
   transition-duration: 0s; }
 
-.Button:active:focus {
+.Button__control:active:focus,
+.Button--is-active .Button__control:focus {
   outline: 0; }
 
-.Button--danger {
+.Button__control:disabled,
+.Button--is-disabled .Button__control {
+  opacity: 0.54;
+  pointer-events: none; }
+
+.Button--is-disabled {
+  cursor: not-allowed; }
+
+.Button--danger .Button__control {
   color: #fff;
   font-weight: normal;
   background: #f04d5d; }
 
-.Button--danger:hover, .Button--danger:focus {
+.Button--danger .Button__control:hover, .Button--danger .Button__control:focus {
   background: #ee3548;
   color: #fff; }
 
-.Button--danger:active, .Button--danger.Button--is-active {
+.Button--danger .Button__control:active,
+.Button--danger.Button--is-active .Button__control {
   background: #ec192e; }
 
-.Button--primary {
+.Button--primary .Button__control {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.14), 0 1px 1px rgba(0, 0, 0, 0.07), 0 0 6px rgba(0, 0, 0, 0.07);
   color: #fff;
   font-weight: bold;
   -webkit-font-smoothing: antialiased;
   background: #16b8e0; }
 
-.Button--primary:hover, .Button--primary:focus {
+.Button--primary .Button__control:hover, .Button--primary .Button__control:focus {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.14), 0 1px 2px rgba(0, 0, 0, 0.07), 0 0 10px rgba(0, 0, 0, 0.07);
   background: #14a5c9;
   color: #fff; }
 
-.Button--primary:active, .Button--primary.Button--is-active {
+.Button--primary .Button__control:active,
+.Button--primary.Button--is-active .Button__control {
   box-shadow: none;
   background: #118ead; }
 
-.Button--link {
+.Button--link .Button__control .Button__control {
   background: transparent;
   color: #16b8e0; }
 
-.Button--link:hover, .Button--link:focus {
+.Button--link .Button__control .Button__control:hover, .Button--link .Button__control .Button__control:focus {
   background: rgba(0, 0, 0, 0.05);
   color: #008ab3; }
 
-.Button--link:active, .Button--link.Button--is-active {
+.Button--link .Button__control .Button__control:active,
+.Button--link .Button__control.Button--is-active .Button__control {
   background: rgba(0, 0, 0, 0.11);
   color: #005678; }
 
 @media (pointer: coarse), (any-pointer: coarse) {
-  .Button:hover {
+  .Button__control:hover {
     box-shadow: none;
     background: rgba(0, 0, 0, 0.18);
     transform: translateY(1px) scaleX(0.985) scaleY(0.985); }
-  .Button--danger:hover {
+  .Button--danger .Button__control:hover {
     background: #ec192e; }
-  .Button--primary:hover {
-    box-shadow: none;
+  .Button--primary .Button__control:hover {
     background: #118ead; }
-  .Button--link:hover {
+  .Button--link .Button__control:hover {
     background: rgba(0, 0, 0, 0.11);
     color: #005678; } }
 
-.Button--medium {
+.Button--medium .Button__control {
   font-size: 16px;
   padding: 11px 21px 12px; }
 
-.Button--small {
+.Button--small .Button__control {
   font-size: 14px;
   padding: 7px 14px 8px; }
 
-.Button--large {
+.Button--large .Button__control {
   font-size: 18px;
   padding: 16px 27px 18px; }
 
 @media (min-width: 600px) {
-  .Button--medium-sm {
+  .Button--medium-sm .Button__control {
     font-size: 16px;
     padding: 11px 21px 12px; }
-  .Button--small-sm {
+  .Button--small-sm .Button__control {
     font-size: 14px;
     padding: 7px 14px 8px; }
-  .Button--large-sm {
+  .Button--large-sm .Button__control {
     font-size: 18px;
     padding: 16px 27px 18px; } }
 
 @media (min-width: 900px) {
-  .Button--medium-md {
+  .Button--medium-md .Button__control {
     font-size: 16px;
     padding: 11px 21px 12px; }
-  .Button--small-md {
+  .Button--small-md .Button__control {
     font-size: 14px;
     padding: 7px 14px 8px; }
-  .Button--large-md {
+  .Button--large-md .Button__control {
     font-size: 18px;
     padding: 16px 27px 18px; } }
 
 @media (min-width: 1200px) {
-  .Button--medium-lg {
+  .Button--medium-lg .Button__control {
     font-size: 16px;
     padding: 11px 21px 12px; }
-  .Button--small-lg {
+  .Button--small-lg .Button__control {
     font-size: 14px;
     padding: 7px 14px 8px; }
-  .Button--large-lg {
+  .Button--large-lg .Button__control {
     font-size: 18px;
     padding: 16px 27px 18px; } }
 
 @media (min-width: 1500px) {
-  .Button--medium-xl {
+  .Button--medium-xl .Button__control {
     font-size: 16px;
     padding: 11px 21px 12px; }
-  .Button--small-xl {
+  .Button--small-xl .Button__control {
     font-size: 14px;
     padding: 7px 14px 8px; }
-  .Button--large-xl {
+  .Button--large-xl .Button__control {
     font-size: 18px;
     padding: 16px 27px 18px; } }
 
@@ -596,6 +607,9 @@ hr {
   pointer-events: none;
   position: absolute;
   user-select: none; }
+
+.Checkbox--is-disabled {
+  cursor: not-allowed; }
 
 .Checkbox--medium {
   font-size: 14px;
@@ -888,6 +902,9 @@ hr {
   content: '';
   display: none;
   position: absolute; }
+
+.Radio--is-disabled {
+  cursor: not-allowed; }
 
 .Radio--small {
   font-size: 12px;
@@ -1215,27 +1232,25 @@ hr {
   color: rgba(0, 0, 0, 0.41);
   opacity: 1; }
 
-.TextInput:focus,
-.TextInput--is-focused {
+.TextInput:focus {
   border-color: #7feaff;
   box-shadow: 0 0 11px rgba(127, 234, 255, 0.41);
   outline: 0; }
 
 .TextInput:disabled,
-.TextInput[readonly],
-.TextInput--is-disabled {
+.TextInput[readonly] {
   background: #eee;
   border-color: #eee;
   color: rgba(0, 0, 0, 0.41);
+  cursor: not-allowed;
   opacity: 1; }
 
 .TextInput--has-error,
 .FormGroup--has-error .TextInput {
   border-color: #f04d5d; }
 
-.TextInput--has-error.TextInput:focus, .TextInput--has-error.TextInput--is-focused,
-.FormGroup--has-error .TextInput.TextInput:focus,
-.FormGroup--has-error .TextInput.TextInput--is-focused {
+.TextInput--has-error.TextInput:focus,
+.FormGroup--has-error .TextInput.TextInput:focus {
   box-shadow: 0 0 11px rgba(255, 151, 154, 0.54); }
 
 .TextInput--medium,

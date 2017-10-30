@@ -145,6 +145,10 @@
   }
 }
 
+.Radio--is-disabled {
+  cursor: not-allowed;
+}
+
 @if $enable-responsive-form-components {
   @each $breakpoint in map-keys($grid-breakpoints) {
     @include media-breakpoint-up($breakpoint) {
