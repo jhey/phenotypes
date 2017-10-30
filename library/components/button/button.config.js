@@ -22,6 +22,7 @@ module.exports = {
     context: {
       href: 'https://amino.com',
       children: 'Anchor-tagged button ↗️',
+      target: '_blank',
     },
   }, {
     name: 'anchor-disabled',

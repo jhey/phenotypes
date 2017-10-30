@@ -44,14 +44,12 @@ class AnchorButton extends React.Component {
 
   handleKeyUp(event) {
     if (isSpacebarEvent(event)) {
-      const { disabled, href, onClick } = this.props;
-      if (!disabled) {
+      if (!this.props.disabled) {
         event.preventDefault();
-        if (href && href !== '#') {
-          window.location.href = href;
-        }
-        onClick && onClick(event);
         this.setState({ spacePressed: false });
+        // Follow the link & call onClick prop by simulating a click on the anchor, so that
+        // props like `target` are obeyed.
+        this.element.click();
       }
     }
   }
@@ -62,6 +60,7 @@ class AnchorButton extends React.Component {
     return (
       <a
         {...htmlProps}
+        ref={(element) => { this.element = element }}
         className={classes(className, { 'Button--is-active': this.state.spacePressed })}
         onClick={this.handleAnchorClick}
         onKeyDown={this.handleKeyDown}
