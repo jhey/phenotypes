@@ -42,8 +42,7 @@
   }
 }
 
-.TextInput:focus,
-.TextInput--is-focused {
+.TextInput:focus {
   border-color: $blue-100;
   box-shadow: 0 0 11px rgba($blue-100, $alpha-500);
   outline: 0;
@@ -62,8 +61,7 @@
 .FormGroup--has-error .TextInput {
   border-color: $red;
 
-  &.TextInput:focus,
-  &.TextInput--is-focused {
+  &.TextInput:focus {
     box-shadow: 0 0 11px rgba($red-100, $alpha-600);
   }
 }

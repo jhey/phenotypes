@@ -1176,8 +1176,7 @@ hr {
     color: rgba(0, 0, 0, 0.41);
     opacity: 1; }
 
-.TextInput:focus,
-.TextInput--is-focused {
+.TextInput:focus {
   border-color: #7feaff;
   box-shadow: 0 0 11px rgba(127, 234, 255, 0.41);
   outline: 0; }
@@ -1193,9 +1192,8 @@ hr {
 .TextInput--has-error,
 .FormGroup--has-error .TextInput {
   border-color: #f04d5d; }
-  .TextInput--has-error.TextInput:focus, .TextInput--has-error.TextInput--is-focused,
-  .FormGroup--has-error .TextInput.TextInput:focus,
-  .FormGroup--has-error .TextInput.TextInput--is-focused {
+  .TextInput--has-error.TextInput:focus,
+  .FormGroup--has-error .TextInput.TextInput:focus {
     box-shadow: 0 0 11px rgba(255, 151, 154, 0.54); }
 
 .TextInput--medium,
