@@ -45,9 +45,7 @@
 }
 
 .Button:hover,
-.Button:focus,
-.Button--is-hovered,
-.Button--is-focused {
+.Button:focus {
   @include depth(4);
   background: rgba($black, $alpha-200 + .05);
   color: $text-color-primary;
@@ -84,9 +82,7 @@
   background: $red;
 
   &:hover,
-  &:focus,
-  &.Button--is-hovered,
-  &.Button--is-focused {
+  &:focus {
     background: darken($red, 5);
     color: $white;
   }
@@ -106,9 +102,7 @@
   background: $blue;
 
   &:hover,
-  &:focus,
-  &.Button--is-hovered,
-  &.Button--is-focused {
+  &:focus {
     @include depth(7);
     background: darken($blue, 5);
     color: $white;
@@ -129,9 +123,7 @@
   color: $blue;
 
   &:hover,
-  &:focus,
-  &.Button--is-hovered,
-  &.Button--is-focused {
+  &:focus {
     background: rgba($black, .05);
     color: $blue-300;
   }
@@ -154,34 +146,24 @@
 // Or this: <body ontouchstart="">
 
 @media (pointer: coarse), (any-pointer: coarse) {
-  .Button:hover,
-  .Button--is-hovered {
+  .Button:hover {
     @include depth(0);
     background: rgba($black, $alpha-200 + .11);
     transform: translateY(1px) scaleX(.985) scaleY(.985);
   }
 
-  .Button--danger {
-    &:hover,
-    &.Button--is-hovered {
-      background: darken($red, 11);
-    }
+  .Button--danger:hover {
+    background: darken($red, 11);
   }
 
-  .Button--primary {
-    &:hover,
-    &.Button--is-hovered {
-      @include depth(0);
-      background: darken($blue, 11);
-    }
+  .Button--primary:hover {
+    @include depth(0);
+    background: darken($blue, 11);
   }
 
-  .Button--link {
-    &:hover,
-    &.Button--is-hovered {
-      background: rgba($black, .11);
-      color: $blue-400;
-    }
+  .Button--link:hover {
+    background: rgba($black, .11);
+    color: $blue-400;
   }
 }
 
