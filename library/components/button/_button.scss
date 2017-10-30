@@ -88,17 +88,20 @@
 // Danger button
 // -------------
 
-.Button--danger .Button__control {
-  @include reversed-text;
-  background: $red;
+.Button--danger {
+  .Button__control {
+    @include reversed-text;
+    background: $red;
 
-  &:hover,
-  &:focus {
-    background: darken($red, 5);
-    color: $white;
+    &:hover,
+    &:focus {
+      background: darken($red, 5);
+      color: $white;
+    }
   }
 
-  &:active {
+  .Button__control:active,
+  &.Button--is-active .Button__control {
     background: darken($red, 11);
   }
 }
@@ -106,19 +109,22 @@
 // Primary button
 // --------------
 
-.Button--primary .Button__control {
-  @include depth(4);
-  @include reversed-text($font-weight: $font-weight-bold);
-  background: $blue;
+.Button--primary {
+  .Button__control {
+    @include depth(4);
+    @include reversed-text($font-weight: $font-weight-bold);
+    background: $blue;
 
-  &:hover,
-  &:focus {
-    @include depth(7);
-    background: darken($blue, 5);
-    color: $white;
+    &:hover,
+    &:focus {
+      @include depth(7);
+      background: darken($blue, 5);
+      color: $white;
+    }
   }
 
-  &:active {
+  .Button__control:active,
+  &.Button--is-active .Button__control {
     @include depth(0);
     background: darken($blue, 11);
   }
@@ -128,16 +134,19 @@
 // -----------------
 
 .Button--link .Button__control {
-  background: transparent;
-  color: $blue;
+  .Button__control {
+    background: transparent;
+    color: $blue;
 
-  &:hover,
-  &:focus {
-    background: rgba($black, .05);
-    color: $blue-300;
+    &:hover,
+    &:focus {
+      background: rgba($black, .05);
+      color: $blue-300;
+    }
   }
 
-  &:active {
+  .Button__control:active,
+  &.Button--is-active .Button__control {
     background: rgba($black, .11);
     color: $blue-400;
   }

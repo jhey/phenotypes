@@ -439,7 +439,8 @@ hr {
   background: #ee3548;
   color: #fff; }
 
-.Button--danger .Button__control:active {
+.Button--danger .Button__control:active,
+.Button--danger.Button--is-active .Button__control {
   background: #ec192e; }
 
 .Button--primary .Button__control {
@@ -454,19 +455,21 @@ hr {
   background: #14a5c9;
   color: #fff; }
 
-.Button--primary .Button__control:active {
+.Button--primary .Button__control:active,
+.Button--primary.Button--is-active .Button__control {
   box-shadow: none;
   background: #118ead; }
 
-.Button--link .Button__control {
+.Button--link .Button__control .Button__control {
   background: transparent;
   color: #16b8e0; }
 
-.Button--link .Button__control:hover, .Button--link .Button__control:focus {
+.Button--link .Button__control .Button__control:hover, .Button--link .Button__control .Button__control:focus {
   background: rgba(0, 0, 0, 0.05);
   color: #008ab3; }
 
-.Button--link .Button__control:active {
+.Button--link .Button__control .Button__control:active,
+.Button--link .Button__control.Button--is-active .Button__control {
   background: rgba(0, 0, 0, 0.11);
   color: #005678; }
 
