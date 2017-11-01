@@ -43,6 +43,11 @@ $slider-track-border-radius: $slider-track-height / 2;
   width: $slider-handle-size;
 }
 
+.Slider--is-disabled {
+  cursor: not-allowed;
+  opacity: $alpha-500;
+}
+
 @mixin slider-color($fill-color, $track-color: rgba($black, $alpha-300), $handle-color: $white) {
   .Slider__track {
     background-color: $track-color;
@@ -60,9 +65,5 @@ $slider-track-border-radius: $slider-track-height / 2;
 @mixin slider-green {
   @include slider-color($green-200);
 }
-
-//@mixin slider-reversed {
-//  @include slider-color(rgba($white, $alpha-reversed-600), rgba($white, $alpha-reversed-200));
-//}
 
 @include slider-green;

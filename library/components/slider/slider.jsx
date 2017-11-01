@@ -1,4 +1,5 @@
 import React from 'react';
+import classes from 'classnames';
 
 function getFillStyle(valueAsPercentage) {
   return {
@@ -30,10 +31,13 @@ class Slider extends React.Component {
   }
 
   render() {
+    const { disabled, className } = this.props;
     const valueAsPercentage = getPercentage(this.props.value, this.props.min, this.props.max);
 
     return (
-      <div className="Slider">
+      <div
+        className={classes('Slider', className, { 'Slider--is-disabled': disabled })}
+      >
         <div
           className="Slider__track"
           style={getTrackStyle(valueAsPercentage)}
@@ -50,6 +54,7 @@ class Slider extends React.Component {
 // <div className="Slider__handle" tabIndex="0" onFocus={(event) => { console.log(event.keyCode) }} />
 
 Slider.defaultProps = {
+  disabled: false,
   min: 0,
   max: 100,
   value: null,
