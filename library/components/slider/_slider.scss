@@ -1,0 +1,68 @@
+$slider-handle-size: modular-scale-px(3);
+$slider-track-height: 3px;
+$slider-track-offset: floor(($slider-handle-size / 2) - ($slider-track-height / 2));
+$slider-track-border-radius: $slider-track-height / 2;
+
+.Slider {
+  height: $slider-handle-size;
+  position: relative;
+}
+
+.Slider__track {
+  border-radius: $slider-track-border-radius;
+  height: $slider-track-height;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: $slider-track-offset;
+}
+
+.Slider__range {
+  bottom: 0;
+  left: $slider-handle-size / 2;
+  position: absolute;
+  right: $slider-handle-size / 2;
+  top: 0;
+}
+
+.Slider__fill {
+  border-radius: $slider-track-border-radius 0 0 $slider-track-border-radius;
+  height: $slider-track-height;
+  left: -1 * $slider-handle-size / 2;
+  position: absolute;
+  top: $slider-track-offset;
+}
+
+.Slider__handle {
+  @include depth(7);
+  border-radius: 50%;
+  height: $slider-handle-size;
+  position: absolute;
+  right: -1 * $slider-handle-size / 2;
+  top: -1 * $slider-track-offset;
+  width: $slider-handle-size;
+}
+
+@mixin slider-color($fill-color, $track-color: rgba($black, $alpha-300), $handle-color: $white) {
+  .Slider__track {
+    background-color: $track-color;
+  }
+
+  .Slider__fill {
+    background-color: $fill-color;
+  }
+
+  .Slider__handle {
+    background-color: $handle-color;
+  }
+}
+
+@mixin slider-green {
+  @include slider-color($green-200);
+}
+
+//@mixin slider-reversed {
+//  @include slider-color(rgba($white, $alpha-reversed-600), rgba($white, $alpha-reversed-200));
+//}
+
+@include slider-green;

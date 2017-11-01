@@ -1148,6 +1148,50 @@ hr {
     top: 5px;
     width: 7px; } }
 
+.Slider {
+  height: 24px;
+  position: relative; }
+
+.Slider__track {
+  border-radius: 1.5px;
+  height: 3px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 10px; }
+
+.Slider__range {
+  bottom: 0;
+  left: 12px;
+  position: absolute;
+  right: 12px;
+  top: 0; }
+
+.Slider__fill {
+  border-radius: 1.5px 0 0 1.5px;
+  height: 3px;
+  left: -12px;
+  position: absolute;
+  top: 10px; }
+
+.Slider__handle {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.14), 0 1px 2px rgba(0, 0, 0, 0.07), 0 0 10px rgba(0, 0, 0, 0.07);
+  border-radius: 50%;
+  height: 24px;
+  position: absolute;
+  right: -12px;
+  top: -10px;
+  width: 24px; }
+
+.Slider__track {
+  background-color: rgba(0, 0, 0, 0.14); }
+
+.Slider__fill {
+  background-color: #2dcfa1; }
+
+.Slider__handle {
+  background-color: #fff; }
+
 .Switch {
   margin: 0;
   position: relative; }
