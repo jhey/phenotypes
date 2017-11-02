@@ -80,11 +80,7 @@ class Slider extends React.Component {
   }
 
   handleMouseDown(event) {
-    const { disabled, onMouseDown, onDragStart } = this.props;
-
-    if (disabled) {
-      return;
-    }
+    const { onMouseDown, onDragStart } = this.props;
 
     document.addEventListener('mousemove', this.handleDrag);
     document.addEventListener('mouseup', this.handleDragMouseEnd);
@@ -107,11 +103,7 @@ class Slider extends React.Component {
   }
 
   handleTouchStart(event) {
-    const { disabled, onTouchStart, onDragStart } = this.props;
-
-    if (disabled) {
-      return;
-    }
+    const { onTouchStart, onDragStart } = this.props;
 
     document.addEventListener('touchmove', this.handleDrag);
     document.addEventListener('touchup', this.handleTouchEnd);
@@ -171,7 +163,7 @@ class Slider extends React.Component {
 
     return (
       <div
-        tabIndex={0}
+        tabIndex={disabled ? -1 : 0}
         role="slider"
         aria-valuemax={max}
         aria-valuemin={min}
@@ -180,12 +172,12 @@ class Slider extends React.Component {
         ref={(element) => { this.slider = element }}
         className={classes('Slider', className, {
           'Slider--is-disabled': disabled,
-          'Slider--is-focused': this.state.useFocusStyle,
+          'Slider--is-focused': !disabled && this.state.useFocusStyle,
         })}
-        onMouseDown={this.handleMouseDown}
-        onTouchStart={this.handleTouchStart}
-        onFocus={this.handleFocus}
-        onBlur={this.handleBlur}
+        onMouseDown={!disabled && this.handleMouseDown}
+        onTouchStart={!disabled && this.handleTouchStart}
+        onFocus={!disabled && this.handleFocus}
+        onBlur={!disabled && this.handleBlur}
       >
         <div className="Slider__track-line" style={getTrackLineStyle(valueAsPercentage)} />
         <div className="Slider__track" ref={(element) => { this.track = element }}>
