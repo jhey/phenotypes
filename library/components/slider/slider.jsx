@@ -150,6 +150,11 @@ class Slider extends React.Component {
         className={classes('Slider', className, { 'Slider--is-disabled': disabled })}
         onMouseDown={this.handleMouseDown}
         onTouchStart={this.handleTouchStart}
+        tabIndex={0}
+        role="slider"
+        aria-valuemax={max}
+        aria-valuemin={min}
+        aria-valuenow={value}
         {...other}
       >
         <div className="Slider__track-line" style={getTrackLineStyle(valueAsPercentage)} />
