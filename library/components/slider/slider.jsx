@@ -27,11 +27,16 @@ function getPercentage(value, min, max) {
 class Slider extends React.Component {
   constructor(props, context) {
     super(props, context);
+
+    this.state = { useFocusStyle: false };
+
     this.handleDrag = this.handleDrag.bind(this);
     this.handleMouseDown = this.handleMouseDown.bind(this);
     this.handleDragMouseEnd = this.handleDragMouseEnd.bind(this);
     this.handleTouchStart = this.handleTouchStart.bind(this);
     this.handleTouchEnd = this.handleTouchEnd.bind(this);
+    this.handleFocus = this.handleFocus.bind(this);
+    this.handleBlur = this.handleBlur.bind(this);
   }
 
   setValueFromEvent(event) {
@@ -91,6 +96,7 @@ class Slider extends React.Component {
 
     // Prevent text selection when dragging the slider (but still focus when clicking)
     event.preventDefault();
+    this.focusedFromClick = true;
     this.slider.focus();
   }
 
@@ -129,6 +135,25 @@ class Slider extends React.Component {
     this.props.onDragStop && this.props.onDragStop(event);
   }
 
+  handleFocus(event) {
+    if (!this.focusedFromClick) {
+      this.focusedFromClick = false;
+      this.setState({ useFocusStyle: true });
+    } else {
+      this.focusedFromClick = false;
+    }
+
+    this.props.onFocus && this.props.onFocus(event);
+  }
+
+  handleBlur(event) {
+    if (this.state.useFocusStyle) {
+      this.setState({ useFocusStyle: false });
+    }
+
+    this.props.onBlur && this.props.onBlur(event);
+  }
+
   render() {
     const {
       className,
@@ -153,9 +178,14 @@ class Slider extends React.Component {
         aria-valuenow={value}
         {...other}
         ref={(element) => { this.slider = element }}
-        className={classes('Slider', className, { 'Slider--is-disabled': disabled })}
+        className={classes('Slider', className, {
+          'Slider--is-disabled': disabled,
+          'Slider--is-focused': this.state.useFocusStyle,
+        })}
         onMouseDown={this.handleMouseDown}
         onTouchStart={this.handleTouchStart}
+        onFocus={this.handleFocus}
+        onBlur={this.handleBlur}
       >
         <div className="Slider__track-line" style={getTrackLineStyle(valueAsPercentage)} />
         <div className="Slider__track" ref={(element) => { this.track = element }}>

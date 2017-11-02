@@ -13,19 +13,6 @@ $slider-focus-color: $blue-100;
 
   &:focus {
     outline: none;
-
-    // TODO: only when keyboard focused
-    .Slider__handle::after {
-      background-color: $slider-focus-color;
-      border-radius: 50%;
-      bottom: $slider-focus-margin;
-      box-shadow: 0 0 ($slider-focus-size / 2) 0 rgba($slider-focus-color, $alpha-700);
-      content: '';
-      left: $slider-focus-margin;
-      position: absolute;
-      right: $slider-focus-margin;
-      top: $slider-focus-margin;
-    }
   }
 }
 
@@ -67,6 +54,20 @@ $slider-focus-color: $blue-100;
 .Slider--is-disabled {
   cursor: not-allowed;
   opacity: $alpha-500;
+}
+
+.Slider--is-focused {
+  .Slider__handle::after {
+    background-color: $slider-focus-color;
+    border-radius: 50%;
+    bottom: $slider-focus-margin;
+    box-shadow: 0 0 ($slider-focus-size / 2) 0 rgba($slider-focus-color, $alpha-700);
+    content: '';
+    left: $slider-focus-margin;
+    position: absolute;
+    right: $slider-focus-margin;
+    top: $slider-focus-margin;
+  }
 }
 
 @mixin slider-color($fill-color, $track-color: rgba($black, $alpha-300), $handle-color: $white) {
