@@ -1153,6 +1153,20 @@ hr {
   height: 24px;
   position: relative; }
 
+.Slider:focus {
+  outline: none; }
+
+.Slider:focus .Slider__handle::after {
+  background-color: #7feaff;
+  border-radius: 50%;
+  bottom: 7px;
+  box-shadow: 0 0 5px 0 rgba(127, 234, 255, 0.7);
+  content: '';
+  left: 7px;
+  position: absolute;
+  right: 7px;
+  top: 7px; }
+
 .Slider__track-line {
   border-radius: 1.5px;
   height: 3px;

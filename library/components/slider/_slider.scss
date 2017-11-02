@@ -2,11 +2,31 @@ $slider-handle-size: modular-scale-px(3);
 $slider-track-height: 3px;
 $slider-track-offset: floor(($slider-handle-size / 2) - ($slider-track-height / 2));
 $slider-track-border-radius: $slider-track-height / 2;
+$slider-focus-margin: modular-scale-px(-6);
+$slider-focus-size: $slider-handle-size - ($slider-focus-margin * 2);
+$slider-focus-color: $blue-100;
 
 .Slider {
   cursor: pointer;
   height: $slider-handle-size;
   position: relative;
+
+  &:focus {
+    outline: none;
+
+    // TODO: only when keyboard focused
+    .Slider__handle::after {
+      background-color: $slider-focus-color;
+      border-radius: 50%;
+      bottom: $slider-focus-margin;
+      box-shadow: 0 0 ($slider-focus-size / 2) 0 rgba($slider-focus-color, $alpha-700);
+      content: '';
+      left: $slider-focus-margin;
+      position: absolute;
+      right: $slider-focus-margin;
+      top: $slider-focus-margin;
+    }
+  }
 }
 
 .Slider__track-line {
