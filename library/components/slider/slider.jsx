@@ -27,9 +27,11 @@ function getPercentage(value, min, max) {
 class Slider extends React.Component {
   constructor(props, context) {
     super(props, context);
-    this.handleMouseDown = this.handleMouseDown.bind(this);
     this.handleDrag = this.handleDrag.bind(this);
+    this.handleMouseDown = this.handleMouseDown.bind(this);
     this.handleDragMouseEnd = this.handleDragMouseEnd.bind(this);
+    this.handleTouchStart = this.handleTouchStart.bind(this);
+    this.handleTouchEnd = this.handleTouchEnd.bind(this);
   }
 
   setValueFromEvent(event) {
@@ -99,6 +101,35 @@ class Slider extends React.Component {
     this.props.onDragStop && this.props.onDragStop(event);
   }
 
+  handleTouchStart(event) {
+    const { disabled, onTouchStart, onDragStart } = this.props;
+
+    if (disabled) {
+      return;
+    }
+
+    document.addEventListener('touchmove', this.handleDrag);
+    document.addEventListener('touchup', this.handleTouchEnd);
+    document.addEventListener('touchend', this.handleTouchEnd);
+    document.addEventListener('touchcancel', this.handleTouchEnd);
+
+    this.setValueFromEvent(event);
+
+    onTouchStart && onTouchStart(event);
+    onDragStart && onDragStart(event);
+
+    // Don't allow page scrolling while dragging the slider
+    event.preventDefault();
+  }
+
+  handleTouchEnd(event) {
+    document.removeEventListener('touchmove', this.handleDrag);
+    document.removeEventListener('touchup', this.handleTouchEnd);
+    document.removeEventListener('touchend', this.handleTouchEnd);
+    document.removeEventListener('touchcancel', this.handleTouchEnd);
+    this.props.onDragStop && this.props.onDragStop(event);
+  }
+
   render() {
     const {
       className,
@@ -118,6 +149,7 @@ class Slider extends React.Component {
       <div
         className={classes('Slider', className, { 'Slider--is-disabled': disabled })}
         onMouseDown={this.handleMouseDown}
+        onTouchStart={this.handleTouchStart}
         {...other}
       >
         <div className="Slider__track-line" style={getTrackLineStyle(valueAsPercentage)} />
