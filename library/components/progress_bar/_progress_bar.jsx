@@ -1,4 +1,3 @@
-/* eslint-disable react/no-multi-comp */
 import React from 'react';
 import Button from '../button/button.jsx';
 import ProgressBar from './progress_bar.jsx';
