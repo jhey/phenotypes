@@ -1149,10 +1149,11 @@ hr {
     width: 7px; } }
 
 .Slider {
+  cursor: pointer;
   height: 24px;
   position: relative; }
 
-.Slider__track {
+.Slider__track-line {
   border-radius: 1.5px;
   height: 3px;
   left: 0;
@@ -1160,7 +1161,7 @@ hr {
   right: 0;
   top: 10px; }
 
-.Slider__range {
+.Slider__track {
   bottom: 0;
   left: 12px;
   position: absolute;
@@ -1187,7 +1188,7 @@ hr {
   cursor: not-allowed;
   opacity: 0.41; }
 
-.Slider__track {
+.Slider__track-line {
   background-color: rgba(0, 0, 0, 0.14); }
 
 .Slider__fill {

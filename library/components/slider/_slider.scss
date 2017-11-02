@@ -4,11 +4,12 @@ $slider-track-offset: floor(($slider-handle-size / 2) - ($slider-track-height / 
 $slider-track-border-radius: $slider-track-height / 2;
 
 .Slider {
+  cursor: pointer;
   height: $slider-handle-size;
   position: relative;
 }
 
-.Slider__track {
+.Slider__track-line {
   border-radius: $slider-track-border-radius;
   height: $slider-track-height;
   left: 0;
@@ -17,7 +18,7 @@ $slider-track-border-radius: $slider-track-height / 2;
   top: $slider-track-offset;
 }
 
-.Slider__range {
+.Slider__track {
   bottom: 0;
   left: $slider-handle-size / 2;
   position: absolute;
@@ -49,7 +50,7 @@ $slider-track-border-radius: $slider-track-height / 2;
 }
 
 @mixin slider-color($fill-color, $track-color: rgba($black, $alpha-300), $handle-color: $white) {
-  .Slider__track {
+  .Slider__track-line {
     background-color: $track-color;
   }
 
