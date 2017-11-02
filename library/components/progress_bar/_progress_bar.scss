@@ -14,8 +14,8 @@
 
 .ProgressBar__step {
   background-color: rgba($black, $alpha-300);
-  height: $border-width;
-  margin-right: $border-width * 1.5;
+  height: 2px;
+  margin-right: 3px;
   position: relative;
 
   &:last-child {
