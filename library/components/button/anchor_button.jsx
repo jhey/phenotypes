@@ -1,9 +1,6 @@
 import React from 'react';
 import classes from 'classnames';
-
-function isSpacebarEvent(event) {
-  return (event.charCode || event.keyCode) === 32;
-}
+import keycode from 'keycode';
 
 class AnchorButton extends React.Component {
   constructor(props, context) {
@@ -34,7 +31,7 @@ class AnchorButton extends React.Component {
   //   followed and onClick is called)
 
   handleKeyDown(event) {
-    if (isSpacebarEvent(event)) {
+    if (keycode(event) === 'space') {
       event.preventDefault();
       if (!this.state.spacePressed) {
         this.setState({ spacePressed: true });
@@ -43,7 +40,7 @@ class AnchorButton extends React.Component {
   }
 
   handleKeyUp(event) {
-    if (isSpacebarEvent(event)) {
+    if (keycode(event) === 'space') {
       event.preventDefault();
       this.setState({ spacePressed: false });
       // Follow the link & call onClick prop by simulating a click on the anchor, so that

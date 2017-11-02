@@ -1,5 +1,6 @@
 import React from 'react';
 import classes from 'classnames';
+import keycode from 'keycode';
 
 function getFillStyle(valueAsPercentage) {
   return {
