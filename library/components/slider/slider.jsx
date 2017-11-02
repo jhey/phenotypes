@@ -86,6 +86,11 @@ class Slider extends React.Component {
 
     onMouseDown && onMouseDown(event);
     onDragStart && onDragStart(event);
+
+    // Prevents text selection while holding/dragging the mouse to slide the slider
+    event.preventDefault();
+
+    // TODO: might need to then .focus()
   }
 
   handleDragMouseEnd(event) {
