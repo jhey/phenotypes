@@ -89,10 +89,9 @@ class Slider extends React.Component {
     onMouseDown && onMouseDown(event);
     onDragStart && onDragStart(event);
 
-    // Prevents text selection while holding/dragging the mouse to slide the slider
+    // Prevent text selection when dragging the slider (but still focus when clicking)
     event.preventDefault();
-
-    // TODO: might need to then .focus()
+    this.slider.focus();
   }
 
   handleDragMouseEnd(event) {
@@ -153,6 +152,7 @@ class Slider extends React.Component {
         aria-valuemin={min}
         aria-valuenow={value}
         {...other}
+        ref={(element) => { this.slider = element }}
         className={classes('Slider', className, { 'Slider--is-disabled': disabled })}
         onMouseDown={this.handleMouseDown}
         onTouchStart={this.handleTouchStart}
