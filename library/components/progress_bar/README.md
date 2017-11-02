@@ -5,15 +5,15 @@
 | `className` | string | | Class name for the root element.
 | `currentIndex` | number | 0 | Zero-based index for the current step.
 | `size` | number | | Total number of steps.
-| `stepClassName` | string | | Class name for individual step elements.
+| `stepClassName` | string | `flex-1` | Class name for individual step elements. Default option expands step elements so the root element will fill its container.
 
 ### Usage
 
-The width for step elements is configured using the `stepClassName` prop. To render a progress bar that expands to the width of its container, pass `stepClassName="flex-1"`.
+The width for step elements is configured using the `stepClassName` prop. For example, to render a progress bar with 36px steps, pass `stepClassName="width-6"`.
 
 Javascript:
 ```html
-<ProgressBar currentIndex={1} size={3} stepClassName="flex-1"/>
+<ProgressBar currentIndex={1} size={3} />
 ```
 Rendered markup:
 ```html

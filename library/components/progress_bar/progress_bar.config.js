@@ -5,15 +5,14 @@ module.exports = {
   collated: true,
   context: {
     size: 5,
-    stepClassName: 'width-6',
-    label: 'Fixed step width',
+    label: 'Dynamic step width (default)',
   },
   variants: [{
     name: 'dynamic step width',
     context: {
       size: 5,
-      stepClassName: 'flex-1',
-      label: 'Dynamic step width',
+      stepClassName: 'width-6',
+      label: 'Fixed step width',
     },
   }, {
     name: 'responsive step width',

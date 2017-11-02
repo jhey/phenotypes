@@ -19,6 +19,7 @@ function ProgressBar({ className, stepClassName, currentIndex, size }) {
 
 ProgressBar.defaultProps = {
   currentIndex: 0,
+  stepClassName: 'flex-1',
 };
 
 module.exports = ProgressBar;
