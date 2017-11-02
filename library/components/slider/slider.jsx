@@ -24,6 +24,12 @@ function getPercentage(value, min, max) {
   return percentage * 100;
 }
 
+function cleanFloat(value) {
+  // Correct floating point weirdness - 5 points of precision is enough b/c the user won't be
+  // able to get more delicate than that with their mouse/finger.
+  return parseFloat(value.toFixed(5));
+}
+
 class Slider extends React.Component {
   constructor(props, context) {
     super(props, context);
@@ -35,6 +41,7 @@ class Slider extends React.Component {
     this.handleDragMouseEnd = this.handleDragMouseEnd.bind(this);
     this.handleTouchStart = this.handleTouchStart.bind(this);
     this.handleTouchEnd = this.handleTouchEnd.bind(this);
+    this.handleKeyDown = this.handleKeyDown.bind(this);
     this.handleFocus = this.handleFocus.bind(this);
     this.handleBlur = this.handleBlur.bind(this);
   }
@@ -53,10 +60,7 @@ class Slider extends React.Component {
     let newValue = ((eventX - track.left) / track.width) * (max - min);
     newValue = Math.round(newValue / step) * step; // rounds to nearest `step`
     newValue += min;
-
-    // Correct floating point weirdness - 5 points of precision is enough b/c the user won't be
-    // able to get more delicate than that with their mouse/finger.
-    newValue = parseFloat(newValue.toFixed(5));
+    newValue = cleanFloat(newValue);
 
     if (onChange && newValue !== value) {
       onChange(newValue);
@@ -127,6 +131,38 @@ class Slider extends React.Component {
     this.props.onDragStop && this.props.onDragStop(event);
   }
 
+  handleKeyDown(event) {
+    const { value, min, max, step, onChange, onKeyDown } = this.props;
+    let newValue;
+
+    switch (keycode(event)) {
+      case 'right':
+      case 'up':
+      case 'page up':
+        newValue = Math.min(max, cleanFloat(value + step));
+        break;
+      case 'left':
+      case 'down':
+      case 'page down':
+        newValue = Math.max(min, cleanFloat(value - step));
+        break;
+      case 'end':
+        newValue = max;
+        break;
+      case 'home':
+        newValue = min;
+        break;
+      default:
+        return;
+    }
+
+    if (onChange && newValue !== value) {
+      onChange(newValue);
+    }
+
+    onKeyDown && onKeyDown(event);
+  }
+
   handleFocus(event) {
     if (!this.focusedFromClick) {
       this.focusedFromClick = false;
@@ -178,6 +214,7 @@ class Slider extends React.Component {
         onTouchStart={!disabled && this.handleTouchStart}
         onFocus={!disabled && this.handleFocus}
         onBlur={!disabled && this.handleBlur}
+        onKeyDown={!disabled && this.handleKeyDown}
       >
         <div className="Slider__track-line" style={getTrackLineStyle(valueAsPercentage)} />
         <div className="Slider__track" ref={(element) => { this.track = element }}>
