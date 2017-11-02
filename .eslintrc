@@ -10,6 +10,7 @@
   "rules": {
     "curly": ["error"],
     "comma-dangle": ["error", "always-multiline"],
+    "default-case": "off",
     "function-paren-newline": ["error", "consistent"],
     "func-names": "off",
     "import/extensions": "off",
