@@ -52,6 +52,10 @@ class Slider extends React.Component {
     const track = this.track.getBoundingClientRect();
 
     let eventX = event.touches ? event.touches[0].clientX : event.clientX;
+
+    // There is a small gutter on both sides of the track (so that the handle will stop at the
+    // edge of the slider instead of hanging off). If the user clicks in one of the gutters,
+    // the slider should behave as if they clicked on the edge of the track, instead.
     if (eventX < track.left) {
       eventX = track.left;
     } else if (eventX > track.right) {
