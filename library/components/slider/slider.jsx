@@ -95,7 +95,7 @@ class Slider extends React.Component {
     onMouseDown && onMouseDown(event);
     onDragStart && onDragStart(event);
 
-    // Prevent text selection when dragging the slider (but still focus when clicking)
+    // Prevent text selection when dragging the slider (but still focus)
     event.preventDefault();
     this.focusedFromClick = true;
     this.slider.focus();
@@ -104,7 +104,7 @@ class Slider extends React.Component {
   handleDragMouseEnd(event) {
     document.removeEventListener('mousemove', this.handleDrag);
     document.removeEventListener('mouseup', this.handleDragMouseEnd);
-    this.props.onDragStop && this.props.onDragStop(event);
+    this.props.onDragEnd && this.props.onDragEnd(event);
   }
 
   handleTouchStart(event) {
@@ -129,7 +129,7 @@ class Slider extends React.Component {
     document.removeEventListener('touchup', this.handleTouchEnd);
     document.removeEventListener('touchend', this.handleTouchEnd);
     document.removeEventListener('touchcancel', this.handleTouchEnd);
-    this.props.onDragStop && this.props.onDragStop(event);
+    this.props.onDragEnd && this.props.onDragEnd(event);
   }
 
   handleKeyDown(event) {
@@ -197,6 +197,7 @@ class Slider extends React.Component {
       name,
       required,
       step,
+      tabIndex,
       value,
       ...other
     } = this.props;
@@ -205,7 +206,7 @@ class Slider extends React.Component {
 
     return (
       <div
-        tabIndex={disabled ? -1 : 0}
+        tabIndex={disabled ? -1 : tabIndex}
         role="slider"
         aria-valuemax={max}
         aria-valuemin={min}
@@ -244,9 +245,10 @@ class Slider extends React.Component {
 
 Slider.defaultProps = {
   disabled: false,
-  min: 0,
   max: 100,
+  min: 0,
   step: 1,
+  tabIndex: 0,
   value: null,
 };
 
