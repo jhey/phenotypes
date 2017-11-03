@@ -167,6 +167,9 @@ class Slider extends React.Component {
     }
 
     onKeyDown && onKeyDown(event);
+
+    // Prevent all the keys that interact with the slider from moving the page around
+    event.preventDefault();
   }
 
   handleFocus(event) {
