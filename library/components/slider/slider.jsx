@@ -31,13 +31,33 @@ function cleanFloat(value) {
   return parseFloat(value.toFixed(5));
 }
 
+// Runs a function once per animation frame
+function debounceToAnimationFrame(func) {
+  let waitingForAnimationFrame = false;
+
+  function debounced(...args) {
+    if (waitingForAnimationFrame) {
+      return;
+    }
+
+    waitingForAnimationFrame = true;
+
+    requestAnimationFrame(() => {
+      waitingForAnimationFrame = false;
+      func(...args);
+    });
+  }
+
+  return debounced;
+}
+
 class Slider extends React.Component {
   constructor(props, context) {
     super(props, context);
 
     this.state = { useFocusStyle: false };
 
-    this.handleDrag = this.handleDrag.bind(this);
+    this.handleDrag = debounceToAnimationFrame(this.handleDrag.bind(this));
     this.handleMouseDown = this.handleMouseDown.bind(this);
     this.handleDragMouseEnd = this.handleDragMouseEnd.bind(this);
     this.handleTouchStart = this.handleTouchStart.bind(this);
@@ -73,19 +93,9 @@ class Slider extends React.Component {
   }
 
   handleDrag(event) {
-    if (this.waitingForDragAnimationFrame) {
-      return;
+    if (!this.props.disabled) {
+      this.setValueFromEvent(event);
     }
-
-    this.waitingForDragAnimationFrame = true;
-
-    requestAnimationFrame(() => {
-      this.waitingForDragAnimationFrame = false;
-
-      if (!this.props.disabled) {
-        this.setValueFromEvent(event);
-      }
-    });
   }
 
   handleMouseDown(event) {
