@@ -1,26 +1,36 @@
 import React from 'react';
 import Slider from './slider.jsx';
 
+module.exports = function demos() {
+  return (
+    <div>
+      <SliderDemo value={50} min={0} max={100} step={1} />
+      <SliderDemo value={1.75} min={1} max={2} step={0.01} />
+      <SliderDemo value={25} min={0} max={100} step={1} disabled />
+    </div>
+  );
+};
+
 class SliderDemo extends React.Component {
   constructor(props, context) {
     super(props, context);
-    this.state = { value: 50 };
+    this.state = { value: props.value };
   }
 
   render() {
+    const props = Object.assign({}, this.props);
+    props.value = this.state.value;
+
     return (
-      <div>
-        <h6>{this.state.value}</h6>
+      <div className="mb7">
         <Slider
-          value={this.state.value}
-          step={0.1}
-          min={49}
-          max={51}
-          onChange={(val) => { this.setState({ value: val }) }}
+          {...props}
+          onChange={(newValue) => { this.setState({ value: newValue }) }}
         />
+        <div className="mt1 text-color-secondary text-2">
+          <code>{JSON.stringify(props)}</code>
+        </div>
       </div>
     );
   }
 }
-
-module.exports = SliderDemo;

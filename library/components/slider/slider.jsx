@@ -157,6 +157,11 @@ class Slider extends React.Component {
         return;
     }
 
+    // If focus happened via mouse click, and then the user hits arrow keys, show the focused style
+    if (!this.state.useFocusStyle) {
+      this.setState({ useFocusStyle: true });
+    }
+
     if (onChange && newValue !== value) {
       onChange(newValue);
     }
