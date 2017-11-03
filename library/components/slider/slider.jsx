@@ -206,7 +206,6 @@ class Slider extends React.Component {
 
     return (
       <div
-        tabIndex={disabled ? -1 : tabIndex}
         role="slider"
         aria-valuemax={max}
         aria-valuemin={min}
@@ -217,6 +216,7 @@ class Slider extends React.Component {
           'Slider--is-disabled': disabled,
           'Slider--is-focused': !disabled && this.state.useFocusStyle,
         })}
+        tabIndex={disabled ? -1 : tabIndex}
         onMouseDown={!disabled && this.handleMouseDown}
         onTouchStart={!disabled && this.handleTouchStart}
         onFocus={!disabled && this.handleFocus}
