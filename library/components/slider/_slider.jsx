@@ -18,8 +18,7 @@ class SliderDemo extends React.Component {
   }
 
   render() {
-    const props = Object.assign({}, this.props);
-    props.value = this.state.value;
+    const props = { ...this.props, value: this.state.value };
 
     return (
       <div className="mb7">
