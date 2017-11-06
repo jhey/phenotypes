@@ -5,6 +5,7 @@ module.exports = {
   "checkbox": require("../library/components/checkbox/checkbox.jsx"),
   "form-group": require("../library/components/form_group/form_group.jsx"),
   "message": require("../library/components/message/message.jsx"),
+  "progress-bar": require("../library/components/progress_bar/_progress_bar.jsx"),
   "radio": require("../library/components/radio/_radio.jsx"),
   "slider": require("../library/components/slider/_slider.jsx"),
   "switch": require("../library/components/switch/_switch.jsx"),

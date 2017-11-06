@@ -17,6 +17,8 @@ Rendered markup:
 ```html
 <label class="Switch">
   <input class="Switch__input" type="checkbox" checked />
-  <div className="Switch__indicator" />
+  <div className="Switch__indicator">
+    <div className="Switch__toggler"></div>
+  </div>
 </label>
 ```

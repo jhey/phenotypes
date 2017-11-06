@@ -1,0 +1,38 @@
+.ProgressBar {
+  display: flex;
+  // Cancel default styles for <ul> element
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.ProgressBar__step,
+.ProgressBar__step::after {
+  border-radius: $border-radius;
+  display: inline-block;
+}
+
+.ProgressBar__step {
+  background-color: rgba($black, $alpha-300);
+  height: 2px;
+  margin-right: 3px;
+  position: relative;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &::after {
+    background-color: $purple-200;
+    box-shadow: 0 0 modular-scale-px(-6) 0 $purple-100;
+    content: ' ';
+    height: 100%;
+    opacity: 0;
+    transition: opacity .2s linear;
+    width: 100%;
+  }
+}
+
+.ProgressBar__step--active::after {
+  opacity: 1;
+}
