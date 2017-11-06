@@ -49,6 +49,20 @@ $slider-focus-color: $blue-100;
   right: -1 * $slider-handle-size / 2;
   top: -1 * $slider-track-offset;
   width: $slider-handle-size;
+
+  &::after {
+    background-color: $slider-focus-color;
+    border-radius: 50%;
+    bottom: $slider-focus-margin;
+    box-shadow: 0 0 ($slider-focus-size / 2) 0 rgba($slider-focus-color, $alpha-700);
+    content: '';
+    left: $slider-focus-margin;
+    opacity: 0;
+    position: absolute;
+    right: $slider-focus-margin;
+    top: $slider-focus-margin;
+    transition: opacity .15s linear;
+  }
 }
 
 .Slider--is-disabled {
@@ -58,15 +72,7 @@ $slider-focus-color: $blue-100;
 
 .Slider--is-focused {
   .Slider__handle::after {
-    background-color: $slider-focus-color;
-    border-radius: 50%;
-    bottom: $slider-focus-margin;
-    box-shadow: 0 0 ($slider-focus-size / 2) 0 rgba($slider-focus-color, $alpha-700);
-    content: '';
-    left: $slider-focus-margin;
-    position: absolute;
-    right: $slider-focus-margin;
-    top: $slider-focus-margin;
+    opacity: 1;
   }
 }
 

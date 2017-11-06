@@ -1187,20 +1187,25 @@ hr {
   top: -10px;
   width: 24px; }
 
-.Slider--is-disabled {
-  cursor: not-allowed;
-  opacity: 0.41; }
-
-.Slider--is-focused .Slider__handle::after {
+.Slider__handle::after {
   background-color: #7feaff;
   border-radius: 50%;
   bottom: 7px;
   box-shadow: 0 0 5px 0 rgba(127, 234, 255, 0.7);
   content: '';
   left: 7px;
+  opacity: 0;
   position: absolute;
   right: 7px;
-  top: 7px; }
+  top: 7px;
+  transition: opacity .15s linear; }
+
+.Slider--is-disabled {
+  cursor: not-allowed;
+  opacity: 0.41; }
+
+.Slider--is-focused .Slider__handle::after {
+  opacity: 1; }
 
 .Slider__track-line {
   background-color: rgba(0, 0, 0, 0.14); }
