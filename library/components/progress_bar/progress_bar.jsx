@@ -2,14 +2,14 @@
 const React = require('react');
 const classes = require('classnames');
 
-function ProgressBar({ className, stepClassName, currentIndex, size }) {
+function ProgressBar({ className, stepClassName, progress, size }) {
   return (
     <ul className={classes('ProgressBar', className)}>
       {Array(...Array(size)).map((_, index) => (
         <li
           key={index}
           className={classes('ProgressBar__step', stepClassName, {
-            'ProgressBar__step--active': index <= currentIndex,
+            'ProgressBar__step--active': index < progress,
           })}
         />
       ))}
@@ -18,7 +18,7 @@ function ProgressBar({ className, stepClassName, currentIndex, size }) {
 }
 
 ProgressBar.defaultProps = {
-  currentIndex: 0,
+  progress: 0,
   stepClassName: 'flex-1',
 };
 

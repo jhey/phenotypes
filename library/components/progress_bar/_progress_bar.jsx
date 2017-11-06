@@ -6,17 +6,17 @@ class ProgressBarExample extends React.Component {
   constructor(props, context) {
     super(props, context);
     this.state = {
-      currentIndex: 0,
+      progress: 0,
     };
   }
 
   incrementIndex() {
-    const nextIndex = this.state.currentIndex + 1;
-    this.goToIndex((nextIndex <= this.props.size - 1) ? nextIndex : 0);
+    const nextIndex = this.state.progress + 1;
+    this.goToIndex((nextIndex <= this.props.size) ? nextIndex : 0);
   }
 
   goToIndex(index) {
-    this.setState({ currentIndex: index });
+    this.setState({ progress: index });
   }
 
   render() {
@@ -29,7 +29,7 @@ class ProgressBarExample extends React.Component {
           <div className="flex-1">
             <ProgressBar
               {...props}
-              currentIndex={this.state.currentIndex}
+              progress={this.state.progress}
             />
           </div>
           <div className="ml5">
