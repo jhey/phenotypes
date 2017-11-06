@@ -1,0 +1,97 @@
+$slider-handle-size: modular-scale-px(3);
+$slider-track-height: 3px;
+$slider-track-offset: floor(($slider-handle-size / 2) - ($slider-track-height / 2));
+$slider-track-border-radius: $slider-track-height / 2;
+$slider-focus-margin: modular-scale-px(-6);
+$slider-focus-size: $slider-handle-size - ($slider-focus-margin * 2);
+$slider-focus-color: $blue-100;
+
+.Slider {
+  cursor: pointer;
+  height: $slider-handle-size;
+  position: relative;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.Slider__track-line {
+  border-radius: $slider-track-border-radius;
+  height: $slider-track-height;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: $slider-track-offset;
+}
+
+.Slider__track {
+  bottom: 0;
+  left: $slider-handle-size / 2;
+  position: absolute;
+  right: $slider-handle-size / 2;
+  top: 0;
+}
+
+.Slider__fill {
+  border-radius: $slider-track-border-radius 0 0 $slider-track-border-radius;
+  height: $slider-track-height;
+  left: -1 * $slider-handle-size / 2;
+  position: absolute;
+  top: $slider-track-offset;
+}
+
+.Slider__handle {
+  @include depth(7);
+  border-radius: 50%;
+  height: $slider-handle-size;
+  position: absolute;
+  right: -1 * $slider-handle-size / 2;
+  top: -1 * $slider-track-offset;
+  width: $slider-handle-size;
+
+  &::after {
+    background-color: $slider-focus-color;
+    border-radius: 50%;
+    bottom: $slider-focus-margin;
+    box-shadow: 0 0 ($slider-focus-size / 2) 0 rgba($slider-focus-color, $alpha-700);
+    content: '';
+    left: $slider-focus-margin;
+    opacity: 0;
+    position: absolute;
+    right: $slider-focus-margin;
+    top: $slider-focus-margin;
+    transition: opacity .15s linear;
+  }
+}
+
+.Slider--is-disabled {
+  cursor: not-allowed;
+  opacity: $alpha-500;
+}
+
+.Slider--is-focused {
+  .Slider__handle::after {
+    opacity: 1;
+  }
+}
+
+@mixin slider-color($fill-color, $track-color: rgba($black, $alpha-300), $handle-color: $white) {
+  .Slider__track-line {
+    background-color: $track-color;
+  }
+
+  .Slider__fill {
+    background-color: $fill-color;
+  }
+
+  .Slider__handle {
+    background-color: $handle-color;
+  }
+}
+
+@mixin slider-green {
+  @include slider-color($green-200);
+}
+
+@include slider-green;

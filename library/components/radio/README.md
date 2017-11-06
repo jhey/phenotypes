@@ -11,7 +11,7 @@ that appears more consistent across platforms.
 | HTML attributes | various | E.g. `name`, `checked`, `disabled`, events, etc. These are applied to the `input`. |
 | children | node | The children are placed inside of the `.Radio__label` element. |
 
-### Sizing Modifiers
+#### Sizing Modifiers
 
 | class | default |
 | ----- | ------- |
