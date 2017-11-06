@@ -55,7 +55,7 @@ class Slider extends React.Component {
   constructor(props, context) {
     super(props, context);
 
-    this.state = { useFocusStyle: false };
+    this.state = { clicked: false, focused: false };
 
     this.handleDrag = debounceToAnimationFrame(this.handleDrag.bind(this));
     this.handleMouseDown = this.handleMouseDown.bind(this);
@@ -111,7 +111,7 @@ class Slider extends React.Component {
 
     // Prevent text selection when dragging the slider (but still focus)
     event.preventDefault();
-    this.focusedFromClick = true;
+    this.setState({ clicked: true });
     this.slider.focus();
   }
 
@@ -171,11 +171,6 @@ class Slider extends React.Component {
         return;
     }
 
-    // If focus happened via mouse click, and then the user hits arrow keys, show the focused style
-    if (!this.state.useFocusStyle) {
-      this.setState({ useFocusStyle: true });
-    }
-
     if (onChange && newValue !== value) {
       onChange(newValue);
     }
@@ -184,24 +179,17 @@ class Slider extends React.Component {
 
     // Prevent all the keys that interact with the slider from moving the page around
     event.preventDefault();
+
+    this.setState({ clicked: false });
   }
 
   handleFocus(event) {
-    if (!this.focusedFromClick) {
-      this.focusedFromClick = false;
-      this.setState({ useFocusStyle: true });
-    } else {
-      this.focusedFromClick = false;
-    }
-
+    this.setState({ focused: true });
     this.props.onFocus && this.props.onFocus(event);
   }
 
   handleBlur(event) {
-    if (this.state.useFocusStyle) {
-      this.setState({ useFocusStyle: false });
-    }
-
+    this.setState({ clicked: false, focused: false });
     this.props.onBlur && this.props.onBlur(event);
   }
 
@@ -231,7 +219,7 @@ class Slider extends React.Component {
         ref={(element) => { this.slider = element }}
         className={classes('Slider', className, {
           'Slider--is-disabled': disabled,
-          'Slider--is-focused': !disabled && this.state.useFocusStyle,
+          'Slider--is-focused': !disabled && this.state.focused && !this.state.clicked,
         })}
         tabIndex={disabled ? -1 : tabIndex}
         onMouseDown={!disabled && this.handleMouseDown}
