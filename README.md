@@ -1,3 +1,5 @@
+[![NPM version][npm-image]][npm-url]
+
 # Phenotypes
 
 Phenotypes is Amino's design system—a set of guides and components that we use to design and build our products.
