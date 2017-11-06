@@ -148,4 +148,4 @@ $ npm install @aminohealth/phenotypes --save --production
 The `--production` flag indicates that you just want the Phenotypes codebase and no development dependencies (like Fractal). React components will be in `node_modules/@aminohealth/phenotypes/components` and SCSS/css will be in `node_modules/@aminohealth/phenotypes/styles`. You'll be responsible for setting up node_sass, webpack, or whatever else will be utilizing these resources in your project.
 
 [npm-url]: https://www.npmjs.com/package/@aminohealth/phenotypes
-[npm-version-image]: https://img.shields.io/npm/v/@aminohealth/phenotypes.svg?style=flat-square
+[npm-version-image]: https://img.shields.io/npm/v/@aminohealth/phenotypes.svg?style=flat
