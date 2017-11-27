@@ -1,8 +1,7 @@
-const React = require('react');
-const classes = require('classnames');
+import React from 'react';
+import classes from 'classnames';
 
 class Tab extends React.Component {
-
   constructor(props, context) {
     super(props, context);
     this.handleClick = this.handleClick.bind(this);

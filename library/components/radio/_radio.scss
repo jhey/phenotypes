@@ -1,0 +1,165 @@
+@mixin radio-small {
+  $size: modular-scale-px(-1);
+  $dot-size: modular-scale-px(-7);
+
+  @include text-1;
+  padding-left: $size + $spacer-1;
+
+  .Radio__indicator {
+    height: $size;
+    top: 1px;
+    width: $size;
+
+    &::after {
+      height: $dot-size;
+      left: 2px;
+      top: 2px;
+      width: $dot-size;
+    }
+  }
+}
+
+@mixin radio-medium {
+  $size: modular-scale-px(0);
+  $dot-size: modular-scale-px(-7);
+
+  @include text-2;
+  padding-left: $size + $spacer-1;
+
+  .Radio__indicator {
+    height: $size;
+    top: 1px;
+    width: $size;
+
+    &::after {
+      height: $dot-size;
+      left: 3px;
+      top: 3px;
+      width: $dot-size;
+    }
+  }
+}
+
+@mixin radio-large {
+  $size: modular-scale-px(2);
+  $dot-size: modular-scale-px(-6);
+
+  @include text-4;
+  padding-left: $size + $spacer-2;
+
+  .Radio__indicator {
+    height: $size;
+    top: 2px;
+    width: $size;
+
+    &::after {
+      height: $dot-size;
+      left: 5px;
+      top: 5px;
+      width: $dot-size;
+    }
+  }
+}
+
+.Radio {
+  @include radio-medium;
+  display: inline-block;
+  margin: 0;
+  position: relative;
+}
+
+.Radio__input {
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
+
+  &:focus ~ .Radio__indicator {
+    border-color: $blue-100;
+    box-shadow: 0 0 11px rgba($blue-100, $alpha-500);
+  }
+
+  &:active ~ .Radio__indicator {
+    background-color: $gray-100;
+    border-color: $gray-400;
+  }
+
+  &:checked ~ .Radio__indicator {
+    background-color: $gray-800;
+    border-color: $gray-800;
+    color: $white;
+
+    // Show the dot
+    &::after {
+      display: block;
+    }
+  }
+
+  &:checked:focus ~ .Radio__indicator {
+    border-color: $gray-800;
+    box-shadow: 0 0 0 2px rgba($blue-200, $alpha-400);
+  }
+
+  &:checked:active:not(:disabled) ~ .Radio__indicator {
+    background-color: $gray-800;
+    border-color: $gray-800;
+
+    &::after {
+      opacity: $alpha-600;
+    }
+  }
+
+  &:disabled ~ .Radio__indicator,
+  &:disabled:active ~ .Radio__indicator,
+  &:disabled:checked:active {
+    background-color: $gray-200;
+    border-color: $gray-200;
+  }
+
+  &:disabled:checked ~ .Radio__indicator,
+  &:disabled:checked:active ~ .Radio__indicator {
+    &::after {
+      background-color: $gray-400;
+    }
+  }
+
+  &:disabled ~ .Radio__label {
+    color: $text-color-secondary;
+  }
+}
+
+.Radio__indicator {
+  background-color: $white;
+  border: $border-width solid $gray-300;
+  border-radius: 50%;
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  user-select: none;
+
+  &::after {
+    background-color: $white;
+    border-radius: 50%;
+    content: '';
+    display: none;
+    position: absolute;
+  }
+}
+
+.Radio--is-disabled {
+  cursor: not-allowed;
+}
+
+@if $enable-responsive-form-components {
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+      $suffix: breakpoint-suffix($breakpoint, $grid-breakpoints);
+
+      .Radio--small#{$suffix} { @include radio-small; }
+      .Radio--medium#{$suffix} { @include radio-medium; }
+      .Radio--large#{$suffix} { @include radio-large; }
+    }
+  }
+} @else {
+  .Radio--small { @include radio-small; }
+  .Radio--large { @include radio-large; }
+}

@@ -374,8 +374,12 @@ hr {
   border-color: rgba(255, 255, 255, 0.14); }
 
 .Button {
-  font-size: 16px;
-  padding: 11px 21px 12px;
+  display: inline-block; }
+  .Button .Button__control {
+    font-size: 16px;
+    padding: 11px 21px 12px; }
+
+.Button__control {
   background: rgba(0, 0, 0, 0.07);
   border: 0;
   border-radius: 3px;
@@ -393,10 +397,8 @@ hr {
   -webkit-user-select: none;
   user-select: none; }
 
-.Button:hover,
-.Button:focus,
-.Button--is-hovered,
-.Button--is-focused {
+.Button__control:hover,
+.Button__control:focus {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.14), 0 1px 1px rgba(0, 0, 0, 0.07), 0 0 6px rgba(0, 0, 0, 0.07);
   background: rgba(0, 0, 0, 0.12);
   color: rgba(0, 0, 0, 0.86);
@@ -404,123 +406,132 @@ hr {
   transform: translateY(-2.25px) scaleX(1.015) scaleY(1.015);
   transition-duration: .08s; }
 
-.Button:disabled,
-.Button--is-disabled {
-  opacity: 0.54;
-  pointer-events: none; }
-
-.Button:active,
-.Button--is-active {
+.Button__control:active,
+.Button--is-active .Button__control,
+.Button--is-active .Button__control:focus {
   box-shadow: none;
   background: rgba(0, 0, 0, 0.18);
   transform: translateY(0) scaleX(1) scaleY(1);
   transition-duration: 0s; }
 
-.Button:active:focus {
+.Button__control:active:focus,
+.Button--is-active .Button__control:focus {
   outline: 0; }
 
-.Button--danger {
+.Button__control:disabled,
+.Button--is-disabled .Button__control {
+  opacity: 0.54;
+  pointer-events: none; }
+
+.Button--is-disabled {
+  cursor: not-allowed; }
+
+.Button--danger .Button__control {
   color: #fff;
   font-weight: normal;
   background: #f04d5d; }
-  .Button--danger:hover, .Button--danger:focus, .Button--danger.Button--is-hovered, .Button--danger.Button--is-focused {
+  .Button--danger .Button__control:hover, .Button--danger .Button__control:focus {
     background: #ee3548;
     color: #fff; }
-  .Button--danger:active, .Button--danger.Button--is-active {
-    background: #ec192e; }
 
-.Button--primary {
+.Button--danger .Button__control:active,
+.Button--danger.Button--is-active .Button__control {
+  background: #ec192e; }
+
+.Button--primary .Button__control {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.14), 0 1px 1px rgba(0, 0, 0, 0.07), 0 0 6px rgba(0, 0, 0, 0.07);
   color: #fff;
   font-weight: bold;
   -webkit-font-smoothing: antialiased;
   background: #16b8e0; }
-  .Button--primary:hover, .Button--primary:focus, .Button--primary.Button--is-hovered, .Button--primary.Button--is-focused {
+  .Button--primary .Button__control:hover, .Button--primary .Button__control:focus {
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.14), 0 1px 2px rgba(0, 0, 0, 0.07), 0 0 10px rgba(0, 0, 0, 0.07);
     background: #14a5c9;
     color: #fff; }
-  .Button--primary:active, .Button--primary.Button--is-active {
-    box-shadow: none;
-    background: #118ead; }
 
-.Button--link {
+.Button--primary .Button__control:active,
+.Button--primary.Button--is-active .Button__control {
+  box-shadow: none;
+  background: #118ead; }
+
+.Button--link .Button__control .Button__control {
   background: transparent;
   color: #16b8e0; }
-  .Button--link:hover, .Button--link:focus, .Button--link.Button--is-hovered, .Button--link.Button--is-focused {
+  .Button--link .Button__control .Button__control:hover, .Button--link .Button__control .Button__control:focus {
     background: rgba(0, 0, 0, 0.05);
     color: #008ab3; }
-  .Button--link:active, .Button--link.Button--is-active {
-    background: rgba(0, 0, 0, 0.11);
-    color: #005678; }
+
+.Button--link .Button__control .Button__control:active,
+.Button--link .Button__control.Button--is-active .Button__control {
+  background: rgba(0, 0, 0, 0.11);
+  color: #005678; }
 
 @media (pointer: coarse), (any-pointer: coarse) {
-  .Button:hover,
-  .Button--is-hovered {
+  .Button__control:hover {
     box-shadow: none;
     background: rgba(0, 0, 0, 0.18);
     transform: translateY(1px) scaleX(0.985) scaleY(0.985); }
-  .Button--danger:hover, .Button--danger.Button--is-hovered {
+  .Button--danger .Button__control:hover {
     background: #ec192e; }
-  .Button--primary:hover, .Button--primary.Button--is-hovered {
-    box-shadow: none;
+  .Button--primary .Button__control:hover {
     background: #118ead; }
-  .Button--link:hover, .Button--link.Button--is-hovered {
+  .Button--link .Button__control:hover {
     background: rgba(0, 0, 0, 0.11);
     color: #005678; } }
 
-.Button--medium {
+.Button--medium .Button__control {
   font-size: 16px;
   padding: 11px 21px 12px; }
 
-.Button--small {
+.Button--small .Button__control {
   font-size: 14px;
   padding: 7px 14px 8px; }
 
-.Button--large {
+.Button--large .Button__control {
   font-size: 18px;
   padding: 16px 27px 18px; }
 
 @media (min-width: 600px) {
-  .Button--medium-sm {
+  .Button--medium-sm .Button__control {
     font-size: 16px;
     padding: 11px 21px 12px; }
-  .Button--small-sm {
+  .Button--small-sm .Button__control {
     font-size: 14px;
     padding: 7px 14px 8px; }
-  .Button--large-sm {
+  .Button--large-sm .Button__control {
     font-size: 18px;
     padding: 16px 27px 18px; } }
 
 @media (min-width: 900px) {
-  .Button--medium-md {
+  .Button--medium-md .Button__control {
     font-size: 16px;
     padding: 11px 21px 12px; }
-  .Button--small-md {
+  .Button--small-md .Button__control {
     font-size: 14px;
     padding: 7px 14px 8px; }
-  .Button--large-md {
+  .Button--large-md .Button__control {
     font-size: 18px;
     padding: 16px 27px 18px; } }
 
 @media (min-width: 1200px) {
-  .Button--medium-lg {
+  .Button--medium-lg .Button__control {
     font-size: 16px;
     padding: 11px 21px 12px; }
-  .Button--small-lg {
+  .Button--small-lg .Button__control {
     font-size: 14px;
     padding: 7px 14px 8px; }
-  .Button--large-lg {
+  .Button--large-lg .Button__control {
     font-size: 18px;
     padding: 16px 27px 18px; } }
 
 @media (min-width: 1500px) {
-  .Button--medium-xl {
+  .Button--medium-xl .Button__control {
     font-size: 16px;
     padding: 11px 21px 12px; }
-  .Button--small-xl {
+  .Button--small-xl .Button__control {
     font-size: 14px;
     padding: 7px 14px 8px; }
-  .Button--large-xl {
+  .Button--large-xl .Button__control {
     font-size: 18px;
     padding: 16px 27px 18px; } }
 
@@ -580,6 +591,9 @@ hr {
   pointer-events: none;
   position: absolute;
   user-select: none; }
+
+.Checkbox--is-disabled {
+  cursor: not-allowed; }
 
 .Checkbox--medium {
   font-size: 14px;
@@ -789,6 +803,463 @@ hr {
   background-color: #f04d5d;
   color: #fff; }
 
+.Radio {
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: 0px;
+  font-weight: normal;
+  padding-left: 21px;
+  display: inline-block;
+  margin: 0;
+  position: relative; }
+  .Radio .Radio__indicator {
+    height: 16px;
+    top: 1px;
+    width: 16px; }
+    .Radio .Radio__indicator::after {
+      height: 6px;
+      left: 3px;
+      top: 3px;
+      width: 6px; }
+
+.Radio__input {
+  opacity: 0;
+  position: absolute;
+  z-index: -1; }
+  .Radio__input:focus ~ .Radio__indicator {
+    border-color: #7feaff;
+    box-shadow: 0 0 11px rgba(127, 234, 255, 0.41); }
+  .Radio__input:active ~ .Radio__indicator {
+    background-color: #f9f9f9;
+    border-color: #c1c1c1; }
+  .Radio__input:checked ~ .Radio__indicator {
+    background-color: #232323;
+    border-color: #232323;
+    color: #fff; }
+    .Radio__input:checked ~ .Radio__indicator::after {
+      display: block; }
+  .Radio__input:checked:focus ~ .Radio__indicator {
+    border-color: #232323;
+    box-shadow: 0 0 0 2px rgba(22, 184, 224, 0.24); }
+  .Radio__input:checked:active:not(:disabled) ~ .Radio__indicator {
+    background-color: #232323;
+    border-color: #232323; }
+    .Radio__input:checked:active:not(:disabled) ~ .Radio__indicator::after {
+      opacity: 0.54; }
+  .Radio__input:disabled ~ .Radio__indicator,
+  .Radio__input:disabled:active ~ .Radio__indicator, .Radio__input:disabled:checked:active {
+    background-color: #eee;
+    border-color: #eee; }
+  .Radio__input:disabled:checked ~ .Radio__indicator::after,
+  .Radio__input:disabled:checked:active ~ .Radio__indicator::after {
+    background-color: #c1c1c1; }
+  .Radio__input:disabled ~ .Radio__label {
+    color: rgba(0, 0, 0, 0.54); }
+
+.Radio__indicator {
+  background-color: #fff;
+  border: 2px solid #dbdbdb;
+  border-radius: 50%;
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  user-select: none; }
+  .Radio__indicator::after {
+    background-color: #fff;
+    border-radius: 50%;
+    content: '';
+    display: none;
+    position: absolute; }
+
+.Radio--is-disabled {
+  cursor: not-allowed; }
+
+.Radio--small {
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 0px;
+  font-weight: normal;
+  padding-left: 19px; }
+  .Radio--small .Radio__indicator {
+    height: 14px;
+    top: 1px;
+    width: 14px; }
+    .Radio--small .Radio__indicator::after {
+      height: 6px;
+      left: 2px;
+      top: 2px;
+      width: 6px; }
+
+.Radio--medium {
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: 0px;
+  font-weight: normal;
+  padding-left: 21px; }
+  .Radio--medium .Radio__indicator {
+    height: 16px;
+    top: 1px;
+    width: 16px; }
+    .Radio--medium .Radio__indicator::after {
+      height: 6px;
+      left: 3px;
+      top: 3px;
+      width: 6px; }
+
+.Radio--large {
+  font-size: 18px;
+  line-height: 27px;
+  letter-spacing: 0px;
+  font-weight: normal;
+  padding-left: 28px; }
+  .Radio--large .Radio__indicator {
+    height: 21px;
+    top: 2px;
+    width: 21px; }
+    .Radio--large .Radio__indicator::after {
+      height: 7px;
+      left: 5px;
+      top: 5px;
+      width: 7px; }
+
+@media (min-width: 600px) {
+  .Radio--small-sm {
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0px;
+    font-weight: normal;
+    padding-left: 19px; }
+    .Radio--small-sm .Radio__indicator {
+      height: 14px;
+      top: 1px;
+      width: 14px; }
+      .Radio--small-sm .Radio__indicator::after {
+        height: 6px;
+        left: 2px;
+        top: 2px;
+        width: 6px; }
+  .Radio--medium-sm {
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: 0px;
+    font-weight: normal;
+    padding-left: 21px; }
+    .Radio--medium-sm .Radio__indicator {
+      height: 16px;
+      top: 1px;
+      width: 16px; }
+      .Radio--medium-sm .Radio__indicator::after {
+        height: 6px;
+        left: 3px;
+        top: 3px;
+        width: 6px; }
+  .Radio--large-sm {
+    font-size: 18px;
+    line-height: 27px;
+    letter-spacing: 0px;
+    font-weight: normal;
+    padding-left: 28px; }
+    .Radio--large-sm .Radio__indicator {
+      height: 21px;
+      top: 2px;
+      width: 21px; }
+      .Radio--large-sm .Radio__indicator::after {
+        height: 7px;
+        left: 5px;
+        top: 5px;
+        width: 7px; } }
+
+@media (min-width: 900px) {
+  .Radio--small-md {
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0px;
+    font-weight: normal;
+    padding-left: 19px; }
+    .Radio--small-md .Radio__indicator {
+      height: 14px;
+      top: 1px;
+      width: 14px; }
+      .Radio--small-md .Radio__indicator::after {
+        height: 6px;
+        left: 2px;
+        top: 2px;
+        width: 6px; }
+  .Radio--medium-md {
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: 0px;
+    font-weight: normal;
+    padding-left: 21px; }
+    .Radio--medium-md .Radio__indicator {
+      height: 16px;
+      top: 1px;
+      width: 16px; }
+      .Radio--medium-md .Radio__indicator::after {
+        height: 6px;
+        left: 3px;
+        top: 3px;
+        width: 6px; }
+  .Radio--large-md {
+    font-size: 18px;
+    line-height: 27px;
+    letter-spacing: 0px;
+    font-weight: normal;
+    padding-left: 28px; }
+    .Radio--large-md .Radio__indicator {
+      height: 21px;
+      top: 2px;
+      width: 21px; }
+      .Radio--large-md .Radio__indicator::after {
+        height: 7px;
+        left: 5px;
+        top: 5px;
+        width: 7px; } }
+
+@media (min-width: 1200px) {
+  .Radio--small-lg {
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0px;
+    font-weight: normal;
+    padding-left: 19px; }
+    .Radio--small-lg .Radio__indicator {
+      height: 14px;
+      top: 1px;
+      width: 14px; }
+      .Radio--small-lg .Radio__indicator::after {
+        height: 6px;
+        left: 2px;
+        top: 2px;
+        width: 6px; }
+  .Radio--medium-lg {
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: 0px;
+    font-weight: normal;
+    padding-left: 21px; }
+    .Radio--medium-lg .Radio__indicator {
+      height: 16px;
+      top: 1px;
+      width: 16px; }
+      .Radio--medium-lg .Radio__indicator::after {
+        height: 6px;
+        left: 3px;
+        top: 3px;
+        width: 6px; }
+  .Radio--large-lg {
+    font-size: 18px;
+    line-height: 27px;
+    letter-spacing: 0px;
+    font-weight: normal;
+    padding-left: 28px; }
+    .Radio--large-lg .Radio__indicator {
+      height: 21px;
+      top: 2px;
+      width: 21px; }
+      .Radio--large-lg .Radio__indicator::after {
+        height: 7px;
+        left: 5px;
+        top: 5px;
+        width: 7px; } }
+
+@media (min-width: 1500px) {
+  .Radio--small-xl {
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0px;
+    font-weight: normal;
+    padding-left: 19px; }
+    .Radio--small-xl .Radio__indicator {
+      height: 14px;
+      top: 1px;
+      width: 14px; }
+      .Radio--small-xl .Radio__indicator::after {
+        height: 6px;
+        left: 2px;
+        top: 2px;
+        width: 6px; }
+  .Radio--medium-xl {
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: 0px;
+    font-weight: normal;
+    padding-left: 21px; }
+    .Radio--medium-xl .Radio__indicator {
+      height: 16px;
+      top: 1px;
+      width: 16px; }
+      .Radio--medium-xl .Radio__indicator::after {
+        height: 6px;
+        left: 3px;
+        top: 3px;
+        width: 6px; }
+  .Radio--large-xl {
+    font-size: 18px;
+    line-height: 27px;
+    letter-spacing: 0px;
+    font-weight: normal;
+    padding-left: 28px; }
+    .Radio--large-xl .Radio__indicator {
+      height: 21px;
+      top: 2px;
+      width: 21px; }
+      .Radio--large-xl .Radio__indicator::after {
+        height: 7px;
+        left: 5px;
+        top: 5px;
+        width: 7px; } }
+
+.ProgressBar {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0; }
+
+.ProgressBar__step,
+.ProgressBar__step::after {
+  border-radius: 3px;
+  display: inline-block; }
+
+.ProgressBar__step {
+  background-color: rgba(0, 0, 0, 0.14);
+  height: 2px;
+  margin-right: 3px;
+  position: relative; }
+  .ProgressBar__step:last-child {
+    margin-right: 0; }
+  .ProgressBar__step::after {
+    background-color: #b35dba;
+    box-shadow: 0 0 7px 0 #e39ae3;
+    content: ' ';
+    height: 100%;
+    opacity: 0;
+    transition: opacity .2s linear;
+    width: 100%; }
+
+.ProgressBar__step--active::after {
+  opacity: 1; }
+
+.Slider {
+  cursor: pointer;
+  height: 24px;
+  position: relative; }
+  .Slider:focus {
+    outline: none; }
+
+.Slider__track-line {
+  border-radius: 1.5px;
+  height: 3px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 10px; }
+
+.Slider__track {
+  bottom: 0;
+  left: 12px;
+  position: absolute;
+  right: 12px;
+  top: 0; }
+
+.Slider__fill {
+  border-radius: 1.5px 0 0 1.5px;
+  height: 3px;
+  left: -12px;
+  position: absolute;
+  top: 10px; }
+
+.Slider__handle {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.14), 0 1px 2px rgba(0, 0, 0, 0.07), 0 0 10px rgba(0, 0, 0, 0.07);
+  border-radius: 50%;
+  height: 24px;
+  position: absolute;
+  right: -12px;
+  top: -10px;
+  width: 24px; }
+  .Slider__handle::after {
+    background-color: #7feaff;
+    border-radius: 50%;
+    bottom: 7px;
+    box-shadow: 0 0 5px 0 rgba(127, 234, 255, 0.7);
+    content: '';
+    left: 7px;
+    opacity: 0;
+    position: absolute;
+    right: 7px;
+    top: 7px;
+    transition: opacity .15s linear; }
+
+.Slider--is-disabled {
+  cursor: not-allowed;
+  opacity: 0.41; }
+
+.Slider--is-focused .Slider__handle::after {
+  opacity: 1; }
+
+.Slider__track-line {
+  background-color: rgba(0, 0, 0, 0.14); }
+
+.Slider__fill {
+  background-color: #2dcfa1; }
+
+.Slider__handle {
+  background-color: #fff; }
+
+.Switch {
+  margin: 0;
+  position: relative; }
+  .Switch .Switch__indicator {
+    border-radius: 12px;
+    height: 24px;
+    width: 41px; }
+  .Switch .Switch__toggler {
+    height: 20px;
+    right: 19px;
+    width: 20px; }
+    .Switch .Switch__toggler::after {
+      height: 8px;
+      width: 8px; }
+
+.Switch__indicator {
+  background-color: #dbdbdb;
+  cursor: pointer;
+  transition: background-color .35s ease-out; }
+
+.Switch__toggler {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.14), 0 1px 2px rgba(0, 0, 0, 0.07), 0 0 10px rgba(0, 0, 0, 0.07);
+  background: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  transition: right .15s ease-out; }
+  .Switch__toggler::after {
+    background-color: #7feaff;
+    border-radius: 50%;
+    box-shadow: 0 0 5px 0 rgba(127, 234, 255, 0.7);
+    content: ' ';
+    left: 50%;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity .15s linear; }
+
+.Switch__input {
+  opacity: 0;
+  position: absolute;
+  z-index: -1; }
+  .Switch__input:checked ~ .Switch__indicator {
+    background-color: #2dcfa1; }
+    .Switch__input:checked ~ .Switch__indicator .Switch__toggler {
+      right: 2px; }
+  .Switch__input:disabled ~ .Switch__indicator {
+    cursor: not-allowed;
+    opacity: 0.54; }
+
+.Switch--is-focused .Switch__toggler::after {
+  opacity: 1; }
+
 .Tab {
   display: inline-block; }
   .Tab:not(:last-child) {
@@ -810,26 +1281,24 @@ hr {
     color: rgba(0, 0, 0, 0.41);
     opacity: 1; }
 
-.TextInput:focus,
-.TextInput--is-focused {
+.TextInput:focus {
   border-color: #7feaff;
   box-shadow: 0 0 11px rgba(127, 234, 255, 0.41);
   outline: 0; }
 
 .TextInput:disabled,
-.TextInput[readonly],
-.TextInput--is-disabled {
+.TextInput[readonly] {
   background: #eee;
   border-color: #eee;
   color: rgba(0, 0, 0, 0.41);
+  cursor: not-allowed;
   opacity: 1; }
 
 .TextInput--has-error,
 .FormGroup--has-error .TextInput {
   border-color: #f04d5d; }
-  .TextInput--has-error.TextInput:focus, .TextInput--has-error.TextInput--is-focused,
-  .FormGroup--has-error .TextInput.TextInput:focus,
-  .FormGroup--has-error .TextInput.TextInput--is-focused {
+  .TextInput--has-error.TextInput:focus,
+  .FormGroup--has-error .TextInput.TextInput:focus {
     box-shadow: 0 0 11px rgba(255, 151, 154, 0.54); }
 
 .TextInput--medium,

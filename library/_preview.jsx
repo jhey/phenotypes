@@ -1,4 +1,5 @@
-const React = require('react');
+/* eslint-disable react/no-multi-comp */
+import React from 'react';
 
 const ROOT_ELEMENT_ID_PREFIX = 'root-';
 
@@ -7,7 +8,14 @@ const ROOT_ELEMENT_ID_PREFIX = 'root-';
 // --------------------------------------------
 
 class Variant extends React.Component {
+  renderInner() {
+    return {
+      __html: this.props.content,
+    };
+  }
+
   render() {
+    /* eslint-disable react/no-danger */
     return (
       <div
         id={this.props.rootElementId}
@@ -16,12 +24,6 @@ class Variant extends React.Component {
       />
     );
   }
-
-  renderInner() {
-    return {
-      __html: this.props.content
-    };
-  }
 }
 
 
@@ -29,18 +31,18 @@ class Variant extends React.Component {
 // -----------------------------------------------
 
 class Shuttle extends React.Component {
-  render() {
-    return (
-      <script dangerouslySetInnerHTML={this.renderInner()} />
-    );
-  }
-
   renderInner() {
     return {
       __html: `
         window.__phenotypesReactData__ = ${JSON.stringify(this.props.data).replace(/</g, '\\u003c')};
-      `
+      `,
     };
+  }
+
+  render() {
+    return (
+      <script dangerouslySetInnerHTML={this.renderInner()} />
+    );
   }
 }
 
@@ -57,19 +59,46 @@ class Shuttle extends React.Component {
 class Preview extends React.Component {
   constructor(props) {
     super(props);
+    /* eslint-disable no-underscore-dangle */
     this.isCollated = this.props._target.component.isCollated;
     this.variants = this.collectVariants();
     this.shuttleData = this.compileShuttleData();
   }
 
-  render() {
+  // Returns an array with one or more component variant objects in a reliable format.
+  collectVariants() {
+    const { component } = this.props._target;
 
+    if (this.isCollated) {
+      // In collated mode, each variant has its context attached.
+      return component.variants.items;
+    }
+
+    // When not collated, the context is on the component's parent (_target)
+    // so we move it to the component object.
+    const componentWithContext = Object.assign({}, component, {
+      context: this.props._target.context,
+    });
+
+    return [componentWithContext];
+  }
+
+  // Compiles data about component variants to shuttle to client side.
+  compileShuttleData() {
+    return this.variants.map(item => ({
+      baseHandle: item.baseHandle,
+      context: item.context,
+      rootElementId: ROOT_ELEMENT_ID_PREFIX + item.handle,
+    }));
+  }
+
+  render() {
     return (
       <div id="phenotypes__fractalPreview">
         <link media="all" rel="stylesheet" href="/css/preview.css" />
         <link media="all" rel="stylesheet" href="/css/phenotypes.css" />
 
-        {this.variants.map(variant => {
+        {this.variants.map((variant) => {
           const rootElementId = ROOT_ELEMENT_ID_PREFIX + variant.handle;
 
           // NOTE: server rendering only works for non-collated components
@@ -78,7 +107,8 @@ class Preview extends React.Component {
           const content = this.isCollated ? '' : this.props.yield;
 
           return (
-            <Variant key={rootElementId}
+            <Variant
+              key={rootElementId}
               rootElementId={rootElementId}
               content={content}
             />
@@ -87,37 +117,9 @@ class Preview extends React.Component {
 
         <Shuttle data={this.shuttleData} />
 
-        <script type="text/javascript" src="/js/bundle.js"></script>
+        <script type="text/javascript" src="/js/bundle.js" />
       </div>
     );
-  }
-
-  // Returns an array with one or more component variant objects in a reliable format.
-  collectVariants() {
-    const component = this.props._target.component;
-
-    if(this.isCollated) {
-      // In collated mode, each variant has its context attached.
-      return component.variants.items;
-    }
-
-    else {
-      // When not collated, the context is on the component's parent (_target)
-      // so we move it to the component object.
-      const componentWithContext = Object.assign({}, component, {
-        context: this.props._target.context
-      });
-      return [componentWithContext];
-    }
-  }
-
-  // Compiles data about component variants to shuttle to client side.
-  compileShuttleData() {
-    return this.variants.map(item => ({
-      baseHandle: item.baseHandle,
-      context: item.context,
-      rootElementId: ROOT_ELEMENT_ID_PREFIX + item.handle
-    }));
   }
 }
 

@@ -1,0 +1,87 @@
+@mixin switch-sizer() {
+  $width: modular-scale-px(7);
+  $height: modular-scale-px(3);
+  $toggler-radius: $height - ($border-width * 2);
+  $focus-indicator-radius: $toggler-radius - ($border-width * 6);
+
+  .Switch__indicator {
+    border-radius: ($height / 2);
+    height: $height;
+    width: $width;
+
+  }
+
+  .Switch__toggler {
+    height: $toggler-radius;
+    right: $width - $border-width - $toggler-radius;
+    width: $toggler-radius;
+
+    &::after {
+      height: $focus-indicator-radius;
+      width: $focus-indicator-radius;
+    }
+  }
+}
+
+.Switch {
+  @include switch-sizer;
+  // Cancel the default margin for label tags
+  margin: 0;
+  position: relative;
+}
+
+.Switch__indicator {
+  background-color: $gray-300;
+  cursor: pointer;
+  transition: background-color .35s ease-out;
+}
+
+.Switch__toggler {
+  @include depth(7);
+  background: $white;
+  border-radius: 50%;
+  position: absolute;
+  top: $border-width;
+  transition: right .15s ease-out;
+
+  &::after {
+    background-color: $blue-100;
+    border-radius: 50%;
+    box-shadow: 0 0 5px 0 rgba($blue-100, $alpha-700);
+    content: ' ';
+    left: 50%;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity .15s linear;
+  }
+}
+
+.Switch__input {
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
+
+  &:checked ~ .Switch__indicator {
+    background-color: $green-200;
+
+    .Switch__toggler {
+      right: $border-width;
+    }
+
+  }
+
+  &:disabled ~ .Switch__indicator {
+    cursor: not-allowed;
+    opacity: $alpha-600;
+  }
+}
+
+.Switch--is-focused {
+  .Switch__toggler {
+    &::after {
+      opacity: 1;
+    }
+  }
+}

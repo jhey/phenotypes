@@ -1,8 +1,8 @@
-const React = require('react');
-const classes = require('classnames');
+import React from 'react';
+import classes from 'classnames';
 
-const AnchorButton = require('./anchor_button.jsx');
-const TrueButton = require('./true_button.jsx');
+import AnchorButton from './anchor_button.jsx';
+import TrueButton from './true_button.jsx';
 
 function Button(props) {
   const Component = props.href ? AnchorButton : TrueButton;

@@ -1,11 +1,11 @@
 /* eslint-env mocha */
 /* eslint-disable prefer-arrow-callback, no-unused-expressions */
-const React = require('react');
-const { shallow } = require('enzyme');
-const { expect } = require('chai');
-const sinon = require('sinon');
+import React from 'react';
+import { shallow } from 'enzyme';
+import { expect } from 'chai';
+import sinon from 'sinon';
 
-const TextInput = require('./text_input');
+import TextInput from './text_input';
 
 describe('TextInput', function () {
   it('should render text input element as default input type', function () {

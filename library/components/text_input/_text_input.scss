@@ -42,19 +42,18 @@
   }
 }
 
-.TextInput:focus,
-.TextInput--is-focused {
+.TextInput:focus {
   border-color: $blue-100;
   box-shadow: 0 0 11px rgba($blue-100, $alpha-500);
   outline: 0;
 }
 
 .TextInput:disabled,
-.TextInput[readonly],
-.TextInput--is-disabled {
+.TextInput[readonly] {
   background: $gray-200;
   border-color: $gray-200;
   color: $text-color-hint;
+  cursor: not-allowed;
   opacity: 1; // some browsers (e.g. iOS Safari) reduce opacity
 }
 
@@ -62,8 +61,7 @@
 .FormGroup--has-error .TextInput {
   border-color: $red;
 
-  &.TextInput:focus,
-  &.TextInput--is-focused {
+  &.TextInput:focus {
     box-shadow: 0 0 11px rgba($red-100, $alpha-600);
   }
 }

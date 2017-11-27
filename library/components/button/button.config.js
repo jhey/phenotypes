@@ -20,8 +20,9 @@ module.exports = {
     name: 'anchor',
     label: 'Using anchor tag',
     context: {
-      href: '#',
-      children: 'Anchor-tagged button',
+      href: 'https://amino.com',
+      children: 'Anchor-tagged button ↗️',
+      target: '_blank',
     },
   }, {
     name: 'anchor-disabled',

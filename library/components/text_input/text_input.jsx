@@ -1,5 +1,5 @@
-const React = require('react');
-const classes = require('classnames');
+import React from 'react';
+import classes from 'classnames';
 
 const INPUT_TYPES = {
   color: 'color',
@@ -30,9 +30,7 @@ function TextInput(props) {
   const { className, type, ...htmlProps } = props;
   return (
     <input
-      className={classes(className, 'TextInput', {
-        'TextInput--is-disabled': htmlProps.disabled,
-      })}
+      className={classes(className, 'TextInput')}
       type={validateType(type)}
       {...htmlProps}
     />

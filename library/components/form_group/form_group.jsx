@@ -1,10 +1,9 @@
-const React = require('react');
-const classes = require('classnames');
+import React from 'react';
+import classes from 'classnames';
 
-const TextInput = require('../text_input/text_input.jsx');
+import TextInput from '../text_input/text_input.jsx';
 
 class FormGroup extends React.Component {
-
   renderChildren() {
     // Preview environment won't have a child prop, so we have to supply a default one here:
     if (this.props.__preview) {
