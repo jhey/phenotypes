@@ -153,14 +153,14 @@ Black alpha | Name | Value | Usage
 
 White/reversed alpha | Name | Value | Usage
 ---|---|---|---
-<div class="colorChip" style="background: #232323;"></div> | reversed-alpha-100 | 0.14| 
-<div class="colorChip" style="background: #4D4D4D;"></div> | reversed-alpha-200 | 0.30| 
-<div class="colorChip" style="background: #777777;"></div> | reversed-alpha-300 | 0.46| 
-<div class="colorChip" style="background: #969696;"></div> | reversed-alpha-400 | 0.59| Hint
-<div class="colorChip" style="background: #C1C1C1;"></div> | reversed-alpha-500 | 0.76| Secondary
-<div class="colorChip" style="background: #DBDBDB;"></div> | reversed-alpha-600 | 0.86| 
-<div class="colorChip" style="background: #EEEEEE;"></div> | reversed-alpha-700 | 0.93| 
-<div class="colorChip" style="background: #F9F9F9;"></div> | reversed-alpha-800 | 0.98| 
+<div class="colorChip" style="background: #232323;"></div> | alpha-reversed-100 | 0.14| 
+<div class="colorChip" style="background: #4D4D4D;"></div> | alpha-reversed-200 | 0.30| 
+<div class="colorChip" style="background: #777777;"></div> | alpha-reversed-300 | 0.46| 
+<div class="colorChip" style="background: #969696;"></div> | alpha-reversed-400 | 0.59| Hint
+<div class="colorChip" style="background: #C1C1C1;"></div> | alpha-reversed-500 | 0.76| Secondary
+<div class="colorChip" style="background: #DBDBDB;"></div> | alpha-reversed-600 | 0.86| 
+<div class="colorChip" style="background: #EEEEEE;"></div> | alpha-reversed-700 | 0.93| 
+<div class="colorChip" style="background: #F9F9F9;"></div> | alpha-reversed-800 | 0.98| 
 | white | 1.0 | Primary
 
 
