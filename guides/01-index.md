@@ -28,8 +28,6 @@ Phenotypes treats the following topics as first-class concerns:
 
 ## Branding
 
-### Brand attributes
-
 Amino's brand attributes are:
 
 * **Confident**
@@ -41,16 +39,13 @@ Although they can seem abstract, the brand attributes affect nearly every aspect
 
 The brand attributes are intended to align our collective thinking while allowing plenty of room for creative interpretation. That room can be empowering, but it can also be overwhelming. Try to keep the attributes in mind as you learn about Phenotypes modules and create Amino products and assets.
 
-### Logo
-
-Amino logo assets are in this folder: [Dropbox / Everyone / Design / branding](https://www.dropbox.com/sh/mr8u8jp1ul187jo/AAAgtIq0OLq3_Bh8idT2w2osa?dl=0). 
-
-TK: Guidelines and downloads for each version of the logo.
+The core elements of our branding are detailed in the foundational sections that follow: [modular scale]({{ path '/docs/modular-scale' }}), [typography]({{ path '/docs/typography' }}), [color]({{ path '/docs/color' }}), and [logo]({{ path '/docs/logo' }}).
 
 ---
 
 ## Quick start
 
+* [Amino logo files](https://www.dropbox.com/s/fq5981ebiduww03/amino%20logo%2021.zip?dl=1) (17MB zip file) and [guidelines]({{ path '/docs/logo' }})
 * [Phenotypes Sketch template and Craft Library](https://www.dropbox.com/sh/5ax1ihpnkezixu1/AAAAkGffs9vjeuf16yU_m8nva?dl=0)
 * [Assets](https://www.dropbox.com/sh/y7868ecf5jwbc0s/AABHlbgbeB0ICIF9ptmtxRs1a?dl=0) (icons, fonts, colors palettes)
 * [GitHub repo](https://github.com/aminohealth/phenotypes)

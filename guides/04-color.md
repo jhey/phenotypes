@@ -28,7 +28,7 @@ Gradients fall into two families: monochromatic and polychromatic. The monochrom
 
 ![Gradients](/img/guides/gradients.png)
 
-Don't overdo it with the gradients. For better or worse, bright gradients are currently a big trend, and they're not always applied to good effect. Gradients tend to look best when applied to **very thin strips** or **large areas with a moderate aspect ratio **(e.g. squares, circles, and squarish rectangles) where they appear to simulate pleasant lighting.
+Don't overdo it with the gradients. For better or worse, bright gradients are currently a big trend, and they're not always applied to good effect. Gradients tend to look best when applied to **very thin strips** or **large areas with a moderate aspect ratio** (e.g. squares, circles, and squarish rectangles) where they appear to simulate pleasant lighting.
 
 ![Gradient tips](/img/guides/gradient-tips.png)
 
