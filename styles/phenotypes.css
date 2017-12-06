@@ -2140,26 +2140,26 @@ hr {
 .container {
   margin-right: auto;
   margin-left: auto;
-  padding-right: 12px;
-  padding-left: 12px;
+  padding-left: 16px;
+  padding-right: 16px;
   width: 451px;
   max-width: 100%; }
   @media (min-width: 600px) {
     .container {
-      padding-right: 12px;
-      padding-left: 12px; } }
+      padding-left: 16px;
+      padding-right: 16px; } }
   @media (min-width: 900px) {
     .container {
-      padding-right: 12px;
-      padding-left: 12px; } }
+      padding-left: 16px;
+      padding-right: 16px; } }
   @media (min-width: 1200px) {
     .container {
-      padding-right: 12px;
-      padding-left: 12px; } }
+      padding-left: 16px;
+      padding-right: 16px; } }
   @media (min-width: 1500px) {
     .container {
-      padding-right: 12px;
-      padding-left: 12px; } }
+      padding-left: 16px;
+      padding-right: 16px; } }
   @media (min-width: 600px) {
     .container {
       width: 673px;
@@ -2180,24 +2180,24 @@ hr {
 .container-fluid {
   margin-right: auto;
   margin-left: auto;
-  padding-right: 12px;
-  padding-left: 12px; }
+  padding-left: 16px;
+  padding-right: 16px; }
   @media (min-width: 600px) {
     .container-fluid {
-      padding-right: 12px;
-      padding-left: 12px; } }
+      padding-left: 16px;
+      padding-right: 16px; } }
   @media (min-width: 900px) {
     .container-fluid {
-      padding-right: 12px;
-      padding-left: 12px; } }
+      padding-left: 16px;
+      padding-right: 16px; } }
   @media (min-width: 1200px) {
     .container-fluid {
-      padding-right: 12px;
-      padding-left: 12px; } }
+      padding-left: 16px;
+      padding-right: 16px; } }
   @media (min-width: 1500px) {
     .container-fluid {
-      padding-right: 12px;
-      padding-left: 12px; } }
+      padding-left: 16px;
+      padding-right: 16px; } }
 
 .row {
   display: flex;
