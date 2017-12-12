@@ -5875,6 +5875,9 @@ hr {
     letter-spacing: 1.71429px !important;
     font-weight: bold !important; } }
 
+.text-color-inherit {
+  color: inherit !important; }
+
 .text-color-primary {
   color: rgba(0, 0, 0, 0.86) !important; }
 
@@ -5892,6 +5895,120 @@ hr {
 
 .text-color-reversed-hint {
   color: rgba(255, 255, 255, 0.59) !important; }
+
+.text-color-orange {
+  color: #fc8626 !important; }
+
+.text-color-orange-100 {
+  color: #ffc67f !important; }
+
+.text-color-orange-200 {
+  color: #fc8626 !important; }
+
+.text-color-orange-300 {
+  color: #cd5000 !important; }
+
+.text-color-orange-400 {
+  color: #992800 !important; }
+
+.text-color-orange-500 {
+  color: #631000 !important; }
+
+.text-color-red {
+  color: #f04d5d !important; }
+
+.text-color-red-100 {
+  color: #ff979a !important; }
+
+.text-color-red-200 {
+  color: #f04d5d !important; }
+
+.text-color-red-300 {
+  color: #bd2b43 !important; }
+
+.text-color-red-400 {
+  color: #8c092c !important; }
+
+.text-color-red-500 {
+  color: #4a001e !important; }
+
+.text-color-purple {
+  color: #853b94 !important; }
+
+.text-color-purple-100 {
+  color: #e39ae3 !important; }
+
+.text-color-purple-200 {
+  color: #b35dba !important; }
+
+.text-color-purple-300 {
+  color: #853b94 !important; }
+
+.text-color-purple-400 {
+  color: #58166e !important; }
+
+.text-color-purple-500 {
+  color: #2f0047 !important; }
+
+.text-color-blue {
+  color: #16b8e0 !important; }
+
+.text-color-blue-100 {
+  color: #7feaff !important; }
+
+.text-color-blue-200 {
+  color: #16b8e0 !important; }
+
+.text-color-blue-300 {
+  color: #008ab3 !important; }
+
+.text-color-blue-400 {
+  color: #005678 !important; }
+
+.text-color-blue-500 {
+  color: #00253f !important; }
+
+.text-color-green {
+  color: #03ab8c !important; }
+
+.text-color-green-100 {
+  color: #89f0cf !important; }
+
+.text-color-green-200 {
+  color: #2dcfa1 !important; }
+
+.text-color-green-300 {
+  color: #03ab8c !important; }
+
+.text-color-green-400 {
+  color: #007868 !important; }
+
+.text-color-green-500 {
+  color: #003f3e !important; }
+
+.text-color-gray-100 {
+  color: #f9f9f9 !important; }
+
+.text-color-gray-200 {
+  color: #eee !important; }
+
+.text-color-gray-300 {
+  color: #dbdbdb !important; }
+
+.text-color-gray-400 {
+  color: #c1c1c1 !important; }
+
+.text-color-gray-500 {
+  color: #969696 !important; }
+
+.text-color-gray-600 {
+  color: #777 !important; }
+
+.text-color-gray-700 {
+  color: #4d4d4d !important; }
+
+.text-color-gray-800 {
+  color: #232323 !important; }
 
 .text-weight-bold {
   font-weight: bold !important; }
