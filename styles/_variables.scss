@@ -251,6 +251,8 @@ $font-family-sans-serif: "Sailec", -apple-system, BlinkMacSystemFont, "Segoe UI"
 $font-family-monospace:  Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 $font-family-base:       $font-family-sans-serif !default;
 
+$font-antialiasing: true !default;
+
 $font-size-base: $modular-scale-base-px !default;
 
 $font-weight-normal: normal !default;
