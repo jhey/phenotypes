@@ -85,7 +85,7 @@ function TypographyUtilities() {
           <p className="text-color-primary">◼︎ Primary color</p>
           <hr />
           <Label>.text-color-secondary<br />$text-color-secondary</Label>
-          <p className="text-color-secondary">︎◼︎ Secondary color</p>
+          <p className="text-color-secondary">◼︎ Secondary color</p>
           <hr />
           <Label>.text-color-hint<br />$text-color-hint</Label>
           <p className="text-color-hint">◼︎ Hint color</p>
@@ -117,7 +117,7 @@ function TypographyUtilities() {
               <div key={`${color}-${shade}`}>
                 <hr />
                 <Label>.text-color-{color}-{shade} ${color}-{shade}</Label>
-                <p className={`text-color-${color}-${shade}`}>︎◼︎ {color} {shade}</p>
+                <p className={`text-color-${color}-${shade}`}>◼︎ {color} {shade}</p>
               </div>
             ))}
           </div>
@@ -130,7 +130,7 @@ function TypographyUtilities() {
             <div key={`gray-${shade}`}>
               {shade !== '100' && <hr />}
               <Label>.text-color-gray-{shade} $gray-{shade}</Label>
-              <p className={`text-color-gray-${shade}`}>︎◼︎ gray {shade}</p>
+              <p className={`text-color-gray-${shade}`}>◼︎ gray {shade}</p>
             </div>
           ))}
         </div>
