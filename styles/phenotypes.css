@@ -87,7 +87,9 @@ body {
   font-weight: normal;
   line-height: 1.49271;
   color: rgba(0, 0, 0, 0.86);
-  background-color: #fff; }
+  background-color: #fff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
 
 [tabindex="-1"]:focus {
   outline: none !important; }
@@ -427,9 +429,9 @@ hr {
   cursor: not-allowed; }
 
 .Button--danger .Button__control {
+  background: #f04d5d;
   color: #fff;
-  font-weight: normal;
-  background: #f04d5d; }
+  font-weight: bold; }
   .Button--danger .Button__control:hover, .Button--danger .Button__control:focus {
     background: #ee3548;
     color: #fff; }
@@ -440,10 +442,9 @@ hr {
 
 .Button--primary .Button__control {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.14), 0 1px 1px rgba(0, 0, 0, 0.07), 0 0 6px rgba(0, 0, 0, 0.07);
+  background: #16b8e0;
   color: #fff;
-  font-weight: bold;
-  -webkit-font-smoothing: antialiased;
-  background: #16b8e0; }
+  font-weight: bold; }
   .Button--primary .Button__control:hover, .Button--primary .Button__control:focus {
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.14), 0 1px 2px rgba(0, 0, 0, 0.07), 0 0 10px rgba(0, 0, 0, 0.07);
     background: #14a5c9;
