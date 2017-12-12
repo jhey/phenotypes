@@ -90,8 +90,9 @@
 
 .Button--danger {
   .Button__control {
-    @include reversed-text;
     background: $red;
+    color: $white;
+    font-weight: $font-weight-bold;
 
     &:hover,
     &:focus {
@@ -112,8 +113,9 @@
 .Button--primary {
   .Button__control {
     @include depth(4);
-    @include reversed-text($font-weight: $font-weight-bold);
     background: $blue;
+    color: $white;
+    font-weight: $font-weight-bold;
 
     &:hover,
     &:focus {

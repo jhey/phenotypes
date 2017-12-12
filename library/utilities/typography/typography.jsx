@@ -79,13 +79,13 @@ function TypographyUtilities() {
       <hr className="my7" />
 
       <h4>Colors</h4>
-      <div className="d-flex-sm">
+      <div className="d-flex flex-wrap">
         <div className="mr7-sm p5">
           <Label>.text-color-primary<br />$text-color-primary</Label>
           <p className="text-color-primary">◼︎ Primary color</p>
           <hr />
           <Label>.text-color-secondary<br />$text-color-secondary</Label>
-          <p className="text-color-secondary">︎◼︎ Secondary color</p>
+          <p className="text-color-secondary">◼︎ Secondary color</p>
           <hr />
           <Label>.text-color-hint<br />$text-color-hint</Label>
           <p className="text-color-hint">◼︎ Hint color</p>
@@ -105,6 +105,34 @@ function TypographyUtilities() {
             .text-color-reversed-hint<br />$text-color-reversed-hint
           </Label>
           <p className="text-color-reversed-hint">◼︎ Reversed hint color</p>
+        </div>
+      </div>
+
+      <div className="d-flex flex-wrap mt5">
+        {['orange', 'red', 'purple', 'blue', 'green'].map(color => (
+          <div className="mr7-sm p5" key={color}>
+            <Label>.text-color-{color} ${color}</Label>
+            <p className={`text-color-${color}`}>◼︎ {color}</p>
+            {['100', '200', '300', '400', '500'].map(shade => (
+              <div key={`${color}-${shade}`}>
+                <hr />
+                <Label>.text-color-{color}-{shade} ${color}-{shade}</Label>
+                <p className={`text-color-${color}-${shade}`}>◼︎ {color} {shade}</p>
+              </div>
+            ))}
+          </div>
+        ))}
+      </div>
+
+      <div className="d-flex mt5 p5">
+        <div>
+          {['100', '200', '300', '400', '500', '600', '700', '800'].map(shade => (
+            <div key={`gray-${shade}`}>
+              {shade !== '100' && <hr />}
+              <Label>.text-color-gray-{shade} $gray-{shade}</Label>
+              <p className={`text-color-gray-${shade}`}>◼︎ gray {shade}</p>
+            </div>
+          ))}
         </div>
       </div>
 
