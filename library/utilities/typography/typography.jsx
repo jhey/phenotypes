@@ -124,6 +124,18 @@ function TypographyUtilities() {
         ))}
       </div>
 
+      <div className="d-flex mt5 p5">
+        <div>
+          {['100', '200', '300', '400', '500', '600', '700', '800'].map(shade => (
+            <div key={`gray-${shade}`}>
+              {shade !== '100' && <hr />}
+              <Label>.text-color-gray-{shade} $gray-{shade}</Label>
+              <p className={`text-color-gray-${shade}`}>︎◼︎ gray {shade}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
       <hr className="my7" />
 
       <h4>Weight &amp; style</h4>

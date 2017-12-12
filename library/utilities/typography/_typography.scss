@@ -45,6 +45,8 @@
 // Text color utilities
 // ------------------------------
 
+.text-color-inherit { color: inherit !important; }
+
 .text-color-primary   { color: $text-color-primary   !important; }
 .text-color-secondary { color: $text-color-secondary !important; }
 .text-color-hint      { color: $text-color-hint      !important; }
@@ -87,6 +89,16 @@
 .text-color-green-300 { color: $green-300 !important; }
 .text-color-green-400 { color: $green-400 !important; }
 .text-color-green-500 { color: $green-500 !important; }
+
+.text-color-gray-100 { color: $gray-100 !important; }
+.text-color-gray-200 { color: $gray-200 !important; }
+.text-color-gray-300 { color: $gray-300 !important; }
+.text-color-gray-400 { color: $gray-400 !important; }
+.text-color-gray-500 { color: $gray-500 !important; }
+.text-color-gray-600 { color: $gray-600 !important; }
+.text-color-gray-700 { color: $gray-700 !important; }
+.text-color-gray-800 { color: $gray-800 !important; }
+
 
 // ------------------------------
 // Text weight/style utilities
