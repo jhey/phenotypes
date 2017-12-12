@@ -79,7 +79,7 @@ function TypographyUtilities() {
       <hr className="my7" />
 
       <h4>Colors</h4>
-      <div className="d-flex-sm">
+      <div className="d-flex flex-wrap">
         <div className="mr7-sm p5">
           <Label>.text-color-primary<br />$text-color-primary</Label>
           <p className="text-color-primary">◼︎ Primary color</p>
@@ -106,6 +106,22 @@ function TypographyUtilities() {
           </Label>
           <p className="text-color-reversed-hint">◼︎ Reversed hint color</p>
         </div>
+      </div>
+
+      <div className="d-flex flex-wrap mt5">
+        {['orange', 'red', 'purple', 'blue', 'green'].map(color => (
+          <div className="mr7-sm p5" key={color}>
+            <Label>.text-color-{color} ${color}</Label>
+            <p className={`text-color-${color}`}>◼︎ {color}</p>
+            {['100', '200', '300', '400', '500'].map(shade => (
+              <div key={`${color}-${shade}`}>
+                <hr />
+                <Label>.text-color-{color}-{shade} ${color}-{shade}</Label>
+                <p className={`text-color-${color}-${shade}`}>︎◼︎ {color} {shade}</p>
+              </div>
+            ))}
+          </div>
+        ))}
       </div>
 
       <hr className="my7" />
