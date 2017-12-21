@@ -42,7 +42,7 @@ Javascript:
 Rendered markup:
 ```html
 <div class="Button">
-    <button class="Button__control" type="button">Click me!</button>
+  <button class="Button__control" type="button">Click me!</button>
 </div>
 <div class="Button">
   <a href="#" class="Button__control" role="button">No, click me!</a>
