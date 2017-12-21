@@ -21,19 +21,23 @@ function mockSyntheticEvent() {
 describe('Button', function () {
   it('should render a button tag', function () {
     const wrapper = mount(<Button />);
+    expect(wrapper.hasClass('Button')).to.be.true;
+
     const trueButton = wrapper.find('button');
 
     expect(trueButton).to.have.length(1);
-    expect(trueButton.hasClass('Button')).to.be.true;
+    expect(trueButton.hasClass('Button__control')).to.be.true;
     expect(trueButton.props().type).to.equal('button');
   });
 
   it('should render an anchor tag', function () {
     const wrapper = mount(<Button href="/" />);
+    expect(wrapper.hasClass('Button')).to.be.true;
+
     const anchorButton = wrapper.find('a');
 
     expect(anchorButton).to.have.length(1);
-    expect(anchorButton.hasClass('Button')).to.be.true;
+    expect(anchorButton.hasClass('Button__control')).to.be.true;
     expect(anchorButton.props().role).to.equal('button');
   });
 
@@ -73,7 +77,7 @@ describe('Button', function () {
     const wrapper = mount(<Button onClick={onClickSpy} disabled />);
     const trueButton = wrapper.find('button');
 
-    expect(trueButton.hasClass('Button--is-disabled')).to.be.true;
+    expect(wrapper.hasClass('Button--is-disabled')).to.be.true;
     expect(trueButton.props().disabled).to.be.true;
 
     trueButton.simulate('click');
@@ -86,7 +90,7 @@ describe('Button', function () {
     const wrapper = mount(<Button href="/" onClick={onClickSpy} disabled />);
     const anchorButton = wrapper.find('a');
 
-    expect(anchorButton.hasClass('Button--is-disabled')).to.be.true;
+    expect(wrapper.hasClass('Button--is-disabled')).to.be.true;
     expect(anchorButton.props().tabIndex).to.equal(-1);
 
     const eventSpy = mockSyntheticEvent();

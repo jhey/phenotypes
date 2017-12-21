@@ -41,6 +41,10 @@ Javascript:
 ```
 Rendered markup:
 ```html
-<button class="Button" type="button">Click me!</button>
-<a href="#" class="Button" role="button">No, click me!</a>
+<div class="Button">
+  <button class="Button__control" type="button">Click me!</button>
+</div>
+<div class="Button">
+  <a href="#" class="Button__control" role="button">No, click me!</a>
+</div>
 ```

@@ -394,6 +394,7 @@ hr {
   transition: all .2s ease-out;
   vertical-align: middle;
   white-space: nowrap;
+  width: 100%;
   -moz-user-select: none;
   -ms-user-select: none;
   -webkit-user-select: none;
