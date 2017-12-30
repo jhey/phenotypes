@@ -19,7 +19,7 @@
     @include media-breakpoint-up($breakpoint) {
       $bp: breakpoint-suffix($breakpoint, $grid-breakpoints);
 
-      @each $dimension in (width, height) {
+      @each $dimension in (width, min-width, max-width, height) {
         @for $i from 1 through length($spacers) {
           $size: $i - 1;
           $length: nth($spacers, $i);
