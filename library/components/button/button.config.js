@@ -60,7 +60,7 @@ module.exports = {
     context: {
       className: 'Button--danger',
       disabled: true,
-      children: 'Disabed danger button',
+      children: 'Disabled danger button',
     },
   }, {
     name: 'link',
