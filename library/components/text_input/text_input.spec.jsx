@@ -42,7 +42,7 @@ describe('TextInput', function () {
     expect(inputProps['aria-label']).to.equal('label');
     expect(inputProps.autoComplete).to.equal('autoComplete');
     expect(inputProps.autoFocus).to.equal('autoFocus');
-    expect(inputProps.className).to.equal('className TextInput TextInput--is-disabled');
+    expect(inputProps.className).to.equal('className TextInput');
     expect(inputProps.form).to.equal('form');
     expect(inputProps.disabled).to.equal('disabled');
     expect(inputProps.id).to.equal('id');
