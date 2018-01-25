@@ -216,21 +216,20 @@ $grid-breakpoints: (
 // ------------------------------
 
 $container-max-widths: (
-  xs: 451px,
-  sm: 673px,
-  md: 879px,
-  lg: 1148px,
-  xl: 1148px
+  xs: 414px,
+  sm: 865px,
+  md: 1024px,
+  lg: 1024px,
+  xl: 1024px
 ) !default;
 
-$grid-columns:               12 !default;
-$grid-gutter-width-base:     $spacer-5 !default;
+$grid-columns: 12 !default;
 $grid-gutter-widths: (
-  xs: $grid-gutter-width-base,
-  sm: $grid-gutter-width-base,
-  md: $grid-gutter-width-base,
-  lg: $grid-gutter-width-base,
-  xl: $grid-gutter-width-base
+  xs: $spacer-4,
+  sm: $spacer-6,
+  md: $spacer-7,
+  lg: $spacer-7,
+  xl: $spacer-7,
 ) !default;
 
 // ------------------------------
