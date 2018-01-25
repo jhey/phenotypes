@@ -125,10 +125,10 @@ First, some npm stuff:
 
 Then create the release:
 
-* Create a new branch
+* Create a new branch, e.g. `release/5.0.0`
 * Use `npm version [patch|minor|major]` to create a commit and tag that bumps the package version. Use [semver](http://semver.org/) to decide whether the update is patch/minor/major.
-* Create a PR and get that branch merged
-* In github, create a PR to merge dev into master, and get that merged
+* Create a PR, get it reviewed, and merge the branch into dev
+* In github's UI, create a PR to merge dev into master, and get that merged (don't need a review for that!)
 
 Then publish the release:
 
