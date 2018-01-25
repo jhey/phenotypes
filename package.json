@@ -1,6 +1,6 @@
 {
   "name": "@aminohealth/phenotypes",
-  "version": "5.0.1",
+  "version": "6.0.0",
   "description": "Amino's design language and front-end component library",
   "dependencies": {
     "classnames": "^2.2.5",
