@@ -1,5 +1,5 @@
-const React = require('react');
-const Switch = require('./switch.jsx');
+import * as React from 'react';
+import Switch from './switch.jsx';
 
 class SwitchExample extends React.Component {
   constructor(props, context) {
@@ -10,8 +10,8 @@ class SwitchExample extends React.Component {
   }
 
   render() {
-    const { label, ...props } = this.props;
-    const { checked } = this.state;
+    const {label, ...props} = this.props;
+    const {checked} = this.state;
 
     return (
       <div>
@@ -20,7 +20,7 @@ class SwitchExample extends React.Component {
           <Switch
             {...props}
             checked={checked}
-            onChange={() => this.setState({ checked: !checked })}
+            onChange={() => this.setState({checked: !checked})}
           />
           {!props.disabled && (
             <span className="ml5">
