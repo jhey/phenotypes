@@ -19,4 +19,4 @@ function Radio(props) {
   );
 }
 
-module.exports = Radio;
+export default Radio;

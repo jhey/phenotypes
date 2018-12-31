@@ -233,4 +233,4 @@ function TypographyUtilities() {
   );
 }
 
-module.exports = TypographyUtilities;
+export default TypographyUtilities;

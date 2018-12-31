@@ -41,4 +41,4 @@ TextInput.defaultProps = {
   type: 'text',
 };
 
-module.exports = TextInput;
+export default TextInput;

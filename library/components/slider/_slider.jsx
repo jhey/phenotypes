@@ -1,7 +1,7 @@
 import React from 'react';
 import Slider from './slider.jsx';
 
-module.exports = function demos() {
+export default function demos() {
   return (
     <div>
       <SliderDemo value={50} min={0} max={100} step={1} />
@@ -9,7 +9,7 @@ module.exports = function demos() {
       <SliderDemo value={25} min={0} max={100} step={1} disabled />
     </div>
   );
-};
+}
 
 class SliderDemo extends React.Component {
   constructor(props, context) {

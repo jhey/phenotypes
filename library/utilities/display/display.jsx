@@ -40,4 +40,4 @@ function DisplayUtilities() {
   );
 }
 
-module.exports = DisplayUtilities;
+export default DisplayUtilities;

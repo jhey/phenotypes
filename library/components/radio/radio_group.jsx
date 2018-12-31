@@ -43,4 +43,4 @@ RadioGroup.defaultProps = {
   clearable: false,
 };
 
-module.exports = RadioGroup;
+export default RadioGroup;

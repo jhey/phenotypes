@@ -252,4 +252,4 @@ class DisabledGroupExample extends React.Component {
   }
 }
 
-module.exports = RadioButtonsExamples;
+export default RadioButtonsExamples;

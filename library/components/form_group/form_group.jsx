@@ -55,4 +55,4 @@ class FormGroup extends React.Component {
   }
 }
 
-module.exports = FormGroup;
+export default FormGroup;

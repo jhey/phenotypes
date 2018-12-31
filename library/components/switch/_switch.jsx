@@ -33,4 +33,4 @@ class SwitchExample extends React.Component {
   }
 }
 
-module.exports = SwitchExample;
+export default SwitchExample;

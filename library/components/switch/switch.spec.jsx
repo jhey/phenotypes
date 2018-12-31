@@ -1,10 +1,10 @@
 /* eslint-env mocha */
 /* eslint-disable prefer-arrow-callback, no-unused-expressions */
-const React = require('react');
-const { shallow } = require('enzyme');
-const { expect } = require('chai');
+import * as React from 'react';
+import { shallow } from 'enzyme';
+import { expect } from 'chai';
 
-const Switch = require('./switch');
+import Switch from './switch';
 
 describe('Switch', function() {
   it('should render an "on" state', function() {

@@ -268,4 +268,4 @@ Slider.defaultProps = {
   value: null,
 };
 
-module.exports = Slider;
+export default Slider;

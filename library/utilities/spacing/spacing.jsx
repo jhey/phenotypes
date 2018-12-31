@@ -22,4 +22,4 @@ function SpacingUtilities() {
   );
 }
 
-module.exports = SpacingUtilities;
+export default SpacingUtilities;

@@ -50,4 +50,4 @@ Tab.defaultProps = {
   active: false,
 };
 
-module.exports = Tab;
+export default Tab;

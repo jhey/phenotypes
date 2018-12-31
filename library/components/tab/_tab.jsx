@@ -33,4 +33,4 @@ class TabExample extends React.Component {
   }
 }
 
-module.exports = TabExample;
+export default TabExample;

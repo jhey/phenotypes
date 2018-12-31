@@ -65,4 +65,4 @@ function GridExamples() {
   );
 }
 
-module.exports = GridExamples;
+export default GridExamples;

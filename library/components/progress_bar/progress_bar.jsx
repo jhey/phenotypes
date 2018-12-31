@@ -22,4 +22,4 @@ ProgressBar.defaultProps = {
   stepClassName: 'flex-1',
 };
 
-module.exports = ProgressBar;
+export default ProgressBar;

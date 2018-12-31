@@ -120,4 +120,4 @@ class Preview extends React.Component {
   }
 }
 
-module.exports = Preview;
+export default Preview;

@@ -10,7 +10,7 @@ const data = window.__phenotypesReactData__;
 
 // Re-render all React components on the page
 data.forEach(item => {
-  const Component = components[item.baseHandle];
+  const Component = components[item.baseHandle].default;
   const props = item.context;
   const root = document.getElementById(item.rootElementId);
   ReactDOM.render(<Component {...props} />, root);

@@ -361,4 +361,4 @@ function FlexboxUtilities() {
   );
 }
 
-module.exports = FlexboxUtilities;
+export default FlexboxUtilities;

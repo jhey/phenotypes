@@ -19,4 +19,4 @@ function Checkbox(props) {
   );
 }
 
-module.exports = Checkbox;
+export default Checkbox;

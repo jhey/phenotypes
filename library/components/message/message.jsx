@@ -18,4 +18,4 @@ function MessageExamples() {
   );
 }
 
-module.exports = MessageExamples;
+export default MessageExamples;

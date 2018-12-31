@@ -35,4 +35,4 @@ function SizingExamples() {
   );
 }
 
-module.exports = SizingExamples;
+export default SizingExamples;

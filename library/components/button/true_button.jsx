@@ -32,4 +32,4 @@ TrueButton.defaultProps = {
   type: 'button',
 };
 
-module.exports = TrueButton;
+export default TrueButton;
