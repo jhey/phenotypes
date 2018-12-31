@@ -1,11 +1,10 @@
 const _ = require('lodash');
 const Promise = require('bluebird');
-const Adapter = require('@frctl/fractal').Adapter;
+const {Adapter} = require('@frctl/fractal');
 const React = require('react');
 const ReactDOM = require('react-dom/server');
-const prettyPrint = require('html').prettyPrint;
+const {prettyPrint} = require('html');
 const babelReg = require('@babel/register');
-
 
 /*
  * Adpater options
@@ -60,9 +59,6 @@ class ReactAdapter extends Adapter {
 
     delete require.cache[path];
     const component = require(path).default;
-    console.log('here');
-    console.log(component);
-    console.log('/here');
     const element = React.createElement(component, context);
     const renderedHtml = this.renderMethod(element);
     const prettyHtml = prettyPrint(renderedHtml);
@@ -70,7 +66,6 @@ class ReactAdapter extends Adapter {
     return Promise.resolve(prettyHtml);
   }
 }
-
 
 /*
  * Register Babel
@@ -89,37 +84,36 @@ class ReactAdapter extends Adapter {
 function registerBabel(app, config) {
   // Extract module aliases (e.g. '@button': '/path/to/button.jsx')
   const aliases = {};
-  app.components.items().forEach((item) => {
+  app.components.items().forEach(item => {
     aliases[`@${item.handle}`] = item.viewPath;
   });
 
   // Add resolver plugin aliases to babel config
   // https://github.com/tleunen/babel-plugin-module-resolver
   _.assign(config, {
-    plugins: [
-      ['module-resolver', { alias: aliases }],
-    ],
+    plugins: [['module-resolver', {alias: aliases}]],
   });
 
   // Hook up that babel
   babelReg(config);
 }
 
-
 /*
  * Adapter registration
  * --------------------
  */
-module.exports = function (config = {}) {
+module.exports = function(config = {}) {
   const options = _.assign({}, DEFAULT_OPTIONS, config);
 
   return {
     register(source, app) {
-      const componentsReady = () => { registerBabel(app, options.babelConfig) };
+      const componentsReady = () => {
+        registerBabel(app, options.babelConfig);
+      };
       app.components.on('loaded', componentsReady);
       app.components.on('updated', componentsReady);
 
       return new ReactAdapter(source, app, options);
     },
   };
-}
+};
