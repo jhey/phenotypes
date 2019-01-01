@@ -1,4 +1,3 @@
-/* eslint-disable react/no-multi-comp */
 import * as React from 'react';
 import RadioGroup from './radio_group.jsx';
 import Button from '../button/button.jsx';

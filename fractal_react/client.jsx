@@ -5,7 +5,6 @@ import ReactDOM from 'react-dom';
 import components from './__components.js';
 
 // Grab component data from DOM provided by server-side renderer (_preview.jsx)
-/* eslint-disable no-underscore-dangle */
 const data = window.__phenotypesReactData__;
 
 // Re-render all React components on the page

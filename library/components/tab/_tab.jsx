@@ -8,7 +8,6 @@ class TabExample extends React.Component {
   }
 
   render() {
-    /* eslint-disable react/no-array-index-key */
     return (
       <div>
         <p>{this.props.description}</p>

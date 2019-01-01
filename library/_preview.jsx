@@ -1,4 +1,3 @@
-/* eslint-disable react/no-multi-comp */
 import * as React from 'react';
 
 const ROOT_ELEMENT_ID_PREFIX = 'root-';
@@ -14,7 +13,6 @@ class Variant extends React.Component {
   }
 
   render() {
-    /* eslint-disable react/no-danger */
     return (
       <div
         id={this.props.rootElementId}
@@ -56,7 +54,6 @@ class Shuttle extends React.Component {
 class Preview extends React.Component {
   constructor(props) {
     super(props);
-    /* eslint-disable no-underscore-dangle */
     this.isCollated = this.props._target.component.isCollated;
     this.variants = this.collectVariants();
     this.shuttleData = this.compileShuttleData();
