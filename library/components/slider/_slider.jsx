@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import Slider from './slider.jsx';
 
 export default function demos() {

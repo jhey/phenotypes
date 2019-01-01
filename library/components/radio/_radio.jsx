@@ -1,5 +1,5 @@
 /* eslint-disable react/no-multi-comp */
-import React from 'react';
+import * as React from 'react';
 import RadioGroup from './radio_group.jsx';
 import Button from '../button/button.jsx';
 

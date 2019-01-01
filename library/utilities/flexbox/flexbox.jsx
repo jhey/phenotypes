@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 
 const boxStyle1 = { background: '#eee' };
 const boxStyle2 = { background: '#dbdbdb' };

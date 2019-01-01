@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import classes from 'classnames';
 
 class Tab extends React.Component {
@@ -19,7 +19,7 @@ class Tab extends React.Component {
     const {
       active,
       className,
-      onClick,
+      onClick: _onClick_,
       href,
       children,
       ...htmlProps

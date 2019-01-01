@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 
 function Label(props) {
   const className = props.className || 'text-color-hint';

@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import classes from 'classnames';
 
 import TextInput from '../text_input/text_input.jsx';

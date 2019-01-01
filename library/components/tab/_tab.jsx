@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import Tab from './tab.jsx';
 
 class TabExample extends React.Component {

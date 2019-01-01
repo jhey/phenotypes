@@ -24,7 +24,7 @@ class Switch extends React.Component {
 
   handleFocus() {
     this.props.onFocus && this.props.onFocus();
-    this.setState({focused: true});
+    this.setState({ focused: true });
   }
 
   handleMouseDown(event) {
@@ -33,17 +33,18 @@ class Switch extends React.Component {
     // if the input is already focused, we need to prevent the indicator element
     // from pulling focus and triggering `blur` on the input
     event.preventDefault();
-    this.setState({clicked: true});
+    this.setState({ clicked: true });
   }
 
   render() {
-    const {className, ...inputProps} = this.props;
+    const { className, ...inputProps } = this.props;
 
     return (
       <label
         className={classes(className, 'Switch', {
           'Switch--is-focused': this.state.focused && !this.state.clicked,
-        })}>
+        })}
+      >
         <input
           {...inputProps}
           className="Switch__input"
