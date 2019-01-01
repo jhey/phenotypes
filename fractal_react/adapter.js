@@ -12,8 +12,8 @@ const babelReg = require('@babel/register');
  * These options can be overridden when the adapter is set up.
  * Syntax: ReactAdapter({ options })
  *
- * - babelConfig:  any configuration options for babel-register
- *                 https://babeljs.io/docs/usage/babel-register/
+ * - babelConfig:  any configuration options for @babel/register
+ *                 https://babeljs.io/docs/en/babel-register/
  *
  * - renderMethod: 'renderToStaticMarkup' or 'renderToString'
  *                 https://facebook.github.io/react/docs/react-dom-server.html
