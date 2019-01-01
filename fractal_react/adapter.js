@@ -22,7 +22,6 @@ const DEFAULT_OPTIONS = {
   babelConfig: {
     extensions: ['.jsx'],
     presets: ['@babel/preset-react'],
-    plugins: ['@babel/plugin-transform-modules-commonjs'],
   },
   renderMethod: 'renderToStaticMarkup',
 };
