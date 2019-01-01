@@ -1,9 +1,9 @@
 const _ = require('lodash');
 const Promise = require('bluebird');
-const {Adapter} = require('@frctl/fractal');
+const { Adapter } = require('@frctl/fractal');
 const React = require('react');
 const ReactDOM = require('react-dom/server');
-const {prettyPrint} = require('html');
+const { prettyPrint } = require('html');
 const babelReg = require('@babel/register');
 
 /*
@@ -58,7 +58,9 @@ class ReactAdapter extends Adapter {
     setEnv('_config', this.app.config(), context);
 
     delete require.cache[path];
-    const component = require(path).default;
+    const componentImport = require(path);
+    const component = componentImport.default || componentImport;
+
     const element = React.createElement(component, context);
     const renderedHtml = this.renderMethod(element);
     const prettyHtml = prettyPrint(renderedHtml);
@@ -91,7 +93,7 @@ function registerBabel(app, config) {
   // Add resolver plugin aliases to babel config
   // https://github.com/tleunen/babel-plugin-module-resolver
   _.assign(config, {
-    plugins: [['module-resolver', {alias: aliases}]],
+    plugins: [['module-resolver', { alias: aliases }]],
   });
 
   // Hook up that babel
