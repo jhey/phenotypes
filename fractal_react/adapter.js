@@ -21,9 +21,9 @@ const babelReg = require('@babel/register');
 const DEFAULT_OPTIONS = {
   babelConfig: {
     extensions: ['.jsx'],
-    presets: ['@babel/preset-react'],
+    presets: ['@babel/preset-react']
   },
-  renderMethod: 'renderToStaticMarkup',
+  renderMethod: 'renderToStaticMarkup'
 };
 
 /*
@@ -43,25 +43,26 @@ class ReactAdapter extends Adapter {
   }
 
   render(path, str, context, meta) {
-    const metaObject = meta || {};
-    const defaultContext = {
-      _self: metaObject.self,
-      _target: metaObject.target,
-      _env: metaObject.env,
-      _config: this.app.config(),
-    };
+    const fullContext = _.assign(
+      _.pick({
+        _self: meta && meta.self,
+        _target: meta && meta.target,
+        _env: meta && meta.env,
+        _config: this.app.config()
+      }),
+      context
+    );
 
-    const enhancedContext = _.assign(defaultContext, context);
-
+    // Grab a fresh copy of the component
     delete require.cache[path];
     const componentImport = require(path);
     const component = componentImport.default || componentImport;
 
-    const element = React.createElement(component, enhancedContext);
-    const renderedHtml = this.renderMethod(element);
-    const prettyHtml = prettyPrint(renderedHtml);
-
-    return Promise.resolve(prettyHtml);
+    return Promise.resolve(
+      prettyPrint(
+        this.renderMethod(React.createElement(component, fullContext))
+      )
+    );
   }
 }
 
@@ -89,7 +90,7 @@ function registerBabel(app, config) {
   // Add resolver plugin aliases to babel config
   // https://github.com/tleunen/babel-plugin-module-resolver
   _.assign(config, {
-    plugins: [['module-resolver', { alias: aliases }]],
+    plugins: [['module-resolver', { alias: aliases }]]
   });
 
   // Hook up that babel
@@ -112,6 +113,6 @@ module.exports = function(config = {}) {
       app.components.on('updated', componentsReady);
 
       return new ReactAdapter(source, app, options);
-    },
+    }
   };
 };
