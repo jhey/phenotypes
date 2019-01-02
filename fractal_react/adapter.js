@@ -26,12 +26,6 @@ const DEFAULT_OPTIONS = {
   renderMethod: 'renderToStaticMarkup',
 };
 
-function setEnv(key, value, context) {
-  if (context[key] === undefined && value !== undefined) {
-    context[key] = value;
-  }
-}
-
 /*
  * React Adapter
  * -------------
@@ -50,17 +44,20 @@ class ReactAdapter extends Adapter {
 
   render(path, str, context, meta) {
     const metaObject = meta || {};
+    const defaultContext = {
+      _self: metaObject.self,
+      _target: metaObject.target,
+      _env: metaObject.env,
+      _config: this.app.config(),
+    };
 
-    setEnv('_self', metaObject.self, context);
-    setEnv('_target', metaObject.target, context);
-    setEnv('_env', metaObject.env, context);
-    setEnv('_config', this.app.config(), context);
+    const enhancedContext = _.assign(defaultContext, context);
 
     delete require.cache[path];
     const componentImport = require(path);
     const component = componentImport.default || componentImport;
 
-    const element = React.createElement(component, context);
+    const element = React.createElement(component, enhancedContext);
     const renderedHtml = this.renderMethod(element);
     const prettyHtml = prettyPrint(renderedHtml);
 
