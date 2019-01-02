@@ -44,7 +44,7 @@ class ReactAdapter extends Adapter {
 
   render(path, str, context, meta) {
     const fullContext = _.assign(
-      _.pick({
+      _.pickBy({
         _self: meta && meta.self,
         _target: meta && meta.target,
         _env: meta && meta.env,
