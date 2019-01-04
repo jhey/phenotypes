@@ -24,7 +24,9 @@ class SliderDemo extends React.Component {
       <div className="mb7">
         <Slider
           {...props}
-          onChange={(newValue) => { this.setState({ value: newValue }) }}
+          onChange={newValue => {
+            this.setState({ value: newValue });
+          }}
         />
         <div className="mt1 text-color-secondary text-2">
           <code>{JSON.stringify(props)}</code>

@@ -9,7 +9,7 @@ import components from './__components.js';
 const data = window.__phenotypesReactData__;
 
 // Re-render all React components on the page
-data.forEach((item) => {
+data.forEach(item => {
   const Component = components[item.baseHandle];
   const props = item.context;
   const root = document.getElementById(item.rootElementId);

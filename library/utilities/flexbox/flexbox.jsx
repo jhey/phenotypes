@@ -3,11 +3,12 @@ import React from 'react';
 const boxStyle1 = { background: '#eee' };
 const boxStyle2 = { background: '#dbdbdb' };
 
-
 function Label(props) {
   const className = props.className || 'text-color-hint';
   return (
-    <p><code className={className}>{props.children}</code></p>
+    <p>
+      <code className={className}>{props.children}</code>
+    </p>
   );
 }
 
@@ -25,8 +26,12 @@ function Demo(props) {
 
   return (
     <div>
-      <Label>{ props.classNames.split(' ').map(className => `. ${className} `) }</Label>
-      <div className={allClassNames} style={style}>{props.children}</div>
+      <Label>
+        {props.classNames.split(' ').map(className => `. ${className} `)}
+      </Label>
+      <div className={allClassNames} style={style}>
+        {props.children}
+      </div>
     </div>
   );
 }
@@ -45,7 +50,11 @@ function InnerBox(props) {
   if (props.highlight) {
     style = Object.assign(style, highlightStyles);
   }
-  return <div className={classNames} style={style}>{text}</div>;
+  return (
+    <div className={classNames} style={style}>
+      {text}
+    </div>
+  );
 }
 
 function FlexboxUtilities() {
@@ -53,13 +62,17 @@ function FlexboxUtilities() {
     <div>
       <h3>These display utilities are needed for flexbox</h3>
       <p>
-        Apply these display utilities to an element to create a flexbox container. This transforms
-        direct children elements into flex items. Apply additional flex properties shown below to
-        further customize.
+        Apply these display utilities to an element to create a flexbox
+        container. This transforms direct children elements into flex items.
+        Apply additional flex properties shown below to further customize.
       </p>
-      <Demo classNames="d-flex" extraClassNames="p3">I’m a flexbox container!</Demo>
+      <Demo classNames="d-flex" extraClassNames="p3">
+        I’m a flexbox container!
+      </Demo>
       <Separator />
-      <Demo classNames="d-inline-flex" extraClassNames="p3">I’m an inline flexbox container!</Demo>
+      <Demo classNames="d-inline-flex" extraClassNames="p3">
+        I’m an inline flexbox container!
+      </Demo>
 
       <h3 className="mt7">Direction utilities</h3>
       <Demo classNames="d-flex flex-column flex-row-sm" extraClassNames="p2">
@@ -68,7 +81,10 @@ function FlexboxUtilities() {
         <InnerBox>Flex item 3</InnerBox>
       </Demo>
       <Separator />
-      <Demo classNames="d-flex flex-column-reverse flex-row-reverse-sm" extraClassNames="p2">
+      <Demo
+        classNames="d-flex flex-column-reverse flex-row-reverse-sm"
+        extraClassNames="p2"
+      >
         <InnerBox>Flex item 1</InnerBox>
         <InnerBox>Flex item 2</InnerBox>
         <InnerBox>Flex item 3</InnerBox>
@@ -76,44 +92,64 @@ function FlexboxUtilities() {
 
       <h3 className="mt7">Justify utilities</h3>
       <Demo classNames="d-flex justify-content-start" extraClassNames="p2">
-        <InnerBox /><InnerBox /><InnerBox />
+        <InnerBox />
+        <InnerBox />
+        <InnerBox />
       </Demo>
       <Separator />
       <Demo classNames="d-flex justify-content-end" extraClassNames="p2">
-        <InnerBox /><InnerBox /><InnerBox />
+        <InnerBox />
+        <InnerBox />
+        <InnerBox />
       </Demo>
       <Separator />
       <Demo classNames="d-flex justify-content-center" extraClassNames="p2">
-        <InnerBox /><InnerBox /><InnerBox />
+        <InnerBox />
+        <InnerBox />
+        <InnerBox />
       </Demo>
       <Separator />
       <Demo classNames="d-flex justify-content-between" extraClassNames="p2">
-        <InnerBox /><InnerBox /><InnerBox />
+        <InnerBox />
+        <InnerBox />
+        <InnerBox />
       </Demo>
       <Separator />
       <Demo classNames="d-flex justify-content-around" extraClassNames="p2">
-        <InnerBox /><InnerBox /><InnerBox />
+        <InnerBox />
+        <InnerBox />
+        <InnerBox />
       </Demo>
 
       <h3 className="mt7">Align utilities</h3>
       <Demo classNames="d-flex align-items-start" height="119px">
-        <InnerBox /><InnerBox /><InnerBox />
+        <InnerBox />
+        <InnerBox />
+        <InnerBox />
       </Demo>
       <Separator />
       <Demo classNames="d-flex align-items-end" height="119px">
-        <InnerBox /><InnerBox /><InnerBox />
+        <InnerBox />
+        <InnerBox />
+        <InnerBox />
       </Demo>
       <Separator />
       <Demo classNames="d-flex align-items-center" height="119px">
-        <InnerBox /><InnerBox /><InnerBox />
+        <InnerBox />
+        <InnerBox />
+        <InnerBox />
       </Demo>
       <Separator />
       <Demo classNames="d-flex align-items-baseline" height="119px">
-        <InnerBox /><InnerBox /><InnerBox />
+        <InnerBox />
+        <InnerBox />
+        <InnerBox />
       </Demo>
       <Separator />
       <Demo classNames="d-flex align-items-stretch" height="119px">
-        <InnerBox /><InnerBox /><InnerBox />
+        <InnerBox />
+        <InnerBox />
+        <InnerBox />
       </Demo>
 
       <h3 className="mt7">Align self utilities</h3>
@@ -159,7 +195,9 @@ function FlexboxUtilities() {
 
       <h3 className="mt7">Combining utilities with auto margins</h3>
       <Demo classNames="d-flex justify-content-end" extraClassNames="p2">
-        <InnerBox highlight="true" className="mr-auto"><code>.mr-auto</code></InnerBox>
+        <InnerBox highlight="true" className="mr-auto">
+          <code>.mr-auto</code>
+        </InnerBox>
         <InnerBox />
         <InnerBox />
       </Demo>
@@ -167,11 +205,15 @@ function FlexboxUtilities() {
       <Demo classNames="d-flex justify-content-start" extraClassNames="p2">
         <InnerBox />
         <InnerBox />
-        <InnerBox highlight="true" className="ml-auto"><code>.ml-auto</code></InnerBox>
+        <InnerBox highlight="true" className="ml-auto">
+          <code>.ml-auto</code>
+        </InnerBox>
       </Demo>
       <Separator />
       <Demo classNames="d-flex flex-column align-items-start" height="200px">
-        <InnerBox highlight="true" className="mb-auto"><code>.mb-auto</code></InnerBox>
+        <InnerBox highlight="true" className="mb-auto">
+          <code>.mb-auto</code>
+        </InnerBox>
         <InnerBox />
         <InnerBox />
       </Demo>
@@ -179,7 +221,9 @@ function FlexboxUtilities() {
       <Demo classNames="d-flex flex-column align-items-end" height="200px">
         <InnerBox />
         <InnerBox />
-        <InnerBox highlight="true" className="mt-auto"><code>.mt-auto</code></InnerBox>
+        <InnerBox highlight="true" className="mt-auto">
+          <code>.mt-auto</code>
+        </InnerBox>
       </Demo>
 
       <h3 className="mt7">Wrapping utilities</h3>
@@ -219,35 +263,84 @@ function FlexboxUtilities() {
       </Demo>
 
       <h3 className="mt7">Align content utilities</h3>
-      <Demo classNames="d-flex flex-wrap align-content-start" width="500px" height="200px">
-        <InnerBox /><InnerBox /><InnerBox /><InnerBox /><InnerBox />
+      <Demo
+        classNames="d-flex flex-wrap align-content-start"
+        width="500px"
+        height="200px"
+      >
+        <InnerBox />
+        <InnerBox />
+        <InnerBox />
+        <InnerBox />
+        <InnerBox />
       </Demo>
       <Separator />
-      <Demo classNames="d-flex flex-wrap align-content-end" width="500px" height="200px">
-        <InnerBox /><InnerBox /><InnerBox /><InnerBox /><InnerBox />
+      <Demo
+        classNames="d-flex flex-wrap align-content-end"
+        width="500px"
+        height="200px"
+      >
+        <InnerBox />
+        <InnerBox />
+        <InnerBox />
+        <InnerBox />
+        <InnerBox />
       </Demo>
       <Separator />
-      <Demo classNames="d-flex flex-wrap align-content-center" width="500px" height="200px">
-        <InnerBox /><InnerBox /><InnerBox /><InnerBox /><InnerBox />
+      <Demo
+        classNames="d-flex flex-wrap align-content-center"
+        width="500px"
+        height="200px"
+      >
+        <InnerBox />
+        <InnerBox />
+        <InnerBox />
+        <InnerBox />
+        <InnerBox />
       </Demo>
       <Separator />
-      <Demo classNames="d-flex flex-wrap align-content-between" width="500px" height="200px">
-        <InnerBox /><InnerBox /><InnerBox /><InnerBox /><InnerBox />
+      <Demo
+        classNames="d-flex flex-wrap align-content-between"
+        width="500px"
+        height="200px"
+      >
+        <InnerBox />
+        <InnerBox />
+        <InnerBox />
+        <InnerBox />
+        <InnerBox />
       </Demo>
       <Separator />
-      <Demo classNames="d-flex flex-wrap align-content-around" width="500px" height="200px">
-        <InnerBox /><InnerBox /><InnerBox /><InnerBox /><InnerBox />
+      <Demo
+        classNames="d-flex flex-wrap align-content-around"
+        width="500px"
+        height="200px"
+      >
+        <InnerBox />
+        <InnerBox />
+        <InnerBox />
+        <InnerBox />
+        <InnerBox />
       </Demo>
       <Separator />
-      <Demo classNames="d-flex flex-wrap align-content-stretch" width="500px" height="200px">
-        <InnerBox /><InnerBox /><InnerBox /><InnerBox /><InnerBox />
+      <Demo
+        classNames="d-flex flex-wrap align-content-stretch"
+        width="500px"
+        height="200px"
+      >
+        <InnerBox />
+        <InnerBox />
+        <InnerBox />
+        <InnerBox />
+        <InnerBox />
       </Demo>
 
       <h3 className="mt7">Grow and shrink</h3>
       <Demo classNames="d-inline-flex">
         <InnerBox>
-          In this example, this box has so much text in it that it would cause the other box
-          to break lines on the dash. But that box cannot shrink b/c it has the
+          In this example, this box has so much text in it that it would cause
+          the other box to break lines on the dash. But that box cannot shrink
+          b/c it has the
           <code>.flex-none</code> class.
         </InnerBox>
         <InnerBox className="flex-none">
@@ -256,9 +349,13 @@ function FlexboxUtilities() {
       </Demo>
       <Separator />
       <Demo classNames="d-flex">
-        <InnerBox className="flex-1"><code>.flex-1</code></InnerBox>
+        <InnerBox className="flex-1">
+          <code>.flex-1</code>
+        </InnerBox>
         <InnerBox />
-        <InnerBox className="flex-1"><code>.flex-1</code></InnerBox>
+        <InnerBox className="flex-1">
+          <code>.flex-1</code>
+        </InnerBox>
       </Demo>
     </div>
   );

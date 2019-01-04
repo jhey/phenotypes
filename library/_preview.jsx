@@ -3,7 +3,6 @@ import React from 'react';
 
 const ROOT_ELEMENT_ID_PREFIX = 'root-';
 
-
 // Basic component/variant server-side renderer
 // --------------------------------------------
 
@@ -26,7 +25,6 @@ class Variant extends React.Component {
   }
 }
 
-
 // Shuttles data to client-side React via <script>
 // -----------------------------------------------
 
@@ -34,18 +32,17 @@ class Shuttle extends React.Component {
   renderInner() {
     return {
       __html: `
-        window.__phenotypesReactData__ = ${JSON.stringify(this.props.data).replace(/</g, '\\u003c')};
+        window.__phenotypesReactData__ = ${JSON.stringify(
+          this.props.data,
+        ).replace(/</g, '\\u003c')};
       `,
     };
   }
 
   render() {
-    return (
-      <script dangerouslySetInnerHTML={this.renderInner()} />
-    );
+    return <script dangerouslySetInnerHTML={this.renderInner()} />;
   }
 }
-
 
 // Preview wrapper
 // ---------------
@@ -98,7 +95,7 @@ class Preview extends React.Component {
         <link media="all" rel="stylesheet" href="/css/preview.css" />
         <link media="all" rel="stylesheet" href="/css/phenotypes.css" />
 
-        {this.variants.map((variant) => {
+        {this.variants.map(variant => {
           const rootElementId = ROOT_ELEMENT_ID_PREFIX + variant.handle;
 
           // NOTE: server rendering only works for non-collated components

@@ -7,7 +7,7 @@ function getFillStyle(valueAsPercentage) {
     right: `${100 - valueAsPercentage}%`,
     // When the handle is at the left edge, hide the fill line (w/ left: 0) so that it doesn't
     // peak out to the left of the handle.
-    left: (valueAsPercentage === 0 ? 0 : null),
+    left: valueAsPercentage === 0 ? 0 : null,
   };
 }
 
@@ -15,13 +15,13 @@ function getTrackLineStyle(valueAsPercentage) {
   return {
     // When the handle is at one of the edges, bring the track in by one pixel so that it doesn't
     // peak out to the side of the handle.
-    left: (valueAsPercentage === 0 ? '1px' : null),
-    right: (valueAsPercentage === 100 ? '1px' : null),
+    left: valueAsPercentage === 0 ? '1px' : null,
+    right: valueAsPercentage === 100 ? '1px' : null,
   };
 }
 
 function getPercentage(value, min, max) {
-  const percentage = ((value - min) / (max - min)) || 0;
+  const percentage = (value - min) / (max - min) || 0;
   return percentage * 100;
 }
 
@@ -82,7 +82,7 @@ class Slider extends React.Component {
       eventX = track.right;
     }
 
-    let newValue = ((eventX - track.left) / track.width) * (max - min);
+    let newValue = (eventX - track.left) / track.width * (max - min);
     newValue = Math.round(newValue / step) * step; // rounds to nearest `step`
     newValue += min;
     newValue = cleanFloat(newValue);
@@ -216,10 +216,13 @@ class Slider extends React.Component {
         aria-valuemin={min}
         aria-valuenow={value}
         {...other}
-        ref={(element) => { this.slider = element }}
+        ref={element => {
+          this.slider = element;
+        }}
         className={classes('Slider', className, {
           'Slider--is-disabled': disabled,
-          'Slider--is-focused': !disabled && this.state.focused && !this.state.clicked,
+          'Slider--is-focused':
+            !disabled && this.state.focused && !this.state.clicked,
         })}
         tabIndex={disabled ? -1 : tabIndex}
         onMouseDown={!disabled && this.handleMouseDown}
@@ -228,8 +231,16 @@ class Slider extends React.Component {
         onBlur={!disabled && this.handleBlur}
         onKeyDown={!disabled && this.handleKeyDown}
       >
-        <div className="Slider__track-line" style={getTrackLineStyle(valueAsPercentage)} />
-        <div className="Slider__track" ref={(element) => { this.track = element }}>
+        <div
+          className="Slider__track-line"
+          style={getTrackLineStyle(valueAsPercentage)}
+        />
+        <div
+          className="Slider__track"
+          ref={element => {
+            this.track = element;
+          }}
+        >
           <div className="Slider__fill" style={getFillStyle(valueAsPercentage)}>
             <div className="Slider__handle" />
           </div>
