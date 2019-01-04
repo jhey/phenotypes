@@ -4,11 +4,8 @@
   "description": "Amino's design language and front-end component library",
   "dependencies": {
     "@babel/register": "^7.0.0",
-    "babel-plugin-module-resolver": "^3.1.1",
     "classnames": "^2.2.5",
-    "html": "^1.0.0",
     "keycode": "^2.1.9",
-    "lodash": "^4.17.11",
     "node-sass": "^4.5.3",
     "react": "15.4.2",
     "react-dom": "15.4.2"

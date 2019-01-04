@@ -14,10 +14,7 @@ fractal.docs.set('path', path.join(__dirname, 'guides'));
 fractal.web.set('static.path', path.join(__dirname, 'fractal_assets'));
 
 // React adapter for server-side rendering
-const reactAdapter = require('./fractal_react/adapter.js')({
-  // renderMethod: 'renderToString',
-  renderMethod: 'renderToStaticMarkup'
-});
+const reactAdapter = require('@aminohealth/fractal-react-adapter')();
 fractal.components.engine(reactAdapter);
 fractal.components.set('ext', '.jsx');
 
