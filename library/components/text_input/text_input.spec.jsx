@@ -7,8 +7,8 @@ import sinon from 'sinon';
 
 import TextInput from './text_input';
 
-describe('TextInput', function () {
-  it('should render text input element as default input type', function () {
+describe('TextInput', function() {
+  it('should render text input element as default input type', function() {
     const wrapper = shallow(<TextInput />);
     const input = wrapper.find('input');
 
@@ -17,7 +17,7 @@ describe('TextInput', function () {
     expect(inputProps.type).to.equal('text');
   });
 
-  it('should pass HTML attributes to input element and apply disabled class', function () {
+  it('should pass HTML attributes to input element and apply disabled class', function() {
     const wrapper = shallow(
       <TextInput
         aria-label="label"
@@ -35,7 +35,7 @@ describe('TextInput', function () {
         size="size"
         maxLength="maxLength"
         value="value"
-      />
+      />,
     );
 
     const inputProps = wrapper.find('input').props();
@@ -56,7 +56,7 @@ describe('TextInput', function () {
     expect(inputProps.value).to.equal('value');
   });
 
-  it('should call onBlur', function () {
+  it('should call onBlur', function() {
     const callMe = sinon.spy();
     const wrapper = shallow(<TextInput onBlur={callMe} />);
 
@@ -64,7 +64,7 @@ describe('TextInput', function () {
     expect(callMe.calledOnce).to.be.true;
   });
 
-  it('should call onChange', function () {
+  it('should call onChange', function() {
     const callMe = sinon.spy();
     const wrapper = shallow(<TextInput onChange={callMe} />);
 
@@ -72,7 +72,7 @@ describe('TextInput', function () {
     expect(callMe.calledOnce).to.be.true;
   });
 
-  it('should call onCopy', function () {
+  it('should call onCopy', function() {
     const callMe = sinon.spy();
     const wrapper = shallow(<TextInput onCopy={callMe} />);
 
@@ -80,7 +80,7 @@ describe('TextInput', function () {
     expect(callMe.calledOnce).to.be.true;
   });
 
-  it('should call onCut', function () {
+  it('should call onCut', function() {
     const callMe = sinon.spy();
     const wrapper = shallow(<TextInput onCut={callMe} />);
 
@@ -88,7 +88,7 @@ describe('TextInput', function () {
     expect(callMe.calledOnce).to.be.true;
   });
 
-  it('should call onFocus', function () {
+  it('should call onFocus', function() {
     const callMe = sinon.spy();
     const wrapper = shallow(<TextInput onFocus={callMe} />);
 
@@ -96,7 +96,7 @@ describe('TextInput', function () {
     expect(callMe.calledOnce).to.be.true;
   });
 
-  it('should call onInput', function () {
+  it('should call onInput', function() {
     const callMe = sinon.spy();
     const wrapper = shallow(<TextInput onInput={callMe} />);
 
@@ -104,7 +104,7 @@ describe('TextInput', function () {
     expect(callMe.calledOnce).to.be.true;
   });
 
-  it('should call onKeyDown', function () {
+  it('should call onKeyDown', function() {
     const callMe = sinon.spy();
     const wrapper = shallow(<TextInput onKeyDown={callMe} />);
 
@@ -112,7 +112,7 @@ describe('TextInput', function () {
     expect(callMe.calledOnce).to.be.true;
   });
 
-  it('should call onKeyUp', function () {
+  it('should call onKeyUp', function() {
     const callMe = sinon.spy();
     const wrapper = shallow(<TextInput onKeyUp={callMe} />);
 
@@ -120,7 +120,7 @@ describe('TextInput', function () {
     expect(callMe.calledOnce).to.be.true;
   });
 
-  it('should call onPaste', function () {
+  it('should call onPaste', function() {
     const callMe = sinon.spy();
     const wrapper = shallow(<TextInput onPaste={callMe} />);
 

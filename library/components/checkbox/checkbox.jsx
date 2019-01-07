@@ -14,7 +14,7 @@ function Checkbox(props) {
     >
       <input type="checkbox" className="Checkbox__input" {...htmlProps} />
       <span className="Checkbox__indicator" />
-      <span className="Checkbox__label">{ props.label }</span>
+      <span className="Checkbox__label">{props.label}</span>
     </label>
   );
 }

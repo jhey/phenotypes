@@ -50,7 +50,13 @@ class AnchorButton extends React.Component {
   }
 
   render() {
-    const { children, className, disabled, tabIndex, ...htmlProps } = this.props;
+    const {
+      children,
+      className,
+      disabled,
+      tabIndex,
+      ...htmlProps
+    } = this.props;
 
     return (
       <div
@@ -64,7 +70,9 @@ class AnchorButton extends React.Component {
           onClick={this.handleAnchorClick}
           onKeyDown={this.handleKeyDown}
           onKeyUp={this.handleKeyUp}
-          ref={(element) => { this.element = element }}
+          ref={element => {
+            this.element = element;
+          }}
           role="button"
           tabIndex={disabled ? -1 : tabIndex}
         >

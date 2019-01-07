@@ -18,8 +18,8 @@ function mockSyntheticEvent() {
   };
 }
 
-describe('Button', function () {
-  it('should render a button tag', function () {
+describe('Button', function() {
+  it('should render a button tag', function() {
     const wrapper = mount(<Button />);
     expect(wrapper.hasClass('Button')).to.be.true;
 
@@ -30,7 +30,7 @@ describe('Button', function () {
     expect(trueButton.props().type).to.equal('button');
   });
 
-  it('should render an anchor tag', function () {
+  it('should render an anchor tag', function() {
     const wrapper = mount(<Button href="/" />);
     expect(wrapper.hasClass('Button')).to.be.true;
 
@@ -41,7 +41,7 @@ describe('Button', function () {
     expect(anchorButton.props().role).to.equal('button');
   });
 
-  it('should handle clicks on a button tag', function () {
+  it('should handle clicks on a button tag', function() {
     const onClickSpy = sinon.spy();
     const wrapper = mount(<Button onClick={onClickSpy} />);
     const trueButton = wrapper.find('button');
@@ -50,7 +50,7 @@ describe('Button', function () {
     expect(onClickSpy.calledOnce).to.be.true;
   });
 
-  it('should handle clicks on an anchor tag', function () {
+  it('should handle clicks on an anchor tag', function() {
     const onClickSpy = sinon.spy();
 
     const wrapper = mount(<Button href="/" onClick={onClickSpy} />);
@@ -62,7 +62,7 @@ describe('Button', function () {
     expect(eventSpy.stopPropagation.calledOnce).to.be.false;
   });
 
-  it('should handle clicks on an anchor tag with "href=#"', function () {
+  it('should handle clicks on an anchor tag with "href=#"', function() {
     const wrapper = mount(<Button href="#" />);
     const anchorButton = wrapper.find('a');
 
@@ -72,7 +72,7 @@ describe('Button', function () {
     expect(eventSpy.stopPropagation.calledOnce).to.be.false;
   });
 
-  it('should disable a button tag', function () {
+  it('should disable a button tag', function() {
     const onClickSpy = sinon.spy();
     const wrapper = mount(<Button onClick={onClickSpy} disabled />);
     const trueButton = wrapper.find('button');
@@ -84,7 +84,7 @@ describe('Button', function () {
     expect(onClickSpy.callCount).to.equal(0);
   });
 
-  it('should disable an anchor tag', function () {
+  it('should disable an anchor tag', function() {
     const onClickSpy = sinon.spy();
 
     const wrapper = mount(<Button href="/" onClick={onClickSpy} disabled />);

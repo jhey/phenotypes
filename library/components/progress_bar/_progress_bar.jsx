@@ -12,7 +12,7 @@ class ProgressBarExample extends React.Component {
 
   incrementIndex() {
     const nextIndex = this.state.progress + 1;
-    this.goToIndex((nextIndex <= this.props.size) ? nextIndex : 0);
+    this.goToIndex(nextIndex <= this.props.size ? nextIndex : 0);
   }
 
   goToIndex(index) {
@@ -27,15 +27,14 @@ class ProgressBarExample extends React.Component {
         <div className="text-2 mb1">{label}</div>
         <div className="d-flex align-items-center">
           <div className="flex-1">
-            <ProgressBar
-              {...props}
-              progress={this.state.progress}
-            />
+            <ProgressBar {...props} progress={this.state.progress} />
           </div>
           <div className="ml5">
             <Button
               className="Button--small"
-              onClick={() => { this.incrementIndex() }}
+              onClick={() => {
+                this.incrementIndex();
+              }}
             >
               Next
             </Button>

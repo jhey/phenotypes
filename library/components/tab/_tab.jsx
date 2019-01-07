@@ -17,7 +17,10 @@ class TabExample extends React.Component {
             <Tab
               key={index}
               active={this.state.activeTab === index}
-              onClick={() => !(tab.props && tab.props.href) && this.setState({ activeTab: index })}
+              onClick={() =>
+                !(tab.props && tab.props.href) &&
+                this.setState({ activeTab: index })
+              }
               {...tab.props}
             >
               {tab.name}
