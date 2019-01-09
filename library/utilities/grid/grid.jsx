@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 
 function GridExamples() {
   return (
@@ -65,4 +65,4 @@ function GridExamples() {
   );
 }
 
-module.exports = GridExamples;
+export default GridExamples;

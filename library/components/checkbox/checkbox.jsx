@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import classes from 'classnames';
 
 function Checkbox(props) {
@@ -19,4 +19,4 @@ function Checkbox(props) {
   );
 }
 
-module.exports = Checkbox;
+export default Checkbox;

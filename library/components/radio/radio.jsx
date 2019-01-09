@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import classes from 'classnames';
 
 function Radio(props) {
@@ -19,4 +19,4 @@ function Radio(props) {
   );
 }
 
-module.exports = Radio;
+export default Radio;

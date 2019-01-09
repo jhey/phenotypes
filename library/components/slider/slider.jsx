@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import classes from 'classnames';
 import keycode from 'keycode';
 
@@ -268,4 +268,4 @@ Slider.defaultProps = {
   value: null,
 };
 
-module.exports = Slider;
+export default Slider;

@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import classes from 'classnames';
 
 const INPUT_TYPES = {
@@ -41,4 +41,4 @@ TextInput.defaultProps = {
   type: 'text',
 };
 
-module.exports = TextInput;
+export default TextInput;

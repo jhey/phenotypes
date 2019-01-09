@@ -1,5 +1,5 @@
-const React = require('react');
-const classes = require('classnames');
+import * as React from 'react';
+import classes from 'classnames';
 
 class Switch extends React.Component {
   constructor(props, context) {
@@ -60,4 +60,4 @@ class Switch extends React.Component {
   }
 }
 
-module.exports = Switch;
+export default Switch;

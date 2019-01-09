@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import classes from 'classnames';
 
 function Example({ size }) {
@@ -35,4 +35,4 @@ function SizingExamples() {
   );
 }
 
-module.exports = SizingExamples;
+export default SizingExamples;

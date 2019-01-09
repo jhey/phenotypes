@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import Tab from './tab.jsx';
 
 class TabExample extends React.Component {
@@ -8,7 +8,6 @@ class TabExample extends React.Component {
   }
 
   render() {
-    /* eslint-disable react/no-array-index-key */
     return (
       <div>
         <p>{this.props.description}</p>
@@ -33,4 +32,4 @@ class TabExample extends React.Component {
   }
 }
 
-module.exports = TabExample;
+export default TabExample;

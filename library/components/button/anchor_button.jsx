@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import classes from 'classnames';
 import keycode from 'keycode';
 
@@ -83,4 +83,4 @@ class AnchorButton extends React.Component {
   }
 }
 
-module.exports = AnchorButton;
+export default AnchorButton;

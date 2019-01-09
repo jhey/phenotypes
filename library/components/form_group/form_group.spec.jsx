@@ -1,6 +1,5 @@
 /* eslint-env mocha */
-/* eslint-disable prefer-arrow-callback, no-unused-expressions */
-import React from 'react';
+import * as React from 'react';
 import { mount, shallow } from 'enzyme';
 import { expect } from 'chai';
 

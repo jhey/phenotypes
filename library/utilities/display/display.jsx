@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 
 function DisplayUtilities() {
   return (
@@ -40,4 +40,4 @@ function DisplayUtilities() {
   );
 }
 
-module.exports = DisplayUtilities;
+export default DisplayUtilities;

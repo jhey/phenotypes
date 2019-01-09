@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 
 function MessageExamples() {
   return (
@@ -18,4 +18,4 @@ function MessageExamples() {
   );
 }
 
-module.exports = MessageExamples;
+export default MessageExamples;

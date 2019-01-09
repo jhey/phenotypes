@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 
 function SpacingUtilities() {
   return (
@@ -21,5 +21,4 @@ function SpacingUtilities() {
     </div>
   );
 }
-
-module.exports = SpacingUtilities;
+export default SpacingUtilities;
