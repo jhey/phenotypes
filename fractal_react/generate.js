@@ -11,7 +11,8 @@ function writeComponentsMapFile(app) {
   const relFile = path.join(thisDir, COMPONENTS_MAPPING_FILENAME);
   const file = path.join(__dirname, COMPONENTS_MAPPING_FILENAME);
 
-  let buffer = '/* NOTE: This file is auto-generated while Fractal is running! */\n\n';
+  let buffer =
+    '/* NOTE: This file is auto-generated while Fractal is running! */\n\n';
   buffer += 'module.exports = {\n';
 
   function addComponentToBundle(component) {
@@ -22,7 +23,7 @@ function writeComponentsMapFile(app) {
   }
 
   function addCollectionToBundle(collection) {
-    collection.forEach((item) => {
+    collection.forEach(item => {
       if (item.isCollection) {
         addCollectionToBundle(item);
       } else {
@@ -35,9 +36,11 @@ function writeComponentsMapFile(app) {
 
   buffer += '};\n';
 
-  fs.writeFile(file, buffer, (err) => {
+  fs.writeFile(file, buffer, err => {
     if (err) throw err;
-    console.log(`Component handles and paths successfully written to ${relFile} + '\n\n`);
+    console.log(
+      `Component handles and paths successfully written to ${relFile} + '\n\n`
+    );
   });
 }
 

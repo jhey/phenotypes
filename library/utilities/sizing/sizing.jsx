@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import classes from 'classnames';
 
 function Example({ size }) {
@@ -9,7 +9,9 @@ function Example({ size }) {
           .width-{size}.height-{size}
         </code>
       </p>
-      <div className={classes(`width-${size}`, `height-${size}`, 'sizing-example')} />
+      <div
+        className={classes(`width-${size}`, `height-${size}`, 'sizing-example')}
+      />
       <hr />
     </div>
   );
@@ -33,4 +35,4 @@ function SizingExamples() {
   );
 }
 
-module.exports = SizingExamples;
+export default SizingExamples;

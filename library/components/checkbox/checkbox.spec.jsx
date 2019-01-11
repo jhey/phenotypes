@@ -1,14 +1,13 @@
 /* eslint-env mocha */
-/* eslint-disable prefer-arrow-callback, no-unused-expressions */
-import React from 'react';
+import * as React from 'react';
 import { shallow } from 'enzyme';
 import { expect } from 'chai';
 import sinon from 'sinon';
 
 import Checkbox from './checkbox';
 
-describe('Checkbox', function () {
-  it('should render input element', function () {
+describe('Checkbox', function() {
+  it('should render input element', function() {
     const wrapper = shallow(<Checkbox label="foo" />);
     const input = wrapper.find('input');
 
@@ -17,7 +16,7 @@ describe('Checkbox', function () {
     expect(inputProps.type).to.equal('checkbox');
   });
 
-  it('should pass HTML attributes to input element', function () {
+  it('should pass HTML attributes to input element', function() {
     const wrapper = shallow(
       <Checkbox
         className="className"
@@ -26,7 +25,7 @@ describe('Checkbox', function () {
         name="name"
         value="value"
         checked="checked"
-      />
+      />,
     );
 
     const inputProps = wrapper.find('input').props();
@@ -38,8 +37,7 @@ describe('Checkbox', function () {
     expect(inputProps.checked).to.equal('checked');
   });
 
-
-  it('should call onChange', function () {
+  it('should call onChange', function() {
     const callMe = sinon.spy();
     const wrapper = shallow(<Checkbox onChange={callMe} />);
 

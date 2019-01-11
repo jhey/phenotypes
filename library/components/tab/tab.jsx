@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import classes from 'classnames';
 
 class Tab extends React.Component {
@@ -16,10 +16,20 @@ class Tab extends React.Component {
   }
 
   render() {
-    const { active, className, onClick, href, children, ...htmlProps } = this.props;
+    const {
+      active,
+      className,
+      onClick: _onClick_,
+      href,
+      children,
+      ...htmlProps
+    } = this.props;
 
     return active ? (
-      <span className={classes('Tab', 'Tab--is-active', className)} {...htmlProps}>
+      <span
+        className={classes('Tab', 'Tab--is-active', className)}
+        {...htmlProps}
+      >
         {children}
       </span>
     ) : (
@@ -40,4 +50,4 @@ Tab.defaultProps = {
   active: false,
 };
 
-module.exports = Tab;
+export default Tab;

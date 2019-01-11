@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import classes from 'classnames';
 
 function Checkbox(props) {
@@ -14,9 +14,9 @@ function Checkbox(props) {
     >
       <input type="checkbox" className="Checkbox__input" {...htmlProps} />
       <span className="Checkbox__indicator" />
-      <span className="Checkbox__label">{ props.label }</span>
+      <span className="Checkbox__label">{props.label}</span>
     </label>
   );
 }
 
-module.exports = Checkbox;
+export default Checkbox;

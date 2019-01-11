@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 
 const BUTTON_TYPES = {
   button: 'button',
@@ -32,4 +32,4 @@ TrueButton.defaultProps = {
   type: 'button',
 };
 
-module.exports = TrueButton;
+export default TrueButton;

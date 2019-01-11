@@ -1,5 +1,5 @@
-const React = require('react');
-const Switch = require('./switch.jsx');
+import * as React from 'react';
+import Switch from './switch.jsx';
 
 class SwitchExample extends React.Component {
   constructor(props, context) {
@@ -33,4 +33,4 @@ class SwitchExample extends React.Component {
   }
 }
 
-module.exports = SwitchExample;
+export default SwitchExample;

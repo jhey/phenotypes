@@ -1,7 +1,7 @@
-import React from 'react';
+import * as React from 'react';
 import Slider from './slider.jsx';
 
-module.exports = function demos() {
+export default function demos() {
   return (
     <div>
       <SliderDemo value={50} min={0} max={100} step={1} />
@@ -9,7 +9,7 @@ module.exports = function demos() {
       <SliderDemo value={25} min={0} max={100} step={1} disabled />
     </div>
   );
-};
+}
 
 class SliderDemo extends React.Component {
   constructor(props, context) {
@@ -24,7 +24,9 @@ class SliderDemo extends React.Component {
       <div className="mb7">
         <Slider
           {...props}
-          onChange={(newValue) => { this.setState({ value: newValue }) }}
+          onChange={newValue => {
+            this.setState({ value: newValue });
+          }}
         />
         <div className="mt1 text-color-secondary text-2">
           <code>{JSON.stringify(props)}</code>

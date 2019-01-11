@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import Radio from './radio.jsx';
 
 function ManagedRadio(radioProps) {
@@ -43,4 +43,4 @@ RadioGroup.defaultProps = {
   clearable: false,
 };
 
-module.exports = RadioGroup;
+export default RadioGroup;

@@ -1,11 +1,9 @@
-import React from 'react';
+import * as React from 'react';
 
 function MessageExamples() {
   return (
     <div>
-      <div className="Message Message--success">
-        You did good.
-      </div>
+      <div className="Message Message--success">You did good.</div>
 
       <br />
 
@@ -15,11 +13,9 @@ function MessageExamples() {
 
       <br />
 
-      <div className="Message Message--danger">
-        ...we’ve got a problem.
-      </div>
+      <div className="Message Message--danger">...we’ve got a problem.</div>
     </div>
   );
 }
 
-module.exports = MessageExamples;
+export default MessageExamples;

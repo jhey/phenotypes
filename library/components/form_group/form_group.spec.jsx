@@ -1,20 +1,21 @@
 /* eslint-env mocha */
-/* eslint-disable prefer-arrow-callback, no-unused-expressions */
-import React from 'react';
+import * as React from 'react';
 import { mount, shallow } from 'enzyme';
 import { expect } from 'chai';
 
 import FormGroup from './form_group';
 
-describe('FormGroup', function () {
-  it('should apply error class', function () {
+describe('FormGroup', function() {
+  it('should apply error class', function() {
     const withError = shallow(<FormGroup error="error" />);
     expect(withError.hasClass('FormGroup--has-error')).to.be.true;
   });
 
-  it('should render FormGroup__elements', function () {
+  it('should render FormGroup__elements', function() {
     const withoutElements = shallow(<FormGroup />);
-    const withElements = shallow(<FormGroup label="label" error="error" hint="hint" />);
+    const withElements = shallow(
+      <FormGroup label="label" error="error" hint="hint" />,
+    );
 
     expect(withoutElements.find('.FormGroup__label')).to.have.length(0);
     expect(withoutElements.find('.FormGroup__error')).to.have.length(0);
@@ -27,16 +28,16 @@ describe('FormGroup', function () {
     expect(withElements.find('.FormGroup__hint')).to.have.length(1);
   });
 
-  it('should render children', function () {
+  it('should render children', function() {
     const wrapper = mount(
       <FormGroup label="label" error="error" hint="hint">
         <div className="test-child" />
-      </FormGroup>
+      </FormGroup>,
     );
     expect(wrapper.find('.test-child')).to.have.length(1);
   });
 
-  it('should apply controlId to label', function () {
+  it('should apply controlId to label', function() {
     const wrapper = shallow(<FormGroup label="label" controlId="control-id" />);
     expect(wrapper.find('label').props().htmlFor).to.equal('control-id');
   });

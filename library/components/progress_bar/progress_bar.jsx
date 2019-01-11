@@ -1,6 +1,5 @@
-/* eslint-disable react/no-array-index-key */
-const React = require('react');
-const classes = require('classnames');
+import * as React from 'react';
+import classes from 'classnames';
 
 function ProgressBar({ className, stepClassName, progress, size }) {
   return (
@@ -22,4 +21,4 @@ ProgressBar.defaultProps = {
   stepClassName: 'flex-1',
 };
 
-module.exports = ProgressBar;
+export default ProgressBar;

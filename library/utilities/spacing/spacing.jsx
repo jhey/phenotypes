@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 
 function SpacingUtilities() {
   return (
@@ -13,10 +13,12 @@ function SpacingUtilities() {
         className="text-color-reversed-primary p3 p4-sm p5-md p6-lg p7-xl m3 m4-sm m5-md m6-lg
                    m7-xl h6 h5-sm h4-md h3-lg h2-xl"
       >
-        <span role="img" aria-label="rocket">🚀</span> I’m going to space (resize me)
+        <span role="img" aria-label="rocket">
+          🚀
+        </span>{' '}
+        I’m going to space (resize me)
       </h4>
     </div>
   );
 }
-
-module.exports = SpacingUtilities;
+export default SpacingUtilities;

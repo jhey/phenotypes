@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import classes from 'classnames';
 
 function Radio(props) {
@@ -14,9 +14,9 @@ function Radio(props) {
     >
       <input type="radio" className="Radio__input" {...inputProps} />
       <span className="Radio__indicator" />
-      <span className="Radio__label">{ children }</span>
+      <span className="Radio__label">{children}</span>
     </label>
   );
 }
 
-module.exports = Radio;
+export default Radio;

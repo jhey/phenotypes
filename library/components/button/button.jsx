@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import classes from 'classnames';
 
 import AnchorButton from './anchor_button.jsx';
@@ -18,4 +18,4 @@ function Button(props) {
   );
 }
 
-module.exports = Button;
+export default Button;

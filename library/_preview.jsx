@@ -1,8 +1,6 @@
-/* eslint-disable react/no-multi-comp */
-import React from 'react';
+import * as React from 'react';
 
 const ROOT_ELEMENT_ID_PREFIX = 'root-';
-
 
 // Basic component/variant server-side renderer
 // --------------------------------------------
@@ -15,7 +13,6 @@ class Variant extends React.Component {
   }
 
   render() {
-    /* eslint-disable react/no-danger */
     return (
       <div
         id={this.props.rootElementId}
@@ -26,7 +23,6 @@ class Variant extends React.Component {
   }
 }
 
-
 // Shuttles data to client-side React via <script>
 // -----------------------------------------------
 
@@ -34,18 +30,17 @@ class Shuttle extends React.Component {
   renderInner() {
     return {
       __html: `
-        window.__phenotypesReactData__ = ${JSON.stringify(this.props.data).replace(/</g, '\\u003c')};
+        window.__phenotypesReactData__ = ${JSON.stringify(
+          this.props.data,
+        ).replace(/</g, '\\u003c')};
       `,
     };
   }
 
   render() {
-    return (
-      <script dangerouslySetInnerHTML={this.renderInner()} />
-    );
+    return <script dangerouslySetInnerHTML={this.renderInner()} />;
   }
 }
-
 
 // Preview wrapper
 // ---------------
@@ -59,7 +54,6 @@ class Shuttle extends React.Component {
 class Preview extends React.Component {
   constructor(props) {
     super(props);
-    /* eslint-disable no-underscore-dangle */
     this.isCollated = this.props._target.component.isCollated;
     this.variants = this.collectVariants();
     this.shuttleData = this.compileShuttleData();
@@ -98,7 +92,7 @@ class Preview extends React.Component {
         <link media="all" rel="stylesheet" href="/css/preview.css" />
         <link media="all" rel="stylesheet" href="/css/phenotypes.css" />
 
-        {this.variants.map((variant) => {
+        {this.variants.map(variant => {
           const rootElementId = ROOT_ELEMENT_ID_PREFIX + variant.handle;
 
           // NOTE: server rendering only works for non-collated components
@@ -123,4 +117,4 @@ class Preview extends React.Component {
   }
 }
 
-module.exports = Preview;
+export default Preview;
