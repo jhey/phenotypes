@@ -45,7 +45,7 @@
   $dot-size: modular-scale-px(-6);
 
   @include text-4;
-  padding-left: $size + $spacer-3;
+  padding-left: $size + $spacer-2;
 
   .Radio__indicator {
     height: $size;
@@ -139,7 +139,7 @@
   &::after {
     background-color: $white;
     border-radius: 50%;
-    content: '';
+    content: "";
     display: none;
     position: absolute;
   }
@@ -154,12 +154,22 @@
     @include media-breakpoint-up($breakpoint) {
       $suffix: breakpoint-suffix($breakpoint, $grid-breakpoints);
 
-      .Radio--small#{$suffix} { @include radio-small; }
-      .Radio--medium#{$suffix} { @include radio-medium; }
-      .Radio--large#{$suffix} { @include radio-large; }
+      .Radio--small#{$suffix} {
+        @include radio-small;
+      }
+      .Radio--medium#{$suffix} {
+        @include radio-medium;
+      }
+      .Radio--large#{$suffix} {
+        @include radio-large;
+      }
     }
   }
 } @else {
-  .Radio--small { @include radio-small; }
-  .Radio--large { @include radio-large; }
+  .Radio--small {
+    @include radio-small;
+  }
+  .Radio--large {
+    @include radio-large;
+  }
 }
