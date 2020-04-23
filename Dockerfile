@@ -1,4 +1,4 @@
-FROM node:boron
+FROM node:12.16.2-stretch-slim
 
 ENV NPM_CONFIG_LOGLEVEL warn
 
