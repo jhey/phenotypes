@@ -4,11 +4,12 @@ import babel from '@rollup/plugin-babel';
 import commonjs from '@rollup/plugin-commonjs';
 import resolve from '@rollup/plugin-node-resolve';
 import replace from '@rollup/plugin-replace';
+import {WORKSPACE_ROOT} from './constants.js';
 
 export default {
-    input: path.resolve(__dirname, 'fractal_react', 'client.jsx'),
+    input: path.resolve(WORKSPACE_ROOT, 'fractal_react', 'client.jsx'),
     output: {
-        file: path.resolve(__dirname, 'fractal_assets', 'js', 'bundle.js'),
+        file: path.resolve(WORKSPACE_ROOT, 'fractal_assets', 'js', 'bundle.js'),
         // output as an Immediately Invoked Function Expression
         format: 'iife'
     },
