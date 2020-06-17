@@ -145,6 +145,14 @@ The following command will install Phenotypes into `@aminohealth/phenotypes`:
 $ npm install @aminohealth/phenotypes --save
 ```
 
+Phenotypes relies on a few peer dependencies that are exluded from the final build in order to ensure there are no duplicate libraries that are shipped when you use it within your application. You will need to install these alongside Phenotypes to ensure that the React components work correctly. These include:
+
+* @babel/runtime
+* classnames
+* keycode
+* react
+* react-dom
+
 All of the react components are available as named imports from `@aminohealth/phenotypes`. In order to use the react components in your project import them like you would any other library. Example below:
 
 ```jsx

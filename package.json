@@ -11,6 +11,7 @@
     "react-dom": "15.4.2"
   },
   "peerDependencies": {
+    "@babel/runtime": "7.x",
     "classnames": "2.x",
     "keycode": "2.x",
     "react": "14.x || 15.x || 16.x",
