@@ -46,7 +46,8 @@
     "start-prod": "npm run build-all & fractal start",
     "start": "fractal start --sync & npm run watch-all",
     "build-library": "rollup --config ./configs/rollup.phenotypes-library.config.js",
-    "watch-library": "rollup --config ./configs/rollup.phenotypes-library.config.js --watch"
+    "watch-library": "rollup --config ./configs/rollup.phenotypes-library.config.js --watch",
+    "prepublish": "npm run build-library"
   },
   "repository": {
     "type": "git",
