@@ -139,13 +139,32 @@ Then publish the release:
 
 ## Using Phenotypes components and styles in a project
 
-The following command will install Phenotypes into `node_modules/@aminohealth/phenotypes`:
+The following command will install Phenotypes into `@aminohealth/phenotypes`:
 
 ```
-$ npm install @aminohealth/phenotypes --save --production
+$ npm install @aminohealth/phenotypes --save
 ```
 
-The `--production` flag indicates that you just want the Phenotypes codebase and no development dependencies (like Fractal). React components will be in `node_modules/@aminohealth/phenotypes/components` and SCSS/css will be in `node_modules/@aminohealth/phenotypes/styles`. You'll be responsible for setting up node_sass, webpack, or whatever else will be utilizing these resources in your project.
+Phenotypes relies on a few peer dependencies that are exluded from the final build in order to ensure there are no duplicate libraries that are shipped when you use it within your application. You will need to install these alongside Phenotypes to ensure that the React components work correctly. These include:
+
+* @babel/runtime
+* classnames
+* keycode
+* react
+* react-dom
+
+All of the react components are available as named imports from `@aminohealth/phenotypes`. In order to use the react components in your project import them like you would any other library. Example below:
+
+```jsx
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { Button } from '@aminohealth/phenotypes';
+
+ReactDOM.render(
+  <Button>Click Me!</Button>,
+  document.body
+)
+```
 
 [npm-url]: https://www.npmjs.com/package/@aminohealth/phenotypes
 [npm-version-image]: https://img.shields.io/npm/v/@aminohealth/phenotypes.svg?style=flat

@@ -3,16 +3,23 @@
   "version": "7.1.1",
   "description": "Amino's design language and front-end component library",
   "dependencies": {
+    "@babel/runtime": "^7.10.2",
     "classnames": "^2.2.5",
     "keycode": "^2.1.9",
     "node-sass": "4.13.1",
     "react": "15.4.2",
     "react-dom": "15.4.2"
   },
+  "peerDependencies": {
+    "@babel/runtime": "7.x",
+    "classnames": "2.x",
+    "keycode": "2.x",
+    "react": "14.x || 15.x || 16.x",
+    "react-dom": "14.x || 15.x || 16.x"
+  },
   "devDependencies": {
     "@aminohealth/fractal-react-adapter": "^1.0.0",
     "@babel/core": "^7.2.2",
-    "@babel/preset-react": "^7.10.1",
     "@babel/register": "^7.0.0",
     "@frctl/fractal": "^1.1.4",
     "@frctl/mandelbrot": "^1.1.0",
@@ -20,7 +27,7 @@
     "@rollup/plugin-commonjs": "^13.0.0",
     "@rollup/plugin-node-resolve": "^8.0.1",
     "@rollup/plugin-replace": "^2.3.3",
-    "babel-preset-airbnb": "^3.2.0",
+    "babel-preset-airbnb": "^5.0.0",
     "chai": "^4.0.2",
     "enzyme": "^2.8.2",
     "jsdom": "^11.0.0",
@@ -33,12 +40,15 @@
     "test": "mocha --compilers js:@babel/register --require tests/test_setup.js --recursive library/components/**/*.spec.jsx",
     "build-css": "node-sass styles/phenotypes.scss styles/phenotypes.css",
     "watch-css": "npm run build-css && node-sass -w -r styles/ -o styles/",
-    "build-js": "rollup --config",
-    "watch-js": "rollup --config --watch",
+    "build-js": "rollup --config ./configs/rollup.fractal-development.config.js",
+    "watch-js": "rollup --config ./configs/rollup.fractal-development.config.js --watch",
     "build-all": "npm run build-js && npm run build-css",
     "watch-all": "npm run watch-css & npm run watch-js",
     "start-prod": "npm run build-all & fractal start",
-    "start": "fractal start --sync & npm run watch-all"
+    "start": "fractal start --sync & npm run watch-all",
+    "build-library": "rollup --config ./configs/rollup.phenotypes-library.config.js",
+    "watch-library": "rollup --config ./configs/rollup.phenotypes-library.config.js --watch",
+    "prepublish": "npm run build-library"
   },
   "repository": {
     "type": "git",
@@ -50,5 +60,6 @@
     "url": "https://github.com/aminohealth/phenotypes/issues"
   },
   "homepage": "https://github.com/aminohealth/phenotypes#readme",
-  "main": "fractal.js"
+  "module": "./dist/phenotypes.esm.js",
+  "main": "./dist/phenotypes.cjs.js"
 }
