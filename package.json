@@ -29,7 +29,9 @@
     "@rollup/plugin-replace": "^2.3.3",
     "babel-preset-airbnb": "^5.0.0",
     "chai": "^4.0.2",
+    "chokidar": "^3.4.0",
     "enzyme": "^2.8.2",
+    "fs-extra": "^9.0.1",
     "jsdom": "^11.0.0",
     "mocha": "^3.4.2",
     "react-addons-test-utils": "15.4.2",
@@ -38,8 +40,8 @@
   },
   "scripts": {
     "test": "mocha --compilers js:@babel/register --require tests/test_setup.js --recursive library/components/**/*.spec.jsx",
-    "build-css": "node-sass styles/phenotypes.scss styles/phenotypes.css",
-    "watch-css": "npm run build-css && node-sass -w -r styles/ -o styles/",
+    "build-css": "node scripts/buildScss.js",
+    "watch-css": "npm run build-css && node scripts/watchScss.js",
     "build-js": "rollup --config ./configs/rollup.fractal-development.config.js",
     "watch-js": "rollup --config ./configs/rollup.fractal-development.config.js --watch",
     "build-all": "npm run build-js && npm run build-css",
@@ -48,7 +50,8 @@
     "start": "fractal start --sync & npm run watch-all",
     "build-library": "rollup --config ./configs/rollup.phenotypes-library.config.js",
     "watch-library": "rollup --config ./configs/rollup.phenotypes-library.config.js --watch",
-    "prepublish": "npm run build-library"
+    "copyAssets": "node scripts/copyLibraryAssets.js",
+    "prepublishOnly": "npm run build-library && npm run build-css && npm run copyAssets"
   },
   "repository": {
     "type": "git",
@@ -61,5 +64,7 @@
   },
   "homepage": "https://github.com/aminohealth/phenotypes#readme",
   "module": "./dist/phenotypes.esm.js",
-  "main": "./dist/phenotypes.cjs.js"
+  "main": "./dist/phenotypes.cjs.js",
+  "style": "./dist/css/phenotypes.css",
+  "scss": "./styles/phenotypes.scss"
 }
