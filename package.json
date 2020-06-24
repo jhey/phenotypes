@@ -66,5 +66,5 @@
   "module": "./dist/phenotypes.esm.js",
   "main": "./dist/phenotypes.cjs.js",
   "style": "./dist/css/phenotypes.css",
-  "scss": "./styles/phenotypes.scss"
+  "sass": "./styles/phenotypes.scss"
 }
