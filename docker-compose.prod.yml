@@ -1,4 +1,4 @@
 version: "3.0"
 services:
   fractal:
-    command: npm run start-prod
+    command: npm run startProd
