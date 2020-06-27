@@ -2,7 +2,10 @@ const path = require('path');
 const { promisify } = require('util');
 const nodeSass = require('node-sass');
 const fs = require('fs-extra');
+const postcss = require('postcss');
+const postcssPresetEnv = require('postcss-preset-env');
 const outputFile = promisify(fs.outputFile);
+const nodeSassRender = promisify(nodeSass.render);
 
 const PHENOTYPES = 'phenotypes';
 const WORKSPACE_ROOT = path.resolve(__dirname, '..');
@@ -19,25 +22,32 @@ function compileScss(changedPath) {
   if (changedPath) {
     console.log(`=> changed: ${changedPath}`);
   }
-  return nodeSass.render(
-    {
-      file: PHENOTYPES_SCSS,
-    },
-    (err, result) => {
-      if (err) {
-        console.error(err);
-      } else {
-        logGreen('Rendering Complete, saving .css file...');
-        outputFile(PHENOTYPES_CSS, result.css)
-          .then(() => {
-            logGreen(`Wrote CSS to ${PHENOTYPES_CSS}`);
-          })
-          .catch((err) => {
-            console.error('error:', err);
-          });
+  return nodeSassRender({
+    file: PHENOTYPES_SCSS,
+  })
+    .then((result) => {
+      logGreen('Rendering Complete, saving .css files...');
+      return outputFile(PHENOTYPES_CSS, result.css).then(() => {
+        logGreen(`Wrote CSS to ${PHENOTYPES_CSS}`);
+      });
+    })
+    .catch((err) => {
+      console.error(err);
+    });
+}
+
+function stripVariablesFromCss(css) {
+  return postcss([
+    postcssPresetEnv({
+      features: {
+        'custom-properties': {
+          preserve: false
+        }
       }
-    }
-  );
+    }),
+  ])
+    .process(css)
+    .catch((err) => console.error(err));
 }
 
 module.exports = {

@@ -1,0 +1,16 @@
+:root {
+    --interactivity-color: #{$blue-200};
+    --interactivity-color-reversed: #{$blue-100};
+
+    --alert-color-positive: #{$green-300};
+    --alert-color-negative: #{$green-100};
+    --alert-color-neutral: #{$orange-200};
+    --alert-color-positive-reversed: #{$red-200};
+    --alert-color-negative-reversed: #{$red-200};
+    --alert-color-neutral-reversed: #{$orange-200};
+
+    --accent-color-decorative-1: #{$purple-300};
+    --accent-color-decorative-2: #{$purple-200};
+
+    --widget-fill-color: #{$green-200};
+}

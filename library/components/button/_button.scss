@@ -114,7 +114,7 @@
 .Button--primary {
   .Button__control {
     @include depth(4);
-    background: $blue;
+    background: var(--interactivity-color);
     color: $white;
     font-weight: $font-weight-bold;
 
