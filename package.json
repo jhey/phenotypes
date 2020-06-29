@@ -51,7 +51,7 @@
     "buildLibrary": "rollup --config ./configs/rollup.phenotypes-library.config.js",
     "watchLibrary": "rollup --config ./configs/rollup.phenotypes-library.config.js --watch",
     "copyAssets": "node scripts/copyLibraryAssets.js",
-    "prepublishOnly": "npm run watchLibrary && npm run buildCss && npm run copyAssets"
+    "prepublishOnly": "npm run buildLibrary && npm run buildCss && npm run copyAssets"
   },
   "repository": {
     "type": "git",
