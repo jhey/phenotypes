@@ -1,4 +1,10 @@
 {
-  "plugins": ["@babel/plugin-transform-modules-commonjs"],
-  "presets": ["airbnb"]
+  "presets": [
+    [
+      "airbnb",
+      {
+        "transformRuntime": false
+      }
+    ]
+  ]
 }

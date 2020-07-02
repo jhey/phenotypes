@@ -24,16 +24,16 @@ Here's how to get Phenotypes up and running locally:
 
 While running, Fractal will watch your `components` and `guides` directories for changes. It will automatically reload itself and your browser as needed.
 
-There are a couple other background watcher processes running that automatically compile JS and CSS as needed (`watch-js` and `watch-css`, respectively).
+There are a couple other background watcher processes running that automatically compile JS and CSS as needed (`watchJs` and `watchCss`, respectively).
 
-The `watch-js` script has Webpack automatically rebuild the client-side React bundle whenever components are changed. Here's the basic sequence of events:
+The `watchJs` script has Rollup automatically rebuild the client-side React bundle whenever components are changed. Here's the basic sequence of events:
 
 * You update a component
 * Fractal notices and fires an event on the server side
 * We write out a mapping file of all components
-* Webpack (via `watch-js`) detects that the component mapping file has changed and rebuilds the client-side rendering bundle
+* Rollup (via `watchJs`) detects that the component mapping file has changed and rebuilds the client-side rendering bundle
 
-The `watch-css` script recompiles `phenotypes.css` whenever a SASS file in the `/styles` directory tree changes. Note: phenotypes.css is version controlled so that it can be used in a project without requiring SASS. It's also symlinked into `/fractal_assets/css` so that it can be used in the Fractal preview.
+The `watchCss` script recompiles `phenotypes.css` whenever a SASS file in the `/styles` or `/library` directory tree changes. Note: phenotypes.css is version controlled so that it can be used in a project without requiring SASS. It's also symlinked into `/fractal_assets/css` so that it can be used in the Fractal preview.
 
 To stop the server, just hit `^C`. If something weird is going on, try `make clean && make dev`.
 
@@ -114,7 +114,7 @@ Component styles are imported next. Each component should get its own stylesheet
 
 Finally, utilities are imported. Similarly to mixins, each utility gets its own file in `styles/utilities`. E.g. `styles/utilities/_spacing.scss` contains spacing utilities. The utility files are aggregated together into `_utilities.scss`, which is imported into the main `phenotypes.scss` file.
 
-The compiled CSS is provided as `styles/phenotypes.css`. Using the SASS stylesheet is preferred, as you'll get access to all the variables and mixins. But for a simple project, it might make more sense to just use the pre-baked CSS.
+The compiled CSS is provided as `@aminohealth/dist/phenotypes.css`. Using the SASS stylesheet is preferred, as you'll get access to all the variables and mixins. But for a simple project, it might make more sense to just use the pre-baked CSS.
 
 ## Publishing a release to npm
 
@@ -139,13 +139,32 @@ Then publish the release:
 
 ## Using Phenotypes components and styles in a project
 
-The following command will install Phenotypes into `node_modules/@aminohealth/phenotypes`:
+The following command will install Phenotypes into `@aminohealth/phenotypes`:
 
 ```
-$ npm install @aminohealth/phenotypes --save --production
+$ npm install @aminohealth/phenotypes --save
 ```
 
-The `--production` flag indicates that you just want the Phenotypes codebase and no development dependencies (like Fractal). React components will be in `node_modules/@aminohealth/phenotypes/components` and SCSS/css will be in `node_modules/@aminohealth/phenotypes/styles`. You'll be responsible for setting up node_sass, webpack, or whatever else will be utilizing these resources in your project.
+Phenotypes relies on a few peer dependencies that are exluded from the final build in order to ensure there are no duplicate libraries that are shipped when you use it within your application. You will need to install these alongside Phenotypes to ensure that the React components work correctly. These include:
+
+* @babel/runtime
+* classnames
+* keycode
+* react
+* react-dom
+
+All of the react components are available as named imports from `@aminohealth/phenotypes`. In order to use the react components in your project import them like you would any other library. Example below:
+
+```jsx
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { Button } from '@aminohealth/phenotypes';
+
+ReactDOM.render(
+  <Button>Click Me!</Button>,
+  document.body
+)
+```
 
 [npm-url]: https://www.npmjs.com/package/@aminohealth/phenotypes
 [npm-version-image]: https://img.shields.io/npm/v/@aminohealth/phenotypes.svg?style=flat
