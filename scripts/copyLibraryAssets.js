@@ -3,7 +3,7 @@ const { promisify } = require('util');
 const fs = require('fs-extra');
 const copy = promisify(fs.copy);
 const {
-  paths: { DIST_DIR, STYLES_DIR, PHENOTYPES_CSS },
+  paths: { DIST_DIR, STYLES_DIR, PHENOTYPES_CSS, PHENOTYPES_THEMABLE_CSS },
   logGreen,
 } = require('./compileScss');
 
@@ -14,6 +14,12 @@ const DIST_CSS = path.resolve(DIST_DIR, 'css');
 function copyAssets() {
   copy(PHENOTYPES_CSS, path.resolve(DIST_CSS, 'phenotypes.css'))
     .then(() => logGreen('Copied phenotypes.css to dist directory.'))
+    .catch((err) => console.error(err));
+  copy(
+    PHENOTYPES_THEMABLE_CSS,
+    path.resolve(DIST_CSS, 'phenotypes.themable.css')
+  )
+    .then(() => logGreen(`Copied phenotypes.themable.css to dist directory.`))
     .catch((err) => console.error(err));
   copy(SAILEC_CSS, path.resolve(DIST_CSS, 'sailec.css'))
     .then(() => logGreen('Copied sailec.css to dist directory.'))

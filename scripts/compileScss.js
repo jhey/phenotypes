@@ -52,7 +52,10 @@ function compileScss(changedPath) {
       return [
         outputFile(PHENOTYPES_THEMABLE_CSS, cssThemable).then(() => {
           logGreen(`Wrote themable CSS to ${PHENOTYPES_THEMABLE_CSS}`);
-          return copy(PHENOTYPES_THEMABLE_CSS, path.resolve(FRACTAL_CSS_ASSETS, 'phenotypes.themable.css'));
+          return copy(
+            PHENOTYPES_THEMABLE_CSS,
+            path.resolve(FRACTAL_CSS_ASSETS, 'phenotypes.themable.css')
+          );
         }),
         outputFile(PHENOTYPES_CSS, cssWithNoVariables).then(() => {
           logGreen(`Wrote non themable CSS to ${PHENOTYPES_CSS}`);
@@ -71,5 +74,6 @@ module.exports = {
     DIST_DIR,
     STYLES_DIR,
     PHENOTYPES_CSS,
+    PHENOTYPES_THEMABLE_CSS,
   },
 };
