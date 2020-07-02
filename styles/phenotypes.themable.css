@@ -1282,7 +1282,7 @@ hr {
   position: absolute;
   z-index: -1; }
   .Switch__input:checked ~ .Switch__indicator {
-    background-color: #2dcfa1; }
+    background-color: var(--widget-on-color); }
     .Switch__input:checked ~ .Switch__indicator .Switch__toggler {
       right: 2px; }
   .Switch__input:disabled ~ .Switch__indicator {

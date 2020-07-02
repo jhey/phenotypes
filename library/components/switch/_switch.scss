@@ -64,7 +64,7 @@
   z-index: -1;
 
   &:checked ~ .Switch__indicator {
-    background-color: $green-200;
+    background-color: var(--widget-on-color);
 
     .Switch__toggler {
       right: $border-width;
