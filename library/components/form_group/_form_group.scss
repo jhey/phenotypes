@@ -30,7 +30,7 @@
 
     .FormGroup__hint {
       @include text-1;
-      color: $text-color-secondary;
+      color: var(--text-color-secondary);
       margin-top: $spacer-2;
     }
   }

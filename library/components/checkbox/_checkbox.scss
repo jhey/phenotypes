@@ -108,7 +108,7 @@
   }
 
   &:disabled ~ .Checkbox__label {
-    color: $text-color-secondary;
+    color: var(--text-color-secondary);
   }
 }
 
