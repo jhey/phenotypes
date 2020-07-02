@@ -1,37 +1,36 @@
 :root {
   // base variable set
-  --text-color-primary: $text-color-primary;
-  --text-color-secondary: $text-color-secondary;
-  --text-color-hint: $text-color-hint;
-  --text-color-primary-reversed: $text-color-primary-reversed;
-  --text-color-secondary-reversed: $text-color-secondary-reversed;
-  --text-color-hint-reversed: $text-color-hint-reversed;
+  --text-color-primary: #{$text-color-primary};
+  --text-color-secondary: #{$text-color-secondary};
+  --text-color-hint: #{$text-color-hint};
+  --text-color-primary-reversed: #{$text-color-reversed-primary};
+  --text-color-secondary-reversed: #{$text-color-reversed-secondary};
+  --text-color-hint-reversed: #{$text-color-reversed-hint};
 
   --brand-color-primary: #{$purple-300};
-  --brand-color-accent-1: #{$purple-400};
+  --message-info-bg-color: var(--brand-color-primary);
 
-  --data-color: #{$green-200};
-  --data-color-reversed: #{$green-100};
+  --step-progress-active-color: #{$purple-200};
+
+  --brand-color-accent: #{$orange-200};
 
   --positive-color: #{$green-200};
   --widget-on-color: var(--positive-color);
-  --toast-success-bg-color: var(--positive-color);
+
+  --message-success-bg-color: #{$green-300};
 
   --negative-color: #{$red-200};
-  --toast-error-bg-color: var(--negative-color);
+  --error-color: var(--negative-color);
+  --message-danger-bg-color: var(--error-color);
+  --danger-button-color: var(--negative-color);
 
   --warning-color: #{$orange-200};
 
+
   --interactive-color: #{$blue-200};
-  --toast-info-bg-color: var(--interactive-color);
   --primary-button-color: var(--interactive-color);
   --link-color: var(--interactive-color);
-
-  --bg-color-light: #{$gray-100};
-  --bg-color-dark: #{$gray-800};
-
-
   --link-color-reversed: #{$blue-100};
+
   --focus-color:#{blue-100};
-  --typeahead-selection-color:
 }

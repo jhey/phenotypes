@@ -64,32 +64,29 @@
   src: url("webfonts/33AD5D_3_0.eot?#iefix") format("embedded-opentype"), url("webfonts/33AD5D_3_0.woff2") format("woff2"), url("webfonts/33AD5D_3_0.woff") format("woff"), url("webfonts/33AD5D_3_0.ttf") format("truetype"); }
 
 :root {
-  --text-color-primary: $text-color-primary;
-  --text-color-secondary: $text-color-secondary;
-  --text-color-hint: $text-color-hint;
-  --text-color-primary-reversed: $text-color-primary-reversed;
-  --text-color-secondary-reversed: $text-color-secondary-reversed;
-  --text-color-hint-reversed: $text-color-hint-reversed;
+  --text-color-primary: rgba(0, 0, 0, 0.86);
+  --text-color-secondary: rgba(0, 0, 0, 0.54);
+  --text-color-hint: rgba(0, 0, 0, 0.41);
+  --text-color-primary-reversed: #fff;
+  --text-color-secondary-reversed: rgba(255, 255, 255, 0.76);
+  --text-color-hint-reversed: rgba(255, 255, 255, 0.59);
   --brand-color-primary: #853b94;
-  --brand-color-accent-1: #58166e;
-  --data-color: #2dcfa1;
-  --data-color-reversed: #89f0cf;
+  --message-info-bg-color: var(--brand-color-primary);
+  --step-progress-active-color: #b35dba;
+  --brand-color-accent: #fc8626;
   --positive-color: #2dcfa1;
   --widget-on-color: var(--positive-color);
-  --toast-success-bg-color: var(--positive-color);
+  --message-success-bg-color: #03ab8c;
   --negative-color: #f04d5d;
-  --toast-error-bg-color: var(--negative-color);
+  --error-color: var(--negative-color);
+  --message-danger-bg-color: var(--error-color);
+  --danger-button-color: var(--negative-color);
   --warning-color: #fc8626;
   --interactive-color: #16b8e0;
-  --toast-info-bg-color: var(--interactive-color);
   --primary-button-color: var(--interactive-color);
   --link-color: var(--interactive-color);
-  --bg-color-light: #f9f9f9;
-  --bg-color-dark: #232323;
   --link-color-reversed: #7feaff;
-  --focus-color:blue-100;
-  --typeahead-selection-color:
-; }
+  --focus-color:blue-100; }
 
 html {
   box-sizing: border-box;
