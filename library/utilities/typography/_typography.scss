@@ -47,7 +47,7 @@
 
 .text-color-inherit { color: inherit !important; }
 
-.text-color-primary   { color: $text-color-primary   !important; }
+.text-color-primary   { color: var(--text-color-primary)   !important; }
 .text-color-secondary { color: $text-color-secondary !important; }
 .text-color-hint      { color: $text-color-hint      !important; }
 

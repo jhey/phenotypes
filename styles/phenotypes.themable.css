@@ -410,7 +410,7 @@ hr {
   background: rgba(0, 0, 0, 0.07);
   border: 0;
   border-radius: 3px;
-  color: rgba(0, 0, 0, 0.86);
+  color: var(--text-color-primary);
   cursor: pointer;
   display: inline-block;
   font-weight: normal;
@@ -429,7 +429,7 @@ hr {
 .Button__control:focus {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.14), 0 1px 1px rgba(0, 0, 0, 0.07), 0 0 6px rgba(0, 0, 0, 0.07);
   background: rgba(0, 0, 0, 0.12);
-  color: rgba(0, 0, 0, 0.86);
+  color: var(--text-color-primary);
   text-decoration: none;
   transform: translateY(-2.25px) scaleX(1.015) scaleY(1.015);
   transition-duration: .08s; }
@@ -1301,7 +1301,7 @@ hr {
   -webkit-appearance: none;
   border: 2px solid #dbdbdb;
   border-radius: 3px;
-  color: rgba(0, 0, 0, 0.86);
+  color: var(--text-color-primary);
   line-height: 1.49271;
   width: 100%; }
   .TextInput::placeholder {
@@ -5993,7 +5993,7 @@ hr {
   color: inherit !important; }
 
 .text-color-primary {
-  color: rgba(0, 0, 0, 0.86) !important; }
+  color: var(--text-color-primary) !important; }
 
 .text-color-secondary {
   color: rgba(0, 0, 0, 0.54) !important; }
