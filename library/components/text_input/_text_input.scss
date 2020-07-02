@@ -36,7 +36,7 @@
   width: 100%;
 
   &::placeholder {
-    color: $text-color-hint;
+    color: var(--text-color-hint);
     // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526.
     opacity: 1;
   }
@@ -52,7 +52,7 @@
 .TextInput[readonly] {
   background: $gray-200;
   border-color: $gray-200;
-  color: $text-color-hint;
+  color: var(--text-color-hint);
   cursor: not-allowed;
   opacity: 1; // some browsers (e.g. iOS Safari) reduce opacity
 }

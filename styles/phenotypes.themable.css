@@ -1305,7 +1305,7 @@ hr {
   line-height: 1.49271;
   width: 100%; }
   .TextInput::placeholder {
-    color: rgba(0, 0, 0, 0.41);
+    color: var(--text-color-hint);
     opacity: 1; }
 
 .TextInput:focus {
@@ -1317,7 +1317,7 @@ hr {
 .TextInput[readonly] {
   background: #eee;
   border-color: #eee;
-  color: rgba(0, 0, 0, 0.41);
+  color: var(--text-color-hint);
   cursor: not-allowed;
   opacity: 1; }
 
@@ -5999,7 +5999,7 @@ hr {
   color: var(--text-color-secondary) !important; }
 
 .text-color-hint {
-  color: rgba(0, 0, 0, 0.41) !important; }
+  color: var(--text-color-hint) !important; }
 
 .text-color-reversed-primary {
   color: #fff !important; }

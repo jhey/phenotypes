@@ -49,7 +49,7 @@
 
 .text-color-primary   { color: var(--text-color-primary)   !important; }
 .text-color-secondary { color: var(--text-color-secondary) !important; }
-.text-color-hint      { color: $text-color-hint      !important; }
+.text-color-hint      { color: var(--text-color-hint)      !important; }
 
 .text-color-reversed-primary   { color: $text-color-reversed-primary   !important; }
 .text-color-reversed-secondary { color: $text-color-reversed-secondary !important; }
