@@ -819,15 +819,15 @@ hr {
   padding: 16px; }
 
 .Message--success {
-  background-color: #03ab8c;
+  background-color: var(--message-success-bg-color);
   color: #fff; }
 
 .Message--info {
-  background-color: #853b94;
+  background-color: var(--message-info-bg-color);
   color: #fff; }
 
 .Message--danger {
-  background-color: #f04d5d;
+  background-color: var(--message-danger-bg-color);
   color: #fff; }
 
 .Radio {

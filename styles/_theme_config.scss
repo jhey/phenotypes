@@ -7,7 +7,7 @@
   --text-color-secondary-reversed: #{$text-color-reversed-secondary};
   --text-color-hint-reversed: #{$text-color-reversed-hint};
 
-  --brand-color-primary: #{$purple-300};
+  --brand-color-primary: #{$brand-primary};
   --message-info-bg-color: var(--brand-color-primary);
 
   --step-progress-active-color: #{$purple-200};
@@ -24,8 +24,7 @@
   --message-danger-bg-color: var(--error-color);
   --danger-button-color: var(--negative-color);
 
-  --warning-color: #{$orange-200};
-
+  --warning-color: #{$brand-warning};
 
   --interactive-color: #{$blue-200};
   --primary-button-color: var(--interactive-color);
