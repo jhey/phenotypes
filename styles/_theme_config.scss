@@ -20,6 +20,7 @@
   --widget-on-color: var(--positive-color);
   --focus-color: #{$blue-100};
   --link-color: var(--interactive-color);
+  --link-hover-color: #{$link-hover-color};
   --link-color-reversed: #{$blue-100};
 
   --message-success-bg-color: #{$green-300};

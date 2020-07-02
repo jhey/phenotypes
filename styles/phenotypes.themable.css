@@ -81,6 +81,7 @@
   --widget-on-color: var(--positive-color);
   --focus-color: #7feaff;
   --link-color: var(--interactive-color);
+  --link-hover-color: #008ab3;
   --link-color-reversed: #7feaff;
   --message-success-bg-color: #03ab8c;
   --message-info-bg-color: var(--brand-color-primary);
@@ -194,12 +195,12 @@ sup {
   top: -.5em; }
 
 a {
-  color: #16b8e0;
+  color: var(--link-color);
   text-decoration: none;
   background-color: transparent;
   -webkit-text-decoration-skip: objects; }
   a:hover {
-    color: #008ab3;
+    color: var(--link-hover-color);
     text-decoration: underline; }
 
 a:not([href]):not([tabindex]) {
