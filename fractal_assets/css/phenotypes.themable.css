@@ -6002,13 +6002,13 @@ hr {
   color: var(--text-color-hint) !important; }
 
 .text-color-reversed-primary {
-  color: #fff !important; }
+  color: var(--text-color-primary-reversed) !important; }
 
 .text-color-reversed-secondary {
-  color: rgba(255, 255, 255, 0.76) !important; }
+  color: var(--text-color-secondary-reversed) !important; }
 
 .text-color-reversed-hint {
-  color: rgba(255, 255, 255, 0.59) !important; }
+  color: var(--text-color-hint-reversed) !important; }
 
 .text-color-orange {
   color: #fc8626 !important; }

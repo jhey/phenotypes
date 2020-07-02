@@ -51,9 +51,9 @@
 .text-color-secondary { color: var(--text-color-secondary) !important; }
 .text-color-hint      { color: var(--text-color-hint)      !important; }
 
-.text-color-reversed-primary   { color: $text-color-reversed-primary   !important; }
-.text-color-reversed-secondary { color: $text-color-reversed-secondary !important; }
-.text-color-reversed-hint      { color: $text-color-reversed-hint      !important; }
+.text-color-reversed-primary   { color: var(--text-color-primary-reversed)   !important; }
+.text-color-reversed-secondary { color: var(--text-color-secondary-reversed) !important; }
+.text-color-reversed-hint      { color: var(--text-color-hint-reversed)      !important; }
 
 .text-color-orange { color: $orange !important; }
 .text-color-orange-100 { color: $orange-100 !important; }
