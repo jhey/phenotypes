@@ -1156,7 +1156,7 @@ hr {
   .ProgressBar__step:last-child {
     margin-right: 0; }
   .ProgressBar__step::after {
-    background-color: #b35dba;
+    background-color: var(--step-progress-active-color);
     box-shadow: 0 0 7px 0 #e39ae3;
     content: ' ';
     height: 100%;

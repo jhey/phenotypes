@@ -23,7 +23,7 @@
   }
 
   &::after {
-    background-color: $purple-200;
+    background-color: var(--step-progress-active-color);
     box-shadow: 0 0 modular-scale-px(-6) 0 $purple-100;
     content: ' ';
     height: 100%;
