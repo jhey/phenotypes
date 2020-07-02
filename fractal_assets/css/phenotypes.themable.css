@@ -71,22 +71,26 @@
   --text-color-secondary-reversed: rgba(255, 255, 255, 0.76);
   --text-color-hint-reversed: rgba(255, 255, 255, 0.59);
   --brand-color-primary: #853b94;
-  --message-info-bg-color: var(--brand-color-primary);
-  --step-progress-active-color: #b35dba;
   --brand-color-accent: #fc8626;
   --positive-color: #2dcfa1;
-  --widget-on-color: var(--positive-color);
-  --message-success-bg-color: #03ab8c;
   --negative-color: #f04d5d;
-  --error-color: var(--negative-color);
-  --message-danger-bg-color: var(--error-color);
-  --danger-button-color: var(--negative-color);
   --warning-color: #fc8626;
+  --error-color: var(--negative-color);
   --interactive-color: #16b8e0;
-  --primary-button-color: var(--interactive-color);
+  --step-progress-active-color: #b35dba;
+  --widget-on-color: var(--positive-color);
+  --focus-color: #7feaff;
   --link-color: var(--interactive-color);
   --link-color-reversed: #7feaff;
-  --focus-color: #7feaff; }
+  --message-success-bg-color: #03ab8c;
+  --message-info-bg-color: var(--brand-color-primary);
+  --message-danger-bg-color: var(--error-color);
+  --danger-button-color: var(--negative-color);
+  --danger-button-focus-color: #ee3548;
+  --danger-button-active-color: #ec192e;
+  --primary-button-color: var(--interactive-color);
+  --primary-button-focus-color: #14a5c9;
+  --primary-button-active-color: #118ead; }
 
 html {
   box-sizing: border-box;
@@ -455,31 +459,31 @@ hr {
   cursor: not-allowed; }
 
 .Button--danger .Button__control {
-  background: #f04d5d;
+  background: var(--danger-button-color);
   color: #fff;
   font-weight: bold; }
   .Button--danger .Button__control:hover, .Button--danger .Button__control:focus {
-    background: #ee3548;
+    background: var(--danger-button-focus-color);
     color: #fff; }
 
 .Button--danger .Button__control:active,
 .Button--danger.Button--is-active .Button__control {
-  background: #ec192e; }
+  background: var(--danger-button-active-color); }
 
 .Button--primary .Button__control {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.14), 0 1px 1px rgba(0, 0, 0, 0.07), 0 0 6px rgba(0, 0, 0, 0.07);
-  background: #16b8e0;
+  background: var(--primary-button-color);
   color: #fff;
   font-weight: bold; }
   .Button--primary .Button__control:hover, .Button--primary .Button__control:focus {
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.14), 0 1px 2px rgba(0, 0, 0, 0.07), 0 0 10px rgba(0, 0, 0, 0.07);
-    background: #14a5c9;
+    background: var(--primary-button-focus-color);
     color: #fff; }
 
 .Button--primary .Button__control:active,
 .Button--primary.Button--is-active .Button__control {
   box-shadow: none;
-  background: #118ead; }
+  background: var(--primary-button-active-color); }
 
 .Button--link .Button__control .Button__control {
   background: transparent;

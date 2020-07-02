@@ -91,20 +91,20 @@
 
 .Button--danger {
   .Button__control {
-    background: $red;
+    background: var(--danger-button-color);
     color: $white;
     font-weight: $font-weight-bold;
 
     &:hover,
     &:focus {
-      background: darken($red, 5);
+      background: var(--danger-button-focus-color);
       color: $white;
     }
   }
 
   .Button__control:active,
   &.Button--is-active .Button__control {
-    background: darken($red, 11);
+    background: var(--danger-button-active-color);
   }
 }
 
@@ -114,14 +114,14 @@
 .Button--primary {
   .Button__control {
     @include depth(4);
-    background: $blue;
+    background: var(--primary-button-color);
     color: $white;
     font-weight: $font-weight-bold;
 
     &:hover,
     &:focus {
       @include depth(7);
-      background: darken($blue, 5);
+      background: var(--primary-button-focus-color);
       color: $white;
     }
   }
@@ -129,7 +129,7 @@
   .Button__control:active,
   &.Button--is-active .Button__control {
     @include depth(0);
-    background: darken($blue, 11);
+    background: var(--primary-button-active-color);
   }
 }
 
