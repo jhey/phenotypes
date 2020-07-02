@@ -86,7 +86,7 @@
   --primary-button-color: var(--interactive-color);
   --link-color: var(--interactive-color);
   --link-color-reversed: #7feaff;
-  --focus-color:blue-100; }
+  --focus-color: #7feaff; }
 
 html {
   box-sizing: border-box;
@@ -1205,7 +1205,7 @@ hr {
   top: -10px;
   width: 24px; }
   .Slider__handle::after {
-    background-color: #7feaff;
+    background-color: var(--focus-color);
     border-radius: 50%;
     bottom: 7px;
     box-shadow: 0 0 5px 0 rgba(127, 234, 255, 0.7);
@@ -1228,7 +1228,7 @@ hr {
   background-color: rgba(0, 0, 0, 0.14); }
 
 .Slider__fill {
-  background-color: #2dcfa1; }
+  background-color: var(--widget-on-color); }
 
 .Slider__handle {
   background-color: #fff; }
