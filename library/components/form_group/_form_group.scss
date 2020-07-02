@@ -19,7 +19,7 @@
 
     .FormGroup__error {
       @include text-2;
-      color: $brand-danger;
+      color: var(--error-color);
       margin-top: $spacer-2;
 
       &::before {

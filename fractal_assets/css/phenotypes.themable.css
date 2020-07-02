@@ -1309,7 +1309,7 @@ hr {
     opacity: 1; }
 
 .TextInput:focus {
-  border-color: #7feaff;
+  border-color: var(--focus-color);
   box-shadow: 0 0 11px rgba(127, 234, 255, 0.41);
   outline: 0; }
 
@@ -1323,7 +1323,7 @@ hr {
 
 .TextInput--has-error,
 .FormGroup--has-error .TextInput {
-  border-color: #f04d5d; }
+  border-color: var(--error-color); }
   .TextInput--has-error.TextInput:focus,
   .FormGroup--has-error .TextInput.TextInput:focus {
     box-shadow: 0 0 11px rgba(255, 151, 154, 0.54); }
@@ -1411,7 +1411,7 @@ hr {
   line-height: 21px;
   letter-spacing: 0px;
   font-weight: normal;
-  color: #f04d5d;
+  color: var(--error-color);
   margin-top: 7px; }
   .FormGroup__error::before {
     content: '✘ ';
@@ -1450,7 +1450,7 @@ hr {
   line-height: 21px;
   letter-spacing: 0px;
   font-weight: normal;
-  color: #f04d5d;
+  color: var(--error-color);
   margin-top: 7px; }
   .FormGroup--medium .FormGroup__error::before {
     content: '✘ ';
@@ -1505,7 +1505,7 @@ hr {
     line-height: 21px;
     letter-spacing: 0px;
     font-weight: normal;
-    color: #f04d5d;
+    color: var(--error-color);
     margin-top: 7px; }
     .FormGroup--medium-sm .FormGroup__error::before {
       content: '✘ ';
@@ -1556,7 +1556,7 @@ hr {
     line-height: 21px;
     letter-spacing: 0px;
     font-weight: normal;
-    color: #f04d5d;
+    color: var(--error-color);
     margin-top: 7px; }
     .FormGroup--medium-md .FormGroup__error::before {
       content: '✘ ';
@@ -1607,7 +1607,7 @@ hr {
     line-height: 21px;
     letter-spacing: 0px;
     font-weight: normal;
-    color: #f04d5d;
+    color: var(--error-color);
     margin-top: 7px; }
     .FormGroup--medium-lg .FormGroup__error::before {
       content: '✘ ';
@@ -1658,7 +1658,7 @@ hr {
     line-height: 21px;
     letter-spacing: 0px;
     font-weight: normal;
-    color: #f04d5d;
+    color: var(--error-color);
     margin-top: 7px; }
     .FormGroup--medium-xl .FormGroup__error::before {
       content: '✘ ';

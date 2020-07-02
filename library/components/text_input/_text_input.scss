@@ -43,7 +43,7 @@
 }
 
 .TextInput:focus {
-  border-color: $blue-100;
+  border-color: var(--focus-color);
   box-shadow: 0 0 11px rgba($blue-100, $alpha-500);
   outline: 0;
 }
@@ -59,7 +59,7 @@
 
 .TextInput--has-error,
 .FormGroup--has-error .TextInput {
-  border-color: $red;
+  border-color: var(--error-color);
 
   &.TextInput:focus {
     box-shadow: 0 0 11px rgba($red-100, $alpha-600);
