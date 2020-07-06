@@ -70,7 +70,7 @@
 
   &:focus ~ .Checkbox__indicator {
     border-color: $blue-100;
-    box-shadow: 0 0 11px rgba($blue-100, $alpha-500);
+    box-shadow: 0 0 11px rgba(var(--focus-color-rgb), $alpha-500);
   }
 
   &:active ~ .Checkbox__indicator {
@@ -86,7 +86,7 @@
 
   &:checked:focus ~ .Checkbox__indicator {
     border-color: $gray-800;
-    box-shadow: 0 0 0 2px rgba($blue-200, $alpha-400);
+    box-shadow: 0 0 0 2px rgba(var(--interactive-color-rgb), $alpha-400);
   }
 
   &:checked:active ~ .Checkbox__indicator {

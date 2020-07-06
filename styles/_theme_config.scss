@@ -7,23 +7,22 @@
   --text-color-secondary-reversed: #{$text-color-reversed-secondary};
   --text-color-hint-reversed: #{$text-color-reversed-hint};
 
-  --brand-color-primary: #{$brand-primary};
-  --brand-color-accent: #{$orange-200};
-  --positive-color: #{$green-200};
-  --negative-color: #{$brand-danger};
-  --warning-color: #{$brand-warning};
+  @include color-variable(--brand-color-primary, $brand-primary);
+  @include color-variable(--brand-color-accent, $orange-200);
+  @include color-variable(--positive-color, $green-200);
+  @include color-variable(--negative-color, $brand-danger);
+  @include color-variable(--warning-color, $brand-warning);
+  @include color-variable(--interactive-color, $blue-200);
   --error-color: var(--negative-color);
-  --interactive-color: #{$blue-200};
 
-
-  --step-progress-active-color: #{$purple-200};
-  --widget-on-color: var(--positive-color);
-  --focus-color: #{$blue-100};
   --link-color: var(--interactive-color);
-  --link-hover-color: #{$link-hover-color};
-  --link-color-reversed: #{$blue-100};
+  @include color-variable(--link-hover-color, $link-hover-color);
+  @include color-variable(--link-color-reversed, $blue-100);
+  @include color-variable(--step-progress-active-color, $purple-200);
+  @include color-variable(--focus-color, $blue-100);
+  --widget-on-color: var(--positive-color);
 
-  --message-success-bg-color: #{$green-300};
+  @include color-variable(--message-success-bg-color, $green-300);
   --message-info-bg-color: var(--brand-color-primary);
   --message-danger-bg-color: var(--error-color);
 

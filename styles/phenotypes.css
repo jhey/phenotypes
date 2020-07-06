@@ -166,12 +166,12 @@ sup {
   top: -.5em; }
 
 a {
-  color: #16b8e0;
+  color: rgb(22, 184, 224);
   text-decoration: none;
   background-color: transparent;
   -webkit-text-decoration-skip: objects; }
   a:hover {
-    color: #008ab3;
+    color: rgb(0, 138, 179);
     text-decoration: underline; }
 
 a:not([href]):not([tabindex]) {
@@ -431,7 +431,7 @@ hr {
   cursor: not-allowed; }
 
 .Button--danger .Button__control {
-  background: #f04d5d;
+  background: rgb(240, 77, 93);
   color: #fff;
   font-weight: bold; }
   .Button--danger .Button__control:hover, .Button--danger .Button__control:focus {
@@ -444,7 +444,7 @@ hr {
 
 .Button--primary .Button__control {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.14), 0 1px 1px rgba(0, 0, 0, 0.07), 0 0 6px rgba(0, 0, 0, 0.07);
-  background: #16b8e0;
+  background: rgb(22, 184, 224);
   color: #fff;
   font-weight: bold; }
   .Button--primary .Button__control:hover, .Button--primary .Button__control:focus {
@@ -798,15 +798,15 @@ hr {
   padding: 16px; }
 
 .Message--success {
-  background-color: #03ab8c;
+  background-color: rgb(3, 171, 140);
   color: #fff; }
 
 .Message--info {
-  background-color: #853b94;
+  background-color: rgb(133, 59, 148);
   color: #fff; }
 
 .Message--danger {
-  background-color: #f04d5d;
+  background-color: rgb(240, 77, 93);
   color: #fff; }
 
 .Radio {
@@ -1138,12 +1138,12 @@ hr {
   .ProgressBar__step:last-child {
     margin-right: 0; }
   .ProgressBar__step::after {
-    background-color: #b35dba;
-    box-shadow: 0 0 7px 0 #e39ae3;
-    content: ' ';
+    background-color: rgb(179, 93, 186);
+    box-shadow: 0 0 7px 0 rgba(179, 93, 186, 0.54);
+    content: " ";
     height: 100%;
     opacity: 0;
-    transition: opacity .2s linear;
+    transition: opacity 0.2s linear;
     width: 100%; }
 
 .ProgressBar__step--active::after {
@@ -1187,7 +1187,7 @@ hr {
   top: -10px;
   width: 24px; }
   .Slider__handle::after {
-    background-color: #7feaff;
+    background-color: rgb(127, 234, 255);
     border-radius: 50%;
     bottom: 7px;
     box-shadow: 0 0 5px 0 rgba(127, 234, 255, 0.7);
@@ -1210,7 +1210,7 @@ hr {
   background-color: rgba(0, 0, 0, 0.14); }
 
 .Slider__fill {
-  background-color: #2dcfa1; }
+  background-color: rgb(45, 207, 161); }
 
 .Slider__handle {
   background-color: #fff; }
@@ -1243,7 +1243,7 @@ hr {
   top: 2px;
   transition: right .15s ease-out; }
   .Switch__toggler::after {
-    background-color: #7feaff;
+    background-color: rgb(127, 234, 255);
     border-radius: 50%;
     box-shadow: 0 0 5px 0 rgba(127, 234, 255, 0.7);
     content: ' ';
@@ -1259,7 +1259,7 @@ hr {
   position: absolute;
   z-index: -1; }
   .Switch__input:checked ~ .Switch__indicator {
-    background-color: #2dcfa1; }
+    background-color: rgb(45, 207, 161); }
     .Switch__input:checked ~ .Switch__indicator .Switch__toggler {
       right: 2px; }
   .Switch__input:disabled ~ .Switch__indicator {
@@ -1300,7 +1300,7 @@ hr {
     opacity: 1; }
 
 .TextInput:focus {
-  border-color: #7feaff;
+  border-color: rgb(127, 234, 255);
   box-shadow: 0 0 11px rgba(127, 234, 255, 0.41);
   outline: 0; }
 
@@ -1314,10 +1314,10 @@ hr {
 
 .TextInput--has-error,
 .FormGroup--has-error .TextInput {
-  border-color: #f04d5d; }
+  border-color: rgb(240, 77, 93); }
   .TextInput--has-error.TextInput:focus,
   .FormGroup--has-error .TextInput.TextInput:focus {
-    box-shadow: 0 0 11px rgba(255, 151, 154, 0.54); }
+    box-shadow: 0 0 11px rgba(240, 77, 93, 0.54); }
 
 .TextInput--medium,
 .FormGroup--medium .TextInput {
@@ -1402,7 +1402,7 @@ hr {
   line-height: 21px;
   letter-spacing: 0px;
   font-weight: normal;
-  color: #f04d5d;
+  color: rgb(240, 77, 93);
   margin-top: 7px; }
   .FormGroup__error::before {
     content: '✘ ';
@@ -1441,7 +1441,7 @@ hr {
   line-height: 21px;
   letter-spacing: 0px;
   font-weight: normal;
-  color: #f04d5d;
+  color: rgb(240, 77, 93);
   margin-top: 7px; }
   .FormGroup--medium .FormGroup__error::before {
     content: '✘ ';
@@ -1496,7 +1496,7 @@ hr {
     line-height: 21px;
     letter-spacing: 0px;
     font-weight: normal;
-    color: #f04d5d;
+    color: rgb(240, 77, 93);
     margin-top: 7px; }
     .FormGroup--medium-sm .FormGroup__error::before {
       content: '✘ ';
@@ -1547,7 +1547,7 @@ hr {
     line-height: 21px;
     letter-spacing: 0px;
     font-weight: normal;
-    color: #f04d5d;
+    color: rgb(240, 77, 93);
     margin-top: 7px; }
     .FormGroup--medium-md .FormGroup__error::before {
       content: '✘ ';
@@ -1598,7 +1598,7 @@ hr {
     line-height: 21px;
     letter-spacing: 0px;
     font-weight: normal;
-    color: #f04d5d;
+    color: rgb(240, 77, 93);
     margin-top: 7px; }
     .FormGroup--medium-lg .FormGroup__error::before {
       content: '✘ ';
@@ -1649,7 +1649,7 @@ hr {
     line-height: 21px;
     letter-spacing: 0px;
     font-weight: normal;
-    color: #f04d5d;
+    color: rgb(240, 77, 93);
     margin-top: 7px; }
     .FormGroup--medium-xl .FormGroup__error::before {
       content: '✘ ';

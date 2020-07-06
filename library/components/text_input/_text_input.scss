@@ -44,7 +44,7 @@
 
 .TextInput:focus {
   border-color: var(--focus-color);
-  box-shadow: 0 0 11px rgba($blue-100, $alpha-500);
+  box-shadow: 0 0 11px rgba(var(--focus-color-rgb), $alpha-500);
   outline: 0;
 }
 
@@ -62,7 +62,7 @@
   border-color: var(--error-color);
 
   &.TextInput:focus {
-    box-shadow: 0 0 11px rgba($red-100, $alpha-600);
+    box-shadow: 0 0 11px rgba(var(--negative-color-rgb), $alpha-600);
   }
 }
 

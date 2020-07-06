@@ -1,0 +1,42 @@
+// ------------------------------
+// Color functions
+// ------------------------------
+
+// extract-rgb
+// accepts a color and extracts a triplet of rgb values
+// extract-rgb(#32a852) = 50, 168, 82
+@function extract-rgb($color-value) {
+  @return red($color-value), green($color-value), blue($color-value);
+}
+
+
+// ------------------------------
+// Color mixins
+// ------------------------------
+
+// creates a two css custom properties based on a variable name
+// ex:
+// input scss:
+// @include color-variable(--progress-bar-active-color, $purple-200)
+
+// output css:
+// --progress-bar-active-color-rgb: 179, 93, 186;
+// --progress-bar-active-color: rgb(var(--progress-bar-active-color-rgb))
+//
+// this is useful for theming elements that require alpha channels as
+// we can use the rgb variable to interpolate the rgb values into a
+// css rgba function and apply and alpha channel
+// ex:
+// background-color: var(--progress-bar-active-color);
+// box-shadow: box-shadow: 0 0 modular-scale-px(-6) 0
+//      rgba(var(--step-progress-active-color-rgb), $alpha-600)
+
+// this works becuase the values of css variables are treated as strings
+// and they do not have any contextual knowledge of how they should be applied
+// css variable values are at runtime essentially string substitutions.
+@mixin color-variable($variable-name, $variable-value) {
+    $rgb-variable-name: #{$variable-name}-rgb;
+
+    #{$rgb-variable-name}: #{extract-rgb($variable-value)};
+    #{$variable-name}: unquote("rgb(var(#{$rgb-variable-name}))");
+}
