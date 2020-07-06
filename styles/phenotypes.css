@@ -6001,6 +6001,27 @@ hr {
 .text-color-reversed-hint {
   color: rgba(255, 255, 255, 0.59) !important; }
 
+.text-color-brand-primary {
+  color: rgb(133, 59, 148) !important; }
+
+.text-color-brand-accent {
+  color: rgb(252, 134, 38) !important; }
+
+.text-color-positive {
+  color: rgb(45, 207, 161) !important; }
+
+.text-color-negative {
+  color: rgb(240, 77, 93) !important; }
+
+.text-color-warning {
+  color: rgb(252, 134, 38) !important; }
+
+.text-color-interactive {
+  color: rgb(22, 184, 224) !important; }
+
+.text-color-error {
+  color: rgb(240, 77, 93) !important; }
+
 .text-color-orange {
   color: #fc8626 !important; }
 

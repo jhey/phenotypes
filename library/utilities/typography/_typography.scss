@@ -55,6 +55,14 @@
 .text-color-reversed-secondary { color: var(--text-color-secondary-reversed) !important; }
 .text-color-reversed-hint      { color: var(--text-color-hint-reversed)      !important; }
 
+.text-color-brand-primary  { color: var(--brand-color-primary) !important;}
+.text-color-brand-accent  { color: var(--brand-color-accent) !important;}
+.text-color-positive  { color: var(--positive-color) !important;}
+.text-color-negative  { color: var(--negative-color) !important;}
+.text-color-warning  { color: var(--warning-color) !important;}
+.text-color-interactive  { color: var(--interactive-color) !important;}
+.text-color-error  { color: var(--error-color) !important;}
+
 .text-color-orange { color: $orange !important; }
 .text-color-orange-100 { color: $orange-100 !important; }
 .text-color-orange-200 { color: $orange-200 !important; }
