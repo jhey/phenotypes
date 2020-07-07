@@ -70,31 +70,31 @@
   --text-color-primary-reversed: #fff;
   --text-color-secondary-reversed: rgba(255, 255, 255, 0.76);
   --text-color-hint-reversed: rgba(255, 255, 255, 0.59);
-  --brand-color-primary-rgb: 133, 59, 148;
-  --brand-color-primary: rgb(var(--brand-color-primary-rgb));
-  --brand-color-accent-rgb: 252, 134, 38;
-  --brand-color-accent: rgb(var(--brand-color-accent-rgb));
-  --positive-color-rgb: 45, 207, 161;
-  --positive-color: rgb(var(--positive-color-rgb));
-  --negative-color-rgb: 240, 77, 93;
-  --negative-color: rgb(var(--negative-color-rgb));
-  --warning-color-rgb: 252, 134, 38;
-  --warning-color: rgb(var(--warning-color-rgb));
-  --interactive-color-rgb: 22, 184, 224;
-  --interactive-color: rgb(var(--interactive-color-rgb));
+  --brand-color-primary-rgb-values: 133, 59, 148;
+  --brand-color-primary: rgb(var(--brand-color-primary-rgb-values));
+  --brand-color-accent-rgb-values: 252, 134, 38;
+  --brand-color-accent: rgb(var(--brand-color-accent-rgb-values));
+  --positive-color-rgb-values: 45, 207, 161;
+  --positive-color: rgb(var(--positive-color-rgb-values));
+  --negative-color-rgb-values: 240, 77, 93;
+  --negative-color: rgb(var(--negative-color-rgb-values));
+  --warning-color-rgb-values: 252, 134, 38;
+  --warning-color: rgb(var(--warning-color-rgb-values));
+  --interactive-color-rgb-values: 22, 184, 224;
+  --interactive-color: rgb(var(--interactive-color-rgb-values));
   --error-color: var(--negative-color);
   --link-color: var(--interactive-color);
-  --link-hover-color-rgb: 0, 138, 179;
-  --link-hover-color: rgb(var(--link-hover-color-rgb));
-  --link-color-reversed-rgb: 127, 234, 255;
-  --link-color-reversed: rgb(var(--link-color-reversed-rgb));
-  --step-progress-active-color-rgb: 179, 93, 186;
-  --step-progress-active-color: rgb(var(--step-progress-active-color-rgb));
-  --focus-color-rgb: 127, 234, 255;
-  --focus-color: rgb(var(--focus-color-rgb));
+  --link-hover-color-rgb-values: 0, 138, 179;
+  --link-hover-color: rgb(var(--link-hover-color-rgb-values));
+  --link-color-reversed-rgb-values: 127, 234, 255;
+  --link-color-reversed: rgb(var(--link-color-reversed-rgb-values));
+  --step-progress-active-color-rgb-values: 179, 93, 186;
+  --step-progress-active-color: rgb(var(--step-progress-active-color-rgb-values));
+  --focus-color-rgb-values: 127, 234, 255;
+  --focus-color: rgb(var(--focus-color-rgb-values));
   --widget-on-color: var(--positive-color);
-  --message-success-bg-color-rgb: 3, 171, 140;
-  --message-success-bg-color: rgb(var(--message-success-bg-color-rgb));
+  --message-success-bg-color-rgb-values: 3, 171, 140;
+  --message-success-bg-color: rgb(var(--message-success-bg-color-rgb-values));
   --message-info-bg-color: var(--brand-color-primary);
   --message-danger-bg-color: var(--error-color);
   --danger-button-color: var(--negative-color);
@@ -600,7 +600,7 @@ hr {
   z-index: -1; }
   .Checkbox__input:focus ~ .Checkbox__indicator {
     border-color: #7feaff;
-    box-shadow: 0 0 11px rgba(var(--focus-color-rgb), 0.41); }
+    box-shadow: 0 0 11px rgba(var(--focus-color-rgb-values), 0.41); }
   .Checkbox__input:active ~ .Checkbox__indicator {
     background-color: #f9f9f9;
     border-color: #c1c1c1; }
@@ -610,7 +610,7 @@ hr {
     border-color: #232323; }
   .Checkbox__input:checked:focus ~ .Checkbox__indicator {
     border-color: #232323;
-    box-shadow: 0 0 0 2px rgba(var(--interactive-color-rgb), 0.24); }
+    box-shadow: 0 0 0 2px rgba(var(--interactive-color-rgb-values), 0.24); }
   .Checkbox__input:checked:active ~ .Checkbox__indicator {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 9'%3E%3Cpolygon fill='%23fff' fill-opacity='0.54' points='3.5 5.45 1.5 3.45 0 4.95 3.5 8.45 10 1.95 8.5 .45'/%3E%3C/svg%3E%0A");
     background-color: #232323;
@@ -871,7 +871,7 @@ hr {
   z-index: -1; }
   .Radio__input:focus ~ .Radio__indicator {
     border-color: #7feaff;
-    box-shadow: 0 0 11px rgba(var(--focus-color-rgb), 0.41); }
+    box-shadow: 0 0 11px rgba(var(--focus-color-rgb-values), 0.41); }
   .Radio__input:active ~ .Radio__indicator {
     background-color: #f9f9f9;
     border-color: #c1c1c1; }
@@ -883,7 +883,7 @@ hr {
       display: block; }
   .Radio__input:checked:focus ~ .Radio__indicator {
     border-color: #232323;
-    box-shadow: 0 0 0 2px rgba(var(--interactive-color-rgb), 0.24); }
+    box-shadow: 0 0 0 2px rgba(var(--interactive-color-rgb-values), 0.24); }
   .Radio__input:checked:active:not(:disabled) ~ .Radio__indicator {
     background-color: #232323;
     border-color: #232323; }
@@ -1173,7 +1173,7 @@ hr {
     margin-right: 0; }
   .ProgressBar__step::after {
     background-color: var(--step-progress-active-color);
-    box-shadow: 0 0 7px 0 rgba(var(--step-progress-active-color-rgb), 0.54);
+    box-shadow: 0 0 7px 0 rgba(var(--step-progress-active-color-rgb-values), 0.54);
     content: " ";
     height: 100%;
     opacity: 0;
@@ -1279,7 +1279,7 @@ hr {
   .Switch__toggler::after {
     background-color: var(--focus-color);
     border-radius: 50%;
-    box-shadow: 0 0 5px 0 rgba(var(--focus-color-rgb), 0.7);
+    box-shadow: 0 0 5px 0 rgba(var(--focus-color-rgb-values), 0.7);
     content: ' ';
     left: 50%;
     opacity: 0;
@@ -1326,7 +1326,7 @@ hr {
 
 .TextInput:focus {
   border-color: var(--focus-color);
-  box-shadow: 0 0 11px rgba(var(--focus-color-rgb), 0.41);
+  box-shadow: 0 0 11px rgba(var(--focus-color-rgb-values), 0.41);
   outline: 0; }
 
 .TextInput:disabled,
@@ -1342,7 +1342,7 @@ hr {
   border-color: var(--error-color); }
   .TextInput--has-error.TextInput:focus,
   .FormGroup--has-error .TextInput.TextInput:focus {
-    box-shadow: 0 0 11px rgba(var(--negative-color-rgb), 0.54); }
+    box-shadow: 0 0 11px rgba(var(--negative-color-rgb-values), 0.54); }
 
 .TextInput--medium,
 .FormGroup--medium .TextInput {
