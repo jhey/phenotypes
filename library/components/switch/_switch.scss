@@ -47,7 +47,7 @@
   &::after {
     background-color: var(--focus-color);
     border-radius: 50%;
-    box-shadow: 0 0 5px 0 rgba(var(--focus-color-rgb), $alpha-700);
+    box-shadow: 0 0 5px 0 rgba(var(--focus-color-rgb-values), $alpha-700);
     content: ' ';
     left: 50%;
     opacity: 0;
