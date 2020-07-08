@@ -1,3 +1,8 @@
+---
+title: Theming
+status: draft
+---
+
 # Theming Phenotypes
 
 Phenotypes allows theming for certain aspects of the library. This is done via css custom properties that can be overridden by you as the consumer in your own application.
