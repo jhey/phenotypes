@@ -9,7 +9,7 @@ Phenotypes allows theming for certain aspects of the library. This is done via c
 
 CSS variables are [supported by all evergreen browsers](https://caniuse.com/#feat=css-variables). As with most modern web standards Internet Explorer is not supported by default. If you must support IE you can use the [css-vars-ponyfill](https://jhildenbiddle.github.io/css-vars-ponyfill/#/) that will compile away the CSS variables at runtime. This ponyfill will work for all browsers that do not support CSS variables not just IE.
 
-## Theming
+## Custom Themes and CSS Variables
 
 Phenotypes exposes a set of variables that will theme the library styles as well as the React components. These variables provide easy customization for commonly used values like colors for text and components. The variables that we expose and can be themed are below.
 
@@ -95,7 +95,7 @@ Theming with SASS is not any different than theming with plain css. When using S
 // values like so:
 
 :root {
-    --focus-color-rgb-values: 0, 128, 0
+    --focus-color-rgb-values: 0, 128, 0;
 }
 
 // When using sass, Phenotypes also provides a helper function that makes working
@@ -110,7 +110,7 @@ $green: #008000
 // The `extract-rgb` helper can also handle any type of color definition:
 :root {
     // all of the following are equivalent
-    --focus-color-rgb-values: 0, 128, 0
+    --focus-color-rgb-values: 0, 128, 0;
     --focus-color-rgb-values: #{extract-rgb(#008000)};
     --focus-color-rgb-values: #{extract-rgb($green)};
     --focus-color-rgb-values: #{extract-rgb(rgb(0, 128, 0))};
