@@ -1,6 +1,6 @@
 {
   "name": "@aminohealth/phenotypes",
-  "version": "7.2.3",
+  "version": "8.0.0",
   "description": "Amino's design language and front-end component library",
   "dependencies": {
     "@babel/runtime": "^7.10.2",
@@ -34,6 +34,8 @@
     "fs-extra": "^9.0.1",
     "jsdom": "^11.0.0",
     "mocha": "^3.4.2",
+    "postcss": "^7.0.32",
+    "postcss-preset-env": "^6.7.0",
     "react-addons-test-utils": "15.4.2",
     "rollup": "^2.16.1",
     "sinon": "^2.3.2"

@@ -32,7 +32,7 @@ Phenotypes aims to balance simplicity and flexibility, but no spacing system can
 
 ## Appendix
 
-| Sass variable | Space |
+| SASS variable | Space |
 | -------- | ----- |
 | `$spacer-0` | 0 |
 | `$spacer-1` | 5px |

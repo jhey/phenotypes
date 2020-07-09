@@ -90,7 +90,7 @@ class Preview extends React.Component {
     return (
       <div id="phenotypes__fractalPreview">
         <link media="all" rel="stylesheet" href="/css/preview.css" />
-        <link media="all" rel="stylesheet" href="/css/phenotypes.css" />
+        <link media="all" rel="stylesheet" href="/css/phenotypes.themable.css" />
 
         {this.variants.map(variant => {
           const rootElementId = ROOT_ELEMENT_ID_PREFIX + variant.handle;

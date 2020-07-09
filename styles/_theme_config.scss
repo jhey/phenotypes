@@ -1,0 +1,42 @@
+// ------------------------------
+// NOTE:
+// These variables are replicated in the documentation website
+// for Phenotypes. Plase make sure that the theming guide at ./guides/11-theming.md
+// is updated with any new variables that are added.
+// ------------------------------
+:root {
+  // base variable set
+  --text-color-primary: #{$text-color-primary};
+  --text-color-secondary: #{$text-color-secondary};
+  --text-color-hint: #{$text-color-hint};
+  --text-color-primary-reversed: #{$text-color-reversed-primary};
+  --text-color-secondary-reversed: #{$text-color-reversed-secondary};
+  --text-color-hint-reversed: #{$text-color-reversed-hint};
+
+  @include color-variable(--brand-color-primary, $brand-primary);
+  @include color-variable(--brand-color-accent, $orange-200);
+  @include color-variable(--positive-color, $green-200);
+  @include color-variable(--negative-color, $brand-danger);
+  @include color-variable(--warning-color, $brand-warning);
+  @include color-variable(--interactive-color, $blue-200);
+  --error-color: var(--negative-color);
+
+  --link-color: var(--interactive-color);
+  @include color-variable(--link-hover-color, $link-hover-color);
+  @include color-variable(--link-color-reversed, $blue-100);
+  @include color-variable(--step-progress-active-color, $purple-200);
+  @include color-variable(--focus-color, $blue-100);
+  --widget-on-color: var(--positive-color);
+
+  @include color-variable(--message-success-bg-color, $green-300);
+  --message-info-bg-color: var(--brand-color-primary);
+  --message-danger-bg-color: var(--error-color);
+
+  --danger-button-color: var(--negative-color);
+  --danger-button-focus-color: #ee3548;
+  --danger-button-active-color: #ec192e;
+
+  --primary-button-color: var(--interactive-color);
+  --primary-button-focus-color: #14a5c9;
+  --primary-button-active-color: #118ead;
+}

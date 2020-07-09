@@ -63,6 +63,47 @@
   src: url("webfonts/33AD5D_3_0.eot");
   src: url("webfonts/33AD5D_3_0.eot?#iefix") format("embedded-opentype"), url("webfonts/33AD5D_3_0.woff2") format("woff2"), url("webfonts/33AD5D_3_0.woff") format("woff"), url("webfonts/33AD5D_3_0.ttf") format("truetype"); }
 
+:root {
+  --text-color-primary: rgba(0, 0, 0, 0.86);
+  --text-color-secondary: rgba(0, 0, 0, 0.54);
+  --text-color-hint: rgba(0, 0, 0, 0.41);
+  --text-color-primary-reversed: #fff;
+  --text-color-secondary-reversed: rgba(255, 255, 255, 0.76);
+  --text-color-hint-reversed: rgba(255, 255, 255, 0.59);
+  --brand-color-primary-rgb-values: 133, 59, 148;
+  --brand-color-primary: rgb(var(--brand-color-primary-rgb-values));
+  --brand-color-accent-rgb-values: 252, 134, 38;
+  --brand-color-accent: rgb(var(--brand-color-accent-rgb-values));
+  --positive-color-rgb-values: 45, 207, 161;
+  --positive-color: rgb(var(--positive-color-rgb-values));
+  --negative-color-rgb-values: 240, 77, 93;
+  --negative-color: rgb(var(--negative-color-rgb-values));
+  --warning-color-rgb-values: 252, 134, 38;
+  --warning-color: rgb(var(--warning-color-rgb-values));
+  --interactive-color-rgb-values: 22, 184, 224;
+  --interactive-color: rgb(var(--interactive-color-rgb-values));
+  --error-color: var(--negative-color);
+  --link-color: var(--interactive-color);
+  --link-hover-color-rgb-values: 0, 138, 179;
+  --link-hover-color: rgb(var(--link-hover-color-rgb-values));
+  --link-color-reversed-rgb-values: 127, 234, 255;
+  --link-color-reversed: rgb(var(--link-color-reversed-rgb-values));
+  --step-progress-active-color-rgb-values: 179, 93, 186;
+  --step-progress-active-color: rgb(var(--step-progress-active-color-rgb-values));
+  --focus-color-rgb-values: 127, 234, 255;
+  --focus-color: rgb(var(--focus-color-rgb-values));
+  --widget-on-color: var(--positive-color);
+  --message-success-bg-color-rgb-values: 3, 171, 140;
+  --message-success-bg-color: rgb(var(--message-success-bg-color-rgb-values));
+  --message-info-bg-color: var(--brand-color-primary);
+  --message-danger-bg-color: var(--error-color);
+  --danger-button-color: var(--negative-color);
+  --danger-button-focus-color: #ee3548;
+  --danger-button-active-color: #ec192e;
+  --primary-button-color: var(--interactive-color);
+  --primary-button-focus-color: #14a5c9;
+  --primary-button-active-color: #118ead; }
+
 html {
   box-sizing: border-box;
   font-family: sans-serif;
@@ -110,8 +151,7 @@ p {
 abbr[title],
 abbr[data-original-title] {
   text-decoration: underline;
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
+  text-decoration: underline dotted;
   cursor: help;
   border-bottom: 0; }
 
@@ -166,12 +206,12 @@ sup {
   top: -.5em; }
 
 a {
-  color: rgb(22, 184, 224);
+  color: var(--link-color);
   text-decoration: none;
   background-color: transparent;
   -webkit-text-decoration-skip: objects; }
   a:hover {
-    color: rgb(0, 138, 179);
+    color: var(--link-hover-color);
     text-decoration: underline; }
 
 a:not([href]):not([tabindex]) {
@@ -386,7 +426,7 @@ hr {
   background: rgba(0, 0, 0, 0.07);
   border: 0;
   border-radius: 3px;
-  color: rgba(0, 0, 0, 0.86);
+  color: var(--text-color-primary);
   cursor: pointer;
   display: inline-block;
   font-weight: normal;
@@ -405,7 +445,7 @@ hr {
 .Button__control:focus {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.14), 0 1px 1px rgba(0, 0, 0, 0.07), 0 0 6px rgba(0, 0, 0, 0.07);
   background: rgba(0, 0, 0, 0.12);
-  color: rgba(0, 0, 0, 0.86);
+  color: var(--text-color-primary);
   text-decoration: none;
   transform: translateY(-2.25px) scaleX(1.015) scaleY(1.015);
   transition-duration: .08s; }
@@ -431,31 +471,31 @@ hr {
   cursor: not-allowed; }
 
 .Button--danger .Button__control {
-  background: rgb(240, 77, 93);
+  background: var(--danger-button-color);
   color: #fff;
   font-weight: bold; }
   .Button--danger .Button__control:hover, .Button--danger .Button__control:focus {
-    background: #ee3548;
+    background: var(--danger-button-focus-color);
     color: #fff; }
 
 .Button--danger .Button__control:active,
 .Button--danger.Button--is-active .Button__control {
-  background: #ec192e; }
+  background: var(--danger-button-active-color); }
 
 .Button--primary .Button__control {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.14), 0 1px 1px rgba(0, 0, 0, 0.07), 0 0 6px rgba(0, 0, 0, 0.07);
-  background: rgb(22, 184, 224);
+  background: var(--primary-button-color);
   color: #fff;
   font-weight: bold; }
   .Button--primary .Button__control:hover, .Button--primary .Button__control:focus {
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.14), 0 1px 2px rgba(0, 0, 0, 0.07), 0 0 10px rgba(0, 0, 0, 0.07);
-    background: #14a5c9;
+    background: var(--primary-button-focus-color);
     color: #fff; }
 
 .Button--primary .Button__control:active,
 .Button--primary.Button--is-active .Button__control {
   box-shadow: none;
-  background: #118ead; }
+  background: var(--primary-button-active-color); }
 
 .Button--link .Button__control .Button__control {
   background: transparent;
@@ -560,7 +600,7 @@ hr {
   z-index: -1; }
   .Checkbox__input:focus ~ .Checkbox__indicator {
     border-color: #7feaff;
-    box-shadow: 0 0 11px rgba(127, 234, 255, 0.41); }
+    box-shadow: 0 0 11px rgba(var(--focus-color-rgb-values), 0.41); }
   .Checkbox__input:active ~ .Checkbox__indicator {
     background-color: #f9f9f9;
     border-color: #c1c1c1; }
@@ -570,7 +610,7 @@ hr {
     border-color: #232323; }
   .Checkbox__input:checked:focus ~ .Checkbox__indicator {
     border-color: #232323;
-    box-shadow: 0 0 0 2px rgba(22, 184, 224, 0.24); }
+    box-shadow: 0 0 0 2px rgba(var(--interactive-color-rgb-values), 0.24); }
   .Checkbox__input:checked:active ~ .Checkbox__indicator {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 9'%3E%3Cpolygon fill='%23fff' fill-opacity='0.54' points='3.5 5.45 1.5 3.45 0 4.95 3.5 8.45 10 1.95 8.5 .45'/%3E%3C/svg%3E%0A");
     background-color: #232323;
@@ -583,7 +623,7 @@ hr {
   .Checkbox__input:disabled:checked:active ~ .Checkbox__indicator {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 9'%3E%3Cpolygon fill='%23c1c1c1' fill-opacity='1' points='3.5 5.45 1.5 3.45 0 4.95 3.5 8.45 10 1.95 8.5 .45'/%3E%3C/svg%3E%0A"); }
   .Checkbox__input:disabled ~ .Checkbox__label {
-    color: rgba(0, 0, 0, 0.54); }
+    color: var(--text-color-secondary); }
 
 .Checkbox__indicator {
   background-color: #fff;
@@ -593,10 +633,7 @@ hr {
   left: 0;
   pointer-events: none;
   position: absolute;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none; }
+  user-select: none; }
 
 .Checkbox--is-disabled {
   cursor: not-allowed; }
@@ -798,15 +835,15 @@ hr {
   padding: 16px; }
 
 .Message--success {
-  background-color: rgb(3, 171, 140);
+  background-color: var(--message-success-bg-color);
   color: #fff; }
 
 .Message--info {
-  background-color: rgb(133, 59, 148);
+  background-color: var(--message-info-bg-color);
   color: #fff; }
 
 .Message--danger {
-  background-color: rgb(240, 77, 93);
+  background-color: var(--message-danger-bg-color);
   color: #fff; }
 
 .Radio {
@@ -834,7 +871,7 @@ hr {
   z-index: -1; }
   .Radio__input:focus ~ .Radio__indicator {
     border-color: #7feaff;
-    box-shadow: 0 0 11px rgba(127, 234, 255, 0.41); }
+    box-shadow: 0 0 11px rgba(var(--focus-color-rgb-values), 0.41); }
   .Radio__input:active ~ .Radio__indicator {
     background-color: #f9f9f9;
     border-color: #c1c1c1; }
@@ -846,7 +883,7 @@ hr {
       display: block; }
   .Radio__input:checked:focus ~ .Radio__indicator {
     border-color: #232323;
-    box-shadow: 0 0 0 2px rgba(22, 184, 224, 0.24); }
+    box-shadow: 0 0 0 2px rgba(var(--interactive-color-rgb-values), 0.24); }
   .Radio__input:checked:active:not(:disabled) ~ .Radio__indicator {
     background-color: #232323;
     border-color: #232323; }
@@ -860,7 +897,7 @@ hr {
   .Radio__input:disabled:checked:active ~ .Radio__indicator::after {
     background-color: #c1c1c1; }
   .Radio__input:disabled ~ .Radio__label {
-    color: rgba(0, 0, 0, 0.54); }
+    color: var(--text-color-secondary); }
 
 .Radio__indicator {
   background-color: #fff;
@@ -869,10 +906,7 @@ hr {
   left: 0;
   pointer-events: none;
   position: absolute;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none; }
+  user-select: none; }
   .Radio__indicator::after {
     background-color: #fff;
     border-radius: 50%;
@@ -1138,8 +1172,8 @@ hr {
   .ProgressBar__step:last-child {
     margin-right: 0; }
   .ProgressBar__step::after {
-    background-color: rgb(179, 93, 186);
-    box-shadow: 0 0 7px 0 rgba(179, 93, 186, 0.54);
+    background-color: var(--step-progress-active-color);
+    box-shadow: 0 0 7px 0 rgba(var(--step-progress-active-color-rgb-values), 0.54);
     content: " ";
     height: 100%;
     opacity: 0;
@@ -1187,7 +1221,7 @@ hr {
   top: -10px;
   width: 24px; }
   .Slider__handle::after {
-    background-color: rgb(127, 234, 255);
+    background-color: var(--focus-color);
     border-radius: 50%;
     bottom: 7px;
     box-shadow: 0 0 5px 0 rgba(127, 234, 255, 0.7);
@@ -1210,7 +1244,7 @@ hr {
   background-color: rgba(0, 0, 0, 0.14); }
 
 .Slider__fill {
-  background-color: rgb(45, 207, 161); }
+  background-color: var(--widget-on-color); }
 
 .Slider__handle {
   background-color: #fff; }
@@ -1243,9 +1277,9 @@ hr {
   top: 2px;
   transition: right .15s ease-out; }
   .Switch__toggler::after {
-    background-color: rgb(127, 234, 255);
+    background-color: var(--focus-color);
     border-radius: 50%;
-    box-shadow: 0 0 5px 0 rgba(127, 234, 255, 0.7);
+    box-shadow: 0 0 5px 0 rgba(var(--focus-color-rgb-values), 0.7);
     content: ' ';
     left: 50%;
     opacity: 0;
@@ -1259,7 +1293,7 @@ hr {
   position: absolute;
   z-index: -1; }
   .Switch__input:checked ~ .Switch__indicator {
-    background-color: rgb(45, 207, 161); }
+    background-color: var(--widget-on-color); }
     .Switch__input:checked ~ .Switch__indicator .Switch__toggler {
       right: 2px; }
   .Switch__input:disabled ~ .Switch__indicator {
@@ -1283,41 +1317,32 @@ hr {
   -webkit-appearance: none;
   border: 2px solid #dbdbdb;
   border-radius: 3px;
-  color: rgba(0, 0, 0, 0.86);
+  color: var(--text-color-primary);
   line-height: 1.49271;
   width: 100%; }
-  .TextInput::-moz-placeholder {
-    color: rgba(0, 0, 0, 0.41);
-    opacity: 1; }
-  .TextInput:-ms-input-placeholder {
-    color: rgba(0, 0, 0, 0.41);
-    opacity: 1; }
-  .TextInput::-ms-input-placeholder {
-    color: rgba(0, 0, 0, 0.41);
-    opacity: 1; }
   .TextInput::placeholder {
-    color: rgba(0, 0, 0, 0.41);
+    color: var(--text-color-hint);
     opacity: 1; }
 
 .TextInput:focus {
-  border-color: rgb(127, 234, 255);
-  box-shadow: 0 0 11px rgba(127, 234, 255, 0.41);
+  border-color: var(--focus-color);
+  box-shadow: 0 0 11px rgba(var(--focus-color-rgb-values), 0.41);
   outline: 0; }
 
 .TextInput:disabled,
 .TextInput[readonly] {
   background: #eee;
   border-color: #eee;
-  color: rgba(0, 0, 0, 0.41);
+  color: var(--text-color-hint);
   cursor: not-allowed;
   opacity: 1; }
 
 .TextInput--has-error,
 .FormGroup--has-error .TextInput {
-  border-color: rgb(240, 77, 93); }
+  border-color: var(--error-color); }
   .TextInput--has-error.TextInput:focus,
   .FormGroup--has-error .TextInput.TextInput:focus {
-    box-shadow: 0 0 11px rgba(240, 77, 93, 0.54); }
+    box-shadow: 0 0 11px rgba(var(--negative-color-rgb-values), 0.54); }
 
 .TextInput--medium,
 .FormGroup--medium .TextInput {
@@ -1402,7 +1427,7 @@ hr {
   line-height: 21px;
   letter-spacing: 0px;
   font-weight: normal;
-  color: rgb(240, 77, 93);
+  color: var(--error-color);
   margin-top: 7px; }
   .FormGroup__error::before {
     content: '✘ ';
@@ -1413,7 +1438,7 @@ hr {
   line-height: 18px;
   letter-spacing: 0px;
   font-weight: normal;
-  color: rgba(0, 0, 0, 0.54);
+  color: var(--text-color-secondary);
   margin-top: 7px; }
 
 .FormGroup--small .FormGroup__label {
@@ -1441,7 +1466,7 @@ hr {
   line-height: 21px;
   letter-spacing: 0px;
   font-weight: normal;
-  color: rgb(240, 77, 93);
+  color: var(--error-color);
   margin-top: 7px; }
   .FormGroup--medium .FormGroup__error::before {
     content: '✘ ';
@@ -1452,7 +1477,7 @@ hr {
   line-height: 18px;
   letter-spacing: 0px;
   font-weight: normal;
-  color: rgba(0, 0, 0, 0.54);
+  color: var(--text-color-secondary);
   margin-top: 7px; }
 
 .FormGroup--large .FormGroup__label {
@@ -1496,7 +1521,7 @@ hr {
     line-height: 21px;
     letter-spacing: 0px;
     font-weight: normal;
-    color: rgb(240, 77, 93);
+    color: var(--error-color);
     margin-top: 7px; }
     .FormGroup--medium-sm .FormGroup__error::before {
       content: '✘ ';
@@ -1506,7 +1531,7 @@ hr {
     line-height: 18px;
     letter-spacing: 0px;
     font-weight: normal;
-    color: rgba(0, 0, 0, 0.54);
+    color: var(--text-color-secondary);
     margin-top: 7px; }
   .FormGroup--large-sm .FormGroup__label {
     font-size: 18px;
@@ -1547,7 +1572,7 @@ hr {
     line-height: 21px;
     letter-spacing: 0px;
     font-weight: normal;
-    color: rgb(240, 77, 93);
+    color: var(--error-color);
     margin-top: 7px; }
     .FormGroup--medium-md .FormGroup__error::before {
       content: '✘ ';
@@ -1557,7 +1582,7 @@ hr {
     line-height: 18px;
     letter-spacing: 0px;
     font-weight: normal;
-    color: rgba(0, 0, 0, 0.54);
+    color: var(--text-color-secondary);
     margin-top: 7px; }
   .FormGroup--large-md .FormGroup__label {
     font-size: 18px;
@@ -1598,7 +1623,7 @@ hr {
     line-height: 21px;
     letter-spacing: 0px;
     font-weight: normal;
-    color: rgb(240, 77, 93);
+    color: var(--error-color);
     margin-top: 7px; }
     .FormGroup--medium-lg .FormGroup__error::before {
       content: '✘ ';
@@ -1608,7 +1633,7 @@ hr {
     line-height: 18px;
     letter-spacing: 0px;
     font-weight: normal;
-    color: rgba(0, 0, 0, 0.54);
+    color: var(--text-color-secondary);
     margin-top: 7px; }
   .FormGroup--large-lg .FormGroup__label {
     font-size: 18px;
@@ -1649,7 +1674,7 @@ hr {
     line-height: 21px;
     letter-spacing: 0px;
     font-weight: normal;
-    color: rgb(240, 77, 93);
+    color: var(--error-color);
     margin-top: 7px; }
     .FormGroup--medium-xl .FormGroup__error::before {
       content: '✘ ';
@@ -1659,7 +1684,7 @@ hr {
     line-height: 18px;
     letter-spacing: 0px;
     font-weight: normal;
-    color: rgba(0, 0, 0, 0.54);
+    color: var(--text-color-secondary);
     margin-top: 7px; }
   .FormGroup--large-xl .FormGroup__label {
     font-size: 18px;
@@ -5984,43 +6009,43 @@ hr {
   color: inherit !important; }
 
 .text-color-primary {
-  color: rgba(0, 0, 0, 0.86) !important; }
+  color: var(--text-color-primary) !important; }
 
 .text-color-secondary {
-  color: rgba(0, 0, 0, 0.54) !important; }
+  color: var(--text-color-secondary) !important; }
 
 .text-color-hint {
-  color: rgba(0, 0, 0, 0.41) !important; }
+  color: var(--text-color-hint) !important; }
 
 .text-color-reversed-primary {
-  color: #fff !important; }
+  color: var(--text-color-primary-reversed) !important; }
 
 .text-color-reversed-secondary {
-  color: rgba(255, 255, 255, 0.76) !important; }
+  color: var(--text-color-secondary-reversed) !important; }
 
 .text-color-reversed-hint {
-  color: rgba(255, 255, 255, 0.59) !important; }
+  color: var(--text-color-hint-reversed) !important; }
 
 .text-color-brand-primary {
-  color: rgb(133, 59, 148) !important; }
+  color: var(--brand-color-primary) !important; }
 
 .text-color-brand-accent {
-  color: rgb(252, 134, 38) !important; }
+  color: var(--brand-color-accent) !important; }
 
 .text-color-positive {
-  color: rgb(45, 207, 161) !important; }
+  color: var(--positive-color) !important; }
 
 .text-color-negative {
-  color: rgb(240, 77, 93) !important; }
+  color: var(--negative-color) !important; }
 
 .text-color-warning {
-  color: rgb(252, 134, 38) !important; }
+  color: var(--warning-color) !important; }
 
 .text-color-interactive {
-  color: rgb(22, 184, 224) !important; }
+  color: var(--interactive-color) !important; }
 
 .text-color-error {
-  color: rgb(240, 77, 93) !important; }
+  color: var(--error-color) !important; }
 
 .text-color-orange {
   color: #fc8626 !important; }
