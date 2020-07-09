@@ -51,7 +51,7 @@ $slider-focus-color: $blue-100;
   width: $slider-handle-size;
 
   &::after {
-    background-color: $slider-focus-color;
+    background-color: var(--focus-color);
     border-radius: 50%;
     bottom: $slider-focus-margin;
     box-shadow: 0 0 ($slider-focus-size / 2) 0 rgba($slider-focus-color, $alpha-700);
@@ -91,7 +91,7 @@ $slider-focus-color: $blue-100;
 }
 
 @mixin slider-green {
-  @include slider-color($green-200);
+  @include slider-color(var(--widget-on-color));
 }
 
 @include slider-green;

@@ -45,9 +45,9 @@
   transition: right .15s ease-out;
 
   &::after {
-    background-color: $blue-100;
+    background-color: var(--focus-color);
     border-radius: 50%;
-    box-shadow: 0 0 5px 0 rgba($blue-100, $alpha-700);
+    box-shadow: 0 0 5px 0 rgba(var(--focus-color-rgb-values), $alpha-700);
     content: ' ';
     left: 50%;
     opacity: 0;
@@ -64,7 +64,7 @@
   z-index: -1;
 
   &:checked ~ .Switch__indicator {
-    background-color: $green-200;
+    background-color: var(--widget-on-color);
 
     .Switch__toggler {
       right: $border-width;

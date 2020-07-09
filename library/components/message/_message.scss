@@ -7,16 +7,16 @@
 }
 
 .Message--success {
-  background-color: $brand-success;
+  background-color: var(--message-success-bg-color);
   color: $white;
 }
 
 .Message--info {
-  background-color: $brand-primary;
+  background-color: var(--message-info-bg-color);
   color: $white;
 }
 
 .Message--danger {
-  background-color: $brand-danger;
+  background-color: var(--message-danger-bg-color);
   color: $white;
 }

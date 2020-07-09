@@ -19,7 +19,7 @@
 
     .FormGroup__error {
       @include text-2;
-      color: $brand-danger;
+      color: var(--error-color);
       margin-top: $spacer-2;
 
       &::before {
@@ -30,7 +30,7 @@
 
     .FormGroup__hint {
       @include text-1;
-      color: $text-color-secondary;
+      color: var(--text-color-secondary);
       margin-top: $spacer-2;
     }
   }

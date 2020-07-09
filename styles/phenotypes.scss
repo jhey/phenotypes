@@ -25,6 +25,10 @@
 @import 'variables';
 @import 'mixins';
 
+// Theme specific css variables
+// NOT SASS variables
+@import 'theme_config';
+
 // Reboot/normalize
 @import 'reboot';
 

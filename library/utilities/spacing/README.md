@@ -29,7 +29,7 @@ Examples:
 
 ### SASS variables
 
-| Sass variable | Space |
+| SASS variable | Space |
 | -------- | ----- |
 | `$spacer-0` | 0 |
 | `$spacer-1` | 5px |
