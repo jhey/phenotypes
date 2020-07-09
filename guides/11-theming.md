@@ -87,7 +87,7 @@ This will change both the focus color to green as well as apply the correct chan
 
 ### Theming with SASS
 
-Theming with SASS is not any different than theming with plain css. When using SASS Phenotypes does provide you with some quality of life utilities to make theming these values easier. Phenotypes provides you with a sass `extract-rgb` function that makes it very easy to set the rgb-values variables. Ex:
+Theming with SASS is not any different than theming with plain css. When using SASS Phenotypes does provide you with some quality of life utilities to make theming these values easier. Phenotypes provides you with a SASS `extract-rgb` function that makes it very easy to set the rgb-values variables. Ex:
 
 ```scss
 // when overriding the rgb variable values for your own custom theme
@@ -98,7 +98,7 @@ Theming with SASS is not any different than theming with plain css. When using S
     --focus-color-rgb-values: 0, 128, 0;
 }
 
-// When using sass, Phenotypes also provides a helper function that makes working
+// When using SASS, Phenotypes also provides a helper function that makes working
 // with exisiting colors easier.
 $green: #008000
 :root {
@@ -126,7 +126,7 @@ Phenotypes also provides you with a mixin called `color-variable` to easily auth
 
 :root {
     @include color-variable(--primary-button-color, #008000);
-    // this mixin above will be compiled to the following css:
+    // this mixin above will be compiled to the following CSS:
     --primary-button-color-rgb-values: 0, 128, 0;
     --primary-button-color: rgb(var(--primary-button-color-rgb-values));
 }

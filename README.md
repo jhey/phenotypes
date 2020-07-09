@@ -107,7 +107,7 @@ $grid-breakpoints: (
 
 The `_mixins.scss` file contains imports for functions and mixins that are used by other modules and components. Actual implementations should go in `styles/mixins`. E.g. `styles/mixins/_type.scss` contains both functions and mixins that help with typography.
 
-The `_theme_config.scss` file contains a css ruleset that defines the theming css variables that phenotypes uses. These are defined as css custom properties and allow custom themes for Phenotypes. Please see the [Theming guide](/guides/11-theming.md) for more info
+The `_theme_config.scss` file contains a CSS ruleset that defines the theming CSS variables that Phenotypes uses. These are defined as CSS custom properties and allow custom themes for Phenotypes. Please see the [Theming guide](/guides/11-theming.md) for more info.
 
 Phenotypes uses a slightly modified version of Bootstrap 4's reboot. [Read more about that.](https://v4-alpha.getbootstrap.com/content/reboot/)
 
@@ -150,13 +150,17 @@ $ npm install @aminohealth/phenotypes --save
 
 ### SASS
 
-The recommended way to use the styles for phenotypes is to import the scss entrypoint phenotypes.scss in your own project. When installed via npm this will be located at `@aminohealth/phenotypes/styles/phenotypes.scss`. This does require your project to use [Sass](https://sass-lang.com/). This is; however, not required and for that reason we also provide plain old css that you are able to use.
+The recommended way to use the styles for Phenotypes is to import the scss entrypoint phenotypes.scss in your own project. When installed via npm this will be located at `@aminohealth/phenotypes/styles/phenotypes.scss`. This does require your project to use [SASS](https://sass-lang.com/). This is; however, not required and for that reason we also provide plain old CSS that you are able to use.
 
-**NOTE**  By default the phenotypes.scss entry point when compiled will include CSS variables in the output. CSS variables are required for custom themes. CSS variables will work fine for all evergreen browsers; however, if you need to support a browser that does not support CSS variables (IE) or do not require a custom theme, you can compile the css variables away (Or see the [Theming guide](/guides/11-theming.md) for supporting IE .) CSS variables can be compiled away easily by post-processing via [postcss](https://postcss.org/) and using the [postcss-preset-env](https://preset-env.cssdb.org/) plugin. An example of how to do this is can be seen in our own build process when we compile the phenotypes.scss file to plain old css [here](./scripts/compileScss.js#L40-L48).
+**NOTE**  By default the phenotypes.scss entry point when compiled will include CSS variables in the output. CSS variables are required for custom themes. CSS variables will work fine for all evergreen browsers; however, if you need to support a browser that does not support CSS variables (IE) or do not require a custom theme, you can compile the CSS variables away (Or see the [Theming guide](/guides/11-theming.md) for supporting IE). CSS variables can be compiled away easily by post-processing via [postcss](https://postcss.org/) and using the [postcss-preset-env](https://preset-env.cssdb.org/) plugin. An example of how to do this is can be seen in our own build process when we compile the phenotypes.scss file to plain old CSS [here](./scripts/compileScss.js#L40-L48).
 
 ### CSS
 
-If you do not want to use sass there are two different css files that Phenotypes provides. The most straightforward of which is located at `@aminohealth/dist/css/phenotypes.css` when installed via npm. The other file is a themable css file that is located at `@aminohealth/dist/css/phenotypes.themable.css`. This file uses CSS variables to set theme variables and propagate those values to the Phenotypes styling. More information on this can be found in the [Theming guide](/guides/11-theming.md).
+If you do not want to use SASS there are two different CSS files that Phenotypes provides. The most straightforward of which is located at `@aminohealth/dist/css/phenotypes.css` when installed via npm. The other file is a themable CSS file that is located at `@aminohealth/dist/css/phenotypes.themable.css`. This file uses CSS variables to set theme variables and propagate those values to the Phenotypes styling. More information on this can be found in the [Theming guide](/guides/11-theming.md).
+
+## Browser Support
+
+CSS variables (used in theming) are [supported by all evergreen browsers](https://caniuse.com/#feat=css-variables). As with most modern web standards Internet Explorer is not supported by default. If you must support IE you can use the [css-vars-ponyfill](https://jhildenbiddle.github.io/css-vars-ponyfill/#/) that will compile away the CSS variables at runtime. This ponyfill will work for all browsers that do not support CSS variables not just IE.
 
 ### Peer Dependencies
 
@@ -183,7 +187,7 @@ ReactDOM.render(
 
 ## Theming
 
-Phenotypes allows you to theme the css and component library to suit your needs. Please see the [Theming guide](/guides/11-theming.md) for more information on how to customize and theme phenotypes.
+Phenotypes allows you to theme the CSS and component library to suit your needs. Please see the [Theming guide](/guides/11-theming.md) for more information on how to customize and theme Phenotypes.
 
 [npm-url]: https://www.npmjs.com/package/@aminohealth/phenotypes
 [npm-version-image]: https://img.shields.io/npm/v/@aminohealth/phenotypes.svg?style=flat
