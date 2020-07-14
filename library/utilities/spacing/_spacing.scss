@@ -9,22 +9,61 @@
 // scss-lint:disable SpaceBeforeBrace
 // scss-lint:disable SpaceAfterPropertyColon
 
+// These rules are ordered based on this specificity:
+// 1. larger-breakpoint classes are more specific (since styles are usually applied mobile-first)
+// 2. Then, more-directional classes are more specific (pt3 should override py2, which should override p1)
+
 @if $enable-spacing-utilities {
   @each $breakpoint in map-keys($grid-breakpoints) {
     @include media-breakpoint-up($breakpoint) {
       $suffix: breakpoint-suffix($breakpoint, $grid-breakpoints);
 
       @each $prop, $abbrev in (margin: m, padding: p) {
+        // All-around, e.g. m3-sm
         @for $i from 1 through length($spacers) {
           $size: $i - 1;
           $length: nth($spacers, $i);
 
-          // e.g. m3-sm
           .#{$abbrev}#{$size}#{$suffix} {
             #{$prop}: $length !important;
           }
+        }
 
-          // e.g. mt3-sm
+        // Bi-directional, e.g. mx3-sm, py3-sm, mxn3-sm
+        @for $i from 1 through length($spacers) {
+          $size: $i - 1;
+          $length: nth($spacers, $i);
+
+          .#{$abbrev}x#{$size}#{$suffix} {
+            #{$prop}-right: $length !important;
+            #{$prop}-left: $length !important;
+          }
+
+          // e.g. my3-sm
+          .#{$abbrev}y#{$size}#{$suffix} {
+            #{$prop}-top: $length !important;
+            #{$prop}-bottom: $length !important;
+          }
+        }
+
+        // Bi-directional negative, e.g. mxn1
+        // (x only -- top-bottom bi-directional isn't a thing)
+        @for $i from 1 through length($spacers) {
+          $size: $i - 1;
+          $length: nth($spacers, $i);
+          @if $size != 0 {
+            .#{$abbrev}xn#{$size}#{$suffix} {
+              #{$prop}-right: -$length !important;
+              #{$prop}-left: -$length !important;
+            }
+          }
+        }
+
+        // One-directional, e.g. mt3-sm
+        @for $i from 1 through length($spacers) {
+          $size: $i - 1;
+          $length: nth($spacers, $i);
+
           .#{$abbrev}t#{$size}#{$suffix} {
             #{$prop}-top: $length !important;
           }
@@ -37,43 +76,27 @@
           .#{$abbrev}l#{$size}#{$suffix} {
             #{$prop}-left: $length !important;
           }
+        }
 
-          // e.g. mx3-sm
-          .#{$abbrev}x#{$size}#{$suffix} {
-            #{$prop}-right: $length !important;
-            #{$prop}-left: $length !important;
-          }
+        // One-directional negative, e.g. mtn3-sm
+        @for $i from 1 through length($spacers) {
+          $size: $i - 1;
+          $length: nth($spacers, $i);
 
-          @if $abbrev == "m" {
-            // negation only applicable for margin
-            @if $size != 0 {
-              // don't need -0px margins
-              // e.g. mt3-sm
-              .#{$abbrev}tn#{$size}#{$suffix} {
-                #{$prop}-top: -$length !important;
-              }
-              .#{$abbrev}rn#{$size}#{$suffix} {
-                #{$prop}-right: -$length !important;
-              }
-              .#{$abbrev}bn#{$size}#{$suffix} {
-                #{$prop}-bottom: -$length !important;
-              }
-              .#{$abbrev}ln#{$size}#{$suffix} {
-                #{$prop}-left: -$length !important;
-              }
-
-              // e.g. mxn3-sm
-              .#{$abbrev}xn#{$size}#{$suffix} {
-                #{$prop}-right: -$length !important;
-                #{$prop}-left: -$length !important;
-              }
+          @if $size != 0 {
+            // e.g. mtn3-sm
+            .#{$abbrev}tn#{$size}#{$suffix} {
+              #{$prop}-top: -$length !important;
             }
-          }
-
-          // e.g. my3-sm
-          .#{$abbrev}y#{$size}#{$suffix} {
-            #{$prop}-top: $length !important;
-            #{$prop}-bottom: $length !important;
+            .#{$abbrev}rn#{$size}#{$suffix} {
+              #{$prop}-right: -$length !important;
+            }
+            .#{$abbrev}bn#{$size}#{$suffix} {
+              #{$prop}-bottom: -$length !important;
+            }
+            .#{$abbrev}ln#{$size}#{$suffix} {
+              #{$prop}-left: -$length !important;
+            }
           }
         }
       }
@@ -82,6 +105,17 @@
       .m-auto#{$suffix} {
         margin: auto !important;
       }
+
+      .mx-auto#{$suffix} {
+        margin-left: auto !important;
+        margin-right: auto !important;
+      }
+
+      .my-auto#{$suffix} {
+        margin-bottom: auto !important;
+        margin-top: auto !important;
+      }
+
       .mt-auto#{$suffix} {
         margin-top: auto !important;
       }
@@ -93,16 +127,6 @@
       }
       .ml-auto#{$suffix} {
         margin-left: auto !important;
-      }
-
-      .mx-auto#{$suffix} {
-        margin-left: auto !important;
-        margin-right: auto !important;
-      }
-
-      .my-auto#{$suffix} {
-        margin-bottom: auto !important;
-        margin-top: auto !important;
       }
     }
   }
