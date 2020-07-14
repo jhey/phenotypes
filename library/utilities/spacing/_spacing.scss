@@ -20,59 +20,89 @@
           $length: nth($spacers, $i);
 
           // e.g. m3-sm
-          .#{$abbrev}#{$size}#{$suffix}  { #{$prop}:        $length !important; }
+          .#{$abbrev}#{$size}#{$suffix} {
+            #{$prop}: $length !important;
+          }
 
           // e.g. mt3-sm
-          .#{$abbrev}t#{$size}#{$suffix} { #{$prop}-top:    $length !important; }
-          .#{$abbrev}r#{$size}#{$suffix} { #{$prop}-right:  $length !important; }
-          .#{$abbrev}b#{$size}#{$suffix} { #{$prop}-bottom: $length !important; }
-          .#{$abbrev}l#{$size}#{$suffix} { #{$prop}-left:   $length !important; }
+          .#{$abbrev}t#{$size}#{$suffix} {
+            #{$prop}-top: $length !important;
+          }
+          .#{$abbrev}r#{$size}#{$suffix} {
+            #{$prop}-right: $length !important;
+          }
+          .#{$abbrev}b#{$size}#{$suffix} {
+            #{$prop}-bottom: $length !important;
+          }
+          .#{$abbrev}l#{$size}#{$suffix} {
+            #{$prop}-left: $length !important;
+          }
 
           // e.g. mx3-sm
           .#{$abbrev}x#{$size}#{$suffix} {
             #{$prop}-right: $length !important;
-            #{$prop}-left:  $length !important;
+            #{$prop}-left: $length !important;
           }
 
-          @if $abbrev == 'm' {  // negation only applicable for margin
-            @if $size != 0 { // don't need -0px margins
+          @if $abbrev == "m" {
+            // negation only applicable for margin
+            @if $size != 0 {
+              // don't need -0px margins
               // e.g. mt3-sm
-              .#{$abbrev}tn#{$size}#{$suffix} { #{$prop}-top:    -$length !important; }
-              .#{$abbrev}rn#{$size}#{$suffix} { #{$prop}-right:  -$length !important; }
-              .#{$abbrev}bn#{$size}#{$suffix} { #{$prop}-bottom: -$length !important; }
-              .#{$abbrev}ln#{$size}#{$suffix} { #{$prop}-left:   -$length !important; }
+              .#{$abbrev}tn#{$size}#{$suffix} {
+                #{$prop}-top: -$length !important;
+              }
+              .#{$abbrev}rn#{$size}#{$suffix} {
+                #{$prop}-right: -$length !important;
+              }
+              .#{$abbrev}bn#{$size}#{$suffix} {
+                #{$prop}-bottom: -$length !important;
+              }
+              .#{$abbrev}ln#{$size}#{$suffix} {
+                #{$prop}-left: -$length !important;
+              }
 
               // e.g. mxn3-sm
               .#{$abbrev}xn#{$size}#{$suffix} {
                 #{$prop}-right: -$length !important;
-                #{$prop}-left:  -$length !important;
+                #{$prop}-left: -$length !important;
               }
             }
           }
 
           // e.g. my3-sm
           .#{$abbrev}y#{$size}#{$suffix} {
-            #{$prop}-top:    $length !important;
+            #{$prop}-top: $length !important;
             #{$prop}-bottom: $length !important;
           }
         }
       }
 
       // Margin auto utils
-      .m-auto#{$suffix}  { margin:        auto !important; }
-      .mt-auto#{$suffix} { margin-top:    auto !important; }
-      .mr-auto#{$suffix} { margin-right:  auto !important; }
-      .mb-auto#{$suffix} { margin-bottom: auto !important; }
-      .ml-auto#{$suffix} { margin-left:   auto !important; }
+      .m-auto#{$suffix} {
+        margin: auto !important;
+      }
+      .mt-auto#{$suffix} {
+        margin-top: auto !important;
+      }
+      .mr-auto#{$suffix} {
+        margin-right: auto !important;
+      }
+      .mb-auto#{$suffix} {
+        margin-bottom: auto !important;
+      }
+      .ml-auto#{$suffix} {
+        margin-left: auto !important;
+      }
 
       .mx-auto#{$suffix} {
-        margin-left:  auto !important;
+        margin-left: auto !important;
         margin-right: auto !important;
       }
 
       .my-auto#{$suffix} {
         margin-bottom: auto !important;
-        margin-top:    auto !important;
+        margin-top: auto !important;
       }
     }
   }
