@@ -25,7 +25,6 @@ For a good chunk of variables there are two variable declarations, with values f
   --text-color-secondary-reversed: rgba(255, 255, 255, 0.76);
   --text-color-hint-reversed: rgba(255, 255, 255, 0.59);
 
-
   --brand-color-primary-rgb-values: 133, 59, 148;
   --brand-color-primary: rgb(var(--brand-color-primary-rgb-values));
   --brand-color-accent-rgb-values: 252, 134, 38;
@@ -40,7 +39,6 @@ For a good chunk of variables there are two variable declarations, with values f
   --interactive-color: rgb(var(--interactive-color-rgb-values));
   --error-color: var(--negative-color);
 
-
   --link-color: var(--interactive-color);
   --link-hover-color-rgb-values: 0, 138, 179;
   --link-hover-color: rgb(var(--link-hover-color-rgb-values));
@@ -54,17 +52,24 @@ For a good chunk of variables there are two variable declarations, with values f
   --focus-color: rgb(var(--focus-color-rgb-values));
   --widget-on-color: var(--positive-color);
 
+  --step-progress-active-glow-opacity: 0.54;
+  --text-input-glow-opacity: 0.41;
+  --checkbox-focus-glow-opacity: var(--text-input-glow-opacity);
+  --checkbox-checked-focus-glow-opacity: 0.24;
+  --radio-focus-glow-opacity: var(--text-input-glow-opacity);
+  --radio-checked-focus-glow-opacity: var(
+    --checkbox-checked-focus-glow-opacity
+  );
+  --slider-focus-glow-opacity: 0.7;
 
   --message-success-bg-color-rgb-values: 3, 171, 140;
   --message-success-bg-color: rgb(var(--message-success-bg-color-rgb-values));
   --message-info-bg-color: var(--brand-color-primary);
   --message-danger-bg-color: var(--error-color);
 
-
   --danger-button-color: var(--negative-color);
   --danger-button-focus-color: #ee3548;
   --danger-button-active-color: #ec192e;
-
 
   --primary-button-color: var(--interactive-color);
   --primary-button-focus-color: #14a5c9;
@@ -76,14 +81,13 @@ When overriding a variable you must define the `:root` rule. An example of setti
 
 ```css
 :root {
-    --focus-color-rgb-values: 0, 128, 0
+  --focus-color-rgb-values: 0, 128, 0;
 }
 ```
 
 This will change both the focus color to green as well as apply the correct changes to the box-shadow that is tied to the focus color.
 
 **It is important to remember that CSS variables follow normal CSS cascade rules, so whichever root variable declaration comes last is the one that will be applied.**
-
 
 ### Theming with SASS
 
@@ -125,10 +129,10 @@ Phenotypes also provides you with a mixin called `color-variable` to easily auth
 // that you would like to be themable you can use the `color-variable` mixin
 
 :root {
-    @include color-variable(--primary-button-color, #008000);
-    // this mixin above will be compiled to the following CSS:
-    --primary-button-color-rgb-values: 0, 128, 0;
-    --primary-button-color: rgb(var(--primary-button-color-rgb-values));
+  @include color-variable(--primary-button-color, #008000);
+  // this mixin above will be compiled to the following CSS:
+  --primary-button-color-rgb-values: 0, 128, 0;
+  --primary-button-color: rgb(var(--primary-button-color-rgb-values));
 }
 
 // these compiled variables can then be used throughout the application
@@ -136,11 +140,10 @@ Phenotypes also provides you with a mixin called `color-variable` to easily auth
 // places where the variables are used will be updated.
 
 .PrimaryButton {
-    background-color: var(--primary-button-color);
+  background-color: var(--primary-button-color);
 }
 
 .PrimaryButton:hover {
-    background-color: rgba(var(--primary-button-color-rgb-values), .5);
+  background-color: rgba(var(--primary-button-color-rgb-values), 0.5);
 }
-
 ```

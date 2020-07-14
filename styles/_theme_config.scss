@@ -28,6 +28,15 @@
   @include color-variable(--focus-color, $blue-100);
   --widget-on-color: var(--positive-color);
 
+  // glow opacities
+  --step-progress-active-glow-opacity: #{$alpha-600};
+  --text-input-glow-opacity: #{$alpha-500};
+  --checkbox-focus-glow-opacity: var(--text-input-glow-opacity);
+  --checkbox-checked-focus-glow-opacity: #{$alpha-400};
+  --radio-focus-glow-opacity: var(--text-input-glow-opacity);
+  --radio-checked-focus-glow-opacity: var(--checkbox-checked-focus-glow-opacity);
+  --slider-focus-glow-opacity: #{$alpha-700};
+
   @include color-variable(--message-success-bg-color, $green-300);
   --message-info-bg-color: var(--brand-color-primary);
   --message-danger-bg-color: var(--error-color);

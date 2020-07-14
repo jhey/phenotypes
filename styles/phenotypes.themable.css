@@ -93,6 +93,13 @@
   --focus-color-rgb-values: 127, 234, 255;
   --focus-color: rgb(var(--focus-color-rgb-values));
   --widget-on-color: var(--positive-color);
+  --step-progress-active-glow-opacity: 0.54;
+  --text-input-glow-opacity: 0.41;
+  --checkbox-focus-glow-opacity: var(--text-input-glow-opacity);
+  --checkbox-checked-focus-glow-opacity: 0.24;
+  --radio-focus-glow-opacity: var(--text-input-glow-opacity);
+  --radio-checked-focus-glow-opacity: var(--checkbox-checked-focus-glow-opacity);
+  --slider-focus-glow-opacity: 0.7;
   --message-success-bg-color-rgb-values: 3, 171, 140;
   --message-success-bg-color: rgb(var(--message-success-bg-color-rgb-values));
   --message-info-bg-color: var(--brand-color-primary);
@@ -600,7 +607,7 @@ hr {
   z-index: -1; }
   .Checkbox__input:focus ~ .Checkbox__indicator {
     border-color: #7feaff;
-    box-shadow: 0 0 11px rgba(var(--focus-color-rgb-values), 0.41); }
+    box-shadow: 0 0 11px rgba(var(--focus-color-rgb-values), var(--checkbox-focus-glow-opacity)); }
   .Checkbox__input:active ~ .Checkbox__indicator {
     background-color: #f9f9f9;
     border-color: #c1c1c1; }
@@ -610,7 +617,7 @@ hr {
     border-color: #232323; }
   .Checkbox__input:checked:focus ~ .Checkbox__indicator {
     border-color: #232323;
-    box-shadow: 0 0 0 2px rgba(var(--interactive-color-rgb-values), 0.24); }
+    box-shadow: 0 0 0 2px rgba(var(--interactive-color-rgb-values), var(--checkbox-checked-focus-glow-opacity)); }
   .Checkbox__input:checked:active ~ .Checkbox__indicator {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 9'%3E%3Cpolygon fill='%23fff' fill-opacity='0.54' points='3.5 5.45 1.5 3.45 0 4.95 3.5 8.45 10 1.95 8.5 .45'/%3E%3C/svg%3E%0A");
     background-color: #232323;
@@ -871,7 +878,7 @@ hr {
   z-index: -1; }
   .Radio__input:focus ~ .Radio__indicator {
     border-color: #7feaff;
-    box-shadow: 0 0 11px rgba(var(--focus-color-rgb-values), 0.41); }
+    box-shadow: 0 0 11px rgba(var(--focus-color-rgb-values), var(--radio-focus-glow-opacity)); }
   .Radio__input:active ~ .Radio__indicator {
     background-color: #f9f9f9;
     border-color: #c1c1c1; }
@@ -883,7 +890,7 @@ hr {
       display: block; }
   .Radio__input:checked:focus ~ .Radio__indicator {
     border-color: #232323;
-    box-shadow: 0 0 0 2px rgba(var(--interactive-color-rgb-values), 0.24); }
+    box-shadow: 0 0 0 2px rgba(var(--interactive-color-rgb-values), var(--radio-checked-focus-glow-opacity)); }
   .Radio__input:checked:active:not(:disabled) ~ .Radio__indicator {
     background-color: #232323;
     border-color: #232323; }
@@ -1173,7 +1180,7 @@ hr {
     margin-right: 0; }
   .ProgressBar__step::after {
     background-color: var(--step-progress-active-color);
-    box-shadow: 0 0 7px 0 rgba(var(--step-progress-active-color-rgb-values), 0.54);
+    box-shadow: 0 0 7px 0 rgba(var(--step-progress-active-color-rgb-values), var(--step-progress-active-glow-opacity));
     content: " ";
     height: 100%;
     opacity: 0;
@@ -1224,7 +1231,7 @@ hr {
     background-color: var(--focus-color);
     border-radius: 50%;
     bottom: 7px;
-    box-shadow: 0 0 5px 0 rgba(127, 234, 255, 0.7);
+    box-shadow: 0 0 5px 0 rgba(var(--focus-color-rgb-values), var(--slider-focus-glow-opacity));
     content: '';
     left: 7px;
     opacity: 0;
@@ -1326,7 +1333,7 @@ hr {
 
 .TextInput:focus {
   border-color: var(--focus-color);
-  box-shadow: 0 0 11px rgba(var(--focus-color-rgb-values), 0.41);
+  box-shadow: 0 0 11px rgba(var(--focus-color-rgb-values), var(--text-input-glow-opacity));
   outline: 0; }
 
 .TextInput:disabled,

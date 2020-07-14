@@ -25,7 +25,10 @@
   &::after {
     background-color: var(--step-progress-active-color);
     box-shadow: 0 0 modular-scale-px(-6) 0
-      rgba(var(--step-progress-active-color-rgb-values), $alpha-600);
+      rgba(
+        var(--step-progress-active-color-rgb-values),
+        var(--step-progress-active-glow-opacity)
+      );
     content: " ";
     height: 100%;
     opacity: 0;
