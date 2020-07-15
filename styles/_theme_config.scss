@@ -6,6 +6,11 @@
 // ------------------------------
 :root {
   // base variable set
+  // interpolation removes quotes from strings
+  // we can use inspect to preserve strings
+  // See Heads up section on the following page:
+  // https://sass-lang.com/documentation/style-rules/declarations#custom-properties
+  --font-family: #{inspect($font-family-base)};
   --text-color-primary: #{$text-color-primary};
   --text-color-secondary: #{$text-color-secondary};
   --text-color-hint: #{$text-color-hint};
