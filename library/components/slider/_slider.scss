@@ -54,7 +54,7 @@ $slider-focus-color: $blue-100;
     background-color: var(--focus-color);
     border-radius: 50%;
     bottom: $slider-focus-margin;
-    box-shadow: 0 0 ($slider-focus-size / 2) 0 rgba($slider-focus-color, $alpha-700);
+    box-shadow: 0 0 ($slider-focus-size / 2) 0 rgba(var(--focus-color-rgb-values), var(--slider-focus-glow-opacity));
     content: '';
     left: $slider-focus-margin;
     opacity: 0;

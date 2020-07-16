@@ -6,6 +6,11 @@
 // ------------------------------
 :root {
   // base variable set
+  // interpolation removes quotes from strings
+  // we can use inspect to preserve strings
+  // See Heads up section on the following page:
+  // https://sass-lang.com/documentation/style-rules/declarations#custom-properties
+  --font-family: #{inspect($font-family-base)};
   --text-color-primary: #{$text-color-primary};
   --text-color-secondary: #{$text-color-secondary};
   --text-color-hint: #{$text-color-hint};
@@ -27,6 +32,15 @@
   @include color-variable(--step-progress-active-color, $purple-200);
   @include color-variable(--focus-color, $blue-100);
   --widget-on-color: var(--positive-color);
+
+  // glow opacities
+  --step-progress-active-glow-opacity: #{$alpha-600};
+  --text-input-glow-opacity: #{$alpha-500};
+  --checkbox-focus-glow-opacity: var(--text-input-glow-opacity);
+  --checkbox-checked-focus-glow-opacity: #{$alpha-400};
+  --radio-focus-glow-opacity: var(--text-input-glow-opacity);
+  --radio-checked-focus-glow-opacity: var(--checkbox-checked-focus-glow-opacity);
+  --slider-focus-glow-opacity: #{$alpha-700};
 
   @include color-variable(--message-success-bg-color, $green-300);
   --message-info-bg-color: var(--brand-color-primary);

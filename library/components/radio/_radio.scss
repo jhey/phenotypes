@@ -75,7 +75,7 @@
 
   &:focus ~ .Radio__indicator {
     border-color: $blue-100;
-    box-shadow: 0 0 11px rgba(var(--focus-color-rgb-values), $alpha-500);
+    box-shadow: 0 0 11px rgba(var(--focus-color-rgb-values), var(--radio-focus-glow-opacity));
   }
 
   &:active ~ .Radio__indicator {
@@ -96,7 +96,7 @@
 
   &:checked:focus ~ .Radio__indicator {
     border-color: $gray-800;
-    box-shadow: 0 0 0 2px rgba(var(--interactive-color-rgb-values), $alpha-400);
+    box-shadow: 0 0 0 2px rgba(var(--interactive-color-rgb-values), var(--radio-checked-focus-glow-opacity));
   }
 
   &:checked:active:not(:disabled) ~ .Radio__indicator {
