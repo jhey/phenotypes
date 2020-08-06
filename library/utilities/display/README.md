@@ -1,4 +1,4 @@
-Responsive display utility classes allow you to quickly set an element's `display` property to any valid value. The format is: 
+Responsive display utility classes allow you to quickly set an element's `display` property to any valid value. The format is:
 
 ```
 .d-[value]-[breakpoint]
@@ -6,14 +6,14 @@ Responsive display utility classes allow you to quickly set an element's `displa
 
 Above, `value` is one of:
 
-* `none`
-* `inline`
-* `inline-block`
-* `block`
-* `table`
-* `table-cell`
-* `flex`
-* `inline-flex`
+- `none`
+- `inline`
+- `inline-block`
+- `block`
+- `table`
+- `table-cell`
+- `flex`
+- `inline-flex`
 
 The `breakpoint` suffix specifies the minimum screen size to apply the rule. For example, `.d-none.d-block-md` would hide the element at `xs` and `sm` sizes and show it at `md` and up.
 
@@ -23,5 +23,5 @@ Adapted from Bootstrap 4.
 
 Related:
 
-* [Bootstrap display utilities](https://v4-alpha.getbootstrap.com/utilities/display-property/)
-* [Responsive breakpoints](/docs/layout/#responsive-breakpoints)
+- [Bootstrap display utilities](https://v4-alpha.getbootstrap.com/utilities/display-property/)
+- [Responsive breakpoints](/docs/layout/#responsive-breakpoints)

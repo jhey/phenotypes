@@ -6,23 +6,23 @@ The component provides responsive utility classes (see Modifiers below) that can
 
 ### Props
 
-| name | type | description |
-| ---- | ---- | ------- | ----------- |
-| `className` | string | Class name for the `input` element. This should include any BEM modifier classes you wish to use. |
-| HTML attributes | various | e.g. `checked: true`, `disabled: true`, events, etc. are applied to the `input` |
+| name            | type    | description                                                                                       |
+| --------------- | ------- | ------------------------------------------------------------------------------------------------- |
+| `className`     | string  | Class name for the `input` element. This should include any BEM modifier classes you wish to use. |
+| HTML attributes | various | e.g. `checked: true`, `disabled: true`, events, etc. are applied to the `input`                   |
 
 Valid HTML attributes and event handlers for the input element may be safely passed as additional props. **These props will be applied to the `<input>` element, not the root element of the component.**
 
 Passing a prop that is not a legal DOM attribute will cause React to trigger an [unknown prop warning](https://facebook.github.io/react/warnings/unknown-prop.html).
 
-*Note that there are [several attributes that work differently between React and HTML](https://facebook.github.io/react/docs/dom-elements.html). In these cases, attributes should be passed the React-y way.*
+_Note that there are [several attributes that work differently between React and HTML](https://facebook.github.io/react/docs/dom-elements.html). In these cases, attributes should be passed the React-y way._
 
 ### Modifiers
 
-| class | default | responsive | notes |
-| ----- | ------- | ---------- | ----- |
-| `Checkbox--small[-breakpoint]` | false | true | Responsive breakpoint token optional |
-| `Checkbox--medium[-breakpoint]` | true | true | Responsive breakpoint token optional |
-| `Checkbox--large[-breakpoint]` | false | true | Responsive breakpoint token optional |
+| class                           | default | responsive | notes                                |
+| ------------------------------- | ------- | ---------- | ------------------------------------ |
+| `Checkbox--small[-breakpoint]`  | false   | true       | Responsive breakpoint token optional |
+| `Checkbox--medium[-breakpoint]` | true    | true       | Responsive breakpoint token optional |
+| `Checkbox--large[-breakpoint]`  | false   | true       | Responsive breakpoint token optional |
 
 For the responsive classes, append a responsive breakpoint token to apply the associated sizing styles at that breakpoint and up. For example, `.Checkbox--small .Checkbox--medium-sm .Checkbox--large-md` will give you a small size checkbox on `xs` screens, medium on `sm` screens, and large on `md` screens and up.

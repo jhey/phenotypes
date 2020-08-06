@@ -14,5 +14,5 @@ Note: this feature is enabled by default and adds 344 lines of CSS (approx 10kb)
 
 Related:
 
-* [Typography](/docs/typography/)
-* [Responsive breakpoints](/docs/layout/#responsive-breakpoints)
+- [Typography](/docs/typography/)
+- [Responsive breakpoints](/docs/layout/#responsive-breakpoints)

@@ -18,11 +18,11 @@ These numbers use the same modular scale as the typography system. With the exce
 
 Here are some ways to use the modular scale to decide on spacing and sizing:
 
-* Use one of the numbers above as a padding, margin, or offset value
-* Use one of the numbers above as an element's overall height/width and center its contents vertically/horizontally
-* Use an aspect ratio from the modular scale along with a fixed dimension to pick the other other dimension. E.g. if you have an element that must be 800px wide and you need to pick a height for it, consider `800px × [(8/7)^-4] ≈ 470px`.
-* Use the numbers above as guidelines (or keylines). E.g. if you have one column of variable-width thin labels and a second column of longer text, the first column could be inset 36px from the edge of the container, and the second column could be inset 119px from the edge.
-* Mix and match these techniques as needed
+- Use one of the numbers above as a padding, margin, or offset value
+- Use one of the numbers above as an element's overall height/width and center its contents vertically/horizontally
+- Use an aspect ratio from the modular scale along with a fixed dimension to pick the other other dimension. E.g. if you have an element that must be 800px wide and you need to pick a height for it, consider `800px × [(8/7)^-4] ≈ 470px`.
+- Use the numbers above as guidelines (or keylines). E.g. if you have one column of variable-width thin labels and a second column of longer text, the first column could be inset 36px from the edge of the container, and the second column could be inset 119px from the edge.
+- Mix and match these techniques as needed
 
 ### Yeah, but what if...
 
@@ -33,14 +33,14 @@ Phenotypes aims to balance simplicity and flexibility, but no spacing system can
 ## Appendix
 
 | SASS variable | Space |
-| -------- | ----- |
-| `$spacer-0` | 0 |
-| `$spacer-1` | 5px |
-| `$spacer-2` | 7px |
-| `$spacer-3` | 11px |
-| `$spacer-4` | 16px |
-| `$spacer-5` | 24px |
-| `$spacer-6` | 36px |
-| `$spacer-7` | 53px |
-| `$spacer-8` | 79px |
-| `$spacer-9` | 119px |
+| ------------- | ----- |
+| `$spacer-0`   | 0     |
+| `$spacer-1`   | 5px   |
+| `$spacer-2`   | 7px   |
+| `$spacer-3`   | 11px  |
+| `$spacer-4`   | 16px  |
+| `$spacer-5`   | 24px  |
+| `$spacer-6`   | 36px  |
+| `$spacer-7`   | 53px  |
+| `$spacer-8`   | 79px  |
+| `$spacer-9`   | 119px |

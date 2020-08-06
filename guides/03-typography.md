@@ -26,19 +26,19 @@ There's no single line height that works well for all font sizes. As type gets b
 
 Phenotypes prescribes **three line heights that depend on font size.** They are selected from the modular scale:
 
-Font size | Modular scale steps | Line height
----|---|---
-**< 12** | **3 steps** | **1.493**
-12 | 3 steps | 1.493
-14 | 3 steps | 1.493
-16 | 3 steps | 1.493
-18 | 3 steps | 1.493
-21 | 3 steps | 1.493
-**24** | **2 steps** | **1.306**
-36 | 2 steps | 1.306
-**53** | **1 step** | **1.143**
-70 | 1 step | 1.143
-> 70 | 1 step | 1.143
+| Font size | Modular scale steps | Line height |
+| --------- | ------------------- | ----------- |
+| **< 12**  | **3 steps**         | **1.493**   |
+| 12        | 3 steps             | 1.493       |
+| 14        | 3 steps             | 1.493       |
+| 16        | 3 steps             | 1.493       |
+| 18        | 3 steps             | 1.493       |
+| 21        | 3 steps             | 1.493       |
+| **24**    | **2 steps**         | **1.306**   |
+| 36        | 2 steps             | 1.306       |
+| **53**    | **1 step**          | **1.143**   |
+| 70        | 1 step              | 1.143       |
+| > 70      | 1 step              | 1.143       |
 
 As always, use your best judgement. If you're designing an event poster with huge type, you might find yourself needing to use a line height of 1.0 or even tighter to achieve the right look. For product UI, presentations, and other general uses, the line heights above should serve you well.
 
@@ -50,7 +50,7 @@ On small mobile screens, line length is usually modulated by choosing font sizes
 
 ### Letter spacing
 
-Generally, letter spacing isn't required for small and medium type*. Type **larger than 50px** starts to feel too loose horizontally and should be given subtle and progressive negative letter spacing according to this formula: 
+Generally, letter spacing isn't required for small and medium type\*. Type **larger than 50px** starts to feel too loose horizontally and should be given subtle and progressive negative letter spacing according to this formula:
 
 ```
 letter_spacing = -0.6 * [floor(font_size * 0.02)^2]
@@ -85,14 +85,14 @@ These opacities of black match the brand gray palette when set against a white b
 Text color contrast is a very important accessibility concern. Not everyone can read light gray type on white—a style designers tend to favor. You need to **consider color contrast** whenever you're reducing the prominence of text or setting text in some color against a background pattern, image, or color (including black or white). The [Web Content Accessibility Guidelines (WCAG) 2.0](http://www.w3.org/TR/WCAG20/#visual-audio-contrast-contrast) says the following:
 
 > **4.3 Contrast (Minimum):** The visual presentation of [text](http://www.w3.org/TR/WCAG20/#textdef) and [images of text](http://www.w3.org/TR/WCAG20/#images-of-textdef) has a [contrast ratio](http://www.w3.org/TR/WCAG20/#contrast-ratiodef) of **at least 4.5:1,** except for the following: (Level AA)
-> 
-> * **Large Text:** [Large-scale](http://www.w3.org/TR/WCAG20/#larger-scaledef) text and images of large-scale text have a contrast ratio of **at least 3:1**;
-> * **Incidental:** Text or images of text that are part of an inactive [user interface component](> http://www.w3.org/TR/WCAG20/#user-interface-componentdef), that are [pure decoration](http://> www.w3.org/TR/WCAG20/#puredecdef), that are not visible to anyone, or that are part of a picture that contains significant other visual content, have **no contrast requirement**.
-> * **Logotypes:** Text that is part of a logo or brand name has no minimum contrast requirement.
+>
+> - **Large Text:** [Large-scale](http://www.w3.org/TR/WCAG20/#larger-scaledef) text and images of large-scale text have a contrast ratio of **at least 3:1**;
+> - **Incidental:** Text or images of text that are part of an inactive [user interface component](> http://www.w3.org/TR/WCAG20/#user-interface-componentdef), that are [pure decoration](http://> www.w3.org/TR/WCAG20/#puredecdef), that are not visible to anyone, or that are part of a picture that contains significant other visual content, have **no contrast requirement**.
+> - **Logotypes:** Text that is part of a logo or brand name has no minimum contrast requirement.
 
 Long story short: try to maintain a **minimum contrast ratio of 4.5**. A contrast ratio of **7 or higher is ideal**, as that's the cutoff for Level AAA accessibility (AAA is the highest level of accessibility compliance, but it's not [expected](http://www.w3.org/TR/UNDERSTANDING-WCAG20/conformance.html) for any project to adhere to that level 100% of the time).
 
-The contrast ratio between two colors is [calculated](http://www.w3.org/TR/WCAG20/#contrast-ratiodef) using their relative luminance values. Keep in mind that the contrast ratios for the opacities given above assume a pure black or white background. Contrast is reduced when text is overlaid on gray or any other color, like the purple shown below. 
+The contrast ratio between two colors is [calculated](http://www.w3.org/TR/WCAG20/#contrast-ratiodef) using their relative luminance values. Keep in mind that the contrast ratios for the opacities given above assume a pure black or white background. Contrast is reduced when text is overlaid on gray or any other color, like the purple shown below.
 
 ![Colors](/img/guides/contrast-ratios.png)
 
@@ -106,8 +106,8 @@ If possible, try to choose font sizes that work well across devices. For Sailec,
 
 Good typography requires a lot of attention to detail, and not just regarding font sizes and line heights. Get up to speed on all the best practices by reading through the [Flawless Typography Checklist](https://app.typographychecklist.com/). Here are some highlights:
 
-* Use proper apostrophes and quotes (`’` and `”` instead of `'` and `"`), proper dashes (`—` instead of `--`), and other typographic characters (`×` instead of `x`) whenever possible.
-* Use an “interpunct” or “middot” character (`·`) to separate items in a horizontal list instead of dashes, pipes, or bullets.
+- Use proper apostrophes and quotes (`’` and `”` instead of `'` and `"`), proper dashes (`—` instead of `--`), and other typographic characters (`×` instead of `x`) whenever possible.
+- Use an “interpunct” or “middot” character (`·`) to separate items in a horizontal list instead of dashes, pipes, or bullets.
 
 Remember to adhere to Amino's editorial style guide for grammar and punctuation, and always write good, concise copy.
 
@@ -119,24 +119,22 @@ Here's a native system font stack borrowed from [Bootstrap 4](https://v4-alpha.g
 
 ```scss
 $font-family-sans-serif:
-  // Safari for OS X and iOS (San Francisco)
-  -apple-system,
+  // Safari for OS X and iOS (San Francisco) -apple-system,
   // Chrome >= 56 for OS X (San Francisco), Windows, Linux and Android
-  system-ui,
-  // Chrome < 56 for OS X (San Francisco)
-  BlinkMacSystemFont,
+    system-ui, // Chrome < 56 for OS X (San Francisco)
+    BlinkMacSystemFont,
   // Windows
-  "Segoe UI",
-  // Android
-  "Roboto",
+    "Segoe UI", // Android
+    "Roboto",
   // Basic web fallback
-  "Helvetica Neue", Arial, sans-serif !default;
+    "Helvetica Neue", Arial, sans-serif !default;
 ```
 
 And here is the same stack as plain old CSS:
 
 ```scss
-font-family: "Sailec", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
+font-family: "Sailec", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI",
+  "Roboto", "Helvetica Neue", Arial, sans-serif;
 ```
 
 ---
