@@ -1,12 +1,12 @@
 // scss-lint:disable SelectorFormat ElsePlacement StringQuotes
 
-@import '../../../styles/lib/str-replace';
+@import "../../../styles/lib/str-replace";
 
 // Checkbox based on Bootstrap's "custom control"
 // https://github.com/twbs/bootstrap/blob/v4-dev/scss/_custom-forms.scss
 
-@mixin checkbox-sizer($size: 'medium') {
-  @if $size == 'small' {
+@mixin checkbox-sizer($size: "medium") {
+  @if $size == "small" {
     $width: modular-scale-px(-1);
 
     @include text-1;
@@ -19,9 +19,7 @@
       top: 1px;
       width: $width;
     }
-  }
-
-  @else if $size == 'medium' {
+  } @else if $size == "medium" {
     $width: modular-scale-px(0);
 
     @include text-2;
@@ -34,9 +32,7 @@
       top: 1px;
       width: $width;
     }
-  }
-
-  @else if $size == 'large' {
+  } @else if $size == "large" {
     $width: modular-scale-px(2);
 
     @include text-4;
@@ -53,7 +49,11 @@
 }
 
 @mixin checkbox-icon($fill: $white, $fill-opacity: 1) {
-  background-image: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 9'%3E%3Cpolygon fill='#{$fill}' fill-opacity='#{$fill-opacity}' points='3.5 5.45 1.5 3.45 0 4.95 3.5 8.45 10 1.95 8.5 .45'/%3E%3C/svg%3E%0A"), '#', '%23');
+  background-image: str-replace(
+    url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 9'%3E%3Cpolygon fill='#{$fill}' fill-opacity='#{$fill-opacity}' points='3.5 5.45 1.5 3.45 0 4.95 3.5 8.45 10 1.95 8.5 .45'/%3E%3C/svg%3E%0A"),
+    "#",
+    "%23"
+  );
 }
 
 .Checkbox {
@@ -69,8 +69,9 @@
   z-index: -1;
 
   &:focus ~ .Checkbox__indicator {
-    border-color: $blue-100;
-    box-shadow: 0 0 11px rgba(var(--focus-color-rgb-values), var(--checkbox-focus-glow-opacity));
+    border-color: var(--focus-color);
+    box-shadow: 0 0 11px
+      rgba(var(--focus-color-rgb-values), var(--checkbox-focus-glow-opacity));
   }
 
   &:active ~ .Checkbox__indicator {
@@ -86,7 +87,11 @@
 
   &:checked:focus ~ .Checkbox__indicator {
     border-color: $gray-800;
-    box-shadow: 0 0 0 2px rgba(var(--interactive-color-rgb-values), var(--checkbox-checked-focus-glow-opacity));
+    box-shadow: 0 0 0 2px
+      rgba(
+        var(--interactive-color-rgb-values),
+        var(--checkbox-checked-focus-glow-opacity)
+      );
   }
 
   &:checked:active ~ .Checkbox__indicator {
@@ -132,12 +137,22 @@
     @include media-breakpoint-up($breakpoint) {
       $suffix: breakpoint-suffix($breakpoint, $grid-breakpoints);
 
-      .Checkbox--medium#{$suffix} { @include checkbox-sizer; }
-      .Checkbox--small#{$suffix} { @include checkbox-sizer('small'); }
-      .Checkbox--large#{$suffix} { @include checkbox-sizer('large'); }
+      .Checkbox--medium#{$suffix} {
+        @include checkbox-sizer;
+      }
+      .Checkbox--small#{$suffix} {
+        @include checkbox-sizer("small");
+      }
+      .Checkbox--large#{$suffix} {
+        @include checkbox-sizer("large");
+      }
     }
   }
 } @else {
-  .Checkbox--small { @include checkbox-sizer('small'); }
-  .Checkbox--large { @include checkbox-sizer('large'); }
+  .Checkbox--small {
+    @include checkbox-sizer("small");
+  }
+  .Checkbox--large {
+    @include checkbox-sizer("large");
+  }
 }
