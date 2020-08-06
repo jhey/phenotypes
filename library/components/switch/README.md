@@ -2,18 +2,21 @@ The `Switch` component renders a specialized `<input type="checkbox">` that is u
 
 ### Props
 
-| name | type | default | description |
-| ---- | ---- | ------- | ----------- |
-| `className` | string | | Class name for the root element.
-| HTML attributes | various | | e.g. `checked: true`, `disabled: true`, events, etc. are applied to the `input` |
+| name            | type    | default | description                                                                     |
+| --------------- | ------- | ------- | ------------------------------------------------------------------------------- |
+| `className`     | string  |         | Class name for the root element.                                                |
+| HTML attributes | various |         | e.g. `checked: true`, `disabled: true`, events, etc. are applied to the `input` |
 
 ### Usage
 
 Javascript:
+
 ```html
 <Switch checked />
 ```
+
 Rendered markup:
+
 ```html
 <label class="Switch">
   <input class="Switch__input" type="checkbox" checked />

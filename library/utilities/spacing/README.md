@@ -8,40 +8,37 @@ Responsive class utilities are provided for as well, following this format:
 .[property][sides][size]-[breakpoint]
 ```
 
-* `property` is `m` or `p` for margin or padding, respectively
-* `sides` (optional) is one of:
-	* `t`, `b`, `l`, or `r` for top/bottom/left/right
-	* `x` or `y` for horizontal/vertical
-	* omitted for all sides
-* `size` is a number from 0 to 9 (corresponding to the variables above)
-* `breakpoint` is an optional responsive breakpoint (`sm`, `md`, `lg`, `xl`)
+- `property` is `m` or `p` for margin or padding, respectively
+- `sides` (optional) is one of:
+  _ `t`, `b`, `l`, or `r` for top/bottom/left/right
+  _ `x` or `y` for horizontal/vertical \* omitted for all sides
+- `size` is a number from 0 to 9 (corresponding to the variables above)
+- `breakpoint` is an optional responsive breakpoint (`sm`, `md`, `lg`, `xl`)
 
 Special cases:
 
-* Margin auto values follow the pattern `.m[x,y]-auto-[breakpoint]`
-* Negative spacing helpers for x-axis: `.mxn[size]-[breakpoint]`
+- Margin auto values follow the pattern `.m[x,y]-auto-[breakpoint]`
+- Negative spacing helpers for x-axis: `.mxn[size]-[breakpoint]`
 
 Examples:
 
-* `.mb4.mb5-md` adds 16px `margin-bottom` for `xs` up, and 24px for `md` up
-* `.py1` adds 5px `padding-top` and `padding-bottom`
-
+- `.mb4.mb5-md` adds 16px `margin-bottom` for `xs` up, and 24px for `md` up
+- `.py1` adds 5px `padding-top` and `padding-bottom`
 
 ### SASS variables
 
 | SASS variable | Space |
-| -------- | ----- |
-| `$spacer-0` | 0 |
-| `$spacer-1` | 5px |
-| `$spacer-2` | 7px |
-| `$spacer-3` | 11px |
-| `$spacer-4` | 16px |
-| `$spacer-5` | 24px |
-| `$spacer-6` | 36px |
-| `$spacer-7` | 53px |
-| `$spacer-8` | 79px |
-| `$spacer-9` | 119px |
-
+| ------------- | ----- |
+| `$spacer-0`   | 0     |
+| `$spacer-1`   | 5px   |
+| `$spacer-2`   | 7px   |
+| `$spacer-3`   | 11px  |
+| `$spacer-4`   | 16px  |
+| `$spacer-5`   | 24px  |
+| `$spacer-6`   | 36px  |
+| `$spacer-7`   | 53px  |
+| `$spacer-8`   | 79px  |
+| `$spacer-9`   | 119px |
 
 ### Etc.
 
@@ -51,7 +48,7 @@ Adapted from Bootstrap 4.
 
 Related:
 
-* [Modular Scale](/docs/modular-scale/)
-* [Spacing](/docs/spacing/)
-* [Responsive breakpoints](/docs/layout/#responsive-breakpoints)
-* [Bootstrap 4 spacing utilities](https://v4-alpha.getbootstrap.com/utilities/spacing/)
+- [Modular Scale](/docs/modular-scale/)
+- [Spacing](/docs/spacing/)
+- [Responsive breakpoints](/docs/layout/#responsive-breakpoints)
+- [Bootstrap 4 spacing utilities](https://v4-alpha.getbootstrap.com/utilities/spacing/)

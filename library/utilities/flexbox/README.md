@@ -14,6 +14,6 @@ Adapted from Bootstrap 4.
 
 Related:
 
-* [Bootstrap 4 flexbox utilities](https://v4-alpha.getbootstrap.com/utilities/flexbox/)
-* [A Complete Guide to Flexbox on CSS-Tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
-* [Responsive breakpoints](/docs/layout/#responsive-breakpoints)
+- [Bootstrap 4 flexbox utilities](https://v4-alpha.getbootstrap.com/utilities/flexbox/)
+- [A Complete Guide to Flexbox on CSS-Tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+- [Responsive breakpoints](/docs/layout/#responsive-breakpoints)

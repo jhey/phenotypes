@@ -18,7 +18,8 @@ For a good chunk of variables there are two variable declarations, with values f
 
 ```css
 :root {
-  --font-family: "Sailec", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
+  --font-family: "Sailec", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif !default;
   --text-color-primary: rgba(0, 0, 0, 0.86);
   --text-color-secondary: rgba(0, 0, 0, 0.54);
   --text-color-hint: rgba(0, 0, 0, 0.41);
