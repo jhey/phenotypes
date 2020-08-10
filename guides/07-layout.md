@@ -8,13 +8,13 @@ Phenotypes encourages a mobile-first approach for both design and development. T
 
 Phenotypes groups devices into the following buckets:
 
-| Bucket | Abbreviation | Min | Max | Devices |
-| ------ | ------------ | --- | --- | ------- |
-| Extra small | `xs` | **0** | 599px | Phones |
-| Small | `sm` | **600px** | 899px | Tablet portrait |
-| Medium | `md` | **900px** | 1199px | Tablet + desktop |
-| Large | `lg` | **1200px** | 1499px | Desktop |
-| Extra large | `xl` | **1500px** | ∞ | Big monitor |
+| Bucket      | Abbreviation | Min        | Max     | Devices          |
+| ----------- | ------------ | ---------- | ------- | ---------------- |
+| Extra small | `xs`         | **0**      | 599px   | Phones           |
+| Small       | `sm`         | **600px**  | 899px   | Tablet portrait  |
+| Medium      | `md`         | **900px**  | 1199px  | Tablet + desktop |
+| Large       | `lg`         | **1200px** |  1499px | Desktop          |
+| Extra large | `xl`         | **1500px** | ∞       | Big monitor      |
 
 Since this is a mobile-first system, the breakpoints correspond to each range's minimum value (bold above): 600px, 900px, 1200px, 1500px. Note that the number of breakpoints and their names are the same as Bootstrap, but the breakpoint values are [optimized for bucketing](https://medium.freecodecamp.com/the-100-correct-way-to-do-css-breakpoints-88d6a5ba1862) rather than hewing to exact device sizes.
 

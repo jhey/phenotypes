@@ -559,7 +559,7 @@ hr {
   position: absolute;
   z-index: -1; }
   .Checkbox__input:focus ~ .Checkbox__indicator {
-    border-color: #7feaff;
+    border-color: rgb(127, 234, 255);
     box-shadow: 0 0 11px rgba(127, 234, 255, 0.41); }
   .Checkbox__input:active ~ .Checkbox__indicator {
     background-color: #f9f9f9;
@@ -833,7 +833,7 @@ hr {
   position: absolute;
   z-index: -1; }
   .Radio__input:focus ~ .Radio__indicator {
-    border-color: #7feaff;
+    border-color: rgb(127, 234, 255);
     box-shadow: 0 0 11px rgba(127, 234, 255, 0.41); }
   .Radio__input:active ~ .Radio__indicator {
     background-color: #f9f9f9;
@@ -1191,13 +1191,13 @@ hr {
     border-radius: 50%;
     bottom: 7px;
     box-shadow: 0 0 5px 0 rgba(127, 234, 255, 0.7);
-    content: '';
+    content: "";
     left: 7px;
     opacity: 0;
     position: absolute;
     right: 7px;
     top: 7px;
-    transition: opacity .15s linear; }
+    transition: opacity 0.15s linear; }
 
 .Slider--is-disabled {
   cursor: not-allowed;

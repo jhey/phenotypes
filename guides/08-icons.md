@@ -14,7 +14,7 @@ Nucleo comes in three flavors: outline, glyph (solid), and color. The 16px size 
 
 ### Apps
 
-Nucleo provides a **Mac app and a web app** for icon management. When using these apps, be sure the outline style icons are set to use a 2px stroke weight and rounded caps/corners. 
+Nucleo provides a **Mac app and a web app** for icon management. When using these apps, be sure the outline style icons are set to use a 2px stroke weight and rounded caps/corners.
 
 The Mac app is super handy for searching and quickly dragging and dropping an icon into Sketch, Photoshop, or pretty much any other software. When you drag an icon out of the Mac app, it automatically creates an SVG with a unique and recognizable name, which should become the layer name in the design software when you drop the icon. Come implementation time, that name should make it very easy for your developer friends to identify the corresponding icon files.
 
@@ -32,7 +32,7 @@ Amino has a lifetime team license for Nucleo icons and the apps. Just ask for an
 
 If you're logged in to the Nucleo website, you can download the following resources:
 
-* [Mac app](https://nucleoapp.com/download/mac/latest)
-* [Complete SVG icons set](https://nucleoapp.com/source-files/)
+- [Mac app](https://nucleoapp.com/download/mac/latest)
+- [Complete SVG icons set](https://nucleoapp.com/source-files/)
 
 We also keep an archive of the [SVG icons in Dropbox](https://www.dropbox.com/s/nf8hfb3o4dkah7i/Nucleo%20Icons.zip?dl=0), though they might not be up to date (new icons are added regularly).

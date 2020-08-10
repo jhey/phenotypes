@@ -42,6 +42,7 @@ export default [
       // for modern bundlers like webpack 2+ and rollup
       // output esm format
       format: 'esm',
+      sourcemap: true,
     },
   },
   {
@@ -50,6 +51,7 @@ export default [
       file: path.resolve(WORKSPACE_ROOT, packageJSON.main),
       // output commonjs format for older workflows
       format: 'cjs',
+      sourcemap: true,
     },
   },
 ];
