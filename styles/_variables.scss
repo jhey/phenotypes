@@ -258,7 +258,7 @@ $grid-gutter-widths: (
 // ------------------------------
 
 $border-width:  2px !default;
-$border-radius: 3px !default;
+$border-radius: var(--border-radius) !default;
 
 // TODO: Lots more variables go here as components are built
 
