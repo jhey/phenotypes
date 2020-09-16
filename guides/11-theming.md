@@ -76,6 +76,8 @@ For a good chunk of variables there are two variable declarations, with values f
   --primary-button-color: var(--interactive-color);
   --primary-button-focus-color: #14a5c9;
   --primary-button-active-color: #118ead;
+
+  --border-radius: 3px;
 }
 ```
 
