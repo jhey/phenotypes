@@ -240,8 +240,8 @@ $container-max-widths: (
   xs: 414px,
   sm: 865px,
   md: 1024px,
-  lg: 1024px,
-  xl: 1024px
+  lg: 1280px,
+  xl: 1280px
 ) !default;
 
 $grid-columns: 12 !default;
@@ -249,8 +249,8 @@ $grid-gutter-widths: (
   xs: $spacer-4,
   sm: $spacer-6,
   md: $spacer-7,
-  lg: $spacer-7,
-  xl: $spacer-7,
+  lg: $spacer-8,
+  xl: $spacer-8,
 ) !default;
 
 // ------------------------------
