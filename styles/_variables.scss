@@ -115,28 +115,28 @@ $gradient-orange-start: $orange-200 !default;
 $gradient-orange-stop:  $orange-300 !default;
 
 $gradient-red-start:    $red-200 !default;
-$gradient-red-stop:     $red-400 !default;
+$gradient-red-stop:     $red-300 !default;
 
-$gradient-purple-start: #b25dba !default;
-$gradient-purple-stop:  $purple-400 !default;
+$gradient-purple-start: $purple-200 !default;
+$gradient-purple-stop:  $purple-300 !default;
 
 $gradient-blue-start:   $blue-200 !default;
-$gradient-blue-stop:    $blue-400 !default;
+$gradient-blue-stop:    $blue-300 !default;
 
 $gradient-green-start:  $green-200 !default;
-$gradient-green-stop:   $green-400 !default;
+$gradient-green-stop:   $green-300 !default;
 
 $gradient-orange-red-start: $orange-200 !default;
-$gradient-orange-red-stop:  #e64253 !default;
+$gradient-orange-red-stop:  $red-200    !default;
 
-$gradient-red-purple-start: $red-200 !default;
-$gradient-red-purple-stop:  #892e9c !default;
+$gradient-red-purple-start: $red-200    !default;
+$gradient-red-purple-stop:  $purple-200 !default;
 
-$gradient-blue-purple-start: $blue-200 !default;
-$gradient-blue-purple-stop:  #6e3094 !default;
+$gradient-blue-purple-start: $blue-200   !default;
+$gradient-blue-purple-stop:  $purple-200 !default;
 
-$gradient-green-blue-start: #1adcae !default;
-$gradient-green-blue-stop:  #0076ae !default;
+$gradient-green-blue-start: $green-100 !default;
+$gradient-green-blue-stop:  $blue-200  !default;
 
 // Default angle
 $gradient-angle: to bottom left;
