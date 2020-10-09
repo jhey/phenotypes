@@ -27,30 +27,30 @@ For several variables, there are **two** variable interdependent declarations. F
   --text-color-secondary-reversed: rgba(255, 255, 255, 0.76);
   --text-color-hint-reversed: rgba(255, 255, 255, 0.59);
 
-  --brand-color-primary-rgb-values: 133, 59, 148;
+  --brand-color-primary-rgb-values: 158, 38, 191;
   --brand-color-primary: rgb(var(--brand-color-primary-rgb-values));
-  --brand-color-accent-rgb-values: 252, 134, 38;
+  --brand-color-accent-rgb-values: 251, 124, 39;
   --brand-color-accent: rgb(var(--brand-color-accent-rgb-values));
-  --positive-color-rgb-values: 45, 207, 161;
+  --positive-color-rgb-values: 20, 201, 156;
   --positive-color: rgb(var(--positive-color-rgb-values));
-  --negative-color-rgb-values: 240, 77, 93;
+  --negative-color-rgb-values: 239, 48, 76;
   --negative-color: rgb(var(--negative-color-rgb-values));
-  --warning-color-rgb-values: 252, 134, 38;
+  --warning-color-rgb-values: 251, 124, 39;
   --warning-color: rgb(var(--warning-color-rgb-values));
-  --interactive-color-rgb-values: 22, 184, 224;
+  --interactive-color-rgb-values: 0, 164, 230;
   --interactive-color: rgb(var(--interactive-color-rgb-values));
   --error-color: var(--negative-color);
 
   --link-color: var(--interactive-color);
-  --link-hover-color-rgb-values: 0, 138, 179;
+  --link-hover-color-rgb-values: 0, 94, 176;
   --link-hover-color: rgb(var(--link-hover-color-rgb-values));
-  --link-color-reversed-rgb-values: 127, 234, 255;
+  --link-color-reversed-rgb-values: 143, 231, 255;
   --link-color-reversed: rgb(var(--link-color-reversed-rgb-values));
-  --step-progress-active-color-rgb-values: 179, 93, 186;
+  --step-progress-active-color-rgb-values: 158, 38, 191;
   --step-progress-active-color: rgb(
     var(--step-progress-active-color-rgb-values)
   );
-  --focus-color-rgb-values: 127, 234, 255;
+  --focus-color-rgb-values: 143, 231, 255;
   --focus-color: rgb(var(--focus-color-rgb-values));
   --widget-on-color: var(--positive-color);
 
@@ -64,18 +64,18 @@ For several variables, there are **two** variable interdependent declarations. F
   );
   --slider-focus-glow-opacity: 0.7;
 
-  --message-success-bg-color-rgb-values: 3, 171, 140;
+  --message-success-bg-color-rgb-values: 0, 135, 113;
   --message-success-bg-color: rgb(var(--message-success-bg-color-rgb-values));
   --message-info-bg-color: var(--brand-color-primary);
   --message-danger-bg-color: var(--error-color);
 
   --danger-button-color: var(--negative-color);
-  --danger-button-focus-color: #ee3548;
-  --danger-button-active-color: #ec192e;
+  --danger-button-focus-color: #ab002b;
+  --danger-button-active-color: #78001e;
 
   --primary-button-color: var(--interactive-color);
-  --primary-button-focus-color: #14a5c9;
-  --primary-button-active-color: #118ead;
+  --primary-button-focus-color: #005eb0;
+  --primary-button-active-color: #002b66;
 
   --border-radius: 3px;
 }
