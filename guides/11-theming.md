@@ -3,18 +3,18 @@ title: Theming
 status: draft
 ---
 
-Phenotypes allows theming for certain aspects of the library. This is done via css custom properties that can be overridden by you as the consumer in your own application.
+Phenotypes allows theming for certain aspects of the library. This is done via CSS custom properties that can be overridden in your own application.
 
 ## Browser Support
 
-CSS variables are [supported by all evergreen browsers](https://caniuse.com/#feat=css-variables). As with most modern web standards Internet Explorer is not supported by default. If you must support IE you can use the [css-vars-ponyfill](https://jhildenbiddle.github.io/css-vars-ponyfill/#/) that will compile away the CSS variables at runtime. This ponyfill will work for all browsers that do not support CSS variables not just IE.
+CSS variables are [supported by all evergreen browsers](https://caniuse.com/#feat=css-variables). As with most modern web standards, Internet Explorer is not supported by default. If you must support IE you can use the [css-vars-ponyfill](https://jhildenbiddle.github.io/css-vars-ponyfill/#/) that will compile away the CSS variables at runtime. This ponyfill will work for all browsers that do not support CSS variables—not just IE.
 
 ## Custom Themes and CSS Variables
 
-Phenotypes exposes a set of variables that will theme the library styles as well as the React components. These variables provide easy customization for commonly used values like colors for text and components. The variables that we expose and can be themed are below.
+Phenotypes exposes a set of variables that will theme the library styles as well as the React components. These variables provide easy customization for commonly used values like colors for text and components. The variables that can be themed are listed below.
 
-**NOTE:**
-For a good chunk of variables there are two variable declarations, with values from one relying on the other. For example the `--focus-color` variable relies on the `--focus-color-rgb-values` variable. This is done to allow styling of elements that are tied to each other color wise but don't necessarily need to be defined twice. Phenotypes allows you to customize focus color, but that also means that the box-shadow that provides the focus color "glow", must also match that customized focus color. In order to ensure that you don't need to define two different variables (`--focus-color` & `--focus-shadow-color`) we expose a top level variable that defines the rgb values that should be used for both. So in this case changing `--focus-color-rgb-values` will apply the change to both the focus color as well as the box-shadow that is tied to that focus color. **It is for this reason that we recommend setting the rgb-values and allowing those values to update variables downstream.**
+**Note:**
+For several variables, there are **two** variable interdependent declarations. For example the `--focus-color` variable relies on the `--focus-color-rgb-values` variable. This allows styling of elements that are tied to each other with respect to color but don't necessarily need to be defined twice. Phenotypes allows you to customize focus color, but that also means that the box-shadow that provides the focus color "glow", must also match that customized focus color. In order to ensure that you don't need to define two different variables (`--focus-color` & `--focus-shadow-color`) we expose a top level variable that defines the rgb values that should be used for both. So in this case changing `--focus-color-rgb-values` will apply the change to both the focus color as well as the box-shadow that is tied to that focus color. **For this, we recommend setting the `-rgb-values` variables and allowing those values to update variables downstream.**
 
 ```css
 :root {
@@ -91,11 +91,13 @@ When overriding a variable you must define the `:root` rule. An example of setti
 
 This will change both the focus color to green as well as apply the correct changes to the box-shadow that is tied to the focus color.
 
-**It is important to remember that CSS variables follow normal CSS cascade rules, so whichever root variable declaration comes last is the one that will be applied.**
+**Remember that CSS variables follow normal CSS cascade rules, so whichever root variable declaration comes last is the one that will be applied.**
 
 ### Theming with SASS
 
-Theming with SASS is not any different than theming with plain css. When using SASS Phenotypes does provide you with some quality of life utilities to make theming these values easier. Phenotypes provides you with a SASS `extract-rgb` function that makes it very easy to set the rgb-values variables. Ex:
+Theming with SASS is the same as theming with plain CSS. When using SASS, Phenotypes provides you with some nice utilities to make theming these values easier. Specifically, the SASS `extract-rgb` function and `color-variable` mixin make it easier to work with color variables.
+
+**`extract-rgb`** facilitates setting RGB using existing color variables.
 
 ```scss
 // when overriding the rgb variable values for your own custom theme
@@ -126,7 +128,7 @@ $green: #008000
 }
 ```
 
-Phenotypes also provides you with a mixin called `color-variable` to easily author those pairs of CSS variables similar to what we have defined. Ex:
+**`color-variable`** facilitates authoring color variables pairs.
 
 ```scss
 // If you are authoring a component that has a multiple elements to it
@@ -139,7 +141,7 @@ Phenotypes also provides you with a mixin called `color-variable` to easily auth
   --primary-button-color: rgb(var(--primary-button-color-rgb-values));
 }
 
-// these compiled variables can then be used throughout the application
+// These compiled variables can then be used throughout the application
 // wherever they are needed. When the rgb values are overridden, all of the
 // places where the variables are used will be updated.
 
