@@ -108,11 +108,11 @@
   --message-info-bg-color: var(--brand-color-primary);
   --message-danger-bg-color: var(--error-color);
   --danger-button-color: var(--negative-color);
-  --danger-button-focus-color: #ee3548;
-  --danger-button-active-color: #ec192e;
+  --danger-button-focus-color: #ab002b;
+  --danger-button-active-color: #78001e;
   --primary-button-color: var(--interactive-color);
-  --primary-button-focus-color: #14a5c9;
-  --primary-button-active-color: #118ead;
+  --primary-button-focus-color: #005eb0;
+  --primary-button-active-color: #002b66;
   --border-radius: 3px; }
 
 html {
