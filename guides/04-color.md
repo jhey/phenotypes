@@ -108,4 +108,4 @@ On elements that appear as strips, slabs, or bars, **don't apply gradients “ag
 | <div class="colorChip" style="background: #DBDBDB;"></div> | alpha-reversed-600 | 0.86    |
 | <div class="colorChip" style="background: #EEEEEE;"></div> | alpha-reversed-700 | 0.93    |
 | <div class="colorChip" style="background: #F9F9F9;"></div> | alpha-reversed-800 | 0.98    |
-| white                                                      | 1.0                | Primary |
+| <div class="colorChip" style="background: #FFFFFF;"></div> | white              | 1.0     | Primary   |
