@@ -47,5 +47,5 @@ The core elements of our branding are detailed in the foundational sections that
 
 - [Amino logo files](https://www.dropbox.com/s/fq5981ebiduww03/amino%20logo%2021.zip?dl=1) (17MB zip file) and [guidelines]({{ path '/docs/logo' }})
 - [Phenotypes Sketch template and Craft Library](https://www.dropbox.com/sh/5ax1ihpnkezixu1/AAAAkGffs9vjeuf16yU_m8nva?dl=0)
-- [Assets](https://www.dropbox.com/sh/y7868ecf5jwbc0s/AABHlbgbeB0ICIF9ptmtxRs1a?dl=0) (icons, fonts, colors palettes)
+- [Assets](https://www.dropbox.com/sh/y7868ecf5jwbc0s/AABHlbgbeB0ICIF9ptmtxRs1a?dl=0) (icons, fonts, color palettes)
 - [GitHub repo](https://github.com/aminohealth/phenotypes)
