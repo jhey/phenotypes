@@ -15,39 +15,42 @@
 // ------------------------------
 // Colors
 // ------------------------------
+// Note: some of the original -400 and -500 colors were deprecated
+// as part of the colors refresh in October 2020. They are mapped
+// to the next available color for backwards compatibility.
 
 $white:  #fff !default;
 $black:  #000 !default;
 
-$orange-100: #ffc67f !default;
-$orange-200: #fc8626 !default;
-$orange-300: #cd5000 !default;
-$orange-400: #992800 !default;
-$orange-500: #631000 !default;
+$orange-100: #ffcc96    !default;
+$orange-200: #fb7c27    !default;
+$orange-300: #dd2c00    !default;
+$orange-400: $orange-300  !default;
+$orange-500: $orange-300  !default;
 
-$red-100: #ff979a !default;
-$red-200: #f04d5d !default;
-$red-300: #bd2b43 !default;
-$red-400: #8c092c !default;
-$red-500: #4a001e !default;
+$red-100: #ffa6b5 !default;
+$red-200: #ef304c !default;
+$red-300: #ab002b !default;
+$red-400: $red-300  !default;
+$red-500: $red-300  !default;
 
-$purple-100: #e39ae3 !default;
-$purple-200: #b35dba !default;
-$purple-300: #853b94 !default;
-$purple-400: #58166e !default;
-$purple-500: #2f0047 !default;
+$purple-100: #f4b0ff   !default;
+$purple-200: #9e26bf   !default;
+$purple-300: #630098   !default;
+$purple-400: #3e006b   !default;
+$purple-500: $purple-400 !default;
 
-$blue-100: #7feaff !default;
-$blue-200: #16b8e0 !default;
-$blue-300: #008ab3 !default;
-$blue-400: #005678 !default;
-$blue-500: #00253f !default;
+$blue-100: #8fe7ff !default;
+$blue-200: #00a4e6 !default;
+$blue-300: #005eb0 !default;
+$blue-400: #002b66 !default;
+$blue-500: $blue-400 !default;
 
-$green-100: #89f0cf !default;
-$green-200: #2dcfa1 !default;
-$green-300: #03ab8c !default;
-$green-400: #007868 !default;
-$green-500: #003f3e !default;
+$green-100: #8af2d5  !default;
+$green-200: #14c99c  !default;
+$green-300: #008771  !default;
+$green-400: $green-300 !default;
+$green-500: $green-300 !default;
 
 $gray-100: #f9f9f9 !default;
 $gray-200: #eee    !default;
@@ -61,7 +64,7 @@ $gray-800: #232323 !default;
 // Primary palette
 $orange: $orange-200 !default;
 $red:    $red-200    !default;
-$purple: $purple-300 !default;
+$purple: $purple-200 !default;
 $blue:   $blue-200   !default;
 $green:  $green-300  !default;
 
@@ -112,28 +115,28 @@ $gradient-orange-start: $orange-200 !default;
 $gradient-orange-stop:  $orange-300 !default;
 
 $gradient-red-start:    $red-200 !default;
-$gradient-red-stop:     $red-400 !default;
+$gradient-red-stop:     $red-300 !default;
 
-$gradient-purple-start: #b25dba !default;
-$gradient-purple-stop:  $purple-400 !default;
+$gradient-purple-start: $purple-200 !default;
+$gradient-purple-stop:  $purple-300 !default;
 
 $gradient-blue-start:   $blue-200 !default;
-$gradient-blue-stop:    $blue-400 !default;
+$gradient-blue-stop:    $blue-300 !default;
 
 $gradient-green-start:  $green-200 !default;
-$gradient-green-stop:   $green-400 !default;
+$gradient-green-stop:   $green-300 !default;
 
 $gradient-orange-red-start: $orange-200 !default;
-$gradient-orange-red-stop:  #e64253 !default;
+$gradient-orange-red-stop:  $red-200    !default;
 
-$gradient-red-purple-start: $red-200 !default;
-$gradient-red-purple-stop:  #892e9c !default;
+$gradient-red-purple-start: $red-200    !default;
+$gradient-red-purple-stop:  $purple-200 !default;
 
-$gradient-blue-purple-start: $blue-200 !default;
-$gradient-blue-purple-stop:  #6e3094 !default;
+$gradient-blue-purple-start: $blue-200   !default;
+$gradient-blue-purple-stop:  $purple-200 !default;
 
-$gradient-green-blue-start: #1adcae !default;
-$gradient-green-blue-stop:  #0076ae !default;
+$gradient-green-blue-start: $green-100 !default;
+$gradient-green-blue-stop:  $blue-200  !default;
 
 // Default angle
 $gradient-angle: to bottom left;
@@ -240,8 +243,8 @@ $container-max-widths: (
   xs: 414px,
   sm: 865px,
   md: 1024px,
-  lg: 1024px,
-  xl: 1024px
+  lg: 1280px,
+  xl: 1280px
 ) !default;
 
 $grid-columns: 12 !default;
@@ -249,8 +252,8 @@ $grid-gutter-widths: (
   xs: $spacer-4,
   sm: $spacer-6,
   md: $spacer-7,
-  lg: $spacer-7,
-  xl: $spacer-7,
+  lg: $spacer-8,
+  xl: $spacer-8,
 ) !default;
 
 // ------------------------------
