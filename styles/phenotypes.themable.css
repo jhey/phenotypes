@@ -66,26 +66,26 @@
 :root {
   --font-family: "Sailec", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --text-color-primary: rgba(0, 0, 0, 0.86);
-  --text-color-secondary: rgba(0, 0, 0, 0.54);
-  --text-color-hint: rgba(0, 0, 0, 0.41);
+  --text-color-secondary: rgba(0, 0, 0, 0.7);
+  --text-color-hint: rgba(0, 0, 0, 0.54);
   --text-color-primary-reversed: #fff;
-  --text-color-secondary-reversed: rgba(255, 255, 255, 0.76);
-  --text-color-hint-reversed: rgba(255, 255, 255, 0.59);
-  --brand-color-primary-rgb-values: 158, 38, 191;
+  --text-color-secondary-reversed: rgba(255, 255, 255, 0.86);
+  --text-color-hint-reversed: rgba(255, 255, 255, 0.76);
+  --brand-color-primary-rgb-values: 99, 0, 152;
   --brand-color-primary: rgb(var(--brand-color-primary-rgb-values));
-  --brand-color-accent-rgb-values: 251, 124, 39;
+  --brand-color-accent-rgb-values: 158, 38, 191;
   --brand-color-accent: rgb(var(--brand-color-accent-rgb-values));
-  --positive-color-rgb-values: 20, 201, 156;
+  --positive-color-rgb-values: 0, 133, 111;
   --positive-color: rgb(var(--positive-color-rgb-values));
-  --negative-color-rgb-values: 239, 48, 76;
+  --negative-color-rgb-values: 171, 0, 43;
   --negative-color: rgb(var(--negative-color-rgb-values));
-  --warning-color-rgb-values: 251, 124, 39;
+  --warning-color-rgb-values: 221, 44, 0;
   --warning-color: rgb(var(--warning-color-rgb-values));
-  --interactive-color-rgb-values: 0, 164, 230;
+  --interactive-color-rgb-values: 0, 94, 176;
   --interactive-color: rgb(var(--interactive-color-rgb-values));
   --error-color: var(--negative-color);
   --link-color: var(--interactive-color);
-  --link-hover-color-rgb-values: 0, 94, 176;
+  --link-hover-color-rgb-values: 0, 43, 102;
   --link-hover-color: rgb(var(--link-hover-color-rgb-values));
   --link-color-reversed-rgb-values: 143, 231, 255;
   --link-color-reversed: rgb(var(--link-color-reversed-rgb-values));
@@ -93,7 +93,8 @@
   --step-progress-active-color: rgb(var(--step-progress-active-color-rgb-values));
   --focus-color-rgb-values: 143, 231, 255;
   --focus-color: rgb(var(--focus-color-rgb-values));
-  --widget-on-color: var(--positive-color);
+  --widget-on-color-rgb-values: 20, 201, 156;
+  --widget-on-color: rgb(var(--widget-on-color-rgb-values));
   --step-progress-active-glow-opacity: 0.54;
   --text-input-glow-opacity: 0.41;
   --checkbox-focus-glow-opacity: var(--text-input-glow-opacity);
@@ -103,16 +104,16 @@
     --checkbox-checked-focus-glow-opacity
   );
   --slider-focus-glow-opacity: 0.7;
-  --message-success-bg-color-rgb-values: 0, 135, 113;
+  --message-success-bg-color-rgb-values: 0, 133, 111;
   --message-success-bg-color: rgb(var(--message-success-bg-color-rgb-values));
   --message-info-bg-color: var(--brand-color-primary);
   --message-danger-bg-color: var(--error-color);
   --danger-button-color: var(--negative-color);
-  --danger-button-focus-color: #ab002b;
-  --danger-button-active-color: #78001e;
+  --danger-button-focus-color: #78001e;
+  --danger-button-active-color: #450011;
   --primary-button-color: var(--interactive-color);
-  --primary-button-focus-color: #005eb0;
-  --primary-button-active-color: #002b66;
+  --primary-button-focus-color: #002b66;
+  --primary-button-active-color: #001633;
   --border-radius: 3px; }
 
 html {
@@ -273,7 +274,7 @@ table {
 caption {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
-  color: rgba(0, 0, 0, 0.54);
+  color: rgba(0, 0, 0, 0.7);
   text-align: left;
   caption-side: bottom; }
 
@@ -510,7 +511,7 @@ hr {
 
 .Button--link .Button__control .Button__control {
   background: transparent;
-  color: #00a4e6; }
+  color: #005eb0; }
   .Button--link .Button__control .Button__control:hover, .Button--link .Button__control .Button__control:focus {
     background: rgba(0, 0, 0, 0.05);
     color: #005eb0; }
@@ -526,9 +527,9 @@ hr {
     background: rgba(0, 0, 0, 0.18);
     transform: translateY(1px) scaleX(0.985) scaleY(0.985); }
   .Button--danger .Button__control:hover {
-    background: #d6112e; }
+    background: #73001d; }
   .Button--primary .Button__control:hover {
-    background: #007cae; }
+    background: #004078; }
   .Button--link .Button__control:hover {
     background: rgba(0, 0, 0, 0.11);
     color: #002b66; } }
@@ -6599,7 +6600,7 @@ hr {
   color: var(--error-color) !important; }
 
 .text-color-orange {
-  color: #fb7c27 !important; }
+  color: #dd2c00 !important; }
 
 .text-color-orange-100 {
   color: #ffcc96 !important; }
@@ -6617,7 +6618,7 @@ hr {
   color: #dd2c00 !important; }
 
 .text-color-red {
-  color: #ef304c !important; }
+  color: #ab002b !important; }
 
 .text-color-red-100 {
   color: #ffa6b5 !important; }
@@ -6635,7 +6636,7 @@ hr {
   color: #ab002b !important; }
 
 .text-color-purple {
-  color: #9e26bf !important; }
+  color: #630098 !important; }
 
 .text-color-purple-100 {
   color: #f4b0ff !important; }
@@ -6653,7 +6654,7 @@ hr {
   color: #3e006b !important; }
 
 .text-color-blue {
-  color: #00a4e6 !important; }
+  color: #005eb0 !important; }
 
 .text-color-blue-100 {
   color: #8fe7ff !important; }
@@ -6671,7 +6672,7 @@ hr {
   color: #002b66 !important; }
 
 .text-color-green {
-  color: #008771 !important; }
+  color: #00856F !important; }
 
 .text-color-green-100 {
   color: #8af2d5 !important; }
@@ -6680,13 +6681,13 @@ hr {
   color: #14c99c !important; }
 
 .text-color-green-300 {
-  color: #008771 !important; }
+  color: #00856F !important; }
 
 .text-color-green-400 {
-  color: #008771 !important; }
+  color: #00856F !important; }
 
 .text-color-green-500 {
-  color: #008771 !important; }
+  color: #00856F !important; }
 
 .text-color-gray-100 {
   color: #f9f9f9 !important; }

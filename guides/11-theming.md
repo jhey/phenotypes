@@ -18,41 +18,39 @@ For several variables, there are **two** variable interdependent declarations. F
 
 ```css
 :root {
-  --font-family: "Sailec", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, sans-serif !default;
+  --font-family: "Sailec", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --text-color-primary: rgba(0, 0, 0, 0.86);
-  --text-color-secondary: rgba(0, 0, 0, 0.54);
-  --text-color-hint: rgba(0, 0, 0, 0.41);
+  --text-color-secondary: rgba(0, 0, 0, 0.7);
+  --text-color-hint: rgba(0, 0, 0, 0.54);
   --text-color-primary-reversed: #fff;
-  --text-color-secondary-reversed: rgba(255, 255, 255, 0.76);
-  --text-color-hint-reversed: rgba(255, 255, 255, 0.59);
+  --text-color-secondary-reversed: rgba(255, 255, 255, 0.86);
+  --text-color-hint-reversed: rgba(255, 255, 255, 0.76);
 
-  --brand-color-primary-rgb-values: 158, 38, 191;
+  --brand-color-primary-rgb-values: 99, 0, 152;
   --brand-color-primary: rgb(var(--brand-color-primary-rgb-values));
-  --brand-color-accent-rgb-values: 251, 124, 39;
+  --brand-color-accent-rgb-values: 158, 38, 191;
   --brand-color-accent: rgb(var(--brand-color-accent-rgb-values));
-  --positive-color-rgb-values: 20, 201, 156;
+  --positive-color-rgb-values: 0, 133, 111;
   --positive-color: rgb(var(--positive-color-rgb-values));
-  --negative-color-rgb-values: 239, 48, 76;
+  --negative-color-rgb-values: 171, 0, 43;
   --negative-color: rgb(var(--negative-color-rgb-values));
-  --warning-color-rgb-values: 251, 124, 39;
+  --warning-color-rgb-values: 221, 44, 0;
   --warning-color: rgb(var(--warning-color-rgb-values));
-  --interactive-color-rgb-values: 0, 164, 230;
+  --interactive-color-rgb-values: 0, 94, 176;
   --interactive-color: rgb(var(--interactive-color-rgb-values));
   --error-color: var(--negative-color);
 
   --link-color: var(--interactive-color);
-  --link-hover-color-rgb-values: 0, 94, 176;
+  --link-hover-color-rgb-values: 0, 43, 102;
   --link-hover-color: rgb(var(--link-hover-color-rgb-values));
   --link-color-reversed-rgb-values: 143, 231, 255;
   --link-color-reversed: rgb(var(--link-color-reversed-rgb-values));
   --step-progress-active-color-rgb-values: 158, 38, 191;
-  --step-progress-active-color: rgb(
-    var(--step-progress-active-color-rgb-values)
-  );
+  --step-progress-active-color: rgb(var(--step-progress-active-color-rgb-values));
   --focus-color-rgb-values: 143, 231, 255;
   --focus-color: rgb(var(--focus-color-rgb-values));
-  --widget-on-color: var(--positive-color);
+  --widget-on-color-rgb-values: 20, 201, 156;
+  --widget-on-color: rgb(var(--widget-on-color-rgb-values));
 
   --step-progress-active-glow-opacity: 0.54;
   --text-input-glow-opacity: 0.41;
@@ -64,18 +62,18 @@ For several variables, there are **two** variable interdependent declarations. F
   );
   --slider-focus-glow-opacity: 0.7;
 
-  --message-success-bg-color-rgb-values: 0, 135, 113;
+  --message-success-bg-color-rgb-values: 0, 133, 111;
   --message-success-bg-color: rgb(var(--message-success-bg-color-rgb-values));
   --message-info-bg-color: var(--brand-color-primary);
   --message-danger-bg-color: var(--error-color);
 
   --danger-button-color: var(--negative-color);
-  --danger-button-focus-color: #ab002b;
-  --danger-button-active-color: #78001e;
+  --danger-button-focus-color: #78001e;
+  --danger-button-active-color: #450011;
 
   --primary-button-color: var(--interactive-color);
-  --primary-button-focus-color: #005eb0;
-  --primary-button-active-color: #002b66;
+  --primary-button-focus-color: #002b66;
+  --primary-button-active-color: #001633;
 
   --border-radius: 3px;
 }
@@ -135,9 +133,9 @@ $green: #008000
 // that you would like to be themable you can use the `color-variable` mixin
 
 :root {
-  @include color-variable(--primary-button-color, #008000);
+  @include color-variable(--primary-button-color, #005EB0);
   // this mixin above will be compiled to the following CSS:
-  --primary-button-color-rgb-values: 0, 128, 0;
+  --primary-button-color-rgb-values: 0, 94, 176;
   --primary-button-color: rgb(var(--primary-button-color-rgb-values));
 }
 
