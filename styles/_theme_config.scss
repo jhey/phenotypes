@@ -19,11 +19,11 @@
   --text-color-hint-reversed: #{$text-color-reversed-hint};
 
   @include color-variable(--brand-color-primary, $brand-primary);
-  @include color-variable(--brand-color-accent, $orange-200);
-  @include color-variable(--positive-color, $green-200);
+  @include color-variable(--brand-color-accent, $purple-200);
+  @include color-variable(--positive-color, $brand-success);
   @include color-variable(--negative-color, $brand-danger);
   @include color-variable(--warning-color, $brand-warning);
-  @include color-variable(--interactive-color, $blue-200);
+  @include color-variable(--interactive-color, $brand-info);
   --error-color: var(--negative-color);
 
   --link-color: var(--interactive-color);
@@ -49,12 +49,12 @@
   --message-danger-bg-color: var(--error-color);
 
   --danger-button-color: var(--negative-color);
-  --danger-button-focus-color: #{$red-300};
-  --danger-button-active-color: #{darken($red-300, 10%)};
+  --danger-button-focus-color: #{darken($red-300, 10%)};
+  --danger-button-active-color: #{darken($red-300, 20%)};
 
   --primary-button-color: var(--interactive-color);
-  --primary-button-focus-color: #{$blue-300};
-  --primary-button-active-color: #{$blue-400};
+  --primary-button-focus-color: #{$blue-400};
+  --primary-button-active-color: #{darken($blue-400, 10%)};
 
   --border-radius: 3px;
 }
