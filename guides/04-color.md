@@ -72,7 +72,7 @@ On elements that appear as strips, slabs, or bars, **don't apply gradients “ag
 | ---------------------------------------------------------- | --------- | ------- | ------------- | ------------ |
 | <div class="colorChip" style="background: #8af2d5;"></div> | green-100 | #8af2d5 | rgb(138, 242, 213) | hsl(163, 80%, 75%)  |
 | <div class="colorChip" style="background: #14c99c;"></div> | green-200 | #14c99c | rgb(20, 201, 156)  | hsl(165, 82%, 43%)  |
-| <div class="colorChip" style="background: #008771;"></div> | green-300 | #008771 | rgb(0, 135, 113)   | hsl(170, 100%, 26%) |
+| <div class="colorChip" style="background: #00856F;"></div> | green-300 | #00856F | rgb(0, 133, 111)   | hsl(170, 100%, 26%) |
 
 | Gray                                                       | Name     | Hex     | RGB           | HSL       |
 | ---------------------------------------------------------- | -------- | ------- | ------------- | --------- |
