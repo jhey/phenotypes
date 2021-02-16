@@ -62,10 +62,10 @@ $gray-700: #4d4d4d !default;
 $gray-800: #232323 !default;
 
 // Primary palette
-$orange: $orange-200 !default;
-$red:    $red-200    !default;
-$purple: $purple-200 !default;
-$blue:   $blue-200   !default;
+$orange: $orange-300 !default;
+$red:    $red-300    !default;
+$purple: $purple-300 !default;
+$blue:   $blue-300   !default;
 $green:  $green-300  !default;
 
 // Semantic color scheme (a la Bootstrap)
@@ -98,13 +98,13 @@ $alpha-reversed-800: 0.98 !default;
 
 // Text colors
 $text-color-primary:   rgba($black, $alpha-800) !default;
-$text-color-secondary: rgba($black, $alpha-600) !default;
-$text-color-hint:      rgba($black, $alpha-500) !default;
+$text-color-secondary: rgba($black, $alpha-700) !default;
+$text-color-hint:      rgba($black, $alpha-600) !default;
 
 // Reversed text colors
 $text-color-reversed-primary:   $white                            !default;
-$text-color-reversed-secondary: rgba($white, $alpha-reversed-500) !default;
-$text-color-reversed-hint:      rgba($white, $alpha-reversed-400) !default;
+$text-color-reversed-secondary: rgba($white, $alpha-reversed-600) !default;
+$text-color-reversed-hint:      rgba($white, $alpha-reversed-500) !default;
 
 
 // ------------------------------
