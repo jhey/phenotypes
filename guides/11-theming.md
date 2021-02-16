@@ -49,7 +49,8 @@ For several variables, there are **two** variable interdependent declarations. F
   --step-progress-active-color: rgb(var(--step-progress-active-color-rgb-values));
   --focus-color-rgb-values: 143, 231, 255;
   --focus-color: rgb(var(--focus-color-rgb-values));
-  --widget-on-color: var(--positive-color);
+  --widget-on-color-rgb-values: 20, 201, 156;
+  --widget-on-color: rgb(var(--widget-on-color-rgb-values));
 
   --step-progress-active-glow-opacity: 0.54;
   --text-input-glow-opacity: 0.41;

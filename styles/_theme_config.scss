@@ -31,7 +31,7 @@
   @include color-variable(--link-color-reversed, $blue-100);
   @include color-variable(--step-progress-active-color, $purple-200);
   @include color-variable(--focus-color, $blue-100);
-  --widget-on-color: var(--positive-color);
+  @include color-variable(--widget-on-color, $green-200);
 
   // glow opacities
   --step-progress-active-glow-opacity: #{$alpha-600};

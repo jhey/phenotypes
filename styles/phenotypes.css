@@ -1210,7 +1210,7 @@ hr {
   background-color: rgba(0, 0, 0, 0.14); }
 
 .Slider__fill {
-  background-color: rgb(0, 133, 111); }
+  background-color: rgb(20, 201, 156); }
 
 .Slider__handle {
   background-color: #fff; }
@@ -1259,7 +1259,7 @@ hr {
   position: absolute;
   z-index: -1; }
   .Switch__input:checked ~ .Switch__indicator {
-    background-color: rgb(0, 133, 111); }
+    background-color: rgb(20, 201, 156); }
     .Switch__input:checked ~ .Switch__indicator .Switch__toggler {
       right: 2px; }
   .Switch__input:disabled ~ .Switch__indicator {
