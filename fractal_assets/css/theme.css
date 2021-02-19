@@ -31,15 +31,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a, a:link, a:visited {
-	color: #00a4e6;
+	color: #005EB0;
 }
 
 a:hover {
-	color: #005eb0;
+	color: #002B66;
 }
 
 a:active {
-	color: #002b66;
+	color: #001633;
 }
 
 .Pen-previewLink svg {
