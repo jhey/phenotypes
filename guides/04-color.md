@@ -20,7 +20,7 @@ Tables are provided in the appendix with copyable hex, RGB, and HSL values.
 
 There are **eight gray values** plus pure black and white, making 10 grayscale colors. The grays are distributed between black and white using the modular scale multiplier. For text colors, use black or white with alpha transparency (via `rgba()` or `hsla()`). See [Typography]({{ path '/docs/typography' }}) for more.
 
-![Grays](/img/guides/grays.png)
+![Grays](/img/guides/contrast-ratios.png)
 
 ### Gradients
 
@@ -93,9 +93,9 @@ On elements that appear as strips, slabs, or bars, **don't apply gradients “ag
 | <div class="colorChip" style="background: #EEEEEE;"></div> | alpha-200 | 0.07  |
 | <div class="colorChip" style="background: #DBDBDB;"></div> | alpha-300 | 0.14  |
 | <div class="colorChip" style="background: #C1C1C1;"></div> | alpha-400 | 0.24  |
-| <div class="colorChip" style="background: #969696;"></div> | alpha-500 | 0.41  | Hint      |
-| <div class="colorChip" style="background: #777777;"></div> | alpha-600 | 0.54  | Secondary |
-| <div class="colorChip" style="background: #4D4D4D;"></div> | alpha-700 | 0.70  |
+| <div class="colorChip" style="background: #969696;"></div> | alpha-500 | 0.41  |
+| <div class="colorChip" style="background: #777777;"></div> | alpha-600 | 0.54  | Hint      |
+| <div class="colorChip" style="background: #4D4D4D;"></div> | alpha-700 | 0.70  | Secondary |
 | <div class="colorChip" style="background: #232323;"></div> | alpha-800 | 0.86  | Primary   |
 
 | White/reversed alpha                                       | Name               | Value   | Usage     |
@@ -103,9 +103,9 @@ On elements that appear as strips, slabs, or bars, **don't apply gradients “ag
 | <div class="colorChip" style="background: #232323;"></div> | alpha-reversed-100 | 0.14    |
 | <div class="colorChip" style="background: #4D4D4D;"></div> | alpha-reversed-200 | 0.30    |
 | <div class="colorChip" style="background: #777777;"></div> | alpha-reversed-300 | 0.46    |
-| <div class="colorChip" style="background: #969696;"></div> | alpha-reversed-400 | 0.59    | Hint      |
-| <div class="colorChip" style="background: #C1C1C1;"></div> | alpha-reversed-500 | 0.76    | Secondary |
-| <div class="colorChip" style="background: #DBDBDB;"></div> | alpha-reversed-600 | 0.86    |
+| <div class="colorChip" style="background: #969696;"></div> | alpha-reversed-400 | 0.59    |
+| <div class="colorChip" style="background: #C1C1C1;"></div> | alpha-reversed-500 | 0.76    | Hint      |
+| <div class="colorChip" style="background: #DBDBDB;"></div> | alpha-reversed-600 | 0.86    | Secondary |
 | <div class="colorChip" style="background: #EEEEEE;"></div> | alpha-reversed-700 | 0.93    |
 | <div class="colorChip" style="background: #F9F9F9;"></div> | alpha-reversed-800 | 0.98    |
 | <div class="colorChip" style="background: #FFFFFF;"></div> | white              | 1.0     | Primary   |
