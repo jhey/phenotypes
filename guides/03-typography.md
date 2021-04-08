@@ -113,28 +113,18 @@ Remember to adhere to Amino's editorial style guide for grammar and punctuation,
 
 ### Fallbacks and font stacks
 
-When Sailec is not available, use the native system font as a fallback. This mostly applies to web projects, but is also relevant for cloud-based collaborative document suites. For those, stick with a default sans-serif font (e.g. Helvetica or Arial) or pick a preset theme that is clean, modern, and minimal.
+It's often not possible to use Sailec in cloud-based software like Google Docs and other platforms that rely on Google Fonts for typography. In these situations, use **[Red Hat Text](https://fonts.google.com/specimen/Red+Hat+Text)**. Red Hat Text is a modern geometric sans commissioned for Red Hat (the enterprise Linux company) and available under a [free and open license](https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL). It's the best stand-in for Sailec on Google Fonts as of April 2021.
 
-Here's a native system font stack borrowed from [Bootstrap 4](https://v4-alpha.getbootstrap.com/content/reboot/#native-font-stack):
+For CSS fallback fonts, allow the browser to use the native system fonts if Sailec isn't loading properly. Here's a native system font stack borrowed from [Bootstrap 4](https://github.com/twbs/bootstrap/blob/main/scss/_variables.scss):
 
 ```scss
-$font-family-sans-serif:
-  // Safari for OS X and iOS (San Francisco) -apple-system,
-  // Chrome >= 56 for OS X (San Francisco), Windows, Linux and Android
-    system-ui, // Chrome < 56 for OS X (San Francisco)
-    BlinkMacSystemFont,
-  // Windows
-    "Segoe UI", // Android
-    "Roboto",
-  // Basic web fallback
-    "Helvetica Neue", Arial, sans-serif !default;
+$font-family-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 ```
 
 And here is the same stack as plain old CSS:
 
-```scss
-font-family: "Sailec", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI",
-  "Roboto", "Helvetica Neue", Arial, sans-serif;
+```css
+font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 ```
 
 ---
