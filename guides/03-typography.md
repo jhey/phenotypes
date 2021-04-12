@@ -74,7 +74,7 @@ all_caps_letter_spacing = font_size * 0.143
 
 Don't use all caps for a heading, long sentence, or to convey emphasis in an paragraph (that's what bold is for).
 
-### Colors and contrast
+### Accessibility: colors and contrast
 
 Most general purpose type is set in **various opacities of black or white**, although Amino brand colors can and should be used to create interest or emphasis. Keep in mind that in interactive products, bright blue colors should be reserved for links and other interactive elements. Green and red also tend to carry meaning (success and error, respectively), but can work if the context is clear.
 
@@ -82,21 +82,21 @@ Most general purpose type is set in **various opacities of black or white**, alt
 
 These opacities of black match the brand gray palette when set against a white background, and vice versa for reversed type. For type, varying the opacity of black and white rather than using equivalent gray colors makes it possible to change an element's background color and preserve legibility and aesthetics (h/t [Material Design](https://material.io/guidelines/style/color.html#color-text-background-colors)). On the web, it's important to set text opacity using **rgba() and hsla()** and not opacity (more on that [here](http://stackoverflow.com/questions/13385492/css-opacity-vs-rgba-which-one-is-better)).
 
-Text color contrast is a very important accessibility concern. Not everyone can read light gray type on white—a style designers tend to favor. You need to **consider color contrast** whenever you're reducing the prominence of text or setting text in some color against a background pattern, image, or color (including black or white). The [Web Content Accessibility Guidelines (WCAG) 2.0](http://www.w3.org/TR/WCAG20/#visual-audio-contrast-contrast) says the following:
+Text color contrast is a very important accessibility concern. Not everyone can read light gray type on white, for example. You need to **consider color contrast** whenever you're reducing the prominence of text or setting text in some color against a background pattern, image, or color (including black or white). The [Web Content Accessibility Guidelines (WCAG) 2.1](https://www.w3.org/TR/WCAG21/#contrast-minimum) says the following:
 
-> **4.3 Contrast (Minimum):** The visual presentation of [text](http://www.w3.org/TR/WCAG20/#textdef) and [images of text](http://www.w3.org/TR/WCAG20/#images-of-textdef) has a [contrast ratio](http://www.w3.org/TR/WCAG20/#contrast-ratiodef) of **at least 4.5:1,** except for the following: (Level AA)
+> **Success Criterion 1.4.3 Contrast (Level AA Minimum):** The visual presentation of text and images of text has a contrast ratio of at least 4.5:1, except for the following:
 >
-> - **Large Text:** [Large-scale](http://www.w3.org/TR/WCAG20/#larger-scaledef) text and images of large-scale text have a contrast ratio of **at least 3:1**;
-> - **Incidental:** Text or images of text that are part of an inactive [user interface component](> http://www.w3.org/TR/WCAG20/#user-interface-componentdef), that are [pure decoration](http://> www.w3.org/TR/WCAG20/#puredecdef), that are not visible to anyone, or that are part of a picture that contains significant other visual content, have **no contrast requirement**.
+> - **Large Text:** Large-scale text and images of large-scale text have a contrast ratio of at least 3:1;
+> - **Incidental:** Text or images of text that are part of an inactive user interface component, that are pure decoration, that are not visible to anyone, or that are part of a picture that contains significant other visual content, have no contrast requirement.
 > - **Logotypes:** Text that is part of a logo or brand name has no minimum contrast requirement.
 
-Long story short: try to maintain a **minimum contrast ratio of 4.5**. A contrast ratio of **7 or higher is ideal**, as that's the cutoff for Level AAA accessibility (AAA is the highest level of accessibility compliance, but it's not [expected](http://www.w3.org/TR/UNDERSTANDING-WCAG20/conformance.html) for any project to adhere to that level 100% of the time).
+Long story short: maintain a **minimum contrast ratio of 4.5** to meet the WCAG 2.1 Level AA success criteria.
 
-The contrast ratio between two colors is [calculated](http://www.w3.org/TR/WCAG20/#contrast-ratiodef) using their relative luminance values. Keep in mind that the contrast ratios for the opacities given above assume a pure black or white background. Contrast is reduced when text is overlaid on gray or any other color, like the purple shown below.
+The contrast ratio between two colors is calculated using their relative luminance values. Keep in mind that the **contrast ratios for the opacities given above assume a pure black or white background**. Contrast is reduced when text is overlaid on gray or any other color.
 
 ![Colors](/img/guides/contrast-ratios.png)
 
-Always carefully **check your contrast ratios** against the guidelines and select the appropriate colors or opacities to maintain legibility. There are some handy tools to make this easier, like this [web-based contrast ratio checker](http://leaverou.github.io/contrast-ratio/) and this [Sketch plugin](https://github.com/getflourish/Sketch-Color-Contrast-Analyser).
+Always carefully **check your contrast ratios** against the guidelines and select the appropriate colors or opacities to maintain legibility. There are many handy tools and plugins that make it easy to check contrast ratios.
 
 ### Device considerations
 
@@ -113,28 +113,18 @@ Remember to adhere to Amino's editorial style guide for grammar and punctuation,
 
 ### Fallbacks and font stacks
 
-When Sailec is not available, use the native system font as a fallback. This mostly applies to web projects, but is also relevant for cloud-based collaborative document suites. For those, stick with a default sans-serif font (e.g. Helvetica or Arial) or pick a preset theme that is clean, modern, and minimal.
+It's often not possible to use Sailec in cloud-based software like Google Docs and other platforms that rely on Google Fonts for typography. In these situations, use **[Red Hat Text](https://fonts.google.com/specimen/Red+Hat+Text)**. Red Hat Text is a modern geometric sans commissioned for Red Hat (the enterprise Linux company) and available under a [free and open license](https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL). It's the best stand-in for Sailec on Google Fonts as of April 2021.
 
-Here's a native system font stack borrowed from [Bootstrap 4](https://v4-alpha.getbootstrap.com/content/reboot/#native-font-stack):
+For CSS fallback fonts, allow the browser to use the native system fonts if Sailec isn't loading properly. Here's a native system font stack borrowed from [Bootstrap 4](https://github.com/twbs/bootstrap/blob/main/scss/_variables.scss):
 
 ```scss
-$font-family-sans-serif:
-  // Safari for OS X and iOS (San Francisco) -apple-system,
-  // Chrome >= 56 for OS X (San Francisco), Windows, Linux and Android
-    system-ui, // Chrome < 56 for OS X (San Francisco)
-    BlinkMacSystemFont,
-  // Windows
-    "Segoe UI", // Android
-    "Roboto",
-  // Basic web fallback
-    "Helvetica Neue", Arial, sans-serif !default;
+$font-family-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 ```
 
 And here is the same stack as plain old CSS:
 
-```scss
-font-family: "Sailec", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI",
-  "Roboto", "Helvetica Neue", Arial, sans-serif;
+```css
+font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 ```
 
 ---
