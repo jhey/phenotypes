@@ -1,14 +1,14 @@
 {
   "name": "@aminohealth/phenotypes",
-  "version": "9.0.0",
+  "version": "10.0.0",
   "description": "Amino's design language and front-end component library",
   "dependencies": {
     "@babel/runtime": "^7.10.2",
     "classnames": "^2.2.5",
     "keycode": "^2.1.9",
     "node-sass": "^4.14.1",
-    "react": "15.4.2",
-    "react-dom": "15.4.2"
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
   },
   "peerDependencies": {
     "@babel/runtime": "7.x",
@@ -33,10 +33,10 @@
     "enzyme": "^2.8.2",
     "fs-extra": "^9.0.1",
     "jsdom": "^11.0.0",
-    "mocha": "^3.4.2",
+    "mocha": "8.3.2",
     "postcss": "^7.0.32",
     "postcss-preset-env": "^6.7.0",
-    "react-addons-test-utils": "15.4.2",
+    "react-addons-test-utils": "15.6.2",
     "rollup": "^2.16.1",
     "sinon": "^2.3.2"
   },
@@ -68,5 +68,8 @@
   "module": "./dist/phenotypes.esm.js",
   "main": "./dist/phenotypes.cjs.js",
   "style": "./dist/css/phenotypes.css",
-  "sass": "./styles/phenotypes.scss"
+  "sass": "./styles/phenotypes.scss",
+  "resolutions": {
+    "lodash": "^4.17.19"
+  }
 }
