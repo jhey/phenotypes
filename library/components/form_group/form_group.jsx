@@ -27,7 +27,7 @@ class FormGroup extends React.Component {
     return (
       errorBoolean && (
         <div
-          id="formErrorMessage"
+          id={this.props.controlId}
           className="FormGroup__error"
           aria-live={errorBoolean ? 'assertive' : 'off'} // A live region scenario is when an error message is displayed to users only after they have provided invalid information
         >
@@ -53,7 +53,7 @@ class FormGroup extends React.Component {
         className={classes(this.props.className, 'FormGroup', {
           'FormGroup--has-error': errorBoolean,
         })}
-        aria-errormessage="formErrorMessage"
+        aria-errormessage={this.props.controlId}
         aria-invalid={errorBoolean ? 'true' : 'false'}
       >
         {this.renderLabel()}
