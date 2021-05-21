@@ -444,7 +444,7 @@ hr {
   font-weight: normal;
   line-height: 1.49271;
   text-align: center;
-  transition: all .2s ease-out;
+  transition: all 0.2s ease-out;
   vertical-align: middle;
   white-space: nowrap;
   width: 100%;
@@ -460,7 +460,7 @@ hr {
   color: var(--text-color-primary);
   text-decoration: none;
   transform: translateY(-2.25px) scaleX(1.015) scaleY(1.015);
-  transition-duration: .08s; }
+  transition-duration: 0.08s; }
 
 .Button__control:active,
 .Button--is-active .Button__control,

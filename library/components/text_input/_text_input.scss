@@ -9,18 +9,14 @@
   padding: $top $horizontal $bottom;
 }
 
-@mixin text-input-sizer($size: 'medium') {
-  @if $size == 'small' {
+@mixin text-input-sizer($size: "medium") {
+  @if $size == "small" {
     @include _text-input-padding(-6, -3, -5);
     font-size: $font-size-2;
-  }
-
-  @else if $size == 'medium' {
+  } @else if $size == "medium" {
     @include _text-input-padding(-3, 0, -2);
     font-size: $font-size-3;
-  }
-
-  @else if $size == 'large' {
+  } @else if $size == "large" {
     @include _text-input-padding(0, 2, 1);
     font-size: $font-size-4;
   }
@@ -44,7 +40,8 @@
 
 .TextInput:focus {
   border-color: var(--focus-color);
-  box-shadow: 0 0 11px rgba(var(--focus-color-rgb-values), var(--text-input-glow-opacity));
+  box-shadow: 0 0 11px
+    rgba(var(--focus-color-rgb-values), var(--text-input-glow-opacity));
   outline: 0;
 }
 
@@ -83,16 +80,20 @@
 
       .TextInput--small#{$suffix},
       .FormGroup--small#{$suffix} .TextInput {
-        @include text-input-sizer('small');
+        @include text-input-sizer("small");
       }
 
       .TextInput--large#{$suffix},
       .FormGroup--large#{$suffix} .TextInput {
-        @include text-input-sizer('large');
+        @include text-input-sizer("large");
       }
     }
   }
 } @else {
-  .TextInput--small { @include text-input-sizer('small'); }
-  .TextInput--large { @include text-input-sizer('large'); }
+  .TextInput--small {
+    @include text-input-sizer("small");
+  }
+  .TextInput--large {
+    @include text-input-sizer("large");
+  }
 }

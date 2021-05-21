@@ -18,7 +18,8 @@ For several variables, there are **two** variable interdependent declarations. F
 
 ```css
 :root {
-  --font-family: "Sailec", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-family: "Sailec", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
   --text-color-primary: rgba(0, 0, 0, 0.86);
   --text-color-secondary: rgba(0, 0, 0, 0.7);
   --text-color-hint: rgba(0, 0, 0, 0.54);
@@ -46,7 +47,9 @@ For several variables, there are **two** variable interdependent declarations. F
   --link-color-reversed-rgb-values: 143, 231, 255;
   --link-color-reversed: rgb(var(--link-color-reversed-rgb-values));
   --step-progress-active-color-rgb-values: 158, 38, 191;
-  --step-progress-active-color: rgb(var(--step-progress-active-color-rgb-values));
+  --step-progress-active-color: rgb(
+    var(--step-progress-active-color-rgb-values)
+  );
   --focus-color-rgb-values: 143, 231, 255;
   --focus-color: rgb(var(--focus-color-rgb-values));
   --widget-on-color-rgb-values: 20, 201, 156;
@@ -133,7 +136,7 @@ $green: #008000
 // that you would like to be themable you can use the `color-variable` mixin
 
 :root {
-  @include color-variable(--primary-button-color, #005EB0);
+  @include color-variable(--primary-button-color, #005eb0);
   // this mixin above will be compiled to the following CSS:
   --primary-button-color-rgb-values: 0, 94, 176;
   --primary-button-color: rgb(var(--primary-button-color-rgb-values));

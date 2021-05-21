@@ -1,18 +1,14 @@
 // scss-lint:disable SelectorFormat ElsePlacement
 
-@mixin button-sizer($size: 'medium') {
+@mixin button-sizer($size: "medium") {
   .Button__control {
-    @if $size == 'small' {
+    @if $size == "small" {
       font-size: $font-size-2;
       padding: modular-scale-px(-6) modular-scale-px(-1) modular-scale-px(-5);
-    }
-
-    @else if $size == 'medium' {
+    } @else if $size == "medium" {
       font-size: $font-size-3;
       padding: modular-scale-px(-3) modular-scale-px(2) modular-scale-px(-2);
-    }
-
-    @else if $size == 'large' {
+    } @else if $size == "large" {
       font-size: $font-size-4;
       padding: modular-scale-px(0) modular-scale-px(4) modular-scale-px(1);
     }
@@ -38,7 +34,7 @@
   font-weight: $font-weight-normal;
   line-height: $line-height-base;
   text-align: center;
-  transition: all .2s ease-out;
+  transition: all 0.2s ease-out;
   vertical-align: middle;
   white-space: nowrap;
   width: 100%;
@@ -54,25 +50,25 @@
 .Button__control:hover,
 .Button__control:focus {
   @include depth(4);
-  background: rgba($black, $alpha-200 + .05);
+  background: rgba($black, $alpha-200 + 0.05);
   color: var(--text-color-primary);
   text-decoration: none;
   transform: translateY(-2.25px) scaleX(1.015) scaleY(1.015);
-  transition-duration: .08s;
+  transition-duration: 0.08s;
 }
 
 .Button__control:active,
 .Button--is-active .Button__control,
 .Button--is-active .Button__control:focus {
   @include depth(0);
-  background: rgba($black, $alpha-200 + .11);
+  background: rgba($black, $alpha-200 + 0.11);
   transform: translateY(0) scaleX(1) scaleY(1);
   transition-duration: 0s;
 }
 
 // Allow focus indicator when tabbing but hide it if clicking
 .Button__control:active:focus,
-.Button--is-active .Button__control:focus, {
+.Button--is-active .Button__control:focus {
   outline: 0;
 }
 
@@ -143,14 +139,14 @@
 
     &:hover,
     &:focus {
-      background: rgba($black, .05);
+      background: rgba($black, 0.05);
       color: $blue-300;
     }
   }
 
   .Button__control:active,
   &.Button--is-active .Button__control {
-    background: rgba($black, .11);
+    background: rgba($black, 0.11);
     color: $blue-400;
   }
 }
@@ -168,8 +164,8 @@
 @media (pointer: coarse), (any-pointer: coarse) {
   .Button__control:hover {
     @include depth(0);
-    background: rgba($black, $alpha-200 + .11);
-    transform: translateY(1px) scaleX(.985) scaleY(.985);
+    background: rgba($black, $alpha-200 + 0.11);
+    transform: translateY(1px) scaleX(0.985) scaleY(0.985);
   }
 
   .Button--danger .Button__control:hover {
@@ -181,7 +177,7 @@
   }
 
   .Button--link .Button__control:hover {
-    background: rgba($black, .11);
+    background: rgba($black, 0.11);
     color: $blue-400;
   }
 }
@@ -193,12 +189,22 @@
   @each $breakpoint in map-keys($grid-breakpoints) {
     @include media-breakpoint-up($breakpoint) {
       $suffix: breakpoint-suffix($breakpoint, $grid-breakpoints);
-      .Button--medium#{$suffix} { @include button-sizer; }
-      .Button--small#{$suffix} { @include button-sizer('small'); }
-      .Button--large#{$suffix} { @include button-sizer('large'); }
+      .Button--medium#{$suffix} {
+        @include button-sizer;
+      }
+      .Button--small#{$suffix} {
+        @include button-sizer("small");
+      }
+      .Button--large#{$suffix} {
+        @include button-sizer("large");
+      }
     }
   }
 } @else {
-  .Button--small { @include button-sizer('small'); }
-  .Button--large { @include button-sizer('large'); }
+  .Button--small {
+    @include button-sizer("small");
+  }
+  .Button--large {
+    @include button-sizer("large");
+  }
 }
