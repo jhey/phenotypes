@@ -885,7 +885,7 @@ hr {
   z-index: -1; }
   .Radio__input:focus ~ .Radio__indicator {
     border-color: var(--focus-color);
-    box-shadow: 0 0 11px rgba(var(--focus-color-rgb-values), var(--radio-focus-glow-opacity)); }
+    box-shadow: 0 0 11px rgba(var(--focus-color-shadow-rgb-values), var(--radio-focus-glow-opacity)); }
   .Radio__input:active ~ .Radio__indicator {
     background-color: #f9f9f9;
     border-color: #c1c1c1; }
@@ -896,8 +896,9 @@ hr {
     .Radio__input:checked ~ .Radio__indicator::after {
       display: block; }
   .Radio__input:checked:focus ~ .Radio__indicator {
-    border-color: #232323;
-    box-shadow: 0 0 0 2px rgba(var(--interactive-color-rgb-values), var(--radio-checked-focus-glow-opacity)); }
+    background-color: var(--focus-color);
+    border-color: var(--focus-color);
+    box-shadow: 0 0 0 2px rgba(var(--focus-color-shadow-rgb-values), var(--radio-checked-focus-glow-opacity)); }
   .Radio__input:checked:active:not(:disabled) ~ .Radio__indicator {
     background-color: #232323;
     border-color: #232323; }
@@ -1371,7 +1372,7 @@ hr {
 
 .TextInput--large,
 .FormGroup--large .TextInput {
-  padding: 15px 22px 15px;
+  padding: 17px 22px 18px;
   font-size: 18px; }
 
 @media (min-width: 600px) {
@@ -1385,7 +1386,7 @@ hr {
     font-size: 14px; }
   .TextInput--large-sm,
   .FormGroup--large-sm .TextInput {
-    padding: 15px 22px 15px;
+    padding: 17px 22px 18px;
     font-size: 18px; } }
 
 @media (min-width: 900px) {
@@ -1399,7 +1400,7 @@ hr {
     font-size: 14px; }
   .TextInput--large-md,
   .FormGroup--large-md .TextInput {
-    padding: 15px 22px 15px;
+    padding: 17px 22px 18px;
     font-size: 18px; } }
 
 @media (min-width: 1200px) {
@@ -1413,7 +1414,7 @@ hr {
     font-size: 14px; }
   .TextInput--large-lg,
   .FormGroup--large-lg .TextInput {
-    padding: 15px 22px 15px;
+    padding: 17px 22px 18px;
     font-size: 18px; } }
 
 @media (min-width: 1500px) {
@@ -1427,7 +1428,7 @@ hr {
     font-size: 14px; }
   .TextInput--large-xl,
   .FormGroup--large-xl .TextInput {
-    padding: 15px 22px 15px;
+    padding: 17px 22px 18px;
     font-size: 18px; } }
 
 .FormGroup__label {
