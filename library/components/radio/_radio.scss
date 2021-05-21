@@ -120,14 +120,18 @@
   &:disabled ~ .Radio__indicator,
   &:disabled:active ~ .Radio__indicator,
   &:disabled:checked:active {
+    color: $text-color-hint;
     background-color: $gray-200;
-    border-color: $gray-200;
+    border-color: $gray-300;
   }
 
   &:disabled:checked ~ .Radio__indicator,
   &:disabled:checked:active ~ .Radio__indicator {
+    border-color: $gray-500;
+    background-color: $gray-500;
+
     &::after {
-      background-color: $gray-400;
+      display: block;
     }
   }
 
