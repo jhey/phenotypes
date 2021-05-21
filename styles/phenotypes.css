@@ -392,7 +392,7 @@ hr {
   font-weight: normal;
   line-height: 1.49271;
   text-align: center;
-  transition: all .2s ease-out;
+  transition: all 0.2s ease-out;
   vertical-align: middle;
   white-space: nowrap;
   width: 100%;
@@ -408,7 +408,7 @@ hr {
   color: rgba(0, 0, 0, 0.86);
   text-decoration: none;
   transform: translateY(-2.25px) scaleX(1.015) scaleY(1.015);
-  transition-duration: .08s; }
+  transition-duration: 0.08s; }
 
 .Button__control:active,
 .Button--is-active .Button__control,
@@ -1290,9 +1290,6 @@ hr {
     color: rgba(0, 0, 0, 0.54);
     opacity: 1; }
   .TextInput:-ms-input-placeholder {
-    color: rgba(0, 0, 0, 0.54);
-    opacity: 1; }
-  .TextInput::-ms-input-placeholder {
     color: rgba(0, 0, 0, 0.54);
     opacity: 1; }
   .TextInput::placeholder {
