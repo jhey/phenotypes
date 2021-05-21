@@ -71,7 +71,10 @@
   &:focus ~ .Checkbox__indicator {
     border-color: var(--focus-color);
     box-shadow: 0 0 11px
-      rgba(var(--focus-color-rgb-values), var(--checkbox-focus-glow-opacity));
+      rgba(
+        var(--focus-color-shadow-rgb-values),
+        var(--checkbox-focus-glow-opacity)
+      );
   }
 
   &:active ~ .Checkbox__indicator {
@@ -87,11 +90,7 @@
 
   &:checked:focus ~ .Checkbox__indicator {
     border-color: $gray-800;
-    box-shadow: 0 0 0 2px
-      rgba(
-        var(--interactive-color-rgb-values),
-        var(--checkbox-checked-focus-glow-opacity)
-      );
+    box-shadow: none;
   }
 
   &:checked:active ~ .Checkbox__indicator {
@@ -104,12 +103,14 @@
   &:disabled:active ~ .Checkbox__indicator,
   &:disabled:checked:active {
     background-color: $gray-200;
-    border-color: $gray-200;
+    border-color: $gray-300;
   }
 
   &:disabled:checked ~ .Checkbox__indicator,
   &:disabled:checked:active ~ .Checkbox__indicator {
-    @include checkbox-icon($fill: $gray-400);
+    background-color: $gray-500;
+    border-color: $gray-500;
+    @include checkbox-icon;
   }
 
   &:disabled ~ .Checkbox__label {
