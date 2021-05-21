@@ -116,6 +116,9 @@
   --primary-button-color: var(--interactive-color);
   --primary-button-focus-color: #002b66;
   --primary-button-active-color: #001633;
+  --secondary-button-color: #f9f9f9;
+  --secondary-button-border-color-rgb-values: 0, 0, 0;
+  --secondary-button-border-color: rgb(var(--secondary-button-border-color-rgb-values));
   --border-radius: 3px; }
 
 html {
@@ -434,11 +437,11 @@ hr {
   display: inline-block; }
   .Button .Button__control {
     font-size: 16px;
-    padding: 11px 21px 12px; }
+    padding: 11px 24px 12px; }
 
 .Button__control {
-  background: rgba(0, 0, 0, 0.07);
-  border: 0;
+  background-color: --secondary-button-color;
+  border: 1px solid rgba(var(--secondary-button-border-color-rgb-values), 0.84);
   border-radius: var(--border-radius);
   color: var(--text-color-primary);
   cursor: pointer;
@@ -446,7 +449,7 @@ hr {
   font-weight: normal;
   line-height: 1.49271;
   text-align: center;
-  transition: all .2s ease-out;
+  transition: all 0.2s ease-out;
   vertical-align: middle;
   white-space: nowrap;
   width: 100%;
@@ -462,7 +465,7 @@ hr {
   color: var(--text-color-primary);
   text-decoration: none;
   transform: translateY(-2.25px) scaleX(1.015) scaleY(1.015);
-  transition-duration: .08s; }
+  transition-duration: 0.08s; }
 
 .Button__control:active,
 .Button--is-active .Button__control,
@@ -486,6 +489,7 @@ hr {
 
 .Button--danger .Button__control {
   background: var(--danger-button-color);
+  border: 0;
   color: #fff;
   font-weight: bold; }
   .Button--danger .Button__control:hover, .Button--danger .Button__control:focus {
@@ -499,6 +503,7 @@ hr {
 .Button--primary .Button__control {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.14), 0 1px 1px rgba(0, 0, 0, 0.07), 0 0 6px rgba(0, 0, 0, 0.07);
   background: var(--primary-button-color);
+  border: 0;
   color: #fff;
   font-weight: bold; }
   .Button--primary .Button__control:hover, .Button--primary .Button__control:focus {
@@ -538,59 +543,59 @@ hr {
 
 .Button--medium .Button__control {
   font-size: 16px;
-  padding: 11px 21px 12px; }
+  padding: 11px 24px 12px; }
 
 .Button--small .Button__control {
   font-size: 14px;
-  padding: 7px 14px 8px; }
+  padding: 7px 16px 8px; }
 
 .Button--large .Button__control {
   font-size: 18px;
-  padding: 16px 27px 18px; }
+  padding: 16px 31px 18px; }
 
 @media (min-width: 600px) {
   .Button--medium-sm .Button__control {
     font-size: 16px;
-    padding: 11px 21px 12px; }
+    padding: 11px 24px 12px; }
   .Button--small-sm .Button__control {
     font-size: 14px;
-    padding: 7px 14px 8px; }
+    padding: 7px 16px 8px; }
   .Button--large-sm .Button__control {
     font-size: 18px;
-    padding: 16px 27px 18px; } }
+    padding: 16px 31px 18px; } }
 
 @media (min-width: 900px) {
   .Button--medium-md .Button__control {
     font-size: 16px;
-    padding: 11px 21px 12px; }
+    padding: 11px 24px 12px; }
   .Button--small-md .Button__control {
     font-size: 14px;
-    padding: 7px 14px 8px; }
+    padding: 7px 16px 8px; }
   .Button--large-md .Button__control {
     font-size: 18px;
-    padding: 16px 27px 18px; } }
+    padding: 16px 31px 18px; } }
 
 @media (min-width: 1200px) {
   .Button--medium-lg .Button__control {
     font-size: 16px;
-    padding: 11px 21px 12px; }
+    padding: 11px 24px 12px; }
   .Button--small-lg .Button__control {
     font-size: 14px;
-    padding: 7px 14px 8px; }
+    padding: 7px 16px 8px; }
   .Button--large-lg .Button__control {
     font-size: 18px;
-    padding: 16px 27px 18px; } }
+    padding: 16px 31px 18px; } }
 
 @media (min-width: 1500px) {
   .Button--medium-xl .Button__control {
     font-size: 16px;
-    padding: 11px 21px 12px; }
+    padding: 11px 24px 12px; }
   .Button--small-xl .Button__control {
     font-size: 14px;
-    padding: 7px 14px 8px; }
+    padding: 7px 16px 8px; }
   .Button--large-xl .Button__control {
     font-size: 18px;
-    padding: 16px 27px 18px; } }
+    padding: 16px 31px 18px; } }
 
 .Checkbox {
   font-size: 14px;

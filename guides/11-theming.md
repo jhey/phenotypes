@@ -18,7 +18,8 @@ For several variables, there are **two** variable interdependent declarations. F
 
 ```css
 :root {
-  --font-family: "Sailec", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-family: "Sailec", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
   --text-color-primary: rgba(0, 0, 0, 0.86);
   --text-color-secondary: rgba(0, 0, 0, 0.7);
   --text-color-hint: rgba(0, 0, 0, 0.54);
@@ -46,7 +47,9 @@ For several variables, there are **two** variable interdependent declarations. F
   --link-color-reversed-rgb-values: 143, 231, 255;
   --link-color-reversed: rgb(var(--link-color-reversed-rgb-values));
   --step-progress-active-color-rgb-values: 158, 38, 191;
-  --step-progress-active-color: rgb(var(--step-progress-active-color-rgb-values));
+  --step-progress-active-color: rgb(
+    var(--step-progress-active-color-rgb-values)
+  );
   --focus-color-rgb-values: 0, 164, 230;
   --focus-color: rgb(var(--focus-color-rgb-values));
   --focus-color-shadow-rgb-values: 143, 231, 255;
@@ -54,6 +57,9 @@ For several variables, there are **two** variable interdependent declarations. F
   --widget-on-color-rgb-values: 20, 201, 156;
   --widget-on-color: rgb(var(--widget-on-color-rgb-values));
 
+  --secondary-button-color-rgb-values: 249, 249, 249;
+  --secondary-button-color: rgb(var(--secondary-button-color-rgb-values));
+  --secondary-button-border-color: var(--text-color-primary);
   --step-progress-active-glow-opacity: 0.54;
   --text-input-glow-opacity: 1;
   --checkbox-focus-glow-opacity: var(--text-input-glow-opacity);
