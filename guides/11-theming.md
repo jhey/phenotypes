@@ -47,13 +47,15 @@ For several variables, there are **two** variable interdependent declarations. F
   --link-color-reversed: rgb(var(--link-color-reversed-rgb-values));
   --step-progress-active-color-rgb-values: 158, 38, 191;
   --step-progress-active-color: rgb(var(--step-progress-active-color-rgb-values));
-  --focus-color-rgb-values: 143, 231, 255;
+  --focus-color-rgb-values: 0, 164, 230;
   --focus-color: rgb(var(--focus-color-rgb-values));
+  --focus-color-shadow-rgb-values: 143, 231, 255;
+  --focus-color-shadow: rgb(var(--focus-color-shadow-rgb-values));
   --widget-on-color-rgb-values: 20, 201, 156;
   --widget-on-color: rgb(var(--widget-on-color-rgb-values));
 
   --step-progress-active-glow-opacity: 0.54;
-  --text-input-glow-opacity: 0.41;
+  --text-input-glow-opacity: 1;
   --checkbox-focus-glow-opacity: var(--text-input-glow-opacity);
   --checkbox-checked-focus-glow-opacity: 0.24;
   --radio-focus-glow-opacity: var(--text-input-glow-opacity);
@@ -133,7 +135,7 @@ $green: #008000
 // that you would like to be themable you can use the `color-variable` mixin
 
 :root {
-  @include color-variable(--primary-button-color, #005EB0);
+  @include color-variable(--primary-button-color, #005eb0);
   // this mixin above will be compiled to the following CSS:
   --primary-button-color-rgb-values: 0, 94, 176;
   --primary-button-color: rgb(var(--primary-button-color-rgb-values));

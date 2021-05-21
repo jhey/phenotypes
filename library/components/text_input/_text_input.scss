@@ -9,19 +9,15 @@
   padding: $top $horizontal $bottom;
 }
 
-@mixin text-input-sizer($size: 'medium') {
-  @if $size == 'small' {
-    @include _text-input-padding(-6, -3, -5);
+@mixin text-input-sizer($size: "medium") {
+  @if $size == "small" {
+    @include _text-input-padding(-4, -1, -4);
     font-size: $font-size-2;
-  }
-
-  @else if $size == 'medium' {
-    @include _text-input-padding(-3, 0, -2);
+  } @else if $size == "medium" {
+    @include _text-input-padding(-2, 1, -1);
     font-size: $font-size-3;
-  }
-
-  @else if $size == 'large' {
-    @include _text-input-padding(0, 2, 1);
+  } @else if $size == "large" {
+    @include _text-input-padding(0, 3, 1);
     font-size: $font-size-4;
   }
 }
@@ -29,7 +25,7 @@
 .TextInput {
   @include text-input-sizer;
   -webkit-appearance: none;
-  border: $border-width solid $gray-300;
+  border: $border-width solid $text-color-primary;
   border-radius: $border-radius;
   color: var(--text-color-primary);
   line-height: $line-height-base;
@@ -44,14 +40,15 @@
 
 .TextInput:focus {
   border-color: var(--focus-color);
-  box-shadow: 0 0 11px rgba(var(--focus-color-rgb-values), var(--text-input-glow-opacity));
+  box-shadow: 0 0 11px
+    rgba(var(--focus-color-shadow-rgb-values), var(--text-input-glow-opacity));
   outline: 0;
 }
 
 .TextInput:disabled,
 .TextInput[readonly] {
   background: $gray-200;
-  border-color: $gray-200;
+  border-color: $gray-300;
   color: var(--text-color-hint);
   cursor: not-allowed;
   opacity: 1; // some browsers (e.g. iOS Safari) reduce opacity
@@ -62,6 +59,7 @@
   border-color: var(--error-color);
 
   &.TextInput:focus {
+    border-color: var(--error-color);
     box-shadow: 0 0 11px rgba(var(--negative-color-rgb-values), $alpha-600);
   }
 }
@@ -83,16 +81,20 @@
 
       .TextInput--small#{$suffix},
       .FormGroup--small#{$suffix} .TextInput {
-        @include text-input-sizer('small');
+        @include text-input-sizer("small");
       }
 
       .TextInput--large#{$suffix},
       .FormGroup--large#{$suffix} .TextInput {
-        @include text-input-sizer('large');
+        @include text-input-sizer("large");
       }
     }
   }
 } @else {
-  .TextInput--small { @include text-input-sizer('small'); }
-  .TextInput--large { @include text-input-sizer('large'); }
+  .TextInput--small {
+    @include text-input-sizer("small");
+  }
+  .TextInput--large {
+    @include text-input-sizer("large");
+  }
 }
