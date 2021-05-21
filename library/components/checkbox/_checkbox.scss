@@ -114,7 +114,7 @@
   }
 
   &:disabled ~ .Checkbox__label {
-    color: var(--text-color-secondary);
+    color: var(--text-color-hint);
   }
 }
 

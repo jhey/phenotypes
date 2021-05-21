@@ -639,7 +639,7 @@ hr {
     border-color: #969696;
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 9'%3E%3Cpolygon fill='%23fff' fill-opacity='1' points='3.5 5.45 1.5 3.45 0 4.95 3.5 8.45 10 1.95 8.5 .45'/%3E%3C/svg%3E%0A"); }
   .Checkbox__input:disabled ~ .Checkbox__label {
-    color: var(--text-color-secondary); }
+    color: var(--text-color-hint); }
 
 .Checkbox__indicator {
   background-color: #fff;
@@ -908,11 +908,16 @@ hr {
       opacity: 0.54; }
   .Radio__input:disabled ~ .Radio__indicator,
   .Radio__input:disabled:active ~ .Radio__indicator, .Radio__input:disabled:checked:active {
+    color: rgba(0, 0, 0, 0.54);
     background-color: #eee;
-    border-color: #eee; }
-  .Radio__input:disabled:checked ~ .Radio__indicator::after,
-  .Radio__input:disabled:checked:active ~ .Radio__indicator::after {
-    background-color: #c1c1c1; }
+    border-color: #dbdbdb; }
+  .Radio__input:disabled:checked ~ .Radio__indicator,
+  .Radio__input:disabled:checked:active ~ .Radio__indicator {
+    border-color: #969696;
+    background-color: #969696; }
+    .Radio__input:disabled:checked ~ .Radio__indicator::after,
+    .Radio__input:disabled:checked:active ~ .Radio__indicator::after {
+      display: block; }
   .Radio__input:disabled ~ .Radio__label {
     color: var(--text-color-secondary); }
 
