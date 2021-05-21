@@ -559,8 +559,8 @@ hr {
   position: absolute;
   z-index: -1; }
   .Checkbox__input:focus ~ .Checkbox__indicator {
-    border-color: rgb(143, 231, 255);
-    box-shadow: 0 0 11px rgba(143, 231, 255, 0.41); }
+    border-color: rgb(0, 164, 230);
+    box-shadow: 0 0 11px rgba(0, 164, 230, 1); }
   .Checkbox__input:active ~ .Checkbox__indicator {
     background-color: #f9f9f9;
     border-color: #c1c1c1; }
@@ -833,8 +833,8 @@ hr {
   position: absolute;
   z-index: -1; }
   .Radio__input:focus ~ .Radio__indicator {
-    border-color: rgb(143, 231, 255);
-    box-shadow: 0 0 11px rgba(143, 231, 255, 0.41); }
+    border-color: rgb(0, 164, 230);
+    box-shadow: 0 0 11px rgba(0, 164, 230, 1); }
   .Radio__input:active ~ .Radio__indicator {
     background-color: #f9f9f9;
     border-color: #c1c1c1; }
@@ -1187,10 +1187,10 @@ hr {
   top: -10px;
   width: 24px; }
   .Slider__handle::after {
-    background-color: rgb(143, 231, 255);
+    background-color: rgb(0, 164, 230);
     border-radius: 50%;
     bottom: 7px;
-    box-shadow: 0 0 5px 0 rgba(143, 231, 255, 0.7);
+    box-shadow: 0 0 5px 0 rgba(0, 164, 230, 0.7);
     content: "";
     left: 7px;
     opacity: 0;
@@ -1243,9 +1243,9 @@ hr {
   top: 2px;
   transition: right .15s ease-out; }
   .Switch__toggler::after {
-    background-color: rgb(143, 231, 255);
+    background-color: rgb(0, 164, 230);
     border-radius: 50%;
-    box-shadow: 0 0 5px 0 rgba(143, 231, 255, 0.7);
+    box-shadow: 0 0 5px 0 rgba(0, 164, 230, 0.7);
     content: ' ';
     left: 50%;
     opacity: 0;
@@ -1278,10 +1278,10 @@ hr {
   border-bottom: 2px solid #000; }
 
 .TextInput {
-  padding: 10px 14px 9px;
+  padding: 11px 16px 11px;
   font-size: 16px;
   -webkit-appearance: none;
-  border: 2px solid #dbdbdb;
+  border: 2px solid rgba(0, 0, 0, 0.86);
   border-radius: 3px;
   color: rgba(0, 0, 0, 0.86);
   line-height: 1.49271;
@@ -1297,14 +1297,14 @@ hr {
     opacity: 1; }
 
 .TextInput:focus {
-  border-color: rgb(143, 231, 255);
-  box-shadow: 0 0 11px rgba(143, 231, 255, 0.41);
+  border-color: rgb(0, 164, 230);
+  box-shadow: 0 0 11px rgba(143, 231, 255, 1);
   outline: 0; }
 
 .TextInput:disabled,
 .TextInput[readonly] {
   background: #eee;
-  border-color: #eee;
+  border-color: #dbdbdb;
   color: rgba(0, 0, 0, 0.54);
   cursor: not-allowed;
   opacity: 1; }
@@ -1314,77 +1314,78 @@ hr {
   border-color: rgb(171, 0, 43); }
   .TextInput--has-error.TextInput:focus,
   .FormGroup--has-error .TextInput.TextInput:focus {
+    border-color: rgb(171, 0, 43);
     box-shadow: 0 0 11px rgba(171, 0, 43, 0.54); }
 
 .TextInput--medium,
 .FormGroup--medium .TextInput {
-  padding: 10px 14px 9px;
+  padding: 11px 16px 11px;
   font-size: 16px; }
 
 .TextInput--small,
 .FormGroup--small .TextInput {
-  padding: 6px 9px 5px;
+  padding: 8px 12px 6px;
   font-size: 14px; }
 
 .TextInput--large,
 .FormGroup--large .TextInput {
-  padding: 15px 19px 15px;
+  padding: 15px 22px 15px;
   font-size: 18px; }
 
 @media (min-width: 600px) {
   .TextInput--medium-sm,
   .FormGroup--medium-sm .TextInput {
-    padding: 10px 14px 9px;
+    padding: 11px 16px 11px;
     font-size: 16px; }
   .TextInput--small-sm,
   .FormGroup--small-sm .TextInput {
-    padding: 6px 9px 5px;
+    padding: 8px 12px 6px;
     font-size: 14px; }
   .TextInput--large-sm,
   .FormGroup--large-sm .TextInput {
-    padding: 15px 19px 15px;
+    padding: 15px 22px 15px;
     font-size: 18px; } }
 
 @media (min-width: 900px) {
   .TextInput--medium-md,
   .FormGroup--medium-md .TextInput {
-    padding: 10px 14px 9px;
+    padding: 11px 16px 11px;
     font-size: 16px; }
   .TextInput--small-md,
   .FormGroup--small-md .TextInput {
-    padding: 6px 9px 5px;
+    padding: 8px 12px 6px;
     font-size: 14px; }
   .TextInput--large-md,
   .FormGroup--large-md .TextInput {
-    padding: 15px 19px 15px;
+    padding: 15px 22px 15px;
     font-size: 18px; } }
 
 @media (min-width: 1200px) {
   .TextInput--medium-lg,
   .FormGroup--medium-lg .TextInput {
-    padding: 10px 14px 9px;
+    padding: 11px 16px 11px;
     font-size: 16px; }
   .TextInput--small-lg,
   .FormGroup--small-lg .TextInput {
-    padding: 6px 9px 5px;
+    padding: 8px 12px 6px;
     font-size: 14px; }
   .TextInput--large-lg,
   .FormGroup--large-lg .TextInput {
-    padding: 15px 19px 15px;
+    padding: 15px 22px 15px;
     font-size: 18px; } }
 
 @media (min-width: 1500px) {
   .TextInput--medium-xl,
   .FormGroup--medium-xl .TextInput {
-    padding: 10px 14px 9px;
+    padding: 11px 16px 11px;
     font-size: 16px; }
   .TextInput--small-xl,
   .FormGroup--small-xl .TextInput {
-    padding: 6px 9px 5px;
+    padding: 8px 12px 6px;
     font-size: 14px; }
   .TextInput--large-xl,
   .FormGroup--large-xl .TextInput {
-    padding: 15px 19px 15px;
+    padding: 15px 22px 15px;
     font-size: 18px; } }
 
 .FormGroup__label {

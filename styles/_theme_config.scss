@@ -30,12 +30,13 @@
   @include color-variable(--link-hover-color, $link-hover-color);
   @include color-variable(--link-color-reversed, $blue-100);
   @include color-variable(--step-progress-active-color, $purple-200);
-  @include color-variable(--focus-color, $blue-100);
+  @include color-variable(--focus-color, $blue-200);
+  @include color-variable(--focus-color-shadow, $blue-100);
   @include color-variable(--widget-on-color, $green-200);
 
   // glow opacities
   --step-progress-active-glow-opacity: #{$alpha-600};
-  --text-input-glow-opacity: #{$alpha-500};
+  --text-input-glow-opacity: 1;
   --checkbox-focus-glow-opacity: var(--text-input-glow-opacity);
   --checkbox-checked-focus-glow-opacity: #{$alpha-400};
   --radio-focus-glow-opacity: var(--text-input-glow-opacity);
