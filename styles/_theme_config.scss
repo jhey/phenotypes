@@ -56,6 +56,7 @@
   --primary-button-color: var(--interactive-color);
   --primary-button-focus-color: #{$blue-400};
   --primary-button-active-color: #{darken($blue-400, 10%)};
-
+  --secondary-button-color: #{$gray-100};
+  @include color-variable(--secondary-button-border-color, $text-color-primary);
   --border-radius: 3px;
 }

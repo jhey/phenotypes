@@ -57,6 +57,9 @@ For several variables, there are **two** variable interdependent declarations. F
   --widget-on-color-rgb-values: 20, 201, 156;
   --widget-on-color: rgb(var(--widget-on-color-rgb-values));
 
+  --secondary-button-color-rgb-values: 249, 249, 249;
+  --secondary-button-color: rgb(var(--secondary-button-color-rgb-values));
+  --secondary-button-border-color: var(--text-color-primary);
   --step-progress-active-glow-opacity: 0.54;
   --text-input-glow-opacity: 1;
   --checkbox-focus-glow-opacity: var(--text-input-glow-opacity);

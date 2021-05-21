@@ -4,13 +4,13 @@
   .Button__control {
     @if $size == "small" {
       font-size: $font-size-2;
-      padding: modular-scale-px(-6) modular-scale-px(-1) modular-scale-px(-5);
+      padding: modular-scale-px(-6) modular-scale-px(0) modular-scale-px(-5);
     } @else if $size == "medium" {
       font-size: $font-size-3;
-      padding: modular-scale-px(-3) modular-scale-px(2) modular-scale-px(-2);
+      padding: modular-scale-px(-3) modular-scale-px(3) modular-scale-px(-2);
     } @else if $size == "large" {
       font-size: $font-size-4;
-      padding: modular-scale-px(0) modular-scale-px(4) modular-scale-px(1);
+      padding: modular-scale-px(0) modular-scale-px(5) modular-scale-px(1);
     }
   }
 }
@@ -25,8 +25,8 @@
 
 .Button__control {
   // scss-lint:disable PropertySortOrder
-  background: rgba($black, $alpha-200);
-  border: 0;
+  background-color: --secondary-button-color;
+  border: 1px solid rgba(var(--secondary-button-border-color-rgb-values), 0.84);
   border-radius: $border-radius;
   color: var(--text-color-primary);
   cursor: pointer;
@@ -88,6 +88,7 @@
 .Button--danger {
   .Button__control {
     background: var(--danger-button-color);
+    border: 0;
     color: $white;
     font-weight: $font-weight-bold;
 
@@ -111,6 +112,7 @@
   .Button__control {
     @include depth(4);
     background: var(--primary-button-color);
+    border: 0;
     color: $white;
     font-weight: $font-weight-bold;
 
