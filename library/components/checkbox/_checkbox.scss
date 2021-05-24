@@ -78,7 +78,6 @@
   }
 
   &:active ~ .Checkbox__indicator {
-    background-color: $gray-100;
     border-color: $gray-400;
   }
 
@@ -89,8 +88,13 @@
   }
 
   &:checked:focus ~ .Checkbox__indicator {
-    border-color: $gray-800;
-    box-shadow: none;
+    background-color: var(--focus-color);
+    border-color: var(--focus-color);
+    box-shadow: 0 0 11px
+      rgba(
+        var(--focus-color-shadow-rgb-values),
+        var(--checkbox-focus-glow-opacity)
+      );
   }
 
   &:checked:active ~ .Checkbox__indicator {
