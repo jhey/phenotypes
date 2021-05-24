@@ -440,7 +440,7 @@ hr {
     padding: 11px 24px 12px; }
 
 .Button__control {
-  background-color: --secondary-button-color;
+  background-color: var(--secondary-button-color);
   border: 1px solid rgba(var(--secondary-button-border-color-rgb-values), 0.84);
   border-radius: var(--border-radius);
   color: var(--text-color-primary);

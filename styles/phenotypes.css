@@ -383,7 +383,7 @@ hr {
     padding: 11px 24px 12px; }
 
 .Button__control {
-  background-color: --secondary-button-color;
+  background-color: #f9f9f9;
   border: 1px solid rgba(0, 0, 0, 0.84);
   border-radius: 3px;
   color: rgba(0, 0, 0, 0.86);
