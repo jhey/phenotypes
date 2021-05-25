@@ -380,7 +380,7 @@ hr {
   display: inline-block; }
   .Button .Button__control {
     font-size: 16px;
-    padding: 21px 24px 12px; }
+    padding: 11px 21px 12px; }
 
 .Button__control {
   background-color: #f9f9f9;
@@ -486,59 +486,59 @@ hr {
 
 .Button--medium .Button__control {
   font-size: 16px;
-  padding: 21px 24px 12px; }
+  padding: 11px 21px 12px; }
 
 .Button--small .Button__control {
   font-size: 14px;
-  padding: 14px 16px 8px; }
+  padding: 7px 14px 8px; }
 
 .Button--large .Button__control {
   font-size: 18px;
-  padding: 27px 31px 18px; }
+  padding: 16px 27px 18px; }
 
 @media (min-width: 600px) {
   .Button--medium-sm .Button__control {
     font-size: 16px;
-    padding: 21px 24px 12px; }
+    padding: 11px 21px 12px; }
   .Button--small-sm .Button__control {
     font-size: 14px;
-    padding: 14px 16px 8px; }
+    padding: 7px 14px 8px; }
   .Button--large-sm .Button__control {
     font-size: 18px;
-    padding: 27px 31px 18px; } }
+    padding: 16px 27px 18px; } }
 
 @media (min-width: 900px) {
   .Button--medium-md .Button__control {
     font-size: 16px;
-    padding: 21px 24px 12px; }
+    padding: 11px 21px 12px; }
   .Button--small-md .Button__control {
     font-size: 14px;
-    padding: 14px 16px 8px; }
+    padding: 7px 14px 8px; }
   .Button--large-md .Button__control {
     font-size: 18px;
-    padding: 27px 31px 18px; } }
+    padding: 16px 27px 18px; } }
 
 @media (min-width: 1200px) {
   .Button--medium-lg .Button__control {
     font-size: 16px;
-    padding: 21px 24px 12px; }
+    padding: 11px 21px 12px; }
   .Button--small-lg .Button__control {
     font-size: 14px;
-    padding: 14px 16px 8px; }
+    padding: 7px 14px 8px; }
   .Button--large-lg .Button__control {
     font-size: 18px;
-    padding: 27px 31px 18px; } }
+    padding: 16px 27px 18px; } }
 
 @media (min-width: 1500px) {
   .Button--medium-xl .Button__control {
     font-size: 16px;
-    padding: 21px 24px 12px; }
+    padding: 11px 21px 12px; }
   .Button--small-xl .Button__control {
     font-size: 14px;
-    padding: 14px 16px 8px; }
+    padding: 7px 14px 8px; }
   .Button--large-xl .Button__control {
     font-size: 18px;
-    padding: 27px 31px 18px; } }
+    padding: 16px 27px 18px; } }
 
 .Checkbox {
   font-size: 14px;

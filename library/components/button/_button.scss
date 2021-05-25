@@ -4,13 +4,13 @@
   .Button__control {
     @if $size == "small" {
       font-size: $font-size-2;
-      padding: modular-scale-px(-1) modular-scale-px(0) modular-scale-px(-5);
+      padding: modular-scale-px(-6) modular-scale-px(-1) modular-scale-px(-5);
     } @else if $size == "medium" {
       font-size: $font-size-3;
-      padding: modular-scale-px(2) modular-scale-px(3) modular-scale-px(-2);
+      padding: modular-scale-px(-3) modular-scale-px(2) modular-scale-px(-2);
     } @else if $size == "large" {
       font-size: $font-size-4;
-      padding: modular-scale-px(4) modular-scale-px(5) modular-scale-px(1);
+      padding: modular-scale-px(0) modular-scale-px(4) modular-scale-px(1);
     }
   }
 }
