@@ -76,7 +76,10 @@
   &:focus ~ .Radio__indicator {
     border-color: var(--focus-color);
     box-shadow: 0 0 11px
-      rgba(var(--focus-color-rgb-values), var(--radio-focus-glow-opacity));
+      rgba(
+        var(--focus-color-shadow-rgb-values),
+        var(--radio-focus-glow-opacity)
+      );
   }
 
   &:active ~ .Radio__indicator {
@@ -96,10 +99,11 @@
   }
 
   &:checked:focus ~ .Radio__indicator {
-    border-color: $gray-800;
+    background-color: var(--focus-color);
+    border-color: var(--focus-color);
     box-shadow: 0 0 0 2px
       rgba(
-        var(--interactive-color-rgb-values),
+        var(--focus-color-shadow-rgb-values),
         var(--radio-checked-focus-glow-opacity)
       );
   }
@@ -116,14 +120,18 @@
   &:disabled ~ .Radio__indicator,
   &:disabled:active ~ .Radio__indicator,
   &:disabled:checked:active {
+    color: $text-color-hint;
     background-color: $gray-200;
-    border-color: $gray-200;
+    border-color: $gray-300;
   }
 
   &:disabled:checked ~ .Radio__indicator,
   &:disabled:checked:active ~ .Radio__indicator {
+    border-color: $gray-500;
+    background-color: $gray-500;
+
     &::after {
-      background-color: $gray-400;
+      display: block;
     }
   }
 

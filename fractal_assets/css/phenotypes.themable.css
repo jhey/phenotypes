@@ -91,12 +91,14 @@
   --link-color-reversed: rgb(var(--link-color-reversed-rgb-values));
   --step-progress-active-color-rgb-values: 158, 38, 191;
   --step-progress-active-color: rgb(var(--step-progress-active-color-rgb-values));
-  --focus-color-rgb-values: 143, 231, 255;
+  --focus-color-rgb-values: 0, 164, 230;
   --focus-color: rgb(var(--focus-color-rgb-values));
+  --focus-color-shadow-rgb-values: 143, 231, 255;
+  --focus-color-shadow: rgb(var(--focus-color-shadow-rgb-values));
   --widget-on-color-rgb-values: 20, 201, 156;
   --widget-on-color: rgb(var(--widget-on-color-rgb-values));
   --step-progress-active-glow-opacity: 0.54;
-  --text-input-glow-opacity: 0.41;
+  --text-input-glow-opacity: 1;
   --checkbox-focus-glow-opacity: var(--text-input-glow-opacity);
   --checkbox-checked-focus-glow-opacity: 0.24;
   --radio-focus-glow-opacity: var(--text-input-glow-opacity);
@@ -114,6 +116,9 @@
   --primary-button-color: var(--interactive-color);
   --primary-button-focus-color: #002b66;
   --primary-button-active-color: #001633;
+  --secondary-button-color: #f9f9f9;
+  --secondary-button-border-color-rgb-values: 0, 0, 0;
+  --secondary-button-border-color: rgb(var(--secondary-button-border-color-rgb-values));
   --border-radius: 3px; }
 
 html {
@@ -435,8 +440,8 @@ hr {
     padding: 11px 21px 12px; }
 
 .Button__control {
-  background: rgba(0, 0, 0, 0.07);
-  border: 0;
+  background-color: var(--secondary-button-color);
+  border: 1px solid rgba(var(--secondary-button-border-color-rgb-values), 0.84);
   border-radius: var(--border-radius);
   color: var(--text-color-primary);
   cursor: pointer;
@@ -484,6 +489,7 @@ hr {
 
 .Button--danger .Button__control {
   background: var(--danger-button-color);
+  border: 0;
   color: #fff;
   font-weight: bold; }
   .Button--danger .Button__control:hover, .Button--danger .Button__control:focus {
@@ -497,6 +503,7 @@ hr {
 .Button--primary .Button__control {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.14), 0 1px 1px rgba(0, 0, 0, 0.07), 0 0 6px rgba(0, 0, 0, 0.07);
   background: var(--primary-button-color);
+  border: 0;
   color: #fff;
   font-weight: bold; }
   .Button--primary .Button__control:hover, .Button--primary .Button__control:focus {
@@ -612,17 +619,17 @@ hr {
   z-index: -1; }
   .Checkbox__input:focus ~ .Checkbox__indicator {
     border-color: var(--focus-color);
-    box-shadow: 0 0 11px rgba(var(--focus-color-rgb-values), var(--checkbox-focus-glow-opacity)); }
+    box-shadow: 0 0 11px rgba(var(--focus-color-shadow-rgb-values), var(--checkbox-focus-glow-opacity)); }
   .Checkbox__input:active ~ .Checkbox__indicator {
-    background-color: #f9f9f9;
     border-color: #c1c1c1; }
   .Checkbox__input:checked ~ .Checkbox__indicator {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 9'%3E%3Cpolygon fill='%23fff' fill-opacity='1' points='3.5 5.45 1.5 3.45 0 4.95 3.5 8.45 10 1.95 8.5 .45'/%3E%3C/svg%3E%0A");
     background-color: #232323;
     border-color: #232323; }
   .Checkbox__input:checked:focus ~ .Checkbox__indicator {
-    border-color: #232323;
-    box-shadow: 0 0 0 2px rgba(var(--interactive-color-rgb-values), var(--checkbox-checked-focus-glow-opacity)); }
+    background-color: var(--focus-color);
+    border-color: var(--focus-color);
+    box-shadow: 0 0 11px rgba(var(--focus-color-shadow-rgb-values), var(--checkbox-focus-glow-opacity)); }
   .Checkbox__input:checked:active ~ .Checkbox__indicator {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 9'%3E%3Cpolygon fill='%23fff' fill-opacity='0.54' points='3.5 5.45 1.5 3.45 0 4.95 3.5 8.45 10 1.95 8.5 .45'/%3E%3C/svg%3E%0A");
     background-color: #232323;
@@ -630,12 +637,14 @@ hr {
   .Checkbox__input:disabled ~ .Checkbox__indicator,
   .Checkbox__input:disabled:active ~ .Checkbox__indicator, .Checkbox__input:disabled:checked:active {
     background-color: #eee;
-    border-color: #eee; }
+    border-color: #dbdbdb; }
   .Checkbox__input:disabled:checked ~ .Checkbox__indicator,
   .Checkbox__input:disabled:checked:active ~ .Checkbox__indicator {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 9'%3E%3Cpolygon fill='%23c1c1c1' fill-opacity='1' points='3.5 5.45 1.5 3.45 0 4.95 3.5 8.45 10 1.95 8.5 .45'/%3E%3C/svg%3E%0A"); }
+    background-color: #969696;
+    border-color: #969696;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 9'%3E%3Cpolygon fill='%23fff' fill-opacity='1' points='3.5 5.45 1.5 3.45 0 4.95 3.5 8.45 10 1.95 8.5 .45'/%3E%3C/svg%3E%0A"); }
   .Checkbox__input:disabled ~ .Checkbox__label {
-    color: var(--text-color-secondary); }
+    color: var(--text-color-hint); }
 
 .Checkbox__indicator {
   background-color: #fff;
@@ -883,7 +892,7 @@ hr {
   z-index: -1; }
   .Radio__input:focus ~ .Radio__indicator {
     border-color: var(--focus-color);
-    box-shadow: 0 0 11px rgba(var(--focus-color-rgb-values), var(--radio-focus-glow-opacity)); }
+    box-shadow: 0 0 11px rgba(var(--focus-color-shadow-rgb-values), var(--radio-focus-glow-opacity)); }
   .Radio__input:active ~ .Radio__indicator {
     background-color: #f9f9f9;
     border-color: #c1c1c1; }
@@ -894,8 +903,9 @@ hr {
     .Radio__input:checked ~ .Radio__indicator::after {
       display: block; }
   .Radio__input:checked:focus ~ .Radio__indicator {
-    border-color: #232323;
-    box-shadow: 0 0 0 2px rgba(var(--interactive-color-rgb-values), var(--radio-checked-focus-glow-opacity)); }
+    background-color: var(--focus-color);
+    border-color: var(--focus-color);
+    box-shadow: 0 0 0 2px rgba(var(--focus-color-shadow-rgb-values), var(--radio-checked-focus-glow-opacity)); }
   .Radio__input:checked:active:not(:disabled) ~ .Radio__indicator {
     background-color: #232323;
     border-color: #232323; }
@@ -903,11 +913,16 @@ hr {
       opacity: 0.54; }
   .Radio__input:disabled ~ .Radio__indicator,
   .Radio__input:disabled:active ~ .Radio__indicator, .Radio__input:disabled:checked:active {
+    color: rgba(0, 0, 0, 0.54);
     background-color: #eee;
-    border-color: #eee; }
-  .Radio__input:disabled:checked ~ .Radio__indicator::after,
-  .Radio__input:disabled:checked:active ~ .Radio__indicator::after {
-    background-color: #c1c1c1; }
+    border-color: #dbdbdb; }
+  .Radio__input:disabled:checked ~ .Radio__indicator,
+  .Radio__input:disabled:checked:active ~ .Radio__indicator {
+    border-color: #969696;
+    background-color: #969696; }
+    .Radio__input:disabled:checked ~ .Radio__indicator::after,
+    .Radio__input:disabled:checked:active ~ .Radio__indicator::after {
+      display: block; }
   .Radio__input:disabled ~ .Radio__label {
     color: var(--text-color-secondary); }
 
@@ -1327,7 +1342,7 @@ hr {
   padding: 10px 14px 9px;
   font-size: 16px;
   -webkit-appearance: none;
-  border: 2px solid #dbdbdb;
+  border: 2px solid rgba(0, 0, 0, 0.86);
   border-radius: var(--border-radius);
   color: var(--text-color-primary);
   line-height: 1.49271;
@@ -1338,13 +1353,13 @@ hr {
 
 .TextInput:focus {
   border-color: var(--focus-color);
-  box-shadow: 0 0 11px rgba(var(--focus-color-rgb-values), var(--text-input-glow-opacity));
+  box-shadow: 0 0 11px rgba(var(--focus-color-shadow-rgb-values), var(--text-input-glow-opacity));
   outline: 0; }
 
 .TextInput:disabled,
 .TextInput[readonly] {
   background: #eee;
-  border-color: #eee;
+  border-color: #dbdbdb;
   color: var(--text-color-hint);
   cursor: not-allowed;
   opacity: 1; }
@@ -1354,6 +1369,7 @@ hr {
   border-color: var(--error-color); }
   .TextInput--has-error.TextInput:focus,
   .FormGroup--has-error .TextInput.TextInput:focus {
+    border-color: var(--error-color);
     box-shadow: 0 0 11px rgba(var(--negative-color-rgb-values), 0.54); }
 
 .TextInput--medium,
