@@ -437,10 +437,10 @@ hr {
   display: inline-block; }
   .Button .Button__control {
     font-size: 16px;
-    padding: 11px 24px 12px; }
+    padding: 11px 21px 12px; }
 
 .Button__control {
-  background-color: --secondary-button-color;
+  background-color: var(--secondary-button-color);
   border: 1px solid rgba(var(--secondary-button-border-color-rgb-values), 0.84);
   border-radius: var(--border-radius);
   color: var(--text-color-primary);
@@ -543,59 +543,59 @@ hr {
 
 .Button--medium .Button__control {
   font-size: 16px;
-  padding: 11px 24px 12px; }
+  padding: 11px 21px 12px; }
 
 .Button--small .Button__control {
   font-size: 14px;
-  padding: 7px 16px 8px; }
+  padding: 7px 14px 8px; }
 
 .Button--large .Button__control {
   font-size: 18px;
-  padding: 16px 31px 18px; }
+  padding: 16px 27px 18px; }
 
 @media (min-width: 600px) {
   .Button--medium-sm .Button__control {
     font-size: 16px;
-    padding: 11px 24px 12px; }
+    padding: 11px 21px 12px; }
   .Button--small-sm .Button__control {
     font-size: 14px;
-    padding: 7px 16px 8px; }
+    padding: 7px 14px 8px; }
   .Button--large-sm .Button__control {
     font-size: 18px;
-    padding: 16px 31px 18px; } }
+    padding: 16px 27px 18px; } }
 
 @media (min-width: 900px) {
   .Button--medium-md .Button__control {
     font-size: 16px;
-    padding: 11px 24px 12px; }
+    padding: 11px 21px 12px; }
   .Button--small-md .Button__control {
     font-size: 14px;
-    padding: 7px 16px 8px; }
+    padding: 7px 14px 8px; }
   .Button--large-md .Button__control {
     font-size: 18px;
-    padding: 16px 31px 18px; } }
+    padding: 16px 27px 18px; } }
 
 @media (min-width: 1200px) {
   .Button--medium-lg .Button__control {
     font-size: 16px;
-    padding: 11px 24px 12px; }
+    padding: 11px 21px 12px; }
   .Button--small-lg .Button__control {
     font-size: 14px;
-    padding: 7px 16px 8px; }
+    padding: 7px 14px 8px; }
   .Button--large-lg .Button__control {
     font-size: 18px;
-    padding: 16px 31px 18px; } }
+    padding: 16px 27px 18px; } }
 
 @media (min-width: 1500px) {
   .Button--medium-xl .Button__control {
     font-size: 16px;
-    padding: 11px 24px 12px; }
+    padding: 11px 21px 12px; }
   .Button--small-xl .Button__control {
     font-size: 14px;
-    padding: 7px 16px 8px; }
+    padding: 7px 14px 8px; }
   .Button--large-xl .Button__control {
     font-size: 18px;
-    padding: 16px 31px 18px; } }
+    padding: 16px 27px 18px; } }
 
 .Checkbox {
   font-size: 14px;
@@ -621,15 +621,15 @@ hr {
     border-color: var(--focus-color);
     box-shadow: 0 0 11px rgba(var(--focus-color-shadow-rgb-values), var(--checkbox-focus-glow-opacity)); }
   .Checkbox__input:active ~ .Checkbox__indicator {
-    background-color: #f9f9f9;
     border-color: #c1c1c1; }
   .Checkbox__input:checked ~ .Checkbox__indicator {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 9'%3E%3Cpolygon fill='%23fff' fill-opacity='1' points='3.5 5.45 1.5 3.45 0 4.95 3.5 8.45 10 1.95 8.5 .45'/%3E%3C/svg%3E%0A");
     background-color: #232323;
     border-color: #232323; }
   .Checkbox__input:checked:focus ~ .Checkbox__indicator {
-    border-color: #232323;
-    box-shadow: none; }
+    background-color: var(--focus-color);
+    border-color: var(--focus-color);
+    box-shadow: 0 0 11px rgba(var(--focus-color-shadow-rgb-values), var(--checkbox-focus-glow-opacity)); }
   .Checkbox__input:checked:active ~ .Checkbox__indicator {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 9'%3E%3Cpolygon fill='%23fff' fill-opacity='0.54' points='3.5 5.45 1.5 3.45 0 4.95 3.5 8.45 10 1.95 8.5 .45'/%3E%3C/svg%3E%0A");
     background-color: #232323;
@@ -1339,7 +1339,7 @@ hr {
   border-bottom: 2px solid #000; }
 
 .TextInput {
-  padding: 11px 16px 11px;
+  padding: 10px 14px 9px;
   font-size: 16px;
   -webkit-appearance: none;
   border: 2px solid rgba(0, 0, 0, 0.86);
@@ -1374,73 +1374,73 @@ hr {
 
 .TextInput--medium,
 .FormGroup--medium .TextInput {
-  padding: 11px 16px 11px;
+  padding: 10px 14px 9px;
   font-size: 16px; }
 
 .TextInput--small,
 .FormGroup--small .TextInput {
-  padding: 8px 12px 6px;
+  padding: 6px 9px 5px;
   font-size: 14px; }
 
 .TextInput--large,
 .FormGroup--large .TextInput {
-  padding: 15px 22px 15px;
+  padding: 15px 19px 15px;
   font-size: 18px; }
 
 @media (min-width: 600px) {
   .TextInput--medium-sm,
   .FormGroup--medium-sm .TextInput {
-    padding: 11px 16px 11px;
+    padding: 10px 14px 9px;
     font-size: 16px; }
   .TextInput--small-sm,
   .FormGroup--small-sm .TextInput {
-    padding: 8px 12px 6px;
+    padding: 6px 9px 5px;
     font-size: 14px; }
   .TextInput--large-sm,
   .FormGroup--large-sm .TextInput {
-    padding: 15px 22px 15px;
+    padding: 15px 19px 15px;
     font-size: 18px; } }
 
 @media (min-width: 900px) {
   .TextInput--medium-md,
   .FormGroup--medium-md .TextInput {
-    padding: 11px 16px 11px;
+    padding: 10px 14px 9px;
     font-size: 16px; }
   .TextInput--small-md,
   .FormGroup--small-md .TextInput {
-    padding: 8px 12px 6px;
+    padding: 6px 9px 5px;
     font-size: 14px; }
   .TextInput--large-md,
   .FormGroup--large-md .TextInput {
-    padding: 15px 22px 15px;
+    padding: 15px 19px 15px;
     font-size: 18px; } }
 
 @media (min-width: 1200px) {
   .TextInput--medium-lg,
   .FormGroup--medium-lg .TextInput {
-    padding: 11px 16px 11px;
+    padding: 10px 14px 9px;
     font-size: 16px; }
   .TextInput--small-lg,
   .FormGroup--small-lg .TextInput {
-    padding: 8px 12px 6px;
+    padding: 6px 9px 5px;
     font-size: 14px; }
   .TextInput--large-lg,
   .FormGroup--large-lg .TextInput {
-    padding: 15px 22px 15px;
+    padding: 15px 19px 15px;
     font-size: 18px; } }
 
 @media (min-width: 1500px) {
   .TextInput--medium-xl,
   .FormGroup--medium-xl .TextInput {
-    padding: 11px 16px 11px;
+    padding: 10px 14px 9px;
     font-size: 16px; }
   .TextInput--small-xl,
   .FormGroup--small-xl .TextInput {
-    padding: 8px 12px 6px;
+    padding: 6px 9px 5px;
     font-size: 14px; }
   .TextInput--large-xl,
   .FormGroup--large-xl .TextInput {
-    padding: 15px 22px 15px;
+    padding: 15px 19px 15px;
     font-size: 18px; } }
 
 .FormGroup__label {

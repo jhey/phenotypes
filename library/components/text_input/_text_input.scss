@@ -11,13 +11,13 @@
 
 @mixin text-input-sizer($size: "medium") {
   @if $size == "small" {
-    @include _text-input-padding(-4, -1, -4);
+    @include _text-input-padding(-6, -3, -5);
     font-size: $font-size-2;
   } @else if $size == "medium" {
-    @include _text-input-padding(-2, 1, -1);
+    @include _text-input-padding(-3, 0, -2);
     font-size: $font-size-3;
   } @else if $size == "large" {
-    @include _text-input-padding(0, 3, 1);
+    @include _text-input-padding(0, 2, 1);
     font-size: $font-size-4;
   }
 }
