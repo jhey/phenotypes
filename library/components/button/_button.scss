@@ -88,13 +88,14 @@
 .Button--danger {
   .Button__control {
     background: var(--danger-button-color);
-    border: 0;
+    border: 1px solid var(--danger-button-color);
     color: $white;
     font-weight: $font-weight-bold;
 
     &:hover,
     &:focus {
       background: var(--danger-button-focus-color);
+      border: 1px solid var(--danger-button-focus-color);
       color: $white;
     }
   }
@@ -112,7 +113,7 @@
   .Button__control {
     @include depth(4);
     background: var(--primary-button-color);
-    border: 0;
+    border: 1px solid var(--primary-button-color);
     color: $white;
     font-weight: $font-weight-bold;
 
@@ -120,6 +121,7 @@
     &:focus {
       @include depth(7);
       background: var(--primary-button-focus-color);
+      border: 1px solid var(--primary-button-focus-color);
       color: $white;
     }
   }
