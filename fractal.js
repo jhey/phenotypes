@@ -76,5 +76,7 @@ fractal.docs.set('statuses', {
 fractal.components.set('default.status', 'draft');
 fractal.docs.set('default.status', 'draft');
 
+fractal.web.set('builder.dest', path.join(__dirname, 'static-build'));
+
 // Export fractal app
 module.exports = fractal;
