@@ -50,6 +50,7 @@
     "watchAll": "npm run watchCss & npm run watchJs",
     "startProd": "npm run buildAll & fractal start",
     "start": "fractal start --sync & npm run watchAll",
+    "buildStatic": "fractal build",
     "buildLibrary": "rollup --config ./configs/rollup.phenotypes-library.config.js",
     "watchLibrary": "rollup --config ./configs/rollup.phenotypes-library.config.js --watch",
     "copyAssets": "node scripts/copyLibraryAssets.js",

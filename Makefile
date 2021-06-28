@@ -19,3 +19,6 @@ shell:
 
 test:
 	docker-compose ${COMPOSE_ARGS} run --rm --entrypoint='npm run' fractal test
+
+build_static:
+	docker-compose ${COMPOSE_ARGS} run --rm --entrypoint='npm run' fractal buildStatic
