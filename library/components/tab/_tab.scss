@@ -1,8 +1,10 @@
+@use "sass:math";
+
 .Tab {
   display: inline-block;
 
   &:not(:last-child) {
-    margin-right: 1em / $modular-scale-proportion;
+    margin-right: math.div(1em, $modular-scale-proportion);
   }
 }
 
