@@ -1,9 +1,11 @@
+@use "sass:math";
+
 $slider-handle-size: modular-scale-px(3);
 $slider-track-height: 3px;
 $slider-track-offset: floor(
-  ($slider-handle-size / 2) - ($slider-track-height / 2)
+  math.div($slider-handle-size, 2) - math.div($slider-track-height, 2)
 );
-$slider-track-border-radius: $slider-track-height / 2;
+$slider-track-border-radius: math.div($slider-track-height, 2);
 $slider-focus-margin: modular-scale-px(-6);
 $slider-focus-size: $slider-handle-size - ($slider-focus-margin * 2);
 
@@ -28,16 +30,16 @@ $slider-focus-size: $slider-handle-size - ($slider-focus-margin * 2);
 
 .Slider__track {
   bottom: 0;
-  left: $slider-handle-size / 2;
+  left: math.div($slider-handle-size, 2);
   position: absolute;
-  right: $slider-handle-size / 2;
+  right: math.div($slider-handle-size, 2);
   top: 0;
 }
 
 .Slider__fill {
   border-radius: $slider-track-border-radius 0 0 $slider-track-border-radius;
   height: $slider-track-height;
-  left: -1 * $slider-handle-size / 2;
+  left: -1 * math.div($slider-handle-size, 2);
   position: absolute;
   top: $slider-track-offset;
 }
@@ -47,7 +49,7 @@ $slider-focus-size: $slider-handle-size - ($slider-focus-margin * 2);
   border-radius: 50%;
   height: $slider-handle-size;
   position: absolute;
-  right: -1 * $slider-handle-size / 2;
+  right: -1 * math.div($slider-handle-size, 2);
   top: -1 * $slider-track-offset;
   width: $slider-handle-size;
 
@@ -55,7 +57,7 @@ $slider-focus-size: $slider-handle-size - ($slider-focus-margin * 2);
     background-color: var(--focus-color);
     border-radius: 50%;
     bottom: $slider-focus-margin;
-    box-shadow: 0 0 ($slider-focus-size / 2) 0
+    box-shadow: 0 0 math.div($slider-focus-size, 2) 0
       rgba(var(--focus-color-rgb-values), var(--slider-focus-glow-opacity));
     content: "";
     left: $slider-focus-margin;

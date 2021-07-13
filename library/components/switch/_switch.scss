@@ -1,3 +1,5 @@
+@use "sass:math";
+
 @mixin switch-sizer() {
   $width: modular-scale-px(7);
   $height: modular-scale-px(3);
@@ -5,7 +7,7 @@
   $focus-indicator-radius: $toggler-radius - ($border-width * 6);
 
   .Switch__indicator {
-    border-radius: ($height / 2);
+    border-radius: math.div($height, 2);
     height: $height;
     width: $width;
 

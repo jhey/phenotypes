@@ -1,3 +1,5 @@
+@use "sass:math";
+
 @mixin depth($depth: 0) {
   @if $depth == 0 {
     box-shadow: none;
@@ -5,8 +7,8 @@
     $d: $depth * 1px;
 
     // x y blur alpha
-    $shadow-1: 0 round($d / modular-scale-ratio(3)) round($d * modular-scale-ratio(3)) rgba($black, $alpha-300);
-    $shadow-2: 0 round($d / modular-scale-ratio(12)) round($d / modular-scale-ratio(9)) rgba($black, $alpha-200);
+    $shadow-1: 0 round(math.div($d, modular-scale-ratio(3))) round($d * modular-scale-ratio(3)) rgba($black, $alpha-300);
+    $shadow-2: 0 round(math.div($d, modular-scale-ratio(12))) round(math.div($d, modular-scale-ratio(9))) rgba($black, $alpha-200);
     $shadow-3: 0 0 round($d * modular-scale-ratio(3)) rgba($black, $alpha-200);
 
     box-shadow: $shadow-1, $shadow-2, $shadow-3;
