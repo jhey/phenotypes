@@ -31,7 +31,7 @@ const customisedTheme = mandelbrot({
   nav: ['docs', 'components'],
   scripts: ['default', '/js/theme.js'],
   styles: ['default', '/css/Sailec_Basics.css', '/css/theme.css'],
-  panels: ['notes', 'html', 'view', 'context', 'resources', 'info']
+  panels: ['notes', 'html', 'view', 'context', 'resources', 'info'],
 });
 fractal.web.theme(customisedTheme);
 
@@ -42,39 +42,41 @@ fractal.components.set('statuses', {
   deprecated: {
     label: 'Deprecated',
     description: 'Going away someday.',
-    color: '#F04D5D'
+    color: '#F04D5D',
   },
   demo: {
     label: 'Demo only',
     description:
       'Just showing off some stuff (not meant to be a real component).',
-    color: '#853B94'
+    color: '#853B94',
   },
   draft: {
     label: 'Draft',
     description: 'Work in progress.',
-    color: '#FC8626'
+    color: '#FC8626',
   },
   stable: {
     label: 'Stable',
     description: 'Ready to go.',
-    color: '#2DCFA1'
-  }
+    color: '#2DCFA1',
+  },
 });
 fractal.docs.set('statuses', {
   draft: {
     label: 'Draft',
     description: 'Work in progress.',
-    color: '#FC8626'
+    color: '#FC8626',
   },
   stable: {
     label: 'Stable',
     description: 'Ready for go.',
-    color: '#2DCFA1'
-  }
+    color: '#2DCFA1',
+  },
 });
 fractal.components.set('default.status', 'draft');
 fractal.docs.set('default.status', 'draft');
+
+fractal.web.set('builder.dest', path.join(__dirname, 'static-build'));
 
 // Export fractal app
 module.exports = fractal;

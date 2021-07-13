@@ -35,6 +35,6 @@ export default {
     }),
   ],
   // we don't want to watch and rebuild when the scss files change
-  // these files are already being watched and built by node-sass
+  // these files are already being watched and built by sass
   watch: { exclude: '**/**.scss' },
 };

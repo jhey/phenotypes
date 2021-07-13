@@ -1,10 +1,10 @@
 const path = require('path');
 const { promisify } = require('util');
-const nodeSass = require('node-sass');
+const sass = require('sass');
 const postcss = require('postcss');
 const postcssPresetEnv = require('postcss-preset-env');
 const { outputFile, copy } = require('fs-extra');
-const renderSass = promisify(nodeSass.render);
+const renderSass = promisify(sass.render);
 
 const PHENOTYPES = 'phenotypes';
 const WORKSPACE_ROOT = path.resolve(__dirname, '..');

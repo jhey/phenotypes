@@ -1,14 +1,14 @@
 {
   "name": "@aminohealth/phenotypes",
-  "version": "11.0.1",
+  "version": "11.0.2",
   "description": "Amino's design language and front-end component library",
   "dependencies": {
     "@babel/runtime": "^7.10.2",
     "classnames": "^2.2.5",
     "keycode": "^2.1.9",
-    "node-sass": "^4.14.1",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "sass": "1.35.2"
   },
   "peerDependencies": {
     "@babel/runtime": "7.x",
@@ -50,6 +50,7 @@
     "watchAll": "npm run watchCss & npm run watchJs",
     "startProd": "npm run buildAll & fractal start",
     "start": "fractal start --sync & npm run watchAll",
+    "buildStatic": "fractal build",
     "buildLibrary": "rollup --config ./configs/rollup.phenotypes-library.config.js",
     "watchLibrary": "rollup --config ./configs/rollup.phenotypes-library.config.js --watch",
     "copyAssets": "node scripts/copyLibraryAssets.js",
