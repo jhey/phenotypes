@@ -1,0 +1,8 @@
+FROM nginx:1.21.1
+
+ENV STATICDIR /usr/src/app/static-build
+ENV HTMLDIR /usr/share/nginx/html
+
+RUN rm -rf $HTMLDIR && \
+    mkdir -p $STATICDIR && \
+    ln -s $STATICDIR $HTMLDIR

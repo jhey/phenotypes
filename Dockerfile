@@ -2,14 +2,22 @@ FROM node:14.4.0-stretch-slim
 
 ENV NPM_CONFIG_LOGLEVEL warn
 
+ENV APP /usr/src/app
+
 # Create app directory
-RUN mkdir -p /usr/src/app
-WORKDIR /usr/src/app
+RUN mkdir -p $APP
+WORKDIR $APP
 
 # Install app dependencies
-COPY ./package.json /usr/src/app/
-COPY ./yarn.lock /usr/src/app/
+COPY ./package.json $APP
+COPY ./yarn.lock $APP
 RUN yarn install
 
 # Bundle app source
-COPY . /usr/src/app
+COPY . $APP
+
+WORKDIR $APP
+
+RUN npm run buildStatic
+
+VOLUME $APP

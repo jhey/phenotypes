@@ -8,3 +8,11 @@ services:
     volumes:
       - .:/usr/src/app
       - /usr/src/app/node_modules
+  nginx:
+    build:
+      context: .
+      dockerfile: Dockerfile-nginx
+    ports:
+      - '3001:80'
+    volumes_from:
+      - fractal
