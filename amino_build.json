@@ -2,13 +2,15 @@
     "app": "phenotypes",
     "build": {
         "components": ["phenotypes"],
-        "services": ["fractal"]
+        "services": ["fractal", "nginx"]
     },
     "deploy": {
         "preview": {
-            "cluster": "services-preview",
-            "region": "us-west-1",
-            "service": "phenotypes"
+            "cluster": "preprod-dmz",
+            "region": "us-west-2",
+            "service": "preview-phenotypes",
+            "profile": "aminotf",
+            "registry": "043538302950.dkr.ecr.us-west-2.amazonaws.com"
         }
     }
 }
